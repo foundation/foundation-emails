@@ -1,0 +1,226 @@
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+// @import "foundation/components/global"; // *always required
+// @import "foundation/components/grid";
+
+//
+// Use this grid if you want to start using the new Foundation 5 grid early.
+// It will change breakpoints to min-width: 640px and 1024px.
+//
+// @import "foundation/components/grid-5";
+//
+
+// @import "foundation/components/visibility";
+// @import "foundation/components/block-grid";
+// @import "foundation/components/type";
+// @import "foundation/components/buttons";
+// @import "foundation/components/forms"; // *requires components/buttons
+// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+// @import "foundation/components/button-groups"; // *requires components/buttons
+// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
+// @import "foundation/components/split-buttons"; // *requires components/buttons
+// @import "foundation/components/flex-video";
+// @import "foundation/components/section";
+// @import "foundation/components/top-bar";  // *requires components/grid
+// @import "foundation/components/orbit";
+// @import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+// @import "foundation/components/clearing";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switch";
+// @import "foundation/components/magellan";
+// @import "foundation/components/tables";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/dropdown";
+
+@import "topbar";
+@import "proxima";
+@import "footer";
+
+/* variables */
+$sans-serif: 'Proxima Nova', 'proxima-nova', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+
+/* global styles */
+body { -webkit-font-smoothing: antialiased; }
+
+/* foundation overrides */
+.button { background: #e1e2e4; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; color: #00232b; border: none; font-family: $sans-serif; 
+  &:hover { background: #FFF; color: #00232b; }
+  &.primary { background: #004454; color: #FFF; 
+    &:hover { background: #0d2b40; }
+  }
+  &.large { font-size: emCalc(17px); padding: 1.47em 2.88em 1.3em; }
+  &.small { padding-top: 0.825em; padding-bottom: 0.7625em; }
+  &.tiny { padding: 1px 10px 0; }
+}
+h1, h2, h3, h4, h5, h6 { font-family: $sans-serif; }
+h1 { font-size: emCalc(48px); }
+h3 { font-size: emCalc(32px); margin-bottom: 0; line-height: 1.1; }
+.lead { font-family: $sans-serif; color: #777; font-size: emCalc(18px); margin-bottom: 20px;  }
+p { font-size: emCalc(14px); }
+
+/* main area */
+.top-area { background-color: #002b35; 
+  &.main { background-image: url(../images/water.png); background-repeat: no-repeat; background-position: center center; background-size: cover; 
+    p.lead { font-family: $sans-serif; font-size: emCalc(24px); line-height: 1.4em; }
+  }
+  &.downloading {
+    h1 { font-size: emCalc(48px); padding: 110px 0 400px; }
+  }
+  h1 { color: #FFF; font-family: $sans-serif; font-size: emCalc(100px); margin-bottom: 0;  }
+  h2 { color: #FFF; font-size: emCalc(35px); padding: 51px 0 0 0; margin-bottom: 12px; }
+  p { color: #FFF; }
+}
+.home-text { padding: 100px 0 103px; position: relative; }
+.inky { background: url(../images/inky.png) no-repeat center center; background-size: cover; height: 700px; width: 507px; position: absolute; top: 40px; right: -520px; }
+
+/* callout */
+.callout { background: #e5e9ea; margin-bottom: 60px; }
+.space-callout { padding: 53px 0 31px; }
+.templates-callout { background: #2e2f2f; padding: 20px; position: relative; top: 68px;  
+  h5, p { color: #FFF; }
+  p { margin-bottom: 30px; }
+  a { margin-bottom: 0; }
+}
+
+/* discover links */
+.discover-links { margin-bottom: 50px; margin-top: 20px;
+  a { display: block; text-align: center; padding: 145px 0 25px; background: url(../images/icons/discover.png) no-repeat 0 0; background-size: 125px 1500px; 
+    &.process { background-position: center 0; }
+    &.docs { background-position: center -500px; }
+    &.download { background-position: center -1000px; }
+  }
+  span { display: block; 
+    &.title { font-family: $sans-serif; font-size: emCalc(21px); color: #0d2b40; margin-bottom: 10px; }
+    &.description { color: #333; font-size: emCalc(14px); line-height: 1.6em; }
+  }
+}
+
+/* stay updated */
+.stay-updated { background: #004454; padding: 36px 0 32px;
+  h5, a { color: #FFF; margin-bottom: 0; }
+  p { color: #8798a7; margin-bottom: 0; }
+  form { margin-bottom: 0; margin-top: 9px; 
+    input { padding: 18px; border: none; }
+    .button { padding-top: 13px; }
+  } 
+}
+
+/* interior */
+.top-headlines { margin-top: 50px; 
+  h1 { margin-bottom: 0; }
+}
+hr { border-style: dashed; }
+
+/* templates */
+.template-thumbs { margin-bottom: 50px;
+  a { display: block; 
+    &.button { display: inline-block; }
+    img { display: block; margin-bottom: 15px; }
+  }
+  span { display: block; color: #333; 
+    &.name { font-size: emCalc(21px); font-family: $sans-serif; color: #0d2b40; }
+    &.description { font-size: emCalc(14px); margin-bottom: 15px; }
+  }
+}
+.thumb-select { margin-top: 20px; 
+  label, select { display: inline-block; }
+  select { width: 110px; margin-left: 10px; }
+}
+.how-to-use { position: relative; padding: 30px 0;  }
+.inky-small { background: url(../images/inky-small.gif); height: 377px; width: 273px; background-size: cover; position: absolute; top: 0; right: -310px; z-index: 2; }
+
+/* downloading */
+.main-text { position: relative; }
+.inky-fish { background: url(../images/inky-fish.png) no-repeat center center; background-size: cover; height: 444px; width: 818px; position: absolute; top: 220px; }
+.under-inky-fish { margin-top: 100px; margin-bottom: 50px; 
+  ul { font-size: emCalc(14px); margin-left: 15px; }
+}
+.read-docs { margin-top: 20px; 
+  a { background: #e5ecee url(../images/icons/read-docs.png) no-repeat 38px center; ; padding: 23px 23px 23px 97px; background-size: 32px 44px; display: block; }
+  span { margin-bottom: 0; display: block; 
+    &.title { color: #0c2739; font-size: emCalc(21px); font-family: $sans-serif; margin-bottom: 10px; }
+    &.description { font-size: emCalc(14px); color: #333; line-height: 1.6; }
+  }
+}
+
+/* process */
+.how-to-use { position: relative; 
+  &.one { margin-bottom: 10px;
+    p, img, h3 { width: 440px; margin-left: 70px; }
+    .process-1 { background: url(../images/process-1.png) no-repeat center center; height: 265px; width: 256px; background-size: cover; position: absolute; right: 95px; top: -50px;  }
+    .bump-space { margin-left: 120px; }
+  }
+  &.two { margin-bottom: 10px;
+    p, img, h3 { width: 470px; margin-left: 100px; }
+    .process-2 { background: url(../images/process-2.png) no-repeat center center; height: 87px; width: 166px; background-size: cover; position: absolute; left: 68px; top: 38px;  }
+    .bump-space { margin-left: 270px; }
+  }
+  &.three { margin-bottom: 30px;
+    p, img, h3 { width: 470px; margin-left: 100px; }
+    p.with-border { border-bottom: 1px solid #ddd; padding-bottom: 20px; }
+    .process-3 { background: url(../images/process-3.png) no-repeat center center; height: 377px; width: 273px; background-size: cover; position: absolute; right: 40px; top: -100px;  }
+    .bump-space { margin-left: 50px; }
+  }
+  &.four {  margin-bottom: 30px;
+    p, img, h3 { width: 470px; margin-left: 100px; }
+    .bump-space { margin-left: 300px; }
+    .process-4 { background: url(../images/process-4.png) no-repeat center center; height: 116px; width: 107px; background-size: cover; position: absolute; right: 0; top: 35px;  }
+    .process-4-2 { background: url(../images/process-4-2.png) no-repeat center center; height: 63px; width: 96px; background-size: cover; position: absolute; left: 231px; top: -16px;  }
+    
+  }
+  &.five { margin-bottom: 60px; 
+    .number { top: -13px; }
+    p, img, h3 { width: 470px; margin-left: 100px; }
+    .bump-space { margin-left: 185px; position: relative; z-index: 2;}
+    .process-5 { background: url(../images/process-3.png) no-repeat center center; height: 377px; width: 273px; background-size: cover; position: absolute; left: 0; top: -120px;  }
+    .process-5-2 { background: url(../images/process-5-2.png) no-repeat center center; height: 59px; width: 90px; background-size: cover; position: absolute; right: 150px; top: 92px;  }
+  }
+  h3 { margin-bottom: 10px;  }
+  .number { display: block; font-family: $sans-serif; color: #a3abad; font-size: emCalc(138px); font-weight: bold; position: absolute; top: 23px; }
+  .campaign-monitor { background: url(../images/campaign-monitor.png) no-repeat left center; background-size: 18px 12px; padding-left: 30px; }
+}
+
+
+/* docs  */
+.doc-nav { list-style: none; margin-top: 50px; 
+  li { display: block; font-size: emCalc(14px); margin-bottom: 10px; 
+    a { color: #333; display: block;
+      &.current { font-weight: bold; margin-bottom: 10px; } 
+      &:hover { color: #000; }
+    }
+    ul li { font-size: 1em;  }
+  }
+}
+.docs {
+  h1 { margin-top: 30px; margin-bottom: 0; }
+  .label { background: #ddd; color: #333; }
+  table { font-size: emCalc(15px); 
+    td { line-height: 1.6; }
+  }
+}
+.prev-next-section { @include clearfix; border-top: 1px dashed #ddd; margin: 20px 0 50px; padding-top: 20px; 
+  a { font-weight: bold; color: #333; }
+}
