@@ -13,7 +13,7 @@
     <div class="large-4 columns">
     	<div class="property-info">
         <h3><a href="#">Ink</a></h3>
-        <p>oundation is made by <a href="http://zurb.com">ZURB</a>, a product design company in Campbell, California. We've put more than 15 years of experience building web products, services and websites into this framework.</p>
+        <p>Ink is made by <a href="http://zurb.com">ZURB</a>, a product design company in Campbell, California. We've put more than 15 years of experience building web products, services and websites into this framework.</p>
     	</div>
     </div>
     
