@@ -220,6 +220,11 @@ hr { border-style: dashed; }
   table { font-size: emCalc(15px); 
     td { line-height: 1.6; }
   }
+  hr.section {
+    margin-top: 50px;
+    border-style: solid;
+    border-width: 2px;
+  }
 }
 .prev-next-section { @include clearfix; border-top: 1px dashed #ddd; margin: 20px 0 50px; padding-top: 20px; 
   a { font-weight: bold; color: #333; }
