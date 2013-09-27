@@ -49,13 +49,13 @@
     </a>
   </div>
   <div class="large-4 columns">
-    <a href="process.php" class="docs">
+    <a href="docs.php" class="docs">
       <span class="title">Docs</span>
       <span class="description">Learn how to use all the powers of Ink to create beautiful, dynamic emails.</span>
     </a>
   </div>
   <div class="large-4 columns">
-    <a href="process.php" class="download">
+    <a href="download.php" class="download">
       <span class="title">Download</span>
       <span class="description">Get the framework right now and start tinkering with it right away!</span>
     </a>

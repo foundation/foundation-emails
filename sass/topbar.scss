@@ -59,7 +59,7 @@
 .fixed { width: 100%; left: 0; position: fixed; top: 0; z-index: 99; }
 
 /* <nav> */
-.top-bar { background: #333333; height: 45px; line-height: 45px; margin: 0 0 30px; padding: 0; width: 100%; /* Contain width to .row width */ /* First <ul> for branding, title, name, etc */ /* topbar global <ul> styles */ font-family: "Proxima Nova"; }
+.top-bar { background: #333333; height: 45px; line-height: 45px; margin: 0 0 30px; padding: 0; width: 100%; /* Contain width to .row width */ /* First <ul> for branding, title, name, etc */ /* topbar global <ul> styles */ font-family: 'Proxima Nova', 'proxima-nova', 'Helvetica Neue', 'HelveticaNeue', Helvetica, Arial, 'Lucida Grande', sans-serif;; }
 .contain-to-grid .top-bar { max-width: 940px; margin: 0 auto; }
 .top-bar > ul .name h1 { line-height: 45px; margin: 0; }
 .top-bar > ul .name h1 a { font-weight: bold;  font-size: 17px !important; padding: 0px 0px 0px 15px !important;}
