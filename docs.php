@@ -23,16 +23,13 @@
   </div>
   <div class="large-9 columns">
     <h1 id="start" class="light">Getting Started</h1>
-    <p class="lead">Create powerful multi-device layouts quickly and easily.</p>
-
+    <p class="lead">Dive in to creating your responsive email.</p>
     <hr>
-    <h2 class="light">Explanation</h2>
-    <h4 class="normal">Using our predefined HTML classes</h4>
-    <p>These are examples of different ways to use the 4-column Ink Grid. Emails work properly by using table elements, a developer's and designer's worst enemy, but we've made it easy for you.  You can create beautiful layouts with ease, but only if you follow this structure.</p>
-    <hr>
-    <h2 class="light">Examples</h2>
-    <p>Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-    <script type="text/javascript" src="https://snipt.net/embed/a2927bac91526b5a558d3bfa73dcdd79/"></script>
+    <h2 class="light">The Boilerplate</h2>
+    <p>
+      Starting a new Ink project is fairly straightforward.  If you aren't using one of our <a href="templates.php">templates</a>, grab the boilerplate code from below to use as a starting point.  While you can reference <code>ink.css</code> using a link tag for testing purposes, be sure to remove the <kbd>&lt;link rel="stylesheet" href="ink.css" /&gt;</kbd> statement and paste your code into the style tag in the head before running your email through an inliner.
+    </p>
+    <script type="text/javascript" src="https://snipt.net/embed/ede5e79e642e6842d9727f711bfe61bf/"></script>
 
     <hr class="section">
 
