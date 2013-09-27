@@ -30,7 +30,13 @@
       Starting a new Ink project is fairly straightforward.  If you aren't using one of our <a href="templates.php">templates</a>, grab the boilerplate code from below to use as a starting point.  While you can reference <code>ink.css</code> using a link tag for testing purposes, be sure to remove the <kbd>&lt;link rel="stylesheet" href="ink.css" /&gt;</kbd> statement and paste your code into the style tag in the head before running your email through an inliner.
     </p>
     <script type="text/javascript" src="https://snipt.net/embed/ede5e79e642e6842d9727f711bfe61bf/"></script>
-
+    <br>
+    <p>
+      If you're applying a background color to your entire email, be sure to attach it to the table with a class of <code>body</code>, not to the actual <code>body</code> tag, since some clients remove this be default.
+    </p>
+    <script type="text/javascript" src="https://snipt.net/embed/cb9276e922e8c38b108c4ec8ad420e7f/"></script>
+    <br>
+    
     <hr class="section">
 
     <h1 id="grid" class="light">Grid</h1>
