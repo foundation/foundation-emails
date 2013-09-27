@@ -6,7 +6,7 @@
     <div class="large-5 columns">
       <div class="home-text">
         <h1 class="light">Ink</h1>
-        <p class="lead">Quickly create responsive emails that works in every client on every device with the Ink framework.</p>
+        <p class="lead">Quickly create responsive emails that work on any device.</p>
         <a href="download.php" class="large button">Download Ink</a>
         <div class="inky"></div>
       </div>
@@ -17,9 +17,9 @@
   <div class="row">
     <div class="large-6 columns">
       <div class="space-callout">
-        <h3 class="light">Why Ink is awesome</h3>
-        <p class="lead">Aenean lacinia bibendum nulla sed consectetur.</p>
-        <p>Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. </p>
+        <h3 class="light">Email. Anywhere. On Any Device.</h3>
+        <p class="lead">How email was meant to be read.</p>
+        <p>Wrap your tentacles around a broad range of readers with Ink. Our CSS framework helps you craft emails that can be read anywhere on any device. Gone are the days where you had to choose between Outlook and email optimized for smartphones and tablets. Ink's responsive, 12-column grid blends flexibility and stability so your readers can view your emails perfectly at home or on the go.</p>
       </div>
     </div>
     
@@ -38,7 +38,7 @@
 <div class="row top-headlines">
 	<div class="large-12 columns">
 		<h3 class="text-center light">Discover the world of Ink</h3>
-		<p class="lead text-center">Aenean lacinia bibendum nulla sed consectetur.</p>
+		<p class="lead text-center">Learn more about how to use Ink, or dive right in and start coding responsively.</p>
 	</div>
 </div>
 <div class="row discover-links">
