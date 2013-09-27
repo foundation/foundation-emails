@@ -19,7 +19,7 @@
       <div class="space-callout">
         <h3 class="light">Email. Anywhere. On Any Device.</h3>
         <p class="lead">How email was meant to be read.</p>
-        <p>Wrap your tentacles around a broad range of readers with Ink. Our CSS framework helps you craft emails that can be read anywhere on any device. Gone are the days where you had to choose between Outlook and email optimized for smartphones and tablets. Ink's responsive, 12-column grid blends flexibility and stability so your readers can view your emails perfectly at home or on the go.</p>
+        <p>Reach out your tentacles to a broad range of readers. Our CSS framework helps you craft emails that can be read anywhere on any device. Gone are the days where you had to choose between Outlook and email optimized for smartphones and tablets. Ink's responsive, 12-column grid blends flexibility and stability so your readers can view your emails perfectly from wherever they may be.</p>
       </div>
     </div>
     
