@@ -217,8 +217,8 @@ hr { border-style: dashed; }
 .docs {
   h1 { margin-top: 30px; margin-bottom: 0; }
   .label { background: #ddd; color: #333; }
-  table { font-size: emCalc(15px); 
-    td { line-height: 1.6; }
+  table { width:100%; font-size: emCalc(15px);
+    td { line-height: 1.6; vertical-align: top; }
   }
   hr.section {
     margin-top: 50px;
