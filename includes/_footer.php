@@ -135,8 +135,6 @@
       });
     });
   </script>
-  </section>
-<?php include 'includes/_mobile-nav.php' ?>
 
-</body>
-</html>
+<?php include 'includes/_offcanvas-menu.php' ?>
+

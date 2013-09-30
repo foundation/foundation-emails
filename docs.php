@@ -1,4 +1,6 @@
 <?php include 'includes/_header.php' ?>
+
+<section role="main">
 <?php include 'includes/_top-bar.php' ?>
 
 <section class="top-area">
@@ -273,10 +275,6 @@
     <br>
   </div>
 </div>
-
-
-
-
 
 <?php include 'includes/_subscribe.php' ?>	
 <?php include 'includes/_footer.php' ?>

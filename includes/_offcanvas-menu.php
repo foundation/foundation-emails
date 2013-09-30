@@ -1,3 +1,5 @@
+</section>
+
 <section id="sidebar" role="complementary">
   <!-- For Future Use 
 <div id="passport">
@@ -73,3 +75,6 @@
   </div>
 	
 </section>
+
+</body>
+</html>

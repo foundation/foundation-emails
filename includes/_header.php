@@ -16,4 +16,4 @@
 </head>
 
 <body class="off-canvas hide-extras"> 
-<section class="main">
+
