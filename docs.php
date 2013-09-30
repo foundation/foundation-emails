@@ -15,7 +15,6 @@
       <li><a href="#start">Getting Started</a></li>
       <li><a href="#grid">Grid</a></li>
       <li><a href="#sub-grid">Sub-Grid</a></li>
-      <li><a href="#grid-offsets">Grid Offsets</a></li>
       <li><a href="#full-width">Full-Width Headers &amp; Footers</a></li>
       <li><a href="#visibility-classes">Visibility Classes</a></li>
       <li><a href="#panels">Panels</a></li>
@@ -130,103 +129,19 @@
     <h2 class="light">Explanation</h2>
     <h4 class="normal">Grids Within Grids</h4>
     <p>While the Ink grid can't be infinitely nested like its <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation counterpart</a>, Ink does provide a nestable sub-grid, for when one grid just isn't enough.  By applying a <code>.sub-columns</code> class (as well as a numbered class, same as the primary grid) to a <kbd>&lt;td&gt;</kbd> tag underneath a <code>.columns</code> table, you can sub-divide the <code>.columns</code> table into sub-columns.</p>
-    <script type="text/javascript" src="https://snipt.net/embed/a2927bac91526b5a558d3bfa73dcdd79/"></script>
+    <p>The last <code>.sub-columns</code> <kbd>&lt;td&gt;</kbd> in the <code>.columns</code> <kbd>&lt;table&gt;</kbd> should be given a class of <code>last</code> in order for the gutter padding to be properly maintained.</p>
+    <script type="text/javascript" src="https://snipt.net/embed/6a36cf3cecb431e26fc66e7b878822b5/"></script>
     <br>
     <h4 class="normal">Sub-Grid Rows</h4>
-    <p></p>
-    <script type="text/javascript" src="https://snipt.net/embed/a2927bac91526b5a558d3bfa73dcdd79/"></script>
+    <p>To create nested rows within a column, place multiple <code>.columns</code> tables (with the same number of columns) in the same <code>.wrapper</code> td.  These <code>.columns</code> tables can then be further divided into sub-columns by placing the a <code>.sub-columns</code> class on their child <kbd>&lt;td&gt;</kbd> elements.</p>
+    <script type="text/javascript" src="https://snipt.net/embed/728696fb8f11a1f377f2ad3219e40d6e/"></script>
     <br>
     <hr />
-    <h2 class="light">Breakdown</h2>
-    <p>Here's how these items are being used:</p>
-    <table>
-      <tr>
-        <td><code>table.body</code></td>
-        <td>Certain clients strip out the body tag, so we'll provide a workaround and add some CSS to override default styles</td>
-      </tr>
-      
-      <tr>
-        <td><code>td.center</code></td>
-        <td>This piece centers the table</td>
-      </tr>
-      <tr>
-        <td><code>td.container</code></td>
-        <td>We'll wrap everything to 600px</td>
-      </tr>
-      <tr>
-        <td><code>td.row</code></td>
-        <td>We'll wrap everything to 600px</td>
-      </tr>
-      <tr>
-        <td><code>td.wrapper.last</code></td>
-        <td>Why you need this class. it may span two lines but that's cool because we've accommodated for that</td>
-      </tr>
-      <tr>
-        <td><code>table.(one–four).columns</code></td>
-        <td>How wide you want your content to be</td>
-      </tr>
-      <tr>
-        <td><code>td.expander</code></td>
-        <td>What expander does yay!</td>
-      </tr>
-    </table>
-    <hr />
     <h2 class="light">Examples</h2>
-    <p>Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-    <script type="text/javascript" src="https://snipt.net/embed/a2927bac91526b5a558d3bfa73dcdd79/"></script>
+    <h4 class="normal">Non-Stacking Row</h4>
+    <p>Sometimes you may wish to display columns of content that you don't want to stack on small screens.  In this case, the easiest way is to place your content in a <code>.twelve.columns</code> container and use sub-columns to arrange your content.</p>
+    <script type="text/javascript" src="https://snipt.net/embed/fb54c056f05bf8be2994986c58c1ca30/"></script>
 
-    <hr class="section">
-
-    <h1 id="grid-offsets" class="light">Grid Offsets</h1>
-    <p class="lead">A non-stacking grid for even more versatile layouts.</p>
-    <hr />
-    <h2 class="light">Explanation</h2>
-    <h4 class="normal">Grids Within Grids</h4>
-    <p>These are examples of different ways to use the 4-column Ink Grid. Emails work properly by using table elements, a developer's and designer's worst enemy, but we've made it easy for you.  You can create beautiful layouts with ease, but only if you follow this structure.</p>
-    <script type="text/javascript" src="https://snipt.net/embed/a2927bac91526b5a558d3bfa73dcdd79/"></script>
-    <h4 class="normal">Sub-Grid Rows</h4>
-    <p>These are examples of different ways to use the 4-column Ink Grid. Emails work properly by using table elements, a developer's and designer's worst enemy, but we've made it easy for you.  You can create beautiful layouts with ease, but only if you follow this structure.</p>
-    <script type="text/javascript" src="https://snipt.net/embed/a2927bac91526b5a558d3bfa73dcdd79/"></script>
-    <br>
-    <hr />
-    <h2 class="light">Breakdown</h2>
-    <p>Here's how these items are being used:</p>
-    <table>
-      <tr>
-        <td><code>table.body</code></td>
-        <td>Certain clients strip out the body tag, so we'll provide a workaround and add some CSS to override default styles</td>
-      </tr>
-      
-      <tr>
-        <td><code>td.center</code></td>
-        <td>This piece centers the table</td>
-      </tr>
-      <tr>
-        <td><code>td.container</code></td>
-        <td>We'll wrap everything to 600px</td>
-      </tr>
-      <tr>
-        <td><code>td.row</code></td>
-        <td>We'll wrap everything to 600px</td>
-      </tr>
-      <tr>
-        <td><code>td.wrapper.last</code></td>
-        <td>Why you need this class. it may span two lines but that's cool because we've accommodated for that</td>
-      </tr>
-      <tr>
-        <td><code>table.(one–four).columns</code></td>
-        <td>How wide you want your content to be</td>
-      </tr>
-      <tr>
-        <td><code>td.expander</code></td>
-        <td>What expander does yay!</td>
-      </tr>
-    </table>
-    <hr />
-    <h2 class="light">Examples</h2>
-    <p>Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-    <script type="text/javascript" src="https://snipt.net/embed/a2927bac91526b5a558d3bfa73dcdd79/"></script>
-    
     <hr class="section">
 
     <h1 id="full-width" class="light">Full-Width Headers &amp; Footers</h1>
@@ -293,7 +208,7 @@
     <p>To create buttons that look great in most clients, give a class of <code>button</code> to an <kbd>&lt;a&gt;</kbd> tag, and use it to enclose a table with your content.  While this gives you a nice looking button with a full click-target, it doesn't work in all CSS inliners, since it's technically invalid for an inline element (the <kbd>&lt;a&gt;</kbd> tag) to wrap a table element (booooooooo!).</p>
     <script type="text/javascript" src="https://snipt.net/embed/6ba14740d872d10cd5da2e04c65350c6/"></script>
     <br>
-    <h4 class="normal">Style Two: The Bulletproof Method</h4>
+    <h4 class="normal">Style Two: The Bulletproof Method* <small>Not yet implemented.</small></h4>
     <p>If you need to support a CSS inliner that chokes on our preferred buttons, then our bulletproof method is the way to go.  By creating a <kbd>&lt;table&gt;</kbd> of class <code>button</code> and putting your <kbd>&lt;a&gt;</kbd> inside that, you'll have a nice looking button that won't break <a href="#">Premailer</a>.  This method comes at a cost, however, as the click target only covers the button text, rather than the entire button.</p>
     <script type="text/javascript" src="https://snipt.net/embed/d73c0ffa28c3d602cef080776bec7095/"></script>
     <br>
