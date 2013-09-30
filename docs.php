@@ -145,7 +145,7 @@
     <hr class="section">
 
     <h1 id="full-width" class="light">Full-Width Headers &amp; Footers</h1>
-    <p class="lead">Create powerful multi-device layouts quickly and easily.</p>
+    <p class="lead">Off-container elements for expressive layouts.</p>
     <hr />
     <h2 class="light">Explanation</h2>
     <h4 class="normal">Using our predefined HTML classes</h4>

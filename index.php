@@ -7,7 +7,7 @@
       <div class="home-text">
         <h1 class="light">Ink</h1>
         <p class="lead">Quickly create responsive emails that work on any device.</p>
-        <a href="download.php" class="large button">Download Ink</a>
+        <a href="download.php" class="large button">Download Ink 0.6.0</a>
         <div class="inky"></div>
       </div>
     </div>

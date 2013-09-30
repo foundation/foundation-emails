@@ -93,7 +93,7 @@
     </ul>  -->
       <h3 style="text-align:center;">Ooops, no templates yet!</h3>
       <h4 style="text-align:center;">Check back soon, or <a style="display:inline;" href="mailto:eric@zurb.com">let us know</a> if you make a really nice one.</h4>
-      <p style="text-align:center;">There are, however, some nice sample emails in the <a href="downloads.php">download package</a>.</p>
+      <p style="text-align:center;">There are, however, some nice sample emails in the <a href="download.php">download package</a>.</p>
   </div>
 </div>
 
