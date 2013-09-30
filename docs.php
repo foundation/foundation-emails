@@ -24,11 +24,11 @@
   </div>
   <div class="large-9 columns">
     <h1 id="start" class="light">Getting Started</h1>
-    <p class="lead">Dive in to creating your responsive email.</p>
+    <p class="lead">Dive into creating your responsive email.</p>
     <hr>
     <h2 class="light">The Boilerplate</h2>
     <p>
-      Starting a new Ink project is fairly straightforward.  If you aren't using one of our <a href="templates.php">templates</a>, grab the boilerplate code from below to use as a starting point.  While you can reference <code>ink.css</code> using a link tag for testing purposes, be sure to remove the <kbd>&lt;link rel="stylesheet" href="ink.css" /&gt;</kbd> statement and paste your code into the style tag in the head before running your email through an inliner.
+      Starting a new Ink project is fairly straightforward.  If you aren't using one of our <a href="templates.php">templates</a>, grab the boilerplate code from below to use as a starting point.  While you can reference <code>ink.css</code> using a link tag for testing purposes, be sure to remove the <kbd>&lt;link rel="stylesheet" href="ink.css" /&gt;</kbd> statement and paste your CSS into the style tag in the head before running your email through an inliner.
     </p>
     <script type="text/javascript" src="https://snipt.net/embed/ede5e79e642e6842d9727f711bfe61bf/"></script>
     <br>
@@ -47,7 +47,7 @@
     <h2 class="light">Structure</h2>
     <h4 class="normal">Overview</h4>
     <p>Ink uses a 12-column grid with a 580px wrapper.  On mobile devices (under 580px wide), columns become full width and stack vertically.</p>
-    <p>While the markup requires a few additional classes to support some older mail clients, Ink's grid can be thought of in terms of three components: containers, rows and columns.</p>
+    <p>Ink's grid can be thought of in terms of three components:</p>
     <h4 class="normal">Containers</h4>
     <p>Ink containers wrap the content and contain it to a fixed, 580px layout on desktop clients and large tablets.  Below 580px, containers take up 95% of the screen's width.</p>
     <h4 class="normal">Rows</h4>
@@ -108,7 +108,6 @@
     <h2 class="light">Examples</h2>
     <h4 class="normal">Even Columns</h4>
     <p>Ink's tweve column grid maks creating even column layouts a snap.  Just use one <code>.twelve.columns</code>, two <code>.six.columns</code>, three <code>.four.columns</code> or four <code>.three.columns</code> classes to create your layout.  Appearing as single columns on large screens, the layout will fold into a single column on small (mobile) screens.</p>
-    <p>While technically possible, it's not suggested that you use tables that are fewer than three columns wide.</p>
     <script type="text/javascript" src="https://snipt.net/embed/28db973ea0117f4324cf5d74b0029f55/"></script>
     <br>
     <h4 class="normal">Rows Within Columns</h4>
@@ -129,7 +128,7 @@
     <hr />
     <h2 class="light">Explanation</h2>
     <h4 class="normal">Grids Within Grids</h4>
-    <p>While the Ink grid can't be infinitely nested like its <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation counterpart</a>, Ink does provide a nestable sub-grid, for when one grid just isn't enough.  By applying a <code>.sub-columns</code> class (as well as a numbered class, same as the primary grid) to a <kbd>&lt;td&gt;</kbd> tag underneath a <code>.columns</code> table, you can sub-divide the <code>.columns</code> table into sub-columns.</p>
+    <p>While the Ink grid can't be infinitely nested like its <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation counterpart</a>, Ink does provide a nestable sub-grid for when one grid just isn't enough.  By applying a <code>.sub-columns</code> class (as well as a numbered class, same as the primary grid) to a <kbd>&lt;td&gt;</kbd> tag underneath a <code>.columns</code> table, you can sub-divide the <code>.columns</code> table into sub-columns.</p>
     <p>The last <code>.sub-columns</code> <kbd>&lt;td&gt;</kbd> in the <code>.columns</code> <kbd>&lt;table&gt;</kbd> should be given a class of <code>last</code> in order for the gutter padding to be properly maintained.</p>
     <script type="text/javascript" src="https://snipt.net/embed/6a36cf3cecb431e26fc66e7b878822b5/"></script>
     <br>
