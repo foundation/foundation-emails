@@ -2,7 +2,7 @@
   <ul class="title-area">
     <!-- Title Area -->
     <li class="name">
-      <h1><a href="http://ink.zurb.com" class="home" title="Ink">Ink</a></h1>
+      <h1><a href="http://zurb.com/ink" class="home" title="Ink">Ink</a></h1>
     </li> 
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
