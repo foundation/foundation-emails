@@ -4,7 +4,7 @@
 <section class="top-area">
   <div class="row">
     <div class="large-12 columns">
-      <h2>Templates</h2>
+      <h2>HTML Email Templates</h2>
     </div>
   </div>
 </section>
@@ -39,17 +39,17 @@
     <form class="thumb-select">
       <label>View as</label>
       <select>
-        <option>Desktop</option>
-        <option>Mobile</option>
-        <option>Outlook</option>
+        <option DISABLED>Desktop</option>
+        <option DISABLED>Mobile</option>
+        <option DISABLED>Outlook</option>
       </select>
     </form>
   </div>
 </div>
     
 <div class="row">
-  <div class="small-12 columns">
-    <ul class="large-block-grid-3 small-block-grid-1 template-thumbs">
+  <div class="small-12 columns panel">
+    <!-- <ul class="large-block-grid-3 small-block-grid-1 template-thumbs">
       <li>
         <a href="#">
           <img src="images/template.jpg">
@@ -90,7 +90,10 @@
         </a>
         <a href="#" class="button primary">Download</a>
       </li>
-    </ul>
+    </ul>  -->
+      <h3 style="text-align:center;">Ooops, no templates yet!</h3>
+      <h4 style="text-align:center;">Check back soon, or <a style="display:inline;" href="mailto:eric@zurb.com">let us know</a> if you make a really nice one.</h4>
+      <p style="text-align:center;">There are, however, some nice sample emails in the <a href="downloads.php">download package</a>.</p>
   </div>
 </div>
 
