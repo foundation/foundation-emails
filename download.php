@@ -1,3 +1,5 @@
+<?php $download_url = 'Ink-0.5.1.zip' ?>
+
 <?php include 'includes/_header.php' ?>
 <?php include 'includes/_top-bar.php' ?>
 
@@ -15,9 +17,9 @@
 <div class="row under-inky-fish">
   <div class="large-7 columns">
     <h3 class="light">Here&rsquo;s what&rsquo;s included</h3>
-    <p class="lead">Aenean lacinia bibendum nulla sed consectetur.</p>
+    <p class="lead">Some goodies to get you started.</p>
     <ul class="disc">
-      <li>Boilerplate</li>
+      <li>Our HTML Email Boilerplate</li>
       <li>CSS stylesheet</li>
       <li>Two sample emails</li>
     </ul>
