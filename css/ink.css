@@ -84,39 +84,6 @@ hr {
   border: none;
 }
 
-@media only screen and (max-device-width: 480px) {
-  a[href^="tel"], 
-  a[href^="sms"] { 
-    text-decoration: none; 
-    pointer-events: none; 
-    cursor: default; 
-  }
-
-  .mobile_link a[href^="tel"], 
-  .mobile_link a[href^="sms"] { 
-    text-decoration: default; 
-    color: orange !important; 
-    pointer-events: auto; 
-    cursor: default; 
-  }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  a[href^="tel"], a[href^="sms"] { 
-    text-decoration: none; 
-    color: blue;
-    pointer-events: none; 
-    cursor: default; 
-  }
-  .mobile_link a[href^="tel"], 
-  .mobile_link a[href^="sms"] { 
-    text-decoration: default; 
-    color: orange !important; 
-    pointer-events: auto; 
-    cursor: default; 
-  }
-}
-
 /**********************************************
 * Responsive Grid                             *
 **********************************************/
