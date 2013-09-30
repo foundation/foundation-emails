@@ -15,5 +15,5 @@
   <script src="javascripts/vendor/custom.modernizr.js"></script>
 </head>
 
-<body>
-
+<body class="off-canvas hide-extras"> 
+<section class="main">
