@@ -15,7 +15,7 @@
       <li><a href="#start">Getting Started</a></li>
       <li><a href="#grid">Grid</a></li>
       <li><a href="#sub-grid">Sub-Grid</a></li>
-      <li><a href="#full-width">Full-Width Headers &amp; Footers</a></li>
+      <!-- <li><a href="#full-width">Full-Width Headers &amp; Footers</a></li> -->
       <li><a href="#visibility-classes">Visibility Classes</a></li>
       <li><a href="#panels">Panels</a></li>
       <li><a href="#buttons">Buttons</a></li>
@@ -144,7 +144,7 @@
 
     <hr class="section">
 
-    <h1 id="full-width" class="light">Full-Width Headers &amp; Footers</h1>
+    <!-- <h1 id="full-width" class="light">Full-Width Headers &amp; Footers</h1>
     <p class="lead">Off-container elements for expressive layouts.</p>
     <hr />
     <h2 class="light">Explanation</h2>
@@ -161,7 +161,7 @@
     <p>Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
     <script type="text/javascript" src="https://snipt.net/embed/a2927bac91526b5a558d3bfa73dcdd79/"></script>
     
-    <hr class="section">
+    <hr class="section"> -->
 
     <h1 id="visibility-classes" class="light">Visibility Classes</h1>
     <p class="lead">Selectively show content for different screen sizes.</p>
