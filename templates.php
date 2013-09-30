@@ -4,7 +4,7 @@
 <section class="top-area">
   <div class="row">
     <div class="large-12 columns">
-      <h2>HTML Email Templates</h2>
+      <h2>Email Templates</h2>
     </div>
   </div>
 </section>
@@ -48,7 +48,8 @@
 </div>
     
 <div class="row">
-  <div class="small-12 columns panel">
+  <div class="small-12 columns">
+    
     <!-- <ul class="large-block-grid-3 small-block-grid-1 template-thumbs">
       <li>
         <a href="#">
@@ -91,9 +92,10 @@
         <a href="#" class="button primary">Download</a>
       </li>
     </ul>  -->
-      <h3 style="text-align:center;">Ooops, no templates yet!</h3>
-      <h4 style="text-align:center;">Check back soon, or <a style="display:inline;" href="mailto:eric@zurb.com">let us know</a> if you make a really nice one.</h4>
-      <p style="text-align:center;">There are, however, some nice sample emails in the <a href="download.php">download package</a>.</p>
+    <div class="panel">
+      <h3 class="light text-center">Ooops, no templates yet!</h3>
+      <p class="light text-center">Check back soon, or <a style="display:inline;" href="mailto:eric@zurb.com">let us know</a> if you make a really nice one. There are, however, some nice sample emails in the <a href="download.php">download package</a>.</p>
+    </div>
   </div>
 </div>
 

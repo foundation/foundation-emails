@@ -4,6 +4,7 @@
 <section class="top-area">
   <div class="row">
     <div class="large-12 columns">
+      <a class='sidebar-button show-for-small' id="sidebarButton" href="#sidebar" ><img alt="Menu-wht" src="images/offcanvas/menu-wht.png" /><h4>Ink</h4></a>
       <h2>Documentation</h2>
     </div>
   </div>

@@ -4,6 +4,7 @@
 <section class="top-area main">
   <div class="row">
     <div class="large-5 columns">
+      <a class='sidebar-button show-for-small' id="sidebarButton" href="#sidebar" ><img alt="Menu-wht" src="images/offcanvas/menu-wht.png" /><h4>Ink</h4></a>
       <div class="home-text">
         <h1 class="light">Ink</h1>
         <p class="lead">Quickly create responsive emails that work on any device.</p>

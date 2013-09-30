@@ -97,6 +97,10 @@
   </div>
 </div>
 
+
+
+
+
   <script src="javascripts/vendor/jquery.js"></script>
 
   <script src="javascripts/foundation/foundation.js"></script>
@@ -115,6 +119,7 @@
 	<script src="javascripts/foundation/foundation.section.js"></script>
 	<script src="javascripts/foundation/foundation.tooltips.js"></script>
 	<script src="javascripts/foundation/foundation.topbar.js"></script>
+		<script src="javascripts/foundation/jquery.offcanvas.js"></script>
 	
   
   <script>
@@ -130,5 +135,8 @@
       });
     });
   </script>
+  </section>
+<?php include 'includes/_mobile-nav.php' ?>
+
 </body>
 </html>
