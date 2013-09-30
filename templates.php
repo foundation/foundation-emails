@@ -1,10 +1,12 @@
 <?php include 'includes/_header.php' ?>
+<section role="main">
 <?php include 'includes/_top-bar.php' ?>
 
 <section class="top-area">
   <div class="row">
     <div class="large-12 columns">
-      <h2>Email Templates</h2>
+      <a class='sidebar-button show-for-small' id="sidebarButton" href="#sidebar" ><img alt="Menu-wht" src="images/offcanvas/menu-wht.png" /><h4>Ink</h4></a>
+      <h2 class="hide-for-small">Email Templates</h2>
     </div>
   </div>
 </section>
@@ -18,7 +20,7 @@
 
 <div class="row">
   <div class="large-8 columns">
-    <div class="how-to-use">
+    <div class="how-to-use-templates">
       <h3 class="light">How to use our templates</h3>
       <br>
       <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
@@ -101,4 +103,11 @@
 
 
 <?php include 'includes/_subscribe.php' ?>	
+<div class="show-for-small">
+  <ul class="mobile-nav">
+    <li><a href="/process.php">Process</a></li>
+    <li><a href="/docs.php">Docs</a></li>
+    <li><a class="current" href="/templates.php">Email Templates</a></li>
+  </ul>
+</div>
 <?php include 'includes/_footer.php' ?>

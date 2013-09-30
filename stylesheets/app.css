@@ -9867,3 +9867,120 @@ hr {
   font-weight: bold;
   color: #333;
 }
+
+/* mobile */
+@media only screen and (max-width: 767px) {
+  /* mobile nav */
+  /* line 238, ../sass/app.scss */
+  ul.mobile-nav {
+    display: block;
+    margin-bottom: 0;
+  }
+  /* line 239, ../sass/app.scss */
+  ul.mobile-nav li {
+    display: block;
+  }
+  /* line 240, ../sass/app.scss */
+  ul.mobile-nav li:last-child a {
+    border-bottom: none;
+  }
+  /* line 241, ../sass/app.scss */
+  ul.mobile-nav li a {
+    display: block;
+    padding: 10px;
+    background: #003845;
+    color: #FFF;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    font-weight: bold;
+  }
+  /* line 242, ../sass/app.scss */
+  ul.mobile-nav li a:hover {
+    color: #FFF;
+  }
+  /* line 243, ../sass/app.scss */
+  ul.mobile-nav li a.current {
+    background: #002630;
+  }
+
+  /* home */
+  /* line 249, ../sass/app.scss */
+  .home-text {
+    padding: 0;
+  }
+  /* line 250, ../sass/app.scss */
+  .home-text h1 {
+    text-align: center;
+    font-size: 3.5em;
+  }
+  /* line 251, ../sass/app.scss */
+  .home-text p.lead {
+    text-align: center;
+  }
+  /* line 252, ../sass/app.scss */
+  .home-text a.button {
+    width: 100%;
+  }
+  /* line 253, ../sass/app.scss */
+  .home-text .inky {
+    background-position: center top;
+    width: 270px;
+    height: 150px;
+    top: auto;
+    right: auto;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  /* line 255, ../sass/app.scss */
+  .top-area.main p.lead {
+    font-size: 1.3em;
+  }
+
+  /* line 256, ../sass/app.scss */
+  .templates-callout {
+    top: auto;
+    margin-bottom: 40px;
+  }
+
+  /* process */
+  /* line 259, ../sass/app.scss */
+  h1 {
+    font-size: 2.2em;
+  }
+
+  /* line 260, ../sass/app.scss */
+  h3 {
+    font-size: 1.5em;
+  }
+
+  /* line 261, ../sass/app.scss */
+  p.lead {
+    font-size: 1.1em;
+    line-height: 1.2;
+    margin-top: 10px;
+  }
+
+  /* line 264, ../sass/app.scss */
+  .how-to-use {
+    padding: 0;
+  }
+  /* line 265, ../sass/app.scss */
+  .how-to-use .bump-space {
+    margin-left: 0 !important;
+  }
+  /* line 266, ../sass/app.scss */
+  .how-to-use span.number {
+    font-size: 3em;
+    top: auto;
+  }
+  /* line 267, ../sass/app.scss */
+  .how-to-use p, .how-to-use img, .how-to-use h3 {
+    margin-left: 0 !important;
+    padding-left: 30px;
+    width: 100% !important;
+  }
+  /* line 268, ../sass/app.scss */
+  .how-to-use .process-1, .how-to-use .process-2, .how-to-use .process-3, .how-to-use .process-4, .how-to-use .process-4-2, .how-to-use .process-5, .how-to-use .process-5-2 {
+    display: none;
+  }
+}

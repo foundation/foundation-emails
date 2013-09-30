@@ -7,14 +7,14 @@
   <div class="row">
     <div class="large-12 columns">
       <a class='sidebar-button show-for-small' id="sidebarButton" href="#sidebar" ><img alt="Menu-wht" src="images/offcanvas/menu-wht.png" /><h4>Ink</h4></a>
-      <h2>Documentation</h2>
+      <h2 class="hide-for-small">Documentation</h2>
     </div>
   </div>
 </section>
 
 <div class="row docs">
   <div class="large-3 columns">
-    <ul class="doc-nav">
+    <ul class="doc-nav hide-for-small">
       <li><a href="#start">Getting Started</a></li>
       <li><a href="#grid">Grid</a></li>
       <li><a href="#sub-grid">Sub-Grid</a></li>
@@ -277,4 +277,11 @@
 </div>
 
 <?php include 'includes/_subscribe.php' ?>	
+<div class="show-for-small">
+  <ul class="mobile-nav">
+    <li><a href="/process.php">Process</a></li>
+    <li><a class="current" href="/docs.php">Docs</a></li>
+    <li><a href="/templates.php">Email Templates</a></li>
+  </ul>
+</div>
 <?php include 'includes/_footer.php' ?>

@@ -6,8 +6,8 @@
 <section class="top-area">
   <div class="row">
     <div class="large-12 columns">
-       <a class='sidebar-button show-for-small' id="sidebarButton" href="#sidebar" ><img alt="Menu-wht" src="images/offcanvas/menu-wht.png" /><h4>Ink</h4></a>
-      <h2>Process</h2>
+      <a class='sidebar-button show-for-small' id="sidebarButton" href="#sidebar" ><img alt="Menu-wht" src="images/offcanvas/menu-wht.png" /><h4>Ink</h4></a>
+      <h2 class="hide-for-small">Process</h2>
     </div>
   </div>
 </section>
@@ -80,4 +80,11 @@
 
 
 <?php include 'includes/_subscribe.php' ?>	
+<div class="show-for-small">
+  <ul class="mobile-nav">
+    <li><a class="current" href="/process.php">Process</a></li>
+    <li><a href="/docs.php">Docs</a></li>
+    <li><a href="/templates.php">Email Templates</a></li>
+  </ul>
+</div>
 <?php include 'includes/_footer.php' ?>

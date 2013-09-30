@@ -230,3 +230,41 @@ hr { border-style: dashed; }
 .prev-next-section { @include clearfix; border-top: 1px dashed #ddd; margin: 20px 0 50px; padding-top: 20px; 
   a { font-weight: bold; color: #333; }
 }
+
+
+/* mobile */
+@media only screen and (max-width: 767px){
+  /* mobile nav */
+  ul.mobile-nav { display: block; margin-bottom: 0; 
+    li { display: block; 
+    &:last-child a { border-bottom: none; }
+      a { display: block; padding: 10px; background: #003845; color: #FFF; border-bottom: 1px solid rgba(255,255,255,.25); font-weight: bold; 
+        &:hover { color: #FFF; }
+        &.current { background: #002630; }
+      }
+    }
+  }
+  
+  /* home */
+  .home-text { padding: 0; 
+    h1 { text-align: center; font-size: 3.5em; }
+    p.lead { text-align: center; }
+    a.button { width: 100%; }
+    .inky { background-position: center top; width: 270px; height: 150px; top: auto; right: auto; position: relative; margin: 0 auto; }
+  }
+  .top-area.main p.lead { font-size: 1.3em; }
+  .templates-callout { top: auto; margin-bottom: 40px; }
+  
+  /* process */
+  h1 { font-size: 2.2em; }
+  h3 { font-size: 1.5em;}
+  p.lead { font-size: 1.1em; line-height: 1.2; margin-top: 10px; }
+  
+  
+  .how-to-use { padding: 0; 
+    .bump-space { margin-left: 0 !important; }
+    span.number { font-size: 3em; top: auto; }
+    p, img, h3 { margin-left: 0 !important; padding-left: 30px; width: 100% !important; }
+    .process-1, .process-2, .process-3, .process-4, .process-4-2, .process-5, .process-5-2 { display: none; }
+  }
+} 

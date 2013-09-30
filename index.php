@@ -1,7 +1,7 @@
-
 <?php include 'includes/_header.php' ?>
 
 <section role="main">
+
 <?php include 'includes/_top-bar.php' ?>
 
 <section class="top-area main">
@@ -66,4 +66,11 @@
   </div>
 </div>
 <?php include 'includes/_subscribe.php' ?>	
+<div class="show-for-small">
+  <ul class="mobile-nav">
+    <li><a href="/process.php">Process</a></li>
+    <li><a href="/docs.php">Docs</a></li>
+    <li><a href="/templates.php">Email Templates</a></li>
+  </ul>
+</div>
 <?php include 'includes/_footer.php' ?>

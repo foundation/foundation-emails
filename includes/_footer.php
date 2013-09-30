@@ -1,13 +1,3 @@
-<div class="show-for-small">
-  <ul class="mobile-nav green">
-    <li><a href="http://zurb.com/news">Newsletters</a></li>
-    <li><a href="http://zurb.com/news/events">Events</a></li>
-    <li><a href="http://zurb.com/speak">Speaking</a></li>
-    <li><a href="http://zurb.com/soapbox" class="current">Soapbox</a></li>
-    <li><a href="http://zurb.com/news/press">Press</a></li>
-  </ul>
-</div>
-
 <div class="zurb-footer-top">
   <div class="row property">
     <div class="large-4 columns">
