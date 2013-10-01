@@ -113,7 +113,6 @@
   
   <script>
     $(document).foundation();
-    $(document).ready(function(){
       $('.doc-nav a').click(function(e){
         e.preventDefault();
         var target = $(this).attr('href');
@@ -127,12 +126,13 @@
       var bubbles = $('.bubble'),
           ranges = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900];
       bubbles.each(function(){
-        var offset = ranges[Math.floor((Math.random()*10))];
+        var offset = ranges.splice(Math.floor((Math.random()*10)), 1)[0];
         setTimeout(function(){
-          $(this).css('left', offset + Math.floor((Math.random()*100)+1)).addClass('float');
+          var adjustedOffset = offset + Math.floor((Math.random()*100)+1);
+          console.log(adjustedOffset)
+          $(this).css('left', adjustedOffset ).addClass('float');
         }.bind(this), offset*8);
         
-      });
     });
   </script>
 
