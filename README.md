@@ -43,7 +43,7 @@ table(.three).columns
 table.body
 	td.center
 
-		table.row
+		table.full-width
 			td.center
 
 				table.container

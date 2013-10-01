@@ -1,4 +1,4 @@
-/* Ink v0.6.1 - Copyright 2013 ZURB Inc */
+/* Ink v0.6.2 - Copyright 2013 ZURB Inc */
 
 /**********************************************
 * Client-specific Styles & Reset              *
@@ -48,6 +48,10 @@ img {
   float: left; 
   clear: both; 
   display: block;
+}
+
+center {
+  width: 100%;
 }
 
 a img { 
@@ -131,7 +135,8 @@ table.column td.sub-column {
   padding-right: 3.448276%;
 }
 
-table.row td.last {
+table.row td.last,
+table.container td.last {
   padding-right: 0px;
 }
 
@@ -188,6 +193,11 @@ td.sub-offset-by-eleven { padding-left: 91.379303% !important; }
 td.expander {
   visibility: hidden;
   width: 0px;
+  padding: 0 !important;
+}
+
+table.full-width {
+  width: 100%;
 }
 
 /**********************************************
@@ -496,6 +506,10 @@ body.outlook img {
   table[class="body"] td.offset-by-ten,
   table[class="body"] td.offset-by-eleven {
     padding-left: 0 !important;
+  }
+
+  table[class="body"] .expander {
+    width: 9999px !important;
   }
 
   table[class="body"] .hide-for-small,
