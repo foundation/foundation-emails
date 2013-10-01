@@ -92,7 +92,6 @@
 
 
   <script src="javascripts/vendor/jquery.js"></script>
-
   <script src="javascripts/foundation/foundation.js"></script>
 	<script src="javascripts/foundation/foundation.abide.js"></script>
 	<script src="javascripts/foundation/foundation.alerts.js"></script>
@@ -109,7 +108,7 @@
 	<script src="javascripts/foundation/foundation.section.js"></script>
 	<script src="javascripts/foundation/foundation.tooltips.js"></script>
 	<script src="javascripts/foundation/foundation.topbar.js"></script>
-		<script src="javascripts/foundation/jquery.offcanvas.js"></script>
+  <script src="javascripts/foundation/jquery.offcanvas.js"></script>
 	
   
   <script>
@@ -124,6 +123,16 @@
         }, Math.sqrt(offset)*15);
       });
       $('.inky').addClass('loaded');
+      /* $('.bubble').addClass('float'); */
+      var bubbles = $('.bubble'),
+          ranges = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+      bubbles.each(function(){
+        var offset = ranges[Math.floor((Math.random()*10))];
+        setTimeout(function(){
+          $(this).css('left', offset + Math.floor((Math.random()*100)+1)).addClass('float');
+        }.bind(this), offset*8);
+        
+      });
     });
   </script>
 

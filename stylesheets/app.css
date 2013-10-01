@@ -9403,42 +9403,46 @@ p {
   background-size: cover;
 }
 /* line 88, ../sass/app.scss */
+.top-area.main .row {
+  position: relative;
+}
+/* line 89, ../sass/app.scss */
 .top-area.main p.lead {
   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1.5em;
   line-height: 1.4em;
 }
-/* line 91, ../sass/app.scss */
+/* line 92, ../sass/app.scss */
 .top-area.downloading h1 {
   font-size: 3em;
   padding: 110px 0 400px;
 }
-/* line 93, ../sass/app.scss */
+/* line 94, ../sass/app.scss */
 .top-area h1 {
   color: #FFF;
   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 6.25em;
   margin-bottom: 0;
 }
-/* line 94, ../sass/app.scss */
+/* line 95, ../sass/app.scss */
 .top-area h2 {
   color: #FFF;
   font-size: 2.1875em;
   padding: 51px 0 0 0;
   margin-bottom: 12px;
 }
-/* line 95, ../sass/app.scss */
+/* line 96, ../sass/app.scss */
 .top-area p {
   color: #FFF;
 }
 
-/* line 97, ../sass/app.scss */
+/* line 98, ../sass/app.scss */
 .home-text {
   padding: 100px 0 103px;
   position: relative;
 }
 
-/* line 98, ../sass/app.scss */
+/* line 100, ../sass/app.scss */
 .inky {
   background: url(../images/inky.png) no-repeat center center;
   background-size: cover;
@@ -9449,7 +9453,7 @@ p {
   top: 10px !important;
 }
 
-/* line 99, ../sass/app.scss */
+/* line 101, ../sass/app.scss */
 .inky.loaded {
   animation-name: inky-float;
   -webkit-animation-name: inky-float;
@@ -9460,78 +9464,202 @@ p {
 }
 
 @keyframes inky-float {
-  /* line 102, ../sass/app.scss */
+  /* line 103, ../sass/app.scss */
   0% {
     transform: translateY(0%);
   }
 
-  /* line 105, ../sass/app.scss */
+  /* line 106, ../sass/app.scss */
   50% {
     transform: translateY(2%);
   }
 
-  /* line 108, ../sass/app.scss */
+  /* line 109, ../sass/app.scss */
   100% {
     transform: translateY(0%);
   }
 }
 
 @-webkit-keyframes inky-float {
-  /* line 114, ../sass/app.scss */
+  /* line 115, ../sass/app.scss */
   0% {
     -webkit-transform: translateY(0%);
   }
 
-  /* line 117, ../sass/app.scss */
+  /* line 118, ../sass/app.scss */
   50% {
     -webkit-transform: translateY(2%);
   }
 
-  /* line 120, ../sass/app.scss */
+  /* line 121, ../sass/app.scss */
   100% {
     -webkit-transform: translateY(0%);
   }
 }
 
-/* callout */
 /* line 126, ../sass/app.scss */
+.bubble {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+}
+
+/* line 127, ../sass/app.scss */
+.bubble.float {
+  opacity: 0;
+  -webkit-animation: purple-bubbles 5s ease-in infinite;
+  animation: purple-bubbles 5s ease-in infinite;
+}
+
+@-webkit-keyframes purple-bubbles {
+  /* line 129, ../sass/app.scss */
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+    top: 100%;
+  }
+
+  /* line 130, ../sass/app.scss */
+  4% {
+    -webkit-transform: scale(0);
+    opacity: 0.5;
+  }
+
+  /* line 131, ../sass/app.scss */
+  15% {
+    -webkit-transform: scale(0.9);
+    opacity: 1;
+  }
+
+  /* line 132, ../sass/app.scss */
+  20% {
+    -webkit-transform: scale(1);
+  }
+
+  /* line 133, ../sass/app.scss */
+  25% {
+    -webkit-transform: scale(1.1);
+  }
+
+  /* line 134, ../sass/app.scss */
+  30% {
+    -webkit-transform: scale(0.95);
+  }
+
+  /* line 135, ../sass/app.scss */
+  45% {
+    -webkit-transform: scale(1.1);
+  }
+
+  /* line 136, ../sass/app.scss */
+  91% {
+    -webkit-transform: scale(1);
+    top: 0;
+    opacity: 0;
+  }
+
+  /* line 137, ../sass/app.scss */
+  100% {
+    -webkit-transform: scale(0);
+    top: 0%;
+    opacity: 0;
+  }
+}
+
+@keyframes purple-bubbles {
+  /* line 140, ../sass/app.scss */
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+    top: 100%;
+  }
+
+  /* line 141, ../sass/app.scss */
+  2% {
+    -webkit-transform: scale(0);
+    opacity: 1;
+  }
+
+  /* line 142, ../sass/app.scss */
+  15% {
+    -webkit-transform: scale(0.9);
+  }
+
+  /* line 143, ../sass/app.scss */
+  20% {
+    -webkit-transform: scale(1);
+  }
+
+  /* line 144, ../sass/app.scss */
+  25% {
+    -webkit-transform: scale(1.1);
+  }
+
+  /* line 145, ../sass/app.scss */
+  30% {
+    -webkit-transform: scale(0.95);
+  }
+
+  /* line 146, ../sass/app.scss */
+  45% {
+    -webkit-transform: scale(1.1);
+  }
+
+  /* line 147, ../sass/app.scss */
+  71% {
+    -webkit-transform: scale(1);
+    top: 0;
+    opacity: 0;
+  }
+
+  /* line 148, ../sass/app.scss */
+  100% {
+    -webkit-transform: scale(0);
+    top: 0%;
+    opacity: 0;
+  }
+}
+
+/* callout */
+/* line 153, ../sass/app.scss */
 .callout {
   background: #e5e9ea;
   margin-bottom: 60px;
 }
 
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .space-callout {
   padding: 53px 0 31px;
 }
 
-/* line 128, ../sass/app.scss */
+/* line 155, ../sass/app.scss */
 .templates-callout {
   background: #2e2f2f;
   padding: 20px;
   position: relative;
   top: 132px;
 }
-/* line 129, ../sass/app.scss */
+/* line 156, ../sass/app.scss */
 .templates-callout h5, .templates-callout p {
   color: #FFF;
 }
-/* line 130, ../sass/app.scss */
+/* line 157, ../sass/app.scss */
 .templates-callout p {
   margin-bottom: 30px;
 }
-/* line 131, ../sass/app.scss */
+/* line 158, ../sass/app.scss */
 .templates-callout a {
   margin-bottom: 0;
 }
 
 /* discover links */
-/* line 135, ../sass/app.scss */
+/* line 162, ../sass/app.scss */
 .discover-links {
   margin-bottom: 50px;
   margin-top: 20px;
 }
-/* line 136, ../sass/app.scss */
+/* line 163, ../sass/app.scss */
 .discover-links a {
   display: block;
   text-align: center;
@@ -9539,30 +9667,30 @@ p {
   background: url(../images/icons/discover.png) no-repeat 0 0;
   background-size: 125px 1500px;
 }
-/* line 137, ../sass/app.scss */
+/* line 164, ../sass/app.scss */
 .discover-links a.process {
   background-position: center 0;
 }
-/* line 138, ../sass/app.scss */
+/* line 165, ../sass/app.scss */
 .discover-links a.docs {
   background-position: center -500px;
 }
-/* line 139, ../sass/app.scss */
+/* line 166, ../sass/app.scss */
 .discover-links a.download {
   background-position: center -1000px;
 }
-/* line 141, ../sass/app.scss */
+/* line 168, ../sass/app.scss */
 .discover-links span {
   display: block;
 }
-/* line 142, ../sass/app.scss */
+/* line 169, ../sass/app.scss */
 .discover-links span.title {
   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1.3125em;
   color: #0d2b40;
   margin-bottom: 10px;
 }
-/* line 143, ../sass/app.scss */
+/* line 170, ../sass/app.scss */
 .discover-links span.description {
   color: #333;
   font-size: 0.875em;
@@ -9570,107 +9698,107 @@ p {
 }
 
 /* stay updated */
-/* line 148, ../sass/app.scss */
+/* line 175, ../sass/app.scss */
 .stay-updated {
   background: #004454;
   padding: 36px 0 32px;
 }
-/* line 149, ../sass/app.scss */
+/* line 176, ../sass/app.scss */
 .stay-updated h5, .stay-updated a {
   color: #FFF;
   margin-bottom: 0;
 }
-/* line 150, ../sass/app.scss */
+/* line 177, ../sass/app.scss */
 .stay-updated p {
   color: #8798a7;
   margin-bottom: 0;
 }
-/* line 151, ../sass/app.scss */
+/* line 178, ../sass/app.scss */
 .stay-updated form {
   margin-bottom: 0;
   margin-top: 9px;
 }
-/* line 152, ../sass/app.scss */
+/* line 179, ../sass/app.scss */
 .stay-updated form input {
   padding: 18px;
   border: none;
 }
-/* line 153, ../sass/app.scss */
+/* line 180, ../sass/app.scss */
 .stay-updated form .button {
   padding-top: 13px;
 }
 
 /* interior */
-/* line 158, ../sass/app.scss */
+/* line 185, ../sass/app.scss */
 .top-headlines {
   margin-top: 50px;
 }
-/* line 159, ../sass/app.scss */
+/* line 186, ../sass/app.scss */
 .top-headlines h1 {
   margin-bottom: 0;
 }
 
-/* line 161, ../sass/app.scss */
+/* line 188, ../sass/app.scss */
 hr {
   border-style: dashed;
 }
 
 /* templates */
-/* line 164, ../sass/app.scss */
+/* line 191, ../sass/app.scss */
 .template-thumbs {
   margin-bottom: 50px;
 }
-/* line 165, ../sass/app.scss */
+/* line 192, ../sass/app.scss */
 .template-thumbs a {
   display: block;
 }
-/* line 166, ../sass/app.scss */
+/* line 193, ../sass/app.scss */
 .template-thumbs a.button {
   display: inline-block;
 }
-/* line 167, ../sass/app.scss */
+/* line 194, ../sass/app.scss */
 .template-thumbs a img {
   display: block;
   margin-bottom: 15px;
 }
-/* line 169, ../sass/app.scss */
+/* line 196, ../sass/app.scss */
 .template-thumbs span {
   display: block;
   color: #333;
 }
-/* line 170, ../sass/app.scss */
+/* line 197, ../sass/app.scss */
 .template-thumbs span.name {
   font-size: 1.3125em;
   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   color: #0d2b40;
 }
-/* line 171, ../sass/app.scss */
+/* line 198, ../sass/app.scss */
 .template-thumbs span.description {
   font-size: 0.875em;
   margin-bottom: 15px;
 }
 
-/* line 174, ../sass/app.scss */
+/* line 201, ../sass/app.scss */
 .thumb-select {
   margin-top: 20px;
 }
-/* line 175, ../sass/app.scss */
+/* line 202, ../sass/app.scss */
 .thumb-select label, .thumb-select select {
   display: inline-block;
 }
-/* line 176, ../sass/app.scss */
+/* line 203, ../sass/app.scss */
 .thumb-select select {
   width: 110px;
   margin-left: 10px;
 }
 
-/* line 178, ../sass/app.scss */
+/* line 205, ../sass/app.scss */
 .how-to-use {
   position: relative;
   padding: 30px 0;
 }
 
-/* line 179, ../sass/app.scss */
+/* line 206, ../sass/app.scss */
 .inky-small {
   background: url(../images/inky-small.gif);
   height: 377px;
@@ -9683,12 +9811,12 @@ hr {
 }
 
 /* downloading */
-/* line 182, ../sass/app.scss */
+/* line 209, ../sass/app.scss */
 .main-text {
   position: relative;
 }
 
-/* line 183, ../sass/app.scss */
+/* line 210, ../sass/app.scss */
 .inky-fish {
   background: url(../images/inky-fish.png) no-repeat center center;
   background-size: cover;
@@ -9698,41 +9826,41 @@ hr {
   top: 220px;
 }
 
-/* line 184, ../sass/app.scss */
+/* line 211, ../sass/app.scss */
 .under-inky-fish {
   margin-top: 100px;
   margin-bottom: 50px;
 }
-/* line 185, ../sass/app.scss */
+/* line 212, ../sass/app.scss */
 .under-inky-fish ul {
   font-size: 0.875em;
   margin-left: 15px;
 }
 
-/* line 187, ../sass/app.scss */
+/* line 214, ../sass/app.scss */
 .read-docs {
   margin-top: 20px;
 }
-/* line 188, ../sass/app.scss */
+/* line 215, ../sass/app.scss */
 .read-docs a {
   background: #e5ecee url(../images/icons/read-docs.png) no-repeat 38px center;
   padding: 23px 23px 23px 97px;
   background-size: 32px 44px;
   display: block;
 }
-/* line 189, ../sass/app.scss */
+/* line 216, ../sass/app.scss */
 .read-docs span {
   margin-bottom: 0;
   display: block;
 }
-/* line 190, ../sass/app.scss */
+/* line 217, ../sass/app.scss */
 .read-docs span.title {
   color: #0c2739;
   font-size: 1.3125em;
   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   margin-bottom: 10px;
 }
-/* line 191, ../sass/app.scss */
+/* line 218, ../sass/app.scss */
 .read-docs span.description {
   font-size: 0.875em;
   color: #333;
@@ -9740,20 +9868,20 @@ hr {
 }
 
 /* process */
-/* line 196, ../sass/app.scss */
+/* line 223, ../sass/app.scss */
 .how-to-use {
   position: relative;
 }
-/* line 197, ../sass/app.scss */
+/* line 224, ../sass/app.scss */
 .how-to-use.one {
   margin-bottom: 10px;
 }
-/* line 198, ../sass/app.scss */
+/* line 225, ../sass/app.scss */
 .how-to-use.one p, .how-to-use.one img, .how-to-use.one h3 {
   width: 440px;
   margin-left: 70px;
 }
-/* line 199, ../sass/app.scss */
+/* line 226, ../sass/app.scss */
 .how-to-use.one .process-1 {
   background: url(../images/process-1.png) no-repeat center center;
   height: 265px;
@@ -9763,20 +9891,20 @@ hr {
   right: 95px;
   top: -50px;
 }
-/* line 200, ../sass/app.scss */
+/* line 227, ../sass/app.scss */
 .how-to-use.one .bump-space {
   margin-left: 120px;
 }
-/* line 202, ../sass/app.scss */
+/* line 229, ../sass/app.scss */
 .how-to-use.two {
   margin-bottom: 10px;
 }
-/* line 203, ../sass/app.scss */
+/* line 230, ../sass/app.scss */
 .how-to-use.two p, .how-to-use.two img, .how-to-use.two h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 204, ../sass/app.scss */
+/* line 231, ../sass/app.scss */
 .how-to-use.two .process-2 {
   background: url(../images/process-2.png) no-repeat center center;
   height: 87px;
@@ -9786,25 +9914,25 @@ hr {
   left: 68px;
   top: 38px;
 }
-/* line 205, ../sass/app.scss */
+/* line 232, ../sass/app.scss */
 .how-to-use.two .bump-space {
   margin-left: 270px;
 }
-/* line 207, ../sass/app.scss */
+/* line 234, ../sass/app.scss */
 .how-to-use.three {
   margin-bottom: 30px;
 }
-/* line 208, ../sass/app.scss */
+/* line 235, ../sass/app.scss */
 .how-to-use.three p, .how-to-use.three img, .how-to-use.three h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 209, ../sass/app.scss */
+/* line 236, ../sass/app.scss */
 .how-to-use.three p.with-border {
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
 }
-/* line 210, ../sass/app.scss */
+/* line 237, ../sass/app.scss */
 .how-to-use.three .process-3 {
   background: url(../images/process-3.png) no-repeat center center;
   height: 377px;
@@ -9814,24 +9942,24 @@ hr {
   right: 40px;
   top: -100px;
 }
-/* line 211, ../sass/app.scss */
+/* line 238, ../sass/app.scss */
 .how-to-use.three .bump-space {
   margin-left: 50px;
 }
-/* line 213, ../sass/app.scss */
+/* line 240, ../sass/app.scss */
 .how-to-use.four {
   margin-bottom: 30px;
 }
-/* line 214, ../sass/app.scss */
+/* line 241, ../sass/app.scss */
 .how-to-use.four p, .how-to-use.four img, .how-to-use.four h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 215, ../sass/app.scss */
+/* line 242, ../sass/app.scss */
 .how-to-use.four .bump-space {
   margin-left: 300px;
 }
-/* line 216, ../sass/app.scss */
+/* line 243, ../sass/app.scss */
 .how-to-use.four .process-4 {
   background: url(../images/process-4.png) no-repeat center center;
   height: 116px;
@@ -9841,7 +9969,7 @@ hr {
   right: 0;
   top: 35px;
 }
-/* line 217, ../sass/app.scss */
+/* line 244, ../sass/app.scss */
 .how-to-use.four .process-4-2 {
   background: url(../images/process-4-2.png) no-repeat center center;
   height: 63px;
@@ -9851,26 +9979,26 @@ hr {
   left: 231px;
   top: -16px;
 }
-/* line 220, ../sass/app.scss */
+/* line 247, ../sass/app.scss */
 .how-to-use.five {
   margin-bottom: 60px;
 }
-/* line 221, ../sass/app.scss */
+/* line 248, ../sass/app.scss */
 .how-to-use.five .number {
   top: -13px;
 }
-/* line 222, ../sass/app.scss */
+/* line 249, ../sass/app.scss */
 .how-to-use.five p, .how-to-use.five img, .how-to-use.five h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 223, ../sass/app.scss */
+/* line 250, ../sass/app.scss */
 .how-to-use.five .bump-space {
   margin-left: 185px;
   position: relative;
   z-index: 2;
 }
-/* line 224, ../sass/app.scss */
+/* line 251, ../sass/app.scss */
 .how-to-use.five .process-5 {
   background: url(../images/process-3.png) no-repeat center center;
   height: 377px;
@@ -9880,7 +10008,7 @@ hr {
   left: 0;
   top: -120px;
 }
-/* line 225, ../sass/app.scss */
+/* line 252, ../sass/app.scss */
 .how-to-use.five .process-5-2 {
   background: url(../images/process-5-2.png) no-repeat center center;
   height: 59px;
@@ -9890,11 +10018,11 @@ hr {
   right: 150px;
   top: 92px;
 }
-/* line 227, ../sass/app.scss */
+/* line 254, ../sass/app.scss */
 .how-to-use h3 {
   margin-bottom: 10px;
 }
-/* line 228, ../sass/app.scss */
+/* line 255, ../sass/app.scss */
 .how-to-use .number {
   display: block;
   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -9904,7 +10032,7 @@ hr {
   position: absolute;
   top: 23px;
 }
-/* line 229, ../sass/app.scss */
+/* line 256, ../sass/app.scss */
 .how-to-use .campaign-monitor {
   background: url(../images/campaign-monitor.png) no-repeat left center;
   background-size: 18px 12px;
@@ -9912,64 +10040,64 @@ hr {
 }
 
 /* docs  */
-/* line 234, ../sass/app.scss */
+/* line 261, ../sass/app.scss */
 .doc-nav {
   list-style: none;
   margin-top: 50px;
 }
-/* line 235, ../sass/app.scss */
+/* line 262, ../sass/app.scss */
 .doc-nav li {
   display: block;
   font-size: 0.875em;
   margin-bottom: 10px;
 }
-/* line 236, ../sass/app.scss */
+/* line 263, ../sass/app.scss */
 .doc-nav li a {
   color: #333;
   display: block;
 }
-/* line 237, ../sass/app.scss */
+/* line 264, ../sass/app.scss */
 .doc-nav li a.current {
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* line 238, ../sass/app.scss */
+/* line 265, ../sass/app.scss */
 .doc-nav li a:hover {
   color: #000;
 }
-/* line 240, ../sass/app.scss */
+/* line 267, ../sass/app.scss */
 .doc-nav li ul li {
   font-size: 1em;
 }
 
-/* line 244, ../sass/app.scss */
+/* line 271, ../sass/app.scss */
 .docs h1 {
   margin-top: 30px;
   margin-bottom: 0;
 }
-/* line 245, ../sass/app.scss */
+/* line 272, ../sass/app.scss */
 .docs .label {
   background: #ddd;
   color: #333;
 }
-/* line 246, ../sass/app.scss */
+/* line 273, ../sass/app.scss */
 .docs table {
   width: 100%;
   font-size: 0.9375em;
 }
-/* line 247, ../sass/app.scss */
+/* line 274, ../sass/app.scss */
 .docs table td {
   line-height: 1.6;
   vertical-align: top;
 }
-/* line 249, ../sass/app.scss */
+/* line 276, ../sass/app.scss */
 .docs hr.section {
   margin-top: 50px;
   border-style: solid;
   border-width: 2px;
 }
 
-/* line 255, ../sass/app.scss */
+/* line 282, ../sass/app.scss */
 .prev-next-section {
   *zoom: 1;
   border-top: 1px dashed #ddd;
@@ -9985,7 +10113,7 @@ hr {
 .prev-next-section:after {
   clear: both;
 }
-/* line 256, ../sass/app.scss */
+/* line 283, ../sass/app.scss */
 .prev-next-section a {
   font-weight: bold;
   color: #333;
