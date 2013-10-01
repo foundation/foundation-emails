@@ -87,10 +87,6 @@
   </div>
 </div>
 
-
-
-
-
   <script src="javascripts/vendor/jquery.js"></script>
   <script src="javascripts/foundation/foundation.js"></script>
 	<script src="javascripts/foundation/foundation.abide.js"></script>
@@ -113,27 +109,49 @@
   
   <script>
     $(document).foundation();
-      $('.doc-nav a').click(function(e){
-        e.preventDefault();
-        var target = $(this).attr('href');
-        var offset = $(target).offset().top;
-        $('html, body').animate({
-          scrollTop : offset
-        }, Math.sqrt(offset)*15);
-      });
-      $('.inky').addClass('loaded');
-      /* $('.bubble').addClass('float'); */
-      var bubbles = $('.bubble'),
-          ranges = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900];
-      bubbles.each(function(){
-        var offset = ranges.splice(Math.floor((Math.random()*10)), 1)[0];
-        setTimeout(function(){
-          var adjustedOffset = offset + Math.floor((Math.random()*100)+1);
-          console.log(adjustedOffset)
-          $(this).css('left', adjustedOffset ).addClass('float');
-        }.bind(this), offset*8);
-        
+    $('.doc-nav a').click(function(e){
+      e.preventDefault();
+      var target = $(this).attr('href');
+      var offset = $(target).offset().top;
+      $('html, body').animate({
+        scrollTop : offset
+      }, Math.sqrt(offset)*15);
     });
+    $('.inky').addClass('loaded');
+    /* $('.bubble').addClass('float'); */
+    function shuffle(array) {
+      var m = array.length, t, i;
+
+      // While there remain elements to shuffle…
+      while (m) {
+
+        // Pick a remaining element…
+        i = Math.floor(Math.random() * m--);
+
+        // And swap it with the current element.
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+      }
+
+      return array;
+    }
+
+    var bubbles = $('.bubble'),
+        ranges = shuffle([0, 100, 200, 300, 400, 500, 600, 700, 800, 900]);
+
+    bubbles.each(function(){
+      var offset = ranges.pop();
+        setTimeout(function() {
+          $(this)
+            .css({
+              'left': offset + Math.floor((Math.random()*100)+1),
+              'top': Math.floor((Math.random()*500)+1)
+            })
+            .addClass('float');
+        }.bind(this), Math.floor((Math.random()*10)+1)*500);
+    });
+
   </script>
 
 <?php include 'includes/_offcanvas-menu.php' ?>
