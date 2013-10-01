@@ -127,8 +127,8 @@ p { font-size: emCalc(14px); }
 .bubble.float { opacity: 0;-webkit-animation: purple-bubbles 5s ease-in infinite; animation: purple-bubbles 5s ease-in infinite; }
   @-webkit-keyframes purple-bubbles {  
     0% { -webkit-transform: scale(0); opacity: 0; top:100%; }
-    4% {-webkit-transform: scale(0);opacity: 0.5;}
-    15% { -webkit-transform: scale(0.90);opacity: 1; }
+    17% { -webkit-transform: scale(0.1);opacity: 1; }
+    19% { -webkit-transform: scale(0.90);opacity: 1; }
     20% { -webkit-transform: scale(1); }
     25% { -webkit-transform: scale(1.1); }
     30% { -webkit-transform: scale(0.95); }
@@ -144,7 +144,7 @@ p { font-size: emCalc(14px); }
     25% { -webkit-transform: scale(1.1); }
     30% { -webkit-transform: scale(0.95); }
     45% { -webkit-transform: scale(1.1); }
-    71% {-webkit-transform: scale(1);top: 0;opacity: 0;}
+    91% {-webkit-transform: scale(1);top: 0;opacity: 0;}
     100% { -webkit-transform: scale(0); top: 0%; opacity: 0; }
   }
 

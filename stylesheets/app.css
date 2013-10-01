@@ -9521,13 +9521,13 @@ p {
   }
 
   /* line 130, ../sass/app.scss */
-  4% {
-    -webkit-transform: scale(0);
-    opacity: 0.5;
+  17% {
+    -webkit-transform: scale(0.1);
+    opacity: 1;
   }
 
   /* line 131, ../sass/app.scss */
-  15% {
+  19% {
     -webkit-transform: scale(0.9);
     opacity: 1;
   }
@@ -9607,7 +9607,7 @@ p {
   }
 
   /* line 147, ../sass/app.scss */
-  71% {
+  91% {
     -webkit-transform: scale(1);
     top: 0;
     opacity: 0;
