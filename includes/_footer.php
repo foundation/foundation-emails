@@ -123,7 +123,7 @@
           scrollTop : offset
         }, Math.sqrt(offset)*15);
       });
-      $('.inky').addClass('loaded'
+      $('.inky').addClass('loaded');
     });
   </script>
 
