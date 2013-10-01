@@ -1,4 +1,4 @@
-/* Ink v0.6.0 - Copyright 2013 ZURB Inc */
+/* Ink v0.6.1 - Copyright 2013 ZURB Inc */
 
 /**********************************************
 * Client-specific Styles & Reset              *
@@ -238,6 +238,10 @@ body, h1, h2, h3, h4, h5, h6, p {
   line-height: 1.3;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  word-break: normal;
+}
+
 h1 {font-size: 59px;}
 h2 {font-size: 45px;}
 h3 {font-size: 37px;}
@@ -430,11 +434,21 @@ a.rounded td {
   -moz-border-radius: 500px;
   border-radius: 500px;
 }
+
+/**********************************************
+* Outlook First                               *
+**********************************************/
+
+body.outlook img {
+  width: auto !important;
+  max-width: none !important;
+}
+
 /**********************************************
 * Media Queries                               *
 **********************************************/
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 600px) {
 
   table[class="body"] .container {
     width: 95% !important;
@@ -493,13 +507,4 @@ a.rounded td {
   table[class="body"] .hide-for-desktop {
     display: inherit !important;
   }
-}
-
-/**********************************************
-* Outlook First                               *
-**********************************************/
-
-body.outlook img {
-  width: auto !important;
-  max-width: none !important;
 }
