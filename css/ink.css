@@ -153,17 +153,17 @@ table.ten { width: 480px; }
 table.eleven { width: 530px; }
 table.twelve { width: 580px; }
 
-td.one { width: 5.172413% !important; }
-td.two { width: 13.793103% !important; }
-td.three { width: 22.413793% !important; }
-td.four { width: 31.034482% !important; }
-td.five { width: 39.655172% !important; }
-td.six { width: 48.275862% !important; }
-td.seven { width: 56.896551% !important; }
-td.eight { width: 65.517241% !important; }
-td.nine { width: 774.137931% !important; }
-td.ten { width: 82.758620% !important; }
-td.eleven { width: 91.379310% !important; }
+td.one { width: 8.333333% !important; }
+td.two { width: 16.666666% !important; }
+td.three { width: 25% !important; }
+td.four { width: 33.333333% !important; }
+td.five { width: 41.666666% !important; }
+td.six { width: 50% !important; }
+td.seven { width: 58.333333% !important; }
+td.eight { width: 66.666666% !important; }
+td.nine { width: 75% !important; }
+td.ten { width: 83.333333% !important; }
+td.eleven { width: 91.666666% !important; }
 td.twelve { width: 100% !important; }
 
 td.offset-by-one { padding-left: 50px; }
