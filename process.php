@@ -52,7 +52,7 @@
         
         <p class="campaign-monitor"><strong>We recommend Campaign Monitor to do this.</strong></p>
       </div>
-      <div class="process-3"></div>
+      <div class="process-3"><img src="images/inky-blink.gif"/></div>
     </div>
     
     <div class="how-to-use four">
