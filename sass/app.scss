@@ -212,7 +212,7 @@ hr { border-style: dashed; }
   select { width: 110px; margin-left: 10px; }
 }
 .how-to-use { position: relative; padding: 30px 0;  }
-.inky-small { background: url(../images/inky-small.gif); height: 377px; width: 273px; background-size: cover; position: absolute; top: 0; right: -310px; z-index: 2; }
+.inky-small { background: url(../images/inky-small.gif); height: 377px; width: 273px; background-size: cover; position: absolute; top: 0; right: -310px; z-index: 2;animation-name: small-inky; -webkit-animation-name: small-inky; animation-duration:9s; -webkit-animation-duration:9s; animation-iteration-count: infinite; -webkit-animation-iteration-count:infinite;  }
 
 /* downloading */
 .main-text { position: relative; }

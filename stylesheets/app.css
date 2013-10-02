@@ -9820,6 +9820,12 @@ hr {
   top: 0;
   right: -310px;
   z-index: 2;
+  animation-name: small-inky;
+  -webkit-animation-name: small-inky;
+  animation-duration: 9s;
+  -webkit-animation-duration: 9s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
 }
 
 /* downloading */
