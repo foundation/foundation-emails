@@ -120,6 +120,7 @@
     $('.inky').addClass('loaded');
     $('.process-4-2').addClass('load');
     $('.process-5-2').addClass('load');
+    $('.process-2').addClass('load');
     /* $('.bubble').addClass('float'); */
     function shuffle(array) {
       var m = array.length, t, i;

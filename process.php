@@ -40,7 +40,7 @@
         <p>Include any responsive styles you want to include. These should be in a the <code>&lt;head&gt;</code> of your document within a &lt;style&gt; tag.</p>
         <img src="images/process-2.jpg" alt="process-1" />
       </div>
-      <div class="process-2"></div>
+      <div class="process-2"><img src="images/process-2.png" /></div>
     </div>
 
     

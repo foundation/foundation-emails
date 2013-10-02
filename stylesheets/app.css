@@ -9906,7 +9906,6 @@ hr {
 }
 /* line 231, ../sass/app.scss */
 .how-to-use.two .process-2 {
-  background: url(../images/process-2.png) no-repeat center center;
   height: 87px;
   width: 166px;
   background-size: cover;
@@ -9915,24 +9914,28 @@ hr {
   top: 38px;
 }
 /* line 232, ../sass/app.scss */
+.how-to-use.two .process-2 img {
+  margin-left: 0px;
+}
+/* line 234, ../sass/app.scss */
 .how-to-use.two .bump-space {
   margin-left: 270px;
 }
-/* line 234, ../sass/app.scss */
+/* line 236, ../sass/app.scss */
 .how-to-use.three {
   margin-bottom: 30px;
 }
-/* line 235, ../sass/app.scss */
+/* line 237, ../sass/app.scss */
 .how-to-use.three p, .how-to-use.three img, .how-to-use.three h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 236, ../sass/app.scss */
+/* line 238, ../sass/app.scss */
 .how-to-use.three p.with-border {
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
 }
-/* line 237, ../sass/app.scss */
+/* line 239, ../sass/app.scss */
 .how-to-use.three .process-3 {
   background: url(../images/process-3.png) no-repeat center center;
   height: 377px;
@@ -9942,24 +9945,24 @@ hr {
   right: 40px;
   top: -100px;
 }
-/* line 238, ../sass/app.scss */
+/* line 240, ../sass/app.scss */
 .how-to-use.three .bump-space {
   margin-left: 50px;
 }
-/* line 240, ../sass/app.scss */
+/* line 242, ../sass/app.scss */
 .how-to-use.four {
   margin-bottom: 30px;
 }
-/* line 241, ../sass/app.scss */
+/* line 243, ../sass/app.scss */
 .how-to-use.four p, .how-to-use.four img, .how-to-use.four h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 242, ../sass/app.scss */
+/* line 244, ../sass/app.scss */
 .how-to-use.four .bump-space {
   margin-left: 300px;
 }
-/* line 243, ../sass/app.scss */
+/* line 245, ../sass/app.scss */
 .how-to-use.four .process-4 {
   background: url(../images/process-4.png) no-repeat center center;
   height: 116px;
@@ -9969,7 +9972,7 @@ hr {
   right: 0;
   top: 35px;
 }
-/* line 244, ../sass/app.scss */
+/* line 246, ../sass/app.scss */
 .how-to-use.four .process-4-2 {
   height: 63px;
   width: 96px;
@@ -9978,30 +9981,30 @@ hr {
   left: 231px;
   top: -16px;
 }
-/* line 245, ../sass/app.scss */
+/* line 247, ../sass/app.scss */
 .how-to-use.four .process-4-2 img {
   margin-left: 0px;
 }
-/* line 249, ../sass/app.scss */
+/* line 251, ../sass/app.scss */
 .how-to-use.five {
   margin-bottom: 60px;
 }
-/* line 250, ../sass/app.scss */
+/* line 252, ../sass/app.scss */
 .how-to-use.five .number {
   top: -13px;
 }
-/* line 251, ../sass/app.scss */
+/* line 253, ../sass/app.scss */
 .how-to-use.five p, .how-to-use.five img, .how-to-use.five h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 252, ../sass/app.scss */
+/* line 254, ../sass/app.scss */
 .how-to-use.five .bump-space {
   margin-left: 185px;
   position: relative;
   z-index: 2;
 }
-/* line 253, ../sass/app.scss */
+/* line 255, ../sass/app.scss */
 .how-to-use.five .process-5 {
   background: url(../images/process-3.png) no-repeat center center;
   height: 377px;
@@ -10011,7 +10014,7 @@ hr {
   left: 0;
   top: -120px;
 }
-/* line 254, ../sass/app.scss */
+/* line 256, ../sass/app.scss */
 .how-to-use.five .process-5-2 {
   height: 59px;
   width: 90px;
@@ -10020,15 +10023,15 @@ hr {
   right: 150px;
   top: 92px;
 }
-/* line 255, ../sass/app.scss */
+/* line 257, ../sass/app.scss */
 .how-to-use.five .process-5-2 img {
   margin-left: 0px;
 }
-/* line 258, ../sass/app.scss */
+/* line 260, ../sass/app.scss */
 .how-to-use h3 {
   margin-bottom: 10px;
 }
-/* line 259, ../sass/app.scss */
+/* line 261, ../sass/app.scss */
 .how-to-use .number {
   display: block;
   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -10038,160 +10041,260 @@ hr {
   position: absolute;
   top: 23px;
 }
-/* line 260, ../sass/app.scss */
+/* line 262, ../sass/app.scss */
 .how-to-use .campaign-monitor {
   background: url(../images/campaign-monitor.png) no-repeat left center;
   background-size: 18px 12px;
   padding-left: 30px;
 }
 
-/* line 263, ../sass/app.scss */
-.process-4-2.load img {
+/* line 266, ../sass/app.scss */
+.process-2.load img {
   animation-name: fish1;
   -webkit-animation-name: fish1;
-  animation-duration: 7s;
-  -webkit-animation-duration: 7s;
+  animation-duration: 6s;
+  -webkit-animation-duration: 6s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
 }
 
 @keyframes fish1 {
-  /* line 265, ../sass/app.scss */
+  /* line 268, ../sass/app.scss */
   0% {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 
-  /* line 266, ../sass/app.scss */
+  /* line 269, ../sass/app.scss */
   50% {
-    transform: translateY(12%);
+    transform: translateX(3%);
   }
 
-  /* line 267, ../sass/app.scss */
+  /* line 270, ../sass/app.scss */
   100% {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 }
 
 @-webkit-keyframes fish1 {
-  /* line 271, ../sass/app.scss */
+  /* line 274, ../sass/app.scss */
   0% {
-    -webkit-transform: translateY(0%);
+    -webkit-transform: translateX(0%);
   }
 
-  /* line 272, ../sass/app.scss */
+  /* line 275, ../sass/app.scss */
   50% {
-    -webkit-transform: translateY(12%);
+    -webkit-transform: translateX(3%);
   }
 
-  /* line 273, ../sass/app.scss */
+  /* line 276, ../sass/app.scss */
   100% {
-    -webkit-transform: translateY(0%);
+    -webkit-transform: translateX(0%);
   }
 }
 
-/* line 276, ../sass/app.scss */
-.process-5-2.load img {
-  animation-name: fish2;
-  -webkit-animation-name: fish2;
+/* line 280, ../sass/app.scss */
+.process-3 {
+  background: url(../images/process-3.png);
+  animation-name: small-inky;
+  -webkit-animation-name: small-inky;
   animation-duration: 9s;
   -webkit-animation-duration: 9s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
 }
 
-@keyframes fish2 {
-  /* line 278, ../sass/app.scss */
+@keyframes small-inky {
+  /* line 282, ../sass/app.scss */
   0% {
     transform: translateY(0%);
   }
 
-  /* line 279, ../sass/app.scss */
+  /* line 283, ../sass/app.scss */
   50% {
-    transform: translateY(15%);
+    transform: translateY(2%);
   }
 
-  /* line 280, ../sass/app.scss */
+  /* line 284, ../sass/app.scss */
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes small-inky {
+  /* line 288, ../sass/app.scss */
+  0% {
+    transform: translateY(0%);
+  }
+
+  /* line 289, ../sass/app.scss */
+  48.5% {
+    background: url(../images/process-3.png);
+  }
+
+  /* line 290, ../sass/app.scss */
+  50% {
+    background: url(../images/process-3-blink.png);
+  }
+
+  /* line 291, ../sass/app.scss */
+  51.5% {
+    background: url(../images/process-3.png);
+  }
+
+  /* line 292, ../sass/app.scss */
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* line 296, ../sass/app.scss */
+.process-4-2.load img {
+  animation-name: fish2;
+  -webkit-animation-name: fish2;
+  animation-duration: 7s;
+  -webkit-animation-duration: 7s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes fish2 {
+  /* line 298, ../sass/app.scss */
+  0% {
+    transform: translateY(0%);
+  }
+
+  /* line 299, ../sass/app.scss */
+  50% {
+    transform: translateY(12%);
+  }
+
+  /* line 300, ../sass/app.scss */
   100% {
     transform: translateY(0%);
   }
 }
 
 @-webkit-keyframes fish2 {
-  /* line 284, ../sass/app.scss */
+  /* line 304, ../sass/app.scss */
   0% {
     -webkit-transform: translateY(0%);
   }
 
-  /* line 285, ../sass/app.scss */
+  /* line 305, ../sass/app.scss */
   50% {
-    -webkit-transform: translateY(15%);
+    -webkit-transform: translateY(12%);
   }
 
-  /* line 286, ../sass/app.scss */
+  /* line 306, ../sass/app.scss */
   100% {
     -webkit-transform: translateY(0%);
   }
 }
 
+/* line 309, ../sass/app.scss */
+.process-5-2.load img {
+  animation-name: fish3;
+  -webkit-animation-name: fish3;
+  animation-duration: 7s;
+  -webkit-animation-duration: 7s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes fish3 {
+  /* line 311, ../sass/app.scss */
+  0% {
+    transform: translateX(0%);
+  }
+
+  /* line 312, ../sass/app.scss */
+  50% {
+    transform: translateX(5%);
+  }
+
+  /* line 313, ../sass/app.scss */
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes fish3 {
+  /* line 317, ../sass/app.scss */
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+
+  /* line 318, ../sass/app.scss */
+  50% {
+    -webkit-transform: translateX(5%);
+  }
+
+  /* line 319, ../sass/app.scss */
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
 /* docs  */
-/* line 293, ../sass/app.scss */
+/* line 327, ../sass/app.scss */
 .doc-nav {
   list-style: none;
   margin-top: 50px;
 }
-/* line 294, ../sass/app.scss */
+/* line 328, ../sass/app.scss */
 .doc-nav li {
   display: block;
   font-size: 0.875em;
   margin-bottom: 10px;
 }
-/* line 295, ../sass/app.scss */
+/* line 329, ../sass/app.scss */
 .doc-nav li a {
   color: #333;
   display: block;
 }
-/* line 296, ../sass/app.scss */
+/* line 330, ../sass/app.scss */
 .doc-nav li a.current {
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* line 297, ../sass/app.scss */
+/* line 331, ../sass/app.scss */
 .doc-nav li a:hover {
   color: #000;
 }
-/* line 299, ../sass/app.scss */
+/* line 333, ../sass/app.scss */
 .doc-nav li ul li {
   font-size: 1em;
 }
 
-/* line 303, ../sass/app.scss */
+/* line 337, ../sass/app.scss */
 .docs h1 {
   margin-top: 30px;
   margin-bottom: 0;
 }
-/* line 304, ../sass/app.scss */
+/* line 338, ../sass/app.scss */
 .docs .label {
   background: #ddd;
   color: #333;
 }
-/* line 305, ../sass/app.scss */
+/* line 339, ../sass/app.scss */
 .docs table {
   width: 100%;
   font-size: 0.9375em;
 }
-/* line 306, ../sass/app.scss */
+/* line 340, ../sass/app.scss */
 .docs table td {
   line-height: 1.6;
   vertical-align: top;
 }
-/* line 308, ../sass/app.scss */
+/* line 342, ../sass/app.scss */
 .docs hr.section {
   margin-top: 50px;
   border-style: solid;
   border-width: 2px;
 }
 
-/* line 314, ../sass/app.scss */
+/* line 348, ../sass/app.scss */
 .prev-next-section {
   *zoom: 1;
   border-top: 1px dashed #ddd;
@@ -10207,7 +10310,7 @@ hr {
 .prev-next-section:after {
   clear: both;
 }
-/* line 315, ../sass/app.scss */
+/* line 349, ../sass/app.scss */
 .prev-next-section a {
   font-weight: bold;
   color: #333;
