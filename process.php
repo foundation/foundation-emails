@@ -62,7 +62,7 @@
         <p>Don’t send it out just yet! Make sure you test it on as many platforms as you can. We use Litmust to test on a number of devices. You should too.</p>
       </div>
       <div class="process-4"></div>
-      <div class="process-4-2"></div>
+      <div class="process-4-2"><img src="images/process-4-2.png"></div>
     </div>
     
     <div class="how-to-use five">
@@ -72,7 +72,7 @@
         <p>Your email is ready! No more pinching to zoom to read your amazing content. Enjoy the rewards! Have a great one? Send a copy to us at ink@zurb.com.</p>
       </div>
       <div class="process-5"></div>
-      <div class="process-5-2"></div>
+      <div class="process-5-2"><img src="images/process-5-2.png"></div>
     </div>
   </div>
 </div>

@@ -241,20 +241,52 @@ hr { border-style: dashed; }
     p, img, h3 { width: 470px; margin-left: 100px; }
     .bump-space { margin-left: 300px; }
     .process-4 { background: url(../images/process-4.png) no-repeat center center; height: 116px; width: 107px; background-size: cover; position: absolute; right: 0; top: 35px;  }
-    .process-4-2 { background: url(../images/process-4-2.png) no-repeat center center; height: 63px; width: 96px; background-size: cover; position: absolute; left: 231px; top: -16px;  }
-    
+    .process-4-2 { height: 63px; width: 96px; background-size: cover; position: absolute; left: 231px; top: -16px;  
+      img { margin-left: 0px; }
+    }
   }
+  
   &.five { margin-bottom: 60px; 
     .number { top: -13px; }
     p, img, h3 { width: 470px; margin-left: 100px; }
     .bump-space { margin-left: 185px; position: relative; z-index: 2;}
     .process-5 { background: url(../images/process-3.png) no-repeat center center; height: 377px; width: 273px; background-size: cover; position: absolute; left: 0; top: -120px;  }
-    .process-5-2 { background: url(../images/process-5-2.png) no-repeat center center; height: 59px; width: 90px; background-size: cover; position: absolute; right: 150px; top: 92px;  }
+    .process-5-2 { height: 59px; width: 90px; background-size: cover; position: absolute; right: 150px; top: 92px;  
+      img { margin-left:0px; }
+    }
   }
   h3 { margin-bottom: 10px;  }
   .number { display: block; font-family: $sans-serif; color: #a3abad; font-size: emCalc(138px); font-weight: bold; position: absolute; top: 23px; }
   .campaign-monitor { background: url(../images/campaign-monitor.png) no-repeat left center; background-size: 18px 12px; padding-left: 30px; }
 }
+
+.process-4-2.load img {  animation-name: fish1; -webkit-animation-name: fish1; animation-duration:7s; -webkit-animation-duration:7s; animation-iteration-count: infinite; -webkit-animation-iteration-count: infinite; }
+@keyframes fish1 {
+	0% { transform: translateY(0%); }
+	50% { transform: translateY(12%);}
+	100% { transform: translateY(0%); }		
+}
+
+@-webkit-keyframes fish1 {
+	0% { -webkit-transform: translateY(0%); }
+	50% { -webkit-transform: translateY(12%);}
+	100% { -webkit-transform: translateY(0%); }			
+}
+
+.process-5-2.load img {  animation-name: fish2; -webkit-animation-name: fish2; animation-duration:9s; -webkit-animation-duration:9s; animation-iteration-count: infinite; -webkit-animation-iteration-count: infinite; }
+@keyframes fish2 {
+	0% { transform: translateY(0%); }
+	50% { transform: translateY(15%);}
+	100% { transform: translateY(0%); }		
+}
+
+@-webkit-keyframes fish2 {
+	0% { -webkit-transform: translateY(0%); }
+	50% { -webkit-transform: translateY(15%);}
+	100% { -webkit-transform: translateY(0%); }			
+}
+
+
 
 
 /* docs  */

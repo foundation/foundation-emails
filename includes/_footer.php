@@ -118,6 +118,8 @@
       }, Math.sqrt(offset)*15);
     });
     $('.inky').addClass('loaded');
+    $('.process-4-2').addClass('load');
+    $('.process-5-2').addClass('load');
     /* $('.bubble').addClass('float'); */
     function shuffle(array) {
       var m = array.length, t, i;
