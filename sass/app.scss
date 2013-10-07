@@ -369,5 +369,24 @@ hr { border-style: dashed; }
   .top-area { position: relative; }
   .top-area .inky-phone { display:block; background: url(../images/inky-phone.png); background-repeat: no-repeat;height: 470px; position:absolute; bottom:0px; right:0px; width: 200px; opacity: 0.7; }
   .top-area .home-text { padding: 40px 0 50px; position: relative; z-index: 2; }
-  .templates-callout { top:0px; }
+  .templates-callout { top: 0px; margin-bottom: 50px; }
+  
+  .callout .row .stamp { left: 0; opacity: .25; webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); width: 100%; }
+  
+  .how-to-use {
+    h3, p { width: 100% !important; margin-left: 0 !important; }
+    .bump-space { margin-left: 0 !important; }
+    .process-1, .process-2, .process-3, .process-4, .process-4-2, .process-5, .process-5-2 { display: none !important; }
+    .number { position: relative; text-align: left; width: 100%; font-size: 3.625em; top: auto; }
+    img { margin-left: 0 !important; width: 100% !important; }
+  }
  }
+ 
+ul.mobile-nav { display: block; margin-bottom: 0; 
+ li { display: block; } 
+ a { display: block; padding: 10px; background: #003542; color: #FFF; border-bottom: 1px solid rgba(255, 255, 255, 0.5); font-weight: bold; 
+   &.current { background: #002f3b; } 
+ }
+ 
+ 
+}
