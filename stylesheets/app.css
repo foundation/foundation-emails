@@ -10371,3 +10371,191 @@ ul.mobile-nav a {
 ul.mobile-nav a.current {
   background: #002f3b;
 }
+
+@media only screen and (max-width: 768px) and (max-width: 1024px) {
+  /* line 393, ../sass/app.scss */
+  .inky {
+    right: -460px;
+  }
+
+  /* line 394, ../sass/app.scss */
+  .touch .how-to-use {
+    position: relative;
+  }
+  /* line 396, ../sass/app.scss */
+  .touch .how-to-use.one p, .touch .how-to-use.one img, .touch .how-to-use.one h3 {
+    width: 400px;
+    margin-left: 70px;
+  }
+  /* line 397, ../sass/app.scss */
+  .touch .how-to-use.one .process-1 {
+    background: url(../images/process-1.png) no-repeat center center;
+    height: 265px;
+    width: 256px;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: -50px;
+  }
+  /* line 398, ../sass/app.scss */
+  .touch .how-to-use.one .bump-space {
+    margin-left: 60px;
+  }
+  /* line 400, ../sass/app.scss */
+  .touch .how-to-use.two {
+    margin-bottom: 10px;
+  }
+  /* line 401, ../sass/app.scss */
+  .touch .how-to-use.two p, .touch .how-to-use.two img, .touch .how-to-use.two h3 {
+    width: 440px;
+    margin-left: 100px;
+  }
+  /* line 402, ../sass/app.scss */
+  .touch .how-to-use.two .process-2 {
+    height: 65px;
+    width: 124px;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 38px;
+    z-index: -1;
+  }
+  /* line 403, ../sass/app.scss */
+  .touch .how-to-use.two .process-2 img {
+    margin-left: 0px;
+  }
+  /* line 405, ../sass/app.scss */
+  .touch .how-to-use.two .bump-space {
+    margin-left: 100px;
+  }
+  /* line 407, ../sass/app.scss */
+  .touch .how-to-use.three {
+    margin-bottom: 30px;
+  }
+  /* line 408, ../sass/app.scss */
+  .touch .how-to-use.three p, .touch .how-to-use.three img, .touch .how-to-use.three h3 {
+    width: 350px;
+    margin-left: 100px;
+  }
+  /* line 409, ../sass/app.scss */
+  .touch .how-to-use.three p.with-border {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+  }
+  /* line 410, ../sass/app.scss */
+  .touch .how-to-use.three .process-3 {
+    height: 377px;
+    width: 273px;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: -100px;
+  }
+  /* line 411, ../sass/app.scss */
+  .touch .how-to-use.three .process-3 img {
+    margin-left: 0px;
+  }
+  /* line 413, ../sass/app.scss */
+  .touch .how-to-use.three .bump-space {
+    margin-left: 0;
+  }
+  /* line 415, ../sass/app.scss */
+  .touch .how-to-use.four {
+    margin-bottom: 30px;
+  }
+  /* line 416, ../sass/app.scss */
+  .touch .how-to-use.four p, .touch .how-to-use.four img, .touch .how-to-use.four h3 {
+    width: 350px;
+    margin-left: 100px;
+  }
+  /* line 417, ../sass/app.scss */
+  .touch .how-to-use.four .bump-space {
+    margin-left: 150px;
+  }
+  /* line 418, ../sass/app.scss */
+  .touch .how-to-use.four .process-4 {
+    background: url(../images/process-4.png) no-repeat center center;
+    height: 116px;
+    width: 107px;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 35px;
+  }
+  /* line 419, ../sass/app.scss */
+  .touch .how-to-use.four .process-4-2 {
+    height: 63px;
+    width: 96px;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: -16px;
+  }
+  /* line 420, ../sass/app.scss */
+  .touch .how-to-use.four .process-4-2 img {
+    margin-left: 0px;
+  }
+  /* line 424, ../sass/app.scss */
+  .touch .how-to-use.five {
+    padding-bottom: 70px;
+    background: url(../images/ocean_floor.png) center bottom no-repeat;
+    background-size: cover;
+  }
+  /* line 425, ../sass/app.scss */
+  .touch .how-to-use.five .number {
+    top: -13px;
+  }
+  /* line 426, ../sass/app.scss */
+  .touch .how-to-use.five p, .touch .how-to-use.five img, .touch .how-to-use.five h3 {
+    width: 470px;
+    margin-left: 100px;
+  }
+  /* line 427, ../sass/app.scss */
+  .touch .how-to-use.five .bump-space {
+    margin-left: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  /* line 428, ../sass/app.scss */
+  .touch .how-to-use.five .process-5 {
+    height: 377px;
+    width: 273px;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: -120px;
+  }
+  /* line 429, ../sass/app.scss */
+  .touch .how-to-use.five .process-5-2 {
+    height: 59px;
+    width: 90px;
+    background-size: cover;
+    position: absolute;
+    right: 50px;
+    top: 92px;
+  }
+  /* line 430, ../sass/app.scss */
+  .touch .how-to-use.five .process-5-2 img {
+    margin-left: 0px;
+  }
+  /* line 433, ../sass/app.scss */
+  .touch .how-to-use h3 {
+    margin-bottom: 10px;
+  }
+  /* line 434, ../sass/app.scss */
+  .touch .how-to-use .number {
+    display: block;
+    font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: #a3abad;
+    font-size: 8.625em;
+    font-weight: bold;
+    position: absolute;
+    top: 23px;
+  }
+  /* line 435, ../sass/app.scss */
+  .touch .how-to-use .campaign-monitor {
+    background: url(../images/campaign-monitor.png) no-repeat left center;
+    background-size: 18px 12px;
+    padding-left: 30px;
+  }
+}

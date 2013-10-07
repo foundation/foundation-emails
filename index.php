@@ -6,16 +6,18 @@
 
 <section class="top-area main">
   <div class="row">
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
+    <div class="hide-for-touch">
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+    </div>
     <div class="large-5 columns">
       <a class='sidebar-button show-for-small' id="sidebarButton" href="#sidebar" ><img alt="Menu-wht" src="images/offcanvas/menu-wht.png" /><h4>Ink</h4></a>
       <div class="home-text">
