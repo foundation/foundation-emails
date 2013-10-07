@@ -20,15 +20,17 @@
       <a class='sidebar-button show-for-small' id="sidebarButton" href="#sidebar" ><img alt="Menu-wht" src="images/offcanvas/menu-wht.png" /><h4>Ink</h4></a>
       <div class="home-text">
         <h1 class="light">Ink</h1>
-        <p class="lead">Quickly create responsive emails that work on any device.</p>
+        <p class="lead">Quickly create responsive emails that work on any device &amp; client. Even Outlook.</p>
         <a href="download.php" class="large button">Download Ink 0.6.0</a>
         <div class="inky"></div>
       </div>
     </div>
   </div>
+  <div class="inky-phone"></div>
 </section>
 <section class="callout">
   <div class="row">
+    <div class="stamp"></div>
     <div class="large-6 columns">
       <div class="space-callout">
         <h3 class="light">Email. Anywhere. On Any Device.</h3>
@@ -37,7 +39,7 @@
       </div>
     </div>
     
-    <div class="large-3 columns">
+    <div class="large-4 columns">
       <div class="templates-callout">
         <h5 class="normal">Shiny email templates</h5>
         <p>We've created some common layouts for you to start from so you can cook your emails faster.</p>

@@ -9394,6 +9394,8 @@ p {
 /* line 86, ../sass/app.scss */
 .top-area {
   background-color: #002b35;
+  position: relative;
+  z-index: 4;
 }
 /* line 87, ../sass/app.scss */
 .top-area.main {
@@ -9436,7 +9438,7 @@ p {
   color: #FFF;
 }
 
-/* line 98, ../sass/app.scss */
+/* line 99, ../sass/app.scss */
 .home-text {
   padding: 100px 0 103px;
   position: relative;
@@ -9627,51 +9629,69 @@ p {
   background: #e5e9ea;
   margin-bottom: 60px;
 }
-
 /* line 142, ../sass/app.scss */
+.callout .row {
+  position: relative;
+}
+/* line 143, ../sass/app.scss */
+.callout .row .stamp {
+  background: url(../images/stamp.png) no-repeat center center;
+  position: absolute;
+  width: 250px;
+  left: -175px;
+  height: 190px;
+  top: -94px;
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+/* line 152, ../sass/app.scss */
 .space-callout {
   padding: 53px 0 31px;
 }
 
-/* line 143, ../sass/app.scss */
+/* line 153, ../sass/app.scss */
 .templates-callout {
   background: #2e2f2f;
   padding: 20px;
   position: relative;
-  top: 132px;
+  top: 150px;
 }
-/* line 144, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .templates-callout h5, .templates-callout p {
   color: #FFF;
 }
-/* line 145, ../sass/app.scss */
+/* line 155, ../sass/app.scss */
 .templates-callout p {
   margin-bottom: 30px;
 }
-/* line 146, ../sass/app.scss */
+/* line 156, ../sass/app.scss */
 .templates-callout a {
   margin-bottom: 0;
 }
 
-/* line 151, ../sass/app.scss */
+/* line 161, ../sass/app.scss */
 .discover-links a:hover.process {
   background-position: center 5px;
 }
-/* line 152, ../sass/app.scss */
+/* line 162, ../sass/app.scss */
 .discover-links a:hover.docs {
   background-position: center -500px;
 }
-/* line 153, ../sass/app.scss */
+/* line 163, ../sass/app.scss */
 .discover-links a:hover.download {
   background-position: center -1000px;
 }
 
 /* discover links */
-/* line 159, ../sass/app.scss */
+/* line 169, ../sass/app.scss */
 .discover-links {
   margin-bottom: 50px;
 }
-/* line 160, ../sass/app.scss */
+/* line 170, ../sass/app.scss */
 .discover-links a {
   display: block;
   text-align: center;
@@ -9679,30 +9699,30 @@ p {
   background: url(../images/icons/discover.png) no-repeat 0 0;
   background-size: 125px 1500px;
 }
-/* line 161, ../sass/app.scss */
+/* line 171, ../sass/app.scss */
 .discover-links a.process {
   background-position: center 14px;
 }
-/* line 162, ../sass/app.scss */
+/* line 172, ../sass/app.scss */
 .discover-links a.docs {
   background-position: center -490px;
 }
-/* line 163, ../sass/app.scss */
+/* line 173, ../sass/app.scss */
 .discover-links a.download {
   background-position: center -990px;
 }
-/* line 165, ../sass/app.scss */
+/* line 175, ../sass/app.scss */
 .discover-links span {
   display: block;
 }
-/* line 166, ../sass/app.scss */
+/* line 176, ../sass/app.scss */
 .discover-links span.title {
   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1.3125em;
   color: #0d2b40;
   margin-bottom: 10px;
 }
-/* line 167, ../sass/app.scss */
+/* line 177, ../sass/app.scss */
 .discover-links span.description {
   color: #333;
   font-size: 0.875em;
@@ -9710,107 +9730,107 @@ p {
 }
 
 /* stay updated */
-/* line 172, ../sass/app.scss */
+/* line 182, ../sass/app.scss */
 .stay-updated {
   background: #004454;
   padding: 36px 0 32px;
 }
-/* line 173, ../sass/app.scss */
+/* line 183, ../sass/app.scss */
 .stay-updated h5, .stay-updated a {
   color: #FFF;
   margin-bottom: 0;
 }
-/* line 174, ../sass/app.scss */
+/* line 184, ../sass/app.scss */
 .stay-updated p {
   color: #8798a7;
   margin-bottom: 0;
 }
-/* line 175, ../sass/app.scss */
+/* line 185, ../sass/app.scss */
 .stay-updated form {
   margin-bottom: 0;
   margin-top: 9px;
 }
-/* line 176, ../sass/app.scss */
+/* line 186, ../sass/app.scss */
 .stay-updated form input {
   padding: 18px;
   border: none;
 }
-/* line 177, ../sass/app.scss */
+/* line 187, ../sass/app.scss */
 .stay-updated form .button {
   padding-top: 13px;
 }
 
 /* interior */
-/* line 182, ../sass/app.scss */
+/* line 192, ../sass/app.scss */
 .top-headlines {
   margin-top: 50px;
 }
-/* line 183, ../sass/app.scss */
+/* line 193, ../sass/app.scss */
 .top-headlines h1 {
   margin-bottom: 0;
 }
 
-/* line 185, ../sass/app.scss */
+/* line 195, ../sass/app.scss */
 hr {
   border-style: dashed;
 }
 
 /* templates */
-/* line 188, ../sass/app.scss */
+/* line 198, ../sass/app.scss */
 .template-thumbs {
   margin-bottom: 50px;
 }
-/* line 189, ../sass/app.scss */
+/* line 199, ../sass/app.scss */
 .template-thumbs a {
   display: block;
 }
-/* line 190, ../sass/app.scss */
+/* line 200, ../sass/app.scss */
 .template-thumbs a.button {
   display: inline-block;
 }
-/* line 191, ../sass/app.scss */
+/* line 201, ../sass/app.scss */
 .template-thumbs a img {
   display: block;
   margin-bottom: 15px;
 }
-/* line 193, ../sass/app.scss */
+/* line 203, ../sass/app.scss */
 .template-thumbs span {
   display: block;
   color: #333;
 }
-/* line 194, ../sass/app.scss */
+/* line 204, ../sass/app.scss */
 .template-thumbs span.name {
   font-size: 1.3125em;
   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   color: #0d2b40;
 }
-/* line 195, ../sass/app.scss */
+/* line 205, ../sass/app.scss */
 .template-thumbs span.description {
   font-size: 0.875em;
   margin-bottom: 15px;
 }
 
-/* line 198, ../sass/app.scss */
+/* line 208, ../sass/app.scss */
 .thumb-select {
   margin-top: 20px;
 }
-/* line 199, ../sass/app.scss */
+/* line 209, ../sass/app.scss */
 .thumb-select label, .thumb-select select {
   display: inline-block;
 }
-/* line 200, ../sass/app.scss */
+/* line 210, ../sass/app.scss */
 .thumb-select select {
   width: 110px;
   margin-left: 10px;
 }
 
-/* line 202, ../sass/app.scss */
+/* line 212, ../sass/app.scss */
 .how-to-use {
   position: relative;
   padding: 30px 0;
 }
 
-/* line 203, ../sass/app.scss */
+/* line 213, ../sass/app.scss */
 .inky-small {
   height: 377px;
   width: 273px;
@@ -9820,7 +9840,7 @@ hr {
   z-index: 2;
 }
 
-/* line 204, ../sass/app.scss */
+/* line 214, ../sass/app.scss */
 .inky-small.load {
   height: 377px;
   width: 273px;
@@ -9837,12 +9857,12 @@ hr {
 }
 
 /* downloading */
-/* line 207, ../sass/app.scss */
+/* line 217, ../sass/app.scss */
 .main-text {
   position: relative;
 }
 
-/* line 208, ../sass/app.scss */
+/* line 218, ../sass/app.scss */
 .inky-fish {
   background: url(../images/inky-fish.png) no-repeat center center;
   background-size: cover;
@@ -9852,41 +9872,41 @@ hr {
   top: 220px;
 }
 
-/* line 209, ../sass/app.scss */
+/* line 219, ../sass/app.scss */
 .under-inky-fish {
   margin-top: 100px;
   margin-bottom: 50px;
 }
-/* line 210, ../sass/app.scss */
+/* line 220, ../sass/app.scss */
 .under-inky-fish ul {
   font-size: 0.875em;
   margin-left: 15px;
 }
 
-/* line 212, ../sass/app.scss */
+/* line 222, ../sass/app.scss */
 .read-docs {
   margin-top: 20px;
 }
-/* line 213, ../sass/app.scss */
+/* line 223, ../sass/app.scss */
 .read-docs a {
   background: #e5ecee url(../images/icons/read-docs.png) no-repeat 38px center;
   padding: 23px 23px 23px 97px;
   background-size: 32px 44px;
   display: block;
 }
-/* line 214, ../sass/app.scss */
+/* line 224, ../sass/app.scss */
 .read-docs span {
   margin-bottom: 0;
   display: block;
 }
-/* line 215, ../sass/app.scss */
+/* line 225, ../sass/app.scss */
 .read-docs span.title {
   color: #0c2739;
   font-size: 1.3125em;
   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   margin-bottom: 10px;
 }
-/* line 216, ../sass/app.scss */
+/* line 226, ../sass/app.scss */
 .read-docs span.description {
   font-size: 0.875em;
   color: #333;
@@ -9894,20 +9914,20 @@ hr {
 }
 
 /* process */
-/* line 221, ../sass/app.scss */
+/* line 231, ../sass/app.scss */
 .how-to-use {
   position: relative;
 }
-/* line 222, ../sass/app.scss */
+/* line 232, ../sass/app.scss */
 .how-to-use.one {
   margin-bottom: 10px;
 }
-/* line 223, ../sass/app.scss */
+/* line 233, ../sass/app.scss */
 .how-to-use.one p, .how-to-use.one img, .how-to-use.one h3 {
   width: 440px;
   margin-left: 70px;
 }
-/* line 224, ../sass/app.scss */
+/* line 234, ../sass/app.scss */
 .how-to-use.one .process-1 {
   background: url(../images/process-1.png) no-repeat center center;
   height: 265px;
@@ -9917,20 +9937,20 @@ hr {
   right: 95px;
   top: -50px;
 }
-/* line 225, ../sass/app.scss */
+/* line 235, ../sass/app.scss */
 .how-to-use.one .bump-space {
   margin-left: 120px;
 }
-/* line 227, ../sass/app.scss */
+/* line 237, ../sass/app.scss */
 .how-to-use.two {
   margin-bottom: 10px;
 }
-/* line 228, ../sass/app.scss */
+/* line 238, ../sass/app.scss */
 .how-to-use.two p, .how-to-use.two img, .how-to-use.two h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 229, ../sass/app.scss */
+/* line 239, ../sass/app.scss */
 .how-to-use.two .process-2 {
   height: 87px;
   width: 166px;
@@ -9939,29 +9959,29 @@ hr {
   left: 68px;
   top: 38px;
 }
-/* line 230, ../sass/app.scss */
+/* line 240, ../sass/app.scss */
 .how-to-use.two .process-2 img {
   margin-left: 0px;
 }
-/* line 232, ../sass/app.scss */
+/* line 242, ../sass/app.scss */
 .how-to-use.two .bump-space {
   margin-left: 270px;
 }
-/* line 234, ../sass/app.scss */
+/* line 244, ../sass/app.scss */
 .how-to-use.three {
   margin-bottom: 30px;
 }
-/* line 235, ../sass/app.scss */
+/* line 245, ../sass/app.scss */
 .how-to-use.three p, .how-to-use.three img, .how-to-use.three h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 236, ../sass/app.scss */
+/* line 246, ../sass/app.scss */
 .how-to-use.three p.with-border {
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
 }
-/* line 237, ../sass/app.scss */
+/* line 247, ../sass/app.scss */
 .how-to-use.three .process-3 {
   height: 377px;
   width: 273px;
@@ -9970,28 +9990,28 @@ hr {
   right: 40px;
   top: -100px;
 }
-/* line 238, ../sass/app.scss */
+/* line 248, ../sass/app.scss */
 .how-to-use.three .process-3 img {
   margin-left: 0px;
 }
-/* line 240, ../sass/app.scss */
+/* line 250, ../sass/app.scss */
 .how-to-use.three .bump-space {
   margin-left: 50px;
 }
-/* line 242, ../sass/app.scss */
+/* line 252, ../sass/app.scss */
 .how-to-use.four {
   margin-bottom: 30px;
 }
-/* line 243, ../sass/app.scss */
+/* line 253, ../sass/app.scss */
 .how-to-use.four p, .how-to-use.four img, .how-to-use.four h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 244, ../sass/app.scss */
+/* line 254, ../sass/app.scss */
 .how-to-use.four .bump-space {
   margin-left: 300px;
 }
-/* line 245, ../sass/app.scss */
+/* line 255, ../sass/app.scss */
 .how-to-use.four .process-4 {
   background: url(../images/process-4.png) no-repeat center center;
   height: 116px;
@@ -10001,7 +10021,7 @@ hr {
   right: 0;
   top: 35px;
 }
-/* line 246, ../sass/app.scss */
+/* line 256, ../sass/app.scss */
 .how-to-use.four .process-4-2 {
   height: 63px;
   width: 96px;
@@ -10010,32 +10030,32 @@ hr {
   left: 231px;
   top: -16px;
 }
-/* line 247, ../sass/app.scss */
+/* line 257, ../sass/app.scss */
 .how-to-use.four .process-4-2 img {
   margin-left: 0px;
 }
-/* line 251, ../sass/app.scss */
+/* line 261, ../sass/app.scss */
 .how-to-use.five {
-  margin-bottom: 60px;
+  padding-bottom: 70px;
+  background: url(../images/ocean_floor.png) bottom center no-repeat;
 }
-/* line 252, ../sass/app.scss */
+/* line 262, ../sass/app.scss */
 .how-to-use.five .number {
   top: -13px;
 }
-/* line 253, ../sass/app.scss */
+/* line 263, ../sass/app.scss */
 .how-to-use.five p, .how-to-use.five img, .how-to-use.five h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 254, ../sass/app.scss */
+/* line 264, ../sass/app.scss */
 .how-to-use.five .bump-space {
   margin-left: 185px;
   position: relative;
   z-index: 2;
 }
-/* line 255, ../sass/app.scss */
+/* line 265, ../sass/app.scss */
 .how-to-use.five .process-5 {
-  background: url(../images/process-3.png) no-repeat center center;
   height: 377px;
   width: 273px;
   background-size: cover;
@@ -10043,7 +10063,7 @@ hr {
   left: 0;
   top: -120px;
 }
-/* line 256, ../sass/app.scss */
+/* line 266, ../sass/app.scss */
 .how-to-use.five .process-5-2 {
   height: 59px;
   width: 90px;
@@ -10052,15 +10072,15 @@ hr {
   right: 150px;
   top: 92px;
 }
-/* line 257, ../sass/app.scss */
+/* line 267, ../sass/app.scss */
 .how-to-use.five .process-5-2 img {
   margin-left: 0px;
 }
-/* line 260, ../sass/app.scss */
+/* line 270, ../sass/app.scss */
 .how-to-use h3 {
   margin-bottom: 10px;
 }
-/* line 261, ../sass/app.scss */
+/* line 271, ../sass/app.scss */
 .how-to-use .number {
   display: block;
   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -10070,14 +10090,14 @@ hr {
   position: absolute;
   top: 23px;
 }
-/* line 262, ../sass/app.scss */
+/* line 272, ../sass/app.scss */
 .how-to-use .campaign-monitor {
   background: url(../images/campaign-monitor.png) no-repeat left center;
   background-size: 18px 12px;
   padding-left: 30px;
 }
 
-/* line 266, ../sass/app.scss */
+/* line 276, ../sass/app.scss */
 .process-2.load img {
   animation-name: fish1;
   -webkit-animation-name: fish1;
@@ -10089,40 +10109,40 @@ hr {
 }
 
 @keyframes fish1 {
-  /* line 268, ../sass/app.scss */
+  /* line 278, ../sass/app.scss */
   0% {
     transform: translateX(0%);
   }
 
-  /* line 269, ../sass/app.scss */
+  /* line 279, ../sass/app.scss */
   50% {
     transform: translateX(3%);
   }
 
-  /* line 270, ../sass/app.scss */
+  /* line 280, ../sass/app.scss */
   100% {
     transform: translateX(0%);
   }
 }
 
 @-webkit-keyframes fish1 {
-  /* line 274, ../sass/app.scss */
+  /* line 284, ../sass/app.scss */
   0% {
     -webkit-transform: translateX(0%);
   }
 
-  /* line 275, ../sass/app.scss */
+  /* line 285, ../sass/app.scss */
   50% {
     -webkit-transform: translateX(3%);
   }
 
-  /* line 276, ../sass/app.scss */
+  /* line 286, ../sass/app.scss */
   100% {
     -webkit-transform: translateX(0%);
   }
 }
 
-/* line 280, ../sass/app.scss */
+/* line 290, ../sass/app.scss */
 .process-3.load img {
   animation-name: small-inky;
   -webkit-animation-name: small-inky;
@@ -10136,40 +10156,40 @@ hr {
 }
 
 @keyframes small-inky {
-  /* line 292, ../sass/app.scss */
+  /* line 302, ../sass/app.scss */
   0% {
     transform: translateY(0%);
   }
 
-  /* line 293, ../sass/app.scss */
+  /* line 303, ../sass/app.scss */
   50% {
     transform: translateY(2%);
   }
 
-  /* line 294, ../sass/app.scss */
+  /* line 304, ../sass/app.scss */
   100% {
     transform: translateY(0%);
   }
 }
 
 @-webkit-keyframes small-inky {
-  /* line 298, ../sass/app.scss */
+  /* line 308, ../sass/app.scss */
   0% {
     -webkit-transform: translateY(0%);
   }
 
-  /* line 299, ../sass/app.scss */
+  /* line 309, ../sass/app.scss */
   50% {
     -webkit-transform: translateY(2%);
   }
 
-  /* line 300, ../sass/app.scss */
+  /* line 310, ../sass/app.scss */
   100% {
     -webkit-transform: translateY(0%);
   }
 }
 
-/* line 304, ../sass/app.scss */
+/* line 314, ../sass/app.scss */
 .process-4-2.load img {
   animation-name: fish2;
   -webkit-animation-name: fish2;
@@ -10180,40 +10200,40 @@ hr {
 }
 
 @keyframes fish2 {
-  /* line 306, ../sass/app.scss */
+  /* line 316, ../sass/app.scss */
   0% {
     transform: translateY(0%);
   }
 
-  /* line 307, ../sass/app.scss */
+  /* line 317, ../sass/app.scss */
   50% {
     transform: translateY(12%);
   }
 
-  /* line 308, ../sass/app.scss */
+  /* line 318, ../sass/app.scss */
   100% {
     transform: translateY(0%);
   }
 }
 
 @-webkit-keyframes fish2 {
-  /* line 312, ../sass/app.scss */
+  /* line 322, ../sass/app.scss */
   0% {
     -webkit-transform: translateY(0%);
   }
 
-  /* line 313, ../sass/app.scss */
+  /* line 323, ../sass/app.scss */
   50% {
     -webkit-transform: translateY(12%);
   }
 
-  /* line 314, ../sass/app.scss */
+  /* line 324, ../sass/app.scss */
   100% {
     -webkit-transform: translateY(0%);
   }
 }
 
-/* line 317, ../sass/app.scss */
+/* line 327, ../sass/app.scss */
 .process-5-2.load img {
   animation-name: fish3;
   -webkit-animation-name: fish3;
@@ -10224,98 +10244,98 @@ hr {
 }
 
 @keyframes fish3 {
-  /* line 319, ../sass/app.scss */
+  /* line 329, ../sass/app.scss */
   0% {
     transform: translateX(0%);
   }
 
-  /* line 320, ../sass/app.scss */
+  /* line 330, ../sass/app.scss */
   50% {
     transform: translateX(5%);
   }
 
-  /* line 321, ../sass/app.scss */
+  /* line 331, ../sass/app.scss */
   100% {
     transform: translateX(0%);
   }
 }
 
 @-webkit-keyframes fish3 {
-  /* line 325, ../sass/app.scss */
+  /* line 335, ../sass/app.scss */
   0% {
     -webkit-transform: translateX(0%);
   }
 
-  /* line 326, ../sass/app.scss */
+  /* line 336, ../sass/app.scss */
   50% {
     -webkit-transform: translateX(5%);
   }
 
-  /* line 327, ../sass/app.scss */
+  /* line 337, ../sass/app.scss */
   100% {
     -webkit-transform: translateX(0%);
   }
 }
 
 /* docs  */
-/* line 332, ../sass/app.scss */
+/* line 342, ../sass/app.scss */
 .doc-nav {
   list-style: none;
   margin-top: 50px;
 }
-/* line 333, ../sass/app.scss */
+/* line 343, ../sass/app.scss */
 .doc-nav li {
   display: block;
   font-size: 0.875em;
   margin-bottom: 10px;
 }
-/* line 334, ../sass/app.scss */
+/* line 344, ../sass/app.scss */
 .doc-nav li a {
   color: #333;
   display: block;
 }
-/* line 335, ../sass/app.scss */
+/* line 345, ../sass/app.scss */
 .doc-nav li a.current {
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* line 336, ../sass/app.scss */
+/* line 346, ../sass/app.scss */
 .doc-nav li a:hover {
   color: #000;
 }
-/* line 338, ../sass/app.scss */
+/* line 348, ../sass/app.scss */
 .doc-nav li ul li {
   font-size: 1em;
 }
 
-/* line 342, ../sass/app.scss */
+/* line 352, ../sass/app.scss */
 .docs h1 {
   margin-top: 30px;
   margin-bottom: 0;
 }
-/* line 343, ../sass/app.scss */
+/* line 353, ../sass/app.scss */
 .docs .label {
   background: #ddd;
   color: #333;
 }
-/* line 344, ../sass/app.scss */
+/* line 354, ../sass/app.scss */
 .docs table {
   width: 100%;
   font-size: 0.9375em;
 }
-/* line 345, ../sass/app.scss */
+/* line 355, ../sass/app.scss */
 .docs table td {
   line-height: 1.6;
   vertical-align: top;
 }
-/* line 347, ../sass/app.scss */
+/* line 357, ../sass/app.scss */
 .docs hr.section {
   margin-top: 50px;
   border-style: solid;
   border-width: 2px;
 }
 
-/* line 353, ../sass/app.scss */
+/* line 363, ../sass/app.scss */
 .prev-next-section {
   *zoom: 1;
   border-top: 1px dashed #ddd;
@@ -10331,8 +10351,40 @@ hr {
 .prev-next-section:after {
   clear: both;
 }
-/* line 354, ../sass/app.scss */
+/* line 364, ../sass/app.scss */
 .prev-next-section a {
   font-weight: bold;
   color: #333;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 369, ../sass/app.scss */
+  .top-area {
+    position: relative;
+  }
+
+  /* line 370, ../sass/app.scss */
+  .top-area .inky-phone {
+    display: block;
+    background: url(../images/inky-phone.png);
+    background-repeat: no-repeat;
+    height: 470px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 200px;
+    opacity: 0.7;
+  }
+
+  /* line 371, ../sass/app.scss */
+  .top-area .home-text {
+    padding: 40px 0 50px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* line 372, ../sass/app.scss */
+  .templates-callout {
+    top: 0px;
+  }
 }

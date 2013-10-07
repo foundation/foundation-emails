@@ -83,7 +83,7 @@ h3 { font-size: emCalc(32px); margin-bottom: 0; line-height: 1.1; }
 p { font-size: emCalc(14px); }
 
 /* main area */
-.top-area { background-color: #002b35; 
+.top-area { background-color: #002b35; position: relative; z-index: 4;
   &.main { background-image: url(../images/water.png); background-repeat: no-repeat; background-position: center center; background-size: cover;
     .row {position: relative;} 
     p.lead { font-family: $sans-serif; font-size: emCalc(24px); line-height: 1.4em; }
@@ -94,22 +94,22 @@ p { font-size: emCalc(14px); }
   h1 { color: #FFF; font-family: $sans-serif; font-size: emCalc(100px); margin-bottom: 0;  }
   h2 { color: #FFF; font-size: emCalc(35px); padding: 51px 0 0 0; margin-bottom: 12px; }
   p { color: #FFF; }
+  
 }
 .home-text { padding: 100px 0 103px; position: relative; }
-
 .inky { background: url(../images/inky.png) no-repeat center center; background-size: cover; height: 700px; width: 507px; position: absolute; right: -550px; top:10px !important;  }
 .inky.loaded { animation-name: inky-float; -webkit-animation-name: inky-float; animation-duration:5s; -webkit-animation-duration:5s; animation-iteration-count: infinite; -webkit-animation-iteration-count: infinite; }   
-@keyframes inky-float {
-	0% { transform: translateY(0%); }
-	50% { transform: translateY(2%); }	
-	100% { transform: translateY(0%); }			
-}
-
-@-webkit-keyframes inky-float {
-	0% { -webkit-transform: translateY(0%);	}
-	50% { -webkit-transform: translateY(2%);	 }	
-	100% { -webkit-transform: translateY(0%); }			
-}
+  @keyframes inky-float {
+  	0% { transform: translateY(0%); }
+  	50% { transform: translateY(2%); }	
+  	100% { transform: translateY(0%); }			
+  }
+  
+  @-webkit-keyframes inky-float {
+  	0% { -webkit-transform: translateY(0%);	}
+  	50% { -webkit-transform: translateY(2%);	 }	
+  	100% { -webkit-transform: translateY(0%); }			
+  }
 
 .bubble { position: absolute; width: 16px; height: 16px; opacity: 0; } 
 .bubble.float { opacity: 0;-webkit-animation: purple-bubbles 5s ease-in infinite; animation: purple-bubbles 5s ease-in infinite; }
@@ -138,9 +138,19 @@ p { font-size: emCalc(14px); }
 
 
 /* callout */
-.callout { background: #e5e9ea; margin-bottom: 60px; }
+.callout { background: #e5e9ea; margin-bottom: 60px;
+  .row {  position: relative;
+    .stamp { background: url(../images/stamp.png) no-repeat center center; position: absolute; width:250px;left:-175px; height: 190px; top:-94px; 
+      -webkit-transform: rotate(-10deg);
+    	-moz-transform: rotate(-10deg);
+    	-ms-transform: rotate(-10deg);
+    	-o-transform: rotate(-10deg);
+    	transform: rotate(-10deg);
+    } 
+  }
+}
 .space-callout { padding: 53px 0 31px; }
-.templates-callout { background: #2e2f2f; padding: 20px; position: relative; top: 132px;  
+.templates-callout { background: #2e2f2f; padding: 20px; position: relative; top: 150px;  
   h5, p { color: #FFF; }
   p { margin-bottom: 30px; }
   a { margin-bottom: 0; }
@@ -248,11 +258,11 @@ hr { border-style: dashed; }
     }
   }
   
-  &.five { margin-bottom: 60px; 
+  &.five { padding-bottom: 70px; background: url(../images/ocean_floor.png)bottom center no-repeat;
     .number { top: -13px; }
     p, img, h3 { width: 470px; margin-left: 100px; }
     .bump-space { margin-left: 185px; position: relative; z-index: 2;}
-    .process-5 { background: url(../images/process-3.png) no-repeat center center; height: 377px; width: 273px; background-size: cover; position: absolute; left: 0; top: -120px;  }
+    .process-5 { height: 377px; width: 273px; background-size: cover; position: absolute; left: 0; top: -120px;  }
     .process-5-2 { height: 59px; width: 90px; background-size: cover; position: absolute; right: 150px; top: 92px;  
       img { margin-left:0px; }
     }
@@ -353,3 +363,11 @@ hr { border-style: dashed; }
 .prev-next-section { @include clearfix; border-top: 1px dashed #ddd; margin: 20px 0 50px; padding-top: 20px; 
   a { font-weight: bold; color: #333; }
 }
+
+
+@media only screen and (max-width: 767px) {
+  .top-area { position: relative; }
+  .top-area .inky-phone { display:block; background: url(../images/inky-phone.png); background-repeat: no-repeat;height: 470px; position:absolute; bottom:0px; right:0px; width: 200px; opacity: 0.7; }
+  .top-area .home-text { padding: 40px 0 50px; position: relative; z-index: 2; }
+  .templates-callout { top:0px; }
+ }
