@@ -1,4 +1,4 @@
-/* Ink v0.6.2 - Copyright 2013 ZURB Inc */
+/* Ink v0.7.0 - Copyright 2013 ZURB Inc */
 
 /**********************************************
 * Client-specific Styles & Reset              *
@@ -194,6 +194,48 @@ td.expander {
   visibility: hidden;
   width: 0px;
   padding: 0 !important;
+}
+
+/**********************************************
+* Block Grid                                  *
+**********************************************/
+
+.block-grid {
+  width: 100%;
+  max-width: 580px;
+}
+
+.block-grid td {
+  display: inline-block;
+  padding:10px;
+}
+
+.two-up td {
+  width:270px;
+}
+
+.three-up td {
+  width:173px;
+}
+
+.four-up td {
+  width:125px;
+}
+
+.five-up td {
+  width:96px;
+}
+
+.six-up td {
+  width:76px;
+}
+
+.seven-up td {
+  width:62px;
+}
+
+.eight-up td {
+  width:52px;
 }
 
 /**********************************************
