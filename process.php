@@ -82,6 +82,7 @@
 <?php include 'includes/_subscribe.php' ?>	
 <div class="show-for-small">
   <ul class="mobile-nav">
+    <li><a href="/">Home</a></li>
     <li><a class="current" href="/process.php">Process</a></li>
     <li><a href="/docs.php">Docs</a></li>
     <li><a href="/templates.php">Email Templates</a></li>

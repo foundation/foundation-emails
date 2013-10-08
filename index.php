@@ -6,16 +6,18 @@
 
 <section class="top-area main">
   <div class="row">
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
-    <div class="bubble"><img src="images/bubble.png"></div>
+    <div class="hide-for-touch">
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+      <div class="bubble"><img src="images/bubble.png"></div>
+    </div>
     <div class="large-5 columns">
       <a class='sidebar-button show-for-small' id="sidebarButton" href="#sidebar" ><img alt="Menu-wht" src="images/offcanvas/menu-wht.png" /><h4>Ink</h4></a>
       <div class="home-text">
@@ -80,6 +82,7 @@
 <?php include 'includes/_subscribe.php' ?>	
 <div class="show-for-small">
   <ul class="mobile-nav">
+    <li><a href="/" class="current">Home</a></li>
     <li><a href="/process.php">Process</a></li>
     <li><a href="/docs.php">Docs</a></li>
     <li><a href="/templates.php">Email Templates</a></li>
