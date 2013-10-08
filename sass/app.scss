@@ -139,7 +139,7 @@ p { font-size: emCalc(14px); }
 
 /* callout */
 .callout { background: #e5e9ea; margin-bottom: 60px;
-  .row {  position: relative;
+  .row {  position: relative; 
     .stamp { background: url(../images/stamp.png) no-repeat center center; position: absolute; width:250px;left:-175px; height: 190px; top:-94px; 
       -webkit-transform: rotate(-10deg);
     	-moz-transform: rotate(-10deg);
@@ -389,7 +389,7 @@ ul.mobile-nav { display: block; margin-bottom: 0;
  }
 }
 
-@media only screen and (max-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
   .inky { right: -460px; }
   .touch .how-to-use { position: relative; 
     &.one { 
@@ -434,5 +434,7 @@ ul.mobile-nav { display: block; margin-bottom: 0;
     .number { display: block; font-family: $sans-serif; color: #a3abad; font-size: emCalc(138px); font-weight: bold; position: absolute; top: 23px; }
     .campaign-monitor { background: url(../images/campaign-monitor.png) no-repeat left center; background-size: 18px 12px; padding-left: 30px; }
   }
-  
+  .inky-small.load { right: -250px; }
+  .top-bar-section .has-form { padding: 0 15px; }
+  .button.tiny { padding: 5px 10px 25px; }
 }
