@@ -37,16 +37,19 @@
         
         <p class="cs-text hide-for-small">Ink is coming soon. Get notified when it launches.</p>
         <p class="cs-text show-for-small">Get notified when Ink launches.</p>
-        <form>
-          <div class="row collapse">
-            <div class="large-8 small-7 columns">
-              <input type="text" placeholder="Email address">
+        <div class="form-thanks">
+          <form>
+            <div class="row collapse">
+              <div class="large-8 small-7 columns">
+                <input type="text" placeholder="Email address">
+              </div>
+              <div class="large-4 small-5 columns">
+                <button type="submit" class="button expand">Submit</button>
+              </div>
             </div>
-            <div class="large-4 small-5 columns">
-              <button type="submit" class="button expand">Submit</button>
-            </div>
-          </div>
-        </form>
+          </form>
+          <p class="confirm">Thanks! We've received your email, and we'll let you know when Ink launches.</p>
+        </div>
       </div>
     </div>
   </div>

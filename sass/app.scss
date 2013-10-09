@@ -97,7 +97,7 @@ p { font-size: emCalc(14px); }
   
 }
 .home-text { padding: 100px 0 103px; position: relative; }
-.inky { background: url(../images/inky.png) no-repeat center center; background-size: cover; height: 700px; width: 507px; position: absolute; right: -550px; top:10px !important;  }
+.inky { background: url(../images/inky-devices-01.svg) no-repeat center center; background-size: cover; height: 700px; width: 507px; position: absolute; right: -550px; top:10px !important;  }
 .inky.loaded { animation-name: inky-float; -webkit-animation-name: inky-float; animation-duration:5s; -webkit-animation-duration:5s; animation-iteration-count: infinite; -webkit-animation-iteration-count: infinite; }   
   @keyframes inky-float {
   	0% { transform: translateY(0%); }
@@ -440,21 +440,25 @@ ul.mobile-nav { display: block; margin-bottom: 0;
 }
 
 /* coming-soon */
-.coming-soon { background: #032b31; 
+.coming-soon { background: #004454; 
   .home-text { padding: 80px 0 83px; }
-  .cs-text { margin-bottom: 5px; }
+  .cs-text { margin-bottom: 5px; color: rgba(255,255,255,.5); }
   input { padding: 20px 20px 19px; }
+  .confirm { font-size: 1em; font-style: italic; }
+  .form-thanks { height: 45px; overflow: hidden; 
+    .confirm { display: none; }
+  }
 }
 
 @media only screen and (max-width: 767px){
   .coming-soon {
     h1, p { text-align: center; }
-    .home-text { padding: 0; }
+    .home-text { padding: 20px 0 0 0; }
   }
   
 }
-.cs-inky { background: url(../images/cs-inky.png) no-repeat right bottom; background-size: 548px 488px; 
+.cs-inky { background: url(../images/inky-mobile.svg) no-repeat right bottom; background-size: 624px 558px; 
   @media only screen and (max-width: 767px){
-    background-image: url(../images/cs-inky-mobile.png); background-position: center bottom;
+    background: url(../images/inky-mobile-hold.svg) no-repeat center bottom; background-size: 147px 200px; padding-bottom: 140px;  
   }
 }

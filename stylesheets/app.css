@@ -9367,7 +9367,7 @@ p {
 
 /* line 100, ../sass/app.scss */
 .inky {
-  background: url(../images/inky.png) no-repeat center center;
+  background: url(../images/inky-devices-01.svg) no-repeat center center;
   background-size: cover;
   height: 700px;
   width: 507px;
@@ -10577,7 +10577,7 @@ ul.mobile-nav a.current {
 /* coming-soon */
 /* line 443, ../sass/app.scss */
 .coming-soon {
-  background: #032b31;
+  background: #004454;
 }
 /* line 444, ../sass/app.scss */
 .coming-soon .home-text {
@@ -10586,31 +10586,47 @@ ul.mobile-nav a.current {
 /* line 445, ../sass/app.scss */
 .coming-soon .cs-text {
   margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.5);
 }
 /* line 446, ../sass/app.scss */
 .coming-soon input {
   padding: 20px 20px 19px;
 }
+/* line 447, ../sass/app.scss */
+.coming-soon .confirm {
+  font-size: 1em;
+  font-style: italic;
+}
+/* line 448, ../sass/app.scss */
+.coming-soon .form-thanks {
+  height: 45px;
+  overflow: hidden;
+}
+/* line 449, ../sass/app.scss */
+.coming-soon .form-thanks .confirm {
+  display: none;
+}
 
 @media only screen and (max-width: 767px) {
-  /* line 451, ../sass/app.scss */
+  /* line 455, ../sass/app.scss */
   .coming-soon h1, .coming-soon p {
     text-align: center;
   }
-  /* line 452, ../sass/app.scss */
+  /* line 456, ../sass/app.scss */
   .coming-soon .home-text {
-    padding: 0;
+    padding: 20px 0 0 0;
   }
 }
-/* line 456, ../sass/app.scss */
+/* line 460, ../sass/app.scss */
 .cs-inky {
-  background: url(../images/cs-inky.png) no-repeat right bottom;
-  background-size: 548px 488px;
+  background: url(../images/inky-mobile.svg) no-repeat right bottom;
+  background-size: 624px 558px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 456, ../sass/app.scss */
+  /* line 460, ../sass/app.scss */
   .cs-inky {
-    background-image: url(../images/cs-inky-mobile.png);
-    background-position: center bottom;
+    background: url(../images/inky-mobile-hold.svg) no-repeat center bottom;
+    background-size: 147px 200px;
+    padding-bottom: 140px;
   }
 }
