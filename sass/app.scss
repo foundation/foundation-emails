@@ -438,3 +438,23 @@ ul.mobile-nav { display: block; margin-bottom: 0;
   .top-bar-section .has-form { padding: 0 15px; }
   .button.tiny { padding: 5px 10px 25px; }
 }
+
+/* coming-soon */
+.coming-soon { background: #032b31; 
+  .home-text { padding: 80px 0 83px; }
+  .cs-text { margin-bottom: 5px; }
+  input { padding: 20px 20px 19px; }
+}
+
+@media only screen and (max-width: 767px){
+  .coming-soon {
+    h1, p { text-align: center; }
+    .home-text { padding: 0; }
+  }
+  
+}
+.cs-inky { background: url(../images/cs-inky.png) no-repeat right bottom; background-size: 548px 488px; 
+  @media only screen and (max-width: 767px){
+    background-image: url(../images/cs-inky-mobile.png); background-position: center bottom;
+  }
+}

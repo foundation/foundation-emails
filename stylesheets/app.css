@@ -10574,3 +10574,43 @@ ul.mobile-nav a.current {
     padding: 5px 10px 25px;
   }
 }
+/* coming-soon */
+/* line 443, ../sass/app.scss */
+.coming-soon {
+  background: #032b31;
+}
+/* line 444, ../sass/app.scss */
+.coming-soon .home-text {
+  padding: 80px 0 83px;
+}
+/* line 445, ../sass/app.scss */
+.coming-soon .cs-text {
+  margin-bottom: 5px;
+}
+/* line 446, ../sass/app.scss */
+.coming-soon input {
+  padding: 20px 20px 19px;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 451, ../sass/app.scss */
+  .coming-soon h1, .coming-soon p {
+    text-align: center;
+  }
+  /* line 452, ../sass/app.scss */
+  .coming-soon .home-text {
+    padding: 0;
+  }
+}
+/* line 456, ../sass/app.scss */
+.cs-inky {
+  background: url(../images/cs-inky.png) no-repeat right bottom;
+  background-size: 548px 488px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 456, ../sass/app.scss */
+  .cs-inky {
+    background-image: url(../images/cs-inky-mobile.png);
+    background-position: center bottom;
+  }
+}
