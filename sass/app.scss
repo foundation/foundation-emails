@@ -97,7 +97,7 @@ p { font-size: emCalc(14px); }
   
 }
 .home-text { padding: 100px 0 103px; position: relative; }
-.inky { background: url(../images/inky-devices-01.svg) no-repeat center center; background-size: cover; height: 700px; width: 507px; position: absolute; right: -550px; top:10px !important;  }
+.inky { background: url(../images/inky-all-devices.svg) no-repeat center center; background-size: cover; height: 680px; width: 634px; position: absolute; right: -600px; top:10px !important;  }
 .inky.loaded { animation-name: inky-float; -webkit-animation-name: inky-float; animation-duration:5s; -webkit-animation-duration:5s; animation-iteration-count: infinite; -webkit-animation-iteration-count: infinite; }   
   @keyframes inky-float {
   	0% { transform: translateY(0%); }
@@ -390,7 +390,7 @@ ul.mobile-nav { display: block; margin-bottom: 0;
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1024px) {
-  .inky { right: -460px; }
+  .inky { right: -620px; }
   .touch .how-to-use { position: relative; 
     &.one { 
       p, img, h3 { width: 400px; margin-left: 70px; }
@@ -437,6 +437,7 @@ ul.mobile-nav { display: block; margin-bottom: 0;
   .inky-small.load { right: -250px; }
   .top-bar-section .has-form { padding: 0 15px; }
   .button.tiny { padding: 5px 10px 25px; }
+  .top-area.main { overflow-x: hidden; }
 }
 
 /* coming-soon */

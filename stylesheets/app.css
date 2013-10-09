@@ -9367,12 +9367,12 @@ p {
 
 /* line 100, ../sass/app.scss */
 .inky {
-  background: url(../images/inky-devices-01.svg) no-repeat center center;
+  background: url(../images/inky-all-devices.svg) no-repeat center center;
   background-size: cover;
-  height: 700px;
-  width: 507px;
+  height: 680px;
+  width: 634px;
   position: absolute;
-  right: -550px;
+  right: -600px;
   top: 10px !important;
 }
 
@@ -10375,7 +10375,7 @@ ul.mobile-nav a.current {
 @media only screen and (min-width: 767px) and (max-width: 1024px) {
   /* line 393, ../sass/app.scss */
   .inky {
-    right: -460px;
+    right: -620px;
   }
 
   /* line 394, ../sass/app.scss */
@@ -10573,57 +10573,62 @@ ul.mobile-nav a.current {
   .button.tiny {
     padding: 5px 10px 25px;
   }
+
+  /* line 440, ../sass/app.scss */
+  .top-area.main {
+    overflow-x: hidden;
+  }
 }
 /* coming-soon */
-/* line 443, ../sass/app.scss */
+/* line 444, ../sass/app.scss */
 .coming-soon {
   background: #004454;
 }
-/* line 444, ../sass/app.scss */
+/* line 445, ../sass/app.scss */
 .coming-soon .home-text {
   padding: 80px 0 83px;
 }
-/* line 445, ../sass/app.scss */
+/* line 446, ../sass/app.scss */
 .coming-soon .cs-text {
   margin-bottom: 5px;
   color: rgba(255, 255, 255, 0.5);
 }
-/* line 446, ../sass/app.scss */
+/* line 447, ../sass/app.scss */
 .coming-soon input {
   padding: 20px 20px 19px;
 }
-/* line 447, ../sass/app.scss */
+/* line 448, ../sass/app.scss */
 .coming-soon .confirm {
   font-size: 1em;
   font-style: italic;
 }
-/* line 448, ../sass/app.scss */
+/* line 449, ../sass/app.scss */
 .coming-soon .form-thanks {
   height: 45px;
   overflow: hidden;
 }
-/* line 449, ../sass/app.scss */
+/* line 450, ../sass/app.scss */
 .coming-soon .form-thanks .confirm {
   display: none;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 455, ../sass/app.scss */
+  /* line 456, ../sass/app.scss */
   .coming-soon h1, .coming-soon p {
     text-align: center;
   }
-  /* line 456, ../sass/app.scss */
+  /* line 457, ../sass/app.scss */
   .coming-soon .home-text {
     padding: 20px 0 0 0;
   }
 }
-/* line 460, ../sass/app.scss */
+/* line 461, ../sass/app.scss */
 .cs-inky {
   background: url(../images/inky-mobile.svg) no-repeat right bottom;
   background-size: 624px 558px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 460, ../sass/app.scss */
+  /* line 461, ../sass/app.scss */
   .cs-inky {
     background: url(../images/inky-mobile-hold.svg) no-repeat center bottom;
     background-size: 147px 200px;
