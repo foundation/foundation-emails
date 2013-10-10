@@ -40,7 +40,7 @@
         <p>Include any responsive styles you want to include. These should be in a the <code>&lt;head&gt;</code> of your document within a &lt;style&gt; tag.</p>
         <img src="images/process-2.jpg" alt="process-1" />
       </div>
-      <div class="process-2"><img src="images/process-2.png" /></div>
+      <div class="process-2"><img src="images/fish-1.svg" /></div>
     </div>
 
     
@@ -52,7 +52,9 @@
         
         <p class="campaign-monitor"><strong>We recommend Campaign Monitor to do this.</strong></p>
       </div>
-      <div class="process-3"><img src="images/inky-blink.gif"/></div>
+      <div class="process-3">
+        <div class="inky-point"></div>
+      </div>
     </div>
     
     <div class="how-to-use four">
@@ -62,7 +64,7 @@
         <p>Don’t send it out just yet! Make sure you test it on as many platforms as you can. We use Litmust to test on a number of devices. You should too.</p>
       </div>
       <div class="process-4"></div>
-      <div class="process-4-2"><img src="images/process-4-2.png"></div>
+      <div class="process-4-2"><img src="images/fish-2.svg"></div>
     </div>
     
     <div class="how-to-use five">
@@ -72,11 +74,13 @@
         <p>Your email is ready! No more pinching to zoom to read your amazing content. Enjoy the rewards! Have a great one? Send a copy to us at ink@zurb.com.</p>
       </div>
       <div class="process-5"></div>
-      <div class="process-5-2"><img src="images/process-5-2.png"></div>
+      <div class="process-5-2"><img src="images/fish-4.svg"></div>
     </div>
   </div>
 </div>
-
+<div class="water">
+  <div class="process-5-3"></div>
+</div>
 
 
 <?php include 'includes/_subscribe.php' ?>	
