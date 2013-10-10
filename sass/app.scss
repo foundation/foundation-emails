@@ -140,18 +140,12 @@ p { font-size: emCalc(14px); }
 /* callout */
 .callout { background: #e5e9ea; margin-bottom: 60px;
   .row {  position: relative; 
-    .stamp { background: url(../images/stamp.png) no-repeat center center; position: absolute; width:250px;left:-175px; height: 190px; top:-94px; 
-      -webkit-transform: rotate(-10deg);
-    	-moz-transform: rotate(-10deg);
-    	-ms-transform: rotate(-10deg);
-    	-o-transform: rotate(-10deg);
-    	transform: rotate(-10deg);
-    } 
+    .stamp { background: url(../images/inky-stamp.svg) no-repeat center center; position: absolute; width: 199px; right:-40px; height: 179px; top:-104px; background-size: cover;  } 
   }
 }
 .space-callout { padding: 53px 0 31px; }
 .templates-callout { background: #2e2f2f; padding: 20px; position: relative; top: 150px;  
-  h5, p { color: #FFF; }
+  h5, p { color: #FFF; position: relative; z-index: 2; }
   p { margin-bottom: 30px; }
   a { margin-bottom: 0; }
 }
@@ -370,8 +364,6 @@ hr { border-style: dashed; }
   .top-area .inky-phone { display:block; background: url(../images/inky-phone.png); background-repeat: no-repeat;height: 470px; position:absolute; bottom:0px; right:0px; width: 200px; opacity: 0.7; }
   .top-area .home-text { padding: 40px 0 50px; position: relative; z-index: 2; }
   .templates-callout { top: 0px; margin-bottom: 50px; }
-  
-  .callout .row .stamp { left: 0; opacity: .25; webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); width: 100%; }
   
   .how-to-use {
     h3, p { width: 100% !important; margin-left: 0 !important; }

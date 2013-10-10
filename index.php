@@ -32,7 +32,6 @@
 </section>
 <section class="callout">
   <div class="row">
-    <div class="stamp"></div>
     <div class="large-6 columns">
       <div class="space-callout">
         <h3 class="light">Email. Anywhere. On Any Device.</h3>
@@ -43,6 +42,7 @@
     
     <div class="large-4 columns">
       <div class="templates-callout">
+        <div class="stamp"></div>
         <h5 class="normal">Shiny email templates</h5>
         <p>We've created some common layouts for you to start from so you can cook your emails faster.</p>
         <a href="templates.php" class="small button expand">Go to Templates</a>
