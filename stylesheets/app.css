@@ -9335,10 +9335,14 @@ p {
   font-size: 1.5em;
   line-height: 1.4em;
 }
+/* line 91, ../sass/app.scss */
+.top-area.downloading {
+  overflow: hidden;
+}
 /* line 92, ../sass/app.scss */
 .top-area.downloading h1 {
   font-size: 3em;
-  padding: 110px 0 400px;
+  padding: 110px 0 0;
 }
 /* line 94, ../sass/app.scss */
 .top-area h1 {
@@ -9673,6 +9677,9 @@ p {
 .stay-updated form input {
   padding: 18px;
   border: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
 }
 /* line 181, ../sass/app.scss */
 .stay-updated form .button {
@@ -9783,17 +9790,18 @@ hr {
 
 /* line 212, ../sass/app.scss */
 .inky-fish {
-  background: url(../images/inky-fish.png) no-repeat center center;
+  background: url(../images/inky-mobile-hold.svg) no-repeat center center;
   background-size: cover;
   height: 444px;
-  width: 818px;
-  position: absolute;
-  top: 220px;
+  width: 358px;
+  margin: 0 auto;
+  position: relative;
+  top: 40px;
 }
 
 /* line 213, ../sass/app.scss */
 .under-inky-fish {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 /* line 214, ../sass/app.scss */
@@ -9832,21 +9840,66 @@ hr {
   line-height: 1.6;
 }
 
+/* line 224, ../sass/app.scss */
+.inky-fish.load {
+  animation-name: inky-fishes;
+  -webkit-animation-name: inky-fishes;
+  animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes inky-fishes {
+  /* line 226, ../sass/app.scss */
+  0% {
+    transform: rotate(-15deg);
+  }
+
+  /* line 227, ../sass/app.scss */
+  50% {
+    transform: rotate(15deg);
+  }
+
+  /* line 228, ../sass/app.scss */
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+
+@-webkit-keyframes inky-fishes {
+  /* line 232, ../sass/app.scss */
+  0% {
+    -webkit-transform: rotate(-15deg);
+  }
+
+  /* line 233, ../sass/app.scss */
+  50% {
+    -webkit-transform: rotate(15deg);
+  }
+
+  /* line 234, ../sass/app.scss */
+  100% {
+    -webkit-transform: rotate(-15deg);
+  }
+}
+
 /* process */
-/* line 225, ../sass/app.scss */
+/* line 241, ../sass/app.scss */
 .how-to-use {
   position: relative;
 }
-/* line 226, ../sass/app.scss */
+/* line 242, ../sass/app.scss */
 .how-to-use.one {
   margin-bottom: 10px;
 }
-/* line 227, ../sass/app.scss */
+/* line 243, ../sass/app.scss */
 .how-to-use.one p, .how-to-use.one img, .how-to-use.one h3 {
   width: 440px;
   margin-left: 70px;
 }
-/* line 228, ../sass/app.scss */
+/* line 244, ../sass/app.scss */
 .how-to-use.one .process-1 {
   background: url(../images/inky.svg) no-repeat center center;
   height: 335px;
@@ -9856,20 +9909,20 @@ hr {
   right: 65px;
   top: -50px;
 }
-/* line 229, ../sass/app.scss */
+/* line 245, ../sass/app.scss */
 .how-to-use.one .bump-space {
   margin-left: 120px;
 }
-/* line 231, ../sass/app.scss */
+/* line 247, ../sass/app.scss */
 .how-to-use.two {
   margin-bottom: 10px;
 }
-/* line 232, ../sass/app.scss */
+/* line 248, ../sass/app.scss */
 .how-to-use.two p, .how-to-use.two img, .how-to-use.two h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 233, ../sass/app.scss */
+/* line 249, ../sass/app.scss */
 .how-to-use.two .process-2 {
   height: 87px;
   width: 166px;
@@ -9878,29 +9931,29 @@ hr {
   left: 68px;
   top: 38px;
 }
-/* line 234, ../sass/app.scss */
+/* line 250, ../sass/app.scss */
 .how-to-use.two .process-2 img {
   margin-left: 0px;
 }
-/* line 236, ../sass/app.scss */
+/* line 252, ../sass/app.scss */
 .how-to-use.two .bump-space {
   margin-left: 270px;
 }
-/* line 238, ../sass/app.scss */
+/* line 254, ../sass/app.scss */
 .how-to-use.three {
   margin-bottom: 30px;
 }
-/* line 239, ../sass/app.scss */
+/* line 255, ../sass/app.scss */
 .how-to-use.three p, .how-to-use.three img, .how-to-use.three h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 240, ../sass/app.scss */
+/* line 256, ../sass/app.scss */
 .how-to-use.three p.with-border {
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
 }
-/* line 241, ../sass/app.scss */
+/* line 257, ../sass/app.scss */
 .how-to-use.three .process-3 {
   height: 377px;
   width: 273px;
@@ -9909,35 +9962,35 @@ hr {
   right: 110px;
   top: -80px;
 }
-/* line 242, ../sass/app.scss */
+/* line 258, ../sass/app.scss */
 .how-to-use.three .process-3 img {
   margin-left: 0px;
 }
-/* line 243, ../sass/app.scss */
+/* line 259, ../sass/app.scss */
 .how-to-use.three .process-3 .inky-point {
   background: url(../images/inky-point.svg) no-repeat center center;
   height: 386px;
   width: 349px;
   background-size: cover;
 }
-/* line 245, ../sass/app.scss */
+/* line 261, ../sass/app.scss */
 .how-to-use.three .bump-space {
   margin-left: 50px;
 }
-/* line 247, ../sass/app.scss */
+/* line 263, ../sass/app.scss */
 .how-to-use.four {
   margin-bottom: 30px;
 }
-/* line 248, ../sass/app.scss */
+/* line 264, ../sass/app.scss */
 .how-to-use.four p, .how-to-use.four img, .how-to-use.four h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 249, ../sass/app.scss */
+/* line 265, ../sass/app.scss */
 .how-to-use.four .bump-space {
   margin-left: 300px;
 }
-/* line 250, ../sass/app.scss */
+/* line 266, ../sass/app.scss */
 .how-to-use.four .process-4 {
   background: url(../images/fish-3.svg) no-repeat center center;
   height: 116px;
@@ -9947,7 +10000,7 @@ hr {
   right: 0;
   top: 35px;
 }
-/* line 251, ../sass/app.scss */
+/* line 267, ../sass/app.scss */
 .how-to-use.four .process-4-2 {
   height: 63px;
   width: 96px;
@@ -9956,30 +10009,30 @@ hr {
   left: 201px;
   top: -16px;
 }
-/* line 252, ../sass/app.scss */
+/* line 268, ../sass/app.scss */
 .how-to-use.four .process-4-2 img {
   margin-left: 0px;
 }
-/* line 256, ../sass/app.scss */
+/* line 272, ../sass/app.scss */
 .how-to-use.five {
   padding-bottom: 190px;
 }
-/* line 257, ../sass/app.scss */
+/* line 273, ../sass/app.scss */
 .how-to-use.five .number {
   top: -13px;
 }
-/* line 258, ../sass/app.scss */
+/* line 274, ../sass/app.scss */
 .how-to-use.five p, .how-to-use.five img, .how-to-use.five h3 {
   width: 470px;
   margin-left: 100px;
 }
-/* line 259, ../sass/app.scss */
+/* line 275, ../sass/app.scss */
 .how-to-use.five .bump-space {
   margin-left: 185px;
   position: relative;
   z-index: 2;
 }
-/* line 260, ../sass/app.scss */
+/* line 276, ../sass/app.scss */
 .how-to-use.five .process-5 {
   height: 377px;
   width: 273px;
@@ -9988,7 +10041,7 @@ hr {
   left: 0;
   top: -120px;
 }
-/* line 261, ../sass/app.scss */
+/* line 277, ../sass/app.scss */
 .how-to-use.five .process-5-2 {
   height: 59px;
   width: 90px;
@@ -9997,15 +10050,15 @@ hr {
   right: 150px;
   top: 92px;
 }
-/* line 262, ../sass/app.scss */
+/* line 278, ../sass/app.scss */
 .how-to-use.five .process-5-2 img {
   margin-left: 0px;
 }
-/* line 265, ../sass/app.scss */
+/* line 281, ../sass/app.scss */
 .how-to-use h3 {
   margin-bottom: 10px;
 }
-/* line 266, ../sass/app.scss */
+/* line 282, ../sass/app.scss */
 .how-to-use .number {
   display: block;
   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -10015,20 +10068,20 @@ hr {
   position: absolute;
   top: 23px;
 }
-/* line 267, ../sass/app.scss */
+/* line 283, ../sass/app.scss */
 .how-to-use .campaign-monitor {
   background: url(../images/campaign-monitor.png) no-repeat left center;
   background-size: 18px 12px;
   padding-left: 30px;
 }
 
-/* line 269, ../sass/app.scss */
+/* line 285, ../sass/app.scss */
 .water {
   background: #004454;
   height: 80px;
 }
 
-/* line 270, ../sass/app.scss */
+/* line 286, ../sass/app.scss */
 .process-5-3 {
   background: url(../images/inky-boat.svg) bottom center no-repeat;
   height: 327px;
@@ -10038,8 +10091,14 @@ hr {
   position: relative;
   top: -210px;
 }
+@media only screen and (max-width: 767px) {
+  /* line 286, ../sass/app.scss */
+  .process-5-3 {
+    width: 100%;
+  }
+}
 
-/* line 272, ../sass/app.scss */
+/* line 290, ../sass/app.scss */
 .process-2.load img {
   animation-name: fish1;
   -webkit-animation-name: fish1;
@@ -10051,40 +10110,40 @@ hr {
 }
 
 @keyframes fish1 {
-  /* line 274, ../sass/app.scss */
+  /* line 292, ../sass/app.scss */
   0% {
     transform: translateX(0%);
   }
 
-  /* line 275, ../sass/app.scss */
+  /* line 293, ../sass/app.scss */
   50% {
     transform: translateX(3%);
   }
 
-  /* line 276, ../sass/app.scss */
+  /* line 294, ../sass/app.scss */
   100% {
     transform: translateX(0%);
   }
 }
 
 @-webkit-keyframes fish1 {
-  /* line 280, ../sass/app.scss */
+  /* line 298, ../sass/app.scss */
   0% {
     -webkit-transform: translateX(0%);
   }
 
-  /* line 281, ../sass/app.scss */
+  /* line 299, ../sass/app.scss */
   50% {
     -webkit-transform: translateX(3%);
   }
 
-  /* line 282, ../sass/app.scss */
+  /* line 300, ../sass/app.scss */
   100% {
     -webkit-transform: translateX(0%);
   }
 }
 
-/* line 286, ../sass/app.scss */
+/* line 304, ../sass/app.scss */
 .process-3.load div {
   animation-name: small-inky;
   -webkit-animation-name: small-inky;
@@ -10098,40 +10157,40 @@ hr {
 }
 
 @keyframes small-inky {
-  /* line 298, ../sass/app.scss */
+  /* line 316, ../sass/app.scss */
   0% {
     transform: translateY(0%);
   }
 
-  /* line 299, ../sass/app.scss */
+  /* line 317, ../sass/app.scss */
   50% {
     transform: translateY(2%);
   }
 
-  /* line 300, ../sass/app.scss */
+  /* line 318, ../sass/app.scss */
   100% {
     transform: translateY(0%);
   }
 }
 
 @-webkit-keyframes small-inky {
-  /* line 304, ../sass/app.scss */
+  /* line 322, ../sass/app.scss */
   0% {
     -webkit-transform: translateY(0%);
   }
 
-  /* line 305, ../sass/app.scss */
+  /* line 323, ../sass/app.scss */
   50% {
     -webkit-transform: translateY(2%);
   }
 
-  /* line 306, ../sass/app.scss */
+  /* line 324, ../sass/app.scss */
   100% {
     -webkit-transform: translateY(0%);
   }
 }
 
-/* line 310, ../sass/app.scss */
+/* line 328, ../sass/app.scss */
 .process-4-2.load img {
   animation-name: fish2;
   -webkit-animation-name: fish2;
@@ -10142,40 +10201,40 @@ hr {
 }
 
 @keyframes fish2 {
-  /* line 312, ../sass/app.scss */
+  /* line 330, ../sass/app.scss */
   0% {
     transform: translateY(0%);
   }
 
-  /* line 313, ../sass/app.scss */
+  /* line 331, ../sass/app.scss */
   50% {
     transform: translateY(12%);
   }
 
-  /* line 314, ../sass/app.scss */
+  /* line 332, ../sass/app.scss */
   100% {
     transform: translateY(0%);
   }
 }
 
 @-webkit-keyframes fish2 {
-  /* line 318, ../sass/app.scss */
+  /* line 336, ../sass/app.scss */
   0% {
     -webkit-transform: translateY(0%);
   }
 
-  /* line 319, ../sass/app.scss */
+  /* line 337, ../sass/app.scss */
   50% {
     -webkit-transform: translateY(12%);
   }
 
-  /* line 320, ../sass/app.scss */
+  /* line 338, ../sass/app.scss */
   100% {
     -webkit-transform: translateY(0%);
   }
 }
 
-/* line 323, ../sass/app.scss */
+/* line 341, ../sass/app.scss */
 .process-5-2.load img {
   animation-name: fish3;
   -webkit-animation-name: fish3;
@@ -10186,98 +10245,98 @@ hr {
 }
 
 @keyframes fish3 {
-  /* line 325, ../sass/app.scss */
+  /* line 343, ../sass/app.scss */
   0% {
     transform: translateX(0%);
   }
 
-  /* line 326, ../sass/app.scss */
+  /* line 344, ../sass/app.scss */
   50% {
     transform: translateX(5%);
   }
 
-  /* line 327, ../sass/app.scss */
+  /* line 345, ../sass/app.scss */
   100% {
     transform: translateX(0%);
   }
 }
 
 @-webkit-keyframes fish3 {
-  /* line 331, ../sass/app.scss */
+  /* line 349, ../sass/app.scss */
   0% {
     -webkit-transform: translateX(0%);
   }
 
-  /* line 332, ../sass/app.scss */
+  /* line 350, ../sass/app.scss */
   50% {
     -webkit-transform: translateX(5%);
   }
 
-  /* line 333, ../sass/app.scss */
+  /* line 351, ../sass/app.scss */
   100% {
     -webkit-transform: translateX(0%);
   }
 }
 
 /* docs  */
-/* line 338, ../sass/app.scss */
+/* line 356, ../sass/app.scss */
 .doc-nav {
   list-style: none;
   margin-top: 50px;
 }
-/* line 339, ../sass/app.scss */
+/* line 357, ../sass/app.scss */
 .doc-nav li {
   display: block;
   font-size: 0.875em;
   margin-bottom: 10px;
 }
-/* line 340, ../sass/app.scss */
+/* line 358, ../sass/app.scss */
 .doc-nav li a {
   color: #333;
   display: block;
 }
-/* line 341, ../sass/app.scss */
+/* line 359, ../sass/app.scss */
 .doc-nav li a.current {
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* line 342, ../sass/app.scss */
+/* line 360, ../sass/app.scss */
 .doc-nav li a:hover {
   color: #000;
 }
-/* line 344, ../sass/app.scss */
+/* line 362, ../sass/app.scss */
 .doc-nav li ul li {
   font-size: 1em;
 }
 
-/* line 348, ../sass/app.scss */
+/* line 366, ../sass/app.scss */
 .docs h1 {
   margin-top: 30px;
   margin-bottom: 0;
 }
-/* line 349, ../sass/app.scss */
+/* line 367, ../sass/app.scss */
 .docs .label {
   background: #ddd;
   color: #333;
 }
-/* line 350, ../sass/app.scss */
+/* line 368, ../sass/app.scss */
 .docs table {
   width: 100%;
   font-size: 0.9375em;
 }
-/* line 351, ../sass/app.scss */
+/* line 369, ../sass/app.scss */
 .docs table td {
   line-height: 1.6;
   vertical-align: top;
 }
-/* line 353, ../sass/app.scss */
+/* line 371, ../sass/app.scss */
 .docs hr.section {
   margin-top: 50px;
   border-style: solid;
   border-width: 2px;
 }
 
-/* line 359, ../sass/app.scss */
+/* line 377, ../sass/app.scss */
 .prev-next-section {
   *zoom: 1;
   border-top: 1px dashed #ddd;
@@ -10293,58 +10352,59 @@ hr {
 .prev-next-section:after {
   clear: both;
 }
-/* line 360, ../sass/app.scss */
+/* line 378, ../sass/app.scss */
 .prev-next-section a {
   font-weight: bold;
   color: #333;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 365, ../sass/app.scss */
+  /* line 383, ../sass/app.scss */
   .top-area {
     position: relative;
   }
 
-  /* line 366, ../sass/app.scss */
+  /* line 384, ../sass/app.scss */
   .top-area .inky-phone {
     display: block;
-    background: url(../images/inky-phone.png);
+    background: url(../images/inky-mobile-hold.svg);
     background-repeat: no-repeat;
-    height: 470px;
+    height: 542px;
     position: absolute;
     bottom: 0px;
     right: 0px;
-    width: 200px;
+    width: 220px;
     opacity: 0.7;
+    background-size: cover;
   }
 
-  /* line 367, ../sass/app.scss */
+  /* line 385, ../sass/app.scss */
   .top-area .home-text {
     padding: 40px 0 50px;
     position: relative;
     z-index: 2;
   }
 
-  /* line 368, ../sass/app.scss */
+  /* line 386, ../sass/app.scss */
   .templates-callout {
     top: 0px;
     margin-bottom: 50px;
   }
 
-  /* line 371, ../sass/app.scss */
+  /* line 389, ../sass/app.scss */
   .how-to-use h3, .how-to-use p {
     width: 100% !important;
     margin-left: 0 !important;
   }
-  /* line 372, ../sass/app.scss */
+  /* line 390, ../sass/app.scss */
   .how-to-use .bump-space {
     margin-left: 0 !important;
   }
-  /* line 373, ../sass/app.scss */
+  /* line 391, ../sass/app.scss */
   .how-to-use .process-1, .how-to-use .process-2, .how-to-use .process-3, .how-to-use .process-4, .how-to-use .process-4-2, .how-to-use .process-5, .how-to-use .process-5-2 {
     display: none !important;
   }
-  /* line 374, ../sass/app.scss */
+  /* line 392, ../sass/app.scss */
   .how-to-use .number {
     position: relative;
     text-align: left;
@@ -10352,22 +10412,30 @@ hr {
     font-size: 3.625em;
     top: auto;
   }
-  /* line 375, ../sass/app.scss */
+  /* line 393, ../sass/app.scss */
   .how-to-use img {
     margin-left: 0 !important;
     width: 100% !important;
   }
+
+  /* line 395, ../sass/app.scss */
+  .callout .row .stamp {
+    width: 129px;
+    right: 0;
+    height: 119px;
+    top: -54px;
+  }
 }
-/* line 379, ../sass/app.scss */
+/* line 398, ../sass/app.scss */
 ul.mobile-nav {
   display: block;
   margin-bottom: 0;
 }
-/* line 380, ../sass/app.scss */
+/* line 399, ../sass/app.scss */
 ul.mobile-nav li {
   display: block;
 }
-/* line 381, ../sass/app.scss */
+/* line 400, ../sass/app.scss */
 ul.mobile-nav a {
   display: block;
   padding: 10px;
@@ -10376,50 +10444,50 @@ ul.mobile-nav a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   font-weight: bold;
 }
-/* line 382, ../sass/app.scss */
+/* line 401, ../sass/app.scss */
 ul.mobile-nav a.current {
   background: #002f3b;
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1024px) {
-  /* line 387, ../sass/app.scss */
+  /* line 406, ../sass/app.scss */
   .inky {
     right: -620px;
   }
 
-  /* line 388, ../sass/app.scss */
+  /* line 407, ../sass/app.scss */
   .touch .how-to-use {
     position: relative;
   }
-  /* line 390, ../sass/app.scss */
+  /* line 409, ../sass/app.scss */
   .touch .how-to-use.one p, .touch .how-to-use.one img, .touch .how-to-use.one h3 {
     width: 400px;
     margin-left: 70px;
   }
-  /* line 391, ../sass/app.scss */
+  /* line 410, ../sass/app.scss */
   .touch .how-to-use.one .process-1 {
-    background: url(../images/process-1.png) no-repeat center center;
-    height: 265px;
+    background: url(../images/inky.svg) no-repeat center center;
+    height: 325px;
     width: 256px;
     background-size: cover;
     position: absolute;
-    right: 0;
+    right: -13px;
     top: -50px;
   }
-  /* line 392, ../sass/app.scss */
+  /* line 411, ../sass/app.scss */
   .touch .how-to-use.one .bump-space {
     margin-left: 60px;
   }
-  /* line 394, ../sass/app.scss */
+  /* line 413, ../sass/app.scss */
   .touch .how-to-use.two {
     margin-bottom: 10px;
   }
-  /* line 395, ../sass/app.scss */
+  /* line 414, ../sass/app.scss */
   .touch .how-to-use.two p, .touch .how-to-use.two img, .touch .how-to-use.two h3 {
     width: 440px;
     margin-left: 100px;
   }
-  /* line 396, ../sass/app.scss */
+  /* line 415, ../sass/app.scss */
   .touch .how-to-use.two .process-2 {
     height: 65px;
     width: 124px;
@@ -10429,61 +10497,61 @@ ul.mobile-nav a.current {
     top: 38px;
     z-index: -1;
   }
-  /* line 397, ../sass/app.scss */
+  /* line 416, ../sass/app.scss */
   .touch .how-to-use.two .process-2 img {
     margin-left: 0px;
   }
-  /* line 399, ../sass/app.scss */
+  /* line 418, ../sass/app.scss */
   .touch .how-to-use.two .bump-space {
     margin-left: 100px;
   }
-  /* line 401, ../sass/app.scss */
+  /* line 420, ../sass/app.scss */
   .touch .how-to-use.three {
     margin-bottom: 30px;
   }
-  /* line 402, ../sass/app.scss */
+  /* line 421, ../sass/app.scss */
   .touch .how-to-use.three p, .touch .how-to-use.three img, .touch .how-to-use.three h3 {
     width: 350px;
     margin-left: 100px;
   }
-  /* line 403, ../sass/app.scss */
+  /* line 422, ../sass/app.scss */
   .touch .how-to-use.three p.with-border {
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
   }
-  /* line 404, ../sass/app.scss */
+  /* line 423, ../sass/app.scss */
   .touch .how-to-use.three .process-3 {
     height: 377px;
     width: 273px;
     background-size: cover;
     position: absolute;
-    right: 0;
+    right: 70px;
     top: -100px;
   }
-  /* line 405, ../sass/app.scss */
+  /* line 424, ../sass/app.scss */
   .touch .how-to-use.three .process-3 img {
     margin-left: 0px;
   }
-  /* line 407, ../sass/app.scss */
+  /* line 426, ../sass/app.scss */
   .touch .how-to-use.three .bump-space {
     margin-left: 0;
   }
-  /* line 409, ../sass/app.scss */
+  /* line 428, ../sass/app.scss */
   .touch .how-to-use.four {
     margin-bottom: 30px;
   }
-  /* line 410, ../sass/app.scss */
+  /* line 429, ../sass/app.scss */
   .touch .how-to-use.four p, .touch .how-to-use.four img, .touch .how-to-use.four h3 {
     width: 350px;
     margin-left: 100px;
   }
-  /* line 411, ../sass/app.scss */
+  /* line 430, ../sass/app.scss */
   .touch .how-to-use.four .bump-space {
     margin-left: 150px;
   }
-  /* line 412, ../sass/app.scss */
+  /* line 431, ../sass/app.scss */
   .touch .how-to-use.four .process-4 {
-    background: url(../images/process-4.png) no-repeat center center;
+    background: url(../images/fish-3.png) no-repeat center center;
     height: 116px;
     width: 107px;
     background-size: cover;
@@ -10491,7 +10559,7 @@ ul.mobile-nav a.current {
     right: 0;
     top: 35px;
   }
-  /* line 413, ../sass/app.scss */
+  /* line 432, ../sass/app.scss */
   .touch .how-to-use.four .process-4-2 {
     height: 63px;
     width: 96px;
@@ -10500,32 +10568,30 @@ ul.mobile-nav a.current {
     left: 0;
     top: -16px;
   }
-  /* line 414, ../sass/app.scss */
+  /* line 433, ../sass/app.scss */
   .touch .how-to-use.four .process-4-2 img {
     margin-left: 0px;
   }
-  /* line 418, ../sass/app.scss */
+  /* line 437, ../sass/app.scss */
   .touch .how-to-use.five {
-    padding-bottom: 70px;
-    background: url(../images/ocean_floor.png) center bottom no-repeat;
-    background-size: cover;
+    padding-bottom: 160px;
   }
-  /* line 419, ../sass/app.scss */
+  /* line 438, ../sass/app.scss */
   .touch .how-to-use.five .number {
     top: -13px;
   }
-  /* line 420, ../sass/app.scss */
+  /* line 439, ../sass/app.scss */
   .touch .how-to-use.five p, .touch .how-to-use.five img, .touch .how-to-use.five h3 {
     width: 470px;
     margin-left: 100px;
   }
-  /* line 421, ../sass/app.scss */
+  /* line 440, ../sass/app.scss */
   .touch .how-to-use.five .bump-space {
     margin-left: 20px;
     position: relative;
     z-index: 2;
   }
-  /* line 422, ../sass/app.scss */
+  /* line 441, ../sass/app.scss */
   .touch .how-to-use.five .process-5 {
     height: 377px;
     width: 273px;
@@ -10534,7 +10600,7 @@ ul.mobile-nav a.current {
     left: 0;
     top: -120px;
   }
-  /* line 423, ../sass/app.scss */
+  /* line 442, ../sass/app.scss */
   .touch .how-to-use.five .process-5-2 {
     height: 59px;
     width: 90px;
@@ -10543,15 +10609,15 @@ ul.mobile-nav a.current {
     right: 50px;
     top: 92px;
   }
-  /* line 424, ../sass/app.scss */
+  /* line 443, ../sass/app.scss */
   .touch .how-to-use.five .process-5-2 img {
     margin-left: 0px;
   }
-  /* line 427, ../sass/app.scss */
+  /* line 446, ../sass/app.scss */
   .touch .how-to-use h3 {
     margin-bottom: 10px;
   }
-  /* line 428, ../sass/app.scss */
+  /* line 447, ../sass/app.scss */
   .touch .how-to-use .number {
     display: block;
     font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -10561,83 +10627,84 @@ ul.mobile-nav a.current {
     position: absolute;
     top: 23px;
   }
-  /* line 429, ../sass/app.scss */
+  /* line 448, ../sass/app.scss */
   .touch .how-to-use .campaign-monitor {
     background: url(../images/campaign-monitor.png) no-repeat left center;
     background-size: 18px 12px;
     padding-left: 30px;
   }
 
-  /* line 431, ../sass/app.scss */
+  /* line 450, ../sass/app.scss */
   .inky-small.load {
     right: -250px;
   }
 
-  /* line 432, ../sass/app.scss */
+  /* line 451, ../sass/app.scss */
   .top-bar-section .has-form {
-    padding: 0 15px;
+    padding: 11px 15px;
+    height: 45px;
   }
 
-  /* line 433, ../sass/app.scss */
+  /* line 452, ../sass/app.scss */
   .button.tiny {
-    padding: 5px 10px 25px;
+    padding: 5px 10px;
   }
 
-  /* line 434, ../sass/app.scss */
+  /* line 453, ../sass/app.scss */
   .top-area.main {
     overflow-x: hidden;
   }
 }
 /* coming-soon */
-/* line 438, ../sass/app.scss */
+/* line 457, ../sass/app.scss */
 .coming-soon {
   background: #004454;
 }
-/* line 439, ../sass/app.scss */
+/* line 458, ../sass/app.scss */
 .coming-soon .home-text {
   padding: 80px 0 83px;
 }
-/* line 440, ../sass/app.scss */
+/* line 459, ../sass/app.scss */
 .coming-soon .cs-text {
   margin-bottom: 5px;
   color: rgba(255, 255, 255, 0.5);
 }
-/* line 441, ../sass/app.scss */
+/* line 460, ../sass/app.scss */
 .coming-soon input {
   padding: 20px 20px 19px;
 }
-/* line 442, ../sass/app.scss */
+/* line 461, ../sass/app.scss */
 .coming-soon .confirm {
   font-size: 1em;
   font-style: italic;
 }
-/* line 443, ../sass/app.scss */
+/* line 462, ../sass/app.scss */
 .coming-soon .form-thanks {
   height: 45px;
   overflow: hidden;
 }
-/* line 444, ../sass/app.scss */
+/* line 463, ../sass/app.scss */
 .coming-soon .form-thanks .confirm {
   display: none;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 450, ../sass/app.scss */
+  /* line 469, ../sass/app.scss */
   .coming-soon h1, .coming-soon p {
     text-align: center;
   }
-  /* line 451, ../sass/app.scss */
+  /* line 470, ../sass/app.scss */
   .coming-soon .home-text {
     padding: 20px 0 0 0;
   }
 }
-/* line 455, ../sass/app.scss */
+/* line 474, ../sass/app.scss */
 .cs-inky {
   background: url(../images/inky-mobile.svg) no-repeat right bottom;
   background-size: 624px 558px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 455, ../sass/app.scss */
+  /* line 474, ../sass/app.scss */
   .cs-inky {
     background: url(../images/inky-mobile-hold.svg) no-repeat center bottom;
     background-size: 147px 200px;
