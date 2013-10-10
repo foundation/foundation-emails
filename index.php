@@ -82,10 +82,10 @@
 <?php include 'includes/_subscribe.php' ?>	
 <div class="show-for-small">
   <ul class="mobile-nav">
-    <li><a href="/" class="current">Home</a></li>
-    <li><a href="/process.php">Process</a></li>
-    <li><a href="/docs.php">Docs</a></li>
-    <li><a href="/templates.php">Email Templates</a></li>
+    <li><a href="index.php" class="current">Home</a></li>
+    <li><a href="process.php">Process</a></li>
+    <li><a href="docs.php">Docs</a></li>
+    <li><a href="templates.php">Email Templates</a></li>
   </ul>
 </div>
 <?php include 'includes/_footer.php' ?>
