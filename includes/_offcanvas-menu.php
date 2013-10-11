@@ -17,9 +17,9 @@
 		<h6>ZURB News</h6>
 		<nav id="sideMenu" role="navigation">
 			<ul id="sideMainNav" class="nav-bar">
-			  <li><a href="/process.php">Process</a></li>
-			  <li><a href="/docs.php">Docs</a></li>
-			  <li><a href="/templates.php">Email Templates</a></li>
+			  <li><a href="process.php">Process</a></li>
+			  <li><a href="docs.php">Docs</a></li>
+			  <li><a href="templates.php">Email Templates</a></li>
 			</ul>
 		</nav> 			
   </div>
