@@ -458,10 +458,9 @@ ul.mobile-nav { display: block; margin-bottom: 0;
   .home-text { padding: 80px 0 83px; }
   .cs-text { margin-bottom: 5px; color: rgba(255,255,255,.5); }
   input { padding: 20px 20px 19px; }
-  .confirm { font-size: 1em; font-style: italic; }
-  .form-thanks { height: 45px; overflow: hidden; 
-    .confirm { display: none; }
-  }
+  .confirm { font-size: 1em; font-style: italic; 
+    &.error { color: red; }}
+  // .form-thanks { height: 45px; overflow: hidden;}
 }
 
 @media only screen and (max-width: 767px){

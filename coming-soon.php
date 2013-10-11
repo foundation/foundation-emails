@@ -1,3 +1,25 @@
+<?php
+  if (isset($_POST['email'])) {
+    $email = $_POST['email'];
+    $data = array("EmailAddress" => $email, "Resubscribe" => TRUE);                                                                    
+    $data_string = json_encode($data);                                                                                   
+ 
+    $ch = curl_init("https://d275c8b5e96298ccb017e1c85bb47adb3dcfafbde61b53e5@api.createsend.com/api/v3/subscribers/5c6a55836de01f72133628c8343c520b.json");                                                     
+    
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string); 
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                                                                                      
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
+        'Content-Type: application/json',                                                                                
+        'Content-Length: ' . strlen($data_string))                                                                       
+    );                                           
+
+    $result = curl_exec($ch);                                                                 
+    $success = strstr($result, '@');
+    curl_close($ch);
+  }
+?>
+
 <!DOCTYPE html>
 <!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -38,17 +60,27 @@
         <p class="cs-text hide-for-small">Ink is coming soon. Get notified when it launches.</p>
         <p class="cs-text show-for-small">Get notified when Ink launches.</p>
         <div class="form-thanks">
-          <form>
-            <div class="row collapse">
-              <div class="large-8 small-7 columns">
-                <input type="text" placeholder="Email address">
-              </div>
-              <div class="large-4 small-5 columns">
-                <button type="submit" class="button expand">Submit</button>
-              </div>
-            </div>
-          </form>
-          <p class="confirm">Thanks! We've received your email, and we'll let you know when Ink launches.</p>
+          <?php
+            if (isset($email) && $success) {
+              echo '<p class="confirm">Thanks! We\'ve received your email, and we\'ll let you know when Ink launches.</p>';
+            } else {
+              if (!$success) {
+                $resp = json_decode($result, true);
+                $error = '<p class="confirm error">' . $resp['Message'] . '</p>';
+                echo $error;
+              }
+              echo '<form id="emailForm" method="post">
+                      <div class="row collapse">
+                        <div class="large-8 small-7 columns">
+                          <input type="text" name="email" placeholder="Email address">
+                        </div>
+                        <div class="large-4 small-5 columns">
+                          <button type="submit" class="button expand">Submit</button>
+                        </div>
+                      </div>
+                    </form>';
+            }
+          ?> 
         </div>
       </div>
     </div>
@@ -165,9 +197,7 @@
 	<script src="javascripts/foundation/foundation.tooltips.js"></script>
 -->
 	<script src="javascripts/foundation/foundation.topbar.js"></script>
-  <script src="javascripts/foundation/jquery.offcanvas.js"></script>
-	
-  
+  <script src="javascripts/foundation/jquery.offcanvas.js"></script> 
 
 </section>
 
