@@ -10681,32 +10681,27 @@ ul.mobile-nav a.current {
   font-style: italic;
 }
 /* line 463, ../sass/app.scss */
-.coming-soon .form-thanks {
-  height: 45px;
-  overflow: hidden;
-}
-/* line 464, ../sass/app.scss */
-.coming-soon .form-thanks .confirm {
-  display: none;
+.coming-soon .confirm.error {
+  color: red;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 470, ../sass/app.scss */
+  /* line 469, ../sass/app.scss */
   .coming-soon h1, .coming-soon p {
     text-align: center;
   }
-  /* line 471, ../sass/app.scss */
+  /* line 470, ../sass/app.scss */
   .coming-soon .home-text {
     padding: 20px 0 0 0;
   }
 }
-/* line 475, ../sass/app.scss */
+/* line 474, ../sass/app.scss */
 .cs-inky {
   background: url(../images/inky-mobile.svg) no-repeat right bottom;
   background-size: 624px 558px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 475, ../sass/app.scss */
+  /* line 474, ../sass/app.scss */
   .cs-inky {
     background: url(../images/inky-mobile-hold.svg) no-repeat center bottom;
     background-size: 147px 200px;
