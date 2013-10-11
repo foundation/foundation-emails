@@ -140,7 +140,7 @@ p { font-size: emCalc(14px); }
 /* callout */
 .callout { background: #e5e9ea; margin-bottom: 60px;
   .row {  position: relative; 
-    .stamp { background: url(../images/inky-stamp.svg) no-repeat center center; position: absolute; width: 199px; right:-40px; height: 179px; top:-104px; background-size: cover;  } 
+    .stamp { background: url(../images/inky-stamp-2.svg) no-repeat center center; position: absolute; width: 231px; right:-40px; height: 179px; top:-104px; background-size: cover;  } 
   }
 }
 .space-callout { padding: 53px 0 31px; }
@@ -184,7 +184,7 @@ p { font-size: emCalc(14px); }
 
 /* interior */
 .top-headlines { margin-top: 50px; 
-  h1 { margin-bottom: 0; }
+  h1 { margin-bottom: 0; line-height: 1;  }
 }
 hr { border-style: dashed; }
 
@@ -204,8 +204,8 @@ hr { border-style: dashed; }
   select { width: 110px; margin-left: 10px; }
 }
 .how-to-use { position: relative; padding: 30px 0;  }
-.inky-small { height: 377px; width: 273px; position: absolute; top: 0; right: -310px; z-index: 2;}
-.inky-small.load { height: 377px; width: 273px; position: absolute; top: 0; right: -310px; z-index: 2;animation-name: small-inky; -webkit-animation-name: small-inky; animation-duration:9s; -webkit-animation-duration:9s; animation-iteration-count: infinite; -webkit-animation-iteration-count:infinite;  }
+.inky-small { height: 377px; width: 323px; position: absolute; top: 0; right: -310px; z-index: 2;}
+.inky-small.load { animation-name: small-inky; -webkit-animation-name: small-inky; animation-duration:9s; -webkit-animation-duration:9s; animation-iteration-count: infinite; -webkit-animation-iteration-count:infinite;  }
 
 /* downloading */
 .main-text { position: relative; }
@@ -403,6 +403,7 @@ ul.mobile-nav { display: block; margin-bottom: 0;
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1024px) {
+  .callout .row .stamp { top: -134px; right: 0; }
   .inky { right: -620px; }
   .touch .how-to-use { position: relative; 
     &.one { 
@@ -447,7 +448,7 @@ ul.mobile-nav { display: block; margin-bottom: 0;
     .number { display: block; font-family: $sans-serif; color: #a3abad; font-size: emCalc(138px); font-weight: bold; position: absolute; top: 23px; }
     .campaign-monitor { background: url(../images/campaign-monitor.png) no-repeat left center; background-size: 18px 12px; padding-left: 30px; }
   }
-  .inky-small.load { right: -250px; }
+  .inky-small.load { right: -250px; width: 283px;}
   .top-bar-section .has-form { padding: 11px 15px; height: 45px; }
   .button.tiny { padding: 5px 10px; }
   .top-area.main { overflow-x: hidden; }

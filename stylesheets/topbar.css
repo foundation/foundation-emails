@@ -86,11 +86,11 @@
 
 /* line 34, ../sass/topbar.scss */
 .top-bar-section li a {
-  background: #333;
+  background: #222;
 }
 /* line 35, ../sass/topbar.scss */
 .top-bar-section li a:not(.button) {
-  background: #333;
+  background: #222;
 }
 /* line 36, ../sass/topbar.scss */
 .top-bar-section li a:not(.button):hover {
@@ -99,7 +99,7 @@
 
 /* line 39, ../sass/topbar.scss */
 .top-bar-section .has-form {
-  background: #333;
+  background: #222;
 }
 
 /* line 40, ../sass/topbar.scss */
@@ -153,7 +153,7 @@
 /* line 56, ../sass/topbar.scss */
 .contain-to-grid {
   width: 100%;
-  background: #333333;
+  background: #222;
 }
 
 /* Wrapped around .top-bar to make it fixed at the top */
@@ -169,7 +169,7 @@
 /* <nav> */
 /* line 62, ../sass/topbar.scss */
 .top-bar {
-  background: #333333;
+  background: #222;
   height: 45px;
   line-height: 45px;
   margin: 0 0 30px;
@@ -246,7 +246,7 @@
 
 /* line 71, ../sass/topbar.scss */
 .top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active {
-  background: #333333;
+  background: #222;
 }
 
 /* line 72, ../sass/topbar.scss */

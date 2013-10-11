@@ -7305,11 +7305,11 @@ a.th {
 
 /* line 34, ../sass/topbar.scss */
 .top-bar-section li a {
-  background: #333;
+  background: #222;
 }
 /* line 35, ../sass/topbar.scss */
 .top-bar-section li a:not(.button) {
-  background: #333;
+  background: #222;
 }
 /* line 36, ../sass/topbar.scss */
 .top-bar-section li a:not(.button):hover {
@@ -7318,7 +7318,7 @@ a.th {
 
 /* line 39, ../sass/topbar.scss */
 .top-bar-section .has-form {
-  background: #333;
+  background: #222;
 }
 
 /* line 40, ../sass/topbar.scss */
@@ -7372,7 +7372,7 @@ a.th {
 /* line 56, ../sass/topbar.scss */
 .contain-to-grid {
   width: 100%;
-  background: #333333;
+  background: #222;
 }
 
 /* Wrapped around .top-bar to make it fixed at the top */
@@ -7388,7 +7388,7 @@ a.th {
 /* <nav> */
 /* line 62, ../sass/topbar.scss */
 .top-bar {
-  background: #333333;
+  background: #222;
   height: 45px;
   line-height: 45px;
   margin: 0 0 30px;
@@ -7465,7 +7465,7 @@ a.th {
 
 /* line 71, ../sass/topbar.scss */
 .top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active {
-  background: #333333;
+  background: #222;
 }
 
 /* line 72, ../sass/topbar.scss */
@@ -8398,7 +8398,7 @@ a.th {
 
 /* line 47, ../sass/_footer.scss */
 .zurb-footer-bottom {
-  background: #333;
+  background: #222;
   padding: 24px 0 10px;
 }
 /* line 48, ../sass/_footer.scss */
@@ -9560,9 +9560,9 @@ p {
 }
 /* line 143, ../sass/app.scss */
 .callout .row .stamp {
-  background: url(../images/inky-stamp.svg) no-repeat center center;
+  background: url(../images/inky-stamp-2.svg) no-repeat center center;
   position: absolute;
-  width: 199px;
+  width: 231px;
   right: -40px;
   height: 179px;
   top: -104px;
@@ -9694,6 +9694,7 @@ p {
 /* line 187, ../sass/app.scss */
 .top-headlines h1 {
   margin-bottom: 0;
+  line-height: 1;
 }
 
 /* line 189, ../sass/app.scss */
@@ -9759,7 +9760,7 @@ hr {
 /* line 207, ../sass/app.scss */
 .inky-small {
   height: 377px;
-  width: 273px;
+  width: 323px;
   position: absolute;
   top: 0;
   right: -310px;
@@ -9768,12 +9769,6 @@ hr {
 
 /* line 208, ../sass/app.scss */
 .inky-small.load {
-  height: 377px;
-  width: 273px;
-  position: absolute;
-  top: 0;
-  right: -310px;
-  z-index: 2;
   animation-name: small-inky;
   -webkit-animation-name: small-inky;
   animation-duration: 9s;
@@ -10451,20 +10446,26 @@ ul.mobile-nav a.current {
 
 @media only screen and (min-width: 767px) and (max-width: 1024px) {
   /* line 406, ../sass/app.scss */
+  .callout .row .stamp {
+    top: -134px;
+    right: 0;
+  }
+
+  /* line 407, ../sass/app.scss */
   .inky {
     right: -620px;
   }
 
-  /* line 407, ../sass/app.scss */
+  /* line 408, ../sass/app.scss */
   .touch .how-to-use {
     position: relative;
   }
-  /* line 409, ../sass/app.scss */
+  /* line 410, ../sass/app.scss */
   .touch .how-to-use.one p, .touch .how-to-use.one img, .touch .how-to-use.one h3 {
     width: 400px;
     margin-left: 70px;
   }
-  /* line 410, ../sass/app.scss */
+  /* line 411, ../sass/app.scss */
   .touch .how-to-use.one .process-1 {
     background: url(../images/inky.svg) no-repeat center center;
     height: 325px;
@@ -10474,20 +10475,20 @@ ul.mobile-nav a.current {
     right: -13px;
     top: -50px;
   }
-  /* line 411, ../sass/app.scss */
+  /* line 412, ../sass/app.scss */
   .touch .how-to-use.one .bump-space {
     margin-left: 60px;
   }
-  /* line 413, ../sass/app.scss */
+  /* line 414, ../sass/app.scss */
   .touch .how-to-use.two {
     margin-bottom: 10px;
   }
-  /* line 414, ../sass/app.scss */
+  /* line 415, ../sass/app.scss */
   .touch .how-to-use.two p, .touch .how-to-use.two img, .touch .how-to-use.two h3 {
     width: 440px;
     margin-left: 100px;
   }
-  /* line 415, ../sass/app.scss */
+  /* line 416, ../sass/app.scss */
   .touch .how-to-use.two .process-2 {
     height: 65px;
     width: 124px;
@@ -10497,29 +10498,29 @@ ul.mobile-nav a.current {
     top: 38px;
     z-index: -1;
   }
-  /* line 416, ../sass/app.scss */
+  /* line 417, ../sass/app.scss */
   .touch .how-to-use.two .process-2 img {
     margin-left: 0px;
   }
-  /* line 418, ../sass/app.scss */
+  /* line 419, ../sass/app.scss */
   .touch .how-to-use.two .bump-space {
     margin-left: 100px;
   }
-  /* line 420, ../sass/app.scss */
+  /* line 421, ../sass/app.scss */
   .touch .how-to-use.three {
     margin-bottom: 30px;
   }
-  /* line 421, ../sass/app.scss */
+  /* line 422, ../sass/app.scss */
   .touch .how-to-use.three p, .touch .how-to-use.three img, .touch .how-to-use.three h3 {
     width: 350px;
     margin-left: 100px;
   }
-  /* line 422, ../sass/app.scss */
+  /* line 423, ../sass/app.scss */
   .touch .how-to-use.three p.with-border {
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
   }
-  /* line 423, ../sass/app.scss */
+  /* line 424, ../sass/app.scss */
   .touch .how-to-use.three .process-3 {
     height: 377px;
     width: 273px;
@@ -10528,28 +10529,28 @@ ul.mobile-nav a.current {
     right: 70px;
     top: -100px;
   }
-  /* line 424, ../sass/app.scss */
+  /* line 425, ../sass/app.scss */
   .touch .how-to-use.three .process-3 img {
     margin-left: 0px;
   }
-  /* line 426, ../sass/app.scss */
+  /* line 427, ../sass/app.scss */
   .touch .how-to-use.three .bump-space {
     margin-left: 0;
   }
-  /* line 428, ../sass/app.scss */
+  /* line 429, ../sass/app.scss */
   .touch .how-to-use.four {
     margin-bottom: 30px;
   }
-  /* line 429, ../sass/app.scss */
+  /* line 430, ../sass/app.scss */
   .touch .how-to-use.four p, .touch .how-to-use.four img, .touch .how-to-use.four h3 {
     width: 350px;
     margin-left: 100px;
   }
-  /* line 430, ../sass/app.scss */
+  /* line 431, ../sass/app.scss */
   .touch .how-to-use.four .bump-space {
     margin-left: 150px;
   }
-  /* line 431, ../sass/app.scss */
+  /* line 432, ../sass/app.scss */
   .touch .how-to-use.four .process-4 {
     background: url(../images/fish-3.png) no-repeat center center;
     height: 116px;
@@ -10559,7 +10560,7 @@ ul.mobile-nav a.current {
     right: 0;
     top: 35px;
   }
-  /* line 432, ../sass/app.scss */
+  /* line 433, ../sass/app.scss */
   .touch .how-to-use.four .process-4-2 {
     height: 63px;
     width: 96px;
@@ -10568,30 +10569,30 @@ ul.mobile-nav a.current {
     left: 0;
     top: -16px;
   }
-  /* line 433, ../sass/app.scss */
+  /* line 434, ../sass/app.scss */
   .touch .how-to-use.four .process-4-2 img {
     margin-left: 0px;
   }
-  /* line 437, ../sass/app.scss */
+  /* line 438, ../sass/app.scss */
   .touch .how-to-use.five {
     padding-bottom: 160px;
   }
-  /* line 438, ../sass/app.scss */
+  /* line 439, ../sass/app.scss */
   .touch .how-to-use.five .number {
     top: -13px;
   }
-  /* line 439, ../sass/app.scss */
+  /* line 440, ../sass/app.scss */
   .touch .how-to-use.five p, .touch .how-to-use.five img, .touch .how-to-use.five h3 {
     width: 470px;
     margin-left: 100px;
   }
-  /* line 440, ../sass/app.scss */
+  /* line 441, ../sass/app.scss */
   .touch .how-to-use.five .bump-space {
     margin-left: 20px;
     position: relative;
     z-index: 2;
   }
-  /* line 441, ../sass/app.scss */
+  /* line 442, ../sass/app.scss */
   .touch .how-to-use.five .process-5 {
     height: 377px;
     width: 273px;
@@ -10600,7 +10601,7 @@ ul.mobile-nav a.current {
     left: 0;
     top: -120px;
   }
-  /* line 442, ../sass/app.scss */
+  /* line 443, ../sass/app.scss */
   .touch .how-to-use.five .process-5-2 {
     height: 59px;
     width: 90px;
@@ -10609,15 +10610,15 @@ ul.mobile-nav a.current {
     right: 50px;
     top: 92px;
   }
-  /* line 443, ../sass/app.scss */
+  /* line 444, ../sass/app.scss */
   .touch .how-to-use.five .process-5-2 img {
     margin-left: 0px;
   }
-  /* line 446, ../sass/app.scss */
+  /* line 447, ../sass/app.scss */
   .touch .how-to-use h3 {
     margin-bottom: 10px;
   }
-  /* line 447, ../sass/app.scss */
+  /* line 448, ../sass/app.scss */
   .touch .how-to-use .number {
     display: block;
     font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -10627,84 +10628,85 @@ ul.mobile-nav a.current {
     position: absolute;
     top: 23px;
   }
-  /* line 448, ../sass/app.scss */
+  /* line 449, ../sass/app.scss */
   .touch .how-to-use .campaign-monitor {
     background: url(../images/campaign-monitor.png) no-repeat left center;
     background-size: 18px 12px;
     padding-left: 30px;
   }
 
-  /* line 450, ../sass/app.scss */
+  /* line 451, ../sass/app.scss */
   .inky-small.load {
     right: -250px;
+    width: 283px;
   }
 
-  /* line 451, ../sass/app.scss */
+  /* line 452, ../sass/app.scss */
   .top-bar-section .has-form {
     padding: 11px 15px;
     height: 45px;
   }
 
-  /* line 452, ../sass/app.scss */
+  /* line 453, ../sass/app.scss */
   .button.tiny {
     padding: 5px 10px;
   }
 
-  /* line 453, ../sass/app.scss */
+  /* line 454, ../sass/app.scss */
   .top-area.main {
     overflow-x: hidden;
   }
 }
 /* coming-soon */
-/* line 457, ../sass/app.scss */
+/* line 458, ../sass/app.scss */
 .coming-soon {
   background: #004454;
 }
-/* line 458, ../sass/app.scss */
+/* line 459, ../sass/app.scss */
 .coming-soon .home-text {
   padding: 80px 0 83px;
 }
-/* line 459, ../sass/app.scss */
+/* line 460, ../sass/app.scss */
 .coming-soon .cs-text {
   margin-bottom: 5px;
   color: rgba(255, 255, 255, 0.5);
 }
-/* line 460, ../sass/app.scss */
+/* line 461, ../sass/app.scss */
 .coming-soon input {
   padding: 20px 20px 19px;
 }
-/* line 461, ../sass/app.scss */
+/* line 462, ../sass/app.scss */
 .coming-soon .confirm {
   font-size: 1em;
   font-style: italic;
 }
-/* line 462, ../sass/app.scss */
+/* line 463, ../sass/app.scss */
 .coming-soon .form-thanks {
   height: 45px;
   overflow: hidden;
 }
-/* line 463, ../sass/app.scss */
+/* line 464, ../sass/app.scss */
 .coming-soon .form-thanks .confirm {
   display: none;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 469, ../sass/app.scss */
+  /* line 470, ../sass/app.scss */
   .coming-soon h1, .coming-soon p {
     text-align: center;
   }
-  /* line 470, ../sass/app.scss */
+  /* line 471, ../sass/app.scss */
   .coming-soon .home-text {
     padding: 20px 0 0 0;
   }
 }
-/* line 474, ../sass/app.scss */
+/* line 475, ../sass/app.scss */
 .cs-inky {
   background: url(../images/inky-mobile.svg) no-repeat right bottom;
   background-size: 624px 558px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 474, ../sass/app.scss */
+  /* line 475, ../sass/app.scss */
   .cs-inky {
     background: url(../images/inky-mobile-hold.svg) no-repeat center bottom;
     background-size: 147px 200px;

@@ -15,7 +15,7 @@
 		        <ul>
 		          <li><a href="http://zurb.com/expo/courses">Training</a></li>
 		          <li><a href="http://zurb.com/responsive">Responsive</a></li>
-		          <li><a href="http://zurb.com/services/our-work">Our Work</a></li>
+		          <li><a href="http://foundation.zurb.com/">Foundation</a></li>
 		          <li><a href="http://zurb.com/apps">ZURB Apps</a></li>
 		        </ul>
 		      </div>
@@ -30,8 +30,8 @@
 		  <div class="large-4 columns">
 	        <div class="connect-links">
 	          <h4>Stay in touch</h4>
-	          <p>Get monthly updates from ZURB in your inbox. Read our <a href="http://zurb.com/news">latest news &amp; buzz.</a></p>
-	          <a href="#" class="small button">Get ZURBnews!</a>         
+	          <p>Get monthly updates from Ink in your inbox. Read our <a href="http://zurb.com/news">latest news &amp; buzz.</a></p>
+	          <a href="#" class="small button">Get Ink News</a>         
 	        </div>
 	      </div>
       </div> 
