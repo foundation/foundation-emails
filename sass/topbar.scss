@@ -31,12 +31,12 @@
   li:last-child { padding-bottom: 0px !important; }
 }
 .top-bar li.name span a.toggle-nav { padding: 0px !important; }
-.top-bar-section li a { background: #333; 
-  &:not(.button) { background: #333; 
+.top-bar-section li a { background: #222; 
+  &:not(.button) { background: #222; 
     &:hover { background: #111; } 
   }
 }
-.top-bar-section .has-form { background: #333; }
+.top-bar-section .has-form { background: #222; }
 .top-bar-section ul li > a.button { background: #FFF; color: #333 !important; }
 
 
@@ -53,13 +53,13 @@
 .top-bar-js-breakpoint { width: 940px !important; visibility: hidden; }
 
 /* Wrapped around .top-bar to contain to grid width */
-.contain-to-grid { width: 100%; background: #333333; }
+.contain-to-grid { width: 100%; background: #222; }
 
 /* Wrapped around .top-bar to make it fixed at the top */
 .fixed { width: 100%; left: 0; position: fixed; top: 0; z-index: 99; }
 
 /* <nav> */
-.top-bar { background: #333333; height: 45px; line-height: 45px; margin: 0 0 30px; padding: 0; width: 100%; /* Contain width to .row width */ /* First <ul> for branding, title, name, etc */ /* topbar global <ul> styles */ font-family: 'Proxima Nova', 'proxima-nova', 'Helvetica Neue', 'HelveticaNeue', Helvetica, Arial, 'Lucida Grande', sans-serif;; }
+.top-bar { background: #222; height: 45px; line-height: 45px; margin: 0 0 30px; padding: 0; width: 100%; /* Contain width to .row width */ /* First <ul> for branding, title, name, etc */ /* topbar global <ul> styles */ font-family: 'Proxima Nova', 'proxima-nova', 'Helvetica Neue', 'HelveticaNeue', Helvetica, Arial, 'Lucida Grande', sans-serif;; }
 .contain-to-grid .top-bar { max-width: 940px; margin: 0 auto; }
 .top-bar > ul .name h1 { line-height: 45px; margin: 0; }
 .top-bar > ul .name h1 a { font-weight: bold;  font-size: 17px !important; padding: 0px 0px 0px 15px !important;}
@@ -68,7 +68,7 @@
 .top-bar ul { margin-left: 0; display: inline; height: 45px; line-height: 45px; list-style: none; /* Main Navigation links style */ /* Left Side <ul> */ /* Right Side <ul> */ }
 .top-bar ul > li { float: left; /* Dividers between navigation */ /* Put a button in an <li> but give is a class */ /* Put a search bar or text input in the bar */ /* Hide the triangle for breakpoint menu */ /* li.has-dropdown */ }
 .top-bar ul > li a:not(.button) { color: white; display: block; font-size: 13px; font-weight: bold; height: 45px; line-height: 45px; padding: 0 15px; }
-.top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active { background: #333333; }
+.top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active { background: #222; }
 .top-bar ul > li:not(.name):hover a, .top-bar ul > li:not(.name).active a { color: #d9d9d9; }
 .top-bar ul > li.divider { background: black; -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1); -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1); box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1); height: 100%; margin-right: 1px; width: 1px; }
 .top-bar ul > li.has-button a.button { margin: 0 11.25px; }

@@ -15,7 +15,7 @@
 		        <ul>
 		          <li><a href="http://zurb.com/expo/courses">Training</a></li>
 		          <li><a href="http://zurb.com/responsive">Responsive</a></li>
-		          <li><a href="http://zurb.com/services/our-work">Our Work</a></li>
+		          <li><a href="http://foundation.zurb.com/">Foundation</a></li>
 		          <li><a href="http://zurb.com/apps">ZURB Apps</a></li>
 		        </ul>
 		      </div>

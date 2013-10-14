@@ -13,7 +13,7 @@
 
 <div class="row top-headlines">
   <div class="large-12 columns">
-    <h1 class="light text-center">Some templates from us to you</h1>
+    <h1 class="light text-center">Responsive email templates from us to you</h1>
     <p class="lead text-center">Build your emails faster with some canned HTML!</p>
   </div>
 </div>
@@ -21,11 +21,11 @@
 <div class="row">
   <div class="large-8 columns">
     <div class="how-to-use-templates">
-      <h3 class="light">How to use our templates</h3>
+      <h3 class="light">How to use our email templates</h3>
       <br>
       <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
       <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-      <div class="inky-small"><img src="images/inky.svg"/></div>
+      <div class="inky-small"><img src="images/inky-template.svg"/></div>
     </div>
   </div>
 </div>
