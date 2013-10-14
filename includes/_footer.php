@@ -30,8 +30,8 @@
 		  <div class="large-4 columns">
 	        <div class="connect-links">
 	          <h4>Stay in touch</h4>
-	          <p>Get monthly updates from ZURB in your inbox. Read our <a href="http://zurb.com/news">latest news &amp; buzz.</a></p>
-	          <a href="#" class="small button">Get ZURBnews!</a>         
+	          <p>Get monthly updates about Ink in your inbox. </p>
+	          <a href="http://zurb.com/ink/coming-soon.php" class="small button">Get Ink Updates!</a>         
 	        </div>
 	      </div>
       </div> 

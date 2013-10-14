@@ -57,8 +57,8 @@
         <h1 class="light">Ink</h1>
         <p class="lead">Quickly create responsive emails that work on any device &amp; client. Even Outlook.</p>
         
-        <p class="cs-text hide-for-small">Ink is coming soon. Get notified when it launches.</p>
-        <p class="cs-text show-for-small">Get notified when Ink launches.</p>
+        <p class="cs-text hide-for-small">Ink is coming soon. Get notified when it launches, plus get monthly updates about all that is email-y and responsive.</p>
+        <p class="cs-text show-for-small">Get notified when Ink launches, and get monthly updates.</p>
         <div class="form-thanks">
           <?php
             if (isset($email) && $success) {
