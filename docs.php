@@ -22,6 +22,7 @@
       <li><a href="#visibility-classes">Visibility Classes</a></li>
       <li><a href="#panels">Panels</a></li>
       <li><a href="#buttons">Buttons</a></li>
+      <li><a href="#compatibility">Compatibility</a></li>
     </ul>
   </div>
   <div class="large-9 columns">
@@ -272,6 +273,160 @@
     <h2 class="light">Examples</h2>
     <p>Buttons expand to the width of their parent container by default, so it's recommended that you contain them within a sub-grid or a relatively small number of columns on the main grid.</p>
     <script type="text/javascript" src="https://snipt.net/embed/4544d214e092be6a5c073504ad1d6443/"></script>
+    <br>
+    
+    <hr class="section">
+
+    <h1 id="buttons" class="light">Compatibility</h1>
+    <p class="lead">Here's a breakdown of the email clients that we&rsquo;ve optimized Ink for.</p>
+    <hr />
+    <table>
+      <thead>
+        <tr>
+          <th width="40%">Client</th>
+          <th width="20%"><span>The Grid</span></th>
+          <th width="20%"><span>UI Elements</span></th>
+          <th width="20%"><span>Visibility Classes</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Gmail (Desktop)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Gmail (Mobile)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Gmail (iOS)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Gmail (Android)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Yahoo! Mail (Desktop)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Yahoo! Mail (Mobile)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Mail (iOS)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Mail (OSX)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Mail (Android)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Outlook Express</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Outlook 2003</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Outlook 2007, 2010, 2013</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Outlook 2011 for Mac</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Hotmail (Desktop)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Hotmail (Mobile)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Thunderbird</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Sparrow (iOS)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Sparrow (Desktop)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Entourage (2004)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Entourage (2008)</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Windows Mail</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+        <tr>
+          <td>Live Mail</td>
+          <td><span class="check">&#10004;</span></td>
+          <td><span class="x">&#10008;</span></td>
+          <td><span class="check">&#10004;</span></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <br>
+    <br>
     <br>
   </div>
 </div>

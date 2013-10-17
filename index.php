@@ -60,19 +60,25 @@
 	</div>
 </div>
 <div class="row discover-links">
-  <div class="large-4 columns">
+  <div class="large-3 columns">
     <a href="process.php" class="process">
       <span class="title">Process</span>
       <span class="description">Get the 1-2-3 of how to use Ink to create your own responsive HTML email.</span>
     </a>
   </div>
-  <div class="large-4 columns">
+  <div class="large-3 columns">
     <a href="docs.php" class="docs">
       <span class="title">Docs</span>
       <span class="description">Learn how to use all the powers of Ink to create beautiful, dynamic HTML emails.</span>
     </a>
   </div>
-  <div class="large-4 columns">
+  <div class="large-3 columns">
+    <a href="inliner.php" class="inliner">
+      <span class="title">Inliner</span>
+      <span class="description">Use Inky's Inliner to bring your styles with just some quick and simple steps.</span>
+    </a>
+  </div>
+  <div class="large-3 columns">
     <a href="download.php" class="download">
       <span class="title">Download</span>
       <span class="description">Get the responsive email framework right now and start tinkering with it right away!</span>
