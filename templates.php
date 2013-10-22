@@ -37,15 +37,9 @@
 </div>
 
 <div class="row">
-  <div class="large-3 columns">
-    <form class="thumb-select">
-      <label>View as</label>
-      <select>
-        <option DISABLED>Desktop</option>
-        <option DISABLED>Mobile</option>
-        <option DISABLED>Outlook</option>
-      </select>
-    </form>
+  <div class="large-4 columns">
+    <h6>You can download All of the templates in one file here:</h6>
+    <a href="templates/all-templates.zip" class="button primary">All Ink Templates</a>
   </div>
 </div>
     
@@ -59,7 +53,7 @@
           <span class="name">Basic</span>
           <span class="description">This template is perfect for sending a basic but nice looking email to your readers.</span>
         </a>
-        <a href="#" class="button primary">Download</a>
+        <a href="templates/basic.zip" class="button primary">Download</a>
       </li>
       <li>
         <a href="#">
@@ -67,7 +61,7 @@
           <span class="name">Hero</span>
           <span class="description">Want to include a snazzy hero image in your email? This template is for you!</span>
         </a>
-        <a href="#" class="button primary">Download</a>
+        <a href="templates/hero.zip" class="button primary">Download</a>
       </li>
       <li>
         <a href="#">
@@ -75,7 +69,7 @@
           <span class="name">Sidebar</span>
           <span class="description">This template includes a sidebar area for a list of links, perfect for linking to additional content.</span>
         </a>
-        <a href="#" class="button primary">Download</a>
+        <a href="templates/sidebar.zip" class="button primary">Download</a>
       </li>
       <li>
         <a href="#">
@@ -83,7 +77,7 @@
           <span class="name">Sidebar Hero</span>
           <span class="description">Want a sidebar and a hero image? Let's go crazy! This template combines the Sidebar and Hero templates.</span>
         </a>
-        <a href="#" class="button primary">Download</a>
+        <a href="templates/sidebar-hero.zip" class="button primary">Download</a>
       </li>
       <li>
         <a href="#">
@@ -91,7 +85,7 @@
           <span class="name">Newsletter</span>
           <span class="description">This template is perfect for a point-by-point newsletter. For good measure, we've thrown in a hero image, too.</span>
         </a>
-        <a href="#" class="button primary">Download</a>
+        <a href="templates/newsletter.zip" class="button primary">Download</a>
       </li>
     </ul> 
     <!--
