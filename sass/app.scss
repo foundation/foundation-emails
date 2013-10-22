@@ -160,10 +160,11 @@ p { font-size: emCalc(14px); }
 
 /* discover links */
 .discover-links { margin-bottom: 50px;
-  a { display: block; text-align: center; padding: 145px 0 25px; background: url(../images/icons/discover.png) no-repeat 0 0; background-size: 125px 1500px; 
+  a { display: block; text-align: center; padding: 145px 0 25px; background: url(../images/icons/discover.png) no-repeat 0 0; background-size: 125px 2000px; 
     &.process { background-position: center 14px; }
     &.docs { background-position: center -490px; }
     &.download { background-position: center -990px; }
+    &.inliner { background-position: center -1490px; }
   }
   span { display: block; 
     &.title { font-family: $sans-serif; font-size: emCalc(21px); color: #0d2b40; margin-bottom: 10px; }
@@ -206,6 +207,9 @@ hr { border-style: dashed; }
 .inky-small { height: 377px; width: 323px; position: absolute; top: 0; right: -310px; z-index: 2;}
 .inky-small.load { animation-name: small-inky; -webkit-animation-name: small-inky; animation-duration:9s; -webkit-animation-duration:9s; animation-iteration-count: infinite; -webkit-animation-iteration-count:infinite;  }
 
+.inky-comp { height: 220px; width: 240px; position: absolute; top: 0; right: -310px; z-index: 2;}
+.inky-comp.load { animation-name: small-inky; -webkit-animation-name: small-inky; animation-duration:9s; -webkit-animation-duration:9s; animation-iteration-count: infinite; -webkit-animation-iteration-count:infinite;  }
+
 /* downloading */
 .main-text { position: relative; }
 .inky-fish { background: url(../images/inky-mobile-hold.svg) no-repeat center center; background-size: cover; height: 444px; width: 358px; margin: 0 auto; position: relative; top: 40px; }
@@ -240,12 +244,12 @@ hr { border-style: dashed; }
 .how-to-use { position: relative; 
   &.one { margin-bottom: 10px;
     p, img, h3 { width: 440px; margin-left: 70px; }
-    .process-1 { background: url(../images/inky.svg) no-repeat center center; height: 335px; width: 248px; background-size: cover; position: absolute; right: 65px; top: -50px;  }
+    .process-1 { background: url(../images/inky-outlook.svg) no-repeat center center; height: 335px; width: 248px; background-size: cover; position: absolute; right: 65px; top: -50px;  }
     .bump-space { margin-left: 120px; }
   }
   &.two { margin-bottom: 10px;
     p, img, h3 { width: 470px; margin-left: 100px; }
-    .process-2 {  height: 87px; width: 166px; background-size: cover; position: absolute; left: 68px; top: 38px;  
+    .process-2 {  height: 134px; width: 231px; background-size: cover; position: absolute; left: 8px; top: 38px;  
       img { margin-left: 0px; }
     }
     .bump-space { margin-left: 270px; }
@@ -273,7 +277,7 @@ hr { border-style: dashed; }
     p, img, h3 { width: 470px; margin-left: 100px; }
     .bump-space { margin-left: 185px; position: relative; z-index: 2;}
     .process-5 { height: 377px; width: 273px; background-size: cover; position: absolute; left: 0; top: -120px;  }
-    .process-5-2 { height: 59px; width: 90px; background-size: cover; position: absolute; right: 150px; top: 92px;  
+    .process-5-2 { height: 56px; width: 217px; background-size: cover; position: absolute; right: 20px; top: 92px;  
       img { margin-left:0px; }
     }
   }
@@ -474,4 +478,28 @@ ul.mobile-nav { display: block; margin-bottom: 0;
   @media only screen and (max-width: 767px){
     background: url(../images/inky-mobile-hold.svg) no-repeat center bottom; background-size: 147px 200px; padding-bottom: 140px;  
   }
+}
+
+
+/* inliner */
+.inliner-form { 
+  .inactive { display: none; }
+  textarea { min-height: 600px; }
+  label { margin-bottom: 8px; line-height: 1.4; }
+  &.options label { margin-bottom: 0; }
+}
+.inky-inliner { margin-bottom: 50px; 
+  h4 { margin-bottom: 5px; }
+  p { margin-bottom: 10px; }
+  .button { background: #004454; color: #FFF;
+    &:hover { background: #002B36; }
+  }
+}
+.inline-advantages { margin-left: 25px; }
+
+/* compatibility */
+table {
+  span { display: block; text-align: center; }
+  .check { color: green; }
+  .x { color: red; }
 }
