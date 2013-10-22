@@ -11,8 +11,8 @@
     <ul class="right">
       <li><a href="process.php">Process</a></li>
       <li><a href="docs.php">Docs</a></li>
-      <li><a href="templates.php">Email Templates</a></li>
       <li><a href="inliner.php">Inliner</a></li>
+      <li><a href="templates.php">Email Templates</a></li>
       <li class="has-form"><a href="download.php" class="tiny button">Download</a></li>
     </ul>
   </section>
