@@ -37,67 +37,63 @@
 </div>
 
 <div class="row">
-  <div class="large-3 columns">
-    <form class="thumb-select">
-      <label>View as</label>
-      <select>
-        <option DISABLED>Desktop</option>
-        <option DISABLED>Mobile</option>
-        <option DISABLED>Outlook</option>
-      </select>
-    </form>
+  <div class="large-4 columns">
+    <h6>You can download All of the templates in one file here:</h6>
+    <a href="templates/all-templates.zip" class="button primary">All Ink Templates</a>
   </div>
 </div>
     
 <div class="row">
   <div class="small-12 columns">
     
-    <!-- <ul class="large-block-grid-3 small-block-grid-1 template-thumbs">
+    <ul class="large-block-grid-3 small-block-grid-1 template-thumbs">
       <li>
         <a href="#">
-          <img src="images/template.jpg">
+          <img src="images/templates/basic.jpg">
           <span class="name">Basic</span>
           <span class="description">This template is perfect for sending a basic but nice looking email to your readers.</span>
         </a>
-        <a href="#" class="button primary">Download</a>
+        <a href="templates/basic.zip" class="button primary">Download</a>
       </li>
       <li>
         <a href="#">
-          <img src="images/template.jpg">
-          <span class="name">Basic</span>
-          <span class="description">This template is perfect for sending a basic but nice looking email to your readers.</span>
+          <img src="images/templates/hero.jpg">
+          <span class="name">Hero</span>
+          <span class="description">Want to include a snazzy hero image in your email? This template is for you!</span>
         </a>
-        <a href="#" class="button primary">Download</a>
+        <a href="templates/hero.zip" class="button primary">Download</a>
       </li>
       <li>
         <a href="#">
-          <img src="images/template.jpg">
-          <span class="name">Basic</span>
-          <span class="description">This template is perfect for sending a basic but nice looking email to your readers.</span>
+          <img src="images/templates/sidebar.jpg">
+          <span class="name">Sidebar</span>
+          <span class="description">This template includes a sidebar area for a list of links, perfect for linking to additional content.</span>
         </a>
-        <a href="#" class="button primary">Download</a>
+        <a href="templates/sidebar.zip" class="button primary">Download</a>
       </li>
       <li>
         <a href="#">
-          <img src="images/template.jpg">
-          <span class="name">Basic</span>
-          <span class="description">This template is perfect for sending a basic but nice looking email to your readers.</span>
+          <img src="images/templates/sidebar-hero.jpg">
+          <span class="name">Sidebar Hero</span>
+          <span class="description">Want a sidebar and a hero image? Let's go crazy! This template combines the Sidebar and Hero templates.</span>
         </a>
-        <a href="#" class="button primary">Download</a>
+        <a href="templates/sidebar-hero.zip" class="button primary">Download</a>
       </li>
       <li>
         <a href="#">
-          <img src="images/template.jpg">
-          <span class="name">Basic</span>
-          <span class="description">This template is perfect for sending a basic but nice looking email to your readers.</span>
+          <img src="images/templates/newsletter.jpg">
+          <span class="name">Newsletter</span>
+          <span class="description">This template is perfect for a point-by-point newsletter. For good measure, we've thrown in a hero image, too.</span>
         </a>
-        <a href="#" class="button primary">Download</a>
+        <a href="templates/newsletter.zip" class="button primary">Download</a>
       </li>
-    </ul>  -->
-    <div class="panel">
+    </ul> 
+    <!--
+<div class="panel">
       <h3 class="light text-center">Ooops, no templates yet!</h3>
       <p class="light text-center">Check back soon, or <a style="display:inline;" href="mailto:eric@zurb.com">let us know</a> if you make a really nice one. There are, however, some nice sample emails in the <a href="download.php">download package</a>.</p>
     </div>
+-->
   </div>
 </div>
 

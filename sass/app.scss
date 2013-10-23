@@ -62,7 +62,6 @@
 /* variables */
 $sans-serif: 'Proxima Nova', 'proxima-nova', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
-
 /* global styles */
 body { -webkit-font-smoothing: antialiased; }
 
@@ -194,7 +193,7 @@ hr { border-style: dashed; }
 .template-thumbs { margin-bottom: 50px;
   a { display: block; 
     &.button { display: inline-block; }
-    img { display: block; margin-bottom: 15px; }
+    img { display: block; margin-bottom: 15px; border: #f1f1f1 1px solid; }
   }
   span { display: block; color: #333; 
     &.name { font-size: emCalc(21px); font-family: $sans-serif; color: #0d2b40; }
