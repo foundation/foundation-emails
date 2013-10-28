@@ -24,6 +24,10 @@
         <h1 class="light">Ink</h1>
         <p class="lead">Quickly create responsive HTML emails that work on any device &amp; client. Even Outlook.</p>
         <a href="download.php" class="large button">Download Ink 0.7.1</a>
+        <ul class="header-social-links">
+          <li><a href="https://github.com/zurb/ink"><i class="fi-social-github"></i>Ink on Github</a>
+          <li><a href="https://github.com/zurb/ink"><i class="fi-social-twitter"></i>@inkzurb</a>
+        </ul>
         <div class="inky hide-for-small"></div>
       </div>
     </div>

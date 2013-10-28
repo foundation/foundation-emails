@@ -56,6 +56,7 @@
 
 @import "topbar";
 @import "proxima";
+@import "foundation-icons";
 @import "footer";
 @import "offcanvas";
 
@@ -97,6 +98,15 @@ p { font-size: emCalc(14px); }
   h2 { color: #FFF; font-size: emCalc(35px); padding: 51px 0 0 0; margin-bottom: 12px; }
   p { color: #FFF; }
   
+}
+ul.header-social-links { display: block; 
+  li { display: inline-block; margin-right: 25px;
+    &:last-child { margin-right: 0; }
+    i { font-size: 16px; display: inline-block; margin-right: 8px; }
+    a { color: #FFF; color: rgba(255,255,255,.8); font-size: 14px; 
+      &:hover { text-decoration: underline; }
+    }
+  }
 }
 .home-text { padding: 100px 0 103px; position: relative; }
 .inky { background: url(../images/inky-all-devices.svg) no-repeat center center; background-size: cover; height: 680px; width: 634px; position: absolute; right: -600px; top:10px !important;  }
