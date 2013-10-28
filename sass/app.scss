@@ -66,8 +66,11 @@ $sans-serif: 'Proxima Nova', 'proxima-nova', 'Helvetica Neue', 'Helvetica', 'Ari
 body { -webkit-font-smoothing: antialiased; }
 
 /* foundation overrides */
-.button { background: #e1e2e4; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; color: #00232b; border: none; font-family: $sans-serif; 
-  &:hover { background: #FFF; color: #00232b; }
+a { color: #cc7691;
+  &:hover { color: #b85b7a; }
+}
+.button { background: #cc7691; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; color: #FFF; border: none; font-family: $sans-serif; 
+  &:hover { background: #b85b7a; color: #FFF; }
   &.primary { background: #004454; color: #FFF; 
     &:hover { background: #0d2b40; }
   }
@@ -149,14 +152,17 @@ p { font-size: emCalc(14px); }
   a { margin-bottom: 0; }
 }
 
-.discover-links {
-  a:hover { 
-    &.process { background-position: center 5px; }
-    &.docs { background-position: center -500px; }
-    &.download { background-position: center -1000px; }
+@media only screen and (min-width: 768px){
+  .discover-links {
+    a { transition: all .5s; -webkit-transition: all .5s; }
+    a:hover { 
+      &.process { background-position: center 5px; }
+      &.docs { background-position: center -500px; }
+      &.inliner { background-position: center -1500px; }
+      &.download { background-position: center -1000px; }
+    }
   }
 }
-
 
 /* discover links */
 .discover-links { margin-bottom: 50px;
@@ -243,19 +249,19 @@ hr { border-style: dashed; }
 /* process */
 .how-to-use { position: relative; 
   &.one { margin-bottom: 10px;
-    p, img, h3 { width: 440px; margin-left: 70px; }
+    p, img, h3 { width: 430px; margin-left: 80px; }
     .process-1 { background: url(../images/inky-outlook.svg) no-repeat center center; height: 335px; width: 248px; background-size: cover; position: absolute; right: 65px; top: -50px;  }
     .bump-space { margin-left: 120px; }
   }
   &.two { margin-bottom: 10px;
-    p, img, h3 { width: 470px; margin-left: 100px; }
+    p, img, h3 { width: 460px; margin-left: 110px; }
     .process-2 {  height: 134px; width: 231px; background-size: cover; position: absolute; left: 8px; top: 38px;  
       img { margin-left: 0px; }
     }
     .bump-space { margin-left: 270px; }
   }
   &.three { margin-bottom: 30px;
-    p, img, h3 { width: 470px; margin-left: 100px; }
+    p, img, h3 { width: 460px; margin-left: 110px; }
     p.with-border { border-bottom: 1px solid #ddd; padding-bottom: 20px; }
     .process-3 {  height: 377px; width: 273px; background-size: cover; position: absolute; right: 110px; top: -80px;  
       img { margin-left: 0px; }
@@ -264,7 +270,7 @@ hr { border-style: dashed; }
     .bump-space { margin-left: 50px; }
   }
   &.four {  margin-bottom: 30px;
-    p, img, h3 { width: 470px; margin-left: 100px; }
+    p, img, h3 { width: 460px; margin-left: 110px; }
     .bump-space { margin-left: 300px; }
     .process-4 { background: url(../images/fish-3.svg) no-repeat center center; height: 116px; width: 107px; background-size: cover; position: absolute; right: 0; top: 35px;  }
     .process-4-2 { height: 63px; width: 96px; background-size: cover; position: absolute; left: 201px; top: -16px;  
@@ -274,7 +280,7 @@ hr { border-style: dashed; }
   
   &.five { padding-bottom: 190px; 
     .number { top: -13px; }
-    p, img, h3 { width: 470px; margin-left: 100px; }
+    p, img, h3 { width: 460px; margin-left: 110px; }
     .bump-space { margin-left: 185px; position: relative; z-index: 2;}
     .process-5 { height: 377px; width: 273px; background-size: cover; position: absolute; left: 0; top: -120px;  }
     .process-5-2 { height: 56px; width: 217px; background-size: cover; position: absolute; right: 20px; top: 92px;  
@@ -408,7 +414,7 @@ ul.mobile-nav { display: block; margin-bottom: 0;
 @media only screen and (min-width: 767px) and (max-width: 1024px) {
   .callout .row .stamp { top: -134px; right: 0; }
   .inky { right: -620px; }
-  .touch .how-to-use { position: relative; 
+  .how-to-use { position: relative; 
     &.one { 
       p, img, h3 { width: 400px; margin-left: 70px; }
       .process-1 { background: url(../images/inky.svg) no-repeat center center; height: 325px; width: 256px; background-size: cover; position: absolute; right: -13px; top: -50px; }
@@ -433,7 +439,7 @@ ul.mobile-nav { display: block; margin-bottom: 0;
       p, img, h3 { width: 350px; margin-left: 100px; }
       .bump-space { margin-left: 150px; }
       .process-4 { background: url(../images/fish-3.png) no-repeat center center; height: 116px; width: 107px; background-size: cover; position: absolute; right: 0; top: 35px;  }
-      .process-4-2 { height: 63px; width: 96px; background-size: cover; position: absolute; left: 0; top: -16px;  
+      .process-4-2 { height: 63px; width: 96px; background-size: cover; position: absolute; left: 40px; top: -16px;  
         img { margin-left: 0px; }
       }
     }
@@ -443,7 +449,7 @@ ul.mobile-nav { display: block; margin-bottom: 0;
       p, img, h3 { width: 470px; margin-left: 100px; }
       .bump-space { margin-left: 20px; position: relative; z-index: 2;}
       .process-5 { height: 377px; width: 273px; background-size: cover; position: absolute; left: 0; top: -120px;  }
-      .process-5-2 { height: 59px; width: 90px; background-size: cover; position: absolute; right: 50px; top: 92px;  
+      .process-5-2 { height: 80px; width: 130px; background-size: cover; position: absolute; right: 50px; top: 92px;  
         img { margin-left:0px; }
       }
     }
@@ -471,6 +477,12 @@ ul.mobile-nav { display: block; margin-bottom: 0;
   .coming-soon {
     h1, p { text-align: center; }
     .home-text { padding: 20px 0 0 0; }
+  }
+  .zurb-footer-top .global .footer-link-block {
+    &.services { background: url(../images/icons/footer-studios.png) left top no-repeat; }
+    &.foundation { background: url(../images/icons/footer-foundation.png) left top no-repeat; }
+    &.apps { background: url(../images/icons/footer-products.png) left top no-repeat; }
+    &.expo { background: url(../images/icons/footer-expo.png) left top no-repeat; }
   }
   
 }

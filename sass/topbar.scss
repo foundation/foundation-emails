@@ -10,10 +10,12 @@
     }
   }
 }
-.top-bar ul.right li { border-left: 1px solid #222; border-right: none;  
-  ul.dropdown li, .dropdown a { border:none; }
-  ul.dropdown li { padding:none !important; margin-bottom: 0px !important;
-    a { padding: 10px 16px !important; }
+.top-bar ul.right { border-left: 1px solid #000;
+  li { border-left: 1px solid rgba(255,255,255,.05); border-right: 1px solid #000;  
+    ul.dropdown li, .dropdown a { border:none; }
+    ul.dropdown li { padding:none !important; margin-bottom: 0px !important;
+      a { padding: 10px 16px !important; }
+    }
   }
 }
 .top-bar ul.right li.logged-in .avatar { font-size: 13px !important; 
@@ -37,7 +39,9 @@
   }
 }
 .top-bar-section .has-form { background: #222; }
-.top-bar-section ul li > a.button { background: #FFF; color: #333 !important; }
+.top-bar-section ul li > a.button { background: #cc7691; 
+  &:hover { color: #FFF !important; background: #b85b7a; }
+}
 
 
 
@@ -69,7 +73,7 @@
 .top-bar ul > li { float: left; /* Dividers between navigation */ /* Put a button in an <li> but give is a class */ /* Put a search bar or text input in the bar */ /* Hide the triangle for breakpoint menu */ /* li.has-dropdown */ }
 .top-bar ul > li a:not(.button) { color: white; display: block; font-size: 13px; font-weight: bold; height: 45px; line-height: 45px; padding: 0 15px; }
 .top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active { background: #222; }
-.top-bar ul > li:not(.name):hover a, .top-bar ul > li:not(.name).active a { color: #d9d9d9; }
+.top-bar ul > li:not(.name):hover a, .top-bar ul > li:not(.name).active a { color: #FFF; }
 .top-bar ul > li.divider { background: black; -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1); -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1); box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1); height: 100%; margin-right: 1px; width: 1px; }
 .top-bar ul > li.has-button a.button { margin: 0 11.25px; }
 .top-bar ul > li.has-button:hover { background: #333333; }

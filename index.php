@@ -45,7 +45,7 @@
         <div class="stamp"></div>
         <h5 class="normal">Shiny email templates</h5>
         <p>We've created some common layouts for you to start from so you can cook your emails faster.</p>
-        <a href="templates.php" class="small button expand">Go to Email Templates</a>
+        <a href="templates.php" class="small button expand secondary">Go to Email Templates</a>
       </div>
     </div>
   </div>
