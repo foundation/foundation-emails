@@ -12220,12 +12220,11 @@ hr {
   display: block;
   padding: 15px;
   background: #1c1c1c;
-  border-radius: 5px;
   font-size: 14px;
   color: #fff;
 }
 
-/* line 404, ../sass/app.scss */
+/* line 403, ../sass/app.scss */
 .prev-next-section {
   *zoom: 1;
   border-top: 1px dashed #ddd;
@@ -12241,19 +12240,19 @@ hr {
 .prev-next-section:after {
   clear: both;
 }
-/* line 405, ../sass/app.scss */
+/* line 404, ../sass/app.scss */
 .prev-next-section a {
   font-weight: bold;
   color: #333;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 410, ../sass/app.scss */
+  /* line 409, ../sass/app.scss */
   .top-area {
     position: relative;
   }
 
-  /* line 411, ../sass/app.scss */
+  /* line 410, ../sass/app.scss */
   .top-area .inky-phone {
     display: block;
     background: url(../images/inky-mobile-hold.svg);
@@ -12267,33 +12266,33 @@ hr {
     background-size: cover;
   }
 
-  /* line 412, ../sass/app.scss */
+  /* line 411, ../sass/app.scss */
   .top-area .home-text {
     padding: 40px 0 50px;
     position: relative;
     z-index: 2;
   }
 
-  /* line 413, ../sass/app.scss */
+  /* line 412, ../sass/app.scss */
   .templates-callout {
     top: 0px;
     margin-bottom: 50px;
   }
 
-  /* line 416, ../sass/app.scss */
+  /* line 415, ../sass/app.scss */
   .how-to-use h3, .how-to-use p {
     width: 100% !important;
     margin-left: 0 !important;
   }
-  /* line 417, ../sass/app.scss */
+  /* line 416, ../sass/app.scss */
   .how-to-use .bump-space {
     margin-left: 0 !important;
   }
-  /* line 418, ../sass/app.scss */
+  /* line 417, ../sass/app.scss */
   .how-to-use .process-1, .how-to-use .process-2, .how-to-use .process-3, .how-to-use .process-4, .how-to-use .process-4-2, .how-to-use .process-5, .how-to-use .process-5-2 {
     display: none !important;
   }
-  /* line 419, ../sass/app.scss */
+  /* line 418, ../sass/app.scss */
   .how-to-use .number {
     position: relative;
     text-align: left;
@@ -12301,13 +12300,13 @@ hr {
     font-size: 3.625em;
     top: auto;
   }
-  /* line 420, ../sass/app.scss */
+  /* line 419, ../sass/app.scss */
   .how-to-use img {
     margin-left: 0 !important;
     width: 100% !important;
   }
 
-  /* line 422, ../sass/app.scss */
+  /* line 421, ../sass/app.scss */
   .callout .row .stamp {
     width: 129px;
     right: 0;
@@ -12315,16 +12314,16 @@ hr {
     top: -54px;
   }
 }
-/* line 425, ../sass/app.scss */
+/* line 424, ../sass/app.scss */
 ul.mobile-nav {
   display: block;
   margin-bottom: 0;
 }
-/* line 426, ../sass/app.scss */
+/* line 425, ../sass/app.scss */
 ul.mobile-nav li {
   display: block;
 }
-/* line 427, ../sass/app.scss */
+/* line 426, ../sass/app.scss */
 ul.mobile-nav a {
   display: block;
   padding: 10px;
@@ -12333,33 +12332,33 @@ ul.mobile-nav a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   font-weight: bold;
 }
-/* line 428, ../sass/app.scss */
+/* line 427, ../sass/app.scss */
 ul.mobile-nav a.current {
   background: #002f3b;
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1024px) {
-  /* line 433, ../sass/app.scss */
+  /* line 432, ../sass/app.scss */
   .callout .row .stamp {
     top: -134px;
     right: 0;
   }
 
-  /* line 434, ../sass/app.scss */
+  /* line 433, ../sass/app.scss */
   .inky {
     right: -620px;
   }
 
-  /* line 435, ../sass/app.scss */
+  /* line 434, ../sass/app.scss */
   .how-to-use {
     position: relative;
   }
-  /* line 437, ../sass/app.scss */
+  /* line 436, ../sass/app.scss */
   .how-to-use.one p, .how-to-use.one img, .how-to-use.one h3 {
     width: 400px;
     margin-left: 70px;
   }
-  /* line 438, ../sass/app.scss */
+  /* line 437, ../sass/app.scss */
   .how-to-use.one .process-1 {
     background: url(../images/inky.svg) no-repeat center center;
     height: 325px;
@@ -12369,20 +12368,20 @@ ul.mobile-nav a.current {
     right: -13px;
     top: -50px;
   }
-  /* line 439, ../sass/app.scss */
+  /* line 438, ../sass/app.scss */
   .how-to-use.one .bump-space {
     margin-left: 60px;
   }
-  /* line 441, ../sass/app.scss */
+  /* line 440, ../sass/app.scss */
   .how-to-use.two {
     margin-bottom: 10px;
   }
-  /* line 442, ../sass/app.scss */
+  /* line 441, ../sass/app.scss */
   .how-to-use.two p, .how-to-use.two img, .how-to-use.two h3 {
     width: 440px;
     margin-left: 100px;
   }
-  /* line 443, ../sass/app.scss */
+  /* line 442, ../sass/app.scss */
   .how-to-use.two .process-2 {
     height: 65px;
     width: 124px;
@@ -12392,29 +12391,29 @@ ul.mobile-nav a.current {
     top: 38px;
     z-index: -1;
   }
-  /* line 444, ../sass/app.scss */
+  /* line 443, ../sass/app.scss */
   .how-to-use.two .process-2 img {
     margin-left: 0px;
   }
-  /* line 446, ../sass/app.scss */
+  /* line 445, ../sass/app.scss */
   .how-to-use.two .bump-space {
     margin-left: 100px;
   }
-  /* line 448, ../sass/app.scss */
+  /* line 447, ../sass/app.scss */
   .how-to-use.three {
     margin-bottom: 30px;
   }
-  /* line 449, ../sass/app.scss */
+  /* line 448, ../sass/app.scss */
   .how-to-use.three p, .how-to-use.three img, .how-to-use.three h3 {
     width: 350px;
     margin-left: 100px;
   }
-  /* line 450, ../sass/app.scss */
+  /* line 449, ../sass/app.scss */
   .how-to-use.three p.with-border {
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
   }
-  /* line 451, ../sass/app.scss */
+  /* line 450, ../sass/app.scss */
   .how-to-use.three .process-3 {
     height: 377px;
     width: 273px;
@@ -12423,28 +12422,28 @@ ul.mobile-nav a.current {
     right: 70px;
     top: -100px;
   }
-  /* line 452, ../sass/app.scss */
+  /* line 451, ../sass/app.scss */
   .how-to-use.three .process-3 img {
     margin-left: 0px;
   }
-  /* line 454, ../sass/app.scss */
+  /* line 453, ../sass/app.scss */
   .how-to-use.three .bump-space {
     margin-left: 0;
   }
-  /* line 456, ../sass/app.scss */
+  /* line 455, ../sass/app.scss */
   .how-to-use.four {
     margin-bottom: 30px;
   }
-  /* line 457, ../sass/app.scss */
+  /* line 456, ../sass/app.scss */
   .how-to-use.four p, .how-to-use.four img, .how-to-use.four h3 {
     width: 350px;
     margin-left: 100px;
   }
-  /* line 458, ../sass/app.scss */
+  /* line 457, ../sass/app.scss */
   .how-to-use.four .bump-space {
     margin-left: 150px;
   }
-  /* line 459, ../sass/app.scss */
+  /* line 458, ../sass/app.scss */
   .how-to-use.four .process-4 {
     background: url(../images/fish-3.png) no-repeat center center;
     height: 116px;
@@ -12454,7 +12453,7 @@ ul.mobile-nav a.current {
     right: 0;
     top: 35px;
   }
-  /* line 460, ../sass/app.scss */
+  /* line 459, ../sass/app.scss */
   .how-to-use.four .process-4-2 {
     height: 63px;
     width: 96px;
@@ -12463,30 +12462,30 @@ ul.mobile-nav a.current {
     left: 40px;
     top: -16px;
   }
-  /* line 461, ../sass/app.scss */
+  /* line 460, ../sass/app.scss */
   .how-to-use.four .process-4-2 img {
     margin-left: 0px;
   }
-  /* line 465, ../sass/app.scss */
+  /* line 464, ../sass/app.scss */
   .how-to-use.five {
     padding-bottom: 160px;
   }
-  /* line 466, ../sass/app.scss */
+  /* line 465, ../sass/app.scss */
   .how-to-use.five .number {
     top: -13px;
   }
-  /* line 467, ../sass/app.scss */
+  /* line 466, ../sass/app.scss */
   .how-to-use.five p, .how-to-use.five img, .how-to-use.five h3 {
     width: 470px;
     margin-left: 100px;
   }
-  /* line 468, ../sass/app.scss */
+  /* line 467, ../sass/app.scss */
   .how-to-use.five .bump-space {
     margin-left: 20px;
     position: relative;
     z-index: 2;
   }
-  /* line 469, ../sass/app.scss */
+  /* line 468, ../sass/app.scss */
   .how-to-use.five .process-5 {
     height: 377px;
     width: 273px;
@@ -12495,7 +12494,7 @@ ul.mobile-nav a.current {
     left: 0;
     top: -120px;
   }
-  /* line 470, ../sass/app.scss */
+  /* line 469, ../sass/app.scss */
   .how-to-use.five .process-5-2 {
     height: 80px;
     width: 130px;
@@ -12504,15 +12503,15 @@ ul.mobile-nav a.current {
     right: 50px;
     top: 92px;
   }
-  /* line 471, ../sass/app.scss */
+  /* line 470, ../sass/app.scss */
   .how-to-use.five .process-5-2 img {
     margin-left: 0px;
   }
-  /* line 474, ../sass/app.scss */
+  /* line 473, ../sass/app.scss */
   .how-to-use h3 {
     margin-bottom: 10px;
   }
-  /* line 475, ../sass/app.scss */
+  /* line 474, ../sass/app.scss */
   .how-to-use .number {
     display: block;
     font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -12522,97 +12521,97 @@ ul.mobile-nav a.current {
     position: absolute;
     top: 23px;
   }
-  /* line 476, ../sass/app.scss */
+  /* line 475, ../sass/app.scss */
   .how-to-use .campaign-monitor {
     background: url(../images/campaign-monitor.png) no-repeat left center;
     background-size: 18px 12px;
     padding-left: 30px;
   }
 
-  /* line 478, ../sass/app.scss */
+  /* line 477, ../sass/app.scss */
   .inky-small.load {
     right: -250px;
     width: 283px;
   }
 
-  /* line 479, ../sass/app.scss */
+  /* line 478, ../sass/app.scss */
   .top-bar-section .has-form {
     padding: 11px 15px;
     height: 45px;
   }
 
-  /* line 480, ../sass/app.scss */
+  /* line 479, ../sass/app.scss */
   .button.tiny {
     padding: 5px 10px;
   }
 
-  /* line 481, ../sass/app.scss */
+  /* line 480, ../sass/app.scss */
   .top-area.main {
     overflow-x: hidden;
   }
 }
 /* coming-soon */
-/* line 485, ../sass/app.scss */
+/* line 484, ../sass/app.scss */
 .coming-soon {
   background: #004454;
 }
-/* line 486, ../sass/app.scss */
+/* line 485, ../sass/app.scss */
 .coming-soon .home-text {
   padding: 80px 0 83px;
 }
-/* line 487, ../sass/app.scss */
+/* line 486, ../sass/app.scss */
 .coming-soon .cs-text {
   margin-bottom: 5px;
   color: rgba(255, 255, 255, 0.5);
 }
-/* line 488, ../sass/app.scss */
+/* line 487, ../sass/app.scss */
 .coming-soon input {
   padding: 20px 20px 19px;
 }
-/* line 489, ../sass/app.scss */
+/* line 488, ../sass/app.scss */
 .coming-soon .confirm {
   font-size: 1em;
   font-style: italic;
 }
-/* line 490, ../sass/app.scss */
+/* line 489, ../sass/app.scss */
 .coming-soon .confirm.error {
   color: red;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 496, ../sass/app.scss */
+  /* line 495, ../sass/app.scss */
   .coming-soon h1, .coming-soon p {
     text-align: center;
   }
-  /* line 497, ../sass/app.scss */
+  /* line 496, ../sass/app.scss */
   .coming-soon .home-text {
     padding: 20px 0 0 0;
   }
 
-  /* line 500, ../sass/app.scss */
+  /* line 499, ../sass/app.scss */
   .zurb-footer-top .global .footer-link-block.services {
     background: url(../images/icons/footer-studios.png) left top no-repeat;
   }
-  /* line 501, ../sass/app.scss */
+  /* line 500, ../sass/app.scss */
   .zurb-footer-top .global .footer-link-block.foundation {
     background: url(../images/icons/footer-foundation.png) left top no-repeat;
   }
-  /* line 502, ../sass/app.scss */
+  /* line 501, ../sass/app.scss */
   .zurb-footer-top .global .footer-link-block.apps {
     background: url(../images/icons/footer-products.png) left top no-repeat;
   }
-  /* line 503, ../sass/app.scss */
+  /* line 502, ../sass/app.scss */
   .zurb-footer-top .global .footer-link-block.expo {
     background: url(../images/icons/footer-expo.png) left top no-repeat;
   }
 }
-/* line 507, ../sass/app.scss */
+/* line 506, ../sass/app.scss */
 .cs-inky {
   background: url(../images/inky-mobile.svg) no-repeat right bottom;
   background-size: 624px 558px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 507, ../sass/app.scss */
+  /* line 506, ../sass/app.scss */
   .cs-inky {
     background: url(../images/inky-mobile-hold.svg) no-repeat center bottom;
     background-size: 147px 200px;
@@ -12621,62 +12620,62 @@ ul.mobile-nav a.current {
 }
 
 /* inliner */
-/* line 516, ../sass/app.scss */
+/* line 515, ../sass/app.scss */
 .inliner-form .inactive {
   display: none;
 }
-/* line 517, ../sass/app.scss */
+/* line 516, ../sass/app.scss */
 .inliner-form textarea {
   min-height: 600px;
 }
-/* line 518, ../sass/app.scss */
+/* line 517, ../sass/app.scss */
 .inliner-form label {
   margin-bottom: 8px;
   line-height: 1.4;
 }
-/* line 519, ../sass/app.scss */
+/* line 518, ../sass/app.scss */
 .inliner-form.options label {
   margin-bottom: 0;
 }
 
-/* line 521, ../sass/app.scss */
+/* line 520, ../sass/app.scss */
 .inky-inliner {
   margin-bottom: 50px;
 }
-/* line 522, ../sass/app.scss */
+/* line 521, ../sass/app.scss */
 .inky-inliner h4 {
   margin-bottom: 5px;
 }
-/* line 523, ../sass/app.scss */
+/* line 522, ../sass/app.scss */
 .inky-inliner p {
   margin-bottom: 10px;
 }
-/* line 524, ../sass/app.scss */
+/* line 523, ../sass/app.scss */
 .inky-inliner .button {
   background: #004454;
   color: #FFF;
 }
-/* line 525, ../sass/app.scss */
+/* line 524, ../sass/app.scss */
 .inky-inliner .button:hover {
   background: #002B36;
 }
 
-/* line 528, ../sass/app.scss */
+/* line 527, ../sass/app.scss */
 .inline-advantages {
   margin-left: 25px;
 }
 
 /* compatibility */
-/* line 532, ../sass/app.scss */
+/* line 531, ../sass/app.scss */
 table span {
   display: block;
   text-align: center;
 }
-/* line 533, ../sass/app.scss */
+/* line 532, ../sass/app.scss */
 table .check {
   color: green;
 }
-/* line 534, ../sass/app.scss */
+/* line 533, ../sass/app.scss */
 table .x {
   color: red;
 }
