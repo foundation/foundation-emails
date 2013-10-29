@@ -9,9 +9,9 @@
     
     <div class="large-8 columns">
       <div class="row collapse">
-	      <div class="large-4 columns hide-for-small">
+	      <div class="large-4 columns">
 		      <div class="learn-links">
-		        <h4>Want more?</h4>
+		        <h4 class="hide-for-small">Want more?</h4>
 		        <ul>
 		          <li><a href="http://zurb.com/expo/courses">Training</a></li>
 		          <li><a href="http://zurb.com/responsive">Responsive</a></li>

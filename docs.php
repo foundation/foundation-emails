@@ -1,3 +1,4 @@
+<?php $thisPage="docs"; ?>
 <?php include 'includes/_header.php' ?>
 
 <section role="main">

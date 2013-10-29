@@ -9,10 +9,10 @@
 
   <section class="top-bar-section">
     <ul class="right">
-      <li><a href="process.php">Process</a></li>
-      <li><a href="docs.php">Docs</a></li>
-      <li><a href="inliner.php">Inliner</a></li>
-      <li><a href="templates.php">Email Templates</a></li>
+      <li<?php if ($thisPage=="process") echo " class=\"active\""; ?>><a href="process.php">Process</a></li>
+      <li<?php if ($thisPage=="docs") echo " class=\"active\""; ?>><a href="docs.php">Docs</a></li>
+      <li<?php if ($thisPage=="inliner") echo " class=\"active\""; ?>><a href="inliner.php">Inliner</a></li>
+      <li<?php if ($thisPage=="templates") echo " class=\"active\""; ?>><a href="templates.php">Email Templates</a></li>
       <li class="has-form"><a href="download.php" class="tiny button">Download</a></li>
     </ul>
   </section>

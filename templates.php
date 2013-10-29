@@ -1,3 +1,4 @@
+<?php $thisPage="templates"; ?>
 <?php include 'includes/_header.php' ?>
 <section role="main">
 <?php include 'includes/_top-bar.php' ?>
@@ -45,7 +46,9 @@
     
 <div class="row">
   <div class="small-12 columns">
-    
+    <h5 class="normal">You can download all of the templates in one file here:</h6>
+    <a href="templates/all-templates.zip" class="button primary">All Ink Templates</a>
+    <br><br>
     <ul class="large-block-grid-3 small-block-grid-1 template-thumbs">
       <li>
         <a href="downloads/templates/basic.html" target="_blank">

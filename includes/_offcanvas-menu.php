@@ -14,12 +14,14 @@
 -->
 		  		  
   <div class="main-menu">
-		<h6>ZURB News</h6>
+		<h6>Ink</h6>
 		<nav id="sideMenu" role="navigation">
 			<ul id="sideMainNav" class="nav-bar">
+			  <li><a href="index.php">Home</a></li>
 			  <li><a href="process.php">Process</a></li>
 			  <li><a href="docs.php">Docs</a></li>
 			  <li><a href="templates.php">Email Templates</a></li>
+			  <li><a href="inliner.php">Inliner</a></li>
 			</ul>
 		</nav> 			
   </div>
@@ -30,8 +32,9 @@
 		<h6>More ZURB Goodness</h6>
 		<nav role="navigation">
 		  <ul id="sideMainNav" class="nav-bar goodness">
-				<li><a href="http://zurb.com/expo/courses">Product Design Courses</a></li>
-				<li><a href="http://zurb.com/services/our-work">Our Work</a></li>
+				<li><a href="http://zurb.com/expo/courses">Training</a></li>
+				<li><a href="http://zurb.com/responsive">Responsive</a></li>
+				<li><a href="http://foundation.zurb.com/">Foundation</a></li>
 				<li><a href="http://zurb.com/apps">ZURB Apps</a></li>
 			</ul>
 		</nav>

@@ -2,7 +2,7 @@
   <div class="row">
     <div class="large-7 columns">
       <h5 class="normal">Stay updated on Ink with Responsive Emails from ZURB.</h5>
-      <p>Sign up to receive monthly Responsive Emails highlights. <a href="#">Read&nbsp;Last&nbsp;Month's&nbsp;Edition&nbsp;&raquo;</a></p>
+      <p>Sign up to receive monthly Responsive Emails highlights. <!-- <a href="#">Read&nbsp;Last&nbsp;Month's&nbsp;Edition&nbsp;&raquo;</a> --></p>
     </div>
     <div class="large-5 columns">
       <form>

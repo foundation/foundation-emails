@@ -1,7 +1,9 @@
+<?php $thisPage="process"; ?>
 <?php include 'includes/_header.php' ?>
 
 <section role="main">
 <?php include 'includes/_top-bar.php' ?>
+
 
 <section class="top-area">
   <div class="row">
@@ -17,7 +19,7 @@
     <h1 class="light text-center">Five steps to Ink-certified emails</h1>
     <p class="lead text-center">Follow these five steps to make sure your email looks great.</p>
     <br>
-    <hr>
+    <br>
   </div>
 </div>
 
@@ -50,7 +52,7 @@
         <h3 class="light">Bring your styles inline</h3>
         <p class="with-border">Once your email looks great in Outlook and responsive styles are included, bring your styles inline, which you can do with a variety of services.</p>
         
-        <p class="campaign-monitor"><strong>We recommend Campaign Monitor to do this.</strong></p>
+        <p><strong>We recommend <a href="inliner.php">Inky's Inliner</a> to do this.</strong></p>
       </div>
       <div class="process-3">
         <div class="inky-point"></div>

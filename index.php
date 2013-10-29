@@ -24,6 +24,10 @@
         <h1 class="light">Ink</h1>
         <p class="lead">Quickly create responsive HTML emails that work on any device &amp; client. Even Outlook.</p>
         <a href="download.php" class="large button">Download Ink</a>
+        <ul class="header-social-links">
+          <li><a href="https://github.com/zurb/ink"><i class="fi-social-github"></i>Ink on Github</a>
+          <li><a href="https://github.com/zurb/ink"><i class="fi-social-twitter"></i>@inkzurb</a>
+        </ul>
         <div class="inky hide-for-small"></div>
       </div>
     </div>
@@ -45,7 +49,7 @@
         <div class="stamp"></div>
         <h5 class="normal">Shiny email templates</h5>
         <p>We've created some common layouts for you to start from so you can cook your emails faster.</p>
-        <a href="templates.php" class="small button expand">Go to Email Templates</a>
+        <a href="templates.php" class="small button expand secondary">Go to Email Templates</a>
       </div>
     </div>
   </div>

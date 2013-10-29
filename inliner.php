@@ -1,3 +1,4 @@
+<?php $thisPage="process"; ?>
 <?php include 'includes/_header.php' ?>
 <section role="main">
 <?php include 'includes/_top-bar.php' ?>
