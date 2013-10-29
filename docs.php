@@ -22,7 +22,7 @@
   </div>
 </section>
 
-<?php include 'docs/index.php' ?>
+<?php include 'docs/docs.php' ?>
 
 <?php include 'includes/_subscribe.php' ?>	
 <div class="show-for-small">
