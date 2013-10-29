@@ -27,4 +27,14 @@ namespace :deploy do
     run "rm -rf #{release_path}/public/cache"
     run "ln -nfs #{shared_path}/cache #{release_path}/public"
   end
+
+  desc "Symlink downloads"
+  task :link_downloads do
+    run "ln -fs #{shared_path}/downloads #{release_path}/downloads"
+  end
+
+  desc "Symlink docs"
+  task :link_downloads do
+    run "ln -fs #{shared_path}/docs #{release_path}/docs"
+  end
 end
