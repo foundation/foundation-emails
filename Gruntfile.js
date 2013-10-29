@@ -58,10 +58,10 @@ module.exports = function(grunt) {
       },
       deployDocs: {
         command: [
-            'cd tmp',
-            'zip all.zip *.html',
-            'for i in *.html; do zip "${i%}.zip" "$i"; done',
-            'cd ../'
+            'cp -r docs build/docs',
+            'cd build/docs',
+            'rsync -r . ink@zurb.com:/var/www/ink/shared/docs',
+            'cd ../../'
         ].join('&&')
       },
       cleanUp: {
@@ -79,5 +79,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('make:templates', ['includes', 'shell:zipTemplates']);
   grunt.registerTask('deploy:downloads', ['shell:makeStage', 'includes', 'shell:zipTemplates', 'shell:zipFramework', 'shell:linkFramework', 'shell:deployDownloads', 'shell:cleanUp']);
+  grunt.registerTask('deploy:docs', ['shell:makeStage', 'shell:deployDocs', 'shell:cleanUp']);
   // grunt.registerTask('default', ['includes']);
 };
