@@ -2,10 +2,18 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     includes: {
-      files: {
+      templates: {
         src: 'templates/base/*.html',
         dest: 'build/downloads/templates',
-        flatten: true,
+        cwd: '.',
+        options: {
+          includeRegexp: /^\s*\/\*\s*[Ii]nclude\s+([^'"\s]+)\s*\*\/$/,
+          includePath: 'css',
+        }
+      },
+      docs: {
+        src: 'docs/examples/*.html',
+        dest: 'build',
         cwd: '.',
         options: {
           includeRegexp: /^\s*\/\*\s*[Ii]nclude\s+([^'"\s]+)\s*\*\/$/,
@@ -21,6 +29,7 @@ module.exports = function(grunt) {
           'mkdir build/downloads',
           'mkdir build/downloads/templates',
           'mkdir build/downloads/framework',
+          'mkdir build/docs',
         ].join('&&')
       },
       zipTemplates: { 
@@ -55,9 +64,15 @@ module.exports = function(grunt) {
           'cd ../../'
         ].join('&&')
       },
+      testDocs: {
+        command: [
+          'cp -r docs/test/* build/docs',
+          'cp docs/docs.php build/docs/docs.php',
+        ].join('&&')
+      },
       deployDocs: {
         command: [
-          'rsync -r docs build/docs --exclude geshi --exclude geshi.php --exclude index.php',
+          'rsync -r docs build/docs --exclude test',
           'cd build/docs',
           'rsync -r . ink@zurb.com:/var/www/ink/shared/docs',
           'cd ../../'
@@ -76,8 +91,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-shell');
 
 
-  grunt.registerTask('make:templates', ['includes', 'shell:zipTemplates']);
-  grunt.registerTask('deploy:downloads', ['shell:makeStage', 'includes', 'shell:zipTemplates', 'shell:zipFramework', 'shell:linkFramework', 'shell:deployDownloads', 'shell:cleanUp']);
-  grunt.registerTask('deploy:docs', ['shell:makeStage', 'shell:deployDocs', 'shell:cleanUp']);
+  grunt.registerTask('make:templates', ['includes:templates', 'shell:zipTemplates']);
+  grunt.registerTask('deploy:downloads', ['shell:makeStage', 'includes:templates', 'shell:zipTemplates', 'shell:zipFramework', 'shell:linkFramework', 'shell:deployDownloads', 'shell:cleanUp']);
+  grunt.registerTask('make:docs', ['shell:makeStage', 'shell:testDocs', 'includes:docs']);
+  grunt.registerTask('deploy:docs', ['shell:makeStage', 'includes:docs', 'shell:deployDocs', 'shell:cleanUp']);
   // grunt.registerTask('default', ['includes']);
 };

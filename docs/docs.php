@@ -124,7 +124,7 @@
 </table>'
     , 'html'); ?>
     <br>
-    <!-- <iframe src="examples/basic-grid.html"></iframe> -->
+    <iframe src="examples/basic-grid.html"></iframe>
     <br>
     <hr>
     <h2 class="light">Breakdown</h2>
