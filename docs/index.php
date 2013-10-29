@@ -14,6 +14,12 @@
 <head>
   <title>Ink Docs TEST</title>
   <link rel="stylesheet" href="http://zurb.com/ink/stylesheets/app.css">
+  <style type="text/css">
+    iframe {
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+  </style>
 </head>
 <body>
   <?php include 'docs.php' ?>
