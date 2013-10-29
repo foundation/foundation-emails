@@ -159,6 +159,5 @@
     });
 
   </script>
-
 <?php include 'includes/_offcanvas-menu.php' ?>
 
