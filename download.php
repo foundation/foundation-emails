@@ -1,4 +1,4 @@
-<?php $download_url = 'Ink-0.7.1.zip' ?>
+<?php include 'downloads/latest.php' ?>
 
 <?php include 'includes/_header.php' ?>
 <?php include 'includes/_top-bar.php' ?>

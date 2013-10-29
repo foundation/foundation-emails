@@ -192,7 +192,7 @@ hr { border-style: dashed; }
 /* templates */
 .template-thumbs { margin-bottom: 50px;
   a { display: block; 
-    &.button { display: inline-block; }
+    &.button { display: inline-block; width: 45%; }
     img { display: block; margin-bottom: 15px; border: #f1f1f1 1px solid; }
   }
   span { display: block; color: #333; 

@@ -23,7 +23,7 @@
       <div class="home-text">
         <h1 class="light">Ink</h1>
         <p class="lead">Quickly create responsive HTML emails that work on any device &amp; client. Even Outlook.</p>
-        <a href="download.php" class="large button">Download Ink 0.7.1</a>
+        <a href="download.php" class="large button">Download Ink</a>
         <div class="inky hide-for-small"></div>
       </div>
     </div>

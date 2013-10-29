@@ -9801,6 +9801,7 @@ hr {
 /* line 195, ../sass/app.scss */
 .template-thumbs a.button {
   display: inline-block;
+  width: 45%;
 }
 /* line 196, ../sass/app.scss */
 .template-thumbs a img {

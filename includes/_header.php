@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width">
   <?php 
     if($download_url) {
-      echo "<meta http-equiv=\"Refresh\" content=\"0.5; url=$download_url\" />";
+      echo "<meta http-equiv=\"Refresh\" content=\"0.5; url=downloads/$download_file\" />";
     }
   ?>
   <title>Ink</title>
