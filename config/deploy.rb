@@ -13,7 +13,7 @@ set :scm, :git
 
 server 'zurb.com', :web
 
-after "deploy:update_code", "deploy:link_cached_files"
+after "deploy:update_code", "deploy:link_cached_files", "deploy:link_downloads", "deploy:link_docs"
 set :keep_releases, 3
 after "deploy:update", "deploy:cleanup"
 
@@ -34,7 +34,7 @@ namespace :deploy do
   end
 
   desc "Symlink docs"
-  task :link_downloads do
+  task :link_docs do
     run "ln -fs #{shared_path}/docs #{release_path}/docs"
   end
 end
