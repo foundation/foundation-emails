@@ -1,4 +1,4 @@
-<?php $thisPage="process"; ?>
+<?php $thisPage="inliner"; ?>
 <?php include 'includes/_header.php' ?>
 <section role="main">
 <?php include 'includes/_top-bar.php' ?>
@@ -76,7 +76,7 @@
     <li><a href="index.php">Home</a></li>
     <li><a href="process.php">Process</a></li>
     <li><a href="docs.php">Docs</a></li>
-    <li><a class="current" href="templates.php">Email Templates</a></li>
+    <li><a href="templates.php">Email Templates</a></li>
   </ul>
 </div>
 <?php include 'includes/_footer.php' ?>
