@@ -377,6 +377,14 @@ hr { border-style: dashed; }
     border-style: solid;
     border-width: 2px;
   }
+  code.geshi {
+    display: block;
+    padding: 15px;
+    background: #1c1c1c;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+  }
 }
 .prev-next-section { @include clearfix; border-top: 1px dashed #ddd; margin: 20px 0 50px; padding-top: 20px; 
   a { font-weight: bold; color: #333; }
