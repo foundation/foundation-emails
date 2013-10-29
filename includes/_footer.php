@@ -159,6 +159,12 @@
     });
 
   </script>
+  <script src="javascripts/vendor/rainbow.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        Rainbow.color();
+      });
+    </script>
 
 <?php include 'includes/_offcanvas-menu.php' ?>
 

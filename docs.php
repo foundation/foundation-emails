@@ -1,5 +1,24 @@
+<?php $thisPage="docs";
+      include_once 'geshi.php';
+    
+      function code_example($code, $lang) {
+        if (strtolower($lang) == 'html') {
+          $lang = 'html5';
+        }
+        geshi_highlight($code, $lang);
+      }
+?>
 <?php include 'includes/_header.php' ?>
-
+<style type="text/css">
+  code.geshi {
+    display: block;
+    padding: 15px;
+    background: #1c1c1c;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+  }
+</style>
 <section role="main">
 <?php include 'includes/_top-bar.php' ?>
 
@@ -33,12 +52,50 @@
     <p>
       Starting a new Ink project is fairly straightforward.  If you aren't using one of our <a href="templates.php">templates</a>, grab the boilerplate code from below to use as a starting point.  While you can reference <code>ink.css</code> using a link tag for testing purposes, be sure to remove the <kbd>&lt;link rel="stylesheet" href="ink.css" /&gt;</kbd> statement and paste your CSS into the style tag in the head before running your email through an inliner.
     </p>
-    <script type="text/javascript" src="https://snipt.net/embed/ede5e79e642e6842d9727f711bfe61bf/"></script>
+    <?php code_example(
+'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width"/>
+    <style type="text/css">
+      
+      /* Ink styles go here */
+
+      /* Your custom styles go here */
+
+    </style>
+  </head>
+  <body>
+    <table class="body">
+      <tr>
+        <td class="center" align="center" valign="top">
+
+          <!-- Email Content -->
+
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>'
+    , 'html'); ?>
     <br>
     <p>
       If you're applying a background color to your entire email, be sure to attach it to the table with a class of <code>body</code>, not to the actual <kbd>&lt;body&gt;</kbd> tag, since some clients remove this be default.
     </p>
-    <script type="text/javascript" src="https://snipt.net/embed/cb9276e922e8c38b108c4ec8ad420e7f/"></script>
+    <?php code_example(
+'<html>
+    
+...
+    
+<body> <!-- Not here -->
+    <table class="body" style="background:#fff"> <!-- Background goes here -->
+        
+    ...
+        
+  </table>
+</body>'
+    , 'html'); ?>
     <br>
     
     <hr class="section">
