@@ -57,7 +57,7 @@ module.exports = function(grunt) {
       },
       deployDocs: {
         command: [
-          'cp -r docs build/docs',
+          'rsync -r docs build/docs --exclude geshi --exclude geshi.php --exclude index.php',
           'cd build/docs',
           'rsync -r . ink@zurb.com:/var/www/ink/shared/docs',
           'cd ../../'
