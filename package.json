@@ -10,7 +10,8 @@
     "grunt-cli": "~0.1.9"
   },
   "devDependencies": {
-    "grunt-includes": "~0.3.5"
+    "grunt-includes": "~0.3.5",
+    "grunt-shell": "~0.5.0"
   },
   "repository": {
     "type": "git",
