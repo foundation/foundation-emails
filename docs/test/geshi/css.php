@@ -141,7 +141,7 @@ $language_data = array (
             'white', 'wider', 'x-fast', 'x-high', 'x-large', 'x-loud',
             'x-low', 'x-small', 'x-soft', 'xx-large', 'xx-small', 'yellow',
             'yes'
-            )
+            ),
         ),
     'SYMBOLS' => array(
         '(', ')', '{', '}', ':', ';',
@@ -154,41 +154,41 @@ $language_data = array (
         ),
     'STYLES' => array(
         'KEYWORDS' => array(
-            1 => 'color: #000000; font-weight: bold;',
-            2 => 'color: #993333;'
+            1 => 'color: #6ab825;',
+            2 => 'color: #ed9d13;',
             ),
         'COMMENTS' => array(
-            1 => 'color: #a1a100;',
-            2 => 'color: #ff0000; font-style: italic;',
-            'MULTI' => 'color: #808080; font-style: italic;'
+            1 => 'color: #999999;',
+            2 => 'color: #999999;',
+            'MULTI' => 'color: #999999;'
             ),
         'ESCAPE_CHAR' => array(
-            0 => 'color: #000099; font-weight: bold;',
+            0 => 'color: #000099;',
             //1 => 'color: #000099; font-weight: bold;',
-            2 => 'color: #000099; font-weight: bold;'
+            2 => 'color: #000099;'
             //3 => 'color: #000099; font-weight: bold;'
             ),
         'BRACKETS' => array(
-            0 => 'color: #00AA00;'
+            0 => 'color: #6ab825;'
             ),
         'STRINGS' => array(
             0 => 'color: #ff0000;'
             ),
         'NUMBERS' => array(
-            0 => 'color: #cc66cc;'
+            0 => 'color: #ed9d13;'
             ),
         'METHODS' => array(
             ),
         'SYMBOLS' => array(
-            0 => 'color: #00AA00;'
+            0 => 'color: #6ab825;'
             ),
         'SCRIPT' => array(
             ),
         'REGEXPS' => array(
-            0 => 'color: #cc00cc;',
+            0 => 'color: #990000;',
             1 => 'color: #6666ff;',
             2 => 'color: #3333ff;',
-            3 => 'color: #933;'
+            3 => 'color: #ed9d13;'
             )
         ),
     'URLS' => array(

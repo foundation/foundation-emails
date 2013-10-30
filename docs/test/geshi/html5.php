@@ -152,7 +152,7 @@ $language_data = array (
         'METHODS' => array(
             ),
         'SYMBOLS' => array(
-            0 => 'color: #66cc66;'
+            0 => 'color: #6ab825;'
             ),
         'SCRIPT' => array(
             -2 => 'color: #404040;', // CDATA
