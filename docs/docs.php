@@ -1,3 +1,18 @@
+<style type="text/css">
+
+  /* iframe sizes */
+
+    #if-basicGrid {height: 120px;}
+    #if-evenColumns {height: 260px;}
+    #if-centerClass {height: 220px;}
+
+  @media only screen and (max-width: 632px), only screen and (min-width: 768px) and (max-width: 843px) {
+    #if-basicGrid {height: 150px;}
+    #if-evenColumns {height: 570px;}
+    #if-centerClass {height: 270px;}   
+  } 
+
+</style>
 <div class="row docs">
   <div class="large-3 columns">
     <ul class="doc-nav hide-for-small">
@@ -19,15 +34,19 @@
     <p>
       Starting a new Ink project is fairly straightforward.  If you aren't using one of our <a href="templates.php">templates</a>, grab the boilerplate code from below to use as a starting point.  While you can reference <code>ink.css</code> using a link tag for testing purposes, be sure to remove the <kbd>&lt;link rel="stylesheet" href="ink.css" /&gt;</kbd> statement and paste your CSS into the style tag in the head before running your email through an inliner.
     </p>
+    <h6>Boilerplate.html</h6>
     <?php code_example(
 '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width"/>
+
+    <link rel="stylesheet" href="ink.css"> <!-- For testing only -->
+
     <style type="text/css">
       
-      /* Ink styles go here */
+      /* Ink styles go here in production */
 
       /* Your custom styles go here */
 
@@ -50,6 +69,7 @@
     <p>
       If you're applying a background color to your entire email, be sure to attach it to the table with a class of <code>body</code> as well as to the actual <kbd>&lt;body&gt;</kbd> tag, since some clients remove this by default.
     </p>
+    <h6>Inline Styles</h6>
     <?php code_example(
 '<html>
     
@@ -64,6 +84,13 @@
 </body>'
     , 'html'); ?>
     <br>
+    <h6>CSS</h6>
+    <?php code_example( 
+'body, .body {
+  background: #ddd;
+}'
+    , 'css'); ?>
+    <br>
     
     <hr class="section">
 
@@ -72,30 +99,31 @@
 
     <hr>
     <h2 class="light">Structure</h2>
-    <h4 class="normal">Overview</h4>
     <p>Ink uses a 12-column grid with a 580px wrapper.  On mobile devices (under 580px wide), columns become full width and stack vertically.</p>
     <p>Ink's grid can be thought of in terms of three components:</p>
     <h4 class="normal">Containers</h4>
-    <p>Ink containers wrap the content and contain it to a fixed, 580px layout on desktop clients and large tablets.  Below 580px, containers take up 95% of the screen's width, ensuring that your text doesn't run right up against the edges of the user's screen.</p>
+    <p>Ink containers wrap the content and maintain a fixed, 580px layout on large displays.  Below 580px, containers take up 95% of the screen's width, ensuring that your content doesn't run right up against the edges of the user's screen.</p>
     <h4 class="normal">Rows</h4>
-    <p>Rows are used to separate blocks of from each other vertically.  In addition, the <kbd>&lt;td&gt;</kbd> tags of <code>.row</code> tables use the wrapper class to maintain a gutter between columns.</p>
+    <p>Rows are used to separate blocks of content vertically.  In addition to the vertical separation, the <kbd>&lt;td&gt;</kbd> tags of <code>.row</code> tables use the wrapper class to maintain a gutter between columns.  Note: the last <code>.wrapper</code> td in a row MUST have a class of <code>.last</code> applied to it, even if it's the only wrapper in the row (ex. for a row with a single, twelve column wide content area).</p>
     <h4 class="normal">Columns</h4>
     <p>Columns denote the width of the content, as based on a 12-column system.  The content inside them will expand to cover n-columns, assuming that the number of columns in one row adds up to 12.</p>
+    <h6>The Three Grid Components</h6>
+    <p>Basic example of the three main grid components, with additional padding and coloring added for visibility.</p>
     <?php code_example(
-'<table class="container">
+'<table class="container" style="background:purple;">
   <tr>
-    <td>
+    <td style="padding-top: 10px; padding-bottom: 10px;">
 
-      <table class="row">
+      <table class="row" style="background:green;">
         <tr>
           <td class="wrapper">
 
-            <table class="eight columns">
+            <table class="eight columns" style="background:pink;">
               <tr>
                 <td>
-                    
-                  <!-- Main content -->
-                    
+
+                  Eight Columns
+
                 </td>
                 <td class="expander"></td>
               </tr>
@@ -104,12 +132,12 @@
           </td>
           <td class="wrapper last">
 
-            <table class="four columns">
+            <table class="four columns" style="background:pink;">
               <tr>
                 <td>
-                    
-                  <!-- Sidebar content -->
-                    
+
+                  Four Columns
+
                 </td>
                 <td class="expander"></td>
               </tr>
@@ -124,7 +152,9 @@
 </table>'
     , 'html'); ?>
     <br>
-    <iframe src="examples/basic-grid.html"></iframe>
+    <h6>Visual Explantion of Grid</h6>
+    <p>In the example below, the container is purple (and has some additional padding added so that it isn't completely hidden by the row), the row is green and the two columns are pink.</p>
+    <iframe id="if-basicGrid" src="examples/basic-grid.html"></iframe>
     <br>
     <hr>
     <h2 class="light">Breakdown</h2>
@@ -177,19 +207,137 @@
     
     <h2 class="light">Examples</h2>
     <h4 class="normal">Even Columns</h4>
-    <p>Ink's tweve column grid makes creating even column layouts a snap.  Just use one <code>.twelve.columns</code>, two <code>.six.columns</code>, three <code>.four.columns</code> or four <code>.three.columns</code> classes to create your layout.  Appearing as single columns on large screens, the layout will fold into a single column on small (mobile) screens.</p>
-    <!-- <script type="text/javascript" src="https://snipt.net/embed/28db973ea0117f4324cf5d74b0029f55/"></script> -->
+    <p>Ink's tweve column grid makes creating even column layouts a snap.  Just use one <code>.twelve.columns</code>, two <code>.six.columns</code>, three <code>.four.columns</code> or four <code>.three.columns</code> classes to create your layout.  Appearing as multiple, even columns on large screens, the layout will fold into a single column on small (mobile) screens.</p>
+    <h6>Code for Even Columns</h6>
+    <?php code_example(
+'<table class="container">
+  <tr>
+    <td>
+
+      <table class="row">
+        <tr>
+          <td class="wrapper last">
+
+            <table class="twelve columns">
+              <tr>
+                <td class="panel">
+
+                  twelve.columns
+                
+                </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+      </table>
+
+      <table class="row">
+        <tr>
+          <td class="wrapper">
+
+            <table class="six columns">
+              <tr>
+                <td class="panel">
+
+                  .six.columns
+                
+                </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+
+          </td>
+          <td class="wrapper last">
+
+            <table class="six columns">
+              <tr>
+                <td class="panel">
+
+                  .six.columns
+
+                </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+      </table>
+
+      ...
+
+    </td>
+  </tr>
+</table>'
+    , 'html'); ?>
     <br>
-    <h4 class="normal">Rows Within Columns</h4>
-    <p>Unlike the <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation grid</a>, Ink's grid cannot be nested.  A layout simulating rows within columns is possible, however, by placing multiple <code>.columns</code> tables (with the same number of columns) within the same <code>.wrapper</code> td.</p>
+    <h6>Even 1, 2, 3 and 4 Column Layouts</h6>
+    <iframe id="if-evenColumns" src="examples/even-columns.html"></iframe>
+    <br>
+    <br>
+    <!-- <h4 class="normal">Rows Within Columns</h4>
+    <p>Unlike the <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation grid</a>, Ink's grid cannot be nested.  A layout simulating rows within columns is possible, however, by placing multiple <code>.columns</code> tables (with the same number of columns) within the same <code>.wrapper</code> td.</p> -->
     <!-- <script type="text/javascript" src="https://snipt.net/embed/01eb0d482e77ef8e25e40e6d1dae49d1/"></script> -->
     <br><h4 class="normal">Centered Content</h4>
     <p>To center the content of a column, apply a class of <code>center</code> to the <kbd>&lt;td&gt;</kbd> that contains the content.  If you want to center an image, you should also apply a class of <code>center</code> to the image itself.</p>
-    <!-- <script type="text/javascript" src="https://snipt.net/embed/12bd7e7e0eaf1e43c2e79803bb5c84e6/"></script> -->
+    <h6>The Center Class</h6>
+    <?php code_example(
+'<table class="row">
+  <tr>
+    <td class="wrapper">
+
+      <table class="six columns">
+        <tr>
+          <td class="center panel">
+            Centered content 
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+
+    </td>
+    <td class="wrapper last">
+
+      <table class="six columns">
+        <tr>
+          <td class="center panel">
+
+            <!-- Centered image -->
+            <img class="center" src="http://placehold.it/125x125&text=Centered%20Image">
+          
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>'
+    , 'html'); ?>
     <br>
-    <h4 class="normal">When to Use Expanders</h4>
-    <p>When the Ink grid is shown on a small screen, the <code>.columns</code> tables expand to the full width of the container and stack vertically.  On some clients, however, the columns don't expand properly if the content isn't as large as the screen.  While this might not seem so bad, it can cause your layout to appear broken if you are using a background color on the <code>.columns</code> table or are centering the content.</p>
+    <h6>Centered Text and Images</h6>
+    <iframe id="if-centerClass" src="examples/center-class.html"></iframe>
+    <br>
+    <br>
+    <h4 class="normal">Expanders</h4>
+    <p>When the Ink grid is shown on a small screen, the <code>.columns</code> tables expand to the full width of the container and stack vertically.  On some clients, however, the columns don't expand properly if the content isn't as wide as the screen.  While this might not seem so bad, it can cause your layout to appear broken if you are using a background color on the <code>.columns</code> table or are centering the content.</p>
     <p>To get around this, an empty <kbd>&lt;td&gt;</kbd> with a class of <code>expander</code> is used after the <kbd>&lt;td&gt;</kbd> containing the actual content in the <code>.columns</code> table.  This extra <kbd>&lt;td&gt;</kbd> isn't displayed, but it forces the content <kbd>&lt;td&gt;</kbd> to expand to full width.</p>
+    <h6>Expander TDs</h6>
+    <?php code_example(
+'<table class="twelve columns">
+  <tr>
+    <td>
+      <!-- Content not large enough to "prop" the container open all the way -->
+    </td>
+
+    <td class="expander"></td> <!-- Used to fix columns on small screens -->
+
+  </tr>
+</table>'
+    , 'html'); ?>
+    <br>
     
     <hr class="section">
 
