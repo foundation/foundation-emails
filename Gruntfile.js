@@ -84,12 +84,21 @@ module.exports = function(grunt) {
           'Say "Deploy Completed"'
         ].join('&&')
       }
-    }
+    },
+    watch: {
+      docs: {
+        files: ['docs/docs.php', 'docs/**/*.html'],
+        tasks: ['shell:makeStage', 'shell:testDocs', 'includes:docs'],
+        options: {
+          livereload: true,
+        },
+      },
+    },
   });
 
   grunt.loadNpmTasks('grunt-includes');
   grunt.loadNpmTasks('grunt-shell');
-
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('make:templates', ['includes:templates', 'shell:zipTemplates']);
   grunt.registerTask('deploy:downloads', ['shell:makeStage', 'includes:templates', 'shell:zipTemplates', 'shell:zipFramework', 'shell:linkFramework', 'shell:deployDownloads', 'shell:cleanUp']);
