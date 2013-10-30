@@ -399,6 +399,10 @@ hr { border-style: dashed; }
     font-size: 14px;
     color: #fff;
   }
+  iframe {
+    width: 100%;
+    border: 1px solid #ddd;
+  }
 }
 .prev-next-section { @include clearfix; border-top: 1px dashed #ddd; margin: 20px 0 50px; padding-top: 20px; 
   a { font-weight: bold; color: #333; }
