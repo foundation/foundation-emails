@@ -56,9 +56,11 @@
     <table class="body">
       <tr>
         <td class="center" align="center" valign="top">
+          <center>
 
           <!-- Email Content -->
 
+          </center>
         </td>
       </tr>
     </table>
@@ -154,7 +156,7 @@
     <br>
     <h6>Visual Explantion of Grid</h6>
     <p>In the example below, the container is purple (and has some additional padding added so that it isn't completely hidden by the row), the row is green and the two columns are pink.</p>
-    <iframe id="if-basicGrid" src="examples/basic-grid.html"></iframe>
+    <iframe id="if-basicGrid" src="docs/examples/basic-grid.html"></iframe>
     <br>
     <hr>
     <h2 class="light">Breakdown</h2>
@@ -274,14 +276,14 @@
     , 'html'); ?>
     <br>
     <h6>Even 1, 2, 3 and 4 Column Layouts</h6>
-    <iframe id="if-evenColumns" src="examples/even-columns.html"></iframe>
+    <iframe id="if-evenColumns" src="docs/examples/even-columns.html"></iframe>
     <br>
     <br>
     <!-- <h4 class="normal">Rows Within Columns</h4>
     <p>Unlike the <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation grid</a>, Ink's grid cannot be nested.  A layout simulating rows within columns is possible, however, by placing multiple <code>.columns</code> tables (with the same number of columns) within the same <code>.wrapper</code> td.</p> -->
     <!-- <script type="text/javascript" src="https://snipt.net/embed/01eb0d482e77ef8e25e40e6d1dae49d1/"></script> -->
     <br><h4 class="normal">Centered Content</h4>
-    <p>To center the content of a column, apply a class of <code>center</code> to the <kbd>&lt;td&gt;</kbd> that contains the content.  If you want to center an image, you should also apply a class of <code>center</code> to the image itself.</p>
+    <p>To center the content of a column, apply a class of <code>center</code> to the <kbd>&lt;td&gt;</kbd> that contains the content.  If you want to center an image, you should also apply a class of <code>center</code> to the image itself.  For maximum client support, we also reccommend using the HTML <kbd>&lt;center&gt;</kbd> tag around the content you wish to center.</p>
     <h6>The Center Class</h6>
     <?php code_example(
 '<table class="row">
@@ -291,7 +293,11 @@
       <table class="six columns">
         <tr>
           <td class="center panel">
-            Centered content 
+            <center>
+
+              Centered content 
+
+            </center>
           </td>
           <td class="expander"></td>
         </tr>
@@ -303,10 +309,12 @@
       <table class="six columns">
         <tr>
           <td class="center panel">
+            <center>
 
-            <!-- Centered image -->
-            <img class="center" src="http://placehold.it/125x125&text=Centered%20Image">
-          
+              <!-- Centered image -->
+              <img class="center" src="http://placehold.it/125x125&text=Centered%20Image">
+
+            </center>
           </td>
           <td class="expander"></td>
         </tr>
@@ -318,7 +326,7 @@
     , 'html'); ?>
     <br>
     <h6>Centered Text and Images</h6>
-    <iframe id="if-centerClass" src="examples/center-class.html"></iframe>
+    <iframe id="if-centerClass" src="docs/examples/center-class.html"></iframe>
     <br>
     <br>
     <h4 class="normal">Expanders</h4>
