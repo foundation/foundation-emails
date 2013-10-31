@@ -76,12 +76,13 @@ module.exports = function(grunt) {
       testDocs: {
         command: [
           'cp -r docs/test/* build/docs',
+          'cp -r docs/components build/docs/components',
           'cp docs/docs.php build/docs/docs.php',
         ].join('&&')
       },
       deployDocs: {
         command: [
-          'rsync docs build --exclude test',
+          'rsync -r docs build --exclude test --exclude examples',
           'cd build/docs',
           'rsync -r . ink@zurb.com:/var/www/ink/shared/docs',
           'cd ../../'
