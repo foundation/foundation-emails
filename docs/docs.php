@@ -15,19 +15,20 @@
 </style>
 <div class="row docs">
   <div class="large-3 columns">
-    <ul class="doc-nav hide-for-small">
-      <li><a href="#start">Getting Started</a></li>
-      <li><a href="#grid">Grid</a></li>
-      <li><a href="#sub-grid">Sub-Grid</a></li>
-      <!-- <li><a href="#full-width">Full-Width Headers &amp; Footers</a></li> -->
-      <li><a href="#visibility-classes">Visibility Classes</a></li>
-      <li><a href="#panels">Panels</a></li>
-      <li><a href="#buttons">Buttons</a></li>
-      <li><a href="#compatibility">Compatibility</a></li>
-    </ul>
+    <div data-magellan-expedition="fixed">
+      <ul class="sub-nav hide-for-small">
+        <li data-magellan-arrival="start"><a href="#start">Getting Started</a></li>
+        <li data-magellan-arrival="grid"><a href="#grid">Grid</a></li>
+        <li data-magellan-arrival="sub-grid"><a href="#sub-grid">Sub-Grid</a></li>
+        <li data-magellan-arrival="visibility-classes"><a href="#visibility-classes">Visibility Classes</a></li>
+        <li data-magellan-arrival="panels"><a href="#panels">Panels</a></li>
+        <li data-magellan-arrival="buttons"><a href="#buttons">Buttons</a></li>
+        <li data-magellan-arrival="compatibility"><a href="#compatibility">Compatibility</a></li>
+      </ul>
+    </div>
   </div>
   <div class="large-9 columns">
-    <h1 id="start" class="light">Getting Started</h1>
+    <h1 id="start" class="light" data-magellan-destination="start">Getting Started</h1>
     <p class="lead">Dive into creating your responsive email.</p>
     <hr>
     <h2 class="light">The Boilerplate</h2>
@@ -94,7 +95,7 @@
     
     <hr class="section">
 
-    <h1 id="grid" class="light">Grid</h1>
+    <h1 id="grid" class="light" data-magellan-destination="grid">Grid</h1>
     <p class="lead">Create powerful multi-device layouts quickly and easily.</p>
 
     <hr>
@@ -341,7 +342,7 @@
     
     <hr class="section">
 
-    <h1 id="sub-grid" class="light">Sub-Grid</h1>
+    <h1 id="sub-grid" class="light" data-magellan-destination="sub-grid">Sub-Grid</h1>
     <p class="lead">A non-stacking grid for even more versatile layouts.</p>
     <hr />
     
@@ -381,7 +382,7 @@
     
     <hr class="section"> -->
 
-    <h1 id="visibility-classes" class="light">Visibility Classes</h1>
+    <h1 id="visibility-classes" class="light" data-magellan-destination="visibility-classes">Visibility Classes</h1>
     <p class="lead">Selectively show content for different screen sizes.</p>
     <hr />
     
@@ -409,7 +410,7 @@
     
     <hr class="section">
 
-    <h1 id="panels" class="light">Panels</h1>
+    <h1 id="panels" class="light" data-magellan-destination="panels">Panels</h1>
     <p class="lead">Quickly highlight important content.</p>
     <hr />
     
@@ -418,7 +419,7 @@
     
     <hr class="section">
 
-    <h1 id="buttons" class="light">Buttons</h1>
+    <h1 id="buttons" class="light" data-magellan-destination="buttons">Buttons</h1>
     <p class="lead">Dynamic and effective calls to action.</p>
     <hr />
     <h2 class="light">Structure</h2>
@@ -492,7 +493,7 @@
     
     <hr class="section">
 
-    <h1 id="buttons" class="light">Compatibility</h1>
+    <h1 id="buttons" class="light" data-magellan-destination="compatibility">Compatibility</h1>
     <p class="lead">Here's a breakdown of the email clients that we&rsquo;ve optimized Ink for.</p>
     <hr />
     <table>

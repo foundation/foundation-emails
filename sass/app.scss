@@ -536,3 +536,13 @@ table {
   .check { color: green; }
   .x { color: red; }
 }
+
+/* magellan */
+[data-magellan-expedition] { background: transparent; left: auto; }
+ul.sub-nav {
+  li {
+    a { display: block; font-size: emCalc(14px); padding: 5px 0; color: #333; }
+    &.active a { color: #CC7691; font-weight: bold; }
+  }
+  
+}
