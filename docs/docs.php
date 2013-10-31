@@ -4,12 +4,18 @@
 
     #if-basicGrid {height: 120px;}
     #if-evenColumns {height: 260px;}
+    #if-subGrid {height: 100px;}
     #if-centerClass {height: 220px;}
+    #if-visibilityClasses {height: 110px;}
+    #if-panels {height: 110px;}
 
   @media only screen and (max-width: 632px), only screen and (min-width: 768px) and (max-width: 843px) {
     #if-basicGrid {height: 150px;}
     #if-evenColumns {height: 570px;}
+    #if-subGrid {height: 140px;}
     #if-centerClass {height: 270px;}   
+    #if-visibilityClasses {height: 110px;}   
+    #if-panels {height: 150px;}   
   } 
 
 </style>
