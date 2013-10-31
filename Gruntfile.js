@@ -11,7 +11,16 @@ module.exports = function(grunt) {
           includePath: 'css',
         }
       },
-      docs: {
+      docsDev: {
+        src: 'docs/examples/*.html',
+        dest: 'build/docs',
+        cwd: '.',
+        options: {
+          includeRegexp: /^\s*\/\*\s*[Ii]nclude\s+([^'"\s]+)\s*\*\/$/,
+          includePath: 'css',
+        }
+      },
+      docsDeploy: {
         src: 'docs/examples/*.html',
         dest: 'build',
         cwd: '.',
@@ -72,7 +81,7 @@ module.exports = function(grunt) {
       },
       deployDocs: {
         command: [
-          'rsync -r docs build/docs --exclude test',
+          'rsync docs build --exclude test',
           'cd build/docs',
           'rsync -r . ink@zurb.com:/var/www/ink/shared/docs',
           'cd ../../'
@@ -88,7 +97,7 @@ module.exports = function(grunt) {
     watch: {
       docs: {
         files: ['docs/docs.php', 'docs/**/*.html'],
-        tasks: ['shell:makeStage', 'shell:testDocs', 'includes:docs'],
+        tasks: ['shell:makeStage', 'includes:docsDev', 'shell:testDocs'],
         options: {
           livereload: true,
         },
@@ -102,7 +111,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('make:templates', ['includes:templates', 'shell:zipTemplates']);
   grunt.registerTask('deploy:downloads', ['shell:makeStage', 'includes:templates', 'shell:zipTemplates', 'shell:zipFramework', 'shell:linkFramework', 'shell:deployDownloads', 'shell:cleanUp']);
-  grunt.registerTask('make:docs', ['shell:makeStage', 'shell:testDocs', 'includes:docs']);
-  grunt.registerTask('deploy:docs', ['shell:makeStage', 'includes:docs', 'shell:deployDocs', 'shell:cleanUp']);
-  // grunt.registerTask('default', ['includes']);
+  grunt.registerTask('make:docs', ['shell:makeStage', 'includes:docsDev', 'shell:testDocs']);
+  grunt.registerTask('deploy:docs', ['shell:makeStage', 'includes:docsDeploy', 'shell:deployDocs', 'shell:cleanUp']);
+  // grunt.registerTask('default', ['shell:makeStage', 'includes:docs', 'shell:deployDocs']);
 };
