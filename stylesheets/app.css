@@ -12606,21 +12606,50 @@ table .x {
   color: red;
 }
 
-/* magellan */
+/* line 539, ../sass/app.scss */
+.compatibility-section {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+/* line 540, ../sass/app.scss */
+.compatibility-section p {
+  margin-bottom: 0;
+}
 /* line 541, ../sass/app.scss */
+.compatibility-section a {
+  font-size: 0.875em;
+  display: block;
+  text-align: right;
+  line-height: 22px;
+}
+/* line 542, ../sass/app.scss */
+.compatibility-section table {
+  display: none;
+  margin: 20px 0 0;
+}
+/* line 543, ../sass/app.scss */
+.compatibility-section.active table {
+  display: block;
+}
+
+/* magellan */
+/* line 547, ../sass/app.scss */
 [data-magellan-expedition] {
   background: transparent;
   left: auto;
+  max-width: 200px;
+  min-width: 0;
 }
 
-/* line 544, ../sass/app.scss */
+/* line 550, ../sass/app.scss */
 ul.sub-nav li a {
   display: block;
   font-size: 0.875em;
   padding: 5px 0;
   color: #333;
 }
-/* line 545, ../sass/app.scss */
+/* line 551, ../sass/app.scss */
 ul.sub-nav li.active a {
   color: #CC7691;
   font-weight: bold;

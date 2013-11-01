@@ -536,13 +536,18 @@ table {
   .check { color: green; }
   .x { color: red; }
 }
+.compatibility-section { background: #f8f8f8; border: 1px solid #ddd; padding: 15px; 
+  p { margin-bottom: 0; }
+  a { font-size: emCalc(14px); display: block; text-align: right; line-height: 22px; }
+  table { display: none; margin: 20px 0 0; }
+  &.active table { display: block; }
+}
 
 /* magellan */
-[data-magellan-expedition] { background: transparent; left: auto; }
+[data-magellan-expedition] { background: transparent; left: auto; max-width: 200px; min-width: 0; }
 ul.sub-nav {
   li {
     a { display: block; font-size: emCalc(14px); padding: 5px 0; color: #333; }
     &.active a { color: #CC7691; font-weight: bold; }
-  }
-  
+  } 
 }

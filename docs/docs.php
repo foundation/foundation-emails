@@ -2,12 +2,12 @@
 
   /* iframe sizes */
 
-    #if-basicGrid {height: 120px;}
+    #if-basicGrid {height: 200px;}
     #if-evenColumns {height: 260px;}
     #if-centerClass {height: 220px;}
 
   @media only screen and (max-width: 632px), only screen and (min-width: 768px) and (max-width: 843px) {
-    #if-basicGrid {height: 150px;}
+    #if-basicGrid {height: 225px;}
     #if-evenColumns {height: 570px;}
     #if-centerClass {height: 270px;}   
   } 
@@ -339,6 +339,145 @@
 </table>'
     , 'html'); ?>
     <br>
+    <br>
+    <h2 class="light">Compatibility</h2>
+    <div class="compatibility-section">
+      <div class="row">
+        <div class="large-9 columns">
+          <p>The grid works in all major email clients, with minimal issues in <strong>Thunderbird (OSX)</strong> and <strong>Sparrow (iOS)</strong>.</p>
+        </div>
+        <div class="large-3 columns">
+          <a href="#" class="reveal-table">Toggle Full Table</a>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="small-12 columns">
+          <table>
+            <thead>
+              <tr>
+                <th width="30%">Client</th>
+                <th width="10%"><span>Supported</span></th>
+                <th width="60%"><span>Notes</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Gmail (Desktop)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td>Max-width will prevent the logo from being larger than 217px wide.</td>
+              </tr>
+              <tr>
+                <td>Gmail (Mobile)</td>
+                <td><span class="x">&#10008;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Gmail (iOS)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Gmail (Android)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Yahoo! Mail (Desktop)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Yahoo! Mail (Mobile)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Mail (iOS)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td>Lorem ipsum dolor sit amet</td>
+              </tr>
+              <tr>
+                <td>Mail (OSX)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td>Lorem ipsum dolor sit amet</td>
+              </tr>
+              <tr>
+                <td>Mail (Android)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td>Lorem ipsum dolor sit amet</td>
+              </tr>
+              <tr>
+                <td>Outlook Express</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Outlook 2003</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Outlook 2007, 2010, 2013</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Outlook 2011 for Mac</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Hotmail (Desktop)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Hotmail (Mobile)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Thunderbird</td>
+                <td><span class="x">&#10008;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Sparrow (iOS)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Sparrow (Desktop)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Entourage (2004)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Entourage (2008)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Windows Mail</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Live Mail</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+    </div>
     
     <hr class="section">
 
