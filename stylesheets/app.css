@@ -12631,56 +12631,118 @@ ul.mobile-nav a.current {
 }
 /* line 520, ../sass/app.scss */
 .inliner-form textarea {
-  min-height: 600px;
+  min-height: 500px;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 11px;
+  transition: all 0.7s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
 }
-/* line 521, ../sass/app.scss */
+/* line 530, ../sass/app.scss */
 .inliner-form label {
   margin-bottom: 8px;
   line-height: 1.4;
 }
-/* line 522, ../sass/app.scss */
+/* line 531, ../sass/app.scss */
 .inliner-form.options label {
   margin-bottom: 0;
 }
 
-/* line 524, ../sass/app.scss */
+/* line 533, ../sass/app.scss */
 .inky-inliner {
   margin-bottom: 50px;
 }
-/* line 525, ../sass/app.scss */
+/* line 534, ../sass/app.scss */
 .inky-inliner h4 {
   margin-bottom: 5px;
 }
-/* line 526, ../sass/app.scss */
+/* line 535, ../sass/app.scss */
 .inky-inliner p {
   margin-bottom: 10px;
 }
-/* line 527, ../sass/app.scss */
-.inky-inliner .button {
+/* line 536, ../sass/app.scss */
+.inky-inliner .button:not(.secondary) {
   background: #004454;
   color: #FFF;
 }
-/* line 528, ../sass/app.scss */
-.inky-inliner .button:hover {
+/* line 537, ../sass/app.scss */
+.inky-inliner .button:not(.secondary):hover {
   background: #002B36;
 }
+/* line 539, ../sass/app.scss */
+.inky-inliner textarea.result {
+  min-height: 300px;
+}
+/* line 542, ../sass/app.scss */
+.inky-inliner .show-on-submit {
+  display: none;
+}
 
-/* line 531, ../sass/app.scss */
+/* line 546, ../sass/app.scss */
 .inline-advantages {
   margin-left: 25px;
 }
 
+/* line 547, ../sass/app.scss */
+#previewModal {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 45;
+  display: none;
+}
+/* line 557, ../sass/app.scss */
+#previewModal .control-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f7f7f7;
+  box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.25);
+}
+/* line 565, ../sass/app.scss */
+#previewModal .control-bar .close-btn {
+  margin: 14px 10px;
+  display: inline-block;
+}
+/* line 570, ../sass/app.scss */
+#previewModal .control-bar .report-btn {
+  margin: 5px 10px;
+  float: right;
+}
+/* line 576, ../sass/app.scss */
+#previewModal iframe {
+  margin-top: 40px;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+/* line 583, ../sass/app.scss */
+#previewModal.active {
+  display: block;
+}
+
+/* line 588, ../sass/app.scss */
+#inlinerReportModal ol {
+  margin-left: 2em;
+}
+
 /* compatibility */
-/* line 535, ../sass/app.scss */
+/* line 595, ../sass/app.scss */
 table span {
   display: block;
   text-align: center;
 }
-/* line 536, ../sass/app.scss */
+/* line 596, ../sass/app.scss */
 table .check {
   color: green;
 }
-/* line 537, ../sass/app.scss */
+/* line 597, ../sass/app.scss */
 table .x {
   color: red;
 }

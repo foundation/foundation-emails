@@ -21,20 +21,20 @@
 
 <div class="row">
   <div class="large-7 columns">
-    <form class="inky-inliner">
+    <form id="skateForm" class="inky-inliner">
       <h4 class="normal">Email content &amp; options</h4>
       
       <div class="inliner-form">      
         <label>Paste your email content here. Styles should be included. Links should be full URLs.</label>
-        <textarea placeholder="Paste your HTML here"></textarea>
+        <textarea id="emailSource" placeholder="Paste your HTML here"></textarea>
       </div>
       
       
-      <div class="inliner-form options">   
+      <div class="inliner-form options hide-on-submit">   
         <label for="appendQuery">
           <input type="checkbox" id="appendQuery"> Append query string to links
         </label>
-        <input type="text" placeholder="Enter the URL where your email lives" class="inactive">
+        <input id="linkAppend" type="text" placeholder="Enter the URL where your email lives" class="inactive">
         <label for="removeComments">
           <input type="checkbox" id="removeComments"> Remove Comments
         </label>
@@ -42,14 +42,17 @@
       
       <br>
       
-      <div class="inliner-form">      
-        <label>Enter your email and we'll send you a note once we add new features to Ink!</label>
+      <div class="inliner-form hide-on-submit">      
+        <label>Enter your email and we'll send you a note once we add new features to Ink! <small>OPTIONAL</small></label>
         <input type="email" placeholder="e.g. you@yourdomain.com">
       </div>
       
       <br>
+     
+      <a id="inlinerReset" href="#" class="button show-on-submit secondary">Convert Another Email</a>
+      <a id="showPreview" href="#" class="button show-on-submit">Preview</a>
       
-      <button type="submit" class="button">Convert Email</button>
+      <button type="submit" class="button hide-on-submit">Convert Email</button>
     </form>
   </div>
   <div class="large-4 columns">
@@ -68,6 +71,13 @@
       </li>
     </ul>
   </div>
+</div>
+<div id="previewModal">
+  <div class="control-bar">
+    <a class="close-btn" href="#">&larr; Return</a>
+    <a class="button small secondary report-btn" href="#" data-reveal-id="inlinerReportModal">Report Broken</a>
+  </div>
+  <iframe src="process.php"></iframe>
 </div>
 
 <?php include 'includes/_subscribe.php' ?>	

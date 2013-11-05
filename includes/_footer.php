@@ -168,6 +168,61 @@
         }.bind(this), Math.floor((Math.random()*10)+1)*500);
     });
 
+    var original = '';
+
+    $('#appendQuery').on('click', function(){
+      $('#linkAppend').toggleClass('inactive', !$(this).is(':checked'));
+    });
+
+    $(document).on('click', '#previewModal .close-btn', function(e) {
+      e.preventDefault();
+      $('#previewModal').delay(100).removeClass('active');
+      $('html, body').css('max-height', 'none').css('overflow', 'scroll');
+    });
+
+    $(document).on('click', '#showPreview', function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop : 0
+      }, 700);
+      $('#previewModal').delay(100).addClass('active');
+      $('html, body').css('max-height', $(window).height()).css('overflow', 'hidden');
+      $('iframe').height($(window).height() - 40)
+    });
+
+    $(document).on('click', '#inlinerReset', function(e) {
+      e.preventDefault();
+      $('.show-on-submit').fadeOut(700);
+      $('.hide-on-submit').fadeIn(700);
+      $('#emailSource').removeClass('result').val(original);
+    });
+
+    $('#skateForm').on('submit', function(e){
+      e.preventDefault();
+      original = $('#emailSource').val()
+      var data = {
+        source: original,
+      };
+
+      $('#emailSource').val('Loading...')
+      $('html, body').animate({
+        scrollTop : $('.top-headlines').offset().top
+      }, 700);
+      $('#emailSource').addClass('result');
+      $('.hide-on-submit').fadeOut(700);
+      
+      if ($('#linkAppend').val() && $('#appendQuery').is(':checked')) {
+        data.linkAppend = $('#linkAppend').val()
+      }  
+
+      $.post("skate-proxy.php", data, function(resp){
+        $('.show-on-submit').fadeIn(700);
+        $(document).foundation('reveal');
+        $('#emailSource').val(resp.html);
+        $('#previewModal iframe').contents().find('html').html(resp.html);
+      }, "json");
+    });
+
   </script>
 <?php include 'includes/_offcanvas-menu.php' ?>
 

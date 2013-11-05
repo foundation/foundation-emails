@@ -517,18 +517,78 @@ ul.mobile-nav { display: block; margin-bottom: 0;
 /* inliner */
 .inliner-form { 
   .inactive { display: none; }
-  textarea { min-height: 600px; }
+  textarea { 
+    min-height: 500px; 
+    font-family: "Lucida Console", Monaco, monospace; 
+    font-size: 11px; 
+    transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -ms-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+  }
   label { margin-bottom: 8px; line-height: 1.4; }
   &.options label { margin-bottom: 0; }
 }
 .inky-inliner { margin-bottom: 50px; 
   h4 { margin-bottom: 5px; }
   p { margin-bottom: 10px; }
-  .button { background: #004454; color: #FFF;
+  .button:not(.secondary) { background: #004454; color: #FFF;
     &:hover { background: #002B36; }
+  }
+  textarea.result {
+    min-height: 300px;
+  }
+  .show-on-submit {
+    display: none;
   }
 }
 .inline-advantages { margin-left: 25px; }
+#previewModal {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 45;
+  display: none;
+
+  .control-bar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #f7f7f7;
+    box-shadow: 0 0 3px 5px rgba(0,0,0,0.25);
+
+    .close-btn {
+      margin: 14px 10px;
+      display: inline-block;
+    }
+
+    .report-btn {
+      margin: 5px 10px;
+      float: right;
+    }
+  }
+
+  iframe {
+    margin-top: 40px;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.active {
+    display: block;
+  }
+}
+#inlinerReportModal {
+  ol {
+    margin-left: 2em;
+  }
+}
 
 /* compatibility */
 table {

@@ -78,6 +78,18 @@
   </div>
 	
 </section>
-
+<div id="inlinerReportModal" class="reveal-modal">
+  <h2>Oh Noes!</h2>
+  <p class="lead">Found a problem with our inliner?  Here's what to do.</p>
+  <ol>
+    <li>Send us an email at <a href="mailto:skate@zurb.com">skate@zurb.com</a>.</li>
+    <li>Attach (don't copy and paste) a copy of your original code.</li>
+    <li>Tell us the <kbd>Skate Build Version #</kbd>, located in an HTML comment at the top of the code the inliner output (or send us the full code as an attachment).</li>
+  </ol>
+  <p>
+    Sorry you're having problems. :(  We'll try and get you squared away as soon as possible.
+  </p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
 </body>
 </html>
