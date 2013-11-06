@@ -70,7 +70,9 @@
     <p>
       If you're applying a background color to your entire email, be sure to attach it to the table with a class of <code>body</code> as well as to the actual <kbd>&lt;body&gt;</kbd> tag, since some clients remove this by default.
     </p>
-    <h6>Inline Styles</h6>
+    <h6>Inline Styles
+      <small class="cp">Copy/Paste</small>
+    </h6>
     <?php code_example(
 '<html>
     
