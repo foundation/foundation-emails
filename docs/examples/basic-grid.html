@@ -489,7 +489,10 @@ a.rounded td {
   -moz-border-radius: 500px;
   border-radius: 500px;
 }
-
+span { color: #FFF; display: block; font-size: 12px;  padding: 5px 10px; font-family: Courier, monospace; }
+table, tr, td { vertical-align: middle; }
+table.columns td, table.column td { padding: 0; }
+td.wrapper { padding-top: 0; }
 /**********************************************
 * Outlook First                               *
 **********************************************/
@@ -585,18 +588,23 @@ body.outlook img {
 
           <!-- EXAMPLE CODE -->
 
-          <table class="container" style="background:purple;">
+          <table class="container" style="background:#002B35;">
             <tr>
-              <td style="padding-top: 10px; padding-bottom: 10px;">
-
-                <table class="row" style="background:green;">
+              <td><span>table.container</span></td>
+            </tr>
+            <tr>
+              <td>
+                <table class="row" style="background:#28A9C5;">
+                  <tr>
+                    <td><span>table.row</span></td>
+                  </tr>
                   <tr>
                     <td class="wrapper">
 
-                      <table class="eight columns" style="background:pink;">
+                      <table class="eight columns" style="background:#82CCE5;">
                         <tr>
                           <td>
-                            Eight Columns
+                            <span>.eight.columns</span>
                           </td>
                           <td class="expander"></td>
                         </tr>
@@ -605,20 +613,26 @@ body.outlook img {
                     </td>
                     <td class="wrapper last">
 
-                      <table class="four columns" style="background:pink;">
+                      <table class="four columns" style="background:#82CCE5;">
                         <tr>
                           <td>
-                            Four Columns
+                            <span>.four.columns</span>
                           </td>
                           <td class="expander"></td>
                         </tr>
                       </table>
-
+                      
                     </td>
+                  </tr>
+                  <tr>
+                    <td><span>&nbsp;</span></td>
                   </tr>
                 </table>
 
               </td>
+            </tr>
+            <tr>
+              <td><span>&nbsp;</span></td>
             </tr>
           </table>
 

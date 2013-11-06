@@ -2,12 +2,12 @@
 
   /* iframe sizes */
 
-    #if-basicGrid {height: 120px;}
+    #if-basicGrid {height: 200px;}
     #if-evenColumns {height: 260px;}
     #if-centerClass {height: 220px;}
 
   @media only screen and (max-width: 632px), only screen and (min-width: 768px) and (max-width: 843px) {
-    #if-basicGrid {height: 150px;}
+    #if-basicGrid {height: 225px;}
     #if-evenColumns {height: 570px;}
     #if-centerClass {height: 270px;}   
   } 
@@ -15,19 +15,20 @@
 </style>
 <div class="row docs">
   <div class="large-3 columns">
-    <ul class="doc-nav hide-for-small">
-      <li><a href="#start">Getting Started</a></li>
-      <li><a href="#grid">Grid</a></li>
-      <li><a href="#sub-grid">Sub-Grid</a></li>
-      <!-- <li><a href="#full-width">Full-Width Headers &amp; Footers</a></li> -->
-      <li><a href="#visibility-classes">Visibility Classes</a></li>
-      <li><a href="#panels">Panels</a></li>
-      <li><a href="#buttons">Buttons</a></li>
-      <li><a href="#compatibility">Compatibility</a></li>
-    </ul>
+    <div data-magellan-expedition="fixed">
+      <ul class="sub-nav hide-for-small">
+        <li data-magellan-arrival="start"><a href="#start">Getting Started</a></li>
+        <li data-magellan-arrival="grid"><a href="#grid">Grid</a></li>
+        <li data-magellan-arrival="sub-grid"><a href="#sub-grid">Sub-Grid</a></li>
+        <li data-magellan-arrival="visibility-classes"><a href="#visibility-classes">Visibility Classes</a></li>
+        <li data-magellan-arrival="panels"><a href="#panels">Panels</a></li>
+        <li data-magellan-arrival="buttons"><a href="#buttons">Buttons</a></li>
+        <li data-magellan-arrival="compatibility"><a href="#compatibility">Compatibility</a></li>
+      </ul>
+    </div>
   </div>
   <div class="large-9 columns">
-    <h1 id="start" class="light">Getting Started</h1>
+    <h1 id="start" class="light" data-magellan-destination="start">Getting Started</h1>
     <p class="lead">Dive into creating your responsive email.</p>
     <hr>
     <h2 class="light">The Boilerplate</h2>
@@ -94,7 +95,7 @@
     
     <hr class="section">
 
-    <h1 id="grid" class="light">Grid</h1>
+    <h1 id="grid" class="light" data-magellan-destination="grid">Grid</h1>
     <p class="lead">Create powerful multi-device layouts quickly and easily.</p>
 
     <hr>
@@ -338,10 +339,149 @@
 </table>'
     , 'html'); ?>
     <br>
+    <br>
+    <h2 class="light">Compatibility</h2>
+    <div class="compatibility-section">
+      <div class="row">
+        <div class="large-9 columns">
+          <p>The grid works in all major email clients, with minimal issues in <strong>Thunderbird (OSX)</strong> and <strong>Sparrow (iOS)</strong>.</p>
+        </div>
+        <div class="large-3 columns">
+          <a href="#" class="reveal-table">Toggle Full Table</a>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="small-12 columns">
+          <table>
+            <thead>
+              <tr>
+                <th width="30%">Client</th>
+                <th width="10%"><span>Supported</span></th>
+                <th width="60%"><span>Notes</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Gmail (Desktop)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td>Max-width will prevent the logo from being larger than 217px wide.</td>
+              </tr>
+              <tr>
+                <td>Gmail (Mobile)</td>
+                <td><span class="x">&#10008;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Gmail (iOS)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Gmail (Android)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Yahoo! Mail (Desktop)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Yahoo! Mail (Mobile)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Mail (iOS)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td>Lorem ipsum dolor sit amet</td>
+              </tr>
+              <tr>
+                <td>Mail (OSX)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td>Lorem ipsum dolor sit amet</td>
+              </tr>
+              <tr>
+                <td>Mail (Android)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td>Lorem ipsum dolor sit amet</td>
+              </tr>
+              <tr>
+                <td>Outlook Express</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Outlook 2003</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Outlook 2007, 2010, 2013</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Outlook 2011 for Mac</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Hotmail (Desktop)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Hotmail (Mobile)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Thunderbird</td>
+                <td><span class="x">&#10008;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Sparrow (iOS)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Sparrow (Desktop)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Entourage (2004)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Entourage (2008)</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Windows Mail</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Live Mail</td>
+                <td><span class="check">&#10004;</span></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+    </div>
     
     <hr class="section">
 
-    <h1 id="sub-grid" class="light">Sub-Grid</h1>
+    <h1 id="sub-grid" class="light" data-magellan-destination="sub-grid">Sub-Grid</h1>
     <p class="lead">A non-stacking grid for even more versatile layouts.</p>
     <hr />
     
@@ -381,7 +521,7 @@
     
     <hr class="section"> -->
 
-    <h1 id="visibility-classes" class="light">Visibility Classes</h1>
+    <h1 id="visibility-classes" class="light" data-magellan-destination="visibility-classes">Visibility Classes</h1>
     <p class="lead">Selectively show content for different screen sizes.</p>
     <hr />
     
@@ -409,7 +549,7 @@
     
     <hr class="section">
 
-    <h1 id="panels" class="light">Panels</h1>
+    <h1 id="panels" class="light" data-magellan-destination="panels">Panels</h1>
     <p class="lead">Quickly highlight important content.</p>
     <hr />
     
@@ -418,7 +558,7 @@
     
     <hr class="section">
 
-    <h1 id="buttons" class="light">Buttons</h1>
+    <h1 id="buttons" class="light" data-magellan-destination="buttons">Buttons</h1>
     <p class="lead">Dynamic and effective calls to action.</p>
     <hr />
     <h2 class="light">Structure</h2>
@@ -492,7 +632,7 @@
     
     <hr class="section">
 
-    <h1 id="buttons" class="light">Compatibility</h1>
+    <h1 id="buttons" class="light" data-magellan-destination="compatibility">Compatibility</h1>
     <p class="lead">Here's a breakdown of the email clients that we&rsquo;ve optimized Ink for.</p>
     <hr />
     <table>
