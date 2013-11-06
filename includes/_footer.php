@@ -13,7 +13,7 @@
 		      <div class="learn-links">
 		        <h4 class="hide-for-small">Want more?</h4>
 		        <ul>
-		          <li><a href="http://zurb.com/expo/courses">Training</a></li>
+		          <li><a href="http://zurb.com/university/courses">Training</a></li>
 		          <li><a href="http://zurb.com/responsive">Responsive</a></li>
 		          <li><a href="http://foundation.zurb.com/">Foundation</a></li>
 		          <li><a href="http://zurb.com/apps">ZURB Apps</a></li>
@@ -23,8 +23,8 @@
 	      <div class="large-4 columns">
 		      <div class="support-links">
 		          <h4>Talk to us</h4>
-		          <p><a href="http://twitter.com/inkzurb">@inkzurb</a></p>
-		          <p>Not a big talker? Email us at <a href="http://zurb.com/contact">ink@zurb.com</a></p>
+		          <p>Send us a Tweet and let us know what you think!<br><a href="http://twitter.com/inkzurb">@inkzurb</a></p>
+		          
 		      </div>
 	      </div>
 		  <div class="large-4 columns">
@@ -39,7 +39,7 @@
   </div>
   <div class="row global">
     <div class="large-3 small-6 columns">
-      <a href="http://zurb.com/services" class="footer-link-block services">
+      <a href="http://zurb.com/studios" class="footer-link-block services">
         <span class="title">Studios</span>
         <span>Helping more than 200 startups succeed since 1998.</span>
       </a>
@@ -57,8 +57,8 @@
       </a>
     </div>
     <div class="large-3 small-6 columns">
-      <a href="http://zurb.com/expo" class="footer-link-block expo">
-        <span class="title">Expo</span>
+      <a href="http://zurb.com/university" class="footer-link-block expo">
+        <span class="title">University</span>
         <span>Ideas, thoughts and design resources shared with you.</span>
       </a>
   </div>
