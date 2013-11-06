@@ -211,8 +211,11 @@ hr { border-style: dashed; }
     img { display: block; margin-bottom: 15px; border: #f1f1f1 1px solid; }
   }
   span { display: block; color: #333; 
-    &.name { font-size: emCalc(21px); font-family: $sans-serif; color: #0d2b40; }
     &.description { font-size: emCalc(14px); margin-bottom: 15px;  }
+  }
+  h6.name { font-size: emCalc(21px); font-family: $sans-serif; color: #0d2b40; display:inline; 
+    span{ display:inline-block; font-weight:400; }
+    a { display:inline-block; float:right; font-size: 14px; padding:5px 8px 0px 8px; font-wieght:bold !important;line-height:24px;}
   }
 }
 .thumb-select { margin-top: 20px; 
