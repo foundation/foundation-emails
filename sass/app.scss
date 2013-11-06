@@ -611,3 +611,8 @@ ul.sub-nav {
     &.active a { color: #CC7691; font-weight: bold; }
   } 
 }
+
+/* copy/paste */
+h6 { position: relative;
+  small.cp { position: absolute; right: 0; background: url(../images/icons/clipboard.png) no-repeat 10px 4px #002b36; background-size: 8px 12px; padding: 12px 10px 10px 24px; font-size: 12px; text-transform: uppercase; color: #FFF; border-radius: 3px; font-family: "Proxima Nova Condensed","proxima-nova-condensed","Helvetica Neue",Helvetica, Arial, sans-serif; }
+}
