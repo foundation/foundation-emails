@@ -1,4 +1,4 @@
-<h1 id="sub-grid" class="light">Sub-Grid</h1>
+<h1 id="sub-grid" data-magellan-destination="sub-grid" class="light">Sub-Grid</h1>
 <p class="lead">A non-stacking grid for even more versatile layouts.</p>
 <hr />
 

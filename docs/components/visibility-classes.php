@@ -1,4 +1,4 @@
-<h1 id="visibility-classes" class="light">Visibility Classes</h1>
+<h1 id="visibility-classes" data-magellan-destination="visibility-classes" class="light">Visibility Classes</h1>
 <p class="lead">Selectively show content for different screen sizes.</p>
 <hr />
 

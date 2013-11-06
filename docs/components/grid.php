@@ -1,4 +1,4 @@
-<h1 id="grid" class="light">Grid</h1>
+<h1 id="grid" data-magellan-destination="grid" class="light">Grid</h1>
     <p class="lead">Create powerful multi-device layouts quickly and easily.</p>
 
     <hr>

@@ -2,7 +2,7 @@
 
   /* iframe sizes */
 
-    #if-basicGrid {height: 120px;}
+    #if-basicGrid {height: 200px;}
     #if-evenColumns {height: 260px;}
     #if-subGrid {height: 100px;}
     #if-centerClass {height: 220px;}
@@ -10,7 +10,7 @@
     #if-panels {height: 110px;}
 
   @media only screen and (max-width: 632px), only screen and (min-width: 768px) and (max-width: 843px) {
-    #if-basicGrid {height: 150px;}
+    #if-basicGrid {height: 225px;}
     #if-evenColumns {height: 570px;}
     #if-subGrid {height: 140px;}
     #if-centerClass {height: 270px;}   
@@ -21,15 +21,17 @@
 </style>
 <div class="row docs">
   <div class="large-3 columns">
-    <ul class="doc-nav hide-for-small">
-      <li><a href="#start">Getting Started</a></li>
-      <li><a href="#grid">Grid</a></li>
-      <li><a href="#sub-grid">Sub-Grid</a></li>
-      <li><a href="#visibility-classes">Visibility Classes</a></li>
-      <li><a href="#panels">Panels</a></li>
-      <li><a href="#buttons">Buttons</a></li>
-      <li><a href="#compatibility">Compatibility</a></li>
-    </ul>
+    <div data-magellan-expedition="fixed">
+      <ul class="sub-nav hide-for-small">
+        <li data-magellan-arrival="start"><a href="#start">Getting Started</a></li>
+        <li data-magellan-arrival="grid"><a href="#grid">Grid</a></li>
+        <li data-magellan-arrival="sub-grid"><a href="#sub-grid">Sub-Grid</a></li>
+        <li data-magellan-arrival="visibility-classes"><a href="#visibility-classes">Visibility Classes</a></li>
+        <li data-magellan-arrival="panels"><a href="#panels">Panels</a></li>
+        <li data-magellan-arrival="buttons"><a href="#buttons">Buttons</a></li>
+        <li data-magellan-arrival="compatibility"><a href="#compatibility">Compatibility</a></li>
+      </ul>
+    </div>
   </div>
   <div class="large-9 columns">
     

@@ -1,4 +1,4 @@
-<h1 id="panels" class="light">Panels</h1>
+<h1 id="panels" data-magellan-destination="panels" class="light">Panels</h1>
 <p class="lead">Quickly highlight important content.</p>
 <hr />
 

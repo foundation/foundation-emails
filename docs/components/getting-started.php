@@ -1,4 +1,4 @@
-<h1 id="start" class="light">Getting Started</h1>
+<h1 id="start" data-magellan-destination="start" class="light">Getting Started</h1>
     <p class="lead">Dive into creating your responsive email.</p>
     <hr>
     <h2 class="light">The Boilerplate</h2>

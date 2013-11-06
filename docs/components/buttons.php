@@ -1,4 +1,4 @@
-<h1 id="buttons" class="light">Buttons</h1>
+<h1 id="buttons" data-magellan-destination="buttons" class="light">Buttons</h1>
 <!-- <p class="lead">Dynamic and effective calls to action.</p>
 <hr />
 <h2 class="light">Structure</h2>
