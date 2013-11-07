@@ -1,6 +1,5 @@
 <h1 id="grid" data-magellan-destination="grid" class="light">Grid</h1>
 <p class="lead">Create powerful multi-device layouts quickly and easily.</p>
-
 <hr>
 <h2 class="light">Structure</h2>
 <p>Ink uses a 12-column grid with a 580px wrapper.  On mobile devices (under 580px wide), columns become full width and stack vertically.</p>

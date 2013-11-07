@@ -43,7 +43,10 @@ module.exports = function(grunt) {
       },
       zipTemplates: { 
         command: [
-          'cd build/downloads/templates',
+          'cd build/downloads/templates/base',
+          'cp * ../',
+          'cd ../',
+          'rm -rf base',
           'zip all-templates.zip *.html',
           'for i in *.html; do zip "${i%}.zip" "$i"; done',
           'cd ../../../'

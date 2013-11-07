@@ -13,12 +13,12 @@
 
       <table class="eight columns">
         <tr>
-          <td class="eight sub-columns" style="background:green;">
+          <td class="eight sub-columns">
 
             .eight.sub-columns
 
           </td>
-          <td class="four sub-columns last" style="background:purple;">
+          <td class="four sub-columns last">
 
             .four.sub-columns
 
@@ -32,7 +32,7 @@
 
       <table class="four columns">
         <tr>
-          <td style="background:pink;">
+          <td>
 
             .four columns
 
