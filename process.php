@@ -1,5 +1,5 @@
 <?php $thisPage="process"; ?>
-<?php include 'includes/_header.php' ?>
+<?php $title = "Ink: Process for creating Responsive Email"; include 'includes/_header.php' ?>
 
 <section role="main">
 <?php include 'includes/_top-bar.php' ?>

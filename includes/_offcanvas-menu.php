@@ -32,7 +32,7 @@
 		<h6>More ZURB Goodness</h6>
 		<nav role="navigation">
 		  <ul id="sideMainNav" class="nav-bar goodness">
-				<li><a href="http://zurb.com/expo/courses">Training</a></li>
+				<li><a href="http://zurb.com/university/courses">Training</a></li>
 				<li><a href="http://zurb.com/responsive">Responsive</a></li>
 				<li><a href="http://foundation.zurb.com/">Foundation</a></li>
 				<li><a href="http://zurb.com/apps">ZURB Apps</a></li>
@@ -51,7 +51,7 @@
 		</ul>
 		<ul class="pillars">
   		<li>
-  		  <a href="http://www.zurb.com/services" class="footer-link-block services">
+  		  <a href="http://www.zurb.com/studios" class="footer-link-block services">
           <span class="title">Studios</span>
           <span>Helping startups win since '98.</span>
         </a>
@@ -69,8 +69,8 @@
         </a>
       </li>
       <li>
-  		  <a href="http://zurb.com/expo" class="footer-link-block expo">
-          <span class="title">Expo</span>
+  		  <a href="http://zurb.com/university" class="footer-link-block expo">
+          <span class="title">University</span>
           <span>Online training for smarter product design.</span>
         </a>
       </li> 
