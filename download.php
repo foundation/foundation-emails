@@ -4,7 +4,7 @@
 <?php include 'includes/_top-bar.php' ?>
 
 <script>
-  _gaq.push(['_trackEvent', 'Ink', 'Download', '<?php echo $download_file; ?>']);
+  ga('send', 'Ink', 'Download', '<?php echo $download_file; ?>');
 </script>
 
 <section class="top-area main downloading">
