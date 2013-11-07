@@ -1,15 +1,21 @@
 <h1 id="buttons" data-magellan-destination="buttons" class="light">Buttons</h1>
-<!-- <p class="lead">Dynamic and effective calls to action.</p>
+<p class="lead">Dynamic and effective calls to action.</p>
 <hr />
 <h2 class="light">Structure</h2>
-<h4 class="normal">Style One: The Preferred Method* <small>Does not work with <a href="#">Premailer</a>.</small></h4>
-<p>To create buttons that look great in most clients, give a class of <code>button</code> to an <kbd>&lt;a&gt;</kbd> tag, and use it to enclose a table with your content.  While this gives you a nice looking button with a full click-target, it doesn't work in all CSS inliners, since it's technically invalid for an inline element (the <kbd>&lt;a&gt;</kbd> tag) to wrap a table element (booooooooo!).</p>
-<script type="text/javascript" src="https://snipt.net/embed/6ba14740d872d10cd5da2e04c65350c6/"></script>
-<br>
-<h4 class="normal">Style Two: The Bulletproof Method* <small>Not yet implemented.</small></h4>
-<p>If you need to support a CSS inliner that chokes on our preferred buttons, then our bulletproof method is the way to go.  By creating a <kbd>&lt;table&gt;</kbd> of class <code>button</code> and putting your <kbd>&lt;a&gt;</kbd> inside that, you'll have a nice looking button that won't break <a href="#">Premailer</a>.  This method comes at a cost, however, as the click target only covers the button text, rather than the entire button.</p>
-<script type="text/javascript" src="https://snipt.net/embed/d73c0ffa28c3d602cef080776bec7095/"></script>
-<br>
+<p>To create buttons that look great in most clients, give a class of <code>button</code> to an <kbd>&lt;a&gt;</kbd> tag, and use it to enclose a table with your content.  Buttons expand to the full width of their container by default, so if you don't want them to expand all the way, consider placing them in a <a href="#sub-grid">sub-grid</a> or <a href="block-grid">block-grid</a> element.</p>
+<h6>A Basic Button</h6>
+    <?php code_example(
+'<a class="button" href="#">
+  <table>
+    <tr>
+      <td>
+        Button Label
+      </td>
+    </tr>
+  </table>
+</a>'
+    , 'html'); ?>
+    <br>
 <hr />
 <h2 class="light">Style Classes</h2>
 <p>Several built in styling classes can be applied to the same element as the <code>button</code> class is applied to in order to adjust the button's appearance.</p>
@@ -67,5 +73,7 @@
 <hr />
 <h2 class="light">Examples</h2>
 <p>Buttons expand to the width of their parent container by default, so it's recommended that you contain them within a sub-grid or a relatively small number of columns on the main grid.</p>
-<script type="text/javascript" src="https://snipt.net/embed/4544d214e092be6a5c073504ad1d6443/"></script>
-<br> -->
+<h6>Button Demo</h6>
+<p>All the button modifiers demonstrated.  The first two rows of buttons are contained to <code>.four.columns</code> sections of the grid, and the second two rows are contained to <code>.six.columns</code> sections for clarity.</p>
+<iframe id="if-buttons" src="docs/examples/buttons.html"></iframe>
+<br>
