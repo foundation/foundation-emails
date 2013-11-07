@@ -187,41 +187,14 @@
 
   <script src="javascripts/vendor/jquery.js"></script>
   <script src="javascripts/foundation/foundation.js"></script>
-<!--
-	<script src="javascripts/foundation/foundation.abide.js"></script>
-	<script src="javascripts/foundation/foundation.alerts.js"></script>
-	<script src="javascripts/foundation/foundation.clearing.js"></script>
--->
 	<script src="javascripts/foundation/foundation.cookie.js"></script>
-<!-- 	<script src="javascripts/foundation/foundation.dropdown.js"></script> -->
 	<script src="javascripts/foundation/foundation.forms.js"></script>
-<!--
-	<script src="javascripts/foundation/foundation.interchange.js"></script>
-  <script src="javascripts/foundation/foundation.joyride.js"></script>
-	<script src="javascripts/foundation/foundation.magellan.js"></script>
-	<script src="javascripts/foundation/foundation.orbit.js"></script>
-	<script src="javascripts/foundation/foundation.placeholder.js"></script>
-	<script src="javascripts/foundation/foundation.reveal.js"></script>
-	<script src="javascripts/foundation/foundation.section.js"></script>
-	<script src="javascripts/foundation/foundation.tooltips.js"></script>
--->
 	<script src="javascripts/foundation/foundation.topbar.js"></script>
   <script src="javascripts/foundation/jquery.offcanvas.js"></script> 
 
 </section>
 
 <section id="sidebar" role="complementary">
-  <!-- For Future Use 
-<div id="passport">
-    <a id="user" href="#">
-		<h5>First Last Name</h5><br>
-		<p>sign out</p>
-    </a>
-    <a id="ava" href="#">
-		  <div class="avatar"><img src="placehold.it/75x75"></div>
-		</a>
-  </div>
--->
 		
   <div class="more-goodness">		
 		<h6>More ZURB Goodness</h6>
