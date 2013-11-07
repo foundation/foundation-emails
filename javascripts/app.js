@@ -48,13 +48,6 @@ bubbles.each(function(){
     }.bind(this), Math.floor((Math.random()*10)+1)*500);
 });
 
-$(document).on('click', '#emailSubmit', function(e) {
-  e.preventDefault();
-  if($('#emailForm').val()) {
-    $.post('newsletter.php', {email: $('#emailForm').val()}, function(){alert("Welcome to the Octopus' Garden.  You're signed up for Ink news!");});
-  }
-});
-
 var original = '';
 
 $('#appendQuery').on('click', function(){
