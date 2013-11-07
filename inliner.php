@@ -35,9 +35,9 @@
           <input type="checkbox" id="appendQuery"> Append query string to links
         </label>
         <input id="linkAppend" type="text" placeholder="Enter the URL where your email lives" class="inactive">
-        <label for="removeComments">
+        <!-- <label for="removeComments">
           <input type="checkbox" id="removeComments"> Remove Comments
-        </label>
+        </label> -->
       </div>
       
       <br>
