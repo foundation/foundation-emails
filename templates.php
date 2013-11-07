@@ -14,8 +14,8 @@
 
 <div class="row top-headlines">
   <div class="large-12 columns">
-    <h1 class="light text-center">Responsive email templates from us to you</h1>
-    <p class="lead text-center">Build your emails faster with some canned HTML!</p>
+    <h1 class="light text-center">Responsive email templates built on Ink</h1>
+    <p class="lead text-center">Example emails to see Ink in action</p>
   </div>
 </div>
 
@@ -24,8 +24,8 @@
     <div class="how-to-use-templates">
       <h3 class="light">How to use our email templates</h3>
       <br>
-      <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-      <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+      <p>Each template is a single HTML email built using Ink. You can preview them and inspect the code to see how they were implemented, or download them and try making some changes. Each template already has Ink included in a style tag at the top of the file.</p>
+      <p>You can see screenshots of how each template looks on different email clients by viewing it's tests. Note that if you are going to send or test them yourself, you need to run them through the <a href="http://zurb.com/ink/inliner.php">Ink Inliner</a> first.</p>
       <div class="inky-small"><img src="images/inky-template.svg"/></div>
     </div>
   </div>
