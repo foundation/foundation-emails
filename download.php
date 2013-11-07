@@ -1,6 +1,6 @@
 <?php include 'downloads/latest.php' ?>
 
-<?php include 'includes/_header.php' ?>
+<?php $title = "Ink: Download Ink"; include 'includes/_header.php' ?>
 <?php include 'includes/_top-bar.php' ?>
 
 <section class="top-area main downloading">

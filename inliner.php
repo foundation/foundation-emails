@@ -1,5 +1,5 @@
 <?php $thisPage="inliner"; ?>
-<?php include 'includes/_header.php' ?>
+<?php $title = "Ink: Email CSS Inliner"; include 'includes/_header.php' ?>
 <section role="main">
 <?php include 'includes/_top-bar.php' ?>
 

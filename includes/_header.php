@@ -10,7 +10,8 @@
       echo "<meta http-equiv=\"Refresh\" content=\"0.5; url=downloads/$download_file\" />";
     }
   ?>
-  <title>Ink</title>
+  <title><?php if (isset($title)) {echo $title;}
+    else {echo "Ink: A Responsive Email Framework from ZURB";} ?></title>
   <link rel="stylesheet" href="stylesheets/app.css">
   <script src="javascripts/vendor/custom.modernizr.js"></script>
 </head>

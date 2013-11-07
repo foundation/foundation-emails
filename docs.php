@@ -9,7 +9,7 @@
       }
 ?>
 
-<?php include 'includes/_header.php' ?>
+<?php $title = "Ink: Responsive Email Documentation"; include 'includes/_header.php' ?>
 <section role="main">
 <?php include 'includes/_top-bar.php' ?>
 
