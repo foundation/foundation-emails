@@ -47,7 +47,7 @@
         <a href="downloads/templates/basic.html" target="_blank">
           <img src="images/templates/basic.jpg">
         </a>
-        <h6 class="name"><span>Basic</span> <a href="">View Tests</a></h6>
+        <h6 class="name"><span>Basic</span> <a href="https://litmus.com/pub/85a1b19">View Tests</a></h6>
         <span class="description">This template is perfect for sending a basic but nice looking email to your readers.</span>
         <a href="downloads/templates/basic.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/basic.html.zip');">Download</a>
         <a href="downloads/templates/basic.html" class="button secondary" target="_blank">Preview</a>
@@ -56,7 +56,7 @@
         <a href="downloads/templates/hero.html" target="_blank">
           <img src="images/templates/hero.jpg">
         </a>
-        <h6 class="name"><span>Hero</span> <a href="">View Tests</a></h6>
+        <h6 class="name"><span>Hero</span> <a href="https://litmus.com/pub/6d34a4c">View Tests</a></h6>
         <span class="description">Want to include a snazzy hero image in your email? This template is for you!</span>
         <a href="downloads/templates/hero.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/hero.html.zip');">Download</a>
         <a href="downloads/templates/hero.html" class="button secondary" target="_blank">Preview</a>
@@ -65,7 +65,7 @@
         <a href="downloads/templates/sidebar.html" target="_blank">
           <img src="images/templates/sidebar.jpg">
         </a>
-        <h6 class="name"><span>Sidebar</span> <a href="">View Tests</a></h6>
+        <h6 class="name"><span>Sidebar</span> <a href="https://litmus.com/pub/f6f3c9d">View Tests</a></h6>
         <span class="description">This template includes a sidebar area for a list of links, perfect for linking to additional content.</span>
         <a href="downloads/templates/sidebar.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/sidebar.html.zip');">Download</a>
         <a href="downloads/templates/sidebar.html" class="button secondary" target="_blank">Preview</a>
@@ -74,7 +74,7 @@
         <a href="downloads/templates/sidebar-hero.html" target="_blank">
           <img src="images/templates/sidebar-hero.jpg">
         </a>
-        <h6 class="name"><span>Sidebar Hero</span> <a href="">View Tests</a></h6>
+        <h6 class="name"><span>Sidebar Hero</span> <a href="https://litmus.com/pub/c00b7d3">View Tests</a></h6>
         <span class="description">Want a sidebar and a hero image? Let's go crazy! This template combines the Sidebar and Hero templates.</span>
         <a href="downloads/templates/sidebar-hero.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/sidebar-hero.html.zip');">Download</a>
         <a href="downloads/templates/sidebar-hero.html" class="button secondary" target="_blank">Preview</a>
@@ -83,7 +83,7 @@
         <a href="downloads/templates/newsletter.html" target="_blank">
           <img src="images/templates/newsletter.jpg">
         </a>
-        <h6 class="name"><span>Newsletter</span> <a href="">View Tests</a></h6>
+        <h6 class="name"><span>Newsletter</span> <a href="https://litmus.com/pub/ff3824a">View Tests</a></h6>
         <span class="description">This template is perfect for a point-by-point newsletter. For good measure, we've thrown in a hero image, too.</span>
         <a href="downloads/templates/newsletter.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/newsletter.html.zip');">Download</a>
         <a href="downloads/templates/newsletter.html" class="button secondary" target="_blank">Preview</a>
