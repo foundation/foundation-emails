@@ -314,7 +314,7 @@
           <tr>
             <td>Gmail (Mobile, iOS, Android)</td>
             <td><span class="x">&#10008;</span></td>
-            <td>Since Gmail doesn't support media queries, users will be presented with the desktop view.  If mobile Gmail is a large part of your audience, we'd suggest using a layout based on the <a href="#blockgrid">block grid</a>.</td>
+            <td>Since Gmail doesn't support media queries, users will be presented with the desktop view.  If mobile Gmail is a large part of your audience, we'd suggest using a layout based on the <a href="#block-grid">block-grid</a>.</td>
           </tr>
           <tr>
             <td>Outlook 2011 for Mac</td>
