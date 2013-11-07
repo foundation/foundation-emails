@@ -25,7 +25,7 @@
       <h3 class="light">How to use our email templates</h3>
       <br>
       <p>Each template is a single HTML email built using Ink. You can preview them and inspect the code to see how they were implemented, or download them and try making some changes. Each template already has Ink included in a style tag at the top of the file.</p>
-      <p>You can see screenshots of how each template looks on different email clients by viewing it's tests. Note that if you are going to send or test them yourself, you need to run them through the <a href="http://zurb.com/ink/inliner.php">Ink Inliner</a> first.</p>
+      <p>You can see screenshots of how each template looks on different email clients by viewing its tests. Note that if you are going to send or test them yourself, you need to run them through the <a href="http://zurb.com/ink/inliner.php">Ink Inliner</a> first.</p>
       <div class="inky-small"><img src="images/inky-template.svg"/></div>
     </div>
   </div>

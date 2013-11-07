@@ -63,7 +63,7 @@
       <div class="bump-space">
         <span class="number">4</span>
         <h3 class="light">Test your email</h3>
-        <p>Don’t send it out just yet! Make sure you test it on as many platforms as you can. We use Litmus to test on a number of devices. You should too.</p>
+        <p>Don’t send it out just yet! Make sure you test it on as many platforms as you can. We use <a href="http://litmus.com">Litmus</a> to test on a number of devices. You should too.</p>
       </div>
       <div class="process-4"></div>
       <div class="process-4-2"><img src="images/fish-2.svg"></div>
