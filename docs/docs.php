@@ -10,6 +10,7 @@
     #if-visibilityClasses {height: 110px;}
     #if-panels {height: 420px;}
     #if-buttons{height: 325px;}
+    #if-images{height: 250px;}
 
   @media only screen and (max-width: 632px), only screen and (min-width: 768px) and (max-width: 843px) {
     #if-basicGrid {height: 225px;}
@@ -20,6 +21,7 @@
     #if-visibilityClasses {height: 110px;}   
     #if-panels {height: 400px;}   
     #if-buttons{height: 650px;}
+    #if-images{height: 800px;}
   } 
 
 </style>
@@ -34,6 +36,7 @@
         <li><a href="#visibility-classes">Visibility Classes</a></li>
         <li><a href="#panels">Panels</a></li>
         <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#images">Retina Images</a></li>
       </ul>
     </div>
   </div>
@@ -64,6 +67,10 @@
     <hr class="section">
 
     <?php require 'components/buttons.php' ?>
+
+    <hr class="section">
+
+    <?php require 'components/images.php' ?>
     
     <br>
     <br>
