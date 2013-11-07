@@ -49,8 +49,96 @@
 <h6>Non-Collapsing Sub-Grid Columns</h6>
 <iframe id="if-subGrid" src="docs/examples/basic-sub-grid.html"></iframe>
 <br>
-<!-- <hr />
-<h2 class="light">Examples</h2>
-<h4 class="normal">Non-Stacking Row</h4>
-<p>Sometimes you may wish to display columns of content that you don't want to stack on small screens.  In this case, the easiest way is to place your content in a <code>.twelve.columns</code> container and use sub-columns to arrange your content.</p>
-<script type="text/javascript" src="https://snipt.net/embed/fb54c056f05bf8be2994986c58c1ca30/"></script> -->
+<hr />
+<h2 class="light">Compatibility</h2>
+<div class="compatibility-section">
+  <div class="row">
+    <div class="large-9 columns">
+      <p>The sub-grid works as expected in most major email clients.</p>
+    </div>
+    <div class="large-3 columns">
+      <a href="#" class="reveal-table">Toggle Full Table</a>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="small-12 columns">
+      <table>
+        <thead>
+          <tr>
+            <th width="30%">Client</th>
+            <th width="10%"><span>Supported</span></th>
+            <th width="60%"><span>Notes</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Apple Mail (Desktop)</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Apple Mail (iOS)</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Outlook (2000, 2002, 2003)</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Outlook (2007, 2010, 2013)</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Outlook (2011)</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Thunderbird</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Android</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Gmail (Desktop)</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Gmail (Mobile, iOS, Android)</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Outlook 2011 for Mac</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AOL Mail</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Hotmail</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Outlook.com</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

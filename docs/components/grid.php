@@ -248,7 +248,7 @@
 </table>'
 , 'html'); ?>
 <br>
-<br>
+<hr />
 <h2 class="light">Compatibility</h2>
 <div class="compatibility-section">
   <div class="row">
