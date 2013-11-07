@@ -1,6 +1,6 @@
 {
   "name": "Ink",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Ink is a responsive email framework for making emails that look great on any device.",
   "directories": {
     "doc": "docs"
