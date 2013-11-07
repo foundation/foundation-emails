@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     includes: {
       templates: {
         src: 'templates/base/*.html',
-        dest: 'build/downloads/templates',
+        dest: 'build/downloads',
         cwd: '.',
         options: {
           includeRegexp: /^\s*\/\*\s*[Ii]nclude\s+([^'"\s]+)\s*\*\/$/,
