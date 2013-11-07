@@ -462,7 +462,7 @@ td.panel {
   border-radius: 3px;
 }
 
-.rounded table td {
+.round table td {
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
   border-radius: 500px;
