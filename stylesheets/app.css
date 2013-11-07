@@ -12774,7 +12774,7 @@ table .x {
   margin-bottom: 0;
 }
 /* line 604, ../sass/app.scss */
-.compatibility-section a {
+.compatibility-section a.reveal-table {
   font-size: 0.875em;
   display: block;
   text-align: right;

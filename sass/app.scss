@@ -601,7 +601,7 @@ table {
 }
 .compatibility-section { background: #f8f8f8; border: 1px solid #ddd; padding: 15px; 
   p { margin-bottom: 0; }
-  a { font-size: emCalc(14px); display: block; text-align: right; line-height: 22px; }
+  a.reveal-table { font-size: emCalc(14px); display: block; text-align: right; line-height: 22px; }
   table { display: none; margin: 20px 0 0; }
   &.active table { display: block; }
 }
