@@ -12,7 +12,7 @@ Ink is MIT-licensed and absolutely free to use. Ink wouldn't be possible without
 Repo Contents
 =============
 
-* Base Source for SCSS
+* Base Source for CSS
 * Docs
 * Responsive Email Templates
 * README, CONTRIBUTING and LICENSE
