@@ -20,41 +20,11 @@
   }
 ?>
 
-<!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-
-<head>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Ink, a Responsive HTML Email Framework from ZURB</title>
-  <link rel="stylesheet" href="stylesheets/app.css">
-  <script src="javascripts/vendor/custom.modernizr.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-2195009-47', 'zurb.com');
-    ga('send', 'pageview');
-  </script>
-</head>
-
-<body class="off-canvas hide-extras"> 
-
-
+<?php $title = "Ink: Stay In Touch"; include 'includes/_header.php' ?>
 
 <section role="main">
 
-<nav class="top-bar hide-for-small">
-  <ul class="title-area">
-    <!-- Title Area -->
-    <li class="name">
-      <h1><a href="http://zurb.com/ink/coming-soon.php" class="home" title="Ink">Ink</a></h1>
-    </li> 
-  </ul>
-</nav>
+<?php include 'includes/_top-bar.php' ?>
 
 
 
@@ -66,8 +36,8 @@
         <h1 class="light">Ink</h1>
         <p class="lead">Quickly create responsive emails that work on any device &amp; client. Even Outlook.</p>
         
-        <p class="cs-text hide-for-small">Ink is coming soon. Get notified when it launches, plus get monthly updates about all that is email-y and responsive.</p>
-        <p class="cs-text show-for-small">Get notified when Ink launches, and get monthly updates.</p>
+        <p class="cs-text hide-for-small">Ink is here! Get monthly updates about all that is email-y and responsive.</p>
+        <p class="cs-text show-for-small">Get monthly updates about all that is email-y.</p>
         <div class="form-thanks">
           <?php
             if (isset($email) && $success) {
