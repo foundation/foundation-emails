@@ -3,6 +3,10 @@
 <?php include 'includes/_header.php' ?>
 <?php include 'includes/_top-bar.php' ?>
 
+<script>
+  _gaq.push(['_trackEvent', 'Ink', 'Download', '<?php echo $download_file; ?>']);
+</script>
+
 <section class="top-area main downloading">
   <div class="row">
     <div class="large-12 columns">
