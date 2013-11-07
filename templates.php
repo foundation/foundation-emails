@@ -40,55 +40,52 @@
 <div class="row">
   <div class="small-12 columns">
     <h5 class="normal">You can download all of the templates in one file here:</h6>
-    <a href="downloads/templates/all-templates.zip" class="button primary">All Ink Templates</a>
+    <a href="downloads/templates/all-templates.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/all.zip');">All Ink Templates</a>
     <br><br>
     <ul class="large-block-grid-3 small-block-grid-1 template-thumbs">
       <li>
         <a href="downloads/templates/basic.html" target="_blank">
           <img src="images/templates/basic.jpg">
         </a>
-          <h6 class="name"><span>Basic</span> <a href="">View Tests</a></h6>
-          <span class="description">This template is perfect for sending a basic but nice looking email to your readers.</span>
-        <a href="downloads/templates/basic.html.zip" class="button primary">Download</a>
+        <h6 class="name"><span>Basic</span> <a href="">View Tests</a></h6>
+        <span class="description">This template is perfect for sending a basic but nice looking email to your readers.</span>
+        <a href="downloads/templates/basic.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/basic.html.zip');">Download</a>
         <a href="downloads/templates/basic.html" class="button secondary" target="_blank">Preview</a>
       </li>
       <li>
         <a href="downloads/templates/hero.html" target="_blank">
           <img src="images/templates/hero.jpg">
         </a>
-          <h6 class="name"><span>Hero</span> <a href="">View Tests</a></h6>
-          <span class="description">Want to include a snazzy hero image in your email? This template is for you!</span>
-        
-        <a href="downloads/templates/hero.html.zip" class="button primary">Download</a>
+        <h6 class="name"><span>Hero</span> <a href="">View Tests</a></h6>
+        <span class="description">Want to include a snazzy hero image in your email? This template is for you!</span>
+        <a href="downloads/templates/hero.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/hero.html.zip');">Download</a>
         <a href="downloads/templates/hero.html" class="button secondary" target="_blank">Preview</a>
       </li>
       <li>
         <a href="downloads/templates/sidebar.html" target="_blank">
           <img src="images/templates/sidebar.jpg">
         </a>
-          <h6 class="name"><span>Sidebar</span> <a href="">View Tests</a></h6>
-          <span class="description">This template includes a sidebar area for a list of links, perfect for linking to additional content.</span>
-        
-        <a href="downloads/templates/sidebar.html.zip" class="button primary">Download</a>
+        <h6 class="name"><span>Sidebar</span> <a href="">View Tests</a></h6>
+        <span class="description">This template includes a sidebar area for a list of links, perfect for linking to additional content.</span>
+        <a href="downloads/templates/sidebar.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/sidebar.html.zip');">Download</a>
         <a href="downloads/templates/sidebar.html" class="button secondary" target="_blank">Preview</a>
       </li>
       <li>
         <a href="downloads/templates/sidebar-hero.html" target="_blank">
           <img src="images/templates/sidebar-hero.jpg">
         </a>
-          <h6 class="name"><span>Sidebar Hero</span> <a href="">View Tests</a></h6>
-          <span class="description">Want a sidebar and a hero image? Let's go crazy! This template combines the Sidebar and Hero templates.</span>
-        
-        <a href="downloads/templates/sidebar-hero.html.zip" class="button primary">Download</a>
+        <h6 class="name"><span>Sidebar Hero</span> <a href="">View Tests</a></h6>
+        <span class="description">Want a sidebar and a hero image? Let's go crazy! This template combines the Sidebar and Hero templates.</span>
+        <a href="downloads/templates/sidebar-hero.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/sidebar-hero.html.zip');">Download</a>
         <a href="downloads/templates/sidebar-hero.html" class="button secondary" target="_blank">Preview</a>
       </li>
       <li>
         <a href="downloads/templates/newsletter.html" target="_blank">
           <img src="images/templates/newsletter.jpg">
         </a>
-          <h6 class="name"><span>Newsletter</span> <a href="">View Tests</a></h6>
-          <span class="description">This template is perfect for a point-by-point newsletter. For good measure, we've thrown in a hero image, too.</span>
-        <a href="downloads/templates/newsletter.html.zip" class="button primary">Download</a>
+        <h6 class="name"><span>Newsletter</span> <a href="">View Tests</a></h6>
+        <span class="description">This template is perfect for a point-by-point newsletter. For good measure, we've thrown in a hero image, too.</span>
+        <a href="downloads/templates/newsletter.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/newsletter.html.zip');">Download</a>
         <a href="downloads/templates/newsletter.html" class="button secondary" target="_blank">Preview</a>
       </li>
     </ul> 

@@ -30,6 +30,15 @@
   <title>Ink, a Responsive HTML Email Framework from ZURB</title>
   <link rel="stylesheet" href="stylesheets/app.css">
   <script src="javascripts/vendor/custom.modernizr.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-2195009-47', 'zurb.com');
+    ga('send', 'pageview');
+  </script>
 </head>
 
 <body class="off-canvas hide-extras"> 
@@ -178,41 +187,14 @@
 
   <script src="javascripts/vendor/jquery.js"></script>
   <script src="javascripts/foundation/foundation.js"></script>
-<!--
-	<script src="javascripts/foundation/foundation.abide.js"></script>
-	<script src="javascripts/foundation/foundation.alerts.js"></script>
-	<script src="javascripts/foundation/foundation.clearing.js"></script>
--->
 	<script src="javascripts/foundation/foundation.cookie.js"></script>
-<!-- 	<script src="javascripts/foundation/foundation.dropdown.js"></script> -->
 	<script src="javascripts/foundation/foundation.forms.js"></script>
-<!--
-	<script src="javascripts/foundation/foundation.interchange.js"></script>
-  <script src="javascripts/foundation/foundation.joyride.js"></script>
-	<script src="javascripts/foundation/foundation.magellan.js"></script>
-	<script src="javascripts/foundation/foundation.orbit.js"></script>
-	<script src="javascripts/foundation/foundation.placeholder.js"></script>
-	<script src="javascripts/foundation/foundation.reveal.js"></script>
-	<script src="javascripts/foundation/foundation.section.js"></script>
-	<script src="javascripts/foundation/foundation.tooltips.js"></script>
--->
 	<script src="javascripts/foundation/foundation.topbar.js"></script>
   <script src="javascripts/foundation/jquery.offcanvas.js"></script> 
 
 </section>
 
 <section id="sidebar" role="complementary">
-  <!-- For Future Use 
-<div id="passport">
-    <a id="user" href="#">
-		<h5>First Last Name</h5><br>
-		<p>sign out</p>
-    </a>
-    <a id="ava" href="#">
-		  <div class="avatar"><img src="placehold.it/75x75"></div>
-		</a>
-  </div>
--->
 		
   <div class="more-goodness">		
 		<h6>More ZURB Goodness</h6>

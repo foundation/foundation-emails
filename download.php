@@ -3,6 +3,10 @@
 <?php $title = "Ink: Download Ink"; include 'includes/_header.php' ?>
 <?php include 'includes/_top-bar.php' ?>
 
+<script>
+  ga('send', 'event', 'Ink', 'Download', '<?php echo $download_file; ?>');
+</script>
+
 <section class="top-area main downloading">
   <div class="row">
     <div class="large-12 columns">
