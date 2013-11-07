@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     includes: {
       templates: {
-        src: 'templates/base/*.html',
+        src: 'templates/**/*.html',
         dest: 'build/downloads',
         cwd: '.',
         options: {
@@ -56,9 +56,9 @@ module.exports = function(grunt) {
         command: [
           'cp css/ink.css build/downloads/framework/ink.css',
           'cp templates/boilerplate.html build/downloads/framework/boilerplate.html',
-          // 'cp -r templates/examples build/downloads/framework/examples',
+          'cp -r build/downloads/templates/examples build/downloads/framework/examples',
           'cd build/downloads/framework',
-          'zip ink-<%= pkg.version %>.zip *',
+          'zip -r ink-<%= pkg.version %>.zip *',
           'cd ../../../',
         ].join('&&')
       },
