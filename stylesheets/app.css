@@ -12182,6 +12182,7 @@ hr {
 /* line 379, ../sass/app.scss */
 .doc-nav li {
   display: block;
+  width: 100%;
   font-size: 0.875em;
   margin-bottom: 10px;
 }

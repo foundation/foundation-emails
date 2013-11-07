@@ -376,7 +376,7 @@ hr { border-style: dashed; }
 
 /* docs  */
 .doc-nav { list-style: none; margin-top: 50px; 
-  li { display: block; font-size: emCalc(14px); margin-bottom: 10px; 
+  li { display: block; width: 100%; font-size: emCalc(14px); margin-bottom: 10px; 
     a { color: #333; display: block;
       &.current { font-weight: bold; margin-bottom: 10px; } 
       &:hover { color: #000; }
