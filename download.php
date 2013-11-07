@@ -4,7 +4,7 @@
 <?php include 'includes/_top-bar.php' ?>
 
 <script>
-  ga('send', 'Ink', 'Download', '<?php echo $download_file; ?>');
+  ga('send', 'event', 'Ink', 'Download', '<?php echo $download_file; ?>');
 </script>
 
 <section class="top-area main downloading">
