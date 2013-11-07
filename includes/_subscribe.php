@@ -8,10 +8,10 @@
       <form>
         <div class="row collapse">
           <div class="large-9 small-8 columns">
-            <input type="text" placeholder="signup@example.com">
+            <input id="emailForm" type="text" placeholder="signup@example.com">
           </div>
           <div class="large-3 small-4 columns">
-            <button type="submit" class="small button expand">Submit</button>
+            <button type="submit" class="small button expand" id="emailSubmit">Submit</button>
           </div>
         </div>
       </form>
