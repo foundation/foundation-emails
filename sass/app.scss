@@ -243,7 +243,7 @@ hr { border-style: dashed; }
   }
 }
 
-.inky-fish.load { animation-name: inky-fishes; -webkit-animation-name: inky-fishes; animation-duration:5s; -webkit-animation-duration:5s; animation-iteration-count: infinite; -webkit-animation-iteration-count: infinite; animation-timing-function: ease-out; }   
+.inky-fish.load { animation-name: inky-fishes; -webkit-animation-name: inky-fishes; animation-duration:5s; -webkit-animation-duration:5s; animation-iteration-count: infinite; -webkit-animation-iteration-count: infinite; animation-timing-function: ease-out;transform-origin: 30% 100%; -ms-transform-origin: 30% 100%; -webkit-transform-origin: 30% 100%; }   
 @keyframes inky-fishes {
 	0% { transform: rotate(-15deg); }
 	50% { transform: rotate(15deg); }	
