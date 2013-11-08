@@ -11744,6 +11744,9 @@ hr {
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
   animation-timing-function: ease-out;
+  transform-origin: 30% 100%;
+  -ms-transform-origin: 30% 100%;
+  -webkit-transform-origin: 30% 100%;
 }
 
 @keyframes inky-fishes {
