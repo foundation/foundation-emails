@@ -20,32 +20,11 @@
   }
 ?>
 
-<!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-
-<head>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Ink, a Responsive HTML Email Framework from ZURB</title>
-  <link rel="stylesheet" href="stylesheets/app.css">
-  <script src="javascripts/vendor/custom.modernizr.js"></script>
-</head>
-
-<body class="off-canvas hide-extras"> 
-
-
+<?php $title = "Ink: Stay In Touch"; include 'includes/_header.php' ?>
 
 <section role="main">
 
-<nav class="top-bar hide-for-small">
-  <ul class="title-area">
-    <!-- Title Area -->
-    <li class="name">
-      <h1><a href="http://zurb.com/ink/coming-soon.php" class="home" title="Ink">Ink</a></h1>
-    </li> 
-  </ul>
-</nav>
+<?php include 'includes/_top-bar.php' ?>
 
 
 
@@ -57,8 +36,8 @@
         <h1 class="light">Ink</h1>
         <p class="lead">Quickly create responsive emails that work on any device &amp; client. Even Outlook.</p>
         
-        <p class="cs-text hide-for-small">Ink is coming soon. Get notified when it launches, plus get monthly updates about all that is email-y and responsive.</p>
-        <p class="cs-text show-for-small">Get notified when Ink launches, and get monthly updates.</p>
+        <p class="cs-text hide-for-small">Ink is here! Get monthly updates about all that is email-y and responsive.</p>
+        <p class="cs-text show-for-small">Get monthly updates about all that is email-y.</p>
         <div class="form-thanks">
           <?php
             if (isset($email) && $success) {
@@ -178,41 +157,14 @@
 
   <script src="javascripts/vendor/jquery.js"></script>
   <script src="javascripts/foundation/foundation.js"></script>
-<!--
-	<script src="javascripts/foundation/foundation.abide.js"></script>
-	<script src="javascripts/foundation/foundation.alerts.js"></script>
-	<script src="javascripts/foundation/foundation.clearing.js"></script>
--->
 	<script src="javascripts/foundation/foundation.cookie.js"></script>
-<!-- 	<script src="javascripts/foundation/foundation.dropdown.js"></script> -->
 	<script src="javascripts/foundation/foundation.forms.js"></script>
-<!--
-	<script src="javascripts/foundation/foundation.interchange.js"></script>
-  <script src="javascripts/foundation/foundation.joyride.js"></script>
-	<script src="javascripts/foundation/foundation.magellan.js"></script>
-	<script src="javascripts/foundation/foundation.orbit.js"></script>
-	<script src="javascripts/foundation/foundation.placeholder.js"></script>
-	<script src="javascripts/foundation/foundation.reveal.js"></script>
-	<script src="javascripts/foundation/foundation.section.js"></script>
-	<script src="javascripts/foundation/foundation.tooltips.js"></script>
--->
 	<script src="javascripts/foundation/foundation.topbar.js"></script>
   <script src="javascripts/foundation/jquery.offcanvas.js"></script> 
 
 </section>
 
 <section id="sidebar" role="complementary">
-  <!-- For Future Use 
-<div id="passport">
-    <a id="user" href="#">
-		<h5>First Last Name</h5><br>
-		<p>sign out</p>
-    </a>
-    <a id="ava" href="#">
-		  <div class="avatar"><img src="placehold.it/75x75"></div>
-		</a>
-  </div>
--->
 		
   <div class="more-goodness">		
 		<h6>More ZURB Goodness</h6>

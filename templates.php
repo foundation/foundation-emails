@@ -1,5 +1,5 @@
 <?php $thisPage="templates"; ?>
-<?php include 'includes/_header.php' ?>
+<?php $title = "Ink: Responsive Email Templates"; include 'includes/_header.php' ?>
 <section role="main">
 <?php include 'includes/_top-bar.php' ?>
 
@@ -14,8 +14,8 @@
 
 <div class="row top-headlines">
   <div class="large-12 columns">
-    <h1 class="light text-center">Responsive email templates from us to you</h1>
-    <p class="lead text-center">Build your emails faster with some canned HTML!</p>
+    <h1 class="light text-center">Responsive email templates built on Ink</h1>
+    <p class="lead text-center">Example emails to see Ink in action</p>
   </div>
 </div>
 
@@ -24,8 +24,8 @@
     <div class="how-to-use-templates">
       <h3 class="light">How to use our email templates</h3>
       <br>
-      <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-      <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+      <p>Each template is a single HTML email built using Ink. You can preview them and inspect the code to see how they were implemented, or download them and try making some changes. Each template already has Ink included in a style tag at the top of the file.</p>
+      <p>You can see screenshots of how each template looks on different email clients by viewing its tests. Note that if you are going to send or test them yourself, you need to run them through the <a href="http://zurb.com/ink/inliner.php">Ink Inliner</a> first.</p>
       <div class="inky-small"><img src="images/inky-template.svg"/></div>
     </div>
   </div>
@@ -40,55 +40,52 @@
 <div class="row">
   <div class="small-12 columns">
     <h5 class="normal">You can download all of the templates in one file here:</h6>
-    <a href="downloads/templates/all-templates.zip" class="button primary">All Ink Templates</a>
+    <a href="downloads/templates/all-templates.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/all.zip');">All Ink Templates</a>
     <br><br>
     <ul class="large-block-grid-3 small-block-grid-1 template-thumbs">
       <li>
         <a href="downloads/templates/basic.html" target="_blank">
           <img src="images/templates/basic.jpg">
         </a>
-          <h6 class="name"><span>Basic</span> <a href="">View Tests</a></h6>
-          <span class="description">This template is perfect for sending a basic but nice looking email to your readers.</span>
-        <a href="downloads/templates/basic.html.zip" class="button primary">Download</a>
+        <h6 class="name"><span>Basic</span> <a href="https://litmus.com/pub/85a1b19">View Tests</a></h6>
+        <span class="description">This template is perfect for sending a basic but nice looking email to your readers.</span>
+        <a href="downloads/templates/basic.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/basic.html.zip');">Download</a>
         <a href="downloads/templates/basic.html" class="button secondary" target="_blank">Preview</a>
       </li>
       <li>
         <a href="downloads/templates/hero.html" target="_blank">
           <img src="images/templates/hero.jpg">
         </a>
-          <h6 class="name"><span>Hero</span> <a href="">View Tests</a></h6>
-          <span class="description">Want to include a snazzy hero image in your email? This template is for you!</span>
-        
-        <a href="downloads/templates/hero.html.zip" class="button primary">Download</a>
+        <h6 class="name"><span>Hero</span> <a href="https://litmus.com/pub/6d34a4c">View Tests</a></h6>
+        <span class="description">Want to include a snazzy hero image in your email? This template is for you!</span>
+        <a href="downloads/templates/hero.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/hero.html.zip');">Download</a>
         <a href="downloads/templates/hero.html" class="button secondary" target="_blank">Preview</a>
       </li>
       <li>
         <a href="downloads/templates/sidebar.html" target="_blank">
           <img src="images/templates/sidebar.jpg">
         </a>
-          <h6 class="name"><span>Sidebar</span> <a href="">View Tests</a></h6>
-          <span class="description">This template includes a sidebar area for a list of links, perfect for linking to additional content.</span>
-        
-        <a href="downloads/templates/sidebar.html.zip" class="button primary">Download</a>
+        <h6 class="name"><span>Sidebar</span> <a href="https://litmus.com/pub/f6f3c9d">View Tests</a></h6>
+        <span class="description">This template includes a sidebar area for a list of links, perfect for linking to additional content.</span>
+        <a href="downloads/templates/sidebar.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/sidebar.html.zip');">Download</a>
         <a href="downloads/templates/sidebar.html" class="button secondary" target="_blank">Preview</a>
       </li>
       <li>
         <a href="downloads/templates/sidebar-hero.html" target="_blank">
           <img src="images/templates/sidebar-hero.jpg">
         </a>
-          <h6 class="name"><span>Sidebar Hero</span> <a href="">View Tests</a></h6>
-          <span class="description">Want a sidebar and a hero image? Let's go crazy! This template combines the Sidebar and Hero templates.</span>
-        
-        <a href="downloads/templates/sidebar-hero.html.zip" class="button primary">Download</a>
+        <h6 class="name"><span>Sidebar Hero</span> <a href="https://litmus.com/pub/c00b7d3">View Tests</a></h6>
+        <span class="description">Want a sidebar and a hero image? Let's go crazy! This template combines the Sidebar and Hero templates.</span>
+        <a href="downloads/templates/sidebar-hero.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/sidebar-hero.html.zip');">Download</a>
         <a href="downloads/templates/sidebar-hero.html" class="button secondary" target="_blank">Preview</a>
       </li>
       <li>
         <a href="downloads/templates/newsletter.html" target="_blank">
           <img src="images/templates/newsletter.jpg">
         </a>
-          <h6 class="name"><span>Newsletter</span> <a href="">View Tests</a></h6>
-          <span class="description">This template is perfect for a point-by-point newsletter. For good measure, we've thrown in a hero image, too.</span>
-        <a href="downloads/templates/newsletter.html.zip" class="button primary">Download</a>
+        <h6 class="name"><span>Newsletter</span> <a href="https://litmus.com/pub/ff3824a">View Tests</a></h6>
+        <span class="description">This template is perfect for a point-by-point newsletter. For good measure, we've thrown in a hero image, too.</span>
+        <a href="downloads/templates/newsletter.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/newsletter.html.zip');">Download</a>
         <a href="downloads/templates/newsletter.html" class="button secondary" target="_blank">Preview</a>
       </li>
     </ul> 
