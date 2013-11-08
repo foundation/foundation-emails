@@ -7,7 +7,7 @@
 <h4 class="normal">Containers</h4>
 <p>Ink containers wrap the content and maintain a fixed, 580px layout on large displays.  Below 580px, containers take up 95% of the screen's width, ensuring that your content doesn't run right up against the edges of the user's screen.</p>
 <h4 class="normal">Rows</h4>
-<p>Rows are used to separate blocks of content vertically.  In addition to the vertical separation, the <kbd>&lt;td&gt;</kbd> tags of <code>.row</code> tables use the wrapper class to maintain a gutter between columns.  Note: the last <code>.wrapper</code> td in a row MUST have a class of <code>.last</code> applied to it, even if it's the only wrapper in the row (ex. for a row with a single, twelve column wide content area).</p>
+<p>Rows are used to separate blocks of content vertically.  In addition to the vertical separation, the <kbd>&lt;td&gt;</kbd> tags of <code>.row</code> tables use the wrapper class to maintain a gutter between columns.  Note: the last <code>.wrapper</code> <kbd>&lt;td&gt;</kbd> in a row MUST have a class of <code>.last</code> applied to it, even if it's the only wrapper in the row (ex. for a row with a single, twelve-column wide content area).</p>
 <h4 class="normal">Columns</h4>
 <p>Columns denote the width of the content, as based on a 12-column system.  The content inside them will expand to cover n-columns, assuming that the number of columns in one row adds up to 12.</p>
 <h6>The Three Grid Components</h6>
@@ -55,8 +55,8 @@
 </table>'
 , 'html'); ?>
 <br>
-<h6>Visual Explantion of Grid</h6>
-<p>Diagram of how the basic grid is laid out.  While Ink was used to greate the example (and therefore it responds to the correct media queries), extra coloring and spacing was added for clarity.</p>
+<h6>Visual Explanation of Grid</h6>
+<p>Diagram of how the basic grid is laid out.  While Ink was used to create the example (and therefore it responds to the correct media queries), extra coloring and spacing was added for clarity.</p>
 <iframe id="if-basicGrid" src="docs/examples/basic-grid.html"></iframe>
 <br>
 <hr>
@@ -110,7 +110,7 @@
 
 <h2 class="light">Examples</h2>
 <h4 class="normal">Even Columns</h4>
-<p>Ink's tweve column grid makes creating even column layouts a snap.  Just use one <code>.twelve.columns</code>, two <code>.six.columns</code>, three <code>.four.columns</code> or four <code>.three.columns</code> classes to create your layout.  Appearing as multiple, even columns on large screens, the layout will fold into a single column on small (mobile) screens.</p>
+<p>Ink's 12-column grid makes creating even column layouts a snap.  Just use one <code>.twelve.columns</code>, two <code>.six.columns</code>, three <code>.four.columns</code> or four <code>.three.columns</code> classes to create your layout.  Appearing as multiple, even columns on large screens, the layout will fold into a single column on small (mobile) screens.</p>
 <h6>Code for Even Columns</h6>
 <?php code_example(
 '<table class="container">
@@ -184,7 +184,7 @@
 <p>Unlike the <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation grid</a>, Ink's grid cannot be nested.  A layout simulating rows within columns is possible, however, by placing multiple <code>.columns</code> tables (with the same number of columns) within the same <code>.wrapper</code> td.</p> -->
 <!-- <script type="text/javascript" src="https://snipt.net/embed/01eb0d482e77ef8e25e40e6d1dae49d1/"></script> -->
 <br><h4 class="normal">Centered Content</h4>
-<p>To center the content of a column, apply a class of <code>center</code> to the <kbd>&lt;td&gt;</kbd> that contains the content.  If you want to center an image, you should also apply a class of <code>center</code> to the image itself.  For maximum client support, we also reccommend using the HTML <kbd>&lt;center&gt;</kbd> tag around the content you wish to center.</p>
+<p>To center the content of a column, apply a class of <code>center</code> to the <kbd>&lt;td&gt;</kbd> that contains the content.  If you want to center an image, you should also apply a class of <code>center</code> to the image itself.  For maximum client support, we also recommend using the HTML <kbd>&lt;center&gt;</kbd> tag around the content you wish to center.</p>
 <h6>The Center Class</h6>
 <?php code_example(
 '<table class="row">
@@ -235,7 +235,7 @@
 <p>To get around this, an empty <kbd>&lt;td&gt;</kbd> with a class of <code>expander</code> is used after the <kbd>&lt;td&gt;</kbd> containing the actual content in the <code>.columns</code> table.  This extra <kbd>&lt;td&gt;</kbd> isn't displayed, but it forces the content <kbd>&lt;td&gt;</kbd> to expand to full width.</p>
 <h6>Expander TDs</h6>
 <?php code_example(
-'<table class="twelve columns">
+'<table class="columns">
   <tr>
     <td>
       <!-- Content not large enough to "prop" the container open all the way -->

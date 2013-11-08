@@ -5,7 +5,7 @@
 <p>For cases where neither the Ink grid nor the Ink sub-grid is appropriate, the block-grid can often be quite useful.  Block-grid elements automatically align to the left and are pushed down to the next row individually as the viewport gets smaller...all without using media queries.</p>
 <hr />
 <h2 class="light">Markup</h2>
-<p>Block-grids consist of a table with class <code>block-grid</code> applied to it, along with a class in the pattern 'number-up' (ex. <code>.two-up</code>, <code>.three-up</code>, etc.) to describe how many even-sized elements should be placed per row.  Extra care should be taken to ensure that there aren't any whitespace characters or newlines between the closing <code>&lt;td&gt;</code> of a block-grid element and the opening <code>&lt;td&gt;</code> of the precceding element, since some clients will render the whitespace as a gap between the elements.</p>
+<p>Block-grids consist of a table with class <code>block-grid</code> applied to it, along with a class in the pattern 'number-up' (ex. <code>.two-up</code>, <code>.three-up</code>, etc.) to describe how many even-sized elements should be placed per row.  Extra care should be taken to ensure that there aren't any whitespace characters or newlines between the closing <code>&lt;td&gt;</code> of a block-grid element and the opening <code>&lt;td&gt;</code> of the preceding element, since some clients will render the whitespace as a gap between the elements.</p>
 <h6>Basic Block-Grid Markup</h6>
 <?php code_example(
 '<table class="container">
@@ -37,7 +37,7 @@
 <hr />
 <h2 class="light">Examples</h2>
 <h4 class="normal">Multi-column Layouts in Gmail</h4>
-<p>A major use case for block-grids, since they don't rely on media queries, is to create multi-column layouts for Gmail. The simplest way to accomplish this is to create a <code>.two-up</code> block-grid and use the blick-grid elements as your column structures.  As a progressive enhancement, adding a media query that expands the columns to 100% width under 600px would cause the columns to take up the whole screen on mobile clients that support media queries, while not breaking the reflow pattern for those that don't.</p>
+<p>A major use case for block-grids, since they don't rely on media queries, is to create multi-column layouts for Gmail. The simplest way to accomplish this is to create a <code>.two-up</code> block-grid and use the block-grid elements as your column structures.  As a progressive enhancement, adding a media query that expands the columns to 100% width under 600px would cause the columns to take up the whole screen on mobile clients that support media queries, while not breaking the reflow pattern for those that don't.</p>
 <h6>Gmail Two Column Layout</h6>
 <?php code_example(
 '<table class="container">
