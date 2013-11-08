@@ -19,7 +19,7 @@
 <br>
 <hr />
 <h2 class="light">Column Sizes</h2>
-<p>Below is a chart of the sizes images should be to fully fit vatious sizes of grid columns on a desktop (larger than 600px) view.  Height should be determined with respect to width and should also be explicitly declared on the <kbd>&lt;img&gt;</kbd> tag.</p>
+<p>Below is a chart of the sizes images should be to fully fit various sizes of grid columns on a desktop (larger than 600px) view.  Height should be determined with respect to width and should also be explicitly declared on the <kbd>&lt;img&gt;</kbd> tag.</p>
 <table>
   <thead>
     <td>Number of Columns</td>
