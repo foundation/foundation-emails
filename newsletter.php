@@ -17,6 +17,8 @@
     $result = curl_exec($ch);                                                                 
     $success = strstr($result, '@');
     curl_close($ch);
-    echo $success
+    echo !!$success;
+  } else {
+    echo 'Blah';
   }
 ?>

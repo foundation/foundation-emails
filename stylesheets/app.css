@@ -12695,13 +12695,22 @@ ul.mobile-nav a.current {
 .inky-inliner .show-on-submit {
   display: none;
 }
+/* line 548, ../sass/app.scss */
+.inky-inliner .alert-box {
+  background: #004454;
+  border-color: 002932;
+}
+/* line 551, ../sass/app.scss */
+.inky-inliner .alert-box a {
+  color: #fff;
+}
 
-/* line 549, ../sass/app.scss */
+/* line 556, ../sass/app.scss */
 .inline-advantages {
   margin-left: 25px;
 }
 
-/* line 550, ../sass/app.scss */
+/* line 557, ../sass/app.scss */
 #previewModal {
   height: 100%;
   width: 100%;
@@ -12712,7 +12721,7 @@ ul.mobile-nav a.current {
   z-index: 45;
   display: none;
 }
-/* line 560, ../sass/app.scss */
+/* line 567, ../sass/app.scss */
 #previewModal .control-bar {
   width: 100%;
   position: fixed;
@@ -12721,77 +12730,77 @@ ul.mobile-nav a.current {
   background: #f7f7f7;
   box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.25);
 }
-/* line 568, ../sass/app.scss */
+/* line 575, ../sass/app.scss */
 #previewModal .control-bar .close-btn {
   margin: 14px 10px;
   display: inline-block;
 }
-/* line 573, ../sass/app.scss */
+/* line 580, ../sass/app.scss */
 #previewModal .control-bar .report-btn {
   margin: 5px 10px;
   float: right;
 }
-/* line 579, ../sass/app.scss */
+/* line 586, ../sass/app.scss */
 #previewModal iframe {
   margin-top: 40px;
   border: none;
   width: 100%;
   height: 100%;
 }
-/* line 586, ../sass/app.scss */
+/* line 593, ../sass/app.scss */
 #previewModal.active {
   display: block;
 }
 
-/* line 591, ../sass/app.scss */
+/* line 598, ../sass/app.scss */
 #inlinerReportModal ol {
   margin-left: 2em;
 }
 
 /* compatibility */
-/* line 598, ../sass/app.scss */
+/* line 605, ../sass/app.scss */
 table span {
   display: block;
   text-align: center;
 }
-/* line 599, ../sass/app.scss */
+/* line 606, ../sass/app.scss */
 table .check {
   color: green;
 }
-/* line 600, ../sass/app.scss */
+/* line 607, ../sass/app.scss */
 table .x {
   color: red;
 }
 
-/* line 602, ../sass/app.scss */
+/* line 609, ../sass/app.scss */
 .compatibility-section {
   background: #f8f8f8;
   border: 1px solid #ddd;
   padding: 15px;
 }
-/* line 603, ../sass/app.scss */
+/* line 610, ../sass/app.scss */
 .compatibility-section p {
   margin-bottom: 0;
 }
-/* line 604, ../sass/app.scss */
+/* line 611, ../sass/app.scss */
 .compatibility-section a.reveal-table {
   font-size: 0.875em;
   display: block;
   text-align: right;
   line-height: 22px;
 }
-/* line 605, ../sass/app.scss */
+/* line 612, ../sass/app.scss */
 .compatibility-section table {
   display: none;
   margin: 20px 0 0;
 }
-/* line 606, ../sass/app.scss */
+/* line 613, ../sass/app.scss */
 .compatibility-section.active table {
   display: block;
 }
 
 /* magellan */
-/* line 610, ../sass/app.scss */
+/* line 617, ../sass/app.scss */
 [data-magellan-expedition] {
   background: transparent;
   left: auto;
@@ -12799,25 +12808,25 @@ table .x {
   min-width: 0;
 }
 
-/* line 613, ../sass/app.scss */
+/* line 620, ../sass/app.scss */
 ul.sub-nav li a {
   display: block;
   font-size: 0.875em;
   padding: 5px 0;
   color: #333;
 }
-/* line 614, ../sass/app.scss */
+/* line 621, ../sass/app.scss */
 ul.sub-nav li.active a {
   color: #CC7691;
   font-weight: bold;
 }
 
 /* copy/paste */
-/* line 619, ../sass/app.scss */
+/* line 626, ../sass/app.scss */
 h6 {
   position: relative;
 }
-/* line 620, ../sass/app.scss */
+/* line 627, ../sass/app.scss */
 h6 small.cp {
   position: absolute;
   right: 0;

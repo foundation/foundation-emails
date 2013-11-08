@@ -545,6 +545,13 @@ ul.mobile-nav { display: block; margin-bottom: 0;
   .show-on-submit {
     display: none;
   }
+  .alert-box {
+    background: #004454;
+    border-color: 002932;
+    a {
+      color: #fff;
+    }
+  }
 }
 .inline-advantages { margin-left: 25px; }
 #previewModal {

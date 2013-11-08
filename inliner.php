@@ -34,7 +34,7 @@
         <label for="appendQuery">
           <input type="checkbox" id="appendQuery"> Append query string to links
         </label>
-        <input id="linkAppend" type="text" placeholder="Enter the URL where your email lives" class="inactive">
+        <input id="linkAppend" type="text" placeholder="Enter append string (do not include the ?)" class="inactive">
         <!-- <label for="removeComments">
           <input type="checkbox" id="removeComments"> Remove Comments
         </label> -->
@@ -42,9 +42,9 @@
       
       <br>
       
-      <div class="inliner-form hide-on-submit">      
+      <div id="emailBox" class="inliner-form">      
         <label>Enter your email and we'll send you a note once we add new features to Ink! <small>OPTIONAL</small></label>
-        <input type="email" placeholder="e.g. you@yourdomain.com">
+        <input id="inlinerEmailSignup" type="email" placeholder="e.g. you@yourdomain.com">
       </div>
       
       <br>

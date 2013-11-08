@@ -101,6 +101,15 @@ $('#skateForm').on('submit', function(e){
     $('#emailSource').val(resp.html);
     $('#previewModal iframe').contents().find('html').html(resp.html);
   }, "json");
+
+  var email = $('#inlinerEmailSignup').val()
+  if (email) {
+    $('#emailBox input').attr("disabled", "disabled");
+    var data = {
+      email: email
+    };
+    $.post("newsletter.php", data, function(resp){$('#emailBox').html('<div data-alert class="alert-box">Congratulations, '+email+' is signed up for the list!<a href="#" class="close">&times;</a></div>');});
+  }
 });
 
 $(document).ready(function(){
