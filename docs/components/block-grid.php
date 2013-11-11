@@ -36,7 +36,7 @@
 <br>
 <hr />
 <h2 class="light">Examples</h2>
-<h4 class="normal">Multi-column Layouts in Gmail</h4>
+<h4 id="gmail" class="normal">Multi-column Layouts in Gmail</h4>
 <p>A major use case for block-grids, since they don't rely on media queries, is to create multi-column layouts for Gmail. The simplest way to accomplish this is to create a <code>.two-up</code> block-grid and use the block-grid elements as your column structures.  As a progressive enhancement, adding a media query that expands the columns to 100% width under 600px would cause the columns to take up the whole screen on mobile clients that support media queries, while not breaking the reflow pattern for those that don't.</p>
 <h6>Gmail Two Column Layout</h6>
 <?php code_example(
