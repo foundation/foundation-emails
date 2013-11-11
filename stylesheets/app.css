@@ -11538,7 +11538,8 @@ ul.header-social-links li a:hover {
 }
 /* line 196, ../sass/app.scss */
 .stay-updated form input {
-  padding: 18px;
+  padding-left: 15px;
+  height: 42px;
   border: none;
   border-radius: 0;
   -moz-border-radius: 0;
@@ -11546,6 +11547,7 @@ ul.header-social-links li a:hover {
 }
 /* line 197, ../sass/app.scss */
 .stay-updated form .button {
+  height: 42px;
   padding-top: 13px;
 }
 
