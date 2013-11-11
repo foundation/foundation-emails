@@ -79,7 +79,7 @@
         <a href="downloads/templates/sidebar-hero.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/sidebar-hero.html.zip');">Download</a>
         <a href="downloads/templates/sidebar-hero.html" class="button secondary" target="_blank">Preview</a>
       </li>
-      <li>
+      <!-- <li>
         <a href="downloads/templates/newsletter.html" target="_blank">
           <img src="images/templates/newsletter.jpg">
         </a>
@@ -87,7 +87,7 @@
         <span class="description">This template is perfect for a point-by-point newsletter. For good measure, we've thrown in a hero image, too.</span>
         <a href="downloads/templates/newsletter.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/newsletter.html.zip');">Download</a>
         <a href="downloads/templates/newsletter.html" class="button secondary" target="_blank">Preview</a>
-      </li>
+      </li> -->
     </ul> 
     <!--
 <div class="panel">
