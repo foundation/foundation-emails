@@ -205,18 +205,26 @@ ul.header-social-links { display: block;
 hr { border-style: dashed; }
 
 /* templates */
-.template-thumbs .notable-post { position: absolute; top: 47%; text-align: center; width: 100%;  display:none; z-index:1;
+.template-thumbs .preview-post { position: absolute; top: 47%; text-align: center; width: 100%;  display:none; z-index:1;
   h5 { color: #ffffff; margin: 0px; line-height: 1; display:inline; }
   img { display: inline-block; width: 20px; margin-top: -4px; margin-right: 8px;}
 }
-
+@media only screen {
+  .preview{
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -webkit-transition: background-color 400ms ease-in-out;
+    -moz-transition: background-color 400ms ease-in-out;
+    transition: background-color 400ms ease-in-out;
+  }
+}
 .template-thumbs { margin-bottom: 50px;
   a { display: block; position: relative;
     &.button { display: inline-block; width: 45%; }
     img.thumb { display: block; margin-bottom: 15px; border: #f1f1f1 1px solid; width:100%;}
-    &.notable:hover { background-color: rgba(0,0,0,0.5); 
+    &.preview:hover { background-color: rgba(0,0,0,0.5); 
       img.thumb { opacity: 0.4; }
-      .notable-post { display:block; }
+      .preview-post { display:block; }
     }
   }
   span { display: block; color: #333; 
