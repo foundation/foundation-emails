@@ -44,8 +44,9 @@
     <br><br>
     <ul class="large-block-grid-3 small-block-grid-1 template-thumbs">
       <li>
-        <a href="downloads/templates/basic.html" target="_blank">
-          <img src="images/templates/basic.jpg">
+        <a href="downloads/templates/basic.html" class="notable" target="_blank">
+          <div class="notable-post"><img src="images/notable-icon.png"><h5>View on Notable</h5></div>
+          <img src="images/templates/basic.jpg" class="thumb">
         </a>
         <h6 class="name"><span>Basic</span> <a href="https://litmus.com/pub/85a1b19">View Tests</a></h6>
         <span class="description">This template is perfect for sending a basic but nice looking email to your readers.</span>
@@ -53,8 +54,9 @@
         <a href="downloads/templates/basic.html" class="button secondary" target="_blank">Preview</a>
       </li>
       <li>
-        <a href="downloads/templates/hero.html" target="_blank">
-          <img src="images/templates/hero.jpg">
+        <a href="downloads/templates/hero.html" class="notable" target="_blank">
+          <div class="notable-post"><img src="images/notable-icon.png"><h5>View on Notable</h5></div>
+          <img src="images/templates/hero.jpg" class="thumb">
         </a>
         <h6 class="name"><span>Hero</span> <a href="https://litmus.com/pub/6d34a4c">View Tests</a></h6>
         <span class="description">Want to include a snazzy hero image in your email? This template is for you!</span>
@@ -62,8 +64,9 @@
         <a href="downloads/templates/hero.html" class="button secondary" target="_blank">Preview</a>
       </li>
       <li>
-        <a href="downloads/templates/sidebar.html" target="_blank">
-          <img src="images/templates/sidebar.jpg">
+        <a href="https://notableapp.com/posts/744339" class="notable" target="_blank">
+          <div class="notable-post"><img src="images/notable-icon.png"><h5>View on Notable</h5></div>
+          <img src="images/templates/sidebar.jpg" class="thumb">
         </a>
         <h6 class="name"><span>Sidebar</span> <a href="https://litmus.com/pub/f6f3c9d">View Tests</a></h6>
         <span class="description">This template includes a sidebar area for a list of links, perfect for linking to additional content.</span>
@@ -71,8 +74,9 @@
         <a href="downloads/templates/sidebar.html" class="button secondary" target="_blank">Preview</a>
       </li>
       <li>
-        <a href="downloads/templates/sidebar-hero.html" target="_blank">
-          <img src="images/templates/sidebar-hero.jpg">
+        <a href="https://notableapp.com/posts/744071" class="notable" target="_blank">
+          <div class="notable-post"><img src="images/notable-icon.png"><h5>View on Notable</h5></div>
+          <img src="images/templates/sidebar-hero.jpg" class="thumb">
         </a>
         <h6 class="name"><span>Sidebar Hero</span> <a href="https://litmus.com/pub/c00b7d3">View Tests</a></h6>
         <span class="description">Want a sidebar and a hero image? Let's go crazy! This template combines the Sidebar and Hero templates.</span>
@@ -81,7 +85,7 @@
       </li>
       <!-- <li>
         <a href="downloads/templates/newsletter.html" target="_blank">
-          <img src="images/templates/newsletter.jpg">
+          <img class="thumb" src="images/templates/newsletter.jpg">
         </a>
         <h6 class="name"><span>Newsletter</span> <a href="https://litmus.com/pub/ff3824a">View Tests</a></h6>
         <span class="description">This template is perfect for a point-by-point newsletter. For good measure, we've thrown in a hero image, too.</span>
