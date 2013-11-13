@@ -2,20 +2,18 @@
 <p class="lead">Dynamic and effective calls to action.</p>
 <hr />
 <h2 class="light">Structure</h2>
-<p>To create buttons that look great in most clients, give a class of <code>button</code> to an <kbd>&lt;a&gt;</kbd> tag, and use it to enclose a table with your content.  Buttons expand to the full width of their container by default, so if you don't want them to expand all the way, consider placing them in a <a href="#sub-grid">sub-grid</a> or <a href="block-grid">block-grid</a> element.</p>
+<p>To create buttons that look great in most clients, make a table of class <code>button</code> to wrap your <kbd>&lt;a&gt;</kbd> tag.  Buttons expand to the full width of their container by default, so if you don't want them to expand all the way, consider placing them in a <a href="#sub-grid">sub-grid</a> or <a href="block-grid">block-grid</a> element.</p>
 <h6>A Basic Button</h6>
-    <?php code_example(
-'<a class="button" href="#">
-  <table>
-    <tr>
-      <td>
-        Button Label
-      </td>
-    </tr>
-  </table>
-</a>'
-    , 'html'); ?>
-    <br>
+<?php code_example(
+'<table>
+  <tr>
+    <td>
+      <a class="button" href="#">Button Label</a>
+    </td>
+  </tr>
+</table>'
+, 'html'); ?>
+<br>
 <hr />
 <h2 class="light">Style Classes</h2>
 <p>Several built in styling classes can be applied to the same element as the <code>button</code> class is applied to in order to adjust the button's appearance.</p>
@@ -74,7 +72,7 @@
 <h2 class="light">Examples</h2>
 <p>Buttons expand to the width of their parent container by default, so it's recommended that you contain them within a sub-grid or a relatively small number of columns on the main grid.</p>
 <h6>Button Demo</h6>
-<p>All the button modifiers demonstrated.  The first two rows of buttons are contained to <code>.four.columns</code> sections of the grid, and the second two rows are contained to <code>.six.columns</code> sections for clarity.</p>
+<p>All the button modifiers demonstrated.  The rows of buttons are contained to <code>.four.columns</code> or <code>.six.columns</code> sections of the grid for clarity.</p>
 <iframe id="if-buttons" src="docs/examples/buttons.html"></iframe>
 <br>
 <hr />
@@ -82,7 +80,7 @@
 <div class="compatibility-section">
   <div class="row">
     <div class="large-9 columns">
-      <p>The buttons are unavailable in <strong>Microsoft Outlook (2007, 2010, 2013)</strong>. A fix is on the way.</p>
+      <p>The buttons are compatible with most major clients.</p>
     </div>
     <div class="large-3 columns">
       <a href="#" class="reveal-table">Toggle Full Table</a>
@@ -117,8 +115,8 @@
           </tr>
           <tr>
             <td>Outlook (2007, 2010, 2013)</td>
-            <td><span class="x">&#10008;</span></td>
-            <td>Visible, but not clickable. A fix is currently in the works.</td>
+            <td><span class="check">&#10004;</span></td>
+            <td></td>
           </tr>
           <tr>
             <td>Outlook (2011)</td>
