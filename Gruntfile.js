@@ -100,7 +100,7 @@ module.exports = function(grunt) {
     },
     watch: {
       docs: {
-        files: ['docs/docs.php', 'docs/**/*.php', 'docs/**/*.html'],
+        files: ['docs/docs.php', 'docs/**/*.php', 'docs/**/*.html', 'css/*.css'],
         tasks: ['shell:makeStage', 'includes:docsDev', 'shell:testDocs'],
         options: {
           livereload: true,

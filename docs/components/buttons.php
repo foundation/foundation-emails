@@ -82,7 +82,7 @@
 <div class="compatibility-section">
   <div class="row">
     <div class="large-9 columns">
-      <p>The buttons works (without <code>:hover</code> effects) in most major email clients.</p>
+      <p>The buttons are unavailable in <strong>Microsoft Outlook (2007, 2010, 2013)</strong>. A fix is on the way.</p>
     </div>
     <div class="large-3 columns">
       <a href="#" class="reveal-table">Toggle Full Table</a>
@@ -117,8 +117,8 @@
           </tr>
           <tr>
             <td>Outlook (2007, 2010, 2013)</td>
-            <td><span class="check">&#10004;</span></td>
-            <td></td>
+            <td><span class="x">&#10008;</span></td>
+            <td>Visible, but not clickable. A fix is currently in the works.</td>
           </tr>
           <tr>
             <td>Outlook (2011)</td>
