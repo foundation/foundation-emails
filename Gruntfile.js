@@ -94,7 +94,7 @@ module.exports = function(grunt) {
       cleanUp: {
         command: [
           'rm -rf build',
-          'Say "Deploy Completed"'
+          'echo "Deploy Completed"'
         ].join('&&')
       }
     },
