@@ -5,10 +5,10 @@
 <p>To create buttons that look great in most clients, make a table of class <code>button</code> to wrap your <kbd>&lt;a&gt;</kbd> tag.  Buttons expand to the full width of their container by default, so if you don't want them to expand all the way, consider placing them in a <a href="#sub-grid">sub-grid</a> or <a href="block-grid">block-grid</a> element.</p>
 <h6>A Basic Button</h6>
 <?php code_example(
-'<table>
+'<table class="button">
   <tr>
     <td>
-      <a class="button" href="#">Button Label</a>
+      <a href="#">Button Label</a>
     </td>
   </tr>
 </table>'
