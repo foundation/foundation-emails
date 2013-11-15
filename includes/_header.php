@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon" />
+  
   <?php 
     if($download_file) {
       echo "<meta http-equiv=\"Refresh\" content=\"0.5; url=downloads/$download_file\" />";
