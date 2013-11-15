@@ -205,6 +205,19 @@ td.expander {
   padding: 0 !important;
 }
 
+table.columns .text-pad {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+table.columns .left-text-pad {
+  padding-left: 10px;
+}
+
+table.columns .right-text-pad {
+  padding-right: 10px;
+}
+
 /* Block Grid */
 
 .block-grid {
@@ -655,6 +668,10 @@ body.outlook img {
     height: auto !important;
   }
 
+  table[class="body"] center {
+    min-width: 0 !important;
+  }
+
   table[class="body"] .container {
     width: 95% !important;
   }
@@ -707,8 +724,12 @@ body.outlook img {
     width: 9999px !important;
   }
 
-  table[class="body"] center {
-    min-width: 0 !important;
+  table[class="body"] .right-text-pad {
+    padding-left: 10px !important;
+  }
+
+  table[class="body"] .left-text-pad {
+    padding-right: 10px !important;
   }
 
   table[class="body"] .hide-for-small,
