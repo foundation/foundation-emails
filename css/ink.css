@@ -686,7 +686,7 @@ body.outlook img {
 
   table[class="body"] table.columns td,
   table[class="body"] table.column td {
-    width: 100%;
+    width: 100% !important;
   }
 
   table[class="body"] td.offset-by-one,
