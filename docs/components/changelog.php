@@ -2,6 +2,10 @@
 <p class="lead">All the latest and greatest changes to Ink.</p>
 <hr>
 <h2 class="light">1.0 - Public Release</h2>
+<h6 id="v1-0-3">1.0.3</h6>
+<ul>
+  <li>Add text-pad classes</li>
+</ul>
 <h6 id="v1-0-2">1.0.2</h6>
 <ul>
   <li>Switch to new button syntax to fully support Microsoft Outlook</li>

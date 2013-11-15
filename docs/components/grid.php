@@ -230,6 +230,65 @@
 <iframe id="if-centerClass" src="docs/examples/center-class.html"></iframe>
 <br>
 <br>
+<h4 class="normal">Text Padding</h4>
+<p>A fairly common use case for the container is to give your text a white background to separate it from a colored email body.  To assist with this design pattern, we've included three helper classes with Ink: <code>.text-pad</code>, <code>.left-text-pad</code> and <code>.right-text-pad</code>.</p>
+<p>The <code>.text-pad</code> class provides 10px of padding on either side of the content (while it's named <strong>text</strong>-pad, it works just as well on buttons or images), making sure it doesn't butt right up against the edge of your container.  The <code>.text-pad</code> class should be applied to the <kbd>&lt;td&gt;</kbd> of a <code>.columns</code> <kbd>&lt;table&gt;</kbd>.</p>
+<p>The <code>.left-text-pad</code> and <code>.right-text-pad</code> do the same thing as the <code>.text-pad</code> class, but are meant to be applied to content that doesn't extend across the entire row (in other words, content that isn't twelve columns wide).  The directional text-padding classes only apply the padding to the side of the content near the edge of the container on large screens, but apply it to both sides on small screens, when the columns expand to fill the full width of the row.</p>
+<h6>The Text-Pad Class</h6>
+<?php code_example(
+'<table class="row">
+  <tr>
+    <td class="wrapper">
+
+      <table class="four columns">
+        <tr>
+          <td class="left-text-pad">
+
+            Text
+
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+
+    </td>
+    <td class="wrapper">
+
+      <table class="four columns">
+        <tr>
+          <td>
+
+            Text
+
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+
+    </td>
+    <td class="wrapper last">
+
+      <table class="four columns">
+        <tr>
+          <td class="right-text-pad">
+
+            Text
+
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>'
+, 'html'); ?>
+<br>
+<h6>Container Backgrounds</h6>
+<p>Visual example of the body and the container having different colored backgrounds, the main use case for <code>.text-pad</code>.</p>
+<iframe id="if-textPad" src="docs/examples/text-pad.html"></iframe>
+<br>
+<br>
 <h4 class="normal">Expanders</h4>
 <p>When the Ink grid is shown on a small screen, the <code>.columns</code> tables expand to the full width of the container and stack vertically.  On some clients, however, the columns don't expand properly if the content isn't as wide as the screen.  While this might not seem so bad, it can cause your layout to appear broken if you are using a background color on the <code>.columns</code> table or are centering the content.</p>
 <p>To get around this, an empty <kbd>&lt;td&gt;</kbd> with a class of <code>expander</code> is used after the <kbd>&lt;td&gt;</kbd> containing the actual content in the <code>.columns</code> table.  This extra <kbd>&lt;td&gt;</kbd> isn't displayed, but it forces the content <kbd>&lt;td&gt;</kbd> to expand to full width.</p>

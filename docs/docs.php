@@ -7,6 +7,7 @@
     #if-subGrid {height: 140px;}
     #if-blockGrid {height: 540px;}
     #if-centerClass {height: 220px;}
+    #if-textPad {height: 440px;}
     #if-visibilityClasses {height: 110px;}
     #if-panels {height: 420px;}
     #if-buttons{height: 325px;}
@@ -18,6 +19,7 @@
     #if-subGrid {height: 210px;}
     #if-blockGrid {height: 1000px;}
     #if-centerClass {height: 270px;}   
+    #if-textPad {height: 480px;}   
     #if-visibilityClasses {height: 110px;}   
     #if-panels {height: 400px;}   
     #if-buttons{height: 650px;}
