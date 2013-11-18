@@ -93,7 +93,7 @@
   <tr>
     <td>table</td>
     <td>{number}</td>
-    <td>Can be any number between one and twelve (spelled out).  Used to determine how wide your <code>.columns</code> tables are.  The number of columns in each row should add up to 12, including <a href="#offsets">offset columns</a>.</td>
+    <td>Can be any number between one and twelve (spelled out).  Used to determine how wide your <code>.columns</code> tables are.  The number of columns in each row should add up to 12, including <!-- <a href="#offsets"> -->offset columns<!-- </a> -->.</td>
   </tr>
   <tr>
     <td>table</td>
