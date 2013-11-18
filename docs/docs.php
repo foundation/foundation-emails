@@ -39,6 +39,7 @@
         <li><a href="#panels">Panels</a></li>
         <li><a href="#buttons">Buttons</a></li>
         <li><a href="#images">Retina Images</a></li>
+        <li><a href="#compatibility">Supported Clients</a></li>
         <li><a href="#changes">Changelog</a></li>
       </ul>
     </div>
@@ -74,6 +75,10 @@
     <hr class="section">
 
     <?php require 'components/images.php' ?>
+
+    <hr class="section">
+
+    <?php require 'components/compatibility.php' ?>
 
     <hr class="section">
 
