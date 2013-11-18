@@ -654,9 +654,8 @@ table.round td {
 
 /* Outlook First */
 
-body.outlook img {
-  width: auto !important;
-  max-width: none !important;
+body.outlook p {
+  display: inline !important;
 }
 
 /*  Media Queries */
