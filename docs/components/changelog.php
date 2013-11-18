@@ -5,6 +5,8 @@
 <h6 id="v1-0-3">1.0.3</h6>
 <ul>
   <li>Add text-pad classes</li>
+  <li>Lower heading sizes to more resonable defaults</li>
+  <li>Add compatibility chart of supported/tested clients to the docs</li>
 </ul>
 <h6 id="v1-0-2">1.0.2</h6>
 <ul>
