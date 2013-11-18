@@ -306,12 +306,12 @@ h1, h2, h3, h4, h5, h6 {
   word-break: normal;
 }
 
-h1 {font-size: 59px;}
-h2 {font-size: 45px;}
-h3 {font-size: 37px;}
+h1 {font-size: 40px;}
+h2 {font-size: 36px;}
+h3 {font-size: 32px;}
 h4 {font-size: 28px;}
-h5 {font-size: 23px;}
-h6 {font-size: 17px;}
+h5 {font-size: 24px;}
+h6 {font-size: 20px;}
 body, p {font-size: 14px;line-height:19px;}
 
 p { 
