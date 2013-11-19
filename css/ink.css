@@ -291,9 +291,8 @@ img.center {
 
 /* Typography */
 
-body, h1, h2, h3, h4, h5, h6, p { 
+body, table.body, h1, h2, h3, h4, h5, h6, p { 
   color: #222222;
-  display: block; 
   font-family: "Helvetica", "Arial", sans-serif; 
   font-weight: normal; 
   padding:0; 
