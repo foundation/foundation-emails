@@ -131,6 +131,10 @@ table.column td.sub-column {
   padding-right: 10px;
 }
 
+td.sub-column, td.sub-columns {
+  min-width: 0px;
+}
+
 table.row td.last,
 table.container td.last {
   padding-right: 0px;
