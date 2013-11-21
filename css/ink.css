@@ -226,11 +226,13 @@ table.columns .text-pad {
   padding-right: 10px;
 }
 
-table.columns .left-text-pad {
+table.columns .left-text-pad,
+table.columns .text-pad-left {
   padding-left: 10px;
 }
 
-table.columns .right-text-pad {
+table.columns .right-text-pad,
+table.columns .text-pad-right {
   padding-right: 10px;
 }
 
@@ -738,11 +740,13 @@ body.outlook p {
     width: 9999px !important;
   }
 
-  table[class="body"] .right-text-pad {
+  table[class="body"] .right-text-pad,
+  table[class="body"] .text-pad-right {
     padding-left: 10px !important;
   }
 
-  table[class="body"] .left-text-pad {
+  table[class="body"] .left-text-pad,
+  table[class="body"] .text-pad-left {
     padding-right: 10px !important;
   }
 
