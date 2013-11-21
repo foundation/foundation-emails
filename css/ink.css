@@ -221,18 +221,23 @@ td.expander {
   padding: 0 !important;
 }
 
-table.columns .text-pad {
+table.columns .text-pad,
+table.column .text-pad {
   padding-left: 10px;
   padding-right: 10px;
 }
 
 table.columns .left-text-pad,
-table.columns .text-pad-left {
+table.columns .text-pad-left,
+table.column .left-text-pad,
+table.column .text-pad-left {
   padding-left: 10px;
 }
 
 table.columns .right-text-pad,
-table.columns .text-pad-right {
+table.columns .text-pad-right,
+table.column .right-text-pad,
+table.column .text-pad-right {
   padding-right: 10px;
 }
 
