@@ -339,15 +339,15 @@ a {
 }
 
 a:hover { 
-  color: #2795b6 !important;
+  color: #2795b6;
 }
 
 a:active { 
-  color: #2795b6 !important;
+  color: #2795b6;
 }
 
 a:visited { 
-  color: #2ba6cb !important;
+  color: #2ba6cb;
 }
 
 h1 a, 
@@ -356,7 +356,7 @@ h3 a,
 h4 a, 
 h5 a, 
 h6 a {
-  color: #2ba6cb !important;
+  color: #2ba6cb;
 }
 
 h1 a:active, 
@@ -365,7 +365,7 @@ h3 a:active,
 h4 a:active, 
 h5 a:active, 
 h6 a:active { 
-  color: #2ba6cb !important; 
+  color: #2ba6cb; 
 } 
 
 h1 a:visited, 
@@ -374,7 +374,7 @@ h3 a:visited,
 h4 a:visited, 
 h5 a:visited, 
 h6 a:visited { 
-  color: #2ba6cb !important; 
+  color: #2ba6cb; 
 } 
 
 /* Panels */
