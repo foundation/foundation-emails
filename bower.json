@@ -1,0 +1,12 @@
+{
+  "name": "ink",
+  "version": "1.0.3",
+  "main": ["./css/ink.css"],
+  "ignore": [
+    "**/.*",
+    "docs",
+    "*.md",
+    "*.js",
+    "*.json"
+  ]
+}
