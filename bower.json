@@ -1,6 +1,6 @@
 {
   "name": "ink",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": ["./css/ink.css"],
   "ignore": [
     "**/.*",
