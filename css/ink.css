@@ -367,7 +367,7 @@ h3 a,
 h4 a, 
 h5 a, 
 h6 a {
-  color: #2ba6cb !important;
+  color: #2ba6cb;
 }
 
 h1 a:active, 
