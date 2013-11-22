@@ -2,7 +2,7 @@
 <p class="lead">Dynamic and effective calls to action.</p>
 <hr />
 <h2 class="light">Structure</h2>
-<p>To create buttons that look great in most clients, make a table of class <code>button</code> to wrap your <kbd>&lt;a&gt;</kbd> tag.  Buttons expand to the full width of their container by default, so if you don't want them to expand all the way, consider placing them in a <a href="#sub-grid">sub-grid</a> or <a href="block-grid">block-grid</a> element.</p>
+<p>To create buttons that look great in most clients, make a table of class <code>button</code> to wrap your <kbd>&lt;a&gt;</kbd> tag.  Buttons expand to the full width of their container by default, so if you don't want them to expand all the way, consider placing them in a <a href="#sub-grid">sub-grid</a> or <a href="#block-grid">block-grid</a> element.</p>
 <h6>A Basic Button</h6>
 <?php code_example(
 '<table class="button">
