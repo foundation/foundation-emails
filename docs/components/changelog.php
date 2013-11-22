@@ -2,6 +2,17 @@
 <p class="lead">All the latest and greatest changes to Ink.</p>
 <hr>
 <h2 class="light">1.0 - Public Release</h2>
+<h6 id="v1-0-4">1.0.4</h6>
+<ul>
+  <li>Apply font styles more uniformly to fix clients that strip out the <kbd>&lt;body&gt;</kbd> tag (fixes inliner preview)</li>
+  <li>Remove percentage based padding on sub-grid (fixes Outlook 2000/2002/2003)</li>
+  <li>Add Bower package metadata</li>
+  <li>Remove min-width for <kbd>&lt;center&gt;</kbd> tags nested under the sub-grid</li>
+  <li>Add helper aliases to <code>.text-pad</code> classes (ex. <code>.left-text-pad</code> can now be called using <code>.text-pad-left</code>)</li>
+  <li>Fix <code>.text-pad</code> classes nested under aliased <code>.column</code> tables</li>
+  <li>Remove deprecated button syntax</li>
+  <li>Fix link color in headings for Outlook 2007/2010/2013</li>
+</ul>
 <h6 id="v1-0-3">1.0.3</h6>
 <ul>
   <li>Add text-pad classes</li>
