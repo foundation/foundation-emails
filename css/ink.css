@@ -390,7 +390,7 @@ h6 a:visited {
 
 /* Panels */
 
-td.panel {
+.panel {
   background: #f2f2f2;
   border: 1px solid #d9d9d9;
   padding: 10px !important;
