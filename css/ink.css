@@ -167,7 +167,7 @@ table.eleven center { min-width: 530px; }
 table.twelve center { min-width: 580px; }
 
 .body .columns td.one,
-.body .column td.one, { width: 8.333333% !important; }
+.body .column td.one { width: 8.333333% !important; }
 .body .columns td.two,
 .body .column td.two { width: 16.666666% !important; }
 .body .columns td.three,
