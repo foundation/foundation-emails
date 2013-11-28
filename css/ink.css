@@ -166,6 +166,19 @@ table.ten center { min-width: 480px; }
 table.eleven center { min-width: 530px; }
 table.twelve center { min-width: 580px; }
 
+table.one .panel center { min-width: 10px; }
+table.two .panel center { min-width: 60px; }
+table.three .panel center { min-width: 110px; }
+table.four .panel center { min-width: 160px; }
+table.five .panel center { min-width: 210px; }
+table.six .panel center { min-width: 260px; }
+table.seven .panel center { min-width: 310px; }
+table.eight .panel center { min-width: 360px; }
+table.nine .panel center { min-width: 410px; }
+table.ten .panel center { min-width: 460px; }
+table.eleven .panel center { min-width: 510px; }
+table.twelve .panel center { min-width: 560px; }
+
 .body .columns td.one,
 .body .column td.one { width: 8.333333% !important; }
 .body .columns td.two,
