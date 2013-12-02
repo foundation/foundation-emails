@@ -67,7 +67,7 @@ $(document).on('click', '#showPreview', function(e) {
   }, 700);
   $('#previewModal').delay(100).addClass('active');
   $('html, body').css('max-height', $(window).height()).css('overflow', 'hidden');
-  $('iframe').height($(window).height() - 40)
+  $('iframe').height($(window).height() - 47)
 });
 
 $(document).on('click', '#inlinerReset', function(e) {
