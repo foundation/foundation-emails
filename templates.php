@@ -51,7 +51,7 @@
         <h6 class="name"><span>Basic</span> <a href="https://litmus.com/pub/85a1b19">View Tests</a></h6>
         <span class="description">This template is perfect for sending a basic but nice looking email to your readers.</span>
         <a href="downloads/templates/basic.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/basic.html.zip');">Download</a>
-        <a href="https://notableapp.com/posts/745212" class="button secondary" target="_blank">More Info</a>
+        <a href="https://notableapp.com/posts/43533d492fb2549eb2b118b3c0a8b7415b41575a" class="button secondary" target="_blank">More Info</a>
       </li>
       <li>
         <a href="downloads/templates/hero.html" class="preview" target="_blank">
@@ -61,7 +61,7 @@
         <h6 class="name"><span>Hero</span> <a href="https://litmus.com/pub/6d34a4c">View Tests</a></h6>
         <span class="description">Want to include a snazzy hero image in your email? This template is for you!</span>
         <a href="downloads/templates/hero.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/hero.html.zip');">Download</a>
-        <a href="https://notableapp.com/posts/744389" class="button secondary" target="_blank">More Info</a>
+        <a href="https://notableapp.com/posts/c176414bdd7550bf184b0b717fc859a750f8ca73" class="button secondary" target="_blank">More Info</a>
       </li>
       <li>
         <a href="downloads/templates/sidebar.html" class="preview" target="_blank">
@@ -71,7 +71,7 @@
         <h6 class="name"><span>Sidebar</span> <a href="https://litmus.com/pub/f6f3c9d">View Tests</a></h6>
         <span class="description">This template includes a sidebar area for a list of links, perfect for linking to additional content.</span>
         <a href="downloads/templates/sidebar.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/sidebar.html.zip');">Download</a>
-        <a href="https://notableapp.com/posts/744339" class="button secondary" target="_blank">More Info</a>
+        <a href="https://notableapp.com/posts/2ad24c42355c6a07477d6e62877871d1d2b793fa" class="button secondary" target="_blank">More Info</a>
       </li>
       <li>
         <a href="downloads/templates/sidebar-hero.html" class="preview" target="_blank">
@@ -81,7 +81,7 @@
         <h6 class="name"><span>Sidebar Hero</span> <a href="https://litmus.com/pub/c00b7d3">View Tests</a></h6>
         <span class="description">Want a sidebar and a hero image? Let's go crazy! This template combines the Sidebar and Hero templates.</span>
         <a href="downloads/templates/sidebar-hero.html.zip" class="button primary" onClick="ga('send', 'event', 'Ink', 'Download', 'templates/sidebar-hero.html.zip');">Download</a>
-        <a href="https://notableapp.com/posts/744071" class="button secondary" target="_blank">More Info</a>
+        <a href="https://notableapp.com/posts/4e4952919197aaf3bee2c3307abf4cb3c9ddd9ef" class="button secondary" target="_blank">More Info</a>
       </li>
       <!-- <li>
         <a href="downloads/templates/newsletter.html" target="_blank">
