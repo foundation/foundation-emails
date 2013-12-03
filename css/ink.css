@@ -153,6 +153,19 @@ table.ten { width: 480px; }
 table.eleven { width: 530px; }
 table.twelve { width: 580px; }
 
+.panel table.one { width: 10px; }
+.panel table.two { width: 60px; }
+.panel table.three { width: 110px; }
+.panel table.four { width: 160px; }
+.panel table.five { width: 210px; }
+.panel table.six { width: 260px; }
+.panel table.seven { width: 310px; }
+.panel table.eight { width: 360px; }
+.panel table.nine { width: 410px; }
+.panel table.ten { width: 460px; }
+.panel table.eleven { width: 510px; }
+.panel table.twelve { width: 560px; }
+
 table.one center { min-width: 30px; }
 table.two center { min-width: 80px; }
 table.three center { min-width: 130px; }
