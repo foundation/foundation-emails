@@ -87,7 +87,7 @@
         <a href="http://zurb.com/university/responsive-emails-intro?utm_source=Ink%20Marketing%20Site&utm_medium=Marketing%20Site&utm_content=Ink%20Inliner&utm_campaign=Introduction%20to%20Responsive%20Emails" target="_blank"><img src="http://zurb.com/university/assets/courses/responsive-emails-intro.png"/></a>
       </div>
     </div>
-    <div class="large-6 columns">
+    <div class="large-7 columns">
       <div class="course-callout">
         <h3 class="light">Responsive Email Design Training</h3>
         <p>We practice Responsive Email Design daily at ZURB, sending out 10 email newsletter campaigns a month and creating email templates for our clients. We even built Ink to help us and others send emails. This course covers the basics that designers and developers &mdash; even marketers &mdash; should know to get started with responsive emails.</p>
