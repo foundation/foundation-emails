@@ -154,8 +154,11 @@ ul.header-social-links { display: block;
   .row {  position: relative; 
     .stamp { background: url(../images/inky-stamp-2.svg) no-repeat center center; position: absolute; width: 231px; right:-40px; height: 179px; top:-104px; background-size: cover;  } 
   }
+  &.course { margin-bottom:0px; }
 }
+.course-image { padding: 50px 0px 40px 0px; }
 .space-callout { padding: 53px 0 31px; }
+.course-callout { padding: 40px 0 30px; }
 .templates-callout { background: #2e2f2f; padding: 20px; position: relative; top: 150px;  
   h5, p { color: #FFF; position: relative; z-index: 2; }
   p { margin-bottom: 30px; }
