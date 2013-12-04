@@ -217,7 +217,10 @@ hr { border-style: dashed; }
 
 ul.changelog { 
   li { list-style: none !important; 
-  &.release-number { width: 17%; padding-top: 12px; }
+  &.release-number { width: 17%; padding-top: 12px; 
+    p { margin-bottom: 0px !important; }
+    a { font-size: 14px; }
+  }
   &.changes { border-left: #cccccc 1px solid; width: 82.5555% ; }
     span.point-release-number { font-weight: 600; color: #333; }
     .release-wrap {  }

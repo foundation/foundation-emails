@@ -102,7 +102,8 @@
     <ul class="large-block-grid-2 changelog">
       <li class="release-number">
         <h3 class="light">1.0</h3>
-        <p>Public Release</p>
+        <p>Initial Release</p>
+        <a href="http://zurb.com/ink/docs.php#v1-0-0">6 Features &raquo;</a>
       </li>
       <li class="changes">
         <div class="release-wrap">
@@ -111,7 +112,6 @@
             <li><span class="point-release-number">1.0.3</span> &mdash; Add compatibility chart of supported/tested clients to the docs. <br><a href="http://zurb.com/ink/docs.php#v1-0-3">+2 more updates &raquo;</a></li>
             <li><span class="point-release-number">1.0.2</span> &mdash; Switch to new button syntax to fully support Microsoft Outlook. <br><a href="http://zurb.com/ink/docs.php#v1-0-2">+1 more updates &raquo;</a></li>
             <li><span class="point-release-number">1.0.1</span> &mdash; Fixed issue in Gmail(mobile, Android, iOS). Added a min-width to <kbd>&lt;center&gt;</kbd> tags</li>
-            <li><span class="point-release-number">1.0.0</span> &mdash; Initial Launch <br><a href="http://zurb.com/ink/docs.php#v1-0-0">+6 more releases &raquo;</a></li>
           </ul>
         </div>
       </li>
