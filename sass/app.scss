@@ -165,7 +165,7 @@ ul.header-social-links { display: block;
   a { margin-bottom: 0; }
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
   .discover-links {
     a { transition: all .5s; -webkit-transition: all .5s; }
     a:hover { 
@@ -175,6 +175,11 @@ ul.header-social-links { display: block;
       &.download { background-position: center -1000px; }
     }
   }
+}
+
+@media only screen and (max-width: 767px) {
+  .course-image { padding-bottom: 0px !important; }
+
 }
 
 /* discover links */
@@ -206,6 +211,33 @@ ul.header-social-links { display: block;
   h1 { margin-bottom: 0; line-height: 1;  }
 }
 hr { border-style: dashed; }
+
+/* Changelog */
+.row.log-space { margin-bottom:55px; }
+
+ul.changelog { 
+  li { list-style: none !important; 
+  &.release-number { width: 17%; padding-top: 12px; }
+  &.changes { border-left: #cccccc 1px solid; width: 82.5555% ; }
+    span.point-release-number { font-weight: 600; color: #333; }
+    .release-wrap {  }
+    .release-description { margin-top: 10px; 
+      li { padding: 12px 0; border-bottom: #ddd dashed 1px; line-height: 22px; }
+      a { font-size: 13px; margin-left: 60px; }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  ul.changelog { 
+    li {    
+      &.release-number { width: 100%; padding-top: 12px; padding-left: 20px; padding-bottom: 0px; border-bottom: #dddddd 1px solid; }
+      &.changes { width: 100% ; border-left: none; padding-left: 20px;}
+    }
+  }
+}
+
+
 
 /* templates */
 .template-thumbs .preview-post { position: absolute; top: 47%; text-align: center; width: 100%;  display:none; z-index:1;

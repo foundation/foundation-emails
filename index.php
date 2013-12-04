@@ -90,6 +90,36 @@
   </div>
 </div>
 
+<div class="row top-headlines">
+  <div class="large-12 columns">
+    <h3 class="text-center light">Changelog</h3>
+    <p class="lead text-center">We are constantly improving Ink to help make Emails easier for everyone</p>
+  </div>
+</div>
+
+<div class="row log-space">
+  <div class="large-10 large-centered columns">
+    <ul class="large-block-grid-2 changelog">
+      <li class="release-number">
+        <h3 class="light">1.0</h3>
+        <p>Public Release</p>
+      </li>
+      <li class="changes">
+        <div class="release-wrap">
+          <ul class="release-description">
+            <li><span class="point-release-number">1.0.4</span> &mdash; Remove percentage based padding on sub-grid, fixes Outlook '00, 02, 03. <br><a href="http://zurb.com/ink/docs.php#v1-0-4">+7 more updates &raquo;</a></li>
+            <li><span class="point-release-number">1.0.3</span> &mdash; Add compatibility chart of supported/tested clients to the docs. <br><a href="http://zurb.com/ink/docs.php#v1-0-3">+2 more updates &raquo;</a></li>
+            <li><span class="point-release-number">1.0.2</span> &mdash; Switch to new button syntax to fully support Microsoft Outlook. <br><a href="http://zurb.com/ink/docs.php#v1-0-2">+1 more updates &raquo;</a></li>
+            <li><span class="point-release-number">1.0.1</span> &mdash; Fixed issue in Gmail(mobile, Android, iOS). Added a min-width to <kbd>&lt;center&gt;</kbd> tags</li>
+            <li><span class="point-release-number">1.0.0</span> &mdash; Initial Launch <br><a href="http://zurb.com/ink/docs.php#v1-0-0">+6 more releases &raquo;</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
 <section class="callout course">
   <div class="row">
     <div class="large-4 columns">
