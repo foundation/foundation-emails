@@ -41,7 +41,7 @@
         <li><a href="#images">Retina Images</a></li>
         <li><a href="#compatibility">Supported Clients</a></li>
         <li><a href="#changes">Changelog</a></li>
-        <li><hr></li>
+        <li><hr style="width:75%;"></li>
         <li><a href="#training">Training</a></li>
       </ul>
     </div>
