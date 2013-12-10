@@ -216,18 +216,6 @@ td.offset-by-nine { padding-left: 450px; }
 td.offset-by-ten { padding-left: 500px; }
 td.offset-by-eleven { padding-left: 550px; }
 
-td.sub-offset-by-one { padding-left: 5.172413% !important; }
-td.sub-offset-by-two { padding-left: 13.793102% !important; }
-td.sub-offset-by-three { padding-left: 22.413791% !important; }
-td.sub-offset-by-four { padding-left: 31.034480% !important; }
-td.sub-offset-by-five { padding-left: 39.655169% !important; }
-td.sub-offset-by-six { padding-left: 48.275858% !important; }
-td.sub-offset-by-seven { padding-left: 56.896547% !important; }
-td.sub-offset-by-eight { padding-left: 65.517236% !important; }
-td.sub-offset-by-nine { padding-left: 74.137925% !important; }
-td.sub-offset-by-ten { padding-left: 82.758614% !important; }
-td.sub-offset-by-eleven { padding-left: 91.379303% !important; }
-
 td.expander {
   visibility: hidden;
   width: 0px;
