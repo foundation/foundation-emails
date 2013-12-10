@@ -122,7 +122,7 @@
 <div class="compatibility-section">
   <div class="row">
     <div class="large-9 columns">
-      <p>Panels work as expected in most major email clients.</p>
+      <p>Panels work as expected in most major email clients, with some caveats in <strong>Gmail (Mobile, iOS, Android)</strong>.</p>
     </div>
     <div class="large-3 columns">
       <a href="#" class="reveal-table">Toggle Full Table</a>
@@ -182,8 +182,8 @@
           </tr>
           <tr>
             <td>Gmail (Mobile, iOS, Android)</td>
-            <td><span class="check">&#10004;</span></td>
-            <td></td>
+            <td><span class="x">&#10008;</span></td>
+            <td>Since the inline sizing will not be overwritten in mobile Gmail, retina images should not be used with <a href="#gmail">block-grid</a> based layouts (they're fine with the <a href="#grid">standard grid</a>.</td>
           </tr>
           <tr>
             <td>Outlook 2011 for Mac</td>
