@@ -183,7 +183,6 @@
 <!-- <h4 class="normal">Rows Within Columns</h4>
 <p>Unlike the <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation grid</a>, Ink's grid cannot be nested. A layout simulating rows within columns is possible, however, by placing multiple <code>.columns</code> tables (with the same number of columns) within the same <code>.wrapper</code> td.</p> -->
 <!-- <script type="text/javascript" src="https://snipt.net/embed/01eb0d482e77ef8e25e40e6d1dae49d1/"></script> -->
-<br>
 <h4 class="normal">Centered Content</h4>
 <p>To center the content of a column, apply a class of <code>center</code> to the <kbd>&lt;td&gt;</kbd> that contains the content. If you want to center an image, you should also apply a class of <code>center</code> to the image itself. For maximum client support, we also recommend using the HTML <kbd>&lt;center&gt;</kbd> tag around the content you wish to center.</p>
 <h6>The Center Class</h6>
@@ -229,6 +228,34 @@
 <br>
 <h6>Centered Text and Images</h6>
 <iframe id="if-centerClass" src="docs/examples/center-class.html"></iframe>
+<br>
+<br>
+<h4 class="normal">Offset Columns</h4>
+<p>In lieu of using empty columns to offset content, one can use the <code>.offset-by-{number of columns}</code> helper class (ex,<code>.offset-by-two</code>, <code>.offset-by-three</code>, etc).  By applying the class to the wrapper surrounding a column section, the content will be pushed to the left by the specified number of columns.  Remember to count any column offsets towards the total number of columns in a row when making sure that they add up to 12.</p>
+<h6>Offset Columns Markup</h6>
+<?php code_example(
+'<table class="row">
+  <tr>
+    <td class="wrapper offset-by-four">
+    
+      <table class="eight columns">
+        <tr>
+          <td class="panel">
+
+            Offset Content
+
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>'
+, 'html'); ?>
+<br>
+<h6>Offset Example</h6>
+<iframe id="if-offsetColumns" src="docs/examples/offset-columns.html"></iframe>
 <br>
 <br>
 <h4 class="normal">Text Padding</h4>

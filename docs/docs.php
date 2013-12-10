@@ -4,10 +4,11 @@
 
     #if-basicGrid {height: 200px;}
     #if-evenColumns {height: 260px;}
+    #if-centerClass {height: 220px;}
+    #if-offsetColumns {height: 165px;}
+    #if-textPad {height: 440px;}
     #if-subGrid {height: 140px;}
     #if-blockGrid {height: 540px;}
-    #if-centerClass {height: 220px;}
-    #if-textPad {height: 440px;}
     #if-visibilityClasses {height: 110px;}
     #if-panels {height: 420px;}
     #if-buttons{height: 325px;}
@@ -16,10 +17,11 @@
   @media only screen and (max-width: 632px), only screen and (min-width: 768px) and (max-width: 843px) {
     #if-basicGrid {height: 225px;}
     #if-evenColumns {height: 570px;}
+    #if-centerClass {height: 270px;}   
+    #if-offsetColumns {height: 165px;}   
+    #if-textPad {height: 480px;}   
     #if-subGrid {height: 210px;}
     #if-blockGrid {height: 1000px;}
-    #if-centerClass {height: 270px;}   
-    #if-textPad {height: 480px;}   
     #if-visibilityClasses {height: 110px;}   
     #if-panels {height: 400px;}   
     #if-buttons{height: 650px;}
