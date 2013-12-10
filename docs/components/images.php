@@ -2,7 +2,7 @@
 <p class="lead">Accent your emails with rich, high resolution images.</p>
 <hr />
 <h2 class="light">Markup</h2>
-<p>The days of having to choose between supporting Outlook or retina devices are over.  To use high resolution images, put <code>height</code> and <code>width</code> HTML attributes on the <kbd>&lt;img&gt;</kbd> tag, corresponding to the scaled size of the image in a desktop view (the width of its <code>.columns</code> container).  On small screen devices, Ink will cause the image to expand to its full width (or the width or its parent element, whichever is smaller).</p>
+<p>The days of having to choose between supporting Outlook or retina devices are over. To use high resolution images, put <code>height</code> and <code>width</code> HTML attributes on the <kbd>&lt;img&gt;</kbd> tag, corresponding to the scaled size of the image in a desktop view (the width of its <code>.columns</code> container). On small screen devices, Ink will cause the image to expand to its full width (or the width or its parent element, whichever is smaller).</p>
 <h6>Image Markup</h6>
 <?php code_example(
 '<table class="three columns">
@@ -19,7 +19,7 @@
 <br>
 <hr />
 <h2 class="light">Column Sizes</h2>
-<p>Below is a chart of the sizes images should be to fully fit various sizes of grid columns on a desktop (larger than 600px) view.  Height should be determined with respect to width and should also be explicitly declared on the <kbd>&lt;img&gt;</kbd> tag.</p>
+<p>Below is a chart of the sizes images should be to fully fit various sizes of grid columns on a desktop (larger than 600px) view. Height should be determined with respect to width and should also be explicitly declared on the <kbd>&lt;img&gt;</kbd> tag.</p>
 <table>
   <thead>
     <td>Number of Columns</td>
@@ -77,7 +77,7 @@
 <hr />
 <h2 class="light">Examples</h2>
 <h4 class="normal">Newsletter Images</h4>
-<p>A common pattern in email newsletters is to have an image on the left with description text next to it.  We use this layout quite frequently on ZURB emails and thought that it looked awkward when the small image begins to float in the center of the screen on mobile devices.  To compensate for this, we use a full-width image that's scaled down on the desktop view.</p>
+<p>A common pattern in email newsletters is to have an image on the left with description text next to it. We use this layout quite frequently on ZURB emails and thought that it looked awkward when the small image begins to float in the center of the screen on mobile devices. To compensate for this, we use a full-width image that's scaled down on the desktop view.</p>
 <h6>Newsletter 3-9 Image</h6>
 <?php code_example(
 '<table class="row">

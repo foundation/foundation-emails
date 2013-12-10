@@ -2,7 +2,7 @@
 <p class="lead">Quickly highlight important content.</p>
 <hr />
 
-<p>Add a class of <code>panel</code> to a <kbd>&lt;td&gt;</kbd> in a <code>.columns</code> table in order to give it a default border and background color.  Great for offsetting important content or for quickly prototyping a layout.</p>
+<p>Add a class of <code>panel</code> to a <kbd>&lt;td&gt;</kbd> in a <code>.columns</code> table in order to give it a default border and background color. Great for offsetting important content or for quickly prototyping a layout.</p>
 <h6>Example Panel Markup</h6>
 <?php code_example(
 '<table class="row">

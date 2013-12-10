@@ -2,7 +2,7 @@
 <p class="lead">Selectively show content for different screen sizes.</p>
 <hr />
 
-<p>By adding a visibility class to an element, you can show or hide it based on screen size.  Visibility classes can be used on any element.</p>
+<p>By adding a visibility class to an element, you can show or hide it based on screen size. Visibility classes can be used on any element.</p>
 <p>Note: If you're using a visibility class on an image, be sure to apply it to the parent element, not to the image itself.</p>
 <h6>Using Visibility Classes</h6>
 <?php code_example(
@@ -113,12 +113,12 @@
           <tr>
             <td>Gmail (Desktop)</td>
             <td><span class="x">&#10008;</span></td>
-            <td>Not yet implemented.  Support will be added soon.</td>
+            <td>Not yet implemented. Support will be added soon.</td>
           </tr>
           <tr>
             <td>Gmail (Mobile, iOS, Android)</td>
             <td><span class="x">&#10008;</span></td>
-            <td>Not yet implemented.  Support will be added soon.</td>
+            <td>Not yet implemented. Support will be added soon.</td>
           </tr>
           <tr>
             <td>Outlook 2011 for Mac</td>

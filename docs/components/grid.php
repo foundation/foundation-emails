@@ -2,14 +2,14 @@
 <p class="lead">Create powerful multi-device layouts quickly and easily.</p>
 <hr>
 <h2 class="light">Structure</h2>
-<p>Ink uses a 12-column grid with a 580px wrapper.  On mobile devices (under 580px wide), columns become full width and stack vertically.</p>
+<p>Ink uses a 12-column grid with a 580px wrapper. On mobile devices (under 580px wide), columns become full width and stack vertically.</p>
 <p>Ink's grid can be thought of in terms of three components:</p>
 <h4 class="normal">Containers</h4>
-<p>Ink containers wrap the content and maintain a fixed, 580px layout on large displays.  Below 580px, containers take up 95% of the screen's width, ensuring that your content doesn't run right up against the edges of the user's screen.</p>
+<p>Ink containers wrap the content and maintain a fixed, 580px layout on large displays. Below 580px, containers take up 95% of the screen's width, ensuring that your content doesn't run right up against the edges of the user's screen.</p>
 <h4 class="normal">Rows</h4>
-<p>Rows are used to separate blocks of content vertically.  In addition to the vertical separation, the <kbd>&lt;td&gt;</kbd> tags of <code>.row</code> tables use the wrapper class to maintain a gutter between columns.  Note: the last <code>.wrapper</code> <kbd>&lt;td&gt;</kbd> in a row MUST have a class of <code>.last</code> applied to it, even if it's the only wrapper in the row (ex. for a row with a single, twelve-column wide content area).</p>
+<p>Rows are used to separate blocks of content vertically. In addition to the vertical separation, the <kbd>&lt;td&gt;</kbd> tags of <code>.row</code> tables use the wrapper class to maintain a gutter between columns. Note: the last <code>.wrapper</code> <kbd>&lt;td&gt;</kbd> in a row MUST have a class of <code>.last</code> applied to it, even if it's the only wrapper in the row (ex. for a row with a single, twelve-column wide content area).</p>
 <h4 class="normal">Columns</h4>
-<p>Columns denote the width of the content, as based on a 12-column system.  The content inside them will expand to cover n-columns, assuming that the number of columns in one row adds up to 12.</p>
+<p>Columns denote the width of the content, as based on a 12-column system. The content inside them will expand to cover n-columns, assuming that the number of columns in one row adds up to 12.</p>
 <h6>The Three Grid Components</h6>
 <p>Basic example of the three main grid components.</p>
 <?php code_example(
@@ -56,7 +56,7 @@
 , 'html'); ?>
 <br>
 <h6>Visual Explanation of Grid</h6>
-<p>Diagram of how the basic grid is laid out.  While Ink was used to create the example (and therefore it responds to the correct media queries), extra coloring and spacing was added for clarity.</p>
+<p>Diagram of how the basic grid is laid out. While Ink was used to create the example (and therefore it responds to the correct media queries), extra coloring and spacing was added for clarity.</p>
 <iframe id="if-basicGrid" src="docs/examples/basic-grid.html"></iframe>
 <br>
 <hr>
@@ -88,12 +88,12 @@
   <tr>
     <td>td</td>
     <td>last</td>
-    <td>Class applied to the last <code>.wrapper</code> td in each row in order for the gutter to work properly.  If you only have one (presumably full-width) <code>.columns</code> table (and therefore one <code>.wrapper</code> td) in a row, the <code>.wrapper</code> td still needs to have the last class applied to it.</td>
+    <td>Class applied to the last <code>.wrapper</code> td in each row in order for the gutter to work properly. If you only have one (presumably full-width) <code>.columns</code> table (and therefore one <code>.wrapper</code> td) in a row, the <code>.wrapper</code> td still needs to have the last class applied to it.</td>
   </tr>
   <tr>
     <td>table</td>
     <td>{number}</td>
-    <td>Can be any number between one and twelve (spelled out).  Used to determine how wide your <code>.columns</code> tables are.  The number of columns in each row should add up to 12, including <!-- <a href="#offsets"> -->offset columns<!-- </a> -->.</td>
+    <td>Can be any number between one and twelve (spelled out). Used to determine how wide your <code>.columns</code> tables are. The number of columns in each row should add up to 12, including <!-- <a href="#offsets"> -->offset columns<!-- </a> -->.</td>
   </tr>
   <tr>
     <td>table</td>
@@ -103,14 +103,14 @@
   <tr>
     <td>td</td>
     <td>expander</td>
-    <td>An empty (and invisible) element added after the content element in a <code>.columns</code> table.  It forces the content <code>td</code> to expand to the full width of the screen on small devices, instead of just the width of the content within the <code>td</code>.</td>
+    <td>An empty (and invisible) element added after the content element in a <code>.columns</code> table. It forces the content <code>td</code> to expand to the full width of the screen on small devices, instead of just the width of the content within the <code>td</code>.</td>
   </tr>
 </table>
 <hr>
 
 <h2 class="light">Examples</h2>
 <h4 class="normal">Even Columns</h4>
-<p>Ink's 12-column grid makes creating even column layouts a snap.  Just use one <code>.twelve.columns</code>, two <code>.six.columns</code>, three <code>.four.columns</code> or four <code>.three.columns</code> classes to create your layout.  Appearing as multiple, even columns on large screens, the layout will fold into a single column on small (mobile) screens.</p>
+<p>Ink's 12-column grid makes creating even column layouts a snap. Just use one <code>.twelve.columns</code>, two <code>.six.columns</code>, three <code>.four.columns</code> or four <code>.three.columns</code> classes to create your layout. Appearing as multiple, even columns on large screens, the layout will fold into a single column on small (mobile) screens.</p>
 <h6>Code for Even Columns</h6>
 <?php code_example(
 '<table class="container">
@@ -181,10 +181,11 @@
 <br>
 <br>
 <!-- <h4 class="normal">Rows Within Columns</h4>
-<p>Unlike the <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation grid</a>, Ink's grid cannot be nested.  A layout simulating rows within columns is possible, however, by placing multiple <code>.columns</code> tables (with the same number of columns) within the same <code>.wrapper</code> td.</p> -->
+<p>Unlike the <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation grid</a>, Ink's grid cannot be nested. A layout simulating rows within columns is possible, however, by placing multiple <code>.columns</code> tables (with the same number of columns) within the same <code>.wrapper</code> td.</p> -->
 <!-- <script type="text/javascript" src="https://snipt.net/embed/01eb0d482e77ef8e25e40e6d1dae49d1/"></script> -->
-<br><h4 class="normal">Centered Content</h4>
-<p>To center the content of a column, apply a class of <code>center</code> to the <kbd>&lt;td&gt;</kbd> that contains the content.  If you want to center an image, you should also apply a class of <code>center</code> to the image itself.  For maximum client support, we also recommend using the HTML <kbd>&lt;center&gt;</kbd> tag around the content you wish to center.</p>
+<br>
+<h4 class="normal">Centered Content</h4>
+<p>To center the content of a column, apply a class of <code>center</code> to the <kbd>&lt;td&gt;</kbd> that contains the content. If you want to center an image, you should also apply a class of <code>center</code> to the image itself. For maximum client support, we also recommend using the HTML <kbd>&lt;center&gt;</kbd> tag around the content you wish to center.</p>
 <h6>The Center Class</h6>
 <?php code_example(
 '<table class="row">
@@ -231,9 +232,9 @@
 <br>
 <br>
 <h4 class="normal">Text Padding</h4>
-<p>A fairly common use case for the container is to give your text a white background to separate it from a colored email body.  To assist with this design pattern, we've included three helper classes with Ink: <code>.text-pad</code>, <code>.left-text-pad</code> and <code>.right-text-pad</code>.</p>
-<p>The <code>.text-pad</code> class provides 10px of padding on either side of the content (while it's named <strong>text</strong>-pad, it works just as well on buttons or images), making sure it doesn't butt right up against the edge of your container.  The <code>.text-pad</code> class should be applied to the <kbd>&lt;td&gt;</kbd> of a <code>.columns</code> <kbd>&lt;table&gt;</kbd>.</p>
-<p>The <code>.left-text-pad</code> and <code>.right-text-pad</code> do the same thing as the <code>.text-pad</code> class, but are meant to be applied to content that doesn't extend across the entire row (in other words, content that isn't twelve columns wide).  The directional text-padding classes only apply the padding to the side of the content near the edge of the container on large screens, but apply it to both sides on small screens, when the columns expand to fill the full width of the row.</p>
+<p>A fairly common use case for the container is to give your text a white background to separate it from a colored email body. To assist with this design pattern, we've included three helper classes with Ink: <code>.text-pad</code>, <code>.left-text-pad</code> and <code>.right-text-pad</code>.</p>
+<p>The <code>.text-pad</code> class provides 10px of padding on either side of the content (while it's named <strong>text</strong>-pad, it works just as well on buttons or images), making sure it doesn't butt right up against the edge of your container. The <code>.text-pad</code> class should be applied to the <kbd>&lt;td&gt;</kbd> of a <code>.columns</code> <kbd>&lt;table&gt;</kbd>.</p>
+<p>The <code>.left-text-pad</code> and <code>.right-text-pad</code> do the same thing as the <code>.text-pad</code> class, but are meant to be applied to content that doesn't extend across the entire row (in other words, content that isn't twelve columns wide). The directional text-padding classes only apply the padding to the side of the content near the edge of the container on large screens, but apply it to both sides on small screens, when the columns expand to fill the full width of the row.</p>
 <h6>The Text-Pad Class</h6>
 <?php code_example(
 '<table class="row">
@@ -290,8 +291,8 @@
 <br>
 <br>
 <h4 class="normal">Expanders</h4>
-<p>When the Ink grid is shown on a small screen, the <code>.columns</code> tables expand to the full width of the container and stack vertically.  On some clients, however, the columns don't expand properly if the content isn't as wide as the screen.  While this might not seem so bad, it can cause your layout to appear broken if you are using a background color on the <code>.columns</code> table or are centering the content.</p>
-<p>To get around this, an empty <kbd>&lt;td&gt;</kbd> with a class of <code>expander</code> is used after the <kbd>&lt;td&gt;</kbd> containing the actual content in the <code>.columns</code> table.  This extra <kbd>&lt;td&gt;</kbd> isn't displayed, but it forces the content <kbd>&lt;td&gt;</kbd> to expand to full width.</p>
+<p>When the Ink grid is shown on a small screen, the <code>.columns</code> tables expand to the full width of the container and stack vertically. On some clients, however, the columns don't expand properly if the content isn't as wide as the screen. While this might not seem so bad, it can cause your layout to appear broken if you are using a background color on the <code>.columns</code> table or are centering the content.</p>
+<p>To get around this, an empty <kbd>&lt;td&gt;</kbd> with a class of <code>expander</code> is used after the <kbd>&lt;td&gt;</kbd> containing the actual content in the <code>.columns</code> table. This extra <kbd>&lt;td&gt;</kbd> isn't displayed, but it forces the content <kbd>&lt;td&gt;</kbd> to expand to full width.</p>
 <h6>Expander TDs</h6>
 <?php code_example(
 '<table class="columns">
@@ -372,7 +373,7 @@
           <tr>
             <td>Gmail (Mobile, iOS, Android)</td>
             <td><span class="x">&#10008;</span></td>
-            <td>Since Gmail doesn't support media queries, users will be presented with the desktop view.  If mobile Gmail is a large part of your audience, we'd suggest using a layout based on the <a href="#block-grid">block-grid</a>.</td>
+            <td>Since Gmail doesn't support media queries, users will be presented with the desktop view. If mobile Gmail is a large part of your audience, we'd suggest using a layout based on the <a href="#block-grid">block-grid</a>.</td>
           </tr>
           <tr>
             <td>Outlook 2011 for Mac</td>

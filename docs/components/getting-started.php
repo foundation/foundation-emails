@@ -3,7 +3,7 @@
 <hr>
 <h2 class="light">The Boilerplate</h2>
 <p>
-  Starting a new Ink project is fairly straightforward.  If you aren't using one of our <a href="templates.php">templates</a>, grab the boilerplate code from below to use as a starting point.  While you can reference <code>ink.css</code> using a <kbd>&lt;link&gt;</kbd> tag for testing purposes, be sure to remove the <kbd>&lt;link rel="stylesheet" href="ink.css" /&gt;</kbd> statement and paste your CSS into the <kbd>&lt;style&gt;</kbd> tag in the head before running your email through an inliner.
+  Starting a new Ink project is fairly straightforward. If you aren't using one of our <a href="templates.php">templates</a>, grab the boilerplate code from below to use as a starting point. While you can reference <code>ink.css</code> using a <kbd>&lt;link&gt;</kbd> tag for testing purposes, be sure to remove the <kbd>&lt;link rel="stylesheet" href="ink.css" /&gt;</kbd> statement and paste your CSS into the <kbd>&lt;style&gt;</kbd> tag in the head before running your email through an inliner.
 </p>
 <h6>Boilerplate.html</h6>
 <?php code_example(

@@ -2,7 +2,7 @@
 <p class="lead">Dynamic and effective calls to action.</p>
 <hr />
 <h2 class="light">Structure</h2>
-<p>To create buttons that look great in most clients, make a table of class <code>button</code> to wrap your <kbd>&lt;a&gt;</kbd> tag.  Buttons expand to the full width of their container by default, so if you don't want them to expand all the way, consider placing them in a <a href="#sub-grid">sub-grid</a> or <a href="#block-grid">block-grid</a> element.</p>
+<p>To create buttons that look great in most clients, make a table of class <code>button</code> to wrap your <kbd>&lt;a&gt;</kbd> tag. Buttons expand to the full width of their container by default, so if you don't want them to expand all the way, consider placing them in a <a href="#sub-grid">sub-grid</a> or <a href="#block-grid">block-grid</a> element.</p>
 <h6>A Basic Button</h6>
 <?php code_example(
 '<table class="button">
@@ -18,7 +18,7 @@
 <h2 class="light">Style Classes</h2>
 <p>Several built in styling classes can be applied to the same element as the <code>button</code> class is applied to in order to adjust the button's appearance.</p>
 <h4 class="normal">Size</h4>
-<p>Size classes affect the button's vertical padding.  The available size classes are:</p>
+<p>Size classes affect the button's vertical padding. The available size classes are:</p>
 <table>
   <tr>
     <td><code>.button</code> (same as <code>.small-button</code>)</td>
@@ -37,7 +37,7 @@
   </tr>
 </table>
 <h4 class="normal">Color</h4>
-<p>Color classes denote the purpose of the button, and are used to change its background color.  The available color classes are:</p>
+<p>Color classes denote the purpose of the button, and are used to change its background color. The available color classes are:</p>
 <table>
   <tr>
     <td>none (same as <code>.primary</code>)</td>
@@ -56,7 +56,7 @@
   </tr>
 </table>
 <h4 class="normal">Border Radius</h4>
-<p>Radius classes cause the corners of the buttons to be rounded in clients that support the <kbd>border-radius</kbd> property.  The available radius classes are:</p>
+<p>Radius classes cause the corners of the buttons to be rounded in clients that support the <kbd>border-radius</kbd> property. The available radius classes are:</p>
 <table>
   <tr>
     <td>none (no border-radius)</td>
@@ -72,7 +72,7 @@
 <h2 class="light">Examples</h2>
 <p>Buttons expand to the width of their parent container by default, so it's recommended that you contain them within a sub-grid or a relatively small number of columns on the main grid.</p>
 <h6>Button Demo</h6>
-<p>All the button modifiers demonstrated.  The rows of buttons are contained to <code>.four.columns</code> or <code>.six.columns</code> sections of the grid for clarity.</p>
+<p>All the button modifiers demonstrated. The rows of buttons are contained to <code>.four.columns</code> or <code>.six.columns</code> sections of the grid for clarity.</p>
 <iframe id="if-buttons" src="docs/examples/buttons.html"></iframe>
 <br>
 <hr />
