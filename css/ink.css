@@ -623,8 +623,8 @@ body.outlook p {
     padding-left: 0 !important;
   }
 
-  table[class="body"] .expander {
-    width: 9999px !important;
+  table[class="body"] table.columns td.expander {
+    width: 1px !important;
   }
 
   table[class="body"] .right-text-pad,
