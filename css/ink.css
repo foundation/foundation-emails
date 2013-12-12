@@ -338,7 +338,7 @@ h6 {font-size: 20px;}
 body, table.body, p {font-size: 14px;line-height:19px;}
 
 p { 
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 small {
