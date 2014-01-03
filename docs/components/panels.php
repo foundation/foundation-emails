@@ -66,7 +66,7 @@
 <br>
 <h4 class="normal">Panels With Sub-grids</h4>
 <p>Nesting a sub-grid under a panel is non-intuitive, since the sub-grid columns would normally be applied to the <kbd>&lt;td&gt;</kbd> elements directly under the <code>.columns</code> table. To get around this, give the <kbd>&lt;td&gt;</kbd> a class of <code>.panel</code> and a class of <code>.sub-grid</code>. You can then put a <kbd>&lt;table&gt;</kbd> inside the <kbd>&lt;td&gt;</kbd> and create the sub-columns using the <kbd>&lt;td&gt;</kbd> elements of the inner table, as shown below.</p>
-<h6>Panel Sub-grid Markup</h6>
+<h6>Panel Sub-Grid Markup</h6>
 <?php code_example(
 '<table class="twelve columns">
   <tr>
@@ -93,7 +93,7 @@
 </table>',
 'html') ?>
 <br>
-<h6>Sidebar Panel</h6>
+<h6>Sub-Grid Panel</h6>
 <iframe id="if-panelSubGrid" src="docs/examples/panel-sub-grid.html"></iframe>
 <br>
 <hr />
