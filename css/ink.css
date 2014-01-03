@@ -398,6 +398,14 @@ h6 a:visited {
   padding: 10px !important;
 }
 
+.sub-grid table {
+  width: 100%;
+}
+
+.sub-grid td.sub-columns {
+  padding-bottom: 0;
+}
+
 /* Buttons */
 
 table.button,
