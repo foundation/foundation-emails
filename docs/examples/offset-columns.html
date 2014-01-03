@@ -13,6 +13,15 @@
       padding-top: 25px;
       padding-bottom: 25px;
     }
+
+    /* Firefox display hack */
+    @media only screen and (max-width: 600px) {
+      table[class="body"] .row tr,
+      table[class="body"] .row tbody {
+        display: block;
+      }
+    }
+
   </style>
 </head>
 <body>

@@ -17,6 +17,14 @@
     table, tr, td { vertical-align: middle; }
     table.columns td, table.column td { padding: 0; }
     td.wrapper { padding-top: 0; }
+
+    /* Firefox display hack */
+    @media only screen and (max-width: 600px) {
+      table[class="body"] .row tr,
+      table[class="body"] .row tbody {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
