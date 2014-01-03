@@ -10,7 +10,9 @@
     #if-subGrid {height: 140px;}
     #if-blockGrid {height: 540px;}
     #if-visibilityClasses {height: 110px;}
-    #if-panels {height: 420px;}
+    #if-panels {height: 110px;}
+    #if-panelSubGrid {height: 110px;}
+    #if-panelSidebar {height: 420px;}
     #if-buttons{height: 325px;}
     #if-images{height: 250px;}
 
@@ -23,7 +25,9 @@
     #if-subGrid {height: 210px;}
     #if-blockGrid {height: 1000px;}
     #if-visibilityClasses {height: 110px;}   
-    #if-panels {height: 400px;}   
+    #if-panels {height: 110px;}   
+    #if-panelSubGrid {height: 110px;}   
+    #if-panelSidebar {height: 400px;}   
     #if-buttons{height: 650px;}
     #if-images{height: 800px;}
   } 
