@@ -122,7 +122,7 @@
 <div class="compatibility-section">
   <div class="row">
     <div class="large-9 columns">
-      <p>Panels work as expected in most major email clients, with some caveats in <strong>Gmail (Mobile, iOS, Android)</strong>.</p>
+      <p>Retina images work as expected in most major email clients, with some caveats in <strong>Gmail (Mobile, iOS, Android)</strong>.</p>
     </div>
     <div class="large-3 columns">
       <a href="#" class="reveal-table">Toggle Full Table</a>
