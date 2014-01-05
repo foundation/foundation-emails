@@ -4,10 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width"/>
 	<style>
-    /* Include ink.css */
+{{> ink }}
   </style>
   <style>
-    
+
     .facebook table td {
       background: #3b5998;
       border-color: #2d4473;
@@ -89,16 +89,16 @@
 		<tr>
 			<td class="center" align="center" valign="top">
         <center>
-         
+
           <table class="row header">
             <tr>
               <td class="center" align="center">
                 <center>
-          
+
                   <table class="container">
                     <tr>
                       <td class="wrapper last">
-            
+
                         <table class="twelve columns">
                           <tr>
                             <td class="six sub-columns">
@@ -107,30 +107,30 @@
                             <td class="six sub-columns last" style="text-align:right; vertical-align:middle;">
                               <span class="template-label">NEWSLETTER</span>
                             </td>
-                                
+
                           </tr>
                         </table>
-            
+
                       </td>
                     </tr>
                   </table>
-          
+
                 </center>
               </td>
             </tr>
           </table>
 
           <br>
-        
+
           <table class="container">
             <tr>
               <td>
-              
+
                 <!-- content start -->
                 <table class="row">
                   <tr>
                     <td class="wrapper last">
-                  
+
                       <table class="twelve columns">
                         <tr>
                           <td>
@@ -142,51 +142,16 @@
                           <td class="expander"></td>
                         </tr>
                       </table>
-                  
+
                     </td>
                   </tr>
                 </table>
-                
+
                 <!-- Article List 1 -->
                 <table class="row">
                   <tr>
                     <td class="wrapper">
-          
-                      <table class="twelve columns">
-                        <tr>
-                          <td class="three sub-columns">
-                            <!-- Top Left sub-grid -->
-                            <img width="110" height="110" src="http://placehold.it/110x110">
-                          </td>
-                          <td class="nine sub-columns last">
-                            <!-- Top Right sub-grid -->
-                            <h5>Title Ipsum <small>This is a note.</small></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            
-                            <!-- custom wrapped button -->
-                            <table width="150">
-                              <tr>
-                                <td>
-                                  
-                                  <a class="button" href="#">
-                                    <table>
-                                      <tr>
-                                        <td>
-                                          Clickity Click &raquo;
-                                        </td>
-                                      </tr>
-                                    </table>
-                                  </a>
 
-                                </td>
-                              </tr>
-                            </table>
-                            
-                          </td>
-                          <td class="expander"></td>
-                        </tr>
-                      </table>
-          
                       <table class="twelve columns">
                         <tr>
                           <td class="three sub-columns">
@@ -197,7 +162,7 @@
                             <!-- Top Right sub-grid -->
                             <h5>Title Ipsum <small>This is a note.</small></h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            
+
                             <!-- custom wrapped button -->
                             <table width="150">
                               <tr>
@@ -216,20 +181,55 @@
                                 </td>
                               </tr>
                             </table>
-                            
+
                           </td>
                           <td class="expander"></td>
                         </tr>
                       </table>
-          
+
+                      <table class="twelve columns">
+                        <tr>
+                          <td class="three sub-columns">
+                            <!-- Top Left sub-grid -->
+                            <img width="110" height="110" src="http://placehold.it/110x110">
+                          </td>
+                          <td class="nine sub-columns last">
+                            <!-- Top Right sub-grid -->
+                            <h5>Title Ipsum <small>This is a note.</small></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                            <!-- custom wrapped button -->
+                            <table width="150">
+                              <tr>
+                                <td>
+
+                                  <a class="button" href="#">
+                                    <table>
+                                      <tr>
+                                        <td>
+                                          Clickity Click &raquo;
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </a>
+
+                                </td>
+                              </tr>
+                            </table>
+
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
                     </td>
                   </tr>
                 </table>
-                
+
                 <!-- Panel with call to action -->
                 <table class="row  callout">
                   <tr>
-                  
+
                     <td class="wrapper last">
                       <table class="twelve columns">
                         <tr>
@@ -240,7 +240,7 @@
                         </tr>
                       </table>
                     </td>
-                    
+
                   </tr>
                 </table>
                 <br>
@@ -248,7 +248,7 @@
                 <table class="row">
                   <tr>
                     <td class="wrapper">
-          
+
                       <table class="twelve columns">
                         <tr>
                           <td class="three sub-columns">
@@ -259,7 +259,7 @@
                             <!-- Top Right sub-grid -->
                             <h5>Title Ipsum <small>This is a note.</small></h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            
+
                             <!-- custom wrapped button -->
                             <table width="150">
                               <tr>
@@ -278,12 +278,12 @@
                                 </td>
                               </tr>
                             </table>
-                            
+
                           </td>
                           <td class="expander"></td>
                         </tr>
                       </table>
-          
+
                       <table class="twelve columns">
                         <tr>
                           <td class="three sub-columns">
@@ -294,7 +294,7 @@
                             <!-- Top Right sub-grid -->
                             <h5>Title Ipsum <small>This is a note.</small></h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            
+
                             <!-- custom wrapped button -->
                             <table width="150">
                               <tr>
@@ -313,22 +313,22 @@
                                 </td>
                               </tr>
                             </table>
-                            
+
                           </td>
                           <td class="expander"></td>
                         </tr>
                       </table>
-          
+
                     </td>
                   </tr>
                 </table>
-                
-                
-                              
+
+
+
                 <table class="row footer">
                   <tr>
                     <td class="wrapper">
-                            
+
                       <table class="six columns">
                         <tr>
                           <td class="left-text-pad">
@@ -383,7 +383,7 @@
                             <h5>Contact Info:</h5>
                             <p>Phone: 408.341.0600</p>
                             <p>Email: <a href="mailto:hseldon@trantor.com">hseldon@trantor.com</a></p>
-                          </td>          
+                          </td>
                           <td class="expander"></td>
                         </tr>
                       </table>
@@ -391,12 +391,12 @@
                     </td>
                   </tr>
                 </table>
-                
-                
+
+
                 <table class="row">
                   <tr>
                     <td class="wrapper last">
-            
+
                       <table class="twelve columns">
                         <tr>
                           <td align="center">
@@ -407,15 +407,15 @@
                           <td class="expander"></td>
                         </tr>
                       </table>
-            
+
                     </td>
                   </tr>
                 </table>
-              
+
               <!-- container end below -->
               </td>
             </tr>
-          </table> 
+          </table>
 
         </center>
 			</td>
