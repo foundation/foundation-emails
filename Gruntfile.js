@@ -1,33 +1,22 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    includes: {
+    assemble: {
+      options: {partials: 'css/*.css'},
       templates: {
         src: 'templates/**/*.html',
         dest: 'build/downloads',
-        cwd: '.',
-        options: {
-          includeRegexp: /^\s*\/\*\s*[Ii]nclude\s+([^'"\s]+)\s*\*\/$/,
-          includePath: 'css',
-        }
+        cwd: './'
       },
       docsDev: {
         src: 'docs/examples/*.html',
         dest: 'build/docs',
-        cwd: '.',
-        options: {
-          includeRegexp: /^\s*\/\*\s*[Ii]nclude\s+([^'"\s]+)\s*\*\/$/,
-          includePath: 'css',
-        }
+        cwd: './'
       },
       docsDeploy: {
         src: 'docs/examples/*.html',
         dest: 'build',
-        cwd: '.',
-        options: {
-          includeRegexp: /^\s*\/\*\s*[Ii]nclude\s+([^'"\s]+)\s*\*\/$/,
-          includePath: 'css',
-        }
+        cwd: './'
       }
     },
     shell: {
@@ -41,7 +30,7 @@ module.exports = function(grunt) {
           'mkdir build/docs',
         ].join('&&')
       },
-      zipTemplates: { 
+      zipTemplates: {
         command: [
           'cd build/downloads/templates/base',
           'cp * ../',
@@ -109,7 +98,7 @@ module.exports = function(grunt) {
     },
   });
 
-  grunt.loadNpmTasks('grunt-includes');
+  grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -117,5 +106,5 @@ module.exports = function(grunt) {
   grunt.registerTask('deploy:downloads', ['shell:makeStage', 'includes:templates', 'shell:zipTemplates', 'shell:zipFramework', 'shell:linkFramework', 'shell:deployDownloads', 'shell:cleanUp']);
   grunt.registerTask('make:docs', ['shell:makeStage', 'includes:docsDev', 'shell:testDocs']);
   grunt.registerTask('deploy:docs', ['shell:makeStage', 'includes:docsDeploy', 'shell:deployDocs', 'shell:cleanUp']);
-  // grunt.registerTask('default', ['shell:makeStage', 'includes:docs', 'shell:deployDocs']);
+  grunt.registerTask('default', ['shell:makeStage', 'includes', 'shell:deployDocs']);
 };
