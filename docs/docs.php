@@ -7,6 +7,7 @@
     #if-centerClass {height: 220px;}
     #if-offsetColumns {height: 165px;}
     #if-textPad {height: 440px;}
+    #if-fullWidth {height: 280px;}
     #if-subGrid {height: 140px;}
     #if-blockGrid {height: 540px;}
     #if-visibilityClasses {height: 110px;}
@@ -22,6 +23,7 @@
     #if-centerClass {height: 270px;}   
     #if-offsetColumns {height: 165px;}   
     #if-textPad {height: 480px;}   
+    #if-fullWidth {height: 320px;}   
     #if-subGrid {height: 210px;}
     #if-blockGrid {height: 1000px;}
     #if-visibilityClasses {height: 110px;}   

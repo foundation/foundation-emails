@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width"/>
+  <style>
+
+    {{> ink }}
+
+    body {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      background: #82CCE5;
+    }
+
+    .row {
+      background: #ffffff;
+    }
+
+    /* Firefox display hack */
+    @media only screen and (max-width: 600px) {
+      table[class="body"] .row tr,
+      table[class="body"] .row tbody {
+        display: block;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <table class="body">
+    <tr>
+      <td class="center" align="center" valign="top">
+        <center>
+
+          <!-- EXAMPLE CODE -->
+
+          <table class="container">
+            <tr>
+              <td>
+                
+                <table class="row">
+                  <tr>
+                    <td class="wrapper last">
+                      
+                      <table class="twelve columns">
+                        <tr>
+                          <td>
+                            <h6>Normal Row</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eius repellendus voluptates nisi vitae nulla similique provident expedita. Fuga, magni, iusto vel a aperiam nihil expedita voluptas odio hic odit!</p>
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+          </table>
+
+          <table class="row">
+            <tr>
+              <td class="center" align="center">
+                <center>
+
+                  <table class="container">
+                    <tr>
+                      <td class="wrapper last">
+
+                        <table class="twelve columns">
+                          <tr>
+                            <td>
+                              <h6>Full Width Row</h6>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eius repellendus voluptates nisi vitae nulla similique provident expedita. Fuga, magni, iusto vel a aperiam nihil expedita voluptas odio hic odit!</p>
+                            </td>
+                            <td class="expander"></td>
+                          </tr>
+                        </table>
+
+                      </td>
+                    </tr>
+                  </table>
+
+                </center>
+              </td>
+            </tr>
+          </table>
+          
+          <!-- END EXAMPLE CODE -->
+
+        </center>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

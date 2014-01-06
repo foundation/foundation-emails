@@ -317,6 +317,52 @@
 <iframe id="if-textPad" src="docs/examples/text-pad.html"></iframe>
 <br>
 <br>
+<h4 class="normal">Full-Width Rows</h4>
+<p>When working with designs that call for a container that's colored to stand out from the background (like the example above), it can often be helpful to have full-width rows that can be styled separately, especially for elements like headers or ad breaks. Since the rows of the Ink grid are usually restrained to the width of the container, this design pattern requires a slightly different syntax than normal.</p>
+<p>To create a full-width row, just follow this process:</p>
+<ol>
+  <li>Create a standard &#8220;container > row > column&#8221; block.</li>
+  <li>Swap the <code>.row</code> and <code>.container</code> classes, keeping the tables in the same place.</li>
+  <li>Add center code to the outside (<code>.row</code>) table.</li>
+</ol>
+<p>The row should now extend to the edge of the viewport, while the content is still restricted to the width of the container, so both can be styled accordingly.</p>
+<h6>Reverse Row Syntax</h6>
+<?php code_example(
+'<table class="row"> <!-- Styles go on the row -->
+  <tr>
+    <td class="center" align="center"> <!-- Center the container -->
+      <center>
+
+        <table class="container"> <!-- Container restricts the content width -->
+          <tr>
+            <td class="wrapper last"> <!-- Wrapper stays on the inner table -->
+
+              <table class="twelve columns">
+                <tr>
+                  <td>
+
+                    Content
+
+                  </td>
+                  <td class="expander"></td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+        </table>
+
+      </center>
+    </td>
+  </tr>
+</table>'
+, 'html'); ?>
+<br>
+<h6>Full Width Row</h6>
+<p>In the example below, the rows have a white background, while the body is light blue.</p>
+<iframe id="if-fullWidth" src="docs/examples/full-width.html"></iframe>
+<br>
+<br>
 <h4 class="normal">Expanders</h4>
 <p>When the Ink grid is shown on a small screen, the <code>.columns</code> tables expand to the full width of the container and stack vertically. On some clients, however, the columns don't expand properly if the content isn't as wide as the screen. While this might not seem so bad, it can cause your layout to appear broken if you are using a background color on the <code>.columns</code> table or are centering the content.</p>
 <p>To get around this, an empty <kbd>&lt;td&gt;</kbd> with a class of <code>expander</code> is used after the <kbd>&lt;td&gt;</kbd> containing the actual content in the <code>.columns</code> table. This extra <kbd>&lt;td&gt;</kbd> isn't displayed, but it forces the content <kbd>&lt;td&gt;</kbd> to expand to full width.</p>
