@@ -73,7 +73,12 @@
       <div class="bump-space">
         <span class="number">5</span>
         <h3 class="light">Send it out!</h3>
-        <p>Your email is ready! No more pinching to zoom to read your amazing content. Enjoy the rewards! Have a great one? Send a copy to us at ink@zurb.com.</p>
+        <p>
+          Your email is ready to ship! We recommend using an ESP like <a href="http://mailchimp.com">Mailchimp</a> or <a href="http://campaignmonitor.com">Campaign Monitor</a>, since some mail clients strip out the responsive formatting when you send an email.
+        </p>
+        <p>
+          Have a great one? Send a copy to us at <a href="mailto:ink@zurb.com">ink@zurb.com</a>.
+        </p>
       </div>
       <div class="process-5"></div>
       <div class="process-5-2"><img src="images/fish-4.svg"></div>
