@@ -338,6 +338,11 @@ h5 {font-size: 24px;}
 h6 {font-size: 20px;}
 body, table.body, p, td {font-size: 14px;line-height:19px;}
 
+p.lead, p.lede, p.leed {
+  font-size: 18px;
+  line-height:21px;
+}
+
 p { 
   margin-bottom: 10px;
 }
