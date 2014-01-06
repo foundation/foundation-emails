@@ -316,7 +316,7 @@ img.center {
 
 /* Typography */
 
-body, table.body, h1, h2, h3, h4, h5, h6, p { 
+body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
   color: #222222;
   font-family: "Helvetica", "Arial", sans-serif; 
   font-weight: normal; 
@@ -336,7 +336,7 @@ h3 {font-size: 32px;}
 h4 {font-size: 28px;}
 h5 {font-size: 24px;}
 h6 {font-size: 20px;}
-body, table.body, p {font-size: 14px;line-height:19px;}
+body, table.body, p, td {font-size: 14px;line-height:19px;}
 
 p { 
   margin-bottom: 10px;
