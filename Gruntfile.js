@@ -90,7 +90,7 @@ module.exports = function(grunt) {
     watch: {
       docs: {
         files: ['docs/docs.php', 'docs/**/*.php', 'docs/**/*.html', 'css/*.css'],
-        tasks: ['shell:makeStage', 'includes:docsDev', 'shell:testDocs'],
+        tasks: ['shell:makeStage', 'assemble:docsDev', 'shell:testDocs'],
         options: {
           livereload: true,
         },
@@ -102,9 +102,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('make:templates', ['includes:templates', 'shell:zipTemplates']);
-  grunt.registerTask('deploy:downloads', ['shell:makeStage', 'includes:templates', 'shell:zipTemplates', 'shell:zipFramework', 'shell:linkFramework', 'shell:deployDownloads', 'shell:cleanUp']);
-  grunt.registerTask('make:docs', ['shell:makeStage', 'includes:docsDev', 'shell:testDocs']);
-  grunt.registerTask('deploy:docs', ['shell:makeStage', 'includes:docsDeploy', 'shell:deployDocs', 'shell:cleanUp']);
-  grunt.registerTask('default', ['shell:makeStage', 'includes', 'shell:deployDocs']);
+  grunt.registerTask('make:templates', ['assemble:templates', 'shell:zipTemplates']);
+  grunt.registerTask('deploy:downloads', ['shell:makeStage', 'assemble:templates', 'shell:zipTemplates', 'shell:zipFramework', 'shell:linkFramework', 'shell:deployDownloads', 'shell:cleanUp']);
+  grunt.registerTask('make:docs', ['shell:makeStage', 'assemble:docsDev', 'shell:testDocs']);
+  grunt.registerTask('deploy:docs', ['shell:makeStage', 'assemble:docsDeploy', 'shell:deployDocs', 'shell:cleanUp']);
+  //grunt.registerTask('default', ['shell:makeStage', 'assemble', 'shell:deployDocs']);
 };
