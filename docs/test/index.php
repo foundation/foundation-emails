@@ -1,6 +1,6 @@
 <?php
   
-  include 'geshi.php';
+  include 'vendor/geshi.php';
   
   function code_example($code, $lang) {
     if (strtolower($lang) == 'html') {
