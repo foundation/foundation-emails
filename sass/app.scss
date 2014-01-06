@@ -461,6 +461,9 @@ ul.changelog {
     width: 100%;
     border: 1px solid #ddd;
   }
+  ol {
+    margin-left: 2.5em;
+  }
 }
 .prev-next-section { @include clearfix; border-top: 1px dashed #ddd; margin: 20px 0 50px; padding-top: 20px; 
   a { font-weight: bold; color: #333; }
