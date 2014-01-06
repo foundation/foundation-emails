@@ -1,10 +1,8 @@
 <h1 id="block-grid" class="light">Block-Grid</h1>
 <p class="lead">An even-width element grid that doesn't use media queries.</p>
 <hr />
-<h2 class="light">Description</h2>
+<h2 class="light">Evenly Spaced Blocks</h2>
 <p>For cases where neither the Ink grid nor the Ink sub-grid is appropriate, the block-grid can often be quite useful. Block-grid elements automatically align to the left and are pushed down to the next row individually as the viewport gets smaller...all without using media queries.</p>
-<hr />
-<h2 class="light">Markup</h2>
 <p>Block-grids consist of a table with class <code>block-grid</code> applied to it, along with a class in the pattern 'number-up' (ex. <code>.two-up</code>, <code>.three-up</code>, etc.) to describe how many even-sized elements should be placed per row. Extra care should be taken to ensure that there aren't any whitespace characters or newlines between the closing <code>&lt;td&gt;</code> of a block-grid element and the opening <code>&lt;td&gt;</code> of the preceding element, since some clients will render the whitespace as a gap between the elements.</p>
 <h6>Basic Block-Grid Markup</h6>
 <?php code_example(
