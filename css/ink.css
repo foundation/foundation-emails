@@ -180,6 +180,68 @@ table.ten .panel center { min-width: 460px; }
 table.eleven .panel center { min-width: 510px; }
 table.twelve .panel center { min-width: 560px; }
 
+table.one .text-pad center { min-width: 10px; }
+table.two .text-pad center { min-width: 60px; }
+table.three .text-pad center { min-width: 110px; }
+table.four .text-pad center { min-width: 160px; }
+table.five .text-pad center { min-width: 210px; }
+table.six .text-pad center { min-width: 260px; }
+table.seven .text-pad center { min-width: 310px; }
+table.eight .text-pad center { min-width: 360px; }
+table.nine .text-pad center { min-width: 410px; }
+table.ten .text-pad center { min-width: 460px; }
+table.eleven .text-pad center { min-width: 510px; }
+table.twelve .text-pad center { min-width: 560px; }
+
+table.one .left-text-pad center,
+table.one .text-pad-left center,
+table.one .right-text-pad center,
+table.one .text-pad-right center { min-width: 20px; }
+table.two .left-text-pad center,
+table.two .text-pad-left center,
+table.two .right-text-pad center,
+table.two .text-pad-right center { min-width: 20px; }
+table.three .left-text-pad center,
+table.three .text-pad-left center,
+table.three .right-text-pad center,
+table.three .text-pad-right center { min-width: 120px; }
+table.four .left-text-pad center,
+table.four .text-pad-left center,
+table.four .right-text-pad center,
+table.four .text-pad-right center { min-width: 170px; }
+table.five .left-text-pad center,
+table.five .text-pad-left center,
+table.five .right-text-pad center,
+table.five .text-pad-right center { min-width: 220px; }
+table.six .left-text-pad center,
+table.six .text-pad-left center,
+table.six .right-text-pad center,
+table.six .text-pad-right center { min-width: 270px; }
+table.seven .left-text-pad center,
+table.seven .text-pad-left center,
+table.seven .right-text-pad center,
+table.seven .text-pad-right center { min-width: 320px; }
+table.eight .left-text-pad center,
+table.eight .text-pad-left center,
+table.eight .right-text-pad center,
+table.eight .text-pad-right center { min-width: 370px; }
+table.nine .left-text-pad center,
+table.nine .text-pad-left center,
+table.nine .right-text-pad center,
+table.nine .text-pad-right center { min-width: 420px; }
+table.ten .left-text-pad center,
+table.ten .text-pad-left center,
+table.ten .right-text-pad center,
+table.ten .text-pad-right center { min-width: 470px; }
+table.eleven .left-text-pad center,
+table.eleven .text-pad-left center,
+table.eleven .right-text-pad center,
+table.eleven .text-pad-right center { min-width: 520px; }
+table.twelve .left-text-pad center,
+table.twelve .text-pad-left center,
+table.twelve .right-text-pad center,
+table.twelve .text-pad-right center { min-width: 570px; }
+
 .body .columns td.one,
 .body .column td.one { width: 8.333333%; }
 .body .columns td.two,
