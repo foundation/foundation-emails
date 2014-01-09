@@ -108,6 +108,7 @@
       <li class="changes">
         <div class="release-wrap">
           <ul class="release-description">
+            <li><span class="point-release-number">1.0.5</span> &mdash; Added .sub-grid class to enable the use of sub-grids with panels. <br><a href="http://zurb.com/ink/docs.php#v1-0-5">+13 more updates &raquo;</a></li>
             <li><span class="point-release-number">1.0.4</span> &mdash; Remove percentage based padding on sub-grid, fixes Outlook '00, 02, 03. <br><a href="http://zurb.com/ink/docs.php#v1-0-4">+7 more updates &raquo;</a></li>
             <li><span class="point-release-number">1.0.3</span> &mdash; Add compatibility chart of supported/tested clients to the docs. <br><a href="http://zurb.com/ink/docs.php#v1-0-3">+2 more updates &raquo;</a></li>
             <li><span class="point-release-number">1.0.2</span> &mdash; Switch to new button syntax to fully support Microsoft Outlook. <br><a href="http://zurb.com/ink/docs.php#v1-0-2">+1 more updates &raquo;</a></li>
