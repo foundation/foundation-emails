@@ -7,7 +7,7 @@
   <li>Add <code>.sub-grid</code> class to enable the use of sub-grids with panels</li>
   <li>Add paragraph <code>.lede</code> class</li>
   <li>Lower specificity on <code>.panel</code> class to allw its use on <kbd>&lt;div&gt;</kbd>s</li>
-  <li>Paritially patch docs examples to work in Firefox</li>
+  <li>Partially patch docs examples to work in Firefox</li>
   <li>Normalize font rendering in <kbd>&lt;td&gt;</kbd>s for Outlook 2007/2010/2013</li>
   <li>Fix 100% width issue on iPad</li>
   <li>Remove offset-sub-columns</li>
