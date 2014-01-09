@@ -2,6 +2,23 @@
 <p class="lead">All the latest and greatest changes to Ink.</p>
 <hr>
 <h2 class="light">1.0 - Public Release</h2>
+<h6 id="v1-0-5">1.0.5</h6>
+<ul>
+  <li>Add <code>.sub-grid</code> class to enable the use of sub-grids with panels</li>
+  <li>Add paragraph <code>.lede</code> class</li>
+  <li>Lower specificity on <code>.panel</code> class to allw its use on <kbd>&lt;div&gt;</kbd>s</li>
+  <li>Paritially patch docs examples to work in Firefox</li>
+  <li>Normalize font rendering in <kbd>&lt;td&gt;</kbd>s for Outlook 2007/2010/2013</li>
+  <li>Fix 100% width issue on iPad</li>
+  <li>Remove offset-sub-columns</li>
+  <li>Remove proprietary <kbd>&lt;unsubscribe&gt;</kbd> tags from templates</li>
+  <li>Fix issue with <code>.one.sub-columns</code> sections</li>
+  <li>Expand the Getting Started section of the docs</li>
+  <li>Add full-width row example to the docs</li>
+  <li>Add offset-columns example to the docs</li>
+  <li>Add additional panel examples to the docs</li>
+  <li>Miscellaneous bug fixes and typo fixes</li>
+</ul>
 <h6 id="v1-0-4">1.0.4</h6>
 <ul>
   <li>Apply font styles more uniformly to fix clients that strip out the <kbd>&lt;body&gt;</kbd> tag (fixes inliner preview)</li>
