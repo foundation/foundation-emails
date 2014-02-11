@@ -618,8 +618,8 @@ body.outlook p {
     display: table !important;
   }
 
-  table[class="body"] table.columns td,
-  table[class="body"] table.column td {
+  table[class="body"] table.columns > tr > td,
+  table[class="body"] table.column > tr > td {
     width: 100% !important;
   }
 
