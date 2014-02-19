@@ -58,6 +58,7 @@ $(document).on('click', '#previewModal .close-btn', function(e) {
   e.preventDefault();
   $('#previewModal').delay(100).removeClass('active');
   $('html, body').css('max-height', 'none').css('overflow', 'scroll');
+  $('#skateForm textarea').show();
 });
 
 $(document).on('click', '#showPreview', function(e) {
@@ -66,6 +67,7 @@ $(document).on('click', '#showPreview', function(e) {
     scrollTop : 0
   }, 700);
   $('#previewModal').delay(100).addClass('active');
+  $('#skateForm textarea').hide();
   $('html, body').css('max-height', $(window).height()).css('overflow', 'hidden');
   $('iframe').height($(window).height() - 47)
 });
