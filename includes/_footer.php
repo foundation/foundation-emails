@@ -31,7 +31,7 @@
 	        <div class="connect-links">
 	          <h4>Stay in touch</h4>
 	          <p>Get monthly updates about Ink in your inbox. </p>
-	          <a href="http://zurb.com/ink/coming-soon.php" class="small button">Get Ink Updates!</a>         
+	          <a href="http://zurb.com/ink/dispatch.php" class="small button">Get Ink Updates!</a>         
 	        </div>
 	      </div>
       </div> 

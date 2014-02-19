@@ -5,7 +5,7 @@
       <p>Sign up to receive monthly Responsive Emails highlights. <!-- <a href="#">Read&nbsp;Last&nbsp;Month's&nbsp;Edition&nbsp;&raquo;</a> --></p>
     </div>
     <div class="large-5 columns">
-      <form id="emailForm" method="post" action="coming-soon.php">
+      <form id="emailForm" method="post" action="dispatch.php">
         <div class="row collapse">
           <div class="large-9 small-8 columns">
             <input name="email" type="text" placeholder="signup@example.com">
