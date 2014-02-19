@@ -77,6 +77,7 @@ $(document).on('click', '#inlinerReset', function(e) {
   $('.show-on-submit').fadeOut(700);
   $('.hide-on-submit').fadeIn(700);
   $('#emailSource').removeClass('result').val(original);
+  $('#skateForm textarea').attr('readonly', false);
 });
 
 $('#skateForm').on('submit', function(e){
@@ -86,6 +87,7 @@ $('#skateForm').on('submit', function(e){
     source: original,
   };
 
+  $('#skateForm textarea').attr('readonly', true);
   $('#emailSource').val('Loading...')
   $('html, body').animate({
     scrollTop : $('.top-headlines').offset().top
