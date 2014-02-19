@@ -545,6 +545,18 @@ ul.mobile-nav { display: block; margin-bottom: 0;
   .top-area.main { overflow-x: hidden; }
 }
 
+@media only screen and (max-width: 1024px) and (min-width: 940px) {
+  .top-bar-section .has-form {
+    padding-top: 0;
+    padding-bottom: 0;
+    a { 
+      line-height: 26px; 
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
 /* coming-soon */
 .coming-soon { background: #004454; 
   .home-text { padding: 80px 0 83px; }
