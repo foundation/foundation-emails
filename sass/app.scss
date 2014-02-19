@@ -568,7 +568,7 @@ ul.mobile-nav { display: block; margin-bottom: 0;
   }
   
 }
-.cs-inky { background: url(../images/inky-mobile.svg) no-repeat right bottom; background-size: 624px 558px; 
+.cs-inky { background: url(../images/inky-mobile.svg) no-repeat right bottom; background-size: 624px 558px; min-height: 60vh;
   @media only screen and (max-width: 767px){
     background: url(../images/inky-mobile-hold.svg) no-repeat center bottom; background-size: 147px 200px; padding-bottom: 140px;  
   }
