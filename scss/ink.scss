@@ -1,0 +1,601 @@
+$container_width: 580px;
+$columns_count: 12;
+$paddings_width: 10px;
+$paddings_height: 10px;
+$step_size: ( $container_width - (( $columns_count - 1 ) * 2 * $paddings_width ) ) / $columns_count;
+
+$primary_color: #2ba6cb;
+$active_color: #2795b6;
+
+@function nr2word($n) {
+  @if $n == 1 {
+   @return one;
+  } @else if $n == 2 {
+    @return two;
+  } @else if $n == 3 {
+    @return three;
+  } @else if $n == 4 {
+    @return four;
+  } @else if $n == 5 {
+    @return five;
+  } @else if $n == 6 {
+    @return six;
+  } @else if $n == 7 {
+    @return seven;
+  } @else if $n == 8 {
+    @return eight;
+  } @else if $n == 9 {
+    @return nine;
+  } @else if $n == 10 {
+    @return ten;
+  } @else if $n == 11 {
+    @return eleven;
+  } @else if $n == 12 {
+    @return twelve;
+  } @else if $n == 13 {
+    @return thirteen;
+  } @else if $n == 14 {
+    @return fourteen;
+  } @else if $n == 15 {
+    @return fivetine;
+  } @else if $n == 16 {
+    @return sixteen;
+  } @else if $n == 17 {
+    @return seventeen;
+  } @else if $n == 18 {
+    @return eighteen;
+  } @else if $n == 19 {
+    @return nineteen;
+  } @else if $n == 20 {
+    @return twenty;
+  } @else {
+    @return many;
+  }
+}
+
+@function elementswidth($n){
+  @return ($n * $step_size) + (($n - 1) * $paddings_width * 2);
+}
+
+@function elementswidth_prz($n){
+  @return $n * ( 100% / $columns_count);
+}
+
+@function blockwidth ($n){
+  @return $n * ($step_size + 2 * $paddings_width);
+}
+
+@function upwidth ($n){
+  @return floor( ($container_width / $n) - (2 * $paddings_width));
+}
+
+#outlook a {
+  padding: 0;
+}
+
+body {
+  width: 100% !important;
+  min-width: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ExternalClass {
+  width: 100%;
+  line-height: 100%;
+  p, span, font, td, div {
+    line-height: 100%;
+  }
+}
+
+#backgroundTable {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+  line-height: 100% !important;
+}
+
+img {
+  outline: none;
+  text-decoration: none;
+  -ms-interpolation-mode: bicubic;
+  width: auto;
+  max-width: 100%;
+  float: left;
+  clear: both;
+  display: block;
+}
+
+center {
+  width: 100%;
+  min-width: $container_width;
+}
+
+a img {
+  border: none;
+}
+
+p {
+  margin: 0 0 0 10px;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  border-collapse: collapse !important;
+}
+
+table, tr, td {
+  padding: 0;
+  vertical-align: top;
+  text-align: left;
+}
+
+hr {
+  color: #d9d9d9;
+  background-color: #d9d9d9;
+  height: 1px;
+  border: none;
+}
+
+/* Responsive Grid */
+
+table {
+  &.body {
+    height: 100%;
+    width: 100%;
+  }
+  &.container {
+    width: $container_width;
+    margin: 0 auto;
+    text-align: inherit;
+  }
+  &.row {
+    padding: 0px;
+    width: 100%;
+    position: relative;
+  }
+  &.container table.row {
+    display: block;
+  }
+}
+
+td.wrapper {
+  padding: $paddings_height (2 * $paddings_width) 0px 0px;
+  position: relative;
+}
+
+table {
+  &.columns, &.column {
+    margin: 0 auto;
+  }
+  &.columns td, &.column td {
+    padding: 0px 0px $paddings_height;
+  }
+  &.columns td.sub-columns, &.column td.sub-columns, &.columns td.sub-column, &.column td.sub-column {
+    padding-right: $paddings_width;
+  }
+}
+
+td {
+  &.sub-column, &.sub-columns {
+    min-width: 0px;
+  }
+}
+
+table {
+  &.row td.last, &.container td.last {
+    padding-right: 0px;
+  }
+
+  @for $i from 1 through $columns_count {
+    &.#{nr2word($i)} {
+      width: elementswidth($i);
+      .panel center, center {
+        min-width: elementswidth($i);
+      }
+    }
+  }
+}
+
+.body {
+  @for $i from 1 through $columns_count {
+    .columns td.#{nr2word($i)}, .column td.#{nr2word($i)} {
+      width: elementswidth_prz($i);
+    }
+  }
+}
+
+td {
+  @for $i from 1 through ($columns_count - 1){
+    &.offset-by-#{nr2word($i)} {
+      padding-left: blockwidth($i);
+    }
+  }
+  &.expander {
+    visibility: hidden;
+    width: 0px;
+    padding: 0 !important;
+  }
+}
+
+table {
+  &.columns .text-pad, &.column .text-pad {
+    padding-left: $paddings_width;
+    padding-right: $paddings_width;
+  }
+  &.columns {
+    .left-text-pad, .text-pad-left {
+      padding-left: $paddings_width;
+    }
+  }
+  &.column {
+    .left-text-pad, .text-pad-left {
+      padding-left: $paddings_width;
+    }
+  }
+  &.columns {
+    .right-text-pad, .text-pad-right {
+      padding-right: $paddings_width;
+    }
+  }
+  &.column {
+    .right-text-pad, .text-pad-right {
+      padding-right: $paddings_width;
+    }
+  }
+}
+
+/* Block Grid */
+
+.block-grid {
+  width: 100%;
+  max-width: $container_width;
+  td {
+    display: inline-block;
+    padding: $paddings_height $paddings_width;
+  }
+}
+
+@for $i from 2 through ($columns_count - 1){
+  .#{nr2word($i)}-up {
+    width: upwidth($i);
+  }
+}
+
+/* Alignment & Visibility Classes */
+
+table.center, td.center, h1.center, h2.center, h3.center, h4.center, h5.center, h6.center {
+  text-align: center;
+}
+
+span.center {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+img.center {
+  margin: 0 auto;
+  float: none;
+}
+
+.show-for-small, .hide-for-desktop {
+  display: none;
+}
+
+/* Typography */
+
+body, table.body, h1, h2, h3, h4, h5, h6, p, td {
+  color: #222222;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  word-break: normal;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 20px;
+}
+
+body, table.body, p, td {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+p {
+  &.lead, &.lede, &.leed {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  margin-bottom: $paddings_height;
+}
+
+small {
+  font-size: 10px;
+}
+
+a {
+  color: $primary_color;
+  text-decoration: none;
+  &:hover, &:active {
+    color: $active_color !important;
+  }
+  &:visited {
+    color: $primary_color !important;
+  }
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: $primary_color;
+}
+
+h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active, h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+  color: $primary_color !important;
+}
+
+/* Panels */
+
+.panel {
+  background: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  padding: 10px !important;
+}
+
+.sub-grid {
+  table {
+    width: 100%;
+  }
+  td.sub-columns {
+    padding-bottom: 0;
+  }
+}
+
+/* Buttons */
+
+table {
+  &.button, &.tiny-button, &.small-button, &.medium-button, &.large-button {
+    width: 100%;
+    overflow: hidden;
+  }
+  &.button td, &.tiny-button td, &.small-button td, &.medium-button td, &.large-button td {
+    display: block;
+    width: auto !important;
+    text-align: center;
+    background: $primary_color;
+    border: 1px solid #2284a1;
+    color: #ffffff;
+    padding: 8px 0;
+  }
+  &.tiny-button td {
+    padding: 5px 0 4px;
+  }
+  &.small-button td {
+    padding: 8px 0 7px;
+  }
+  &.medium-button td {
+    padding: 12px 0 10px;
+  }
+  &.large-button td {
+    padding: 21px 0 18px;
+  }
+  &.button td a, &.tiny-button td a, &.small-button td a, &.medium-button td a, &.large-button td a {
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  &.tiny-button td a {
+    font-size: 12px;
+    font-weight: normal;
+  }
+  &.small-button td a {
+    font-size: 16px;
+  }
+  &.medium-button td a {
+    font-size: 20px;
+  }
+  &.large-button td a {
+    font-size: 24px;
+  }
+  &.button {
+    &:hover td, &:visited td, &:active td {
+      background: $active_color !important;
+    }
+    &:hover td a, &:visited td a, &:active td a {
+      color: #fff !important;
+    }
+    &:hover td {
+      background: $active_color !important;
+    }
+  }
+  &.tiny-button:hover td, &.small-button:hover td, &.medium-button:hover td, &.large-button:hover td {
+    background: $active_color !important;
+  }
+  &.button {
+    &:hover td a, &:active td a, td a:visited {
+      color: #ffffff !important;
+    }
+  }
+  &.tiny-button {
+    &:hover td a, &:active td a, td a:visited {
+      color: #ffffff !important;
+    }
+  }
+  &.small-button {
+    &:hover td a, &:active td a, td a:visited {
+      color: #ffffff !important;
+    }
+  }
+  &.medium-button {
+    &:hover td a, &:active td a, td a:visited {
+      color: #ffffff !important;
+    }
+  }
+  &.large-button {
+    &:hover td a, &:active td a, td a:visited {
+      color: #ffffff !important;
+    }
+  }
+  &.secondary {
+    td {
+      background: #e9e9e9;
+      border-color: #d0d0d0;
+      color: #555;
+      a {
+        color: #555;
+      }
+    }
+    &:hover td {
+      background: #d0d0d0 !important;
+      color: #555;
+      a {
+        color: #555 !important;
+      }
+    }
+    td a:visited, &:active td a {
+      color: #555 !important;
+    }
+  }
+  &.success {
+    td {
+      background: #5da423;
+      border-color: #457a1a;
+    }
+    &:hover td {
+      background: #457a1a !important;
+    }
+  }
+  &.alert {
+    td {
+      background: #c60f13;
+      border-color: #970b0e;
+    }
+    &:hover td {
+      background: #970b0e !important;
+    }
+  }
+  &.radius td {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+  &.round td {
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    border-radius: 500px;
+  }
+}
+
+/* Outlook First */
+
+body.outlook p {
+  display: inline !important;
+}
+
+/*  Media Queries */
+
+@media only screen and (max-width: 600px) {
+  table[class="body"] {
+    img {
+      width: auto !important;
+      height: auto !important;
+    }
+    center {
+      min-width: 0 !important;
+    }
+    .container {
+      width: 95% !important;
+    }
+    .row {
+      width: 100% !important;
+      display: block !important;
+    }
+    .wrapper {
+      display: block !important;
+      padding-right: 0 !important;
+    }
+    .columns, .column {
+      table-layout: fixed !important;
+      float: none !important;
+      width: 100% !important;
+      padding-right: 0px !important;
+      padding-left: 0px !important;
+      display: block !important;
+    }
+    .wrapper.first {
+      .columns, .column {
+        display: table !important;
+      }
+    }
+    table {
+      &.columns td, &.column td {
+        width: 100% !important;
+      }
+    }
+
+    @for $i from 1 through ($columns_count){
+      .columns td.#{nr2word($i)}, .column td.#{nr2word($i)} {
+        width: elementswidth_prz($i) !important;
+      }
+    }
+    td {
+       @for $i from 1 through ($columns_count - 1){
+        &.offset-by-#{nr2word($i)} {
+          padding-left: 0 !important;
+        }
+      }
+    }
+    table.columns td.expander {
+      width: 1px !important;
+    }
+    .right-text-pad, .text-pad-right {
+      padding-left: $paddings_width !important;
+    }
+    .left-text-pad, .text-pad-left {
+      padding-right: $paddings_width !important;
+    }
+    .hide-for-small, .show-for-desktop {
+      display: none !important;
+    }
+    .show-for-small, .hide-for-desktop {
+      display: inherit !important;
+    }
+  }
+}
