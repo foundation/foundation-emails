@@ -26,7 +26,7 @@
         <a href="download.php" class="large button">Download Ink</a>
         <ul class="header-social-links">
           <li><a href="https://github.com/zurb/ink"><i class="fi-social-github"></i>Ink on GitHub</a>
-          <li><a href="http://twitter.com/inkzurb"><i class="fi-social-twitter"></i>@inkzurb</a>
+          <li><a href="http://twitter.com/ZURBink"><i class="fi-social-twitter"></i>@ZURBink</a>
         </ul>
         <div class="inky hide-for-small"></div>
       </div>

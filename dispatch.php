@@ -91,7 +91,7 @@
 	      <div class="large-4 columns">
 		      <div class="support-links">
 		          <h4>Talk to us</h4>
-		          <p><a href="http://twitter.com/inkzurb">@inkzurb</a></p>
+		          <p><a href="http://twitter.com/ZURBink">@ZURBink</a></p>
 		          <p>Not a big talker? Email us at <a href="http://zurb.com/contact">ink@zurb.com</a></p>
 		      </div>
 	      </div>

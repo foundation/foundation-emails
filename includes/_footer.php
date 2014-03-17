@@ -23,7 +23,7 @@
 	      <div class="large-4 columns">
 		      <div class="support-links">
 		          <h4>Talk to us</h4>
-		          <p>Send us a Tweet and let us know what you think!<br><a href="http://twitter.com/inkzurb">@inkzurb</a></p>
+		          <p>Send us a Tweet and let us know what you think!<br><a href="http://twitter.com/ZURBink">@ZURBink</a></p>
 		          
 		      </div>
 	      </div>
