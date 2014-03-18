@@ -463,6 +463,9 @@ table.large-button td a {
   font-family: Helvetica, Arial, sans-serif;
   color: #ffffff;
   font-size: 16px;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 table.tiny-button td a {
