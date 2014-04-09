@@ -8,7 +8,7 @@
   <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon" />
   
   <?php 
-    if($download_file) {
+    if (isset($download_file)) {
       echo "<meta http-equiv=\"Refresh\" content=\"0.5; url=downloads/$download_file\" />";
     }
   ?>

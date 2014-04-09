@@ -7,6 +7,11 @@
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
 
+  <?php 
+    if (empty($thisPage)) { 
+      $thisPage = null;
+    }
+  ?>
   <section class="top-bar-section">
     <ul class="right">
       <li<?php if ($thisPage=="process") echo " class=\"active\""; ?>><a href="process.php">Process</a></li>
