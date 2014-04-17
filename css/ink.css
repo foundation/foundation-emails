@@ -17,6 +17,8 @@ body{
   padding:0;
 }
 
+  /* .ExternalClass applies to Hotmail and Outlook.com  */
+  
 .ExternalClass { 
   width:100%;
 } 
