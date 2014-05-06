@@ -17,6 +17,8 @@ body{
   padding:0;
 }
 
+  /* .ExternalClass applies to Outlook.com (the artist formerly known as Hotmail)  */
+  
 .ExternalClass { 
   width:100%;
 } 
