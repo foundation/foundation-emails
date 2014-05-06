@@ -2,7 +2,7 @@
 <p class="lead">Selectively show content for different screen sizes.</p>
 <hr />
 
-<p>By adding a visibility class to an element, you can show or hide it based on screen size. Visibility classes can be used on any element.</p>
+<p>By adding a visibility class to an element, you can show or hide it based on screen size. Visibility classes can be used on any element. Due to Outlook's lack of support for certain CSS properties, the Ink visibiility classes should be used in conjunction with conditional comments to ensure that the content is properly hidden (or shown) in Outlook 2007/2010/2013.</p>
 <p>Note: If you're using a visibility class on an image, be sure to apply it to the parent element, not to the image itself.</p>
 <h6>Using Visibility Classes</h6>
 <?php code_example(
@@ -10,16 +10,18 @@
   <tr>
     <td class="wrapper last">
 
-      <table class="twelve columns show-for-small">
-        <tr>
-          <td class="panel">
+      <!--[if !mso]><!-- -->
+        <table class="twelve columns show-for-small">
+          <tr>
+            <td class="panel">
 
-            .show-for-small
-            
-          </td>
-          <td class="expander"></td>
-        </tr>
-      </table>
+              .show-for-small
+              
+            </td>
+            <td class="expander"></td>
+          </tr>
+        </table>
+      <!--<![endif]-->
 
       <table class="twelve columns hide-for-small">
         <tr>
