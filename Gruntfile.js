@@ -106,5 +106,5 @@ module.exports = function(grunt) {
   grunt.registerTask('deploy:downloads', ['shell:makeStage', 'assemble:templates', 'shell:zipTemplates', 'shell:zipFramework', 'shell:linkFramework', 'shell:deployDownloads', 'shell:cleanUp']);
   grunt.registerTask('make:docs', ['shell:makeStage', 'assemble:docsDev', 'shell:testDocs']);
   grunt.registerTask('deploy:docs', ['shell:makeStage', 'assemble:docsDeploy', 'shell:deployDocs', 'shell:cleanUp']);
-  //grunt.registerTask('default', ['shell:makeStage', 'assemble', 'shell:deployDocs']);
+  grunt.registerTask('default', ['make:docs', 'watch']);
 };
