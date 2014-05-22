@@ -315,6 +315,8 @@ img.center {
 .show-for-small,
 .hide-for-desktop {
   display: none;
+  width:0; 
+  overflow:hidden;
 }
 
 /* Typography */
@@ -689,6 +691,8 @@ body.outlook p {
 
   table[class="body"] .show-for-small,
   table[class="body"] .hide-for-desktop {
-    display: inherit !important;
+    display : block !important;
+    width : auto !important;
+    overflow : visible !important;
   }
 }
