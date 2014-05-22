@@ -315,8 +315,14 @@ img.center {
 .show-for-small,
 .hide-for-desktop {
   display: none;
-  width:0; 
+  width:0;
+  mso-hide:all;
   overflow:hidden;
+}
+
+.show-for-small *,
+.hide-for-desktop * {
+	mso-hide:all;
 }
 
 /* Typography */
