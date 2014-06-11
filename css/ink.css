@@ -103,7 +103,7 @@ table.container {
 }
 
 table.row { 
-  padding: 0px; 
+  padding: 0;
   width: 100%;
   position: relative;
 }
@@ -113,7 +113,7 @@ table.container table.row {
 }
 
 td.wrapper {
-  padding: 10px 20px 0px 0px;
+  padding: 10px 20px 0 0;
   position: relative;
 }
 
@@ -124,7 +124,7 @@ table.column {
 
 table.columns td,
 table.column td {
-  padding: 0px 0px 10px; 
+  padding: 0 0 10px;
 }
 
 table.columns td.sub-columns,
@@ -135,12 +135,12 @@ table.column td.sub-column {
 }
 
 td.sub-column, td.sub-columns {
-  min-width: 0px;
+  min-width: 0;
 }
 
 table.row td.last,
 table.container td.last {
-  padding-right: 0px;
+  padding-right: 0;
 }
 
 table.one { width: 30px; }
@@ -221,7 +221,7 @@ td.offset-by-eleven { padding-left: 550px; }
 
 td.expander {
   visibility: hidden;
-  width: 0px;
+  width: 0;
   padding: 0 !important;
 }
 
@@ -614,8 +614,8 @@ body.outlook p {
     table-layout: fixed !important;
     float: none !important;
     width: 100% !important;
-    padding-right: 0px !important;
-    padding-left: 0px !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
     display: block !important;
   }
 
