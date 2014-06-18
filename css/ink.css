@@ -124,7 +124,7 @@ table.column {
 
 table.columns td,
 table.column td {
-  padding: 0px 0px 10px; 
+  padding-right; 10px; 
 }
 
 table.columns td.sub-columns,
@@ -225,16 +225,16 @@ td.expander {
   padding: 0 !important;
 }
 
-table.columns .text-pad,
-table.column .text-pad {
+td.text-pad,
+td.text-pad {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-table.columns .left-text-pad,
-table.columns .text-pad-left,
-table.column .left-text-pad,
-table.column .text-pad-left {
+td.left-text-pad,
+td.text-pad-left,
+td.left-text-pad,
+td.text-pad-left {
   padding-left: 10px;
 }
 
