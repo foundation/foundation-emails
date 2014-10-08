@@ -8,19 +8,13 @@
   padding:0;
 }
 
-body{
-  width:100% !important;
-  min-width: 100%;
+html,body,.ReadMsgBody, .ExternalClass {
+  background-color:#ffffff;
+  width:100%!important;
+  line-height:100%;
   -webkit-text-size-adjust:100%;
   -ms-text-size-adjust:100%;
   margin:0;
-  padding:0;
-}
-
-  /* .ExternalClass applies to Outlook.com (the artist formerly known as Hotmail)  */
-
-.ExternalClass {
-  width:100%;
 }
 
 .ExternalClass,
@@ -31,6 +25,12 @@ body{
 .ExternalClass div {
   line-height: 100%;
 }
+
+.ExternalClass img[class^=Emoji] {
+  width:10px!important;
+  height:10px!important;
+  display:inline!important;
+} 
 
 #backgroundTable {
   margin:0;
@@ -63,9 +63,11 @@ p {
   margin: 0 0 0 10px;
 }
 
-table {
+table,table td {
   border-spacing: 0;
   border-collapse: collapse;
+  mso-table-lspace:0pt;
+  mso-table-rspace:0pt;
 }
 
 td {
@@ -73,13 +75,11 @@ td {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
-  border-collapse: collapse !important;
 }
 
 table, tr, td {
   padding: 0;
   vertical-align: top;
-  text-align: left;
 }
 
 hr {

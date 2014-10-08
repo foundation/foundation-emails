@@ -83,6 +83,14 @@
     }
 
   </style>
+    <!-- Any element styled with a webfont should be internally wrapped with a span and this class 
+         to control the fallback font in Outlook.  Otherwise Outlook will default to Times New Roman.  
+         Replace Arial,sans-serif with your preferred fall-back. -->
+    <!--[if gte mso 9]>
+    <style type="text/css">
+        .fallback { font-family:'Arial',sans-serif; }
+    </style>
+    <![endif]-->
 </head>
 <body>
 	<table class="body">
@@ -138,8 +146,8 @@
                           <td>
 
                             <h1>Hi, Elijah Baily</h1>
-                						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-                						<img width="580" height="300" src="http://placehold.it/580x300">
+                		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                		<img width="580" height="300" src="http://placehold.it/580x300">
 
                           </td>
                           <td class="expander"></td>
