@@ -87,6 +87,14 @@
     }
 
 	</style>
+    <!-- Any element styled with a webfont should be internally wrapped with a span and this class 
+         to control the fallback font in Outlook.  Otherwise Outlook will default to Times New Roman.  
+         Replace Arial,sans-serif with your preferred fall-back. -->
+    <!--[if gte mso 9]>
+    <style type="text/css">
+        .fallback { font-family:'Arial',sans-serif; }
+    </style>
+    <![endif]-->
 </head>
 <body>
 	<table class="body">
@@ -136,8 +144,8 @@
                         <tr>
                           <td>
                             <h1>Hi, Susan Calvin</h1>
-                						<p class="lead">Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.</p>
-                						<p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.</p>
+			    <p class="lead">Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.</p>
+                	    <p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.</p>
                           </td>
                           <td class="expander"></td>
                         </tr>
