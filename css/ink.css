@@ -32,7 +32,9 @@ body{
   line-height: 100%;
 }
 
-#backgroundTable {
+/* removed for opower */ 
+
+/* #backgroundTable {
   margin:0;
   padding:0;
   width:100% !important;
@@ -48,20 +50,22 @@ img {
   float: left;
   clear: both;
   display: block;
-}
+} */
 
 center {
   width: 100%;
   min-width: 580px;
 }
 
-a img {
+/* removed for opower */ 
+
+/* a img {
   border: none;
 }
 
 p {
   margin: 0 0 0 10px;
-}
+} */
 
 table {
   border-spacing: 0;
@@ -69,25 +73,34 @@ table {
 }
 
 td {
-  word-break: break-word;
+
+  /* removed for opower */ 
+
+  /* word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
-  hyphens: auto;
+  hyphens: auto; */ 
+
   border-collapse: collapse !important;
 }
 
 table, tr, td {
   padding: 0;
-  vertical-align: top;
-  text-align: left;
+
+  /* removed for opower */ 
+
+  /* vertical-align: top;
+  text-align: left; */ 
 }
 
-hr {
+/* removed for opower */ 
+
+/* hr {
   color: #d9d9d9;
   background-color: #d9d9d9;
   height: 1px;
   border: none;
-}
+} */
 
 /* Responsive Grid */
 
@@ -122,9 +135,11 @@ table.column {
   margin: 0 auto;
 }
 
-table.columns td,
-table.column td {
-  padding: 0px 0px 10px;
+/* added .grid for opower */ 
+
+table.columns td.grid,
+table.column td.grid {
+  padding: 0px 0px 10px 0px;
 }
 
 table.columns td.sub-columns,
@@ -319,7 +334,9 @@ img.center {
 
 /* Typography */
 
-body, table.body, h1, h2, h3, h4, h5, h6, p, td {
+/* removed for opower */ 
+
+/* body, table.body, h1, h2, h3, h4, h5, h6, p, td {
   color: #222222;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -396,11 +413,11 @@ h4 a:visited,
 h5 a:visited,
 h6 a:visited {
   color: #2ba6cb !important;
-}
+} */
 
 /* Panels */
 
-.panel {
+/* .panel {
   background: #f2f2f2;
   border: 1px solid #d9d9d9;
   padding: 10px !important;
@@ -412,11 +429,13 @@ h6 a:visited {
 
 .sub-grid td.sub-columns {
   padding-bottom: 0;
-}
+} */
 
 /* Buttons */
 
-table.button,
+/* removed for opower */ 
+
+/* table.button,
 table.tiny-button,
 table.small-button,
 table.medium-button,
@@ -574,7 +593,7 @@ table.round td {
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
   border-radius: 500px;
-}
+} */
 
 /* Outlook First */
 
@@ -586,31 +605,33 @@ body.outlook p {
 
 @media only screen and (max-width: 600px) {
 
-  table[class="body"] img {
+  /* removed for opower */ 
+
+  /* table.body img {
     width: auto !important;
     height: auto !important;
-  }
+  } */ 
 
-  table[class="body"] center {
+  table.body center {
     min-width: 0 !important;
   }
 
-  table[class="body"] .container {
-    width: 95% !important;
+  table.body .container {
+    width: 90% !important;
   }
 
-  table[class="body"] .row {
+  table.body .row {
     width: 100% !important;
     display: block !important;
   }
 
-  table[class="body"] .wrapper {
+  table.body .wrapper {
     display: block !important;
     padding-right: 0 !important;
   }
 
-  table[class="body"] .columns,
-  table[class="body"] .column {
+  table.body .columns,
+  table.body .column {
     table-layout: fixed !important;
     float: none !important;
     width: 100% !important;
@@ -619,76 +640,78 @@ body.outlook p {
     display: block !important;
   }
 
-  table[class="body"] .wrapper.first .columns,
-  table[class="body"] .wrapper.first .column {
+  table.body .wrapper.first .columns,
+  table.body .wrapper.first .column {
     display: table !important;
   }
 
-  table[class="body"] table.columns td,
-  table[class="body"] table.column td {
+  /* added .grid for opower */   
+
+  table.body table.columns td.grid,
+  table.body table.column td.grid {
     width: 100% !important;
   }
 
-  table[class="body"] .columns td.one,
-  table[class="body"] .column td.one { width: 8.333333% !important; }
-  table[class="body"] .columns td.two,
-  table[class="body"] .column td.two { width: 16.666666% !important; }
-  table[class="body"] .columns td.three,
-  table[class="body"] .column td.three { width: 25% !important; }
-  table[class="body"] .columns td.four,
-  table[class="body"] .column td.four { width: 33.333333% !important; }
-  table[class="body"] .columns td.five,
-  table[class="body"] .column td.five { width: 41.666666% !important; }
-  table[class="body"] .columns td.six,
-  table[class="body"] .column td.six { width: 50% !important; }
-  table[class="body"] .columns td.seven,
-  table[class="body"] .column td.seven { width: 58.333333% !important; }
-  table[class="body"] .columns td.eight,
-  table[class="body"] .column td.eight { width: 66.666666% !important; }
-  table[class="body"] .columns td.nine,
-  table[class="body"] .column td.nine { width: 75% !important; }
-  table[class="body"] .columns td.ten,
-  table[class="body"] .column td.ten { width: 83.333333% !important; }
-  table[class="body"] .columns td.eleven,
-  table[class="body"] .column td.eleven { width: 91.666666% !important; }
-  table[class="body"] .columns td.twelve,
-  table[class="body"] .column td.twelve { width: 100% !important; }
+  table.body .columns td.one,
+  table.body .column td.one { width: 8.333333% !important; }
+  table.body .columns td.two,
+  table.body .column td.two { width: 16.666666% !important; }
+  table.body .columns td.three,
+  table.body .column td.three { width: 25% !important; }
+  table.body .columns td.four,
+  table.body .column td.four { width: 33.333333% !important; }
+  table.body .columns td.five,
+  table.body .column td.five { width: 41.666666% !important; }
+  table.body .columns td.six,
+  table.body .column td.six { width: 50% !important; }
+  table.body .columns td.seven,
+  table.body .column td.seven { width: 58.333333% !important; }
+  table.body .columns td.eight,
+  table.body .column td.eight { width: 66.666666% !important; }
+  table.body .columns td.nine,
+  table.body .column td.nine { width: 75% !important; }
+  table.body .columns td.ten,
+  table.body .column td.ten { width: 83.333333% !important; }
+  table.body .columns td.eleven,
+  table.body .column td.eleven { width: 91.666666% !important; }
+  table.body .columns td.twelve,
+  table.body .column td.twelve { width: 100% !important; }
 
-  table[class="body"] td.offset-by-one,
-  table[class="body"] td.offset-by-two,
-  table[class="body"] td.offset-by-three,
-  table[class="body"] td.offset-by-four,
-  table[class="body"] td.offset-by-five,
-  table[class="body"] td.offset-by-six,
-  table[class="body"] td.offset-by-seven,
-  table[class="body"] td.offset-by-eight,
-  table[class="body"] td.offset-by-nine,
-  table[class="body"] td.offset-by-ten,
-  table[class="body"] td.offset-by-eleven {
+  table.body td.offset-by-one,
+  table.body td.offset-by-two,
+  table.body td.offset-by-three,
+  table.body td.offset-by-four,
+  table.body td.offset-by-five,
+  table.body td.offset-by-six,
+  table.body td.offset-by-seven,
+  table.body td.offset-by-eight,
+  table.body td.offset-by-nine,
+  table.body td.offset-by-ten,
+  table.body td.offset-by-eleven {
     padding-left: 0 !important;
   }
 
-  table[class="body"] table.columns td.expander {
+  table.body table.columns td.expander {
     width: 1px !important;
   }
 
-  table[class="body"] .right-text-pad,
-  table[class="body"] .text-pad-right {
+  table.body .right-text-pad,
+  table.body .text-pad-right {
     padding-left: 10px !important;
   }
 
-  table[class="body"] .left-text-pad,
-  table[class="body"] .text-pad-left {
+  table.body .left-text-pad,
+  table.body .text-pad-left {
     padding-right: 10px !important;
   }
 
-  table[class="body"] .hide-for-small,
-  table[class="body"] .show-for-desktop {
+  table.body .hide-for-small,
+  table.body .show-for-desktop {
     display: none !important;
   }
 
-  table[class="body"] .show-for-small,
-  table[class="body"] .hide-for-desktop {
+  table.body .show-for-small,
+  table.body .hide-for-desktop {
     display: inherit !important;
   }
 }
