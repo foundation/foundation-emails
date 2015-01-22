@@ -19,7 +19,7 @@
 	"ink/components/media-query";
 
   body{
-    background: green;
+    background: #00558B;
     font-family: Helvetica;
   }
   .container{
@@ -34,3 +34,50 @@
     text-align:center;
     font-weight:400;
   }
+
+  .inky {
+  background: url(http://zurb.com/ink/images/inky-all-devices.svg) no-repeat center center;
+  background-size: cover;
+  height: 680px;
+  width: 634px;
+  position: absolute;
+  right: 0px;
+  top: 10px !important;
+	}
+
+	.inky.loaded {
+	  animation-name: inky-float;
+	  -webkit-animation-name: inky-float;
+	  animation-duration: 5s;
+	  -webkit-animation-duration: 5s;
+	  animation-iteration-count: infinite;
+	  -webkit-animation-iteration-count: infinite;
+	}
+
+	@keyframes inky-float {
+	  0% {
+	    transform: translateY(0%);
+	  }
+
+	  50% {
+	    transform: translateY(2%);
+	  }
+
+	  100% {
+	    transform: translateY(0%);
+	  }
+	}
+
+	@-webkit-keyframes inky-float {
+	  0% {
+	    -webkit-transform: translateY(0%);
+	  }
+
+	  50% {
+	    -webkit-transform: translateY(2%);
+	  }
+
+	  100% {
+	    -webkit-transform: translateY(0%);
+	  }
+	}
