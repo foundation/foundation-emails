@@ -1,0 +1,29 @@
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+@import "../functions";
+
+// We use this to control whether or not CSS classes come through in the gem files. // Change
+$include-html-classes: true !default;
+$include-html-global-classes: $include-html-classes !default;
+
+$column-gutter: 20px !default;
+
+$container-width: 580px !default;
+
+$text-padding: 10px !default;
+
+$panel-padding: 10px !default;
+
+$paragraph-margin-bottom: 10px !default;
+
+// We use these to make sure border radius matches unless we want it different.
+$global-radius: 3px !default;
+$global-rounded: 500px !default;
+
+@include exports("global") {
+  @if $include-html-global-classes {
+
+  }
+}

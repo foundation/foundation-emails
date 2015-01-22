@@ -1,0 +1,46 @@
+// Ink by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+@import "global";
+
+//
+// @variables
+//
+$include-html-alignment-classes: $include-html-classes !default;
+
+@include exports("alignment") {
+	@if $include-html-alignment-classes {
+		/* Alignment & Visibility Classes */
+
+		table.center, td.center {
+		  text-align: center;
+		}
+
+		h1.center,
+		h2.center,
+		h3.center,
+		h4.center,
+		h5.center,
+		h6.center,
+		p.center {
+		  text-align: center;
+		}
+
+		span.center {
+		  display: block;
+		  width: 100%;
+		  text-align: center;
+		}
+
+		img.center {
+		  margin: 0 auto;
+		  float: none;
+		}
+
+		.show-for-small,
+		.hide-for-desktop {
+		  display: none;
+		}
+	}
+}	

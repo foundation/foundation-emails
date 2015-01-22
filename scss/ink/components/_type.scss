@@ -1,0 +1,130 @@
+// Ink by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+@import "global";
+
+//
+// @variables
+//
+$include-html-type-classes: $include-html-classes !default;
+
+// We use these to control font styles
+$base-font-color: #222222 !default;
+$base-font-family: Helvetica, Arial, sans-serif !default;
+$base-font-weight: normal !default;
+$base-line-height: 1.3 !default;
+
+$body-font-size: 14px !default;
+$body-line-height: 19px !default;
+
+// We use these to control header font sizes
+$h1-font-size: 40px !default;
+$h2-font-size: 36px !default;
+$h3-font-size: 32px !default;
+$h4-font-size: 28px !default;
+$h5-font-size: 24px !default;
+$h6-font-size: 20px !default;
+
+// A general <small> styling
+$small-font-size: 10px !default;
+
+// We use these to style lead paragraphs
+$paragraph-lead-font-size: 18px !default;
+$paragraph-lead-line-height: 21px !default;
+
+// We use these to style anchors
+$anchor-text-decoration: none !default;
+$anchor-font-color: #2ba6cb !default;
+$anchor-font-color-visited: $anchor-font-color !default;
+$anchor-font-color-hover: #2795b6 !default;
+$anchor-font-color-active: $anchor-font-color-hover !default;
+
+$header-anchor-font-color: $anchor-font-color !default;
+$header-anchor-font-color-visited: $header-anchor-font-color !default;
+$header-anchor-font-color-active: $header-anchor-font-color !default;
+
+@include exports("type") {
+    @if $include-html-type-classes {
+    /* Typography */
+
+    body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
+      color: color2hex($base-font-color);
+      font-family: $base-font-family; 
+      font-weight: $base-font-weight; 
+      padding:0; 
+      margin: 0;
+      text-align: left; 
+      line-height: $base-line-height;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      word-break: normal;
+    }
+
+  h1 {font-size: $h1-font-size;}
+  h2 {font-size: $h2-font-size;}
+  h3 {font-size: $h3-font-size;}
+  h4 {font-size: $h4-font-size;}
+  h5 {font-size: $h5-font-size;}
+  h6 {font-size: $h6-font-size;}
+  body, table.body, p, td {font-size: $body-font-size;line-height:$body-line-height;}
+
+    p.lead, p.lede, p.leed {
+      font-size: $paragraph-lead-font-size;
+      line-height:$paragraph-lead-line-height;
+    }
+
+    p { 
+      margin-bottom: $paragraph-margin-bottom;
+    }
+
+    small {
+      font-size: $small-font-size;
+    }
+
+    a {
+      color: color2hex($anchor-font-color); 
+      text-decoration: $anchor-text-decoration;
+    }
+
+    a:hover { 
+      color: color2hex($anchor-font-color-hover) !important;
+    }
+
+    a:active { 
+      color: color2hex($anchor-font-color-active) !important;
+    }
+
+    a:visited { 
+      color: color2hex($anchor-font-color-visited) !important;
+    }
+
+    h1 a, 
+    h2 a, 
+    h3 a, 
+    h4 a, 
+    h5 a, 
+    h6 a {
+      color: color2hex($header-anchor-font-color);
+    }
+
+    h1 a:active, 
+    h2 a:active,  
+    h3 a:active, 
+    h4 a:active, 
+    h5 a:active, 
+    h6 a:active { 
+      color: color2hex($header-anchor-font-color-active) !important; 
+    } 
+
+    h1 a:visited, 
+    h2 a:visited,  
+    h3 a:visited, 
+    h4 a:visited, 
+    h5 a:visited, 
+    h6 a:visited { 
+      color: color2hex($header-anchor-font-color-visited) !important; 
+    } 
+  }
+}   

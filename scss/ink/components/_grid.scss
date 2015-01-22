@@ -1,0 +1,134 @@
+// Ink by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+@import "global";
+
+//
+// @variables
+//
+$include-html-grid-classes: $include-html-classes !default;
+$include-html-sub-colums-grid-classes: $include-html-grid-classes !default;
+
+$total-columns: 12 !default;
+
+$wrapper-padding-top: 10px !default;
+$column-cell-padding-bottom: 10px !default;
+
+$sub-column-padding-right: $column-gutter / 2 !default;
+
+@include exports("grid") {
+  @if $include-html-grid-classes {
+    /* Responsive Grid */
+
+    table.body {
+      height: 100%;
+      width: 100%;
+    }
+
+    table.container {
+      width: $container-width;
+      margin: 0 auto;
+      text-align: inherit;
+    }
+
+    table.row { 
+      padding: 0px; 
+      width: 100%;
+      position: relative;
+    }
+
+    table.container table.row {
+      display: block;
+    }
+
+    td.wrapper {
+      padding: $wrapper-padding-top $column-gutter 0px 0px;
+      position: relative;
+    }
+
+    table.columns,
+    table.column {
+      margin: 0 auto;
+    }
+
+    table.columns td,
+    table.column td {
+      padding: 0px 0px $column-cell-padding-bottom;  
+    }
+
+    @if $include-html-sub-colums-grid-classes {
+      table.columns td.sub-columns,
+      table.column td.sub-columns,
+      table.columns td.sub-column,
+      table.column td.sub-column {
+        padding-right: $sub-column-padding-right;
+      }
+
+      td.sub-column, td.sub-columns {
+        min-width: 0px;
+      }
+    }
+
+    table.row td.last,
+    table.container td.last {
+      padding-right: 0px;
+    }
+
+    @for $i from 1 through $total-columns {
+      table.#{number2word($i)} {
+        width: grid-calc-px($i, $total-columns, $container-width, $column-gutter);
+      }
+    }
+
+    @for $i from 1 through $total-columns {
+      table.#{number2word($i)} center {
+        min-width: grid-calc-px($i, $total-columns, $container-width, $column-gutter);
+      }
+    }
+
+    @for $i from 1 through $total-columns {
+      table.#{number2word($i)} .panel center {
+        min-width: grid-calc-px($i, $total-columns, $container-width, $column-gutter) - 2 * $panel-padding;
+      }
+    }
+
+    @for $i from 1 through $total-columns {
+      .body .columns td.#{number2word($i)},
+      .body .column td.#{number2word($i)}  {
+        width: grid-calc-pct($i, $total-columns);
+      }
+    }
+
+    @for $i from 1 through ($total-columns - 1) {
+      td.offset-by-#{number2word($i)} {
+        padding-left: grid-calc-px($i, $total-columns, $container-width, $column-gutter) + $column-gutter;
+      }
+    }  
+    td.expander {
+      visibility: hidden;
+      width: 0px;
+      padding: 0 !important;
+    }
+
+    table.columns .text-pad,
+    table.column .text-pad {
+      padding-left: $text-padding;
+      padding-right: $text-padding;
+    }
+
+    table.columns .left-text-pad,
+    table.columns .text-pad-left,
+    table.column .left-text-pad,
+    table.column .text-pad-left {
+      padding-left: $text-padding;
+    }
+
+    table.columns .right-text-pad,
+    table.columns .text-pad-right,
+    table.column .right-text-pad,
+    table.column .text-pad-right {
+      padding-right: $text-padding;
+    }  
+  }  
+}

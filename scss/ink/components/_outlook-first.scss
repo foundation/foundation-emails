@@ -1,0 +1,20 @@
+// Ink by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+@import "global";
+
+//
+// @variables
+//
+$include-html-outlook-first-classes: $include-html-classes !default;
+
+@include exports("outlook-first") {
+	@if $include-html-outlook-first-classes {
+		/* Outlook First */
+
+		body.outlook p {
+		  display: inline !important;
+		}
+	}
+}

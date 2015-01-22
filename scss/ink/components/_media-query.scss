@@ -1,0 +1,114 @@
+// Ink by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+@import "global";
+
+//
+// @variables
+//
+$include-html-media-query-classes: $include-html-classes !default;
+
+$small-container-width: 95% !default;
+
+// Media Query Ranges
+$small-range: (0px, $container-width * (600px / 580px)) !default;
+
+$screen: "only screen" !default;
+
+$landscape: "#{$screen} and (orientation: landscape)" !default;
+$portrait: "#{$screen} and (orientation: portrait)" !default;
+
+$small-up: $screen !default;
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default;
+
+@include exports("media-query") {
+  @if $include-html-media-query-classes {
+    /*  Media Queries */
+
+    @media #{$small-only} {
+
+      table[class="body"] img {
+        width: auto !important;
+        height: auto !important;
+      }
+
+      table[class="body"] center {
+        min-width: 0 !important;
+      }
+
+      table[class="body"] .container {
+        width: $small-container-width !important;
+      }
+
+      table[class="body"] .row {
+        width: 100% !important;
+        display: block !important;
+      }
+
+      table[class="body"] .wrapper {
+        display: block !important;
+        padding-right: 0 !important;
+      }
+
+      table[class="body"] .columns,
+      table[class="body"] .column {
+        table-layout: fixed !important;
+        float: none !important;
+        width: 100% !important;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        display: block !important;
+      }
+
+      table[class="body"] .wrapper.first .columns,
+      table[class="body"] .wrapper.first .column {
+        display: table !important;
+      }
+
+      table[class="body"] table.columns td,
+      table[class="body"] table.column td {
+        width: 100% !important;
+      }
+
+      @for $i from 1 through $total-columns {
+        table[class="body"] .columns td.#{number2word($i)},
+        table[class="body"] .column td.#{number2word($i)} {
+          width: grid-calc-pct($i, $total-columns) !important;
+        }
+      }
+      table[class="body"] td%offset-by{
+        padding-left: 0 !important;
+      }
+      @for $i from 1 through ($total-columns - 1) {
+        .offset-by-#{number2word($i)} {
+          @extend %offset-by;
+        }
+      }
+
+      table[class="body"] table.columns td.expander {
+        width: 1px !important;
+      }
+
+      table[class="body"] .right-text-pad,
+      table[class="body"] .text-pad-right {
+        padding-left: $text-padding !important;
+      }
+
+      table[class="body"] .left-text-pad,
+      table[class="body"] .text-pad-left {
+        padding-right: $text-padding !important;
+      }
+
+      table[class="body"] .hide-for-small,
+      table[class="body"] .show-for-desktop {
+        display: none !important;
+      }
+
+      table[class="body"] .show-for-small,
+      table[class="body"] .hide-for-desktop {
+        display: inherit !important;
+      }
+    }
+  }
+}
