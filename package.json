@@ -1,5 +1,5 @@
 {
-  "name": "Foundation for Email",
+  "name": "foundation-email",
   "version": "0.2.0",
   "description": "A framework for responsive emails made by ZURB",
   "devDependencies": {
