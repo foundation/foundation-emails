@@ -6,12 +6,11 @@
 //   1. Libraries
 //   2. Variables
 //   3. Cleaning files
-//   4. Copying files
-//   5. Build into Plain Text
-//   6. Stylesheets
-//   7. HTML
-//   8. GO FORTH AND BUILD
-//   9. Serve/Watch Tasks
+//   4. Stylesheets
+//   5. HTML
+//   6. Syntax Transformer
+//   7. GO FORTH AND BUILD
+//   8. Serve/Watch Tasks
 
 // 1. LIBRARIES
 // - - - - - - - - - - - - - - -
@@ -23,6 +22,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     connect = require('gulp-connect'),
     minifyHTML = require('gulp-minify-html'),
+    concat = require('gulp-concat'),
     rimraf = require('rimraf');
 
 var p = require('./package.json');
@@ -33,6 +33,7 @@ var p = require('./package.json');
 var dirs = {
   styles: 'scss/*.scss',
   html: 'html/*.html',
+  js: 'js/**/*.js',
   images: 'images/*',
   build: './build'
 };
@@ -104,7 +105,24 @@ gulp.task('copy-html', function() {
   .pipe(connect.reload())
 });
 
-// 6. GO FORTH AND BUILD
+// 6. Syntax Transformer
+// - - - - - - - - - - - - - - -
+
+// Copy jquery
+gulp.task('jquery', function() {
+  return gulp.src('node_modules/jquery/dist/jquery.js')
+    .pipe(gulp.dest(dirs.build + '/js/'));
+});
+
+// Concat all js files
+gulp.task('js', ['jquery'], function() {
+  gulp.src(dirs.js)
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest(dirs.build + '/js/'))
+    .pipe(connect.reload());
+});
+
+// 7. GO FORTH AND BUILD
 // - - - - - - - - - - - - - - -
 
 // Wipes build folder, then compiles SASS, then minifies and copies HTML
@@ -112,7 +130,7 @@ gulp.task('build', ['clean', 'sass'], function() {
   gulp.start('minify-html');
 });
 
-// 7. Serve/Watch Tasks
+// 8. Serve/Watch Tasks
 // - - - - - - - - - - - - - - -
 
 // Starts a server
@@ -129,6 +147,7 @@ gulp.task('serve', function() {
 // Live reloads on change
 gulp.task('watch', ['serve'], function() {
   gulp.watch([dirs.html], ['minify-html']);
+  gulp.watch([dirs.js], ['js']);
   gulp.watch([dirs.styles], ['sass']);
 });
 
