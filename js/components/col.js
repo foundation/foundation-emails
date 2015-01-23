@@ -14,12 +14,12 @@ var createCol = function(obj) {
       temp = '<td class="wrapper">' 
               +'<table class="' + colClass + '">'
               +'<tr><td>'
-              + contents +'</tr></td></table></td>';
+              + contents +'</td><td class="expander"></td></tr></table></td>';
     } else {
       temp = '<td class="wrapper last">' 
               +'<table class="' + colClass + '">'
               +'<tr><td>'
-              + contents +'</tr></td></table></td>';
+              + contents +'</td><td class="expander"></td></tr></table></td>';
     }   
 
     output += temp;
