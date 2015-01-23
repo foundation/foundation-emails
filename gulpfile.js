@@ -51,6 +51,11 @@ gulp.task('clean:html', function(cb) {
   rimraf('./build/html', cb);
 });
 
+// Clean the JS directory
+gulp.task('clean:js', function(cb) {
+  rimraf('./build/js', cb);
+})
+
 // 4. STYLESHEETS
 // - - - - - - - - - - - - - - -
 
@@ -114,19 +119,22 @@ gulp.task('jquery', function() {
     .pipe(gulp.dest(dirs.build + '/js/'));
 });
 
-// Concat all js files
-gulp.task('js', ['jquery'], function() {
-  gulp.src(dirs.js)
-    .pipe(concat('main.js'))
+gulp.task('inky-prime', function() {
+  return gulp.src(dirs.js)
+    .pipe(concat('inky-prime.js'))
     .pipe(gulp.dest(dirs.build + '/js/'))
-    .pipe(connect.reload());
+    .pipe(connect.reload());  
+})
+
+gulp.task('js', ['clean:js', 'jquery'], function() {
+  gulp.start('inky-prime');
 });
 
 // 7. GO FORTH AND BUILD
 // - - - - - - - - - - - - - - -
 
 // Wipes build folder, then compiles SASS, then minifies and copies HTML
-gulp.task('build', ['clean', 'sass'], function() {
+gulp.task('build', ['clean', 'sass', 'js'], function() {
   gulp.start('minify-html');
 });
 
