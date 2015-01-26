@@ -3,38 +3,59 @@
   <link rel="stylesheet" type="text/css" href="css/ink.css">
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/inky-prime.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width"/>
 </head>
  
 <body>
   <div class="container">
     <h1>Hello there!</h1>
     <p>This is an email.</p>
-    <div class="inky loaded"></div>
   </div>
+  <table class="body">
+  <tr>
+  <td class="center" align="center" valign="top">
+          <center>
   <container>
     <row>
-      <column class="four">
-        four col
+      <column num="four">
+        Explicitly declare four col
         <div class="bloop">
         bloop 
         </div>
       </column>
-      <column class="eight">eight col</column>
+      <column num="eight">eight col</column>
     </row>
   </container>
 
   <container>
     <row>
-      <column class="two">
+      <column num="two">
         two col
-        </div>
       </column>
-      <column class="eight">eight col</column>
-      <column class="two">two col</column>
+      <column num="eight">eight col</column>
+      <column num="two">two col</column>
+    </row>
+  </container>
+
+    <container>
+    <row>
+      <column class="green">
+        I'm evenly
+      </column>
+      <column class="blue">distributed</column>
+      <column class="red">into</column>
+      <column class="green">two</column>
+      <column class="blue">columns</column>
+      <column class="red">each</column>
     </row>
   </container>
 
   <container>empty container</container>
   <row>empty row</row>
+  </center>
+        </td>
+      </tr>
+    </table>
 </body>
 </html>

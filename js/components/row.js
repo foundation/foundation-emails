@@ -15,7 +15,7 @@ $(document).on('ready', function() {
     $(this).replaceWith(function() {
       return $('<table/>', {
         class: 'row',
-        html: this.innerHTML
+        html: contents
       });
     });
 
