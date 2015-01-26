@@ -92,7 +92,7 @@ $sub-column-padding-right: $column-gutter / 2 !default;
     }
 
     @for $i from 1 through ($total-columns - 1) {
-      td.offset-by-.#{$i} {
+      td.offset-by-#{$i} {
         padding-left: grid-calc-px($i, $total-columns, $container-width, $column-gutter) + $column-gutter;
       }
     }  
