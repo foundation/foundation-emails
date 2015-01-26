@@ -27,8 +27,8 @@ $align-block-grid-to-grid: false !default;
 //
 @mixin block-grid-html-classes() {
   @for $i from 2 through $block-grid-elements {
-    .#{number2word($i)}-up td {
-      width: floor(($container-width - $i * $block-grid-default-spacing) / $i);
+    .block-grid-#{$i} td {
+      width: floor(($container-width - $i * $block-grid-default-spacing) / $i) !important;
     }
   }
 }

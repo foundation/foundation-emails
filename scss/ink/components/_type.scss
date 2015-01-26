@@ -49,7 +49,7 @@ $header-anchor-font-color-active: $header-anchor-font-color !default;
     /* Typography */
 
     body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
-      color: color2hex($base-font-color);
+      color: $base-font-color;
       font-family: $base-font-family; 
       font-weight: $base-font-weight; 
       padding:0; 
@@ -84,20 +84,20 @@ $header-anchor-font-color-active: $header-anchor-font-color !default;
     }
 
     a {
-      color: color2hex($anchor-font-color); 
+      color: $anchor-font-color; 
       text-decoration: $anchor-text-decoration;
     }
 
     a:hover { 
-      color: color2hex($anchor-font-color-hover) !important;
+      color: $anchor-font-color-hover !important;
     }
 
     a:active { 
-      color: color2hex($anchor-font-color-active) !important;
+      color: $anchor-font-color-active !important;
     }
 
     a:visited { 
-      color: color2hex($anchor-font-color-visited) !important;
+      color: c$anchor-font-color-visited !important;
     }
 
     h1 a, 
@@ -106,7 +106,7 @@ $header-anchor-font-color-active: $header-anchor-font-color !default;
     h4 a, 
     h5 a, 
     h6 a {
-      color: color2hex($header-anchor-font-color);
+      color: $header-anchor-font-color;
     }
 
     h1 a:active, 
@@ -115,7 +115,7 @@ $header-anchor-font-color-active: $header-anchor-font-color !default;
     h4 a:active, 
     h5 a:active, 
     h6 a:active { 
-      color: color2hex($header-anchor-font-color-active) !important; 
+      color: $header-anchor-font-color-active !important; 
     } 
 
     h1 a:visited, 
@@ -124,7 +124,7 @@ $header-anchor-font-color-active: $header-anchor-font-color !default;
     h4 a:visited, 
     h5 a:visited, 
     h6 a:visited { 
-      color: color2hex($header-anchor-font-color-visited) !important; 
+      color: $header-anchor-font-color-visited !important; 
     } 
   }
 }   

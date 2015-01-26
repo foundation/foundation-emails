@@ -54,7 +54,7 @@ $button-round: $global-rounded !default;
     table.medium-button,
     table.large-button {
       width: 100%;
-      overflow: hidden;
+      overflow: visible;
     }
 
     table.button td,
@@ -65,9 +65,9 @@ $button-round: $global-rounded !default;
       display: block;
       width: auto !important;
       text-align: center;
-      background: color2hex($button-bg);
-      border: $button-border-width $button-border-style color2hex($button-border-color);
-      color: color2hex($button-font-color);
+      background: $button-bg;
+      border: $button-border-width $button-border-style $button-border-color;
+      color: $button-font-color;
       padding: $button-dft;
     }
 
@@ -95,7 +95,7 @@ $button-round: $global-rounded !default;
       font-weight: bold;
       text-decoration: none;
       font-family: $button-font-family;
-      color: color2hex($button-font-color);
+      color: $button-font-color;
       font-size: $button-font-sml;
       display: block;
       height: 100%;
@@ -122,13 +122,13 @@ $button-round: $global-rounded !default;
     table.button:hover td,
     table.button:visited td,
     table.button:active td {
-      background: color2hex($primary-color) !important;
+      background: $primary-color !important;
     }
 
     table.button:hover td a,
     table.button:visited td a,
     table.button:active td a {
-      color: color2hex($button-font-color) !important;
+      color: $button-font-color !important;
     }
 
     table.button:hover td,
@@ -154,46 +154,46 @@ $button-round: $global-rounded !default;
     table.large-button:hover td a,
     table.large-button:active td a,
     table.large-button td a:visited { 
-      color: color2hex($button-font-color) !important; 
+      color: $button-font-color !important; 
     }
 
     table.secondary td {
-      background: color2hex($secondary-color);
-      border-color: color2hex($secondary-border-color);
-      color: color2hex($button-font-color-alt);
+      background: $secondary-color;
+      border-color: $secondary-border-color;
+      color: $button-font-color-alt;
     }
 
     table.secondary td a {
-      color: color2hex($button-font-color-alt);
+      color: $button-font-color-alt;
     }
 
     table.secondary:hover td {
-      background: color2hex($secondary-border-color) !important;
-      color: color2hex($button-font-color-alt);
+      background: $secondary-border-color !important;
+      color: $button-font-color-alt;
     }
 
     table.secondary:hover td a,
     table.secondary td a:visited,
     table.secondary:active td a {
-      color: color2hex($button-font-color-alt) !important;
+      color: $button-font-color-alt !important;
     }
 
     table.success td {
-      background: color2hex($success-color);
-      border-color: color2hex($alert-border-color);
+      background: $success-color;
+      border-color: $alert-border-color;
     }
 
     table.success:hover td {
-      background: color2hex($alert-border-color) !important;
+      background: $alert-border-color !important;
     }
 
     table.alert td {
-      background: color2hex($alert-color);
-      border-color: color2hex($success-border-color);
+      background: $alert-color;
+      border-color: $success-border-color;
     }
 
     table.alert:hover td {
-      background: color2hex($success-border-color) !important;
+      background: $success-border-color !important;
     }
 
     table.radius td {
