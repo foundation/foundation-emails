@@ -58,7 +58,8 @@ $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default
         width: 100% !important;
         padding-right: 0px !important;
         padding-left: 0px !important;
-        display: block !important;
+        display: inline-block !important;
+        margin: 0 !important;
       }
 
       table[class="body"] .wrapper.first .columns,
@@ -72,18 +73,32 @@ $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default
       }
 
       @for $i from 1 through $total-columns {
-        table[class="body"] .columns td.#{number2word($i)},
-        table[class="body"] .column td.#{number2word($i)} {
+        .wrapper > table.small-#{$i} {
           width: grid-calc-pct($i, $total-columns) !important;
         }
       }
+
+      .wrapper > table.small-12{
+        display: block !important;
+      }
+
+
+      @for $i from 1 through $total-columns {
+        .body .columns td.small-#{$i},
+        .body .column td.small-#{$i},
+        table.small-#{$i} center   {
+          width: grid-calc-pct($i, $total-columns) !important;
+        }
+      }
+      @for $i from 1 through $total-columns {
+        table[class="body"] .columns td.small-#{$i},
+        table[class="body"] .column td.small-#{$i} {
+          width: grid-calc-pct($i, $total-columns) !important;
+        }
+      }
+
       table[class="body"] td%offset-by{
         padding-left: 0 !important;
-      }
-      @for $i from 1 through ($total-columns - 1) {
-        .offset-by-#{number2word($i)} {
-          @extend %offset-by;
-        }
       }
 
       table[class="body"] table.columns td.expander {

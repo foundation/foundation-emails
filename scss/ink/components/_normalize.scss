@@ -4,12 +4,7 @@
 
 @import "global";
 
-//
-// @variables
-//
-
 $include-html-normalize-classes: $include-html-classes !default;
-
 $hr-color: #d9d9d9 !default;
 $hr-height: 1px !default;
 
@@ -45,9 +40,6 @@ $hr-height: 1px !default;
         line-height: 100%; 
       }   
     } 
-
-     
-
 
     #backgroundTable { 
       margin:0; 
@@ -100,8 +92,8 @@ $hr-height: 1px !default;
     }
 
     hr {
-      color: color2hex($hr-color); 
-      background-color: color2hex($hr-color); 
+      color: $hr-color; 
+      background-color: $hr-color; 
       height: $hr-height; 
       border: none;
     }
