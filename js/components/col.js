@@ -2,59 +2,57 @@
 
 
 var createCol = function(obj) {
-  var output = '';
-  var mQ     = {small: 0, large: 0};
-  var colEven  = '';
+  var output   = '';
 
-  $.each(obj, function() {
-    var col = $(this);
+  // create tables with column class for each nested element
+  var colElements = function(elements, colSize) {
+    var colHTML = '';
 
-    // do the maths first
-    $.each( mQ, function(i, val) {
-      if (!col.attr(i)) {
-        // count the number of columns that do not have a specified width
-        mQ[i]++;
+    $.each(elements, function(i, el) {
+      // get included tags
+      var contents = $(el)[0].outerHTML;
+      var colClass = 'columns ';
 
-        // at the final iteration
-        if (mQ[i] === obj.length) {
-          // divide the default grid number by the number of colums with no width
-          var evenSplit = Math.floor( 12 / (mQ[i]) );
-
-          // append the missing class to the column class
-          colEven += i + '-' + evenSplit + ' ';
-        }
+      // transclude any class that might have been added onto element
+      if ($(el).attr('class')) {
+        colClass += $(el).attr('class');
       };
-    });
-  });
 
-  $.each(obj, function(v,k) {
-    var temp     = ''
-    var contents = $(this).html();
-    var colClass = 'columns ' + $(this).attr('class');
-    var colNum   = '';
-    var col      = $(this);
-
-    $.each( mQ, function(i, val) {
-      if (col.attr(i)) {
-        colNum += i + '-' + col.attr(i) + ' ';
-      };
-    });
-
-    // check if this is the last element in the row
-    // add previously calculated even class
-    if (v !== obj.length - 1) {
-      temp = '<td class="wrapper">' 
-              +'<table class="' + colClass + ' ' + colNum + colEven +'">'
+      // construct column class for each element
+      colHTML += '<table class="' + colClass + ' ' + colSize+'">'
               +'<tr><td>'
-              + contents +'</td><td class="expander"></td></tr></table></td>';
+              + contents +'</td><td class="expander"></td></tr></table>';
+    });
+
+    return colHTML;
+  };
+
+  // create tables with wrapper class for each column
+  $.each(obj, function(k,v) {
+    var wrapperHTML = '';
+    var colSize     = '';
+    var col         = $(this);
+    var elements    = $(this).children();
+
+    // if wrapper is last or the only one, put last class
+    if (k === obj.length - 1) {
+      wrapperHTML += '<td class="wrapper last">';
     } else {
-      temp = '<td class="wrapper last">' 
-              +'<table class="' + colClass + ' ' + colNum + colEven +'">'
-              +'<tr><td>'
-              + contents +'</td><td class="expander"></td></tr></table></td>';
-    }   
+      wrapperHTML += '<td class="wrapper">';
+    }
 
-    output += temp;
+    // check for sizes
+    if (col.attr('small')) {
+      colSize += 'small' + '-' + col.attr('small') + ' ';
+    }
+    if (col.attr('large')) {
+      colSize += 'large' + '-' + col.attr('large') + ' ';
+    }
+
+    wrapperHTML += colElements(elements, colSize);
+    wrapperHTML += '</td>';
+
+    output += wrapperHTML;
   });
 
   return output;
