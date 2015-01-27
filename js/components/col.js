@@ -9,19 +9,21 @@ var createCol = function(obj) {
     var colHTML = '';
 
     $.each(elements, function(i, el) {
-      // get included tags
-      var contents = $(el)[0].outerHTML;
+      // get included tags of each element in the column
+      var element  = $(el)[0].outerHTML;
       var colClass = 'columns ';
+      var content  = '';
 
       // transclude any class that might have been added onto element
       if ($(el).attr('class')) {
         colClass += $(el).attr('class');
       };
-
+      content = insertComponents(element);
+      console.log(content);
       // construct column class for each element
       colHTML += '<table class="' + colClass + ' ' + colSize+'">'
-              +'<tr><td>'
-              + contents +'</td><td class="expander"></td></tr></table>';
+              +'<tr>'
+              + content +'<td class="expander"></td></tr></table>';
     });
 
     return colHTML;

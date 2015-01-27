@@ -18,19 +18,24 @@
 	"ink/components/outlook-first",
 	"ink/components/media-query";
 
+  .container {
+    background-color: white;
+
+  }
+
   body{
     background: #00558B;
     font-family: Helvetica;
   }
 
-  .green {
-    background-color: green;
+  .teal {
+    background-color: #29ABA4;
   }
 
-  .red {
-    background-color: red;
+  .grey {
+    background-color: lightslategrey;
   }
 
   .blue {
-    background-color: aqua;
+    background-color: #0071BC;
   }
