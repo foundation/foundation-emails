@@ -33,12 +33,17 @@ var createCol = function(obj) {
     var colSize     = '';
     var col         = $(this);
     var elements    = $(this).children();
+    var colClass;
+
+    if ($(this).attr('class')) {
+      colClass = $(this).attr('class');
+    }
 
     // if wrapper is last or the only one, put last class
     if (k === obj.length - 1) {
-      wrapperHTML += '<td class="wrapper last">';
+      wrapperHTML += '<td class="wrapper ' + colClass + ' last">';
     } else {
-      wrapperHTML += '<td class="wrapper">';
+      wrapperHTML += '<td class="wrapper ' + colClass + '">';
     }
 
     // check for sizes
