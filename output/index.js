@@ -65,8 +65,12 @@ module.exports = function (body) {
         return colHTML;
       };
 
-
       // create tables with wrapper class for each column
+        
+      // weird math thing to do with cheerio including closing tags and stuff
+      // so it throws off the number of objects being counted as elements
+      var colCount = Math.round((obj.length - 1 / 2));
+
       $(obj).each(function(k,v) {
         var wrapperHTML = '';
         var colSize     = '';
@@ -78,10 +82,13 @@ module.exports = function (body) {
         }
 
         // if wrapper is last or the only one, put last class
-        if (k === obj.length - 1) {
-          wrapperHTML += '<td class="wrapper ' + colClass + ' last">';
-        } else {
-          wrapperHTML += '<td class="wrapper ' + colClass + '">';
+
+        if (!obj[k].data) {
+          if (k === colCount) {
+            wrapperHTML += '<td class="wrapper ' + colClass + ' last">';
+          } else {
+            wrapperHTML += '<td class="wrapper ' + colClass + '">';
+          }
         }
 
         // check for sizes
@@ -119,7 +126,7 @@ module.exports = function (body) {
 
     });
 
-    file.contents = new Buffer($.html());
+    file.contents = new Buffer($.html({normalizeWhitespace: true}));
     this.emit('data', file);
   };
 
