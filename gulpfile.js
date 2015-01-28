@@ -121,10 +121,8 @@ gulp.task('jquery', function() {
 });
 
 gulp.task('inky-prime', function() {
-  return gulp.src(dirs.js)
-    .pipe(concat('inky-prime.js'))
-    .pipe(gulp.dest(dirs.build + '/js/'))
-    .pipe(connect.reload());  
+  return gulp.src('node_modules/gulp-zurb-foundation-email/index.js')
+    .pipe(gulp.dest('./output'));
 })
 
 gulp.task('js', ['clean:js', 'jquery'], function() {
