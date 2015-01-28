@@ -23,6 +23,7 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     minifyHTML = require('gulp-minify-html'),
     concat = require('gulp-concat'),
+    grab   = require('gulp-zurb-foundation-email'),
     rimraf = require('rimraf');
 
 var p = require('./package.json');
@@ -128,6 +129,12 @@ gulp.task('inky-prime', function() {
 
 gulp.task('js', ['clean:js', 'jquery'], function() {
   gulp.start('inky-prime');
+});
+
+gulp.task('query', function() {
+  gulp.src(dirs.html)
+    .pipe(grab('body'))
+    .pipe(gulp.dest('./output'));
 });
 
 // 7. GO FORTH AND BUILD
