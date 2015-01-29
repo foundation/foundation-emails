@@ -4,6 +4,83 @@
   <link rel="stylesheet" type="text/css" href="/css/ink.css">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width"/>
+    <style>
+
+    table.facebook td {
+      background: #3b5998;
+      border-color: #2d4473;
+    }
+
+    table.facebook:hover td {
+      background: #2d4473 !important;
+    }
+
+    table.twitter td {
+      background: #00acee;
+      border-color: #0087bb;
+    }
+
+    table.twitter:hover td {
+      background: #0087bb !important;
+    }
+
+    table.google-plus td {
+      background-color: #DB4A39;
+      border-color: #CC0000;
+    }
+
+    table.google-plus:hover td {
+      background: #CC0000 !important;
+    }
+
+    .template-label {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 11px;
+    }
+
+    .callout .panel {
+      background: #ECF8FF;
+      border-color: #b9e5ff;
+    }
+
+    .header {
+      background: #999999;
+    }
+
+    .footer .wrapper {
+      background: #ebebeb;
+    }
+
+    .footer h5 {
+      padding-bottom: 10px;
+    }
+
+    table.columns .text-pad {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    table.columns .left-text-pad {
+      padding-left: 10px;
+    }
+
+    table.columns .right-text-pad {
+      padding-right: 10px;
+    }
+
+    @media only screen and (max-width: 600px) {
+
+      table[class="body"] .right-text-pad {
+        padding-left: 10px !important;
+      }
+
+      table[class="body"] .left-text-pad {
+        padding-right: 10px !important;
+      }
+    }
+
+  </style>
 </head>
  
 <body>
@@ -11,37 +88,101 @@
     <tr>
       <td class="center" align="center" valign="top">
         <center>
+          <row class='header'>
+            <column large='6' small='6'>
+              <img src="http://placehold.it/200x50" />
+            </column>
+            <column large='6' small='6'>
+              <span class="template-label">SIDEBAR HERO</span>
+            </column>
+          </row>
           <container>
-            <row>sdfasf</row>
             <row>
-              <column class="teal" large='2'>
-                <p class="grey">I'm a p tag in a col</p>
-                <button>I"M A BUTTON</button>
-                <panel>panel</panel>
-              </column>
-              <column class="blue" large='10'>
-                <p>I'm even</p>
-                <button>ANOTHER BOTON</button>
-                <panel class="grey">
-                <a href='#'>asdlfkjadsf</a></panel>
+              <column large='12'>
+                <div>
+                <h1>Welcome, Daneel Olivan</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                <img width="580" height="300" src="http://placehold.it/580x300">
+                </div>
+                <panel>
+                  <p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. <a href="#">Click it! »</a></p>
+                </panel>
               </column>
             </row>
             <row>
-              <column class="teal" large='6'>
-                <p class="grey">I'm even</p>
-                <button>Lsdlkfjsdf</button>
-                <panel>asdlfkjadsf</panel>
-                <panel>I'm aasdfasdfasfasdfasdf</panel>
+              <column large='6'>
+              <!-- Make it so that you don't have to put divs in here. So basically it will nest everything until the next column element -->
+                <div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet.</p>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <button>
+                  <a href="#">Click me!</a>
+                </button>
               </column>
-              <column class="blue" large='6'>
-                <p>I'm even</p>
-                <button>Lsdlkfjsdf</button>
-                <panel>asdlfkjadsf</panel>
+              <column large='6'>
+                <panel>
+                  <h6>Header Thing</h6>
+                  <p>Sub-head or something</p>
+                   <!-- It appears from the other example that these should be in their own separate tables. Confirm with Tim/Brandon. -->
+                  <a href="#">Just a Plain Link &raquo;</a>
+                  <hr>
+                  <a href="#">Just a Plain Link &raquo;</a>
+                  <hr>
+                  <a href="#">Just a Plain Link &raquo;</a>
+                  <hr>
+                  <a href="#">Just a Plain Link &raquo;</a>
+                  <hr>
+                  <a href="#">Just a Plain Link &raquo;</a>
+                </panel>
+                <br>
+                <panel>
+                  <h6 style="margin-bottom:5px;">Connect With Us:</h6>
+                  <!-- Talk to Tim about this syntax for different sized buttons. Also write stuff for nested elements. -->
+                  <button>
+                    I'm a nested button!
+                  </button>
+                  
+                  <table class="tiny-button facebook">
+                      <tr>
+                        <td>
+                          <a href="#">Facebook</a>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <hr>
+
+                    <table class="tiny-button twitter">
+                      <tr>
+                        <td>
+                          <a href="#">Twitter</a>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <hr>
+
+                    <table class="tiny-button google-plus">
+                      <tr>
+                        <td>
+                          <a href="#">Google +</a>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <br>
+                    <h6 style="margin-bottom:5px;">Contact Info:</h6>
+                    <p>Phone: <b>408.341.0600</b></p>
+                    <p>Email: <a href="mailto:hseldon@trantor.com">hseldon@trantor.com</a></p>
               </column>
             </row>
             <row>
-              <column class="teal" large='12'>
-                <h1>I'm a header!</h1>
+              <column large='12'>
+                <center>
+                  <p style="text-align:center;"><a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Unsubscribe</a></p>
+                </center>
               </column>
             </row>
           </container>
