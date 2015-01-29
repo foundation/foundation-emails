@@ -104,15 +104,9 @@ module.exports = function (body) {
 
         output += wrapperHTML;
       });
-
+      
       return output;
     };
-
-    $('container').each(function() {
-      var contents = $(this).html();
-
-      $(this).replaceWith('<table class="container"><tbody><tr><td>' + contents + '</td></tr></tbody></table>');
-    });
 
     $('row').each(function(i) {
       var contents = $(this).html();
@@ -120,11 +114,20 @@ module.exports = function (body) {
       // if row does has nested elements (i.e. not empty)
       if ($(this).children('column')) {
         contents = createCol($(contents));
+
       }
 
       $(this).replaceWith('<table class="row"><tbody><tr>'+ contents + '</tr></tbody></table>');
 
     });
+
+
+    $('container').each(function() {
+      var contents = $(this).html();
+
+      $(this).replaceWith('<table class="container"><tbody><tr><td>' + contents + '</td></tr></tbody></table>');
+    });
+
 
     file.contents = new Buffer($.html({normalizeWhitespace: true}));
     this.emit('data', file);

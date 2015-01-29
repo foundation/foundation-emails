@@ -26,8 +26,6 @@ var gulp = require('gulp'),
     inky  = require('gulp-zurb-foundation-email'),
     rimraf = require('rimraf');
 
-var p = require('./package.json');
-
 // 2. VARIABLES
 // - - - - - - - - - - - - - - -
 
@@ -35,7 +33,6 @@ var dirs = {
   styles: 'scss/*.scss',
   html: 'html/*.html',
   js: 'js/**/*.js',
-  images: 'images/*',
   build: './build'
 };
 
@@ -44,18 +41,9 @@ var dirs = {
 
 // Clean build directory
 gulp.task('clean', function(cb) {
-  rimraf('./build', cb);
+  rimraf(dirs.build, cb);
 });
 
-// Clean the HTML directory
-gulp.task('clean:html', function(cb) {
-  rimraf('./build/html', cb);
-});
-
-// Clean the JS directory
-gulp.task('clean:js', function(cb) {
-  rimraf('./build/js', cb);
-})
 
 // 4. STYLESHEETS
 // - - - - - - - - - - - - - - -
@@ -88,9 +76,8 @@ gulp.task('minify-html', function() {
     spare: true
   };
 
-  gulp.src(dirs.html)
+  gulp.src(dirs.build)
     .pipe(minifyHTML(opts))
-    .pipe(gulp.dest(dirs.build))
     .pipe(connect.reload())
 });
 
@@ -114,32 +101,28 @@ gulp.task('copy-html', function() {
 // 6. Syntax Transformer
 // - - - - - - - - - - - - - - -
 
-// Copy jquery
-gulp.task('jquery', function() {
-  return gulp.src('node_modules/jquery/dist/jquery.js')
-    .pipe(gulp.dest(dirs.build + '/js/'));
-});
-
 gulp.task('inky-prime', function() {
   return gulp.src('node_modules/gulp-zurb-foundation-email/index.js')
     .pipe(gulp.dest('./output'));
 })
 
-gulp.task('js', ['clean:js', 'jquery'], function() {
+gulp.task('js', function() {
   gulp.start('inky-prime');
 });
+
+// get the HTML from the body and run it through Inky parser
 
 gulp.task('query', function() {
   gulp.src(dirs.html)
     .pipe(inky('body'))
-    .pipe(gulp.dest('./output'));
+    .pipe(gulp.dest(dirs.build));
 });
 
 // 7. GO FORTH AND BUILD
 // - - - - - - - - - - - - - - -
 
 // Wipes build folder, then compiles SASS, then minifies and copies HTML
-gulp.task('build', ['clean', 'sass', 'js'], function() {
+gulp.task('build', ['clean', 'sass', 'query'], function() {
   gulp.start('minify-html');
 });
 
@@ -159,10 +142,12 @@ gulp.task('serve', function() {
 // Watch all HTML files and SCSS files for changes
 // Live reloads on change
 gulp.task('watch', ['serve'], function() {
-  gulp.watch([dirs.html], ['minify-html']);
-  gulp.watch([dirs.js], ['js']);
+  gulp.watch([dirs.html], ['query','minify-html']);
+  gulp.watch(['node_modules/gulp-zurb-foundation-email/index.js'], ['query'])
   gulp.watch([dirs.styles], ['sass']);
 });
 
+
+gulp.task('deploy', ['minify-html', 'inline']);
 // Default task
 gulp.task('default', ['serve', 'watch']);
