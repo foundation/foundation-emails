@@ -436,23 +436,7 @@ table.large-button td {
   background: #2ba6cb;
   border: 1px solid #2284a1;
   color: #ffffff;
-  padding: 8px 0;
-}
-
-table.tiny-button td {
-  padding: 5px 0 4px;
-}
-
-table.small-button td {
-  padding: 8px 0 7px;
-}
-
-table.medium-button td {
-  padding: 12px 0 10px;
-}
-
-table.large-button td {
-  padding: 21px 0 18px;
+  padding: 0;
 }
 
 table.button td a,
@@ -468,6 +452,23 @@ table.large-button td a {
   display: block;
   height: 100%;
   width: 100%;
+  padding: 8px 0 6px;
+}
+
+table.tiny-button td a {
+  padding: 5px 0 3px;
+}
+
+table.small-button td a {
+  padding: 8px 0 6px;
+}
+
+table.medium-button td a {
+  padding: 12px 0 10px;
+}
+
+table.large-button td a {
+  padding: 21px 0 18px;
 }
 
 table.tiny-button td a {
