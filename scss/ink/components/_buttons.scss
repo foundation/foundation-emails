@@ -10,11 +10,11 @@
 $include-html-button-classes: $include-html-classes !default;
 
 // We use these to build padding for buttons.
-$button-dft: 8px 0 !default;
-$button-tny: 5px 0 4px !default;
-$button-sml: 8px 0 7px !default;
-$button-med: 12px 0 10px !default;
-$button-lrg: 21px 0 18px !default;
+$button-dft: 0px 0 !default;
+$button-tny: 5px !default;
+$button-sml: 8px !default;
+$button-med: 12px !default;
+$button-lrg: 21px !default;
 
 // We use these to control button text styles.
 $button-font-family: $base-font-family !default;
@@ -48,20 +48,12 @@ $button-round: $global-rounded !default;
   @if $include-html-button-classes {
     /* Buttons */
 
-    table.button,
-    table.tiny-button,
-    table.small-button,
-    table.medium-button,
-    table.large-button {
+    table.button {
       width: 100%;
       overflow: visible;
     }
 
-    table.button td,
-    table.tiny-button td,
-    table.small-button td,
-    table.medium-button td,
-    table.large-button td {
+    table.button td {
       display: block;
       width: auto !important;
       text-align: center;
@@ -71,27 +63,23 @@ $button-round: $global-rounded !default;
       padding: $button-dft;
     }
 
-    table.tiny-button td {
-      padding: $button-tny;
+    table.button td a, table.button.tiny td a {
+      padding: $button-tny 0;
     }
 
-    table.small-button td {
-      padding: $button-sml;
+    table.button.small td a {
+      padding: $button-sml 0;
     }
 
-    table.medium-button td {
-      padding: $button-med;
+    table.button.medium td a {
+      padding: $button-med 0;
     }
 
-    table.large-button td {
-      padding: $button-lrg;
+    table.button.large td a {
+      padding: $button-lrg 0;
     }
 
-    table.button td a,
-    table.tiny-button td a,
-    table.small-button td a,
-    table.medium-button td a,
-    table.large-button td a {
+    table.button td a {
       font-weight: bold;
       text-decoration: none;
       font-family: $button-font-family;
@@ -102,20 +90,20 @@ $button-round: $global-rounded !default;
       width: 100%;
     }
 
-    table.tiny-button td a {
+    table.button.tiny td a {
       font-size: $button-font-tny;
       font-weight: normal;
     }
 
-    table.small-button td a {
+    table.button.small td a {
       font-size: $button-font-sml;
     }
 
-    table.medium-button td a {
+    table.button.medium td a {
       font-size: $button-font-med;
     }
 
-    table.large-button td a {
+    table.button.large td a {
       font-size: $button-font-lrg;
     }
 
@@ -131,78 +119,80 @@ $button-round: $global-rounded !default;
       color: $button-font-color !important;
     }
 
-    table.button:hover td,
-    table.tiny-button:hover td,
-    table.small-button:hover td,
-    table.medium-button:hover td,
-    table.large-button:hover td {
+    table.button:hover td
+    // table.tiny-button:hover td,
+    // table.small-button:hover td,
+    // table.medium-button:hover td,
+    // table.large-button:hover td 
+    {
       background: darken($button-bg, 10%);
     }
 
     table.button:hover td a,
     table.button:active td a,
-    table.button td a:visited,
-    table.tiny-button:hover td a,
-    table.tiny-button:active td a,
-    table.tiny-button td a:visited,
-    table.small-button:hover td a,
-    table.small-button:active td a,
-    table.small-button td a:visited,
-    table.medium-button:hover td a,
-    table.medium-button:active td a,
-    table.medium-button td a:visited,
-    table.large-button:hover td a,
-    table.large-button:active td a,
-    table.large-button td a:visited { 
+    table.button td a:visited
+    // table.tiny-button:hover td a,
+    // table.tiny-button:active td a,
+    // table.tiny-button td a:visited,
+    // table.small-button:hover td a,
+    // table.small-button:active td a,
+    // table.small-button td a:visited,
+    // table.medium-button:hover td a,
+    // table.medium-button:active td a,
+    // table.medium-button td a:visited,
+    // table.large-button:hover td a,
+    // table.large-button:active td a,
+    // table.large-button td a:visited 
+    { 
       color: $button-font-color !important; 
     }
 
-    table.secondary td {
+    table.button.secondary td {
       background: $secondary-color;
       border-color: $secondary-border-color;
       color: $button-font-color-alt;
     }
 
-    table.secondary td a {
+    table.button.secondary td a {
       color: $button-font-color-alt;
     }
 
-    table.secondary:hover td {
+    table.button.secondary:hover td {
       background: $secondary-border-color !important;
       color: $button-font-color-alt;
     }
 
-    table.secondary:hover td a,
-    table.secondary td a:visited,
-    table.secondary:active td a {
+    table.button.secondary:hover td a,
+    table.button.secondary td a:visited,
+    table.button.secondary:active td a {
       color: $button-font-color-alt !important;
     }
 
-    table.success td {
+    table.button.success td {
       background: $success-color;
       border-color: $alert-border-color;
     }
 
-    table.success:hover td {
+    table.button.success:hover td {
       background: $alert-border-color !important;
     }
 
-    table.alert td {
+    table.button.alert td {
       background: $alert-color;
       border-color: $success-border-color;
     }
 
-    table.alert:hover td {
+    table.button.alert:hover td {
       background: $success-border-color !important;
     }
 
-    table.radius td {
+    table.button.radius td {
       -webkit-border-radius: $global-radius;
       -moz-border-radius: $global-radius;
       border-radius: $global-radius;
     }
 
-    table.round td {
+    table.button.round td {
       -webkit-border-radius: $global-rounded;
       -moz-border-radius: $global-rounded;
       border-radius: $global-rounded;

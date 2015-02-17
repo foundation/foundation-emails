@@ -1,0 +1,70 @@
+// Ink by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+@import "global";
+
+//
+// @variables
+//
+
+$include-html-callout-classes: $include-html-classes !default;
+
+$callout-bg: #f2f2f2 !default;
+$callout-border-color: darken($callout-bg, 20%) !default;
+$callout-border-style: solid !default;
+
+$success-bg: #43AC6A !default;
+$success-callout-border-color: darken($success-bg, 20%) !default;
+$success-text-color: #FFFFFF !default;
+
+$warning-bg: #f08a24 !default;
+$warning-callout-border-color: darken($warning-bg, 20%) !default;
+$warning-text-color: #FFFFFF !default;
+
+$alert-bg: #f04124 !default;
+$alert-callout-border-color: darken($alert-bg, 20%) !default;
+$alert-text-color: #FFFFFF !default;
+
+
+$callout-border-size: 1px !default;
+$callout-padding: 10px;
+
+
+
+td.callout {
+	width: 100%;
+	border: $callout-border-size $callout-border-style $callout-border-color;	
+	padding: $callout-padding !important;
+	background: $callout-bg;
+}
+
+td.callout.success {
+	background: $success-bg !important;
+	border: $callout-border-size $callout-border-style $success-callout-border-color !important;				
+	color: $success-text-color !important;
+}
+
+td.wrapper table tr td.callout.warning {
+	background: $warning-bg !important;
+	border: $callout-border-size $callout-border-style $warning-callout-border-color !important;
+	color: $warning-text-color;
+}
+
+td.callout.alert {
+	background: $alert-bg !important;
+	border: $callout-border-size $callout-border-style $alert-callout-border-color !important;
+	color: $alert-text-color;				
+}
+
+td.callout.round {
+	border-radius: 50px !important;
+}
+
+.sub-grid table {
+	width: 100%;
+}
+
+.sub-grid td.sub-columns {
+	padding-bottom: 0;
+}

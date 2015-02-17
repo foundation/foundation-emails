@@ -97,9 +97,11 @@ $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default
         }
       }
 
-      table[class="body"] td%offset-by{
+      @for $i from 1 through ($total-columns - 1) {
+      table[class="body"] td.offset-by-#{$i} {
         padding-left: 0 !important;
       }
+    }  
 
       table[class="body"] table.columns td.expander {
         width: 1px !important;
@@ -123,6 +125,20 @@ $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default
       table[class="body"] .show-for-small,
       table[class="body"] .hide-for-desktop {
         display: inherit !important;
+      }
+    }
+
+
+     table[class="body"] table.inline-list {
+      td {
+        width: auto !important;
+        display: inline-block !important; 
+      }
+    }
+
+     table[class="body"] table.inline-list.vertical {
+      td {
+        display: block !important; 
       }
     }
   }

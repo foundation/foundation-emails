@@ -1,0 +1,30 @@
+//Thumbnail Variable
+$thumbnail-bg: #ff0000 !default;
+$thumbnail-padding: 6px !default;
+
+//Blur Variables
+$shadow-h: 0;
+$shadow-v: 0;
+$shadow-blur: 6px;
+$shadow-spread: 1px;
+$shadow-color: #008CBA !default;
+$shadow-opacity: 0.5 !default;
+
+@mixin thumb-shadow($h, $v, $b, $spr, $color, $opacity){
+  box-shadow: $h $v $b $spr rgba(red($color), green($color), blue($color), $opacity);
+}
+
+.thumbnail {
+  display: inline-block;
+  // border: 1px solid darken($thumbnail-bg, 10%);
+  border-collapse: separate;
+  img {
+    background-color: $thumbnail-bg;
+    // border: 3px solid lighten($thumbnail-bg, 1%);
+    border-collapse: separate;
+  }
+  &:hover, &:focus {
+    //only supported iphone iOS, outlook.com, apple mail 6.5
+    @include thumb-shadow($shadow-h, $shadow-v, $shadow-blur, $shadow-spread, $shadow-color, $shadow-opacity);
+  }
+}

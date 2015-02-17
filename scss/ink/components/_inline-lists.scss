@@ -1,0 +1,12 @@
+table.inline-list {
+  td {
+    padding: 20px;
+    padding-left: 0px;
+  }
+}
+
+//This rule makes vertical inline-lists flush with other content.
+//Not sure if this is too style specific. May need to be removed.
+td.vertical {
+      padding-top: 0px !important; 
+}
