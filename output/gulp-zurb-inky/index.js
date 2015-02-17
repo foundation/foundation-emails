@@ -7,7 +7,8 @@ var Inky = function Inky () {
       "row",
       "container",
       "columns",
-      "button"
+      "button",
+      "subcolumns"
   ];
 };
 
@@ -147,7 +148,7 @@ Inky.prototype = {
         output = '<table class="button ' + compClass +'"><tbody><tr><td>' + inner + '</td></tr></tbody></table>';
         break;
       // TODO: This is super messed up right now
-      case 'subcolumn':
+      case 'subcolumns':
         var subColSize = '';
 
         if ($(component).attr('small')) {
@@ -156,7 +157,13 @@ Inky.prototype = {
         if ($(component).attr('large')) {
           subColSize += 'large' + '-' + $(component).attr('large') + ' ';
         }
-        output = '<td class="sub-columns ' + compClass + ' ' + subColSize +'">' + inner + '</td>';
+
+        if ($(component).next()[0].name !== 'subcolumns') {
+          output = '<td class="sub-columns last ' + compClass + ' ' + subColSize +'">' + inner + '</td>';
+        }
+        else {
+          output = '<td class="sub-columns ' + compClass + ' ' + subColSize +'">' + inner + '</td>';
+        }
         break;
 
       case 'container':
@@ -182,7 +189,7 @@ Inky.prototype = {
   },
 
   // Description:
-  //    Returns output for column elements
+  //    Returns output for column elements. TODO: this could be refactored to handle both cols and subcols
   //
   // Arguments:
   //    col (obj), siblings (str): the initial target column and its siblings within the same row 
@@ -217,9 +224,17 @@ Inky.prototype = {
         colSize += 'large' + '-' + $(col).attr('large') + ' ';
       }
 
-      wrapperHTML += '<table class="' + colSize + 'columns"><tr><td>';
-      wrapperHTML += inner;
-      wrapperHTML += '</td><td class="expander"></td></tr></table>';
+      wrapperHTML += '<table class="' + colSize + 'columns"><tr>';
+
+      // subcolumns do not need an extra td
+      if ($(col).children()[0] && $(col).children()[0].name !== 'subcolumns') {
+        wrapperHTML += '<td>' + inner + '</td>';
+      }
+      else {
+        wrapperHTML += inner;
+      }
+
+      wrapperHTML += '<td class="expander"></td></tr></table>';
 
       $(col).replaceWith(wrapperHTML);
     });
