@@ -1,0 +1,17 @@
+{
+  "name": "gulp-zurb-foundation-email",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "dependencies": {
+    "gulp-util": "~2.2.1",
+    "event-stream": "~3",
+    "cheerio": "*",
+    "gulp-zurb-inky": "*"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "should": "*",
+    "gulp-util": "*"
+  },
+  "description": "Take initial HTML syntax and turn them into tables that use Foundation for Email styles."
+}

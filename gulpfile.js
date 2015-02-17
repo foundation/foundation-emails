@@ -15,16 +15,17 @@
 // 1. LIBRARIES
 // - - - - - - - - - - - - - - -
 
-var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
-    html2txt = require('gulp-html2txt'),
-    inlineCss = require('gulp-inline-css'),
-    rename = require('gulp-rename'),
-    connect = require('gulp-connect'),
+var gulp       = require('gulp'),
+    sass       = require('gulp-ruby-sass'),
+    html2txt   = require('gulp-html2txt'),
+    inlineCss  = require('gulp-inline-css'),
+    rename     = require('gulp-rename'),
+    connect    = require('gulp-connect'),
     minifyHTML = require('gulp-minify-html'),
-    concat = require('gulp-concat'),
-    inky  = require('gulp-zurb-foundation-email'),
-    rimraf = require('rimraf');
+    concat     = require('gulp-concat'),
+    zfEmail    = require('gulp-zurb-foundation-email'),
+    rimraf     = require('rimraf'),
+    jasmine    = require('gulp-jasmine');
 
 // 2. VARIABLES
 // - - - - - - - - - - - - - - -
@@ -33,7 +34,8 @@ var dirs = {
   styles: 'scss/*.scss',
   html: 'html/*.html',
   js: 'js/**/*.js',
-  build: './build'
+  build: './build',
+  spec: './spec'
 };
 
 // 3. CLEANIN' FILES
@@ -114,12 +116,24 @@ gulp.task('js', function() {
 
 gulp.task('query', function() {
   gulp.src(dirs.html)
-    .pipe(inky('body'))
+    .pipe(zfEmail())
     .pipe(gulp.dest(dirs.build))
     .pipe(connect.reload());
 });
 
-// 7. GO FORTH AND BUILD
+// 7. Testing
+// - - - - - - - - - - - - - - -
+
+// Starts a server
+// Default Port: 8080
+gulp.task('test', function () {
+  return gulp.src(dirs.spec + '/*.js')
+    .pipe(jasmine({
+      verbose: true
+    }));
+});
+
+// 8. GO FORTH AND BUILD
 // - - - - - - - - - - - - - - -
 
 // Wipes build folder, then compiles SASS, then minifies and copies HTML
@@ -127,7 +141,7 @@ gulp.task('build', ['clean', 'sass', 'query'], function() {
   gulp.start('minify-html');
 });
 
-// 8. Serve/Watch Tasks
+// 9. Serve/Watch Tasks
 // - - - - - - - - - - - - - - -
 
 // Starts a server

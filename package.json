@@ -9,6 +9,7 @@
     "gulp-connect": "^2.2.0",
     "gulp-html2txt": "^1.1.0",
     "gulp-inline-css": "^1.0.1",
+    "gulp-jasmine": "^2.0.0",
     "gulp-minify-html": "^0.1.8",
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.7.1",
