@@ -83,41 +83,45 @@ module.exports = function (body) {
         compClass = $(component).attr('class');
       };
 
-      if (type === "panel") {
-        output = '<td class="panel ' + compClass +'">' + inner + '</td>';
-      }
-      else if (type === "button") {
-        output = '<table class="button ' + compClass +'"><tbody><tr><td>' + inner + '</td></tr></tbody></table>'
-      }
-      // TODO: This is super messed up right now
-      else if (type === "subcolumn") {
-        var subColSize = '';
+      switch (type) {
+        case 'panel':
+          output = '<td class="panel ' + compClass +'">' + inner + '</td>';
+          break;
 
-        if ($(component).attr('small')) {
-          subColSize += 'small' + '-' + $(component).attr('small') + ' ';
-        }
-        if ($(component).attr('large')) {
-          subColSize += 'large' + '-' + $(component).attr('large') + ' ';
-        }
-        output = '<td class="sub-columns ' + compClass + ' ' + subColSize +'">' + inner + '</td>';
-      }
-      else if (type === "container") {
-        output = '<table class="container ' + compClass + '"><tbody><tr><td>' + inner + '</td></tr></tbody></table>'
-      }
-      else if (type === "columns") {
-        makeCols(component, component.nextAll('columns'));
-      }
-      // TODO: INTEGRATE COL FUNCTION
-      else if (type === "row") {
-        output = '<table class="row ' + compClass + '"><tbody><tr>'+ inner + '</tr></tbody></table>';
+        case 'button':
+          output = '<table class="button ' + compClass +'"><tbody><tr><td>' + inner + '</td></tr></tbody></table>';
+          break;
+        // TODO: This is super messed up right now
+        case 'subcolumn':
+          var subColSize = '';
 
-      }
-      else {
-        // unless it's a special element, just grab the inside
-        // another cheerio quirk
-        inner = $.html(element);
-        output = '<td>' + inner + '</td>';
-      }
+          if ($(component).attr('small')) {
+            subColSize += 'small' + '-' + $(component).attr('small') + ' ';
+          }
+          if ($(component).attr('large')) {
+            subColSize += 'large' + '-' + $(component).attr('large') + ' ';
+          }
+          output = '<td class="sub-columns ' + compClass + ' ' + subColSize +'">' + inner + '</td>';
+          break;
+
+        case 'container':
+          output = '<table class="container ' + compClass + '"><tbody><tr><td>' + inner + '</td></tr></tbody></table>';
+          break;
+
+        case 'columns':
+          makeCols(component, component.nextAll('columns'));
+          break;
+        
+        case 'row':
+          output = '<table class="row ' + compClass + '"><tbody><tr>'+ inner + '</tr></tbody></table>';
+          break;
+
+        default: 
+          // unless it's a special element, just grab the inside
+          // another cheerio quirk
+          inner = $.html(element);
+          output = '<td>' + inner + '</td>';
+      };
 
       return output;
     };
