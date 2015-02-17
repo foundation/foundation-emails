@@ -115,7 +115,8 @@ gulp.task('js', function() {
 gulp.task('query', function() {
   gulp.src(dirs.html)
     .pipe(inky('body'))
-    .pipe(gulp.dest(dirs.build));
+    .pipe(gulp.dest(dirs.build))
+    .pipe(connect.reload());
 });
 
 // 7. GO FORTH AND BUILD
