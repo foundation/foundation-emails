@@ -3,9 +3,10 @@
 var inky = require('../node_modules/gulp-zurb-foundation-email/node_modules/gulp-zurb-inky');
 
 describe("inky", function () {
-  it("should be targetting custom tags", function () {
+  it("should be setting custom tags from object correctly", function () {
 
-  expect(inky.getTags()).toEqual([ 'callout', 'row', 'container', 'columns', 'button', 'subcolumns' ]);
+  inky.setTagArray();
+  expect(inky.zfArray).toEqual([ 'button', 'row', 'callout', 'columns', 'subcolumns', 'container', 'inline-list-h', 'inline-list-v' ]);
   });
 
 });
