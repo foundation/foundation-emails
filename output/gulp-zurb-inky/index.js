@@ -11,7 +11,7 @@ var Inky = function Inky () {
     inlineListH: 'inline-list-h',
     inlineListV: 'inline-list-v'
   },
-  this.columns = 12
+  this.grid = 12
 };
 
 Inky.prototype = {
@@ -89,10 +89,10 @@ Inky.prototype = {
   // Returns:
   //    boolean: true/false
   isTdElement: function(elType) {
-    var tdEls = ['subcolumns', 'callout']
+    var tdEls = ['subcolumns'];
 
     // if the element is an element that comes with td
-    if (tdEls.indexOf(elType) !== -1) {
+    if (tdEls.indexOf(elType) > -1) {
       // return true
       return true;
     }
@@ -101,20 +101,37 @@ Inky.prototype = {
     }
 
   },
+  // Description:
+  //   Sets custom config for Inky
+  //
+  // Arguments:
+  //    opts (object): configuration object
+  // Returns:
+  //    null
+  setConfig: function(opts) {
 
+    for (var prop in opts) {
+      this[prop] = opts[prop];
+    }
+
+  },
   // Description:
   //   Awww yiss. Kickstarts the whole parser. Takes in HTML loaded via Cheerio as an argument, 
   //   checks if there are any custom components. If there are, it replaces the nested components, 
   //   traverses the DOM and replaces them with email markup.
   //
   // Arguments:
-  //    $: Cheerio loaded string
+  //    $, opts (object): Cheerio loaded string, configuration object
   // Returns:
   //    $: Cheerio modified string
-  releaseTheKraken: function($) {
+  releaseTheKraken: function($, opts) {
     var center = $('center').html(),
         self   = this;
 
+    // set configuration
+    if (opts) {
+      self.setConfig(opts);
+    }
     // create an array of our custom tags
     self.setTagArray();
 
@@ -133,7 +150,7 @@ Inky.prototype = {
       $ = cheerio.load(str);
 
       // see the mark up for dev purposes
-      console.log($.html());
+      // console.log($.html());
     }
     else {
       console.log("all done");
@@ -312,23 +329,9 @@ Inky.prototype = {
       case self.zfTags.button:
         output = '<table class="button ' + compClass +'"><tbody><tr><td>' + inner + '</td></tr></tbody></table>';
         break;
-      // TODO: This is super messed up right now
+
       case self.zfTags.subcolumns:
-        var subColSize = '';
-
-        if ($(component).attr('small')) {
-          subColSize += 'small' + '-' + $(component).attr('small') + ' ';
-        }
-        if ($(component).attr('large')) {
-          subColSize += 'large' + '-' + $(component).attr('large') + ' ';
-        }
-
-        if ($(component).next()[0].name !== 'subcolumns') {
-          output = '<td class="sub-columns last ' + compClass + ' ' + subColSize +'">' + inner + '</td>';
-        }
-        else {
-          output = '<td class="sub-columns ' + compClass + ' ' + subColSize +'">' + inner + '</td>';
-        }
+        output = self.makeCols($, component, 'subcolumns');
         break;
 
       case self.zfTags.container:
@@ -336,7 +339,7 @@ Inky.prototype = {
         break;
 
       case self.zfTags.columns:
-        output = self.makeCols($, component);
+        output = self.makeCols($, component, 'columns');
         break;
       
       case self.zfTags.row:
@@ -363,6 +366,13 @@ Inky.prototype = {
     return output;
   },
 
+  // Description:
+  //    Returns output for inline list elements. 
+  //
+  // Arguments:
+  //    $ (obj), col (obj), orientation (str): cheerio, the list, whether vertical/horizontal list
+  // Returns:
+  //    HTML (string): Mark up for inline lists
   makeInlineList: function($, list, orientation) {
     var output   = '';
     var children = list.children();
@@ -390,7 +400,7 @@ Inky.prototype = {
   //    $ (obj), col (obj): cheerio, the target column
   // Returns:
   //    HTML (string): Mark up for columns all contained in a row
-  makeCols: function($, col) {
+  makeCols: function($, col, type) {
     var output      = '',
         wrapperHTML = '',
         colSize     = '',
@@ -405,44 +415,51 @@ Inky.prototype = {
       colClass = $(col).attr('class');
     }
 
-    // if it is the last column, add the class last
-    if (!$(col).next()[0]) {
-      output = '<td class="wrapper ' + colClass + 'last">';
-
-    } else {
-      output = '<td class="wrapper ' + colClass + '">';
-    }
-
     // check for sizes
+    // if no attribute is provided, default to small-12
+    // divide evenly for large columns
     if ($(col).attr('small')) {
       colSize += 'small' + '-' + $(col).attr('small') + ' ';
     }
     else {
-      colSize += 'large-' + Math.floor(self.columns/colCount) + ' ';
+      colSize += 'small-12 ';
     }
 
     if ($(col).attr('large')) {
       colSize += 'large' + '-' + $(col).attr('large') + ' ';
     }
     else {
-      colSize += 'large-' + Math.floor(self.columns/colCount) + ' ';
+      colSize += 'large-' + Math.floor(self.grid/colCount) + ' ';
     }
 
-    output += '<table class="' + colSize + 'columns"><tr>';
+    // start making markup
+    if (type === 'columns') {
+      // if it is the last column, add the class last
+      if ($(col).next()[0] && $(col).next()[0].name !== 'columns') {
+        output = '<td class="wrapper ' + colClass + 'last">';
 
+      } else {
+        output = '<td class="wrapper ' + colClass + '">';
+      }
 
-    // if the column has children, put them in a td
-    // if the child already has a td with it (i.e subcolumns/callouts), just place them inside
-    // otherwise, place stuff inside columns in a td
+      output += '<table class="' + colSize + 'columns"><tr>';
+      output += inner;
+      output += '<td class="expander"></td></tr></table>';
+    }
+    else if (type === 'subcolumns') {
 
-    if ($(col).children()[0] && !self.isTdElement($(col).children()[0].name)) {
-      output += '<td>' + inner + '</td>';
+      // if it is the last subcolumn, add the last class
+      if ($(col).next()[0] && $(col).next()[0].name !== 'subcolumns') {
+        output = '<td class="sub-columns last' + colClass + ' ' + colSize +'">' + inner + '</td>';
+      }
+      else {
+        output = '<td class="sub-columns' + colClass + ' ' + colSize +'">' + inner + '</td>';
+      }      
     }
     else {
-      output += inner;
+      return;
     }
 
-    output += '<td class="expander"></td></tr></table>';
     return output;
   }
 };

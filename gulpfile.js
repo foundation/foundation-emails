@@ -139,7 +139,10 @@ gulp.task('js', function() {
 
 gulp.task('query', function() {
   gulp.src(dirs.html)
-    .pipe(zfEmail())
+    .pipe(zfEmail({
+      grid: 12
+
+    }))
     .pipe(gulp.dest(dirs.build))
     .pipe(connect.reload());
 });

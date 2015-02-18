@@ -6,7 +6,7 @@ var cheerio = require('cheerio');
 var inky = require('gulp-zurb-inky');
 
 
-module.exports = function () {
+module.exports = function (opts) {
   "use strict";
 
   var body = function (file) {
@@ -16,10 +16,9 @@ module.exports = function () {
     var str = file.contents.toString('utf8');
     var $ = cheerio.load(str);
 
-    $ = inky.releaseTheKraken($);
+    $ = inky.releaseTheKraken($, opts);
 
     file.contents = new Buffer($.html({normalizeWhitespace: true}));
-    console.log($.html())
     this.emit('data', file);
   };
 
