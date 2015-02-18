@@ -42,9 +42,18 @@ describe("the grid", function () {
   })
 
   it("will place the 'last' class on the last column", function() {
+    var $ = cheerio.load('<center><row><columns large="10">.ten cols</columns><columns large="2">.two cols</columns></row></center>');
+
+    $ = inky.releaseTheKraken($);
+    expect($.html()).toEqual('<center><table class="row "><tbody><tr><td class="wrapper "><table class="large-10 columns"><tr>.ten cols<td class="expander"></td></tr></table></td><td class="wrapper last"><table class="large-2 columns"><tr>.two cols<td class="expander"></td></tr></table></td></tr></tbody></table></center>');
+
   })
 
   it("will place the 'last' class on a solo column", function() {
+    var $ = cheerio.load('<center><row><columns large="12">forever alone</columns></row></center>');
+
+    $ = inky.releaseTheKraken($);
+    expect($.html()).toEqual('<center><table class="row "><tbody><tr><td class="wrapper last"><table class="large-12 columns"><tr>forever alone<td class="expander"></td></tr></table></td></tr></tbody></table></center>');
 
   })
 });
