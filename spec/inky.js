@@ -5,7 +5,7 @@ var inky = require('../node_modules/gulp-zurb-foundation-email/node_modules/gulp
 describe("inky", function () {
   it("should be targetting custom tags", function () {
 
-  expect(inky.getTags()).toEqual([ 'panel', 'row', 'container', 'columns', 'button', 'subcolumns' ]);
+  expect(inky.getTags()).toEqual([ 'callout', 'row', 'container', 'columns', 'button', 'subcolumns' ]);
   });
 
 });

@@ -3,7 +3,7 @@ var cheerio = require('cheerio');
 
 var Inky = function Inky () {
   this.customTags = [
-      "panel",
+      "callout",
       "row",
       "container",
       "columns",
@@ -16,7 +16,15 @@ Inky.prototype = {
   getTags: function() {
     return this.customTags;
   },
-  
+  // Description:
+  //   Takes in HTML loaded via Cheerio as an argument, checks if there are any custom components.
+  //   If there are, it replaces the nested components, traverses the DOM and replaces them with
+  //   email markup.
+  //
+  // Arguments:
+  //    $: Cheerio loaded string
+  // Returns:
+  //    $: Cheerio modified string
   releaseTheKraken: function($) {
     var center = $('center').html(),
         self   = this;
@@ -29,6 +37,8 @@ Inky.prototype = {
       $(nestedComponents).each(function(idx, el) {
         var containerScaffold = self.scaffoldElements($, $(el));
       });
+      // see the mark up for dev purposes
+      console.log($.html());
     }
     else {
       console.log("all done");
@@ -41,7 +51,7 @@ Inky.prototype = {
   //   and replaces the custom tags with the correct table email markup.
   //
   // Arguments:
-  //    str (String): A string containing the markup of a singular element
+  //    $, str (String): Cheerio, and a string containing the markup of a singular element
   // Returns:
   //    str (String): A string containing the markup of inputted element with contained elements
   scaffoldElements: function($, str) {
@@ -51,6 +61,7 @@ Inky.prototype = {
         element  = $(str)[0],
         inner    = $(str).html(),
         self     = this;
+
 
     // replace tags with proper table syntax
     // elMarkup retains the inner html within the markup
@@ -64,6 +75,7 @@ Inky.prototype = {
 
     // find if there are more nested elements in the inner syntax
     var moreNested = self.findNestedComponents($, inner);
+
     $(moreNested).each(function(idx, el) {
       // call a recursion to replace all nested elements
       self.scaffoldElements($, $(el));
@@ -74,7 +86,7 @@ Inky.prototype = {
   //   Executes a function to find and return nested custom elements within another element
   //
   // Arguments:
-  //    str (String): A string containing the markup of an element to be checked for nested components
+  //    $, str (String): Cheerio, and a string containing the markup of an element to be checked for nested components
   // Returns:
   //    nestedComponents (Array): An array containing the names (i.e. tags) of the nested components
   findNestedComponents: function($, str) {
@@ -104,7 +116,7 @@ Inky.prototype = {
   //   Goes through array of custom nested components to determine whether or not there are any on the DOM
   //
   // Arguments:
-  //    null
+  //    $ : Cheerio
   // Returns:
   //    boolean: True if there are nested components on the DOM, false otherwise.
   checkNestedComponents: function($) {
@@ -125,7 +137,7 @@ Inky.prototype = {
   //    Returns output for desired custom element
   //
   // Arguments:
-  //    element (obj), type (str): element as a cheerio object and type as the tag name
+  //   $, element (obj), type (str): cheerio, element as a cheerio object, and type as the tag name
   // Returns:
   //    HTML (string): Mark up for corresponding element with inner html contents untouched
   componentFactory: function($, element, type) {
@@ -140,8 +152,8 @@ Inky.prototype = {
     };
 
     switch (type) {
-      case 'panel':
-        output = '<td class="panel ' + compClass +'">' + inner + '</td>';
+      case 'callout':
+        output = '<td class="callout ' + compClass +'">' + inner + '</td>';
         break;
 
       case 'button':
@@ -171,7 +183,7 @@ Inky.prototype = {
         break;
 
       case 'columns':
-        self.makeCols($, component, component.nextAll('columns'));
+        output = self.makeCols($, component);
         break;
       
       case 'row':
@@ -192,52 +204,51 @@ Inky.prototype = {
   //    Returns output for column elements. TODO: this could be refactored to handle both cols and subcols
   //
   // Arguments:
-  //    col (obj), siblings (str): the initial target column and its siblings within the same row 
+  //    $ (obj), col (obj): cheerio, the target column
   // Returns:
   //    HTML (string): Mark up for columns all contained in a row
-  makeCols: function($, col, siblings) {
-    var output   = '',
-        columns  = [col, siblings],
-        colCount = col.length + siblings.length;
+  makeCols: function($, col) {
+    var output      = '',
+        wrapperHTML = '',
+        colSize     = '',
+        colClass    = '',
+        inner       = $(col).html();
 
-    $(columns).each(function(i, el) {
-      var wrapperHTML = '';
-      var colSize     = '';
-      var col         = $(el)
-      var inner       = $(el).html();
 
-      var colClass    = '';
-      if ($(col).attr('class')) {
-        colClass = $(col).attr('class');
-      }
+    if ($(col).attr('class')) {
+      colClass = $(col).attr('class');
+    }
 
-      wrapperHTML = '<td class="wrapper ' + colClass + '">';
+    // if it is the last column, add the class last
+    if (!$(col).next()[0]) {
+      output = '<td class="wrapper ' + colClass + 'last">';
 
-      if (i === colCount - 1) {
-          wrapperHTML = '<td class="wrapper ' + colClass + 'last">';
-      }
-      // check for sizes
-      if ($(col).attr('small')) {
-        colSize += 'small' + '-' + $(col).attr('small') + ' ';
-      }
-      if ($(col).attr('large')) {
-        colSize += 'large' + '-' + $(col).attr('large') + ' ';
-      }
+    } else {
+      output = '<td class="wrapper ' + colClass + '">';
+    }
 
-      wrapperHTML += '<table class="' + colSize + 'columns"><tr>';
+    // check for sizes
+    if ($(col).attr('small')) {
+      colSize += 'small' + '-' + $(col).attr('small') + ' ';
+    }
+    if ($(col).attr('large')) {
+      colSize += 'large' + '-' + $(col).attr('large') + ' ';
+    }
 
-      // subcolumns do not need an extra td
-      if ($(col).children()[0] && $(col).children()[0].name !== 'subcolumns') {
-        wrapperHTML += '<td>' + inner + '</td>';
-      }
-      else {
-        wrapperHTML += inner;
-      }
+    output += '<table class="' + colSize + 'columns"><tr>';
 
-      wrapperHTML += '<td class="expander"></td></tr></table>';
+    // subcolumns do not need an extra td
+    // otherwise, place stuff inside columns in a td
+    if ($(col).children()[0] && $(col).children()[0].name !== 'subcolumns') {
+      output += '<td>' + inner + '</td>';
+    }
+    else {
+      output += inner;
+    }
 
-      $(col).replaceWith(wrapperHTML);
-    });
+    output += '<td class="expander"></td></tr></table>';
+
+    return output;
   }
 };
 

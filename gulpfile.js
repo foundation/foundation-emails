@@ -158,7 +158,7 @@ gulp.task('serve', function() {
 // Live reloads on change
 gulp.task('watch', ['serve'], function() {
   gulp.watch([dirs.html], ['query','minify-html']);
-  gulp.watch(['node_modules/gulp-zurb-foundation-email/index.js'], ['query'])
+  gulp.watch(['node_modules/gulp-zurb-foundation-email/node_modules/gulp-zurb-inky/index.js'], ['query'])
   gulp.watch([dirs.styles], ['sass']);
 });
 
