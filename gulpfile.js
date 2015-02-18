@@ -23,6 +23,8 @@ var gulp       = require('gulp'),
     connect    = require('gulp-connect'),
     minifyHTML = require('gulp-minify-html'),
     concat     = require('gulp-concat'),
+    extractMQ  = require('media-query-extractor'),
+    inject     = require('gulp-inject'),
     zfEmail    = require('gulp-zurb-foundation-email'),
     rimraf     = require('rimraf'),
     jasmine    = require('gulp-jasmine');
@@ -67,6 +69,27 @@ gulp.task('inline', function() {
     }))
     .pipe(gulp.dest(dirs.build))
 });
+
+// extract media queries into new CSS file called inkMQ.css
+// any remaining styles will go into ink-noMQ.css
+gulp.task('extract-mq', function () {
+  extractMQ( dirs.build + '/css/ink.css', dirs.build + '/css/ink-noMQ.css', ['only screen and (max-width: 600px)|./build/css/inkMQ.css']);
+});
+
+// inject media queries into the head of the inlined email
+gulp.task('inject-mq', ['extract-mq'], function() {
+  gulp.src(dirs.build + '/index-inline.html')
+    .pipe(inject(gulp.src(dirs.build + '/css/inkMQ.css'), {
+      starttag: '<!-- inject:mq-css -->',
+      transform: function (filePath, file) {
+        // return file contents as string
+        return "<style>\n" + file.contents.toString('utf8') + "\n</style>"
+      }
+    }))
+    .pipe(gulp.dest('./build'));
+})
+
+
 
 // 5. HTML
 // - - - - - - - - - - - - - - -
@@ -163,6 +186,8 @@ gulp.task('watch', ['serve'], function() {
 });
 
 
-gulp.task('deploy', ['minify-html', 'inline']);
+gulp.task('deploy', ['minify-html', 'inline'], function() {
+  gulp.start('inject-mq');
+});
 // Default task
 gulp.task('default', ['serve', 'watch']);

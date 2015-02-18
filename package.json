@@ -5,8 +5,10 @@
   "devDependencies": {
     "cheerio": "^0.18.0",
     "gulp": "^3.8.10",
+    "gulp-combine-mq": "^0.3.1",
     "gulp-concat": "^2.4.3",
     "gulp-connect": "^2.2.0",
+    "gulp-group-css-media-queries": "^1.0.0",
     "gulp-html2txt": "^1.1.0",
     "gulp-inline-css": "^1.0.1",
     "gulp-jasmine": "^2.0.0",

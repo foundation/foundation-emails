@@ -10,7 +10,8 @@ var Inky = function Inky () {
     container: 'container',
     inlineListH: 'inline-list-h',
     inlineListV: 'inline-list-v'
-  }
+  },
+  this.columns = 12
 };
 
 Inky.prototype = {
@@ -132,7 +133,7 @@ Inky.prototype = {
       $ = cheerio.load(str);
 
       // see the mark up for dev purposes
-      // console.log($.html());
+      console.log($.html());
     }
     else {
       console.log("all done");
@@ -397,6 +398,8 @@ Inky.prototype = {
         inner       = $(col).html(),
         self        = this;
 
+    // Add 1 to include current column
+    var colCount = $(col).siblings().length + 1;
 
     if ($(col).attr('class')) {
       colClass = $(col).attr('class');
@@ -414,9 +417,15 @@ Inky.prototype = {
     if ($(col).attr('small')) {
       colSize += 'small' + '-' + $(col).attr('small') + ' ';
     }
+    else {
+      colSize += 'large-' + Math.floor(self.columns/colCount) + ' ';
+    }
 
     if ($(col).attr('large')) {
       colSize += 'large' + '-' + $(col).attr('large') + ' ';
+    }
+    else {
+      colSize += 'large-' + Math.floor(self.columns/colCount) + ' ';
     }
 
     output += '<table class="' + colSize + 'columns"><tr>';
