@@ -41,6 +41,13 @@ Inky.prototype = {
     self.zfArray = arr;
   },
 
+  // Description:
+  //   Checks if an element is a custom ZF element.
+  //
+  // Arguments:
+  //    elType (string): the tag name of an element
+  // Returns:
+  //    boolean: true/false
   isZfElement: function(elType) {
     var self = this;
     // create an array of our custom tags, if we haven't done so already
@@ -58,6 +65,14 @@ Inky.prototype = {
     }
   },
 
+  // Description:
+  //   Checks if an element is an element with a td included. Currently it's a manual check. 
+  //   Array was populated from the markup from the component factory.
+  //
+  // Arguments:
+  //    elType (string): the tag name of an element
+  // Returns:
+  //    boolean: true/false
   isTdElement: function(elType) {
     var tdEls = ['subcolumns', 'callout']
 
@@ -73,9 +88,9 @@ Inky.prototype = {
   },
 
   // Description:
-  //   Takes in HTML loaded via Cheerio as an argument, checks if there are any custom components.
-  //   If there are, it replaces the nested components, traverses the DOM and replaces them with
-  //   email markup.
+  //   Awww yiss. Kickstarts the whole parser. Takes in HTML loaded via Cheerio as an argument, 
+  //   checks if there are any custom components. If there are, it replaces the nested components, 
+  //   traverses the DOM and replaces them with email markup.
   //
   // Arguments:
   //    $: Cheerio loaded string
