@@ -104,8 +104,8 @@ gulp.task('copy-html', function() {
 // - - - - - - - - - - - - - - -
 
 gulp.task('inky-prime', function() {
-  return gulp.src('node_modules/gulp-zurb-foundation-email/index.js')
-    .pipe(gulp.dest('./output'));
+  return gulp.src('node_modules/gulp-zurb-foundation-email/node_modules/gulp-zurb-inky/index.js')
+    .pipe(gulp.dest('./output/gulp-zurb-inky'));
 })
 
 gulp.task('js', function() {

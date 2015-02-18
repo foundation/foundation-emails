@@ -8,7 +8,9 @@ var Inky = function Inky () {
     callout: 'callout',
     columns: 'columns',
     subcolumns: 'subcolumns',
-    container: 'container'
+    container: 'container',
+    inlineListH: 'inline-list-h',
+    inlineListV: 'inline-list-v'
   }
 };
 
@@ -37,6 +39,37 @@ Inky.prototype = {
       arr.push(self.zfTags[val]);
     }
     self.zfArray = arr;
+  },
+
+  isZfElement: function(elType) {
+    var self = this;
+    // create an array of our custom tags, if we haven't done so already
+    if(!self.zfArray) {
+      self.setTagArray();
+    }
+
+    // if the element is a custom element
+    if (self.zfArray.indexOf(elType) !== -1) {
+      // return true
+      return true;
+    }
+    else {
+      return false;
+    }
+  },
+
+  isTdElement: function(elType) {
+    var tdEls = ['subcolumns', 'callout']
+
+    // if the element is an element that comes with td
+    if (tdEls.indexOf(elType) !== -1) {
+      // return true
+      return true;
+    }
+    else {
+      return false;
+    }
+
   },
 
   // Description:
@@ -226,6 +259,16 @@ Inky.prototype = {
         output = '<table class="row ' + compClass + '"><tbody><tr>'+ inner + '</tr></tbody></table>';
         break;
 
+      case self.zfTags.inlineListH:
+        inner  = self.makeInlineList($, component, 'horizontal');
+        output = '<table class="inline-list ' + compClass + '"><tbody><tr>' + inner + '</tr></tbody></table>';
+        break;
+
+      case self.zfTags.inlineListV:
+        inner  = self.makeInlineList($, component, 'vertical');
+        output = '<table class="inline-list ' + compClass + '"><tbody>' + inner + '</tbody></table>';
+        break;
+
       default: 
         // unless it's a special element, just grab the inside
         // another cheerio quirk
@@ -233,6 +276,26 @@ Inky.prototype = {
         output = '<td>' + inner + '</td>';
     };
 
+    return output;
+  },
+
+  makeInlineList: function($, list, orientation) {
+    var output   = '';
+    var children = list.children();
+
+    $(children).each(function(idx, el) {
+      var innerChild = $.html(el);
+
+      if (orientation === 'horizontal') {
+        output += '<td>' + innerChild + '</td>';
+      }
+      else if (orientation === 'vertical') {
+        output += '<tr><td class="vertical">' + innerChild + '</td></tr>';
+      }
+      else {
+        return;
+      }
+    });
     return output;
   },
 
@@ -248,7 +311,8 @@ Inky.prototype = {
         wrapperHTML = '',
         colSize     = '',
         colClass    = '',
-        inner       = $(col).html();
+        inner       = $(col).html(),
+        self        = this;
 
 
     if ($(col).attr('class')) {
@@ -267,15 +331,19 @@ Inky.prototype = {
     if ($(col).attr('small')) {
       colSize += 'small' + '-' + $(col).attr('small') + ' ';
     }
+
     if ($(col).attr('large')) {
       colSize += 'large' + '-' + $(col).attr('large') + ' ';
     }
 
     output += '<table class="' + colSize + 'columns"><tr>';
 
-    // subcolumns do not need an extra td
+
+    // if the column has children, put them in a td
+    // if the child already has a td with it (i.e subcolumns/callouts), just place them inside
     // otherwise, place stuff inside columns in a td
-    if ($(col).children()[0] && $(col).children()[0].name !== 'subcolumns') {
+
+    if ($(col).children()[0] && !self.isTdElement($(col).children()[0].name)) {
       output += '<td>' + inner + '</td>';
     }
     else {
@@ -283,7 +351,6 @@ Inky.prototype = {
     }
 
     output += '<td class="expander"></td></tr></table>';
-
     return output;
   }
 };
