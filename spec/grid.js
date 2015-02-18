@@ -56,4 +56,12 @@ describe("the grid", function () {
     expect($.html()).toEqual('<center><table class="row "><tbody><tr><td class="wrapper last"><table class="large-12 columns"><tr>forever alone<td class="expander"></td></tr></table></td></tr></tbody></table></center>');
 
   })
+
+  it("handles deeply nested components", function() {
+    var $ = cheerio.load('<center><row><columns large="12"><p><callout>deep stuff</callout></p></columns></row></center>');
+
+    $ = inky.releaseTheKraken($);
+    expect($.html()).toEqual('<center><table class="row "><tbody><tr><td class="wrapper last"><table class="large-12 columns"><tr><td><p><td class="callout ">deep stuff</td></p></td><td class="expander"></td></tr></table></td></tr></tbody></table></center>');
+
+  })
 });

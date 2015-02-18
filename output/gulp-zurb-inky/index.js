@@ -66,6 +66,21 @@ Inky.prototype = {
   },
 
   // Description:
+  //   Puts in mark up for microsoft buttons
+  //
+  // Arguments:
+  //    $: Cheerio
+  // Returns:
+  //    null: new buttons
+  msButton: function($) {
+    var buttons = $('table.button');
+    $(buttons).each(function() {
+      // put microsoft markup
+    })
+
+  },
+
+  // Description:
   //   Checks if an element is an element with a td included. Currently it's a manual check. 
   //   Array was populated from the markup from the component factory.
   //
@@ -104,7 +119,7 @@ Inky.prototype = {
     self.setTagArray();
 
     //find nested components
-    if (self.checkNestedComponents($) !== false) {
+    if (self.checkZfComponents($) !== false) {
       var nestedComponents = self.findNestedComponents($, center);
 
       // process each element to get the table markup
@@ -113,6 +128,8 @@ Inky.prototype = {
       });
       // see the mark up for dev purposes
       // console.log($.html());
+
+      // BUTTONIFY THINGIES
     }
     else {
       console.log("all done");
@@ -128,7 +145,7 @@ Inky.prototype = {
   // Arguments:
   //    $, str (String): Cheerio, and a string containing the markup of a singular element
   // Returns:
-  //    str (String): A string containing the markup of inputted element with contained elements
+  //    null: his function replaces the syntax directly in the cheerio object
   scaffoldElements: function($, str) {
     // take inner html of elements and nest them inside each others
     var output   = '',
@@ -136,7 +153,6 @@ Inky.prototype = {
         element  = $(str)[0],
         inner    = $(str).html(),
         self     = this;
-
 
     // replace tags with proper table syntax
     // elMarkup retains the inner html within the markup
@@ -150,11 +166,14 @@ Inky.prototype = {
 
     // find if there are more nested elements in the inner syntax
     var moreNested = self.findNestedComponents($, inner);
+    moreNested = moreNested.concat(self.findDeeplyNested($, inner));
+
 
     $(moreNested).each(function(idx, el) {
       // call a recursion to replace all nested elements
       self.scaffoldElements($, $(el));
-    });
+    }); 
+
   },
 
   // Description:
@@ -192,13 +211,48 @@ Inky.prototype = {
   },
 
   // Description:
+  //   Executes a function to find and return deeply nested custom elements within another element
+  //   Uses the find selector rather than going through children.
+  //
+  // Arguments:
+  //    $, el (String): Cheerio, and a string containing the markup of an element to be checked for nested components
+  // Returns:
+  //    nestedComponents (Array): An array containing the names (i.e. tags) of the nested components
+  findDeeplyNested: function($, el) {
+    var nestedComponents = [],
+        self             = this;
+
+    // if array hasn't been set yet, set it with properties of object
+    if (!self.zfArray) {
+      self.setTagArray();
+    }
+
+    // if the nested component is an element, find the children
+    // NOTE: this is to avoid a cheerio quirk where it will still pass
+    // special alphanumeric characters as a selector
+    if (el.indexOf('<') !== -1) {
+      $(self.zfArray).each(function(idx, zfElement) {
+        // find any nearby elements that are contained within el
+        if ($(el).find(zfElement).length > 0) {
+          nestedComponents.push(zfElement);
+        }
+      });
+    };
+
+
+
+    // return array containing all nested components
+    return nestedComponents;
+  },
+
+  // Description:
   //   Goes through array of custom nested components to determine whether or not there are any on the DOM
   //
   // Arguments:
   //    $ : Cheerio
   // Returns:
   //    boolean: True if there are nested components on the DOM, false otherwise.
-  checkNestedComponents: function($) {
+  checkZfComponents: function($) {
     var self = this;
 
     // if array hasn't been set yet, set it with properties of object
@@ -206,15 +260,13 @@ Inky.prototype = {
       self.setTagArray();
     }
 
-    $(self.zfArray).each(function() {
+    $(self.zfArray).each(function(idx, zfElement) {
       // check if custom elements still exist
-      if ($(this).index() !== -1) {
-        return true; 
-      }
-      else {
-        return false;
+      if ($('center').find(zfElement).length > 0) {
+        return true;
       }
     });
+
   },
 
   // Description:
