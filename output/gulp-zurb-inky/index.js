@@ -2,20 +2,43 @@ var cheerio = require('cheerio');
 
 
 var Inky = function Inky () {
-  this.customTags = [
-      "callout",
-      "row",
-      "container",
-      "columns",
-      "button",
-      "subcolumns"
-  ];
+  this.zfTags = {
+    button: 'button',
+    row: 'row',
+    callout: 'callout',
+    columns: 'columns',
+    subcolumns: 'subcolumns',
+    container: 'container'
+  }
 };
 
 Inky.prototype = {
+  // Description:
+  //    Returns the object zfTags
+  // Arguments:
+  //    null
+  // Returns:
+  //    null
   getTags: function() {
-    return this.customTags;
+    return this.zfTags;
   },
+
+  // Description:
+  //    Sets the object property zfArray to an array containing the markup for our ZF custom elements
+  // Arguments:
+  //    null
+  // Returns:
+  //    null
+  setTagArray: function() {
+    var arr = [];
+    var self = this;
+    
+    for (val in self.zfTags) {
+      arr.push(self.zfTags[val]);
+    }
+    self.zfArray = arr;
+  },
+
   // Description:
   //   Takes in HTML loaded via Cheerio as an argument, checks if there are any custom components.
   //   If there are, it replaces the nested components, traverses the DOM and replaces them with
@@ -29,6 +52,9 @@ Inky.prototype = {
     var center = $('center').html(),
         self   = this;
 
+    // create an array of our custom tags
+    self.setTagArray();
+
     //find nested components
     if (self.checkNestedComponents($) !== false) {
       var nestedComponents = self.findNestedComponents($, center);
@@ -38,13 +64,14 @@ Inky.prototype = {
         var containerScaffold = self.scaffoldElements($, $(el));
       });
       // see the mark up for dev purposes
-      console.log($.html());
+      // console.log($.html());
     }
     else {
       console.log("all done");
     }
     return $;
   },
+
   // Description:
   //   Executes a function place the correct mark up for custom components in the correct place in the DOM
   //   It is a recursive function that drills down the DOM to find all custom nested elements within an element
@@ -94,6 +121,10 @@ Inky.prototype = {
         self             = this,
         children;
 
+    // if array hasn't been set yet, set it with properties of object
+    if (!self.zfArray) {
+      self.setTagArray();
+    }
     // if the nested component is an element, find the children
     // NOTE: this is to avoid a cheerio quirk where it will still pass
     // special alphanumeric characters as a selector
@@ -103,7 +134,7 @@ Inky.prototype = {
 
     $(children).each(function(i, el) {
       // if the element's name matches an element in the array
-      if (self.customTags.indexOf(el.name) !== -1) {
+      if (self.zfArray.indexOf(el.name) !== -1) {
         // push them to array of nested component names
         nestedComponents.push(el.name);
       }
@@ -122,7 +153,12 @@ Inky.prototype = {
   checkNestedComponents: function($) {
     var self = this;
 
-    $(self.customTags).each(function() {
+    // if array hasn't been set yet, set it with properties of object
+    if (!self.zfArray) {
+      self.setTagArray();
+    }
+
+    $(self.zfArray).each(function() {
       // check if custom elements still exist
       if ($(this).index() !== -1) {
         return true; 
@@ -152,15 +188,15 @@ Inky.prototype = {
     };
 
     switch (type) {
-      case 'callout':
+      case self.zfTags.callout:
         output = '<td class="callout ' + compClass +'">' + inner + '</td>';
         break;
 
-      case 'button':
+      case self.zfTags.button:
         output = '<table class="button ' + compClass +'"><tbody><tr><td>' + inner + '</td></tr></tbody></table>';
         break;
       // TODO: This is super messed up right now
-      case 'subcolumns':
+      case self.zfTags.subcolumns:
         var subColSize = '';
 
         if ($(component).attr('small')) {
@@ -178,15 +214,15 @@ Inky.prototype = {
         }
         break;
 
-      case 'container':
+      case self.zfTags.container:
         output = '<table class="container ' + compClass + '"><tbody><tr><td>' + inner + '</td></tr></tbody></table>';
         break;
 
-      case 'columns':
+      case self.zfTags.columns:
         output = self.makeCols($, component);
         break;
       
-      case 'row':
+      case self.zfTags.row:
         output = '<table class="row ' + compClass + '"><tbody><tr>'+ inner + '</tr></tbody></table>';
         break;
 
