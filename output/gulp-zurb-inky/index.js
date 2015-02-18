@@ -1,6 +1,5 @@
 var cheerio = require('cheerio');
 
-
 var Inky = function Inky () {
   this.zfTags = {
     button: 'button',
@@ -126,10 +125,14 @@ Inky.prototype = {
       $(nestedComponents).each(function(idx, el) {
         var containerScaffold = self.scaffoldElements($, $(el));
       });
+
+      // remove any blank spaces between classes
+      // and reload into cheerio
+      str = self.removeBlankSpaces($.html());
+      $ = cheerio.load(str);
+
       // see the mark up for dev purposes
       // console.log($.html());
-
-      // BUTTONIFY THINGIES
     }
     else {
       console.log("all done");
@@ -137,6 +140,21 @@ Inky.prototype = {
     return $;
   },
 
+  // Description:
+  //   Executes a function place the correct mark up for custom components in the correct place in the DOM
+  //   It is a recursive function that drills down the DOM to find all custom nested elements within an element
+  //   and replaces the custom tags with the correct table email markup.
+  //
+  // Arguments:
+  //    $, str (String): Cheerio, and a string containing the markup of a singular element
+  // Returns:
+  //    null: his function replaces the syntax directly in the cheerio object
+  removeBlankSpaces: function(str) {
+    // remove any blank spaces between classes we may have put in
+    str = str.replace( / "+/g, '"' )
+
+    return str;
+  },
   // Description:
   //   Executes a function place the correct mark up for custom components in the correct place in the DOM
   //   It is a recursive function that drills down the DOM to find all custom nested elements within an element
@@ -238,8 +256,6 @@ Inky.prototype = {
         }
       });
     };
-
-
 
     // return array containing all nested components
     return nestedComponents;
