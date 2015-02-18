@@ -25,9 +25,8 @@ var gulp       = require('gulp'),
     concat     = require('gulp-concat'),
     extractMQ  = require('media-query-extractor'),
     inject     = require('gulp-inject'),
-    zfEmail    = require('gulp-zurb-foundation-email'),
-    rimraf     = require('rimraf'),
-    jasmine    = require('gulp-jasmine');
+    inkyGulp   = require('gulp-inky'),
+    rimraf     = require('rimraf');
 
 // 2. VARIABLES
 // - - - - - - - - - - - - - - -
@@ -35,7 +34,6 @@ var gulp       = require('gulp'),
 var dirs = {
   styles: 'scss/*.scss',
   html: 'html/*.html',
-  js: 'js/**/*.js',
   build: './build',
   spec: './spec'
 };
@@ -64,9 +62,9 @@ gulp.task('sass', function() {
 gulp.task('inline', function() {
   return gulp.src(dirs.build + '/*.html')
     .pipe(inlineCss())
-    .pipe(rename(function(path) {
-      path.basename += '-inline'
-    }))
+    .pipe(rename({
+      suffix: '-inline'
+    })
     .pipe(gulp.dest(dirs.build))
 });
 
@@ -126,23 +124,11 @@ gulp.task('copy-html', function() {
 // 6. Syntax Transformer
 // - - - - - - - - - - - - - - -
 
-gulp.task('inky-prime', function() {
-  return gulp.src('node_modules/gulp-zurb-foundation-email/node_modules/gulp-zurb-inky/index.js')
-    .pipe(gulp.dest('./output/gulp-zurb-inky'));
-})
-
-gulp.task('js', function() {
-  gulp.start('inky-prime');
-});
-
 // get the HTML from the body and run it through Inky parser
 
 gulp.task('query', function() {
   gulp.src(dirs.html)
-    .pipe(zfEmail({
-      grid: 12
-
-    }))
+    .pipe(inkyGulp())
     .pipe(gulp.dest(dirs.build))
     .pipe(connect.reload());
 });
@@ -150,13 +136,9 @@ gulp.task('query', function() {
 // 7. Testing
 // - - - - - - - - - - - - - - -
 
-// Starts a server
-// Default Port: 8080
+// Eventual Litmus/Mailgun integration
 gulp.task('test', function () {
-  return gulp.src(dirs.spec + '/*.js')
-    .pipe(jasmine({
-      verbose: true
-    }));
+
 });
 
 // 8. GO FORTH AND BUILD
@@ -184,7 +166,6 @@ gulp.task('serve', function() {
 // Live reloads on change
 gulp.task('watch', ['serve'], function() {
   gulp.watch([dirs.html], ['query','minify-html']);
-  gulp.watch(['node_modules/gulp-zurb-foundation-email/node_modules/gulp-zurb-inky/index.js'], ['query'])
   gulp.watch([dirs.styles], ['sass']);
 });
 
