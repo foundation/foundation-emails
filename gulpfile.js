@@ -64,7 +64,7 @@ gulp.task('inline', function() {
     .pipe(inlineCss())
     .pipe(rename({
       suffix: '-inline'
-    })
+    }))
     .pipe(gulp.dest(dirs.build))
 });
 
