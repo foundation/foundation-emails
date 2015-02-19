@@ -18,17 +18,16 @@
 var gulp       = require('gulp'),
     watch      = require('gulp-watch'),
     sass       = require('gulp-ruby-sass'),
-    html2txt   = require('gulp-html2txt'),
     inlineCss  = require('gulp-inline-css'),
     rename     = require('gulp-rename'),
     connect    = require('gulp-connect'),
     minifyHTML = require('gulp-minify-html'),
-    concat     = require('gulp-concat'),
     extractMQ  = require('media-query-extractor'),
     inject     = require('gulp-inject'),
     inkyGulp   = require('gulp-inky'),
     handlebars = require('gulp-compile-handlebars'),
     omglob     = require('glob'),
+    gSync      = require('gulp-sync')(gulp),
     runOrder   = require('run-sequence'),
     rimraf     = require('rimraf');
 
@@ -133,7 +132,30 @@ gulp.task('copy-html', function() {
 
 // Inject handlebars partials
 gulp.task('compile-html', function() {
-  
+  // silly gulp asynch. The previous task sometimes happens too fast, so it can't find
+  // the new temporary partials
+  var injectHtml = function() {
+    omglob(dirs.temp + '/*.html', function(er, files) {
+      for (var i = 0; i < files.length; i++) {
+        var filePath = files[i].replace(/\\/g, '/');
+        var fileName = filePath.substring(filePath.lastIndexOf('/')+1, filePath.lastIndexOf('.'));
+
+        gulp.src(dirs.src + '/layouts/default.html')
+          .pipe(inject(gulp.src(files[i]), {
+            starttag: '<!-- inject:page:{{ext}} -->',
+            transform: function (filePath, file) {
+            // return file contents as string 
+            return file.contents.toString('utf8')
+          }
+        }))
+        .pipe(rename({
+          basename: fileName
+        }))
+        .pipe(gulp.dest(dirs.temp)) 
+      }
+    })
+  };
+
   omglob(dirs.src + '/pages/*.handlebars', function(er, files) {
 
     for (var i = 0; i < files.length; i++) {
@@ -150,39 +172,19 @@ gulp.task('compile-html', function() {
         .pipe(rename(fileName + '.html'))
         .pipe(gulp.dest(dirs.temp));
     }
+
+  injectHtml();
   })
 
-  // silly gulp asynch. The previous task sometimes happens too fast, so it can't find
-  // the new temporary partials
-  setTimeout(function() {
-    omglob(dirs.temp + '/*.html', function(er, files) {
-      for (var i = 0; i < files.length; i++) {
-        var filePath = files[i].replace(/\\/g, '/');
-        var fileName = filePath.substring(filePath.lastIndexOf('/')+1, filePath.lastIndexOf('.'));
-
-         gulp.src(dirs.src + '/layouts/default.html')
-          .pipe(inject(gulp.src(files[i]), {
-            starttag: '<!-- inject:page:{{ext}} -->',
-            transform: function (filePath, file) {
-            // return file contents as string 
-            return file.contents.toString('utf8')
-          }
-        }))
-        .pipe(rename({
-          basename: fileName
-        }))
-        .pipe(gulp.dest(dirs.temp)) 
-      }
-    })
-  }, 100);
 });
+
 
 // 6. Syntax Transformer
 // - - - - - - - - - - - - - - -
 
 // get the HTML from the body and run it through Inky parser
 
-gulp.task('query', ['compile-html'], function() {
+gulp.task('query', function() {
   gulp.src(dirs.temp + '/*.html')
     .pipe(inkyGulp())
     .pipe(gulp.dest(dirs.dist))
@@ -193,9 +195,9 @@ gulp.task('query', ['compile-html'], function() {
 // - - - - - - - - - - - - - - -
 
 // Eventual Litmus/Mailgun integration
-gulp.task('test', function () {
+// gulp.task('test', function () {
 
-});
+// });
 
 // 8. GO FORTH AND BUILD
 // - - - - - - - - - - - - - - -
@@ -222,15 +224,8 @@ gulp.task('serve', function() {
 // Watch all HTML files and SCSS files for changes
 // Live reloads on change
 gulp.task('watch', ['serve'], function() {
-  gulp.watch([dirs.src + '/*/*.*'], function(event) {
-    runOrder('query', 'minify-html');
-  });
+  gulp.watch([dirs.src + '/*/*.*'], ['compile-html']);
   gulp.watch([dirs.styles], ['sass']);
-  // watch([dirs.dist + '/*.*']).pipe(connect.reload());
-  gulp.watch([dirs.dist + '/*.*'], function(event) {
-    gulp.src(event.path)
-      .pipe(connect.reload());
-  })
 
 });
 
