@@ -1,5 +1,6 @@
 *.DS_Store
 node_modules/
-build/
 .sass-cache/
 npm-debug.log
+temp/
+dist/

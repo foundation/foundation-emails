@@ -26,6 +26,9 @@ var gulp       = require('gulp'),
     extractMQ  = require('media-query-extractor'),
     inject     = require('gulp-inject'),
     inkyGulp   = require('gulp-inky'),
+    handlebars = require('gulp-compile-handlebars'),
+    omglob     = require('glob'),
+    runOrder   = require('run-sequence'),
     rimraf     = require('rimraf');
 
 // 2. VARIABLES
@@ -33,17 +36,23 @@ var gulp       = require('gulp'),
 
 var dirs = {
   styles: 'scss/*.scss',
-  html: 'html/*.html',
-  build: './build',
-  spec: './spec'
+  dist: './dist',
+  spec: './spec',
+  src: './src',
+  temp: './temp'
 };
 
 // 3. CLEANIN' FILES
 // - - - - - - - - - - - - - - -
 
-// Clean build directory
-gulp.task('clean', function(cb) {
-  rimraf(dirs.build, cb);
+// Clean dist directory
+gulp.task('clean:dist', function(cb) {
+  rimraf(dirs.dist, cb);
+});
+
+// Clean temp directory
+gulp.task('clean:temp', function(cb) {
+  rimraf(dirs.temp, cb);
 });
 
 
@@ -54,37 +63,37 @@ gulp.task('clean', function(cb) {
 gulp.task('sass', function() {
   return gulp.src(dirs.styles)
     .pipe(sass({ "sourcemap=none": true, style: 'compact' }))
-    .pipe(gulp.dest(dirs.build + '/css'))
+    .pipe(gulp.dest(dirs.dist + '/css'))
     .pipe(connect.reload())
 });
 
 // Inline Styles
 gulp.task('inline', function() {
-  return gulp.src(dirs.build + '/*.html')
+  return gulp.src(dirs.dist + '/*.html')
     .pipe(inlineCss())
     .pipe(rename({
       suffix: '-inline'
     }))
-    .pipe(gulp.dest(dirs.build))
+    .pipe(gulp.dest(dirs.dist))
 });
 
 // extract media queries into new CSS file called inkMQ.css
 // any remaining styles will go into ink-noMQ.css
 gulp.task('extract-mq', function () {
-  extractMQ( dirs.build + '/css/ink.css', dirs.build + '/css/ink-noMQ.css', ['only screen and (max-width: 600px)|./build/css/inkMQ.css']);
+  extractMQ( dirs.dist + '/css/ink.css', dirs.dist + '/css/ink-noMQ.css', ['only screen and (max-width: 600px)|./dist/css/inkMQ.css']);
 });
 
 // inject media queries into the head of the inlined email
 gulp.task('inject-mq', ['extract-mq'], function() {
-  gulp.src(dirs.build + '/index-inline.html')
-    .pipe(inject(gulp.src(dirs.build + '/css/inkMQ.css'), {
+  gulp.src(dirs.dist + '/index-inline.html')
+    .pipe(inject(gulp.src(dirs.dist + '/css/inkMQ.css'), {
       starttag: '<!-- inject:mq-css -->',
       transform: function (filePath, file) {
         // return file contents as string
         return "<style>\n" + file.contents.toString('utf8') + "\n</style>"
       }
     }))
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./dist'));
 })
 
 
@@ -99,27 +108,81 @@ gulp.task('minify-html', function() {
     spare: true
   };
 
-  gulp.src(dirs.build)
+  gulp.src(dirs.dist)
     .pipe(minifyHTML(opts))
     .pipe(connect.reload())
 });
 
 // Convert HTML to plain text, just in caseies
 gulp.task('html-plaintext', function() {
-  gulp.src(dirs.html)
+  gulp.src(dirs.dist)
     .pipe(html2txt())
     .pipe(rename(function(path) {
       path.basename += '-plaintext'
     }))
-    .pipe(gulp.dest(dirs.build));
+    .pipe(gulp.dest(dirs.dist));
 });
 
 // Task to copy HTML directly, without minifying
 gulp.task('copy-html', function() {
-  return gulp.src(dirs.html)
-  .pipe(gulp.dest(dirs.build))
+  return gulp.src(dirs.src + '/layouts/*.html')
+  .pipe(gulp.dest(dirs.dist))
   .pipe(connect.reload())
 });
+
+// Inject html partials into default page
+gulp.task('inject-html', function() {
+  omglob(dirs.temp + '/*.html', function(er, files) {
+    for (var i = 0; i < files.length; i++) {
+      var filePath = files[i].replace(/\\/g, '/');
+      var fileName = filePath.substring(filePath.lastIndexOf('/')+1, filePath.lastIndexOf('.'));
+
+       gulp.src(dirs.src + '/layouts/default.html')
+        .pipe(inject(gulp.src(files[i]), {
+          starttag: '<!-- inject:page:{{ext}} -->',
+          transform: function (filePath, file) {
+          // return file contents as string 
+          return file.contents.toString('utf8')
+        }
+      }))
+      .pipe(rename({
+        basename: fileName
+      }))
+      .pipe(gulp.dest(dirs.dist));     
+    }
+  })
+});
+
+// Inject handlebars partials
+gulp.task('inject-handlebars', function() {
+  
+  omglob(dirs.src + '/pages/*.handlebars', function(er, files) {
+
+    for (var i = 0; i < files.length; i++) {
+      var filePath = files[i].replace(/\\/g, '/');
+      var fileName = filePath.substring(filePath.lastIndexOf('/')+1, filePath.lastIndexOf('.'));
+
+      var templateData = {},
+          options = {
+            batch : ['./src/partials']
+          };
+   
+      gulp.src(files[i])
+        .pipe(handlebars(templateData, options))
+        .pipe(rename(fileName + '.html'))
+        .pipe(gulp.dest(dirs.temp));
+    }
+  })
+});
+
+gulp.task('compile', function() {
+  runOrder('clean:temp', 'inject-handlebars', function() {
+    // better way to do this?
+    setTimeout(function() {
+      gulp.start('inject-html')
+    }, 50);
+  });
+})
 
 // 6. Syntax Transformer
 // - - - - - - - - - - - - - - -
@@ -127,9 +190,9 @@ gulp.task('copy-html', function() {
 // get the HTML from the body and run it through Inky parser
 
 gulp.task('query', function() {
-  gulp.src(dirs.html)
+  gulp.src(dirs.dist + '/*.html')
     .pipe(inkyGulp())
-    .pipe(gulp.dest(dirs.build))
+    .pipe(gulp.dest(dirs.dist))
     .pipe(connect.reload());
 });
 
@@ -145,7 +208,7 @@ gulp.task('test', function () {
 // - - - - - - - - - - - - - - -
 
 // Wipes build folder, then compiles SASS, then minifies and copies HTML
-gulp.task('build', ['clean', 'sass', 'query'], function() {
+gulp.task('build', ['clean:dist', 'sass', 'query'], function() {
   gulp.start('minify-html');
 });
 
@@ -156,7 +219,7 @@ gulp.task('build', ['clean', 'sass', 'query'], function() {
 // Default Port: 8080
 gulp.task('serve', function() {
   return connect.server({
-    root: dirs.build,
+    root: dirs.dist,
     livereload: true
   });
 });
@@ -165,7 +228,7 @@ gulp.task('serve', function() {
 // Watch all HTML files and SCSS files for changes
 // Live reloads on change
 gulp.task('watch', ['serve'], function() {
-  gulp.watch([dirs.html], ['query','minify-html']);
+  gulp.watch([dirs.src], ['compile','query','minify-html']);
   gulp.watch([dirs.styles], ['sass']);
 });
 
