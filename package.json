@@ -13,12 +13,11 @@
     "gulp-html2txt": "^1.1.0",
     "gulp-inky": "*",
     "gulp-inline-css": "^1.0.1",
-    "gulp-jasmine": "^2.0.0",
     "gulp-minify-html": "^0.1.8",
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.7.1",
+    "gulp-watch": "^4.1.1",
     "rimraf": "^2.2.8",
-    "run-sequence": "^1.0.2",
-    "vinyl-map": "^1.0.1"
+    "run-sequence": "^1.0.2"
   }
 }
