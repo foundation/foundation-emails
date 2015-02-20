@@ -92,7 +92,7 @@ gulp.task('extract-mq', function () {
 
 // inject media queries into the head of the inlined email
 gulp.task('inject-mq', ['extract-mq'], function() {
-  gulp.src(dirs.dist + '/index-inline.html')
+  gulp.src(dirs.dist + '/*.html')
     .pipe(inject(gulp.src(dirs.dist + '/css/inkMQ.css'), {
       starttag: '<!-- inject:mq-css -->',
       transform: function (filePath, file) {
