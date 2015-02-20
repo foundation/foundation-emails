@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "A framework for responsive emails made by ZURB",
   "devDependencies": {
-    "cheerio": "^0.18.0",
+    "fs": "0.0.2",
     "glob": "^4.4.0",
     "gulp": "^3.8.10",
     "gulp-compile-handlebars": "^0.4.4",
@@ -13,9 +13,10 @@
     "gulp-minify-html": "^0.1.8",
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.7.1",
-    "gulp-sync": "^0.1.4",
-    "gulp-watch": "^4.1.1",
+    "handlebars": "^3.0.0",
+    "media-query-extractor": "^0.1.1",
+    "path": "^0.11.14",
     "rimraf": "^2.2.8",
-    "run-sequence": "^1.0.2"
+    "vinyl-map": "^1.0.1"
   }
 }

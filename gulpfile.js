@@ -8,7 +8,7 @@
 //   3. Cleaning files
 //   4. Stylesheets
 //   5. HTML
-//   6. Syntax Transformer
+//   6. Testing
 //   7. GO FORTH AND BUILD
 //   8. Serve/Watch Tasks
 
@@ -16,61 +16,25 @@
 // - - - - - - - - - - - - - - -
 
 var gulp       = require('gulp'),
-    watch      = require('gulp-watch'),
-    sass       = require('gulp-ruby-sass'),
-    inlineCss  = require('gulp-inline-css'),
+    // Gulp utilities
     rename     = require('gulp-rename'),
     connect    = require('gulp-connect'),
+    path       = require('path'),
+    map        = require('vinyl-map'),
+    fs         = require('fs'),
+    rimraf     = require('rimraf'),
+    // HTML stuff
     minifyHTML = require('gulp-minify-html'),
-    // extractMQ  = require('media-query-extractor'),
-    // inject     = require('gulp-inject'),
-    // inkyGulp   = require('gulp-inky'),
-    handlebars = require('gulp-compile-handlebars'),
-    omglob     = require('glob'),
-    gSync      = require('gulp-sync')(gulp),
-    runOrder   = require('run-sequence'),
-    rimraf     = require('rimraf');
+    inkyGulp   = require('gulp-inky'),
+    Handlebars = require('handlebars'),
+    globLobLaw = require('glob'),
 
-// Testin' and sheeeet
+    // CSS stuff
+    extractMQ  = require('media-query-extractor'),
+    inject     = require('gulp-inject'),
+    sass       = require('gulp-ruby-sass'),
+    inlineCss  = require('gulp-inline-css');
 
-var htmlParse = function(settings) {
-  var Handlebars = require('handlebars');
-  var map = require('vinyl-map');
-  var glob = require('glob');
-  var path = require('path');
-  var fs = require('fs');
-
-  var partials = glob.sync(settings.partials);
-  var layout   = fs.readFileSync(settings.layout);
-  
-  // Find partials and register with Handlebars
-  for (var i in partials) {
-    var file = fs.readFileSync(partials[i]);
-    var name = path.basename(partials[i], '.handlebars');
-    Handlebars.registerPartial(name, file.toString());
-  }
-
-  // Compile pages with the above helpers
-  return map(function(code, filename) {
-    var pageTemplate = Handlebars.compile(code.toString() + '\n');
-    var layoutTemplate = Handlebars.compile(layout.toString());
-
-    Handlebars.registerPartial('body', pageTemplate);
-    return layoutTemplate();
-  });
-}
-
-gulp.task('htmlparse', function() {
-  gulp.src('src/pages/*.handlebars')
-    .pipe(htmlParse({
-      layout: 'src/layouts/default.html',
-      partials: 'src/partials/**/*.handlebars'
-    }))
-    .pipe(rename({
-      ext: '.html'
-    }))
-    .pipe(gulp.dest('dist'));
-});
 
 
 
@@ -156,16 +120,6 @@ gulp.task('minify-html', function() {
     .pipe(connect.reload())
 });
 
-// Convert HTML to plain text, just in caseies
-gulp.task('html-plaintext', function() {
-  gulp.src(dirs.dist)
-    .pipe(html2txt())
-    .pipe(rename(function(path) {
-      path.basename += '-plaintext'
-    }))
-    .pipe(gulp.dest(dirs.dist));
-});
-
 // Task to copy HTML directly, without minifying
 gulp.task('copy-html', function() {
   return gulp.src(dirs.src + '/layouts/*.html')
@@ -173,68 +127,50 @@ gulp.task('copy-html', function() {
   .pipe(connect.reload())
 });
 
-// Inject handlebars partials
-gulp.task('compile-html', function() {
-  // silly gulp asynch. The previous task sometimes happens too fast, so it can't find
-  // the new temporary partials
-  var injectHtml = function() {
-    omglob(dirs.temp + '/*.html', function(er, files) {
-      for (var i = 0; i < files.length; i++) {
-        var filePath = files[i].replace(/\\/g, '/');
-        var fileName = filePath.substring(filePath.lastIndexOf('/')+1, filePath.lastIndexOf('.'));
 
-        gulp.src(dirs.src + '/layouts/default.html')
-          .pipe(inject(gulp.src(files[i]), {
-            starttag: '<!-- inject:page:{{ext}} -->',
-            transform: function (filePath, file) {
-            // return file contents as string 
-            return file.contents.toString('utf8')
-          }
-        }))
-        .pipe(rename({
-          basename: fileName
-        }))
-        .pipe(gulp.dest(dirs.temp)) 
-      }
-    })
-  };
+// Helper function to compile Handlebars partials
 
-  omglob(dirs.src + '/pages/*.handlebars', function(er, files) {
+var htmlParse = function(settings) {
+  var partials = globLobLaw.sync(settings.partials);
+  var layout   = fs.readFileSync(settings.layout);
+  
+  // Find partials and register with Handlebars
+  for (var i in partials) {
+    var file = fs.readFileSync(partials[i]);
+    var name = path.basename(partials[i], '.handlebars');
+    Handlebars.registerPartial(name, file.toString());
+  }
 
-    for (var i = 0; i < files.length; i++) {
-      var filePath = files[i].replace(/\\/g, '/');
-      var fileName = filePath.substring(filePath.lastIndexOf('/')+1, filePath.lastIndexOf('.'));
+  // Compile pages with the above helpers
+  return map(function(code, filename) {
+    var pageTemplate = Handlebars.compile(code.toString() + '\n');
+    var layoutTemplate = Handlebars.compile(layout.toString());
 
-      var templateData = {},
-          options = {
-            batch : ['./src/partials']
-          };
-   
-      gulp.src(files[i])
-        .pipe(handlebars(templateData, options))
-        .pipe(rename(fileName + '.html'))
-        .pipe(gulp.dest(dirs.temp));
-    }
+    Handlebars.registerPartial('body', pageTemplate);
+    return layoutTemplate();
+  });
+}
 
-  injectHtml();
-  })
+// Compile Handlebars partials and
+// rename .handlebars to .html
+// run through Inky parser
 
-});
-
-
-// 6. Syntax Transformer
-// - - - - - - - - - - - - - - -
-
-// get the HTML from the body and run it through Inky parser
-
-gulp.task('query', function() {
-  gulp.src(dirs.temp + '/*.html')
+gulp.task('inky-parse', function() {
+  gulp.src('src/pages/*.handlebars')
+    .pipe(htmlParse({
+      layout: 'src/layouts/default.html',
+      partials: 'src/partials/**/*.handlebars'
+    }))
+    .pipe(rename({
+      extname: '.html'
+    }))
     .pipe(inkyGulp())
     .pipe(gulp.dest(dirs.dist))
     .pipe(connect.reload());
+
 });
 
-// 7. Testing
+// 6. Testing
 // - - - - - - - - - - - - - - -
 
 // Eventual Litmus/Mailgun integration
@@ -242,16 +178,16 @@ gulp.task('query', function() {
 
 // });
 
-// 8. GO FORTH AND BUILD
+// 7. GO FORTH AND BUILD
 // - - - - - - - - - - - - - - -
 
 
 // Wipes build folder, then compiles SASS, then minifies and copies HTML
 gulp.task('build', function() {
-  runOrder('clean:dist', 'sass','query','minify-html');
+  runOrder('clean:dist', 'sass', 'inky-parse', 'minify-html');
 });
 
-// 9. Serve/Watch Tasks
+// 8. Serve/Watch/Default Tasks
 // - - - - - - - - - - - - - - -
 
 // Starts a server
@@ -267,14 +203,15 @@ gulp.task('serve', function() {
 // Watch all HTML files and SCSS files for changes
 // Live reloads on change
 gulp.task('watch', ['serve'], function() {
-  gulp.watch([dirs.src + '/*/*.*'], ['compile-html']);
+  gulp.watch([dirs.src + '/*/*.*'], ['inky-parse']);
   gulp.watch([dirs.styles], ['sass']);
 
 });
 
-
+// Minify the html, inline the css, inject media queries in the head
 gulp.task('deploy', ['minify-html', 'inline'], function() {
   gulp.start('inject-mq');
 });
+
 // Default task
 gulp.task('default', ['serve', 'watch']);
