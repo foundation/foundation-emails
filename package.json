@@ -9,7 +9,6 @@
     "gulp-compile-handlebars": "^0.4.4",
     "gulp-connect": "^2.2.0",
     "gulp-foreach": "^0.1.0",
-    "gulp-inky": "*",
     "gulp-inline-css": "^1.0.1",
     "gulp-minify-html": "^0.1.8",
     "gulp-rename": "^1.2.0",

@@ -22,14 +22,57 @@ var gulp       = require('gulp'),
     rename     = require('gulp-rename'),
     connect    = require('gulp-connect'),
     minifyHTML = require('gulp-minify-html'),
-    extractMQ  = require('media-query-extractor'),
-    inject     = require('gulp-inject'),
-    inkyGulp   = require('gulp-inky'),
+    // extractMQ  = require('media-query-extractor'),
+    // inject     = require('gulp-inject'),
+    // inkyGulp   = require('gulp-inky'),
     handlebars = require('gulp-compile-handlebars'),
     omglob     = require('glob'),
     gSync      = require('gulp-sync')(gulp),
     runOrder   = require('run-sequence'),
     rimraf     = require('rimraf');
+
+// Testin' and sheeeet
+
+var htmlParse = function(settings) {
+  var Handlebars = require('handlebars');
+  var map = require('vinyl-map');
+  var glob = require('glob');
+  var path = require('path');
+  var fs = require('fs');
+
+  var partials = glob.sync(settings.partials);
+  var layout   = fs.readFileSync(settings.layout);
+  
+  // Find partials and register with Handlebars
+  for (var i in partials) {
+    var file = fs.readFileSync(partials[i]);
+    var name = path.basename(partials[i], '.handlebars');
+    Handlebars.registerPartial(name, file.toString());
+  }
+
+  // Compile pages with the above helpers
+  return map(function(code, filename) {
+    var pageTemplate = Handlebars.compile(code.toString() + '\n');
+    var layoutTemplate = Handlebars.compile(layout.toString());
+
+    Handlebars.registerPartial('body', pageTemplate);
+    return layoutTemplate();
+  });
+}
+
+gulp.task('htmlparse', function() {
+  gulp.src('src/pages/*.handlebars')
+    .pipe(htmlParse({
+      layout: 'src/layouts/default.html',
+      partials: 'src/partials/**/*.handlebars'
+    }))
+    .pipe(rename({
+      ext: '.html'
+    }))
+    .pipe(gulp.dest('dist'));
+});
+
+
 
 // 2. VARIABLES
 // - - - - - - - - - - - - - - -
