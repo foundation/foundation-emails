@@ -1,0 +1,92 @@
+      /*Styles and overrides*/
+    h1.main {margin-bottom: 0;}
+    .feature h2 {margin: 0 0 30px;}
+    p.metadata { font-weight:700; font-size:11px; margin-bottom:0px; text-transform:uppercase; letter-spacing: 1px; color: #999; }
+    p.lead.gray { color: #999;}
+    p.lead.dark-gray { color: #777;}
+    img.thumbnail { border: 1px solid #d9d9d9; margin: 20px 0; }
+    img.thumbnail.sm { margin: 0 0 20px 0; }
+    h5 { margin-bottom: 10px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
+    h5 a { color: #222 !important; }
+    .copyright p { margin-bottom: 0px; font-size: 11px; color: #999;}
+    .copyright a { color: #999; font-weight: bold;}
+    
+    .copyright p.dark, .copyright p.dark a { color: #222; }
+    ul.steps { list-style: none; padding-left: 0px;}
+    ul.steps li, ul.steps p { margin-bottom: 0; }
+    .flush { margin: 0 !important; }
+    p.comment { background: #f5f5f5; padding: 16px 20px; margin-bottom: 0; padding-left: 80px; }
+    p.next.comment { border-top: 2px solid #fff; }
+    div.triangle {
+      margin-left: 12px;
+      border-left: 10px transparent solid;
+      border-right: 10px transparent solid;
+      border-bottom: 10px solid #f5f5f5;
+      width: 0px;
+    }
+    .cite { font-size: 12px; color: #999; font-weight: bold; margin: 8px 0 0 0; display: block;}
+    img.avatar { margin: 20px auto 0; border-radius: 50%; height: 80px; width: 80px;}
+    p.comment.note { padding-left: 80px; }
+    .note-pip { width: 22px; height: 22px; border-radius: 50%; background: #333; color: white; font-size: 10px; font-weight: bold; text-align: center; line-height: 22px; float: left; }
+    .post-note { padding-left: 40px; }
+    .post-note a, .post-note a:hover { color: #222 !important; }
+    table.button.influence td { background: #2badbe; }
+    table.button.influence:hover td { background: #27a1aa !important; }
+    table.button.verify td { background: #b6d133; }
+    table.button.verify:hover td { background: #b0c130 !important; }
+    table.button.solidify td { background: #c71d5e; }
+    table.button.solidify:hover td { background: #ba1c5d !important; }
+    table.button.hosted td { background: #078cba; }
+    table.button.hosted:hover td { background: #0786a8 !important; }
+    table.button.university td { background: #ff6908; }
+    table.button.university:hover td { background: #e55e07 !important; }
+
+    table.set-thumbs td.wrapper { padding: 10px 5px; }
+    table.set-thumbs td img { margin: 0; }
+    table.set-thumbs .cite { float: right; }
+    
+    table.share-news p { margin: 0; }
+    table.share-news .button { margin: 0; }
+    table.share-news .button td { padding: 0; }
+    table.share-news .button a { padding: 12px 0; display: block; }
+    .panel.light-gray { background: #f9f9f9; padding: 20px 30px !important;}
+    .panel.light-gray p { padding: 0 20px; }
+    pre {background: #f9f9f9; margin: 30px 0;}
+    pre code { color: #777;}
+    pre code span.callout {color: #555; font-weight: bold;}
+    pre code span.callout-strong {color: #ff6908; font-weight: bold;}
+
+    hr { color: #efefef; background-color: #efefef; }
+
+    td.wrapper-small-left {padding-left: 0 !important;}
+
+    /* Tweets Yo */
+
+    td.tweet-pad {padding-top: 5px !important; padding-bottom: 0px !important;}
+    td.tweet-head {padding-top: 30px !important; padding-bottom: 10px !important;}
+    td.tweet-foot {padding-top: 0 !important; padding-bottom: 10px !important;}
+    td.tweet-foot p {margin-bottom: 0 !important; padding-bottom: 15px !important;}
+    .tweet-date, .tweet-handle {color: #999999; font-size: 16px !important}
+    .tweet-pad h3 {margin-bottom: 0;}
+    .tweet-pad h3, .tweet-pad h6 {margin-left: 60px !important;}
+    .panel a .tweet-avatar {width: 50px !important; height: auto !important;}
+    .panel {  padding: 25px !important; padding-top: 25px !important}
+
+    table[class="body"] .thumb-caption {
+        margin-top: 110px !important;
+    }
+
+    @media only screen and (max-width: 600px) {
+        td.wrapper {
+          padding-left: 0;
+        }
+        table[class="body"] .columns.stay-4 {
+            width: 180px !important;
+        }
+        table[class="body"] .thin-row {
+            width: 180px !important;
+            margin: 0 auto !important;
+        }
+
+    }
+
