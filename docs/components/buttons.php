@@ -70,7 +70,7 @@
 </table>
 <hr />
 <h2 class="light">Examples</h2>
-<p>Buttons expand to the width of their parent container by default, so it's recommended that you contain them within a sub-grid or a relatively small number of columns on the main grid.</p>
+<p>Buttons expand to the width of their parent container by default, so it's recommended that you contain them within a sub-grid or a relatively small number of columns on the main grid. It is also recommended that the button text is contained within an <code>&lt;a&gt;</code> tag.</p>
 <h6>Button Demo</h6>
 <p>All the button modifiers demonstrated. The rows of buttons are contained to <code>.four.columns</code> or <code>.six.columns</code> sections of the grid for clarity.</p>
 <iframe id="if-buttons" src="docs/examples/buttons.html"></iframe>
@@ -86,7 +86,7 @@
       <a href="#" class="reveal-table">Toggle Full Table</a>
     </div>
   </div>
-  
+
   <div class="row">
     <div class="small-12 columns">
       <table>
