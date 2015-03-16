@@ -22,4 +22,4 @@ ZURB
 
 Ink was made by [ZURB](http://www.zurb.com), a product design company in Campbell, CA.
 
-If Ink knocks your socks off the way we hope it does and you want more, why not check out [our jobs](http://www.zurb.com/talent)?
+If Ink knocks your socks off the way we hope it does and you want more, why not check out [our jobs](http://zurb.com/about/talent)?
