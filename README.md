@@ -15,7 +15,7 @@ Repo Contents
 * Base Source for CSS
 * Docs
 * Responsive Email Templates
-* README, CONTRIBUTING and LICENSE
+* [README](https://github.com/zurb/ink/blob/master/README.md), [CONTRIBUTING](https://github.com/zurb/ink/blob/master/CONTRIBUTING.md) and [LICENSE](https://github.com/zurb/ink/blob/master/LICENSE.md)
 
 ZURB
 ====
