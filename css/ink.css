@@ -315,6 +315,14 @@ img.center {
 .show-for-small,
 .hide-for-desktop {
   display: none;
+  width:0;
+  mso-hide:all;
+  overflow:hidden;
+}
+
+.show-for-small *,
+.hide-for-desktop * {
+	mso-hide:all;
 }
 
 /* Typography */
@@ -690,6 +698,8 @@ body.outlook p {
 
   table[class="body"] .show-for-small,
   table[class="body"] .hide-for-desktop {
-    display: inherit !important;
+    display : block !important;
+    width : auto !important;
+    overflow : visible !important;
   }
 }
