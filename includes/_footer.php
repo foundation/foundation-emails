@@ -3,7 +3,7 @@
     <div class="large-4 columns">
     	<div class="property-info">
         <h3><a href="http://zurb.com/ink">Ink</a></h3>
-        <p>Ink is made by <a href="http://zurb.com">ZURB</a>, a product design company in Campbell, California. We've put more than 15 years of experience building web products, services and websites into this framework.</p>
+        <p>Ink is a responsive email framework made by <a href="http://zurb.com">ZURB</a> a product design company in Campbell, CA. This framework is the result of building web products, services and websites since 1998.</p>
     	</div>
     </div>
     
@@ -12,11 +12,12 @@
 	      <div class="large-4 columns">
 		      <div class="learn-links">
 		        <h4 class="hide-for-small">Want more?</h4>
-		        <ul>
-		          <li><a href="http://zurb.com/university/courses">Training</a></li>
-		          <li><a href="http://zurb.com/responsive">Responsive</a></li>
-		          <li><a href="http://foundation.zurb.com/">Foundation</a></li>
-		          <li><a href="http://zurb.com/apps">ZURB Apps</a></li>
+		        <ul>    
+		          <li><a href="http://foundation.zurb.com/">Foundation for Sites</a></li>
+              <li><a href="http://foundation.zurb.com/apps">Foundation for Apps</a></li>
+		          <li><a href="http://zurb.com/notable">Notable Design Apps</a></li>
+              <li><a href="http://zurb.com/university/courses">Training</a></li>
+              <li><a href="http://zurb.com/library">Design Resources</a></li>
 		        </ul>
 		      </div>
 		  </div>
@@ -24,13 +25,14 @@
 		      <div class="support-links">
 		          <h4>Talk to us</h4>
 		          <p>Send us a Tweet and let us know what you think!<br><a href="http://twitter.com/ZURBink">@ZURBink</a></p>
+              <p>Or get help in our <a href="http://foundation.zurb.com/forum/filter/email">support forum</a></p>
 		          
 		      </div>
 	      </div>
 		  <div class="large-4 columns">
 	        <div class="connect-links">
 	          <h4>Stay in touch</h4>
-	          <p>Get monthly updates about Ink in your inbox. </p>
+	          <p>Get monthly updates about Ink in your inbox.</p>
 	          <a href="http://zurb.com/ink/dispatch.php" class="small button">Get Ink Updates!</a>         
 	        </div>
 	      </div>
@@ -82,7 +84,7 @@
           <li><a href="http://zurb.com/contact">Contact</a></li>
           <li><a href="http://zurb.com/sitemap">Sitemap</a></li>
        </ul>
-       <p class="copyright">&copy; 1998&ndash;2013 ZURB, Inc. All rights reserved.</p>
+       <p class="copyright">&copy; 1998&ndash;2015 ZURB, Inc. All rights reserved.</p>
     </div>          
   </div>
 </div>
