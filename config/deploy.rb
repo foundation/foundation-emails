@@ -11,7 +11,7 @@ set :use_sudo, false
 
 set :scm, :git
 
-server 'zurb.com', :web
+server 'susan.zurb.com', :web
 
 after "deploy:update_code", "deploy:link_cached_files", "deploy:link_downloads", "deploy:link_docs"
 set :keep_releases, 3
