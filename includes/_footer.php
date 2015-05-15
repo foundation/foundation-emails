@@ -3,7 +3,7 @@
     <div class="large-4 columns">
     	<div class="property-info">
         <h3><a href="http://zurb.com/ink">Ink</a></h3>
-        <p>Ink is a responsive email framework made by <a href="http://zurb.com">ZURB</a> a product design company in Campbell, CA. This framework is the result of building web products, services and websites since 1998.</p>
+        <p>Ink is a responsive email framework made by <a href="http://zurb.com">ZURB</a> a product design company in Campbell, CA. This framework is the result of building web products &amp; services since 1998.</p>
     	</div>
     </div>
     
@@ -20,7 +20,7 @@
               <li><a href="http://zurb.com/library">Design Resources</a></li>
 		        </ul>
 		      </div>
-		  </div>
+		    </div>
 	      <div class="large-4 columns">
 		      <div class="support-links">
 		          <h4>Talk to us</h4>
@@ -29,7 +29,7 @@
 		          
 		      </div>
 	      </div>
-		  <div class="large-4 columns">
+		    <div class="large-4 columns">
 	        <div class="connect-links">
 	          <h4>Stay in touch</h4>
 	          <p>Get monthly updates about Ink in your inbox.</p>
