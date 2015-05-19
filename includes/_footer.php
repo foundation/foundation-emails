@@ -54,7 +54,7 @@
     </div>
     <div class="large-3 small-6 columns">
       <a href="http://zurb.com/apps" class="footer-link-block apps">
-        <span class="title">Products</span>
+        <span class="title">Notable Design Apps</span>
         <span>Prototype, iterate and collect feedback on your products.</span>
       </a>
     </div>

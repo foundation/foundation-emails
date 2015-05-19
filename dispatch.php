@@ -70,8 +70,8 @@
   <div class="row property">
     <div class="large-4 columns">
     	<div class="property-info">
-        <h3><a href="#">Ink</a></h3>
-        <p>Ink is made by <a href="http://zurb.com">ZURB</a>, a product design company in Campbell, California. We've put more than 15 years of experience building web products, services and websites into this framework.</p>
+        <h3><a href="http://zurb.com/ink">Ink</a></h3>
+        <p>Ink is a responsive email framework made by <a href="http://zurb.com">ZURB</a> a product design company in Campbell, CA. This framework is the result of building web products &amp; services since 1998.</p>
     	</div>
     </div>
     
@@ -80,19 +80,20 @@
 	      <div class="large-4 columns hide-for-small">
 		      <div class="learn-links">
 		        <h4>Want more?</h4>
-		        <ul>
-		          <li><a href="http://zurb.com/expo/courses">Training</a></li>
-		          <li><a href="http://zurb.com/responsive">Responsive</a></li>
-		          <li><a href="http://zurb.com/services/our-work">Our Work</a></li>
-		          <li><a href="http://zurb.com/apps">ZURB Apps</a></li>
-		        </ul>
+		        <ul>    
+              <li><a href="http://foundation.zurb.com/">Foundation for Sites</a></li>
+              <li><a href="http://foundation.zurb.com/apps">Foundation for Apps</a></li>
+              <li><a href="http://zurb.com/notable">Notable Design Apps</a></li>
+              <li><a href="http://zurb.com/university/courses">Training</a></li>
+              <li><a href="http://zurb.com/library">Design Resources</a></li>
+            </ul>
 		      </div>
 		  </div>
 	      <div class="large-4 columns">
 		      <div class="support-links">
-		          <h4>Talk to us</h4>
-		          <p><a href="http://twitter.com/ZURBink">@ZURBink</a></p>
-		          <p>Not a big talker? Email us at <a href="http://zurb.com/contact">ink@zurb.com</a></p>
+	          <h4>Talk to us</h4>
+            <p>Send us a Tweet and let us know what you think!<br><a href="http://twitter.com/ZURBink">@ZURBink</a></p>
+            <p>Or get help in our <a href="http://foundation.zurb.com/forum/filter/email">support forum</a></p>
 		      </div>
 	      </div>
 		  <div class="large-4 columns">
@@ -120,7 +121,7 @@
     </div>
     <div class="large-3 small-6 columns">
       <a href="http://zurb.com/apps" class="footer-link-block apps">
-        <span class="title">Products</span>
+        <span class="title">Notable Design Apps</span>
         <span>Prototype, iterate and collect feedback on your products.</span>
       </a>
     </div>
@@ -150,7 +151,7 @@
           <li><a href="http://zurb.com/contact">Contact</a></li>
           <li><a href="http://zurb.com/sitemap">Sitemap</a></li>
        </ul>
-       <p class="copyright">&copy; 1998&ndash;2013 ZURB, Inc. All rights reserved.</p>
+       <p class="copyright">&copy; 1998&ndash;2015 ZURB, Inc. All rights reserved.</p>
     </div>          
   </div>
 </div>
