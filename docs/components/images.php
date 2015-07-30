@@ -2,7 +2,7 @@
 <p class="lead">Accent your emails with rich, high resolution images.</p>
 <hr />
 <h2 class="light">Markup</h2>
-<p>The days of having to choose between supporting Outlook or retina devices are over. To use high resolution images, put <code>height</code> and <code>width</code> HTML attributes on the <kbd>&lt;img&gt;</kbd> tag, corresponding to the scaled size of the image in a desktop view (the width of its <code>.columns</code> container). On small screen devices, Ink will cause the image to expand to its full width (or the width or its parent element, whichever is smaller).</p>
+<p>The days of having to choose between supporting Outlook or retina devices are over. To use high resolution images, put <code>height</code> and <code>width</code> HTML attributes on the <kbd>&lt;img&gt;</kbd> tag, corresponding to the scaled size of the image in a desktop view (the width of its <code>.columns</code> container). On small screen devices, Ink will cause the image to expand to its full width (or the width of its parent element, whichever is smaller).</p>
 <h6>Image Markup</h6>
 <?php code_example(
 '<table class="three columns">
