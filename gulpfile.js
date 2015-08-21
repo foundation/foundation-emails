@@ -193,7 +193,6 @@ gulp.task('build', ['clean:dist', 'sass'], function() {
   gulp.start('inky-parse');
 });
 
-
 // Deploy
 // When you're all ready to send your email
 // Minify the html, inline the css, inject media queries in the head
