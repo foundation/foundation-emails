@@ -1,0 +1,17 @@
+{
+  "name": "foundation-emails",
+  "version": "2.0.0-alpha",
+  "homepage": "http://foundation.zurb.com/emails",
+  "authors": [
+    "ZURB <foundation@zurb.com>"
+  ],
+  "description": "A framework for designing responsive emails by ZURB.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
