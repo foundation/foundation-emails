@@ -57,31 +57,29 @@ $button-background-color: $primary-color !default;
 $button-border: 1px solid darken($button-background-color, 10%);
 
 table.button {
-    width: 100%;
-    overflow: visible;
+  width: 100%;
+  overflow: visible;
 
-    td {
-      display: block;
-      width: auto !important;
-      text-align: center;
-      background: $button-background-color;
-      border: $button-border;
-      color: $button-font-color;
-      padding: $button-padding;
-    }
-
-
-   td a {
-    font-weight: bold;
-    text-decoration: none;
-    font-family: $base-font-family;
-    color: $button-font-color;
-    font-size: $button-font-size;
+  td {
     display: block;
-    height: 100%;
-    width: 100%;
+    width: auto !important;
+    text-align: center;
+    background: $button-background-color;
+    border: $button-border;
+    color: $button-font-color;
     padding: $button-padding;
-    font-size: $button-font-size;
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      font-family: $base-font-family;
+      color: $button-font-color;
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding: $button-padding;
+      font-size: $button-font-size;
+    }
   }
 
   &.tiny td a {
@@ -110,8 +108,7 @@ table.button {
   &:hover td
   &.tiny:hover td,
   &.small:hover td,
-  &.large:hover td 
-  {
+  &.large:hover td {
     background: darken($button-background-color, 10%);
   }
 
@@ -126,22 +123,22 @@ table.button {
   &.small td a:visited,
   &.large:hover td a,
   &.large:active td a,
-  &.large td a:visited 
-  { 
-    color: $button-font-color !important; 
+  &.large td a:visited {
+    color: $button-font-color !important;
   }
 
   &.secondary td {
     background: $secondary-color;
     border: darken($secondary-color, -10%);
     color: $button-font-color-alt;
+
     a {
       color: $button-font-color-alt;
     }
   }
 
   &.secondary:hover td {
-    background: darken($secondary-color, -10%)!important;
+    background: darken($secondary-color, -10%) !important;
     color: $button-font-color-alt;
   }
 

@@ -2,69 +2,66 @@
 // zurb.com/ink/
 // Licensed under MIT Open Source
 
-@import "global";
+@import 'global';
 
-//
-// @variables
-//
+////
+/// @group callout
+////
 
-$include-html-callout-classes: $include-html-classes !default;
+/// Defualt background color of a callout.
+/// @type Color
+$callout-background-color: $light-gray !default;
 
-$callout-bg: #f2f2f2 !default;
-$callout-border-color: darken($callout-bg, 20%) !default;
-$callout-border-style: solid !default;
+/// Defualt padding color of a callout.
+/// @type Number
+$callout-padding: 10px !default;
 
-$success-bg: #43AC6A !default;
-$success-callout-border-color: darken($success-bg, 20%) !default;
-$success-text-color: #FFFFFF !default;
+/// Default border for a callout.
+/// @type List
+$callout-border: 1px solid darken($callout-background-color, 20%) !default;
 
-$warning-bg: #f08a24 !default;
-$warning-callout-border-color: darken($warning-bg, 20%) !default;
-$warning-text-color: #FFFFFF !default;
+/// Default border for a success callout.
+/// @type List
+$callout-border-success: 1px solid darken($success-color, 20%) !default;
 
-$alert-bg: #f04124 !default;
-$alert-callout-border-color: darken($alert-bg, 20%) !default;
-$alert-text-color: #FFFFFF !default;
+/// Default border for a warning callout.
+/// @type List
+$callout-border-warning: 1px solid darken($warning-color, 20%) !default;
 
-
-$callout-border-size: 1px !default;
-$callout-padding: 10px;
-
-
+/// Default border for a alert callout.
+/// @type List
+$callout-border-alert: 1px solid darken darken($alert-color, 20%) !default;
 
 td.callout {
-	width: 100%;
-	border: $callout-border-size $callout-border-style $callout-border-color;	
-	padding: $callout-padding !important;
-	background: $callout-bg;
+  width: 100%;
+  border: $callout-border;
+  padding: $callout-padding !important;
+  background: $callout-background-color;
+
+  &.success {
+    background: $success-color !important;
+    border: $callout-border-success !important;
+    color: $white !important;
+  }
+
+  &.warning {
+    background: $warning-color !important;
+    border: $callout-border-warning !important;
+    color: $white !important;
+  }
+
+  &.alert {
+    background: $alert-color !important;
+    border: $callout-border-alert !important;
+    color: $alert-text-color;
+  }
 }
 
-td.callout.success {
-	background: $success-bg !important;
-	border: $callout-border-size $callout-border-style $success-callout-border-color !important;				
-	color: $success-text-color !important;
-}
-
-td.wrapper table tr td.callout.warning {
-	background: $warning-bg !important;
-	border: $callout-border-size $callout-border-style $warning-callout-border-color !important;
-	color: $warning-text-color;
-}
-
-td.callout.alert {
-	background: $alert-bg !important;
-	border: $callout-border-size $callout-border-style $alert-callout-border-color !important;
-	color: $alert-text-color;				
-}
-
-td.callout.round {
-	border-radius: 50px !important;
-}
-
+///check this
 .sub-grid table {
-	width: 100%;
+  width: 100%;
 }
 
 .sub-grid td.sub-columns {
-	padding-bottom: 0;
+  padding-bottom: 0;
 }
