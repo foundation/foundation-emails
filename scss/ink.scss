@@ -1,17 +1,18 @@
-/**********************************************
-* Ink v1.0.5 - Copyright 2013 ZURB Inc        *
-**********************************************/
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+$foundation-version: '1.0.0-alpha';
 	
-// Make sure the charset is set appropriately
 @charset "UTF-8";
 
-// Behold, here are all the Ink components.
 @import
 	"ink/settings",
 	"ink/components/normalize",
 	"ink/components/grid",
 	"ink/components/block-grid",
 	"ink/components/alignment",
+  "ink/components/visibility",
 	"ink/components/type",
   "ink/components/button",
   "ink/components/callout",

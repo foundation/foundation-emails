@@ -14,6 +14,7 @@
     "gulp-minify-html": "^0.1.8",
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.7.1",
+    "gulp-scss-lint": "^0.2.4",
     "handlebars": "^3.0.0",
     "media-query-extractor": "^0.1.1",
     "path": "^0.11.14",

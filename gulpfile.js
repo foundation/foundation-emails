@@ -22,6 +22,7 @@ var gulp       = require('gulp'),
     map        = require('vinyl-map'),
     fs         = require('fs'),
     rimraf     = require('rimraf'),
+    scssLint = require('gulp-scss-lint'),
     // HTML stuff
     minifyHTML = require('gulp-minify-html'),
     inkyGulp   = require('gulp-inky'),
@@ -162,6 +163,15 @@ gulp.task('inky-parse', function() {
 // gulp.task('test', function () {
 
 // });
+
+// Lints Sass files for formatting issues
+gulp.task('lint', ['lint:sass']);
+gulp.task('lint:sass', function() {
+  return gulp.src('scss/**/*.scss')
+    .pipe(scssLint({
+      'config': 'config/scss-lint.yml'
+    }));
+});
 
 // 7. Utility Tasks
 // - - - - - - - - - - - - - - -

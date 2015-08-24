@@ -4,9 +4,10 @@
 
 @import "global";
 
-//
-// @variables
-//
+////
+/// @group button
+////
+
 $include-html-button-classes: $include-html-classes !default;
 
 // We use these to build padding for buttons.
