@@ -33,31 +33,24 @@ gulp.task('sass', function() {
 });
 
 // Inline CSS and minify HTML
-gulp.task('inline', ['build'], function() {
+gulp.task('inline', function() {
   // Extracts media query-specific CSS into a separate file
-  mq('../_build/css/app.css', '../_build/css/app-mq.css');
+  mq('../_build/css/ink.css', '../_build/css/ink-mq.css');
 
-  // Injects that extracted CSS into the HTML
-  var inject = $.inject(gulp.src('../_build/css/app-mq.css'), {
-    starttag: '<!-- inject:mq -->',
-    transform: function(path, file) {
-      return '<style>\n' + file.contents.toString() + '\n</style>';
-    }
+  var inject = $.inject(gulp.src('../_build/css/ink-mq.css'), {
+    transform: function(path, file) { return '<style>' + file.contents.toString(); + '</style>'; }
   });
 
   return gulp.src('../_build/*.html')
     .pipe($.inlineCss())
-    .pipe(inject())
-    .pipe($.htmlmin())
+    .pipe(inject)
+    // .pipe($.htmlmin())
     .pipe(gulp.dest('../_build'));
 });
 
 // Build the "dist" folder by running all of the above tasks
-gulp.task('build', function(done) {
-  var tasks = ['pages', 'sass'];
-  if (isProduction) tasks.push('inline');
-
-  sequence('clean', tasks, done);
+gulp.task('build', function(cb) {
+  sequence('clean', ['pages', 'sass'], 'inline', cb);
 });
 
 // Build emails, run the server, and watch for file changes
