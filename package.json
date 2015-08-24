@@ -2,23 +2,23 @@
   "name": "foundation-email",
   "version": "0.2.0",
   "description": "A framework for responsive emails made by ZURB",
+  "scripts": {
+    "start": "gulp",
+    "test": "cd test && gulp"
+  },
   "devDependencies": {
-    "fs": "0.0.2",
-    "glob": "^4.4.0",
-    "gulp": "^3.8.10",
-    "gulp-compile-handlebars": "^0.4.4",
-    "gulp-connect": "^2.2.0",
-    "gulp-foreach": "^0.1.0",
+    "gulp": "^3.8.11",
+    "gulp-htmlmin": "^1.1.1",
     "gulp-inject": "^1.2.0",
-    "gulp-inline-css": "^1.0.1",
-    "gulp-minify-html": "^0.1.8",
-    "gulp-rename": "^1.2.0",
-    "gulp-ruby-sass": "^0.7.1",
-    "gulp-scss-lint": "^0.2.4",
-    "handlebars": "^3.0.0",
+    "gulp-inky": "git://github.com/zurb/gulp-inky.git",
+    "gulp-inline-css": "^2.0.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-ruby-sass": "^1.0.5",
+    "gulp-webserver": "^0.9.1",
     "media-query-extractor": "^0.1.1",
-    "path": "^0.11.14",
-    "rimraf": "^2.2.8",
-    "vinyl-map": "^1.0.1"
+    "rimraf": "^2.3.3",
+    "run-sequence": "^1.1.0",
+    "shipyard": "git://github.com/gakimball/shipyard.git",
+    "yargs": "^3.9.0"
   }
 }
