@@ -1,11 +1,18 @@
+// Ink by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+@import 'global';
+
+////
+/// @group inline-list
+////
+
 table.inline-list {
   width: 100% !important;
 }
 
-//This rule makes vertical inline-lists flush with other content.
-//Not sure if this is too style specific. May need to be removed.
 td.vertical {
-
   padding-top: 10px !important;
 }
 
