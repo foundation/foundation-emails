@@ -1,30 +1,51 @@
-//Thumbnail Variable
-$thumbnail-bg: #ff0000 !default;
-$thumbnail-padding: 6px !default;
+// Ink by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
 
-//Blur Variables
-$shadow-h: 0;
-$shadow-v: 0;
-$shadow-blur: 6px;
-$shadow-spread: 1px;
-$shadow-color: #008CBA !default;
-$shadow-opacity: 0.5 !default;
+@import 'global';
 
-@mixin thumb-shadow($h, $v, $b, $spr, $color, $opacity){
+////
+/// @group thumbnial
+////
+
+/// Defualt value for the horizontal direction of the shadow.
+/// @type Number
+$thumbnail-shadow-h: 0 !default;
+
+/// Defualt value for the vertical direction of the shadow.
+/// @type Number
+$thumbnail-shadow-v: 0 !default;
+
+/// Defualt value for blur of the shadow.
+/// @type Number
+$thumbnail-shadow-blur: 6px !default;
+
+/// Defualt value for the spread of the shadow.
+/// @type Number
+$thumbnail-shadow-spread: 1px !default;
+
+/// Defualt color of the thumbnail on hover of the shadow.
+/// @type Color
+$thumbnail-shadow-color: $primary-color !default;
+
+/// Defualt opacity of the shadow.
+/// @type Number
+$thumbnail-shadow-opacity: 0.5 !default;
+
+@mixin thumb-shadow($h, $v, $b, $spr, $color, $opacity) {
   box-shadow: $h $v $b $spr rgba(red($color), green($color), blue($color), $opacity);
 }
 
 .thumbnail {
   display: inline-block;
-  // border: 1px solid darken($thumbnail-bg, 10%);
   border-collapse: separate;
+
   img {
-    background-color: $thumbnail-bg;
-    // border: 3px solid lighten($thumbnail-bg, 1%);
     border-collapse: separate;
   }
+
   &:hover, &:focus {
-    //only supported iphone iOS, outlook.com, apple mail 6.5
-    @include thumb-shadow($shadow-h, $shadow-v, $shadow-blur, $shadow-spread, $shadow-color, $shadow-opacity);
+    //only supported iphone iOS, outlook.com, apple mail 6.5. But hey, progressive enhancements.
+    @include thumb-shadow($thumbnail-shadow-h, $thumbnail-shadow-v, $thumbnail-shadow-blur, $thumbnail-shadow-spread, $thumbnail-shadow-color, $thumbnail-shadow-opacity);
   }
 }

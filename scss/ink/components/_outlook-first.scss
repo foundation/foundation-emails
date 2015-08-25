@@ -2,19 +2,12 @@
 // zurb.com/ink/
 // Licensed under MIT Open Source
 
-@import "global";
+@import 'global';
 
-//
-// @variables
-//
-$include-html-outlook-first-classes: $include-html-classes !default;
+////
+/// @group outlook
+////
 
-@include exports("outlook-first") {
-	@if $include-html-outlook-first-classes {
-		/* Outlook First */
-
-		body.outlook p {
-		  display: inline !important;
-		}
-	}
+body.outlook p {
+  display: inline !important;
 }
