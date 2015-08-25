@@ -1,6 +1,6 @@
 {
-  "name": "foundation-email",
-  "version": "0.2.0",
+  "name": "foundation-emails",
+  "version": "2.0.0-alpha",
   "description": "A framework for responsive emails made by ZURB",
   "scripts": {
     "start": "gulp",
