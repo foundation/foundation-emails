@@ -49,6 +49,10 @@ $black: #0a0a0a !default;
 /// @type Color
 $white: #fefefe !default;
 
+/// Color used code.
+/// @type Color
+$pre-color: #ff6908 !default;
+
 
 $column-gutter: 20px !default;
 
@@ -63,9 +67,3 @@ $paragraph-margin-bottom: 10px !default;
 // We use these to make sure border radius matches unless we want it different.
 $global-radius: 3px !default;
 $global-rounded: 500px !default;
-
-@include exports("global") {
-  @if $include-html-global-classes {
-
-  }
-}

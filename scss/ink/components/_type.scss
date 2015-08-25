@@ -201,3 +201,19 @@ h5 a:active,
 h6 a:active {
   color: $header-anchor-font-color-active !important;
 }
+
+pre {
+  background: $light-gray; 
+  margin: 30px 0;
+}
+pre code {
+  color: $medium-gray;
+}
+pre code span.callout {
+  color: $dark-gray; 
+  font-weight: bold;
+}
+pre code span.callout-strong {
+  color: $pre-color; 
+  font-weight: bold;
+}
