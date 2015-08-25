@@ -4,16 +4,51 @@
 
 @import "../functions";
 
-// We use this to control whether or not CSS classes come through in the gem files. // Change
+// We use this to control whether or not CSS classes come through in the gem files. 
+// Change
 $include-html-classes: true !default;
 $include-html-global-classes: $include-html-classes !default;
 
-$primary-color: #2ba6cb;
+/// Primary color for interactive components like links and buttons.
+/// @type Color
+$primary-color: #2199e8 !default;
 
-$white: #ffffff;
-$light-gray: #cccccc;
-$medium-gray: #555555;
-$dark-gray: #222222;
+/// Secondary color, used with components that support the `.secondary` class.
+/// @type Color
+$secondary-color: #777 !default;
+
+/// Color to indicate a positive status or action, used with the `.success` class.
+/// @type Color
+$success-color: #3adb76 !default;
+
+/// Color to indicate a caution status or action, used with the `.warning` class.
+/// @type Color
+$warning-color: #ffae00 !default;
+
+/// Color to indicate a negative status or action, used with the `.alert` class.
+/// @type Color
+$alert-color: #ec5840 !default;
+
+/// Color used for light gray UI items within Foundation.
+/// @type Color
+$light-gray: #f3f3f3 !default;
+
+/// Color used for medium gray UI items within Foundation.
+/// @type Color
+$medium-gray: #cacaca !default;
+
+/// Color used for dark gray UI items within Foundation.
+/// @type Color
+$dark-gray: #8a8a8a !default;
+
+/// Color used for black ui items within Foundation
+/// @type Color
+$black: #0a0a0a !default;
+
+/// Color used for white ui items within Foundation
+/// @type Color
+$white: #fefefe !default;
+
 
 $column-gutter: 20px !default;
 
