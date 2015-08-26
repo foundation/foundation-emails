@@ -2,12 +2,7 @@
 // foundation.zurb.com
 // Licensed under MIT Open Source
 
-@import "../functions";
-
-// We use this to control whether or not CSS classes come through in the gem files. 
-// Change
-$include-html-classes: true !default;
-$include-html-global-classes: $include-html-classes !default;
+@import '../functions';
 
 /// Primary color for interactive components like links and buttons.
 /// @type Color
@@ -53,16 +48,13 @@ $white: #fefefe !default;
 /// @type Color
 $pre-color: #ff6908 !default;
 
-
+/// Global column gutter spacing.
+/// @type Number
 $column-gutter: 20px !default;
 
+/// Global width of the container.
+/// @type Number
 $container-width: 580px !default;
-
-$text-padding: 10px !default;
-
-$panel-padding: 10px !default;
-
-$paragraph-margin-bottom: 10px !default;
 
 // We use these to make sure border radius matches unless we want it different.
 $global-radius: 3px !default;

@@ -68,6 +68,14 @@ $paragraph-lead-font-size: 18px !default;
 /// @type Number
 $paragraph-lead-line-height: 21px !default;
 
+/// Default margin bottom for paragraphs.
+/// @type Number
+$paragraph-margin-bottom: 10px !default;
+
+/// Dfault text padding.
+/// @type Number
+$text-padding: 10px !default;
+
 /// Defualt text decoration styles for anchors.
 /// @type Keyword
 $anchor-text-decoration: none !default;
@@ -191,15 +199,6 @@ h5 a:visited,
 h6,
 h6 a:visited {
   color: $anchor-font-color;
-}
-
-h1 a:active,
-h2 a:active,
-h3 a:active,
-h4 a:active,
-h5 a:active,
-h6 a:active {
-  // color: $header-anchor-font-color-active !important;
 }
 
 pre {
