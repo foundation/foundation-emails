@@ -129,7 +129,7 @@ table.button {
 
   &.secondary td {
     background: $secondary-color;
-    border: darken($secondary-color, -10%);
+    border: lighten($secondary-color, 10%);
     color: $button-font-color-alt;
 
     a {
@@ -138,7 +138,7 @@ table.button {
   }
 
   &.secondary:hover td {
-    background: darken($secondary-color, -10%) !important;
+    background: lighten($secondary-color, 10%) !important;
     color: $button-font-color-alt;
   }
 

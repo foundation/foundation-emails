@@ -28,7 +28,8 @@ gulp.task('pages', function() {
 
 // Compile Sass into CSS
 gulp.task('sass', function() {
-  return $.rubySass('../scss/ink.scss')
+  return gulp.src('../scss/ink.scss')
+    .pipe($.sass().on('error', $.sass.logError))
     .pipe(gulp.dest('../_build/css'));
 });
 
