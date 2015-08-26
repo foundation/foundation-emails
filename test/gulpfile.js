@@ -36,16 +36,21 @@ gulp.task('sass', function() {
 // Inline CSS and minify HTML
 gulp.task('inline', function() {
   // Extracts media query-specific CSS into a separate file
-  mq('../_build/css/ink.css', '../_build/css/ink-mq.css');
+  mq('../_build/css/ink.css', '../_build/css/ink-mq.css', [
+    'only screen and (max-width: 600px)|../_build/css/ink-mq.css'
+  ]);
 
   var inject = $.inject(gulp.src('../_build/css/ink-mq.css'), {
-    transform: function(path, file) { return '<style>' + file.contents.toString() + '</style>'; }
+    transform: function(path, file) { return '<style>\n' + file.contents.toString() + '\n</style>'; }
   });
 
   return gulp.src('../_build/*.html')
     .pipe($.inlineCss())
     .pipe(inject)
-    // .pipe($.htmlmin())
+    .pipe($.htmlmin({
+      collapseWhitespace: true,
+      minifyCSS: true
+    }))
     .pipe(gulp.dest('../_build'));
 });
 
