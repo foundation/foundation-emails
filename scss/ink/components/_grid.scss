@@ -24,99 +24,99 @@ $column-padding-bottom: 10px !default;
 /// @type Number
 $sub-column-padding-right: $column-gutter / 2 !default;
 
-    table.body {
-      height: 100%;
-      width: 100%;
-    }
+table.body {
+  height: 100%;
+  width: 100%;
+}
 
-    table.container {
-      width: $container-width;
-      margin: 0 auto;
-      text-align: inherit;
-    }
+table.container {
+  width: $container-width;
+  margin: 0 auto;
+  text-align: inherit;
+}
 
-    table.row { 
-      padding: 0px; 
-      width: 100%;
-      position: relative;
-    }
+table.row {
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
 
-    table.container table.row {
-      display: block;
-    }
+table.container table.row {
+  display: block;
+}
 
-    td.wrapper {
-      padding: $wrapper-padding-top $column-gutter 0px 0px;
-      position: relative;
-    }
+td.wrapper {
+  padding: $wrapper-padding-top $column-gutter 0 0;
+  position: relative;
+}
 
-    table.columns,
-    table.column {
-      margin: 0 auto;
-    }
+table.columns,
+table.column {
+  margin: 0 auto;
+}
 
-    table.columns td,
-    table.column td {
-      padding: 0px 0px $column-padding-bottom;  
-    }
+table.columns td,
+table.column td {
+  padding: 0 0 $column-padding-bottom;  
+}
 
-    table.row td.last,
-    table.container td.last {
-      padding-right: 0px;
-    }
+table.row td.last,
+table.container td.last {
+  padding-right: 0px;
+}
 
-    @for $i from 1 through $grid-column-count {
-      table.large-#{$i} {
-        width: grid-calc-px($i, $grid-column-count, $container-width, $column-gutter);
-      }
-    }
+@for $i from 1 through $grid-column-count {
+  table.large-#{$i} {
+    width: grid-calc-px($i, $grid-column-count, $container-width, $column-gutter);
+  }
+}
 
-    @for $i from 1 through $grid-column-count {
-      table.large-#{$i} center {
-        min-width: grid-calc-px($i, $grid-column-count, $container-width, $column-gutter);
-      }
-    }
+@for $i from 1 through $grid-column-count {
+  table.large-#{$i} center {
+    min-width: grid-calc-px($i, $grid-column-count, $container-width, $column-gutter);
+  }
+}
 
-    @for $i from 1 through $grid-column-count {
-      table.large-#{$i} .panel center {
-        min-width: grid-calc-px($i, $grid-column-count, $container-width, $column-gutter) - 2 * $panel-padding;
-      }
-    }
+@for $i from 1 through $grid-column-count {
+  table.large-#{$i} .panel center {
+    min-width: grid-calc-px($i, $grid-column-count, $container-width, $column-gutter) - 2 * $panel-padding;
+  }
+}
 
-    @for $i from 1 through $grid-column-count {
-      .body .columns td.large-#{$i},
-      .body .column td.large-#{$i} {
-        width: grid-calc-pct($i, $grid-column-count);
-      }
-    }
+@for $i from 1 through $grid-column-count {
+  .body .columns td.large-#{$i},
+  .body .column td.large-#{$i} {
+    width: grid-calc-pct($i, $grid-column-count);
+  }
+}
 
-    @for $i from 1 through ($grid-column-count - 1) {
-      td.offset-by-#{$i} {
-        padding-left: grid-calc-px($i, $grid-column-count, $container-width, $column-gutter) + $column-gutter;
-      }
-    }  
-    td.expander {
-      visibility: hidden;
-      width: 0px;
-      padding: 0 !important;
-    }
+@for $i from 1 through ($grid-column-count - 1) {
+  td.offset-by-#{$i} {
+    padding-left: grid-calc-px($i, $grid-column-count, $container-width, $column-gutter) + $column-gutter;
+  }
+}  
+td.expander {
+  visibility: hidden;
+  width: 0;
+  padding: 0 !important;
+}
 
-    table.columns .text-pad,
-    table.column .text-pad {
-      padding-left: $text-padding;
-      padding-right: $text-padding;
-    }
+table.columns .text-pad,
+table.column .text-pad {
+  padding-left: $text-padding;
+  padding-right: $text-padding;
+}
 
-    table.columns .left-text-pad,
-    table.columns .text-pad-left,
-    table.column .left-text-pad,
-    table.column .text-pad-left {
-      padding-left: $text-padding;
-    }
+table.columns .left-text-pad,
+table.columns .text-pad-left,
+table.column .left-text-pad,
+table.column .text-pad-left {
+  padding-left: $text-padding;
+}
 
-    table.columns .right-text-pad,
-    table.columns .text-pad-right,
-    table.column .right-text-pad,
-    table.column .text-pad-right {
-      padding-right: $text-padding;
-    }  
+table.columns .right-text-pad,
+table.columns .text-pad-right,
+table.column .right-text-pad,
+table.column .text-pad-right {
+  padding-right: $text-padding;
+}  
