@@ -24,21 +24,23 @@ $column-padding-bottom: 10px !default;
 /// @type Number
 $sub-column-padding-right: $column-gutter / 2 !default;
 
-table.body {
-  height: 100%;
-  width: 100%;
-}
+table {
+  .body {
+    height: 100%;
+    width: 100%;
+  }
 
-table.container {
-  width: $container-width;
-  margin: 0 auto;
-  text-align: inherit;
-}
+  .container {
+    width: $container-width;
+    margin: 0 auto;
+    text-align: inherit;
+  }
 
-table.row {
-  padding: 0;
-  width: 100%;
-  position: relative;
+  .row {
+    padding: 0;
+    width: 100%;
+    position: relative;
+  }
 }
 
 table.container table.row {
@@ -57,12 +59,12 @@ table.column {
 
 table.columns td,
 table.column td {
-  padding: 0 0 $column-padding-bottom;  
+  padding: 0 0 $column-padding-bottom;
 }
 
 table.row td.last,
 table.container td.last {
-  padding-right: 0px;
+  padding-right: 0;
 }
 
 @for $i from 1 through $grid-column-count {
@@ -94,7 +96,8 @@ table.container td.last {
   td.offset-by-#{$i} {
     padding-left: grid-calc-px($i, $grid-column-count, $container-width, $column-gutter) + $column-gutter;
   }
-}  
+}
+
 td.expander {
   visibility: hidden;
   width: 0;
@@ -119,4 +122,4 @@ table.columns .text-pad-right,
 table.column .right-text-pad,
 table.column .text-pad-right {
   padding-right: $text-padding;
-}  
+}
