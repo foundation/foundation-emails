@@ -39,7 +39,7 @@ gulp.task('inline', function() {
   mq('../_build/css/ink.css', '../_build/css/ink-mq.css');
 
   var inject = $.inject(gulp.src('../_build/css/ink-mq.css'), {
-    transform: function(path, file) { return '<style>' + file.contents.toString(); + '</style>'; }
+    transform: function(path, file) { return '<style>' + file.contents.toString() + '</style>'; }
   });
 
   return gulp.src('../_build/*.html')
