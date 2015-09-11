@@ -48,7 +48,7 @@ gulp.task('inline', function() {
     // .pipe($.inlineCss())
     .pipe(inject)
     .pipe($.htmlmin({
-      collapseWhitespace: true,
+      collapseWhitespace: false,
       minifyCSS: true
     }))
     .pipe(gulp.dest('../_build'));
