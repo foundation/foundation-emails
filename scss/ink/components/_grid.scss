@@ -25,18 +25,18 @@ $column-padding-bottom: 10px !default;
 $sub-column-padding-right: $column-gutter / 2 !default;
 
 table {
-  .body {
-    height: 100%;
-    width: 100%;
+  &.body {
+    height: 100% !important;
+    width: 100% !important;
   }
 
-  .container {
+  &.container {
     width: $container-width;
     margin: 0 auto;
     text-align: inherit;
   }
 
-  .row {
+  &.row {
     padding: 0;
     width: 100%;
     position: relative;

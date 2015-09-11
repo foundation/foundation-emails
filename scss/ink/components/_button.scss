@@ -10,11 +10,11 @@
 
 /// Defualt padding for button.
 /// @type List
-$button-padding: 12px 0 !default;
+$button-padding: 12px 0 12px 0 !default;
 
 /// Defualt padding for a tiny button.
 /// @type List
-$button-padding-tiny: 5px 0 4px !default;
+$button-padding-tiny: 5px 0 4px 0 !default;
 
 /// Defualt padding for a small button.
 /// @type List
@@ -82,20 +82,28 @@ table.button {
     }
   }
 
-  &.tiny td a {
-    padding: $button-padding-tiny;
-    font-size: $button-font-size-tiny;
-    font-weight: normal;
+  &.tiny {
+    td, a {
+      padding: $button-padding-tiny;
+    }
+    a {
+      font-size: $button-font-size-tiny;
+      font-weight: normal;
+    }
   }
 
-  &.small td a {
-    padding: $button-padding-small;
-    font-size: $button-font-size-small;
+  &.small {
+    td, a {
+      padding: $button-padding-small;
+      font-size: $button-font-size-small;
+    }
   }
 
-  &.large td a {
-    padding: $button-padding-large 0;
-    font-size: $button-font-size-large;
+  &.large {
+    td, a {
+      padding: $button-padding-large 0;
+      font-size: $button-font-size-large;
+    }
   }
 
   &:hover td,
