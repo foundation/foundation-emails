@@ -4,6 +4,7 @@ var sequence = require('run-sequence');
 var panini = require('panini');
 var supercollider = require('supercollider');
 var rimraf = require('rimraf');
+var browser = require('browser-sync');
 
 gulp.task('clean', function(cb) {
   rimraf('_build', cb);
@@ -46,11 +47,17 @@ gulp.task('lint', function() {
     }));
 });
 
+gulp.task('server', ['build'], function() {
+  browser.init({
+    server: './_build'
+  });
+});
+
 gulp.task('build', function(cb) {
   sequence('clean', ['copy', 'html', 'sass'], cb);
 });
 
-gulp.task('default', ['build'], function() {
-  gulp.watch('docs/**/*', ['html']);
-  gulp.watch('docs/assets/scss/**/*', ['sass']);
+gulp.task('default', ['server'], function() {
+  gulp.watch('docs/**/*', ['html', browser.reload]);
+  gulp.watch('docs/assets/scss/**/*', ['sass', browser.reload]);
 });

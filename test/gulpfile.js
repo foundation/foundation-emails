@@ -2,9 +2,10 @@ var gulp     = require('gulp');
 var $        = require('gulp-load-plugins')();
 var mq       = require('media-query-extractor');
 var rimraf   = require('rimraf');
-var shipyard = require('shipyard');
+var panini = require('panini');
 var yargs    = require('yargs').argv;
 var sequence = require('run-sequence');
+var browser  = require('browser-sync');
 
 // Look for the --production flag
 var isProduction = !!(yargs.production);
@@ -19,7 +20,7 @@ gulp.task('clean', function(done) {
 // Then parse using Inky templates
 gulp.task('pages', function() {
   return gulp.src('./pages/**/*.html')
-    .pipe(shipyard({
+    .pipe(panini({
       layouts: './layouts'
     }))
     .pipe($.inky())
@@ -54,13 +55,19 @@ gulp.task('inline', function() {
     .pipe(gulp.dest('../_build'));
 });
 
+gulp.task('server', ['build'], function() {
+  browser.init({
+    server: '../_build'
+  });
+});
+
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(cb) {
   sequence('clean', ['pages', 'sass'], 'inline', cb);
 });
 
 // Build emails, run the server, and watch for file changes
-gulp.task('default', ['build'], function() {
-  gulp.watch('./pages/**/*.html', ['pages']);
-  gulp.watch('../scss/**/*.scss', ['sass']);
+gulp.task('default', ['server'], function() {
+  gulp.watch('./pages/**/*.html', ['pages', browser.reload]);
+  gulp.watch('../scss/**/*.scss', ['sass', browser.reload]);
 });
