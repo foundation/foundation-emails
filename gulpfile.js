@@ -1,7 +1,7 @@
 var $ = require('gulp-load-plugins')();
 var gulp = require('gulp');
 var sequence = require('run-sequence');
-var shipyard = require('shipyard');
+var panini = require('panini');
 var supercollider = require('supercollider');
 var rimraf = require('rimraf');
 
@@ -23,7 +23,7 @@ gulp.task('html', function() {
       marked: require('./lib/marked'),
       handlebars: require('./lib/handlebars')
     }))
-    .pipe(shipyard({
+    .pipe(panini({
       layouts: 'docs/layouts/',
       partials: 'docs/partials/**/*.html'
     }))
