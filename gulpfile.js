@@ -31,12 +31,20 @@ gulp.task('html', function() {
     .pipe(gulp.dest('_build'));
 });
 
-gulp.task('sass', function() {
+gulp.task('sass', ['sass:docs', 'sass:foundation']);
+
+gulp.task('sass:docs', function() {
   return gulp.src('docs/assets/scss/docs.scss')
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))
+    .pipe(gulp.dest('_build/assets/css'));
+});
+
+gulp.task('sass:foundation', function() {
+  return gulp.src('scss/ink.scss')
+    .pipe($.sass().on('error', $.sass.logError))
     .pipe(gulp.dest('_build/assets/css'));
 });
 
@@ -59,5 +67,6 @@ gulp.task('build', function(cb) {
 
 gulp.task('default', ['server'], function() {
   gulp.watch('docs/**/*', ['html', browser.reload]);
-  gulp.watch('docs/assets/scss/**/*', ['sass', browser.reload]);
+  gulp.watch('docs/assets/scss/**/*', ['sass:docs', browser.reload]);
+  gulp.watch('scss/**/*.scss', ['sass:foundation', browser.reload]);
 });
