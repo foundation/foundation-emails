@@ -1,5 +1,6 @@
-<?php 
-
+<?php
+header('content-type: application/json; charset=utf-8');
+header("access-control-allow-origin: *");
 $url = "http://skate.zurb.com/api/v1/raw";
 
 
