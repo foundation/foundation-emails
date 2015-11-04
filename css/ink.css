@@ -438,6 +438,9 @@ table.tiny-button td,
 table.small-button td,
 table.medium-button td,
 table.large-button td {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
   display: block;
   width: auto !important;
   text-align: center;
