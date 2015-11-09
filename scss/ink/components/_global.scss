@@ -56,6 +56,10 @@ $column-gutter: 20px !default;
 /// @type Number
 $container-width: 580px !default;
 
-// We use these to make sure border radius matches unless we want it different.
+/// Global raidus of radius-corners.
+/// @type Number
 $global-radius: 3px !default;
+
+/// Global rounded radius of rounded-corners.
+/// @type Number
 $global-rounded: 500px !default;
