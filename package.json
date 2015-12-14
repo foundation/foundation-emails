@@ -4,7 +4,8 @@
   "description": "A framework for responsive emails made by ZURB",
   "scripts": {
     "start": "gulp",
-    "test": "cd test && gulp"
+    "test": "cd test && gulp",
+    "production": "cd test && gulp --production"
   },
   "devDependencies": {
     "browser-sync": "^2.9.10",
