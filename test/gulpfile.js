@@ -2,13 +2,10 @@ var gulp     = require('gulp');
 var $        = require('gulp-load-plugins')();
 var mq       = require('media-query-extractor');
 var rimraf   = require('rimraf');
-var panini   = require('panini');
+var panini = require('panini');
 var yargs    = require('yargs').argv;
 var sequence = require('run-sequence');
 var browser  = require('browser-sync');
-var map      = require('map-stream');
-var premailer= require('premailer-api');
-var gutil    = require('gulp-util');
 
 // Look for the --production flag
 var isProduction = !!(yargs.production);
@@ -41,30 +38,16 @@ gulp.task('sass', function() {
 gulp.task('inline', function() {
   // Extracts media query-specific CSS into a separate file
   mq('../_build/css/ink.css', '../_build/css/ink-mq.css', [
-    'only screen and (max-width: 580px)|../_build/css/ink-mq.css'
+    'only screen and (max-width: 600px)|../_build/css/ink-mq.css'
   ]);
 
-  var injectOne = $.inject(gulp.src('../_build/css/ink.css'), {
-    transform: function(path, file) { return '<style>\n' + file.contents.toString() + '\n</style>'; }
-  });
-
-  var injectTwo = $.inject(gulp.src('../_build/css/ink-mq.css'), {
+  var inject = $.inject(gulp.src('../_build/css/ink-mq.css'), {
     transform: function(path, file) { return '<style>\n' + file.contents.toString() + '\n</style>'; }
   });
 
   return gulp.src('../_build/*.html')
-    .pipe(injectOne)
-    .pipe(map(function(file, cb) {
-      var email;
-      var contents = file.contents.toString();
-
-      premailer.prepare({ html: contents }, function(err, email) {
-        gutil.log('Premailer: processed ' + file.path + '.');
-        file.contents = new Buffer(email.html);
-        cb(err, file);
-      });
-    }))
-    .pipe(injectTwo)
+    .pipe($.inlineCss())
+    .pipe(inject)
     .pipe($.htmlmin({
       collapseWhitespace: false,
       minifyCSS: true
