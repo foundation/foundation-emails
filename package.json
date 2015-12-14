@@ -18,7 +18,7 @@
     "gulp-inline-css": "^2.0.0",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-ruby-sass": "^1.0.5",
-    "gulp-sass": "^2.0.4",
+    "gulp-sass": "^2.1.0",
     "gulp-scss-lint": "^0.2.4",
     "gulp-webserver": "^0.9.1",
     "handlebars": "^3.0.3",
