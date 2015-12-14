@@ -36,21 +36,9 @@ gulp.task('sass', function() {
 
 // Inline CSS and minify HTML
 gulp.task('inline', function() {
-  // Extracts media query-specific CSS into a separate file
-  mq('../_build/css/ink.css', '../_build/css/ink-mq.css', [
-    'only screen and (max-width: 600px)|../_build/css/ink-mq.css'
-  ]);
-
-  var inject = $.inject(gulp.src('../_build/css/ink-mq.css'), {
-    transform: function(path, file) { return '<style>\n' + file.contents.toString() + '\n</style>'; }
-  });
-
   return gulp.src('../_build/*.html')
-    .pipe($.inlineCss())
-    .pipe(inject)
-    .pipe($.htmlmin({
-      collapseWhitespace: false,
-      minifyCSS: true
+    .pipe(inline({
+      css: '../_build/css/ink.css'
     }))
     .pipe(gulp.dest('../_build'));
 });
@@ -74,3 +62,28 @@ gulp.task('default', ['server'], function() {
   gulp.watch('./pages/**/*.html', ['pages', browser.reload]);
   gulp.watch('../scss/**/*.scss', ['sass', browser.reload]);
 });
+
+function inline(options) {
+  var lazypipe = require('lazypipe');
+  var cssPath = options.css;
+  var cssMqPath = cssPath.replace(/\.css$/, '-mq.css');
+
+  // Extracts media query-specific CSS into a separate file
+  mq(cssPath, cssMqPath, [
+    'only screen and (max-width: 580px)|' + cssMqPath
+  ]);
+
+  var pipe = lazypipe()
+    .pipe($.inlineCss)
+    .pipe($.inject, gulp.src(cssMqPath), {
+      transform: function(path, file) {
+        return '<style>\n' + file.contents.toString() + '\n</style>';
+      }
+    })
+    .pipe($.htmlmin, {
+      collapseWhitespace: false,
+      minifyCSS: true
+    });
+
+  return pipe();
+}

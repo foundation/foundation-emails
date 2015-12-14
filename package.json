@@ -25,6 +25,7 @@
     "handlebars": "^3.0.3",
     "highlight.js": "^8.7.0",
     "inky": "git+https://github.com/zurb/inky-parse.git",
+    "lazypipe": "^1.0.1",
     "marked": "^0.3.5",
     "media-query-extractor": "^0.1.1",
     "multiline": "^1.0.2",
