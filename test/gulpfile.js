@@ -63,7 +63,10 @@ gulp.task('server', ['build'], function() {
 
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(cb) {
-  sequence('clean', ['pages', 'sass'], 'inline', cb);
+  var tasks = ['clean', ['pages', 'sass']];
+  if (isProduction) tasks.push('inline');
+  tasks.push(cb);
+  sequence.apply(this, tasks);
 });
 
 // Build emails, run the server, and watch for file changes
