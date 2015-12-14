@@ -59,9 +59,16 @@ gulp.task('inline', function() {
       var contents = file.contents.toString();
 
       premailer.prepare({ html: contents }, function(err, email) {
-        gutil.log('Premailer: processed ' + file.path + '.');
-        file.contents = new Buffer(email.html);
-        cb(err, file);
+        if (err) {
+          gutil.log('Premailer error:')
+          console.log(err);
+          cb()
+        }
+        else {
+          gutil.log('Premailer: processed ' + file.path + '.');
+          file.contents = new Buffer(email.html);
+          cb(null, file);
+        }
       });
     }))
     .pipe(injectTwo)
