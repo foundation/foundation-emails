@@ -5,6 +5,16 @@ var panini = require('panini');
 var supercollider = require('supercollider');
 var rimraf = require('rimraf');
 var browser = require('browser-sync');
+var foundationDocs = require('foundation-docs');
+
+supercollider
+  .config({
+    template: foundationDocs.componentTemplate,
+    marked: foundationDocs.marked,
+    handlebars: foundationDocs.handlebars
+  })
+  .adapter('sass')
+  .adapter('js');
 
 gulp.task('clean', function(cb) {
   rimraf('_build', cb);
@@ -18,15 +28,11 @@ gulp.task('copy', function() {
 gulp.task('html', function() {
   return gulp.src('docs/pages/**/*')
     .pipe($.cached('docs'))
-    .pipe(supercollider.init({
-      template: 'docs/layouts/component.html',
-      adapters: ['sass', 'js'],
-      marked: require('./lib/marked'),
-      handlebars: require('./lib/handlebars')
-    }))
+    .pipe(supercollider.init())
     .pipe(panini({
+      root: 'docs/pages/',
       layouts: 'docs/layouts/',
-      partials: 'docs/partials/**/*.html'
+      partials: 'docs/partials/'
     }))
     .pipe(gulp.dest('_build'));
 });
@@ -35,7 +41,7 @@ gulp.task('sass', ['sass:docs', 'sass:foundation']);
 
 gulp.task('sass:docs', function() {
   return gulp.src('docs/assets/scss/docs.scss')
-    .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.sass({ includePaths: [process.cwd()] }).on('error', $.sass.logError))
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))

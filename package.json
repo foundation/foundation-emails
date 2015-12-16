@@ -10,6 +10,7 @@
   "devDependencies": {
     "browser-sync": "^2.9.10",
     "cheerio": "^0.19.0",
+    "foundation-docs": "zurb/foundation-docs",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-cached": "^1.1.0",
@@ -30,11 +31,17 @@
     "media-query-extractor": "^0.1.1",
     "multiline": "^1.0.2",
     "octophant": "^0.2.0",
-    "panini": "0.1.0",
+    "panini": "^1.1.1",
     "rimraf": "^2.4.2",
     "run-sequence": "^1.1.2",
     "string-template": "^0.2.1",
-    "supercollider": "0.3.1",
-    "yargs": "^3.9.0"
+    "supercollider": "^1.1.1",
+    "typeahead.js": "^0.11.1",
+    "yargs": "^3.9.0",
+    "zeroclipboard": "^2.2.0"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.0.5",
+    "motion-ui": "^1.1.1"
   }
 }
