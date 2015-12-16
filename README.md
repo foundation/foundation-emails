@@ -90,9 +90,6 @@ Here's a list of our attributes:
 <columns large=’12’>
 ```
 
-## Centering Things
-Centering has always been a headache when developing emails. When you now add the `.center` class to any element or column, Inky also automatically wraps the content in `<center>` tags (necessary for some versions of Outlook). We'll be moving this to an attribute in later versions, but for development purposes, we have a magic centering class.
-
 ## Using Sass
 You'll be able to use the `_settings.scss` within the `/test` folder to update sass variables! This means you can use global variables to control the overall look of the page, just like in Foundation for Sites! When you have `nnpm test` running, just change a variable's value in the `_settings.scss`, save, and voila! The variables are updated with no uncommenting necessary!
 
