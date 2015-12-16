@@ -89,16 +89,14 @@ Here's a list of our attributes:
 ```
 <columns large=’12’>
 ```
-- `centered` You'll be able to center both columns and elements. Simply apply the centered attribute to the element you'd like to center. 
 
-```
-<img centered src="placehold.it/100/100">
-```
+## Centering Things
+Centering has always been a headache when developing emails. When you now add the `.center` class to any element or column, Inky also automatically wraps the content in `<center>` tags (necessary for some versions of Outlook). We'll be moving this to an attribute in later versions, but for development purposes, we have a magic centering class.
 
-##Using Sass
+## Using Sass
 You'll be able to use the `_settings.scss` within the `/test` folder to update sass variables! This means you can use global variables to control the overall look of the page, just like in Foundation for Sites! When you have `nnpm test` running, just change a variable's value in the `_settings.scss`, save, and voila! The variables are updated with no uncommenting necessary!
 
 Note: The `_settings.scss` file automatically scrapes your project for variables. If you add variables that you'd like to see reflected in the `_settings.scss` file run `npm run settings` to update it.
 
-##Filing Issues
+## Filing Issues
 As an open source project, we looooove our community support. Please file issues, or better yet pull requests on the [Foundation for Emails Repo](https://github.com/zurb/foundation-emails). We're stoked to hear your feedback, make improvements, and release this to the public soon!
