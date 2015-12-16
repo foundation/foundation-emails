@@ -30,7 +30,7 @@
     "marked": "^0.3.5",
     "media-query-extractor": "^0.1.1",
     "multiline": "^1.0.2",
-    "octophant": "^0.2.0",
+    "octophant": "^1.0.0",
     "panini": "^1.1.1",
     "rimraf": "^2.4.2",
     "run-sequence": "^1.1.2",

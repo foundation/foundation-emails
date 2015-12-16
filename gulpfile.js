@@ -6,6 +6,7 @@ var supercollider = require('supercollider');
 var rimraf = require('rimraf');
 var browser = require('browser-sync');
 var foundationDocs = require('foundation-docs');
+var octophant = require('octophant');
 
 supercollider
   .config({
@@ -52,6 +53,13 @@ gulp.task('sass:foundation', function() {
   return gulp.src('scss/ink.scss')
     .pipe($.sass().on('error', $.sass.logError))
     .pipe(gulp.dest('_build/assets/css'));
+});
+
+gulp.task('settings', function() {
+  octophant('scss/**/*.scss', {
+    title: 'Foundation for Emails Settings',
+    output: 'scss/ink/_settings.scss'
+  });
 });
 
 gulp.task('lint', function() {
