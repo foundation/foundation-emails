@@ -7,6 +7,8 @@ var yargs    = require('yargs').argv;
 var sequence = require('run-sequence');
 var browser  = require('browser-sync');
 
+console.log(process.argv);
+
 // Look for the --production flag
 var isProduction = !!(yargs.production);
 
@@ -39,7 +41,7 @@ gulp.task('sass', function() {
 gulp.task('inline', function() {
   return gulp.src('../_build/*.html')
     .pipe(inline({
-      css: '../_build/css/ink.css'
+      css: '../_build/css/app.css'
     }))
     .pipe(gulp.dest('../_build'));
 });
