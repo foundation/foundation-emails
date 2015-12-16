@@ -62,9 +62,9 @@ $small-range: $container-width !default;
     width: 100% !important;
   }
 
-  @for $i from 1 through $total-columns {
+  @for $i from 1 through $grid-column-count {
     .wrapper > table.small-#{$i} {
-      width: grid-calc-pct($i, $total-columns) !important;
+      width: grid-calc-pct($i, $grid-column-count) !important;
     }
   }
 
@@ -73,21 +73,21 @@ $small-range: $container-width !default;
   }
 
 
-  @for $i from 1 through $total-columns {
+  @for $i from 1 through $grid-column-count {
     .body .columns td.small-#{$i},
     .body .column td.small-#{$i},
     table.small-#{$i} center {
-      width: grid-calc-pct($i, $total-columns) !important;
+      width: grid-calc-pct($i, $grid-column-count) !important;
     }
   }
-  @for $i from 1 through $total-columns {
+  @for $i from 1 through $grid-column-count {
     table[class="body"] .columns td.small-#{$i},
     table[class="body"] .column td.small-#{$i} {
-      width: grid-calc-pct($i, $total-columns) !important;
+      width: grid-calc-pct($i, $grid-column-count) !important;
     }
   }
 
-  @for $i from 1 through ($total-columns - 1) {
+  @for $i from 1 through ($grid-column-count - 1) {
     table[class="body"] td.offset-by-#{$i} {
       padding-left: 0 !important;
     }

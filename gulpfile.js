@@ -58,7 +58,8 @@ gulp.task('sass:foundation', function() {
 gulp.task('settings', function() {
   octophant('scss/**/*.scss', {
     title: 'Foundation for Emails Settings',
-    output: 'scss/ink/_settings.scss'
+    output: 'test/scss/_settings.scss',
+    sort: ['global', 'grid']
   });
 });
 

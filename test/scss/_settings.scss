@@ -3,24 +3,51 @@
 //
 //  Table of Contents:
 //
-//   1. Block Grid
-//   2. Button
-//   3. Callout
-//   4. Grid
-//   5. Media Query
-//   6. Normalize
-//   7. Thumbnial
-//   8. Typography
-//   9. Undefined
+//   1. Global
+//   2. Grid
+//   3. Block Grid
+//   4. Button
+//   5. Callout
+//   6. Media Query
+//   7. Normalize
+//   8. Thumbnial
+//   9. Typography
 
 
-// 1. Block Grid
+// 1. Global
+// ---------
+
+$primary-color: #2199e8;
+$secondary-color: #777;
+$success-color: #3adb76;
+$warning-color: #ffae00;
+$alert-color: #ec5840;
+$light-gray: #f3f3f3;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$black: #0a0a0a;
+$white: #fefefe;
+$pre-color: #ff6908;
+$column-gutter: 20px;
+$container-width: 580px;
+$global-radius: 3px;
+$global-rounded: 500px;
+
+// 2. Grid
+// -------
+
+$grid-column-count: 12;
+$wrapper-padding-top: 10px;
+$column-padding-bottom: 10px;
+$sub-column-padding-right: $column-gutter / 2;
+
+// 3. Block Grid
 // -------------
 
 $block-grid-elements: 8;
 $block-grid-spacing: $column-gutter;
 
-// 2. Button
+// 4. Button
 // ---------
 
 $button-padding: 12px 0 12px 0;
@@ -36,7 +63,7 @@ $button-font-size-large: 24px;
 $button-background-color: $primary-color;
 $button-border: 1px solid darken($button-background-color, 10%);
 
-// 3. Callout
+// 5. Callout
 // ----------
 
 $callout-background-color: $light-gray;
@@ -46,27 +73,19 @@ $callout-border-success: 1px solid darken($success-color, 20%);
 $callout-border-warning: 1px solid darken($warning-color, 20%);
 $callout-border-alert: 1px solid darken darken($alert-color, 20%);
 
-// 4. Grid
-// -------
-
-$grid-column-count: 12;
-$wrapper-padding-top: 10px;
-$column-padding-bottom: 10px;
-$sub-column-padding-right: $column-gutter / 2;
-
-// 5. Media Query
+// 6. Media Query
 // --------------
 
 $small-container-width: 95%;
 $small-range: $container-width;
 
-// 6. Normalize
+// 7. Normalize
 // ------------
 
 $hr-color: $medium-gray;
 $hr-height: 1px;
 
-// 7. Thumbnial
+// 8. Thumbnial
 // ------------
 
 $thumbnail-shadow-h: 0;
@@ -76,7 +95,7 @@ $thumbnail-shadow-spread: 1px;
 $thumbnail-shadow-color: $primary-color;
 $thumbnail-shadow-opacity: 0.5;
 
-// 8. Typography
+// 9. Typography
 // -------------
 
 $global-font-color: $black;
@@ -101,23 +120,4 @@ $anchor-font-color: $primary-color;
 $anchor-font-color-visited: $anchor-font-color;
 $anchor-font-color-hover: darken($primary-color, 10%);
 $anchor-font-color-active: $anchor-font-color-hover;
-
-// 9. Undefined
-// ------------
-
-$primary-color: #2199e8;
-$secondary-color: #777;
-$success-color: #3adb76;
-$warning-color: #ffae00;
-$alert-color: #ec5840;
-$light-gray: #f3f3f3;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
-$pre-color: #ff6908;
-$column-gutter: 20px;
-$container-width: 580px;
-$global-radius: 3px;
-$global-rounded: 500px;
 

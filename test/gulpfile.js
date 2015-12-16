@@ -21,6 +21,7 @@ gulp.task('clean', function(done) {
 gulp.task('pages', function() {
   return gulp.src('./pages/**/*.html')
     .pipe(panini({
+      root: './pages',
       layouts: './layouts'
     }))
     .pipe($.inky())
@@ -29,7 +30,7 @@ gulp.task('pages', function() {
 
 // Compile Sass into CSS
 gulp.task('sass', function() {
-  return gulp.src('../scss/ink.scss')
+  return gulp.src('./scss/app.scss')
     .pipe($.sass().on('error', $.sass.logError))
     .pipe(gulp.dest('../_build/css'));
 });
@@ -60,7 +61,7 @@ gulp.task('build', function(cb) {
 // Build emails, run the server, and watch for file changes
 gulp.task('default', ['server'], function() {
   gulp.watch('./pages/**/*.html', ['pages', browser.reload]);
-  gulp.watch('../scss/**/*.scss', ['sass', browser.reload]);
+  gulp.watch(['../scss/**/*.scss', './scss/**/*.scss'], ['sass', browser.reload]);
 });
 
 function inline(options) {
