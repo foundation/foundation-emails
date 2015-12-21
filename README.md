@@ -91,7 +91,7 @@ Here's a list of our attributes:
 ```
 
 ## Using Sass
-You'll be able to use the `_settings.scss` within the `/test` folder to update sass variables! This means you can use global variables to control the overall look of the page, just like in Foundation for Sites! When you have `nnpm test` running, just change a variable's value in the `_settings.scss`, save, and voila! The variables are updated with no uncommenting necessary!
+You'll be able to use the `_settings.scss` within the `/test` folder to update sass variables! This means you can use global variables to control the overall look of the page, just like in Foundation for Sites! When you have `npm test` running, just change a variable's value in the `_settings.scss`, save, and voila! The variables are updated with no uncommenting necessary!
 
 Note: The `_settings.scss` file automatically scrapes your project for variables. If you add variables that you'd like to see reflected in the `_settings.scss` file run `npm run settings` to update it.
 
