@@ -56,10 +56,10 @@ We’ve created a brand-spankin’-new templating language to make coding HTML e
 ```
 <container>
   <row>
-    <columns large=’8’ small=’6’>
+    <columns large='8' small='6'>
       <button>My button</button>
     </columns>
-    <columns large=’4’ small=’6’>
+    <columns large='4' small='6'>
       <h3>Hi</h3>
     </columns>
   </row>
@@ -82,12 +82,12 @@ Here's a list of our attributes:
 - `small` This attribute is applicable to the `<columns>` and `<subcolumns>` tags. It defines the width of the column in the small breakpoint. The syntax looks like:
 
 ```
-<columns small=’12’>
+<columns small='12'>
 ```
 - `large` This attribute is applicable to the `<columns>` and `<subcolumns>` tags. It defines the width of the column in the large breakpoint. The syntax looks like:
 
 ```
-<columns large=’12’>
+<columns large='12'>
 ```
 
 ## Using Sass
