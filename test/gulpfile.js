@@ -11,6 +11,7 @@ console.log(process.argv);
 
 // Look for the --production flag
 var isProduction = !!(yargs.production);
+var sourceMaps = isProduction ? 'sass' : 'sass-sourcemaps';
 
 // Delete the "dist" folder
 // This happens every time a build starts
@@ -37,6 +38,15 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('../_build/css'));
 });
 
+// Compile Sass into CSS with sourcemaps
+gulp.task('sass-sourcemaps', function() {
+  return gulp.src('./scss/app.scss')
+      .pipe($.sourcemaps.init())
+      .pipe($.sass().on('error', $.sass.logError))
+      .pipe($.sourcemaps.write())
+      .pipe(gulp.dest('../_build/css'));
+});
+
 // Inline CSS and minify HTML
 gulp.task('inline', function() {
   return gulp.src('../_build/*.html')
@@ -54,7 +64,7 @@ gulp.task('server', ['build'], function() {
 
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(cb) {
-  var tasks = ['clean', ['pages', 'sass']];
+  var tasks = ['clean', ['pages', sourceMaps]];
   if (isProduction) tasks.push('inline');
   tasks.push(cb);
   sequence.apply(this, tasks);
@@ -63,7 +73,7 @@ gulp.task('build', function(cb) {
 // Build emails, run the server, and watch for file changes
 gulp.task('default', ['server'], function() {
   gulp.watch('./pages/**/*.html', ['pages', browser.reload]);
-  gulp.watch(['../scss/**/*.scss', './scss/**/*.scss'], ['sass', browser.reload]);
+  gulp.watch(['../scss/**/*.scss', './scss/**/*.scss'], [sourceMaps, browser.reload]);
 });
 
 function inline(options) {
