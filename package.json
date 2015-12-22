@@ -15,6 +15,7 @@
     "gulp-autoprefixer": "^2.3.1",
     "gulp-cached": "^1.1.0",
     "gulp-htmlmin": "^1.1.1",
+    "gulp-if": "^2.0.0",
     "gulp-inject": "^1.2.0",
     "gulp-inky": "git://github.com/zurb/gulp-inky.git",
     "gulp-inline-css": "^2.0.0",
