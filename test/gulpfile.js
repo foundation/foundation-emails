@@ -33,7 +33,9 @@ gulp.task('pages', function() {
 // Compile Sass into CSS
 gulp.task('sass', function() {
   return gulp.src('./scss/app.scss')
+    .pipe($.if(!isProduction, $.sourcemaps.init()))
     .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.if(!isProduction, $.sourcemaps.write()))
     .pipe(gulp.dest('../_build/css'));
 });
 
