@@ -8,51 +8,55 @@
 /// @group button
 ////
 
-/// Defualt padding for button.
+/// Default padding for button.
 /// @type List
 $button-padding: 12px 0 12px 0 !default;
 
-/// Defualt padding for a tiny button.
+/// Default padding for a tiny button.
 /// @type List
 $button-padding-tiny: 5px 0 4px 0 !default;
 
-/// Defualt padding for a small button.
+/// Default padding for a small button.
 /// @type List
 $button-padding-small: 8px 0 7px !default;
 
-/// Defualt padding for a large button.
+/// Default padding for a large button.
 /// @type List
 $button-padding-large: 21px 0 18px !default;
 
-/// Defualt color of the font in a button.
+/// Default color of the font in a button.
 /// @type Color
 $button-font-color: $white !default;
 
-/// Defualt color of the font in an alternate button.
+/// Default color of the font in an alternate button.
 /// @type Color
 $button-font-color-alt: $medium-gray !default;
 
-/// Defualt font size for a button.
+/// Default font weight for a button.
+/// @type String
+$button-font-weight: bold !default;
+
+/// Default font size for a button.
 /// @type Number
 $button-font-size: 20px !default;
 
-/// Defualt font size for a tiny button.
+/// Default font size for a tiny button.
 /// @type Number
 $button-font-size-tiny: 12px !default;
 
-/// Defualt font size for a small button.
+/// Default font size for a small button.
 /// @type Number
 $button-font-size-small: 16px !default;
 
-/// Defualt font size for a large button.
+/// Default font size for a large button.
 /// @type Number
 $button-font-size-large: 24px !default;
 
-/// Defualt backgrounnd color for a button.
+/// Default backgrounnd color for a button.
 /// @type Color
 $button-background-color: $primary-color !default;
 
-/// Defualt border color for a button.
+/// Default border color for a button.
 /// @type Color
 $button-border: 1px solid darken($button-background-color, 10%);
 
@@ -70,7 +74,7 @@ table.button {
     padding: $button-padding;
 
     a {
-      font-weight: bold;
+      font-weight: $button-font-weight;
       text-decoration: none;
       font-family: $global-font-family;
       color: $button-font-color;
