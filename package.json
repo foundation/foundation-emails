@@ -4,8 +4,9 @@
   "description": "A framework for responsive emails made by ZURB",
   "scripts": {
     "start": "gulp",
-    "test": "cd test && gulp",
-    "production": "cd test && gulp --production"
+    "test": "cd foundation-emails-template && npm start",
+    "production": "cd foundation-emails-template && npm start --production",
+    "postinstall": "cd foundation-emails-template && npm i"
   },
   "devDependencies": {
     "browser-sync": "^2.9.10",
