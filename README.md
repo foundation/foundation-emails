@@ -20,7 +20,7 @@ The Sass is compiled using libsass, which requires the GCC to be installed on yo
 To get going with Foundation for Emails you'll need run the following commands in your projects directory:
 
 ```
-git clone https://github.com/zurb/foundation-emails.git
+git clone --recursive https://github.com/zurb/foundation-emails.git
 cd foundation-emails
 npm install
 ```
