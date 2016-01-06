@@ -5,7 +5,7 @@
   "scripts": {
     "start": "gulp",
     "test": "cd foundation-emails-template && npm start",
-    "production": "cd foundation-emails-template && npm start --production",
+    "production": "cd foundation-emails-template && npm run build",
     "postinstall": "cd foundation-emails-template && npm i"
   },
   "devDependencies": {
