@@ -1,0 +1,3 @@
+[submodule "foundation-emails-template"]
+	path = foundation-emails-template
+	url = https://github.com/zurb/foundation-emails-template
