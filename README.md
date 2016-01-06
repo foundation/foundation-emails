@@ -12,7 +12,7 @@ Foundation for Emails is the second installment of what was previously known as 
 While in the process of creating our official docs, this README.md file will be your guide to installing, running, and documentation for F4E. If you need to brush up on Ink, you can still find our [old docs here.](http://foundation.zurb.com/emails/docs.html)
 
 ## Requirements
-Requires NodeJS to be installed on your machine. Works with 0.10, 0.12, and 4.1! **Note that parts of our build process will break with NPM 3, due to the changes in how packages are installed.**
+Requires NodeJS to be installed on your machine. Works with 0.12, and 4.x, and 5.x! **Note that parts of our build process will break with NPM 3, due to the changes in how packages are installed.**
 
 The Sass is compiled using libsass, which requires the GCC to be installed on your machine. Windows users can install it through [MinGW](http://www.mingw.org/), and Mac users can install it through the [Xcode Command-line Tools](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/).
 
@@ -36,13 +36,13 @@ Foundation for Emails utilizes [Panini](https://github.com/zurb/panini), our sup
 foundation-emails/
 ├── _build/
 │   └── ...
-├── test/
+├── foundation-emails-template/
 │   └── layouts
 │        └── ...
 │   └── pages
 │        └── ...
 ```
-You'll be working within the `test/layouts` and `test/pages` to write your HTML emails. The `_build` directory will have all of your outputted emails.
+You'll be working within the `foundation-emails-template/layouts/` and `foundation-emails-template/pages/` to write your HTML emails. The `dist/` directory will have all of your outputted emails.
 
 ## Commands
 You'll have two commands that will give you all the tools you need for F4E.
