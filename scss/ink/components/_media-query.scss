@@ -32,43 +32,42 @@ $small-range: $container-width !default;
   }
 
   table[class="body"] .row {
-    width: 100% !important;
-    display: block !important;
+    // width: 100% !important;
+    // display: block !important;
   }
 
-  table[class="body"] .wrapper {
-    display: block;
-    padding-right: 0 !important;
-  }
+// Brandon no likey
+  // table[class="body"] .wrapper {
+  //   display: block !important;
+  //   padding-right: 0 !important;
+  // }
 
   table[class="body"] .columns,
   table[class="body"] .column {
-    table-layout: fixed !important;
-    float: none !important;
-    width: 100% !important;
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-    display: inline-block !important;
-    margin: 0 !important;
+    display: block;
+    float: left;
+    height: auto;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
 
-  table[class="body"] .wrapper.first .columns,
-  table[class="body"] .wrapper.first .column {
-    display: table !important;
-  }
+  // table[class="body"] .wrapper.first .columns,
+  // table[class="body"] .wrapper.first .column {
+  //   display: table !important;
+  // }
 
-  table[class="body"] table.columns td,
-  table[class="body"] table.column td {
-    width: 100% !important;
-  }
+  // table[class="body"] table.columns td,
+  // table[class="body"] table.column td {
+  //   width: 100% !important;
+  // }
 
   @for $i from 1 through $grid-column-count {
-    .wrapper > table.small-#{$i} {
-      width: grid-calc-pct($i, $grid-column-count) !important;
-    }
+    td.small-#{$i} {
+      width: grid-calc-pct($i, $grid-column-count) !important;    }
   }
 
-  .wrapper > table.small-12 {
+  td.small-12 {
     display: block !important;
   }
 
@@ -76,7 +75,7 @@ $small-range: $container-width !default;
   @for $i from 1 through $grid-column-count {
     .body .columns td.small-#{$i},
     .body .column td.small-#{$i},
-    table.small-#{$i} center {
+    td.small-#{$i} center {
       width: grid-calc-pct($i, $grid-column-count) !important;
     }
   }
@@ -94,7 +93,8 @@ $small-range: $container-width !default;
   }
 
   table[class="body"] table.columns td.expander {
-    width: 1px !important;
+    // width: 1px !important;
+    display: none;
   }
 
   table[class="body"] .right-text-pad,
