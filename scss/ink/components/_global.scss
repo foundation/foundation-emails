@@ -60,6 +60,10 @@ $column-gutter: 20px !default;
 /// @type Number
 $container-width: 580px !default;
 
+/// Color for the container background
+/// @type Color
+$container-background-color: $white !default;
+
 /// Global raidus of radius-corners.
 /// @type Number
 $global-radius: 3px !default;

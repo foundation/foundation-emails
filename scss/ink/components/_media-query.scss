@@ -44,9 +44,9 @@ $small-range: $container-width !default;
 
   table[class="body"] .columns,
   table[class="body"] .column {
-    display: block;
-    float: left;
-    height: auto;
+    display: block !important;
+    float: left !important;
+    height: auto !important;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -94,7 +94,7 @@ $small-range: $container-width !default;
 
   table[class="body"] table.columns td.expander {
     // width: 1px !important;
-    display: none;
+    display: none !important;
   }
 
   table[class="body"] .right-text-pad,

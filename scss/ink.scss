@@ -20,14 +20,21 @@ $foundation-version: '2.0.0-alpha';
 'ink/components/outlook-first',
 'ink/components/media-query';
 
+body {
+  background-color: #eeeeee;
+}
 
-//my overrides 
+.container {
+  background-color: #ffffff;
+}
+
+//my overrides
 .header {
   background: #999999;
 }
 
 .sub-header {
-  text-align: right; 
+  text-align: right;
   vertical-align: middle;
 }
 
