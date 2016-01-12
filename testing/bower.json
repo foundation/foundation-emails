@@ -1,0 +1,18 @@
+{
+  "name": "foundation-emails-template",
+  "version": "0.0.1",
+  "authors": [
+    "ZURB <foundation@zurb.com>"
+  ],
+  "description": "Basic template for a Foundation for Emails project.",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "homepage": "http://foundation.zurb.com/emails",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
