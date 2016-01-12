@@ -25,6 +25,16 @@ cd foundation-emails
 ./setup.sh
 ```
 
+For those that need to use `sudo` to run `npm` commands, please run the full commands:
+```
+git clone https://github.com/zurb/foundation-emails.git
+cd foundation-emails
+sudo npm install
+git clone https://github.com/zurb/inky
+cd testing
+sudo npm link ../inky
+```
+
 Note: this is the repo for the private release of the framework, we'll eventually be releasing a template repo to the public!
 
 ## Organization
