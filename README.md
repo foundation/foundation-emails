@@ -20,9 +20,9 @@ The Sass is compiled using libsass, which requires the GCC to be installed on yo
 To get going with Foundation for Emails you'll need run the following commands in your projects directory:
 
 ```
-git clone --recursive https://github.com/zurb/foundation-emails.git
+git clone https://github.com/zurb/foundation-emails.git
 cd foundation-emails
-npm install
+./setup.sh
 ```
 
 Note: this is the repo for the private release of the framework, we'll eventually be releasing a template repo to the public!
@@ -36,13 +36,13 @@ Foundation for Emails utilizes [Panini](https://github.com/zurb/panini), our sup
 foundation-emails/
 ├── _build/
 │   └── ...
-├── foundation-emails-template/
+├── testing/
 │   └── layouts
 │        └── ...
 │   └── pages
 │        └── ...
 ```
-You'll be working within the `foundation-emails-template/layouts/` and `foundation-emails-template/pages/` to write your HTML emails. The `dist/` directory will have all of your outputted emails.
+You'll be working within the `testing/layouts/` and `testing/pages/` to write your HTML emails. The `dist/` directory will have all of your outputted emails.
 
 ## Commands
 You'll have two commands that will give you all the tools you need for F4E.
