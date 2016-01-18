@@ -52,10 +52,6 @@ $white: #fefefe !default;
 /// @type Color
 $pre-color: #ff6908 !default;
 
-/// Global column gutter spacing.
-/// @type Number
-$column-gutter: 20px !default;
-
 /// Global width of the container.
 /// @type Number
 $container-width: 580px !default;
@@ -71,3 +67,7 @@ $global-radius: 3px !default;
 /// Global rounded radius of rounded-corners.
 /// @type Number
 $global-rounded: 500px !default;
+
+/// Default gutter for the grid system
+/// @type Number
+$grid-column-gutter: 16px;

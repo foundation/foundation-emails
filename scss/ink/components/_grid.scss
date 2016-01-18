@@ -47,80 +47,95 @@ table.container table.row {
   display: block;
 }
 
-table.wrapper {
-  padding: $wrapper-padding-top $column-gutter 0 0;
-  position: relative;
-}
-
+//Begin new gutter!
 td.columns,
-td.column {
+td.column,
+th.columns,
+th.column {
   margin: 0 auto;
+  padding-left: $grid-column-gutter;
 }
 
-table.columns td,
-table.column td {
-  padding: 0 0 $column-padding-bottom;
-}
-
-table.row td.last,
-table.container td.last {
-  padding-right: 0;
+td.columns.last,
+td.column.last,
+th.columns.last,
+th.column.last {
+  padding-right: $grid-column-gutter;
 }
 
 @for $i from 1 through $grid-column-count {
-  td.large-#{$i} {
-    width: grid-calc-px($i, $grid-column-count, $container-width, $column-gutter);
+  td.large-#{$i},
+  th.large-#{$i} {
+    width: grid-calc-px($i, $grid-column-count, $container-width);
+    padding-left: $grid-column-gutter / 2;
+    padding-right: $grid-column-gutter / 2;
+  }
+
+  td.large-#{$i}.first,
+  th.large-#{$i}.first {
+    padding-left: $grid-column-gutter;
+  }
+
+  td.large-#{$i}.last,
+  th.large-#{$i}.last {
+    padding-right: $grid-column-gutter;
+  }
+
+  td.large-#{$i}.collapse,
+  th.large-#{$i}.collapse {
+    padding-right: 0;
+    padding-left: 0;
+    width: grid-calc-px($i, $grid-column-count, $container-width) + $grid-column-gutter;
   }
 }
 
 @for $i from 1 through $grid-column-count {
   td.large-#{$i} center {
-    min-width: grid-calc-px($i, $grid-column-count, $container-width, $column-gutter);
+    min-width: grid-calc-px($i, $grid-column-count, $container-width);
   }
 }
 
 @for $i from 1 through $grid-column-count {
   .body .columns td.large-#{$i},
-  .body .column td.large-#{$i} {
+  .body .column td.large-#{$i},
+  .body .columns th.large-#{$i},
+  .body .column th.large-#{$i} {
     width: grid-calc-pct($i, $grid-column-count);
   }
 }
 
 @for $i from 1 through ($grid-column-count - 1) {
-  td.offset-by-#{$i} {
-    padding-left: grid-calc-px($i, $grid-column-count, $container-width, $column-gutter) + $column-gutter;
+  td.offset-by-#{$i},
+  th.offset-by-#{$i} {
+    padding-left: grid-calc-px($i, $grid-column-count, $container-width);
   }
 }
 
-td.expander {
+td.expander,
+th.expander {
   visibility: hidden;
   width: 0;
   padding: 0 !important;
 }
 
-table.columns .text-pad,
-table.column .text-pad {
-  padding-left: $text-padding;
-  padding-right: $text-padding;
-}
+// table.columns .text-pad,
+// table.column .text-pad {
+//   padding-left: $text-padding;
+//   padding-right: $text-padding;
+// }
 
-table.columns .left-text-pad,
-table.columns .text-pad-left,
-table.column .left-text-pad,
-table.column .text-pad-left {
-  padding-left: $text-padding;
-}
+// table.columns .left-text-pad,
+// table.columns .text-pad-left,
+// table.column .left-text-pad,
+// table.column .text-pad-left {
+//   padding-left: $text-padding;
+// }
 
-table.columns .right-text-pad,
-table.columns .text-pad-right,
-table.column .right-text-pad,
-table.column .text-pad-right {
-  padding-right: $text-padding;
-}
-
-
+// table.columns .right-text-pad,
+// table.columns .text-pad-right,
+// table.column .right-text-pad,
+// table.column .text-pad-right {
+//   padding-right: $text-padding;
+// }
 
 
-table.gutter {
-  margin: 10px;
-}

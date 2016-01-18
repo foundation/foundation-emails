@@ -109,7 +109,8 @@ h4,
 h5,
 h6,
 p,
-td {
+td,
+th {
   color: $global-font-color;
   font-family: $global-font-family;
   font-weight: $global-font-weight;
@@ -156,7 +157,8 @@ h6 {
 body,
 table.body,
 p,
-td {
+td,
+th {
   font-size: $body-font-size;
   line-height: $body-line-height;
 }

@@ -31,69 +31,64 @@ $small-range: $container-width !default;
     width: $small-container-width !important;
   }
 
-  table[class="body"] .row {
-    // width: 100% !important;
-    // display: block !important;
-  }
-
-// Brandon no likey
-  // table[class="body"] .wrapper {
-  //   display: block !important;
-  //   padding-right: 0 !important;
-  // }
 
   table[class="body"] .columns,
   table[class="body"] .column {
-    display: block !important;
-    float: left !important;
     height: auto !important;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
 
-  // table[class="body"] .wrapper.first .columns,
-  // table[class="body"] .wrapper.first .column {
-  //   display: table !important;
-  // }
-
-  // table[class="body"] table.columns td,
-  // table[class="body"] table.column td {
-  //   width: 100% !important;
-  // }
-
   @for $i from 1 through $grid-column-count {
-    td.small-#{$i} {
-      width: grid-calc-pct($i, $grid-column-count) !important;    }
-  }
+    td.small-#{$i},
+    th.small-#{$i} {
+      display: inline-block !important;
 
-  td.small-12 {
-    display: block !important;
-  }
-
-
-  @for $i from 1 through $grid-column-count {
-    .body .columns td.small-#{$i},
-    .body .column td.small-#{$i},
-    td.small-#{$i} center {
-      width: grid-calc-pct($i, $grid-column-count) !important;
+      width: grid-calc-pct($i, $grid-column-count) !important;    
     }
   }
-  @for $i from 1 through $grid-column-count {
-    table[class="body"] .columns td.small-#{$i},
-    table[class="body"] .column td.small-#{$i} {
+
+  @for $i from 1 through ($grid-column-count - 1) {
+    .body .columns td.small-#{$i},
+    .body .column td.small-#{$i},
+    td.small-#{$i} center,
+
+    .body .columns th.small-#{$i},
+    .body .column th.small-#{$i},
+    th.small-#{$i} center {
+      display: inline-block !important;
       width: grid-calc-pct($i, $grid-column-count) !important;
     }
   }
 
   @for $i from 1 through ($grid-column-count - 1) {
-    table[class="body"] td.offset-by-#{$i} {
+    table[class="body"] .columns td.small-#{$i},
+    table[class="body"] .column td.small-#{$i},
+    table[class="body"] .columns th.small-#{$i},
+    table[class="body"] .column th.small-#{$i} {
+      display: inline-block !important;
+      width: grid-calc-pct($i, $grid-column-count) !important;
+    }
+  }
+
+  table[class="body"] .columns td.small-#{$grid-column-count},
+  table[class="body"] .column td.small-#{$grid-column-count},
+  table[class="body"] .columns th.small-#{$grid-column-count},
+  table[class="body"] .column th.small-#{$grid-column-count} {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  @for $i from 1 through ($grid-column-count - 1) {
+    table[class="body"] td.offset-by-#{$i}, 
+    table[class="body"] th.offset-by-#{$i} {
       padding-left: 0 !important;
     }
   }
 
-  table[class="body"] table.columns td.expander {
-    // width: 1px !important;
+  table[class="body"] table.columns td.expander,
+  table[class="body"] table.columns th.expander {
     display: none !important;
   }
 
@@ -119,13 +114,15 @@ $small-range: $container-width !default;
 }
 
 table[class="body"] table.inline-list {
-  td {
+  td,
+  th {
     width: auto !important;
     display: inline-block !important;
   }
 
   &.vertical {
-    td {
+    td,
+    th {
       display: block !important;
     }
   }

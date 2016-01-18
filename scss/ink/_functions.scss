@@ -40,6 +40,6 @@ $modules: () !default;
   @return floor(percentage(($colNumber / $totalColumns)) * 1000000) / 1000000;
 }
 
-@function grid-calc-px($colNumber, $totalColumns, $conWidth, $colGutter) {
-  @return (($conWidth - ($totalColumns - 1) * $colGutter) / $totalColumns * $colNumber + ($colNumber - 1) * $colGutter);
+@function grid-calc-px($columnNumber, $totalColumns, $containerWidth) {
+  @return ($containerWidth / $totalColumns * $columnNumber - $grid-column-gutter);
 }
