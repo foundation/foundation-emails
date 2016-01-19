@@ -118,20 +118,22 @@ table[class="body"] .hide-for-desktop {
   display: inherit !important;
 }
 
+//menu
+table.menu {
+  td,
+  th {
+    width: auto !important;
+    display: inline-block !important;
+  }
+
+  &.vertical {
+    td,
+    th {
+      display: block !important;
+    }
+  }
 
 }
 
-//  table.inline-list {
-//   td,
-//   th {
-//     width: auto !important;
-//     display: inline-block !important;
-//   }
 
-//   &.vertical {
-//     td,
-//     th {
-//       display: block !important;
-//     }
-//   }
-// }
+}
