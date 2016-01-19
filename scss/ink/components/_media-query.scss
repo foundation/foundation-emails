@@ -17,113 +17,110 @@ $small-container-width: 95% !default;
 $small-range: $container-width !default;
 
 @media only screen and (max-width: #{$small-range}) {
-
-  table[class="body"] img {
-    width: auto !important;
-    height: auto !important;
-  }
-
-  table[class="body"] center {
-    min-width: 0 !important;
-  }
-
-  table[class="body"] .container {
-    width: $small-container-width !important;
-  }
-
-
-  table[class="body"] .columns,
-  table[class="body"] .column {
-    height: auto !important;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  @for $i from 1 through $grid-column-count {
-    td.small-#{$i},
-    th.small-#{$i} {
-      display: inline-block !important;
-
-      width: grid-calc-pct($i, $grid-column-count) !important;    
-    }
-  }
-
-  @for $i from 1 through ($grid-column-count - 1) {
-    .body .columns td.small-#{$i},
-    .body .column td.small-#{$i},
-    td.small-#{$i} center,
-
-    .body .columns th.small-#{$i},
-    .body .column th.small-#{$i},
-    th.small-#{$i} center {
-      display: inline-block !important;
-      width: grid-calc-pct($i, $grid-column-count) !important;
-    }
-  }
-
-  @for $i from 1 through ($grid-column-count - 1) {
-    table[class="body"] .columns td.small-#{$i},
-    table[class="body"] .column td.small-#{$i},
-    table[class="body"] .columns th.small-#{$i},
-    table[class="body"] .column th.small-#{$i} {
-      display: inline-block !important;
-      width: grid-calc-pct($i, $grid-column-count) !important;
-    }
-  }
-
-  table[class="body"] .columns td.small-#{$grid-column-count},
-  table[class="body"] .column td.small-#{$grid-column-count},
-  table[class="body"] .columns th.small-#{$grid-column-count},
-  table[class="body"] .column th.small-#{$grid-column-count} {
-    display: block !important;
-    width: 100% !important;
-  }
-
-  @for $i from 1 through ($grid-column-count - 1) {
-    table[class="body"] td.offset-by-#{$i}, 
-    table[class="body"] th.offset-by-#{$i} {
-      padding-left: 0 !important;
-    }
-  }
-
-  table[class="body"] table.columns td.expander,
-  table[class="body"] table.columns th.expander {
-    display: none !important;
-  }
-
-  table[class="body"] .right-text-pad,
-  table[class="body"] .text-pad-right {
-    padding-left: $text-padding !important;
-  }
-
-  table[class="body"] .left-text-pad,
-  table[class="body"] .text-pad-left {
-    padding-right: $text-padding !important;
-  }
-
-  table[class="body"] .hide-for-small,
-  table[class="body"] .show-for-desktop {
-    display: none !important;
-  }
-
-  table[class="body"] .show-for-small,
-  table[class="body"] .hide-for-desktop {
-    display: inherit !important;
-  }
+  
+table[class="body"] img {
+  width: auto !important;
+  height: auto !important;
 }
 
-table[class="body"] table.inline-list {
-  td,
-  th {
-    width: auto !important;
+table[class="body"] center {
+  min-width: 0 !important;
+}
+
+table[class="body"] .container {
+  width: $small-container-width !important;
+}
+
+//If it supports border-box, why not? Am I right?
+table[class="body"] .columns,
+table[class="body"] .column {
+  height: auto !important;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+//Basic grid rules
+@for $i from 1 through $grid-column-count {
+  td.small-#{$i},
+  th.small-#{$i} {
     display: inline-block !important;
-  }
-
-  &.vertical {
-    td,
-    th {
-      display: block !important;
-    }
+    width: grid-calc-pct($i, $grid-column-count) !important;    
   }
 }
+
+//If it's the last column, give it block and 100% width to knock down the wimpy columns to their own row.
+.columns td.small-#{$grid-column-count},
+.column td.small-#{$grid-column-count},
+.columns th.small-#{$grid-column-count},
+.column th.small-#{$grid-column-count} {
+  display: block !important;
+  width: 100% !important;
+}
+
+
+//Rules for the Center Tag
+@for $i from 1 through ($grid-column-count - 1) {
+  .body .columns td.small-#{$i},
+  .body .column td.small-#{$i},
+  td.small-#{$i} center,
+
+  .body .columns th.small-#{$i},
+  .body .column th.small-#{$i},
+  th.small-#{$i} center {
+    display: inline-block !important;
+    width: grid-calc-pct($i, $grid-column-count) !important;
+  }
+}
+
+@for $i from 1 through ($grid-column-count - 1) {
+  table[class="body"] td.offset-by-#{$i}, 
+  table[class="body"] th.offset-by-#{$i} {
+    padding-left: 0 !important;
+  }
+}
+
+table[class="body"] table.columns td.expander,
+table[class="body"] table.columns th.expander {
+  display: none !important;
+}
+
+table[class="body"] .right-text-pad,
+table[class="body"] .text-pad-right {
+  padding-left: $text-padding !important;
+}
+
+table[class="body"] .left-text-pad,
+table[class="body"] .text-pad-left {
+  padding-right: $text-padding !important;
+}
+
+table[class="body"] .hide-for-small,
+table[class="body"] .show-for-desktop {
+  display: none !important;
+}
+
+table[class="body"] .show-for-small,
+table[class="body"] .hide-for-desktop {
+  display: inherit !important;
+}
+
+
+
+
+}
+
+// table[class="body"] table.inline-list {
+//   td,
+//   th {
+//     width: auto !important;
+//     display: inline-block !important;
+//   }
+
+//   &.vertical {
+//     td,
+//     th {
+//       display: block !important;
+//     }
+//   }
+// }

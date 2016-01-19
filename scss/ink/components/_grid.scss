@@ -22,7 +22,7 @@ $column-padding-bottom: 10px !default;
 
 /// Default padding for the right of a sub-column.
 /// @type Number
-$sub-column-padding-right: $column-gutter / 2 !default;
+$sub-column-padding-right: $grid-column-gutter / 2 !default;
 
 table {
   &.body {
@@ -80,12 +80,23 @@ th.column.last {
   th.large-#{$i}.last {
     padding-right: $grid-column-gutter;
   }
-
-  td.large-#{$i}.collapse,
-  th.large-#{$i}.collapse {
-    padding-right: 0;
-    padding-left: 0;
-    width: grid-calc-px($i, $grid-column-count, $container-width) + $grid-column-gutter;
+  
+  //Collapsed logic
+  .collapse {
+    td.large-#{$i},
+    th.large-#{$i} {
+      padding-right: 0;
+      padding-left: 0;
+      width: grid-calc-px($i, $grid-column-count, $container-width) + $grid-column-gutter;
+    }
+    
+    //Gotta give it that extra love for the first and last columns.
+    td.large-#{$i}.first,
+    th.large-#{$i}.first,
+    td.large-#{$i}.last,
+    th.large-#{$i}.last {
+      width: grid-calc-px($i, $grid-column-count, $container-width) + ($grid-column-gutter * 1.5);
+    }
   }
 }
 

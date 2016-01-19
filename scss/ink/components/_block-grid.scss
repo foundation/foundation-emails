@@ -14,7 +14,7 @@ $block-grid-elements: 8 !default;
 
 ///Defualt gutter between elements in the block grid.
 ///@type Number
-$block-grid-spacing: $column-gutter !default;
+$block-grid-spacing: $grid-column-gutter !default;
 
 ///Creates all of the block-grid classes.
 @mixin block-grid {
