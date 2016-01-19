@@ -8,13 +8,22 @@
 /// @group inline-list
 ////
 
+/// Default padding for a menu item.
+/// @type Number
+$menu-item-padding: 20px !default;
+
+/// Default padding for a menu item.
+/// @type Number
+$menu-simple-item-gutter: 10px !default;
+
+
 table.menu {
   width: 100%;
 
   td,
   th {
     display: inline-block;
-    padding: 20px;
+    padding: $menu-item-padding;
   
   }
 }
@@ -23,7 +32,7 @@ table.menu.simple {
   td,
   th {
     padding: 0;
-    padding-right: 10px;
+    padding-right: $menu-simple-item-gutter;
   }
 }
 
@@ -42,7 +51,7 @@ table.menu.vertical {
     table.menu.vertical {
       td,
       th {
-        padding-left: 20px;
+        padding-left: $menu-item-padding;
       }
     }
   }
