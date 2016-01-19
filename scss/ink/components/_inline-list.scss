@@ -8,14 +8,21 @@
 /// @group inline-list
 ////
 
-table.inline-list {
-  width: 100% !important;
+table.menu {
+  width: 100%;
+
+  td,
+  th {
+    display: inline-block;
+    padding: 20px;
+  
+  }
 }
 
-td.vertical {
-  padding-top: 10px !important;
-}
-
-table[class="body"] table.inline-list td.vertical {
-  display: block !important;
+table.menu.simple {
+  td,
+  th {
+    padding: 0;
+    padding-right: 10px;
+  }
 }
