@@ -32,12 +32,24 @@ table[class="body"] .container {
 }
 
 //If it supports border-box, why not? Am I right?
+//Also, by default padd that to the grid-column-gutter variable
 table[class="body"] .columns,
 table[class="body"] .column {
   height: auto !important;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  padding-left: $grid-column-gutter !important;
+  padding-right: $grid-column-gutter !important;
+}
+
+//If it's collapsed make it so.
+.collapse {
+  table[class="body"] & .columns,
+  table[class="body"] & .column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 //Basic grid rules
@@ -49,7 +61,8 @@ table[class="body"] .column {
   }
 }
 
-//If it's the last column, give it block and 100% width to knock down the wimpy columns to their own row.
+//If it's the last column in column count (12 by default),
+//give it block and 100% width to knock down the wimpy columns to their own row.
 .columns td.small-#{$grid-column-count},
 .column td.small-#{$grid-column-count},
 .columns th.small-#{$grid-column-count},
@@ -104,8 +117,6 @@ table[class="body"] .show-for-small,
 table[class="body"] .hide-for-desktop {
   display: inherit !important;
 }
-
-
 
 
 }
