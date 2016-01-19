@@ -26,3 +26,24 @@ table.menu.simple {
     padding-right: 10px;
   }
 }
+
+//Doesn't work on the pesky ESPs like outlook 2000
+table.menu.vertical {
+  td,
+  th,
+  a {
+    display: block;
+    width: 100%;
+  }
+
+  //Nested lists need some more padding to the left
+  td,
+  th {
+    table.menu.vertical {
+      td,
+      th {
+        padding-left: 20px;
+      }
+    }
+  }
+}
