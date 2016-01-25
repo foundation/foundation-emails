@@ -26,8 +26,8 @@ $sub-column-padding-right: $grid-column-gutter / 2 !default;
 
 table {
   &.body {
-    height: 100% !important;
-    width: 100% !important;
+    height: 100%;
+    width: 100%;
   }
 
   &.container {

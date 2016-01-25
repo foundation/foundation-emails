@@ -105,7 +105,7 @@ function inliner(options) {
       }
     })
     .pipe($.htmlmin, {
-      collapseWhitespace: true,
+      collapseWhitespace: false,
       minifyCSS: true
     });
 
