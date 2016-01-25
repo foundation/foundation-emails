@@ -86,13 +86,6 @@ table[class="body"] .column {
   }
 }
 
-@for $i from 1 through ($grid-column-count - 1) {
-  table[class="body"] td.offset-by-#{$i}, 
-  table[class="body"] th.offset-by-#{$i} {
-    padding-left: 0 !important;
-  }
-}
-
 table[class="body"] table.columns td.expander,
 table[class="body"] table.columns th.expander {
   display: none !important;
