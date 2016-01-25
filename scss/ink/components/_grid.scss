@@ -116,8 +116,8 @@ th.column.last {
 }
 
 @for $i from 1 through ($grid-column-count - 1) {
-  td.offset-by-#{$i},
-  th.offset-by-#{$i} {
+  td.large-offset-#{$i},
+  th.large-offset-#{$i} {
     //1.5 takes in effect a whole empty cell.
     padding-left: grid-calc-px($i, $grid-column-count, $container-width) + 1.5 * $grid-column-gutter;
   }
