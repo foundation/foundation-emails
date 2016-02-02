@@ -14,8 +14,16 @@ const $ = plugins();
 const isProduction = !!(yargs.argv.production);
 
 // Only inline if the --production flag is enabled
-var buildTasks = [clean, copy, pages, sass];
+var buildTasks = [clean, pages, sass, images];
 if (isProduction) buildTasks.push(inline);
+
+// Build the "dist" folder by running all of the above tasks
+gulp.task('build',
+  gulp.series.apply(gulp, buildTasks));
+
+// Build emails, run the server, and watch for file changes
+gulp.task('default',
+  gulp.series('build', server, watch));
 
 // Delete the "dist" folder
 // This happens every time a build starts
@@ -50,6 +58,13 @@ function sass() {
     .pipe(gulp.dest('dist/css'));
 }
 
+// Copy and compress images
+function images() {
+  return gulp.src('src/assets/img/*')
+    .pipe($.imagemin())
+    .pipe(gulp.dest('./dist/assets/img'));
+}
+
 // Inline CSS and minify HTML
 function inline() {
   return gulp.src('dist/**/*.html')
@@ -58,20 +73,6 @@ function inline() {
     }))
     .pipe(gulp.dest('dist'));
 }
-
-// Copy static assets
-function copy() {
-  return gulp.src('src/assets/img/*')
-    .pipe(gulp.dest('./dist/assets/img'));
-}
-
-// Build the "dist" folder by running all of the above tasks
-gulp.task('build',
-  gulp.series.apply(gulp, buildTasks));
-
-// Build emails, run the server, and watch for file changes
-gulp.task('default', 
-  gulp.series('build', server, watch));
 
 // Start a server with LiveReload to preview the site in
 function server(done) {
@@ -86,6 +87,7 @@ function watch() {
   gulp.watch('src/pages/**/*.html', gulp.series(pages, browser.reload));
   gulp.watch(['src/layouts/**/*', 'src/partials/**/*'], gulp.series(resetPages, pages, browser.reload));
   gulp.watch(['../scss/**/*.scss', 'src/assets/scss/**/*.scss'], gulp.series(sass, browser.reload));
+  gulp.watch('src/img/**/*', gulp.series(images, browser.reload));
 }
 
 function inliner(options) {
