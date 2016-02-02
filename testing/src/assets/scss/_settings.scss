@@ -8,10 +8,11 @@
 //   3. Block Grid
 //   4. Button
 //   5. Callout
-//   6. Media Query
-//   7. Normalize
-//   8. Thumbnail
-//   9. Typography
+//   6. Inline List
+//   7. Media Query
+//   8. Normalize
+//   9. Thumbnial
+//  10. Typography
 
 
 // 1. Global
@@ -28,10 +29,11 @@ $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
 $pre-color: #ff6908;
-$column-gutter: 20px;
 $container-width: 580px;
+$container-background-color: $white;
 $global-radius: 3px;
 $global-rounded: 500px;
+$grid-column-gutter: 16px;
 
 // 2. Grid
 // -------
@@ -39,21 +41,21 @@ $global-rounded: 500px;
 $grid-column-count: 12;
 $wrapper-padding-top: 10px;
 $column-padding-bottom: 10px;
-$sub-column-padding-right: $column-gutter / 2;
+$sub-column-padding-right: $grid-column-gutter / 2;
 
 // 3. Block Grid
 // -------------
 
 $block-grid-elements: 8;
-$block-grid-spacing: $column-gutter;
+$block-grid-spacing: $grid-column-gutter;
 
 // 4. Button
 // ---------
 
-$button-padding: 12px 0 12px 0;
-$button-padding-tiny: 5px 0 4px 0;
-$button-padding-small: 8px 0 7px;
-$button-padding-large: 21px 0 18px;
+$button-padding: 12px 10px 12px 10px;
+$button-padding-tiny: 5px 4px 4px 4px;
+$button-padding-small: 8px 3px 7px 3px;
+$button-padding-large: 13px 26px 12px 26px!default;
 $button-font-color: $white;
 $button-font-color-alt: $medium-gray;
 $button-font-weight: bold;
@@ -62,7 +64,7 @@ $button-font-size-tiny: 12px;
 $button-font-size-small: 16px;
 $button-font-size-large: 24px;
 $button-background-color: $primary-color;
-$button-border: 1px solid darken($button-background-color, 10%);
+$button-border: 1px solid $button-background-color;
 
 // 5. Callout
 // ----------
@@ -74,19 +76,25 @@ $callout-border-success: 1px solid darken($success-color, 20%);
 $callout-border-warning: 1px solid darken($warning-color, 20%);
 $callout-border-alert: 1px solid darken darken($alert-color, 20%);
 
-// 6. Media Query
+// 6. Inline List
+// --------------
+
+$menu-item-padding: 20px;
+$menu-simple-item-gutter: 10px;
+
+// 7. Media Query
 // --------------
 
 $small-container-width: 95%;
 $small-range: $container-width;
 
-// 7. Normalize
+// 8. Normalize
 // ------------
 
 $hr-color: $medium-gray;
 $hr-height: 1px;
 
-// 8. Thumbnail
+// 9. Thumbnial
 // ------------
 
 $thumbnail-shadow-h: 0;
@@ -96,8 +104,8 @@ $thumbnail-shadow-spread: 1px;
 $thumbnail-shadow-color: $primary-color;
 $thumbnail-shadow-opacity: 0.5;
 
-// 9. Typography
-// -------------
+// 10. Typography
+// --------------
 
 $global-font-color: $black;
 $global-font-family: Helvetica, Arial, sans-serif;
@@ -105,7 +113,7 @@ $global-font-weight: normal;
 $global-line-height: 1.3;
 $body-font-size: 14px;
 $body-line-height: 19px;
-$header-font-family: Georgia, Times, serif;
+$header-font-family: $global-font-family;
 $h1-font-size: 40px;
 $h2-font-size: 36px;
 $h3-font-size: 32px;
