@@ -11,11 +11,11 @@ import inky     from 'inky';
 const $ = plugins();
 
 // Look for the --production flag
-const isProduction = !!(yargs.argv.production);
+const PRODUCTION = !!(yargs.argv.production);
 
 // Only inline if the --production flag is enabled
 var buildTasks = [clean, pages, sass, images];
-if (isProduction) buildTasks.push(inline);
+if (PRODUCTION) buildTasks.push(inline);
 
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build',
@@ -44,6 +44,7 @@ function pages() {
     .pipe(gulp.dest('dist'));
 }
 
+// Reset Panini's cache of layouts and partials
 function resetPages(done) {
   panini.refresh();
   done();
@@ -52,9 +53,9 @@ function resetPages(done) {
 // Compile Sass into CSS
 function sass() {
   return gulp.src('src/assets/scss/app.scss')
-    .pipe($.if(!isProduction, $.sourcemaps.init()))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.init()))
     .pipe($.sass().on('error', $.sass.logError))
-    .pipe($.if(!isProduction, $.sourcemaps.write()))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest('dist/css'));
 }
 
@@ -90,6 +91,7 @@ function watch() {
   gulp.watch('src/img/**/*', gulp.series(images, browser.reload));
 }
 
+// Inlines CSS into HTML, adds media query CSS into the <style> tag of the email, and compresses the HTML
 function inliner(options) {
   var cssPath = options.css;
   var cssMqPath = cssPath.replace(/\.css$/, '-mq.css');
