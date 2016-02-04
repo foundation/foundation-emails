@@ -58,7 +58,7 @@ $button-background-color: $primary-color !default;
 
 /// Default border color for a button.
 /// @type Color
-$button-border: 1px solid $button-background-color !default;
+$button-border: 2px solid $button-background-color !default;
 
 .expand {
   width: 100%;
@@ -81,7 +81,6 @@ table.button {
       width: auto !important;
       text-align: left;
       background: $button-background-color;
-      border: $button-border;
       color: $button-font-color;
 
       a {
@@ -92,9 +91,17 @@ table.button {
         display: inline-block;
         padding: $button-padding;
         font-size: $button-font-size;
-        border: $button-border;
       }
     }
+
+
+      td {
+        border: 2px solid $button-background-color;
+      }
+
+      a {
+        border: 0px solid $button-background-color;
+      }
   }
 }
 
@@ -159,7 +166,7 @@ table.button:visited,
 table.button:active {
   table {
     a {
-      border: 1px solid darken($button-background-color, 10%);
+      border: 0px solid darken($button-background-color, 10%);
     }
   }
 }
@@ -169,12 +176,12 @@ table.button.secondary {
     td {
       background: $secondary-color;
       color: $button-font-color-alt !important;
-      border: 1px solid $secondary-color;
+      border: 2px solid $secondary-color;
     }
 
     a {
       color: $button-font-color-alt;
-      border: 1px solid $secondary-color;
+      border: 0px solid $secondary-color;
     }
   }
 }
@@ -187,7 +194,7 @@ table.button.secondary:hover {
     }
 
     a {
-      border: 1px solid lighten($secondary-color, 10%);
+      border: 0px solid lighten($secondary-color, 10%);
     }
   }
 }
@@ -220,11 +227,11 @@ table.button.success {
   table {
     td {
       background: $success-color;
-      border: 1px solid $success-color;
+      border: 2px solid $success-color;
     }
 
     a {
-      border: 1px solid $success-color;
+      border: 0px solid $success-color;
     }
   }
 }
@@ -236,7 +243,7 @@ table.button.successs:hover {
     }
 
     a {
-      border: 1px solid darken($success-color, 10%);
+      border: 0px solid darken($success-color, 10%);
     }
   }
 }
@@ -245,11 +252,11 @@ table.button.alert {
   table {
     td {
       background: $alert-color;
-      border: 1px solid $alert-color;
+      border: 2px solid $alert-color;
     }
 
     a {
-      border: 1px solid $alert-color;
+      border: 0px solid $alert-color;
     }
   }
 }
@@ -261,7 +268,7 @@ table.button.alert:hover {
     }
 
     a {
-      border: 1px solid darken($alert-color, 10%);
+      border: 0px solid darken($alert-color, 10%);
     }
   }
 }
