@@ -34,13 +34,13 @@ function clean(done) {
 // Compile layouts, pages, and partials into flat HTML files
 // Then parse using Inky templates
 function pages() {
-  return gulp.src('src/pages/**/*.html')
+  return gulp.src('src/pages/grid.html')
+    .pipe(inky())
     .pipe(panini({
       root: 'src/pages',
       layouts: 'src/layouts',
       partials: 'src/partials'
     }))
-    .pipe(inky())
     .pipe(gulp.dest('dist'));
 }
 
