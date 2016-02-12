@@ -47,7 +47,6 @@ table.container table.row {
   display: table;
 }
 
-//Begin new gutter!
 td.columns,
 td.column,
 th.columns,
@@ -129,25 +128,3 @@ th.expander {
   width: 0;
   padding: 0 !important;
 }
-
-// table.columns .text-pad,
-// table.column .text-pad {
-//   padding-left: $text-padding;
-//   padding-right: $text-padding;
-// }
-
-// table.columns .left-text-pad,
-// table.columns .text-pad-left,
-// table.column .left-text-pad,
-// table.column .text-pad-left {
-//   padding-left: $text-padding;
-// }
-
-// table.columns .right-text-pad,
-// table.columns .text-pad-right,
-// table.column .right-text-pad,
-// table.column .text-pad-right {
-//   padding-right: $text-padding;
-// }
-
-
