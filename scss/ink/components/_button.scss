@@ -60,19 +60,6 @@ $button-background-color: $primary-color !default;
 /// @type Color
 $button-border: 2px solid $button-background-color !default;
 
-.expand {
-  width: 100%;
-
-  table {
-    width: 100%;
-
-    a {
-      width: calc(100% - 20px);
-      text-align: center;
-    }
-  }
-}
-
 table.button {
   table {
     margin-bottom: 10px;
@@ -80,28 +67,21 @@ table.button {
     td {
       width: auto !important;
       text-align: left;
-      background: $button-background-color;
       color: $button-font-color;
+      background: $button-background-color;
+      border: 2px solid $button-background-color;
 
       a {
-        font-weight: $button-font-weight;
-        text-decoration: none;
         font-family: $global-font-family;
+        font-size: $button-font-size;
+        font-weight: $button-font-weight;
         color: $button-font-color;
+        text-decoration: none;
         display: inline-block;
         padding: $button-padding;
-        font-size: $button-font-size;
-      }
-    }
-
-
-      td {
-        border: 2px solid $button-background-color;
-      }
-
-      a {
         border: 0px solid $button-background-color;
       }
+    }
   }
 }
 
@@ -122,9 +102,11 @@ table.button.large table tr td a:visited {
 
 table.button.tiny {
   table {
-    td, a {
+    td,
+    a {
       padding: $button-padding-tiny;
     }
+
     a {
       font-size: $button-font-size-tiny;
       font-weight: normal;
@@ -134,7 +116,8 @@ table.button.tiny {
 
 table.button.small {
   table {
-    td, a {
+    td,
+    a {
       padding: $button-padding-small;
       font-size: $button-font-size-small;
     }
@@ -150,13 +133,26 @@ table.button.large {
   }
 }
 
+.expand {
+  width: 100%;
+
+  table {
+    width: 100%;
+
+    a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
 table.button:hover,
 table.button:visited,
 table.button:active {
   table {
     td {
       background: darken($button-background-color, 10%);
-      color: $button-font-color !important;
+      color: $button-font-color;
     }
   }
 }
@@ -175,7 +171,7 @@ table.button.secondary {
   table {
     td {
       background: $secondary-color;
-      color: $button-font-color-alt !important;
+      color: $button-font-color-alt;
       border: 2px solid $secondary-color;
     }
 

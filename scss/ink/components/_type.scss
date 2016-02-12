@@ -182,15 +182,15 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: $anchor-font-color-hover !important;
+    color: $anchor-font-color-hover;
   }
 
   &:active {
-    color: $anchor-font-color-active !important;
+    color: $anchor-font-color-active;
   }
 
   &:visited {
-    color: $anchor-font-color-visited !important;
+    color: $anchor-font-color-visited;
   }
 }
 
