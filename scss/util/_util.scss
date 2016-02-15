@@ -2,44 +2,21 @@
 // foundation.zurb.com
 // Licensed under MIT Open Source
 
-
-// IMPORT ONCE
-// We use this to prevent styles from being loaded multiple times for compenents that rely on other components. 
-$modules: () !default;
-@mixin exports($name) {
-  @if not index($modules, $name) {
-    $modules: append($modules, $name);
-    @content;
-  }
-}
-
-// RANGES
-// We use these functions to define ranges for various things, like media queries. 
-@function lower-bound($range){
-  @if length($range) <= 0 {
-    @return 0;
-  }
-  @return nth($range,1);
-}
-
-@function upper-bound($range) {
-  @if length($range) < 2 {
-    @return 999999999999;
-  }
-  @return nth($range, 2);
-}
-
-//
-// Grid Functions
-//
-
-// @FUNCTION
-// $colNumber - Found in settings file
-// $totalColumns - Found in settings file
+/// Calculates a percentage value for a grid column width.
+/// @private
+/// @param {number} $colNumber - Column count of the column.
+/// @param {number} $totalColumns - Column count of the entire row.
+/// @returns {number} A percentage width value.
 @function grid-calc-pct($colNumber, $totalColumns) {
   @return floor(percentage(($colNumber / $totalColumns)) * 1000000) / 1000000;
 }
 
+/// Calculates a pixel value for a grid column width.
+/// @private
+/// @param {number} $columnNumber - Column count of the column.
+/// @param {number} $totalColumns - Column count of the entire row.
+/// @param {number} $containerWidth - Width of the surrounding container, in pixels.
+/// @returns {number} A pixel width value.
 @function grid-calc-px($columnNumber, $totalColumns, $containerWidth) {
   @return ($containerWidth / $totalColumns * $columnNumber - $grid-column-gutter);
 }
