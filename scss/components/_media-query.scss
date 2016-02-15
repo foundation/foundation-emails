@@ -2,8 +2,6 @@
 // zurb.com/ink/
 // Licensed under MIT Open Source
 
-@import 'global';
-
 ////
 /// @group media-query
 ////
@@ -17,7 +15,7 @@ $small-container-width: 95% !default;
 $small-range: $container-width !default;
 
 @media only screen and (max-width: #{$small-range}) {
-  
+
   table.body img {
     width: auto !important;
     height: auto !important;
@@ -57,7 +55,7 @@ $small-range: $container-width !default;
     td.small-#{$i},
     th.small-#{$i} {
       display: inline-block !important;
-      width: grid-calc-pct($i, $grid-column-count) !important;    
+      width: grid-calc-pct($i, $grid-column-count) !important;
     }
   }
 

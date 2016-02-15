@@ -1,24 +1,22 @@
-// Foundation by ZURB
+// Foundation for Emails by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
 
-$foundation-version: '2.0.0-alpha';
-
-@charset 'UTF-8';
-
 @import
-'ink/components/normalize',
-'ink/components/grid',
-'ink/components/block-grid',
-'ink/components/alignment',
-'ink/components/visibility',
-'ink/components/type',
-'ink/components/button',
-'ink/components/callout',
-'ink/components/thumbnail',
-'ink/components/menu',
-'ink/components/outlook-first',
-'ink/components/media-query';
+  'util/util',
+  'global',
+  'components/normalize',
+  'components/grid',
+  'components/block-grid',
+  'components/alignment',
+  'components/visibility',
+  'components/type',
+  'components/button',
+  'components/callout',
+  'components/thumbnail',
+  'components/menu',
+  'components/outlook-first',
+  'components/media-query';
 
 body {
   background-color: #eeeeee;

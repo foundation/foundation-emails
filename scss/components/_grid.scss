@@ -2,8 +2,6 @@
 // zurb.com/ink/
 // Licensed under MIT Open Source
 
-@import 'global';
-
 ////
 /// @group grid
 ////
@@ -79,7 +77,7 @@ th.column.last {
   th.large-#{$i}.last {
     padding-right: $grid-column-gutter;
   }
-  
+
   //Collapsed logic
   .collapse {
     td.large-#{$i},
@@ -88,7 +86,7 @@ th.column.last {
       padding-left: 0;
       width: grid-calc-px($i, $grid-column-count, $container-width) + $grid-column-gutter;
     }
-    
+
     //Gotta give it that extra love for the first and last columns.
     td.large-#{$i}.first,
     th.large-#{$i}.first,
