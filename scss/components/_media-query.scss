@@ -7,11 +7,11 @@
 ////
 
 /// Container width for small screens.
-/// @type Number
+/// @type Length
 $container-width-small: 95% !default;
 
 /// Small breakpoint.
-/// @type Number
+/// @type Length
 $small-range: $container-width !default;
 
 @media only screen and (max-width: #{$small-range}) {

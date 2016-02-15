@@ -24,24 +24,24 @@ $button-font-size: (
   large: 24px,
 ) !default;
 
-/// Default color of the font in a button.
+/// Text color of buttons.
 /// @type Color
 $button-color: $white !default;
 
-/// Default color of the font in an alternate button.
+/// Text color of buttons with a light background.
 /// @type Color
 $button-color-alt: $medium-gray !default;
 
-/// Default font weight for a button.
-/// @type String
+/// Font weight of buttons.
+/// @type Weight
 $button-font-weight: bold !default;
 
-/// Default backgrounnd color for a button.
+/// Background color of buttons.
 /// @type Color
 $button-background: $primary-color !default;
 
-/// Default border color for a button.
-/// @type Color
+/// Border around buttons.
+/// @type Border
 $button-border: 2px solid $button-background !default;
 
 // Internal values for button font size

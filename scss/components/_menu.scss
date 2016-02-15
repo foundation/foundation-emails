@@ -7,11 +7,11 @@
 ////
 
 /// Padding inside a menu item.
-/// @type Number
+/// @type Length
 $menu-item-padding: 20px !default;
 
-/// Right-hand spacing of menus with the `.simple` class.
-/// @type Number
+/// Right-hand spacing of items in menus with the `.simple` class.
+/// @type Length
 $menu-simple-item-spacing: 10px !default;
 
 

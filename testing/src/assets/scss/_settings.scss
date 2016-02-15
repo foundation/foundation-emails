@@ -46,32 +46,36 @@ $sub-column-padding-right: $grid-column-gutter / 2;
 // 3. Block Grid
 // -------------
 
-$block-grid-elements: 8;
-$block-grid-spacing: $grid-column-gutter;
+$block-grid-max: 8;
+$block-grid-gutter: $grid-column-gutter;
 
 // 4. Button
 // ---------
 
-// $button-padding: 12px 10px 12px 10px;
-// $button-padding-tiny: 5px 4px 4px 4px;
-// $button-padding-small: 8px 3px 7px 3px;
-// $button-padding-large: 13px 26px 12px 26px!default;
-$button-font-color: $white;
-$button-font-color-alt: $medium-gray;
+$button-padding: (
+  default: 12px 10px 12px 10px,
+  tiny: 5px 4px 4px 4px,
+  small: 8px 3px 7px 3px,
+  large: 13px 26px 12px 26px,
+);
+$button-font-size: (
+  default: 20px,
+  tiny: 12px,
+  small: 16px,
+  large: 24px,
+);
+$button-color: $white;
+$button-color-alt: $medium-gray;
 $button-font-weight: bold;
-// $button-font-size: 20px;
-// $button-font-size-tiny: 12px;
-// $button-font-size-small: 16px;
-// $button-font-size-large: 24px;
-$button-background-color: $primary-color;
-$button-border: 1px solid $button-background-color;
+$button-background: $primary-color;
+$button-border: 2px solid $button-background;
 
 // 5. Callout
 // ----------
 
-$callout-background-color: $light-gray;
+$callout-background: $light-gray;
 $callout-padding: 10px;
-$callout-border: 1px solid darken($callout-background-color, 20%);
+$callout-border: 1px solid darken($callout-background, 20%);
 $callout-border-success: 1px solid darken($success-color, 20%);
 $callout-border-warning: 1px solid darken($warning-color, 20%);
 $callout-border-alert: 1px solid darken darken($alert-color, 20%);
@@ -80,18 +84,18 @@ $callout-border-alert: 1px solid darken darken($alert-color, 20%);
 // --------------
 
 $menu-item-padding: 20px;
-$menu-simple-item-gutter: 10px;
+$menu-simple-item-spacing: 10px;
 
 // 7. Media Query
 // --------------
 
-$small-container-width: 95%;
+$container-width-small: 95%;
 $small-range: $container-width;
 
 // 8. Normalize
 // ------------
 
-$hr-color: $medium-gray;
+$hr-background: $medium-gray;
 $hr-height: 1px;
 
 // 9. Thumbnial
@@ -121,12 +125,13 @@ $h4-font-size: 28px;
 $h5-font-size: 24px;
 $h6-font-size: 20px;
 $small-font-size: 10px;
-$paragraph-lead-font-size: 18px;
-$paragraph-lead-line-height: 21px;
+$lead-font-size: 18px;
+$lead-line-height: 21px;
 $paragraph-margin-bottom: 10px;
 $text-padding: 10px;
 $anchor-text-decoration: none;
-$anchor-font-color: $primary-color;
-$anchor-font-color-visited: $anchor-font-color;
-$anchor-font-color-hover: darken($primary-color, 10%);
-$anchor-font-color-active: $anchor-font-color-hover;
+$anchor-color: $primary-color;
+$anchor-color-visited: $anchor-color;
+$anchor-color-hover: darken($primary-color, 10%);
+$anchor-color-active: $anchor-color-hover;
+

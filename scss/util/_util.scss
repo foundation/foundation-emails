@@ -3,7 +3,7 @@
 // Licensed under MIT Open Source
 
 /// Calculates a percentage value for a grid column width.
-/// @private
+/// @access private
 /// @param {number} $colNumber - Column count of the column.
 /// @param {number} $totalColumns - Column count of the entire row.
 /// @returns {number} A percentage width value.
@@ -12,7 +12,7 @@
 }
 
 /// Calculates a pixel value for a grid column width.
-/// @private
+/// @access private
 /// @param {number} $columnNumber - Column count of the column.
 /// @param {number} $totalColumns - Column count of the entire row.
 /// @param {number} $containerWidth - Width of the surrounding container, in pixels.
