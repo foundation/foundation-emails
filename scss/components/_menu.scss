@@ -6,13 +6,13 @@
 /// @group inline-list
 ////
 
-/// Default padding for a menu item.
+/// Padding inside a menu item.
 /// @type Number
 $menu-item-padding: 20px !default;
 
-/// Default padding for a menu item.
+/// Right-hand spacing of menus with the `.simple` class.
 /// @type Number
-$menu-simple-item-gutter: 10px !default;
+$menu-simple-item-spacing: 10px !default;
 
 
 table.menu {
@@ -29,7 +29,7 @@ table.menu.simple {
   td,
   th {
     padding: 0;
-    padding-right: $menu-simple-item-gutter;
+    padding-right: $menu-simple-item-spacing;
   }
 }
 

@@ -64,11 +64,11 @@ $small-font-size: 10px !default;
 
 /// Defualt font size for lead paragraphs.
 /// @type Number
-$paragraph-lead-font-size: 18px !default;
+$lead-font-size: 18px !default;
 
 /// Defualt line height for lead paragraphs.
 /// @type Number
-$paragraph-lead-line-height: 21px !default;
+$lead-line-height: 21px !default;
 
 /// Default margin bottom for paragraphs.
 /// @type Number
@@ -84,19 +84,19 @@ $anchor-text-decoration: none !default;
 
 /// Defualt anchor font color.
 /// @type Color
-$anchor-font-color: $primary-color !default;
+$anchor-color: $primary-color !default;
 
 /// Defualt font color for a visited anchor.
 /// @type Color
-$anchor-font-color-visited: $anchor-font-color !default;
+$anchor-color-visited: $anchor-color !default;
 
 /// Defualt font color for an anchor on hover.
 /// @type Color
-$anchor-font-color-hover: darken($primary-color, 10%) !default;
+$anchor-color-hover: darken($primary-color, 10%) !default;
 
 /// Defualt font color for an active anchor.
 /// @type Color
-$anchor-font-color-active: $anchor-font-color-hover !default;
+$anchor-color-active: $anchor-color-hover !default;
 
 body,
 table.body,
@@ -166,8 +166,8 @@ p {
   margin-bottom: $paragraph-margin-bottom;
 
   &.lead {
-    font-size: $paragraph-lead-font-size;
-    line-height: $paragraph-lead-line-height;
+    font-size: $lead-font-size;
+    line-height: $lead-line-height;
   }
 }
 
@@ -176,19 +176,19 @@ small {
 }
 
 a {
-  color: $anchor-font-color;
+  color: $anchor-color;
   text-decoration: none;
 
   &:hover {
-    color: $anchor-font-color-hover;
+    color: $anchor-color-hover;
   }
 
   &:active {
-    color: $anchor-font-color-active;
+    color: $anchor-color-active;
   }
 
   &:visited {
-    color: $anchor-font-color-visited;
+    color: $anchor-color-visited;
   }
 }
 
@@ -204,7 +204,7 @@ h5 a,
 h5 a:visited,
 h6,
 h6 a:visited {
-  color: $anchor-font-color;
+  color: $anchor-color;
 }
 
 pre {

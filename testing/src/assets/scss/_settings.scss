@@ -52,17 +52,17 @@ $block-grid-spacing: $grid-column-gutter;
 // 4. Button
 // ---------
 
-$button-padding: 12px 10px 12px 10px;
-$button-padding-tiny: 5px 4px 4px 4px;
-$button-padding-small: 8px 3px 7px 3px;
-$button-padding-large: 13px 26px 12px 26px!default;
+// $button-padding: 12px 10px 12px 10px;
+// $button-padding-tiny: 5px 4px 4px 4px;
+// $button-padding-small: 8px 3px 7px 3px;
+// $button-padding-large: 13px 26px 12px 26px!default;
 $button-font-color: $white;
 $button-font-color-alt: $medium-gray;
 $button-font-weight: bold;
-$button-font-size: 20px;
-$button-font-size-tiny: 12px;
-$button-font-size-small: 16px;
-$button-font-size-large: 24px;
+// $button-font-size: 20px;
+// $button-font-size-tiny: 12px;
+// $button-font-size-small: 16px;
+// $button-font-size-large: 24px;
 $button-background-color: $primary-color;
 $button-border: 1px solid $button-background-color;
 
@@ -130,4 +130,3 @@ $anchor-font-color: $primary-color;
 $anchor-font-color-visited: $anchor-font-color;
 $anchor-font-color-hover: darken($primary-color, 10%);
 $anchor-font-color-active: $anchor-font-color-hover;
-

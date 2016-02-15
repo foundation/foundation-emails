@@ -6,11 +6,11 @@
 /// @group media-query
 ////
 
-/// Default container width for small screens.
+/// Container width for small screens.
 /// @type Number
-$small-container-width: 95% !default;
+$container-width-small: 95% !default;
 
-/// Default small break point.
+/// Small breakpoint.
 /// @type Number
 $small-range: $container-width !default;
 
@@ -26,7 +26,7 @@ $small-range: $container-width !default;
   }
 
   table.body .container {
-    width: $small-container-width !important;
+    width: $container-width-small !important;
   }
 
   //If it supports border-box, why not? Am I right?

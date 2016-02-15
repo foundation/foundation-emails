@@ -6,35 +6,35 @@
 /// @group callout
 ////
 
-/// Defualt background color of a callout.
+/// Background color of a callout.
 /// @type Color
-$callout-background-color: $light-gray !default;
+$callout-background: $light-gray !default;
 
-/// Defualt padding color of a callout.
-/// @type Number
+/// Padding inside a callout.
+/// @type Length
 $callout-padding: 10px !default;
 
-/// Default border for a callout.
-/// @type List
-$callout-border: 1px solid darken($callout-background-color, 20%) !default;
+/// Border around a callout.
+/// @type Border
+$callout-border: 1px solid darken($callout-background, 20%) !default;
 
-/// Default border for a success callout.
-/// @type List
+/// Border around a callout with the `.success` class.
+/// @type Border
 $callout-border-success: 1px solid darken($success-color, 20%) !default;
 
-/// Default border for a warning callout.
-/// @type List
+/// Border around a callout with the `.warning` class.
+/// @type Border
 $callout-border-warning: 1px solid darken($warning-color, 20%) !default;
 
-/// Default border for a alert callout.
-/// @type List
+/// Border around a callout with the `.alert` class.
+/// @type Border
 $callout-border-alert: 1px solid darken darken($alert-color, 20%) !default;
 
 td.callout {
   width: 100%;
   border: $callout-border;
   padding: $callout-padding !important;
-  background: $callout-background-color;
+  background: $callout-background;
 
   &.success {
     background: $success-color !important;

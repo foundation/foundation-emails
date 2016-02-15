@@ -6,11 +6,11 @@
 /// @group normalize
 ////
 
-/// Defualt color of an hr.
+/// Color of a divider.
 /// @type Color
-$hr-color: $medium-gray !default;
+$hr-background: $medium-gray !default;
 
-/// Default height for an hr.
+/// Height of a divider.
 /// @type Number
 $hr-height: 1px !default;
 
@@ -94,8 +94,8 @@ table, tr, td {
 }
 
 hr {
-  color: $hr-color;
-  background-color: $hr-color;
+  color: $hr-background;
+  background-color: $hr-background;
   height: $hr-height;
   border: none;
 }

@@ -6,19 +6,19 @@
 /// @group block-grid
 ////
 
-///Defualt number of elements in the block grid per row.
-///@type Number
-$block-grid-elements: 8 !default;
+/// The highest number of `.x-up` classes available when using the block grid CSS.
+/// @type Number
+$block-grid-max: 8 !default;
 
-///Defualt gutter between elements in the block grid.
-///@type Number
-$block-grid-spacing: $grid-column-gutter !default;
+/// Gutter between elements in a block grid.
+/// @type Number
+$block-grid-gutter: $grid-column-gutter !default;
 
 ///Creates all of the block-grid classes.
 @mixin block-grid {
-  @for $i from 2 through $block-grid-elements {
+  @for $i from 2 through $block-grid-max {
     .up-#{$i} td {
-      width: floor(($container-width - $i * $block-grid-spacing) / $i) !important;
+      width: floor(($container-width - $i * $block-grid-gutter) / $i) !important;
     }
   }
 }
@@ -29,7 +29,7 @@ $block-grid-spacing: $grid-column-gutter !default;
 
   td {
     display: inline-block;
-    padding: $block-grid-spacing / 2;
+    padding: $block-grid-gutter / 2;
   }
 }
 
