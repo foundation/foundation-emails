@@ -6,33 +6,9 @@
 /// @group thumbnial
 ////
 
-/// Defualt value for the horizontal direction of the shadow.
-/// @type Length
-$thumbnail-shadow-h: 0 !default;
-
-/// Defualt value for the vertical direction of the shadow.
-/// @type Length
-$thumbnail-shadow-v: 0 !default;
-
-/// Defualt value for blur of the shadow.
-/// @type Number
-$thumbnail-shadow-blur: 6px !default;
-
-/// Defualt value for the spread of the shadow.
-/// @type Number
-$thumbnail-shadow-spread: 1px !default;
-
-/// Defualt color of the thumbnail on hover of the shadow.
-/// @type Color
-$thumbnail-shadow-color: $primary-color !default;
-
-/// Defualt opacity of the shadow.
-/// @type Number
-$thumbnail-shadow-opacity: 0.5 !default;
-
-@mixin thumb-shadow($h, $v, $b, $spr, $color, $opacity) {
-  box-shadow: $h $v $b $spr rgba(red($color), green($color), blue($color), $opacity);
-}
+/// Box shadow for thumbnails. **The color must be an RGB or RGBA value.**
+/// @type Shadow
+$thumbnail-shadow: 0 0 6px 1px rgba($primary-color, 0.5) !default;
 
 .thumbnail {
   display: inline-block;
@@ -43,7 +19,7 @@ $thumbnail-shadow-opacity: 0.5 !default;
   }
 
   &:hover, &:focus {
-    //only supported iphone iOS, outlook.com, apple mail 6.5. But hey, progressive enhancements.
-    @include thumb-shadow($thumbnail-shadow-h, $thumbnail-shadow-v, $thumbnail-shadow-blur, $thumbnail-shadow-spread, $thumbnail-shadow-color, $thumbnail-shadow-opacity);
+    // Only supported iphone iOS, outlook.com, apple mail 6.5. But hey, progressive enhancements.
+    box-shadow: $thumbnail-shadow;
   }
 }
