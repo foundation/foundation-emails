@@ -65,9 +65,9 @@ gulp.task('settings', function() {
 
 gulp.task('lint', function() {
   return gulp.src('scss/**/*.scss')
-    .pipe($.scssLint({
-      'config': 'config/scss-lint.yml'
-    }));
+    .pipe($.sassLint())
+    .pipe($.sassLint.format())
+    .pipe($.sassLint.failOnError());
 });
 
 gulp.task('server', ['build'], function() {
