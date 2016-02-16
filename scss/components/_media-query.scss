@@ -55,7 +55,7 @@ $small-range: $container-width !default;
     td.small-#{$i},
     th.small-#{$i} {
       display: inline-block !important;
-      width: grid-calc-pct($i, $grid-column-count) !important;
+      width: -zf-grid-calc-pct($i, $grid-column-count) !important;
     }
   }
 
@@ -80,7 +80,7 @@ $small-range: $container-width !default;
     .body .column th.small-#{$i},
     th.small-#{$i} center {
       display: inline-block !important;
-      width: grid-calc-pct($i, $grid-column-count) !important;
+      width: -zf-grid-calc-pct($i, $grid-column-count) !important;
     }
   }
 
@@ -88,7 +88,7 @@ $small-range: $container-width !default;
     table.body td.small-offset-#{$i},
     table.body th.small-offset-#{$i} {
       //1.5 takes in effect a whole empty cell.
-      margin-left: grid-calc-pct($i, $grid-column-count) !important;
+      margin-left: -zf-grid-calc-pct($i, $grid-column-count) !important;
     }
   }
 

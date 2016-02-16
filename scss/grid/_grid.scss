@@ -63,7 +63,7 @@ th.column.last {
 @for $i from 1 through $grid-column-count {
   td.large-#{$i},
   th.large-#{$i} {
-    width: grid-calc-px($i, $grid-column-count, $container-width);
+    width: -zf-grid-calc-px($i, $grid-column-count, $container-width);
     padding-left: $grid-column-gutter / 2;
     padding-right: $grid-column-gutter / 2;
   }
@@ -84,7 +84,7 @@ th.column.last {
     th.large-#{$i} {
       padding-right: 0;
       padding-left: 0;
-      width: grid-calc-px($i, $grid-column-count, $container-width) + $grid-column-gutter;
+      width: -zf-grid-calc-px($i, $grid-column-count, $container-width) + $grid-column-gutter;
     }
 
     //Gotta give it that extra love for the first and last columns.
@@ -92,14 +92,14 @@ th.column.last {
     th.large-#{$i}.first,
     td.large-#{$i}.last,
     th.large-#{$i}.last {
-      width: grid-calc-px($i, $grid-column-count, $container-width) + ($grid-column-gutter * 1.5);
+      width: -zf-grid-calc-px($i, $grid-column-count, $container-width) + ($grid-column-gutter * 1.5);
     }
   }
 }
 
 @for $i from 1 through $grid-column-count {
   td.large-#{$i} center {
-    min-width: grid-calc-px($i, $grid-column-count, $container-width);
+    min-width: -zf-grid-calc-px($i, $grid-column-count, $container-width);
   }
 }
 
@@ -108,7 +108,7 @@ th.column.last {
   .body .column td.large-#{$i},
   .body .columns th.large-#{$i},
   .body .column th.large-#{$i} {
-    width: grid-calc-pct($i, $grid-column-count);
+    width: -zf-grid-calc-pct($i, $grid-column-count);
   }
 }
 
@@ -116,7 +116,7 @@ th.column.last {
   td.large-offset-#{$i},
   th.large-offset-#{$i} {
     //1.5 takes in effect a whole empty cell.
-    padding-left: grid-calc-px($i, $grid-column-count, $container-width) + 1.5 * $grid-column-gutter;
+    padding-left: -zf-grid-calc-px($i, $grid-column-count, $container-width) + 1.5 * $grid-column-gutter;
   }
 }
 

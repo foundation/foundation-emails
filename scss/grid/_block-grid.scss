@@ -14,15 +14,6 @@ $block-grid-max: 8 !default;
 /// @type Number
 $block-grid-gutter: $grid-column-gutter !default;
 
-///Creates all of the block-grid classes.
-@mixin block-grid {
-  @for $i from 2 through $block-grid-max {
-    .up-#{$i} td {
-      width: floor(($container-width - $i * $block-grid-gutter) / $i) !important;
-    }
-  }
-}
-
 .block-grid {
   width: 100%;
   max-width: $container-width;
@@ -33,4 +24,9 @@ $block-grid-gutter: $grid-column-gutter !default;
   }
 }
 
-@include block-grid();
+// Sizing classes
+@for $i from 2 through $block-grid-max {
+  .up-#{$i} td {
+    width: floor(($container-width - $i * $block-grid-gutter) / $i) !important;
+  }
+}
