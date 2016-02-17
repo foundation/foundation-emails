@@ -1,13 +1,20 @@
 {
   "name": "foundation-emails",
-  "version": "2.0.0-alpha",
+  "version": "2.0.0-beta.1",
   "description": "A framework for responsive emails made by ZURB",
+  "keywords": [
+    "responsive",
+    "emails"
+  ],
+  "author": "ZURB <foundation@zurb.com> (http://foundation.zurb.com)",
   "scripts": {
     "start": "gulp",
     "test": "cd testing && npm start",
     "production": "cd testing && npm run build",
     "postinstall": "cd testing && npm i"
   },
+  "repository": "https://github.com/zurb/foundation-emails",
+  "bugs": "https://github.com/zurb/foundation-emails/issues",
   "devDependencies": {
     "browser-sync": "^2.9.10",
     "cheerio": "^0.19.0",
@@ -45,5 +52,6 @@
   "dependencies": {
     "foundation-sites": "^6.0.5",
     "motion-ui": "^1.1.1"
-  }
+  },
+  "license": "MIT"
 }
