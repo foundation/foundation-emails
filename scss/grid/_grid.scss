@@ -60,6 +60,16 @@ th.column.last {
   padding-right: $grid-column-gutter;
 }
 
+//makes sure nested tables are 100% width
+td.columns,
+td.column,
+th.columns,
+th.column {
+  table {
+    width: 100%;
+  }
+}
+
 @for $i from 1 through $grid-column-count {
   td.large-#{$i},
   th.large-#{$i} {
