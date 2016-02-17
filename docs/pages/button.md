@@ -1,11 +1,11 @@
 ---
 title: Button
 description: Dynamic and effective calls to actions.
-sass: ./scss/ink/components/_button.scss
+sass: scss/components/_button.scss
 ---
 
-To get buttons that look awesome in most clients we make a table with the class <code>.button</code> that wraps your 
-<code>&lt;a&gt;</code> tag. Buttons expand to the full width of their container by default. You can contain the buttons in sub-grid or block-grid elements. 
+To get buttons that look awesome in most clients we make a table with the class <code>.button</code> that wraps your
+<code>&lt;a&gt;</code> tag. Buttons expand to the full width of their container by default. You can contain the buttons in sub-grid or block-grid elements.
 
 Check out this basic button:
 ```inky

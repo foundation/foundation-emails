@@ -50,7 +50,7 @@ gulp.task('sass:docs', function() {
 });
 
 gulp.task('sass:foundation', function() {
-  return gulp.src('scss/ink.scss')
+  return gulp.src('scss/foundation.scss')
     .pipe($.sass().on('error', $.sass.logError))
     .pipe(gulp.dest('_build/assets/css'));
 });
