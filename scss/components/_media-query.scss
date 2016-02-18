@@ -108,7 +108,9 @@ $small-range: $container-width !default;
   }
 
   table.body .hide-for-small,
-  table.body .show-for-desktop {
+  table.body .show-for-desktop,
+  table.body .columns.hide-for-small,
+  table.body .columns.show-for-desktop {
     display: none !important;
   }
 
