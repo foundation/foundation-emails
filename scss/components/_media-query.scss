@@ -133,4 +133,9 @@ $small-range: $container-width !default;
     }
 
   }
+
+  //Buttons
+  table.button.expand {
+    width: 100% !important;
+  }
 }
