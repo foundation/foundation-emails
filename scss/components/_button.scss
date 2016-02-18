@@ -140,7 +140,8 @@ table.button.large {
     width: 100%;
 
     a {
-      width: 100%;
+      //TODO need to make it 100% - padding left - padding right
+      width: calc(100% - 20px);
       text-align: center;
     }
   }
