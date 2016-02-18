@@ -34,6 +34,7 @@ $container-background-color: $white;
 $global-radius: 3px;
 $global-rounded: 500px;
 $grid-column-gutter: 16px;
+$paragraph-margin-bottom: 10px;
 
 // 2. Grid
 // -------
@@ -101,12 +102,7 @@ $hr-height: 1px;
 // 9. Thumbnial
 // ------------
 
-$thumbnail-shadow-h: 0;
-$thumbnail-shadow-v: 0;
-$thumbnail-shadow-blur: 6px;
-$thumbnail-shadow-spread: 1px;
-$thumbnail-shadow-color: $primary-color;
-$thumbnail-shadow-opacity: 0.5;
+$thumbnail-shadow: 0 0 6px 1px rgba($primary-color, 0.5);
 
 // 10. Typography
 // --------------
@@ -127,7 +123,6 @@ $h6-font-size: 20px;
 $small-font-size: 10px;
 $lead-font-size: 18px;
 $lead-line-height: 21px;
-$paragraph-margin-bottom: 10px;
 $text-padding: 10px;
 $anchor-text-decoration: none;
 $anchor-color: $primary-color;
