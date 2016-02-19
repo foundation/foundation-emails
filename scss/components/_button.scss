@@ -145,6 +145,10 @@ table.button.large {
       text-align: center;
     }
   }
+
+  center {
+    min-width: 0;
+  }
 }
 
 table.button:hover,
