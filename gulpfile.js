@@ -13,7 +13,11 @@ supercollider
   .config({
     template: foundationDocs.componentTemplate,
     marked: foundationDocs.marked,
-    handlebars: foundationDocs.handlebars
+    handlebars: foundationDocs.handlebars,
+    data: {
+      repoName: 'foundation-emails',
+      editBranch: 'v2.0'
+    }
   })
   .adapter('sass')
   .adapter('js');
