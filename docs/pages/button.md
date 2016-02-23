@@ -9,95 +9,58 @@ To get buttons that look awesome in most clients we make a table with the class 
 
 Check out this basic button:
 ```inky
-    <center>
-      <row>
-        <column>
-        <table class="button">
-          <tr>
-            <td>
-              <a href="#">Button!</a>
-            </td>
-          </tr>
-        </table>
-      </column>
-    </row>
-  </center>
+<center>
+  <row>
+    <columns>
+      <button href="zurb.com">Button</button>
+    </columns>
+  </row>
+</center>
 ```
 
 You can quickly modify the size of our buttons by adding these classes:
 ```inky
-    <center>
-      <row>
-        <column>
-        <table class="button tiny">
-          <tr>
-            <td>
-              <a href="#">Button!</a>
-            </td>
-          </tr>
-        </table>
-      </column>
-    </row>
-      <row>
-        <column>
-        <table class="button small">
-          <tr>
-            <td>
-              <a href="#">Button!</a>
-            </td>
-          </tr>
-        </table>
-      </column>
-    </row>
-      <row>
-        <column>
-        <table class="button large">
-          <tr>
-            <td>
-              <a href="#">Button!</a>
-            </td>
-          </tr>
-        </table>
-      </column>
-    </row>
-  </center>
+<center>
+  <row>
+    <columns>
+      <button href="zurb.com" class="tiny">Tiny Button</button>
+    </columns>
+  </row>
+  <row>
+    <columns>
+      <button href="zurb.com" class="small">Small Button</button>
+    </columns>
+  </row>
+  <row>
+    <columns>
+      <button href="zurb.com" class="large">Large Button</button>
+    </columns>
+  </row>
+</center>
 ```
 
 You can also change the color using our color classes here:
 ```inky
-    <center>
-      <row>
-        <column>
-        <table class="button secondary">
-          <tr>
-            <td>
-              <a href="#">Button!</a>
-            </td>
-          </tr>
-        </table>
-      </column>
-    </row>
-      <row>
-        <column>
-        <table class="button success">
-          <tr>
-            <td>
-              <a href="#">Button!</a>
-            </td>
-          </tr>
-        </table>
-      </column>
-    </row>
-      <row>
-        <column>
-        <table class="button warning">
-          <tr>
-            <td>
-              <a href="#">Button!</a>
-            </td>
-          </tr>
-        </table>
-      </column>
-    </row>
-  </center>
+<center>
+  <row>
+    <columns>
+      <button href="zurb.com" class="secondary">Secondary Button</button>
+    </columns>
+  </row>
+  <row>
+    <columns>
+      <button href="zurb.com" class="success">Success Button</button>
+    </columns>
+  </row>
+  <row>
+    <columns>
+      <button href="zurb.com" class="warning">Warning Button</button>
+    </columns>
+  </row>
+  <row>
+    <columns>
+      <button href="zurb.com" class="alert">Alert Button</button>
+    </columns>
+  </row>
+</center>
 ```

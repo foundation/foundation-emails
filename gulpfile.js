@@ -25,7 +25,7 @@ gulp.task('clean', function(cb) {
 
 // Copies static documentation assets
 gulp.task('copy', function() {
-  return gulp.src(['docs/assets/**/*', '!docs/assets/scss/**/*'])
+  return gulp.src(['docs/assets/**/*', '!docs/assets/scss/**/*', '!docs/assets/js/**/*'])
     .pipe(gulp.dest('_build/assets'));
 });
 
@@ -61,6 +61,13 @@ gulp.task('sass:foundation', function() {
     .pipe(gulp.dest('_build/assets/css'));
 });
 
+// Compiles documentation JavaScript
+gulp.task('javascript:docs', function() {
+  return gulp.src('docs/assets/js/**/*.js')
+    .pipe($.concat('docs.js'))
+    .pipe(gulp.dest('_build/assets/js'));
+});
+
 // Generates a Sass settings file from the current codebase
 gulp.task('settings', function() {
   octophant('scss/**/*.scss', {
@@ -87,12 +94,12 @@ gulp.task('server', ['build'], function() {
 
 // Runs the entire build process
 gulp.task('build', function(cb) {
-  sequence('clean', ['copy', 'html', 'sass'], cb);
+  sequence('clean', ['copy', 'html', 'sass', 'javascript:docs'], cb);
 });
 
 // Runs the build process, spins up a server, and watches for file changes
 gulp.task('default', ['server'], function() {
   gulp.watch('docs/**/*', ['html', browser.reload]);
-  gulp.watch('docs/assets/scss/**/*', ['sass:docs', browser.reload]);
+  gulp.watch(['docs/assets/scss/**/*', 'node_modules/foundation-docs/scss/**/*'], ['sass:docs', browser.reload]);
   gulp.watch('scss/**/*.scss', ['sass:foundation', browser.reload]);
 });
