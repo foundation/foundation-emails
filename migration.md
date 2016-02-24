@@ -4,10 +4,12 @@
 - [Overview](https://github.com/zurb/foundation-emails/blob/master/migration.md#overview)
 - [Dependencies]()
 - [HTML](https://github.com/zurb/foundation-emails/blob/master/migration.md#html)
-- CSS/Sass
-- Components
-  - Existing Components
-  - New Components
+- [CSS/Sass](https://github.com/zurb/foundation-emails/blob/master/migration.md#csssass)
+- [Components](https://github.com/zurb/foundation-emails/blob/master/migration.md#components)
+  - [Grid](https://github.com/zurb/foundation-emails/blob/master/migration.md#grid)
+  - [Buttons](https://github.com/zurb/foundation-emails/blob/master/migration.md#buttons)
+  - [Callout](https://github.com/zurb/foundation-emails/blob/master/migration.md#panels-are-now-callouts)
+  - [Menu](https://github.com/zurb/foundation-emails/blob/master/migration.md#menu)
 
 #### This guide describes the changes required to migrate a Foundation for Emails template from version 1 (formerly Ink) to 2.
 
@@ -60,7 +62,7 @@ With Foundation for Emails 2, confusing and tedious tables are a thing of the pa
 </container>
 ```
 
-You can use it to create the grid structure, buttons, and other components. We’ll go into this in detail in the components section.
+You can use it to create the grid structure, buttons, and other components. We’ll go into this in detail in the components section. We'll explain more in the [Grid section](https://github.com/zurb/foundation-emails/blob/master/migration.md#grid).
 
 ## CSS/Sass
 
@@ -73,7 +75,9 @@ These are some CSS classes that are no longer needed for proper spacing:
 - .text-pad-left
 - .text.pad-right
 
+***
 ## Components
+***
 
 ### Grid
 
