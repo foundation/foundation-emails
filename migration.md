@@ -72,7 +72,8 @@ These are some CSS classes that are no longer needed for proper spacing:
 
 ### Grid
 
-Version 1 
+Version 1
+In the previous version, we needed extra tags to support a wrapper element. This used to control the gutter and margins of a column.
 
 ```
 <table class="container">
@@ -102,6 +103,7 @@ Version 1
 ```
 
 Version 2 (CSS version)
+In F4E 2, we’ve eliminated another a tag in an effort to simplify your markup. Gutters are now directly applied to the column element itself. We still need to identify the last column with a last class, however we also need to identify the first column element with the first class.
 
 ```
 <table class="container">
@@ -133,8 +135,9 @@ Version 2 (Inky markup)
 ```
 
 ### Sub-grid is now a small grid
+In an effort to unify the thinking across the Foundation family, we’ve removed the sub-columns and moved towards a fully functional small grid.
 
-Version 1 
+Version 1
 
 ```
 <table class="container">
@@ -199,6 +202,8 @@ Version 2 (Inky markup)
 ```
 
 ### Block Grid
+The block grid has a minor syntax change with identifying the number of elements that are displayed in the row. We’ve moved to the convention of `.up-x`, instead of `.ex-up`.
+
 
 Version 1 
 
@@ -239,6 +244,7 @@ Version 2 (Inky markup)
 ```
 
 ### Offset Columns
+Because we’ve eliminated the wrapper, offsets are now directly applied to the column itself.
 
 Version 1 
 
@@ -283,6 +289,7 @@ Version 2 (Inky markup)
 ```
 
 ## Buttons
+In the previous version of F4E the text inside of the button was the only clickable element. In F4E 2, we’ve taken the hybrid approach of using padding and borders to increase the clickable area
 
 Version 1 
 
@@ -323,6 +330,7 @@ Version 2 (Inky markup)
 The button markup has changed to make the touch targets better. Now the whole button is clickable. It requires more table markup but you should use Inky anyways which is much simpler.
 
 ## Panels are now Callouts
+In an effort to unify the terminology across the Foundation family panels are now called callouts.
 
 Version 1 
 
