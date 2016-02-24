@@ -9,7 +9,7 @@
   - [Buttons](https://github.com/zurb/foundation-emails/blob/master/migration.md#buttons)
   - [Callout](https://github.com/zurb/foundation-emails/blob/master/migration.md#panels-are-now-callouts)
   - [Menu](https://github.com/zurb/foundation-emails/blob/master/migration.md#menu)
-- [Dependencies](https://github.com/zurb/foundation-emails/blob/master/migration.md#dependancies)
+- [Dependencies](https://github.com/zurb/foundation-emails/blob/master/migration.md#dependencies)
 
 #### This guide describes the changes required to migrate a Foundation for Emails template from version 1 (formerly Ink) to 2.
 
