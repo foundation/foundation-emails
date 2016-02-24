@@ -6,8 +6,8 @@
 - HTML
 - CSS/Sass
 - Components
-..- Existing Components
-..- New Components
+-- Existing Components
+-- New Components
 
 #### This guide describes the changes required to migrate a Foundation for Emails template from version 1 (formerly Ink) to 2.
 
