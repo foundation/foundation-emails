@@ -20,7 +20,9 @@ Run `npm run build` to do a full email inlining process.
 
 ## Documentation
 
+<div style="backgound: #f6f6f6f; padding: 16px;">
 **Check out our [Migration Guide](https://github.com/zurb/foundation-emails/blob/master/migration.md#dependencies) for upgrading an existing template or for more in-depth code examples.**
+</div>
 
 The documentation is not yet live online (or finished!), but you can compile what we have on your own machine.
 
