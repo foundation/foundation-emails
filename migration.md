@@ -388,9 +388,12 @@ The menu component can be used to create a simple set of links comonly used in h
 
 ## Dependencies
 
-CSS: 
+**CSS:**
+
 -Text Editor
-Sass version:
+
+**Sass version:**
+
 - Text Editor
 - Git
 - Node
