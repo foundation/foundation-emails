@@ -390,7 +390,7 @@ The menu component can be used to create a simple set of links comonly used in h
 
 **CSS:**
 
--Text Editor
+- Text Editor
 
 **Sass version:**
 
