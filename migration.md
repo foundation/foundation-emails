@@ -398,4 +398,4 @@ The menu component can be used to create a simple set of links comonly used in h
 - Git
 - Node
 
-To use the Sass version with the Inky markup language you'll want to insall with the Foundation CLI. You'll find the [installation instructions here](http://foundation.zurb.com/sites/docs/installation.html#command-line-tool).
+To use the Sass version with the Inky markup language you'll want to insall the Foundation for Emails project template. You'll find the [installation instructions here](https://github.com/zurb/foundation-emails/tree/v2.0#getting-started).
