@@ -325,6 +325,7 @@ Version 2 (Inky markup)
 <button href="http://zurb.com"></button>
 ```
 
+The button markup has changed to make the touch targets better. Now the whole button is clickable. It requires more table markup but you should use Inky anyways which is much simpler.
 
 ## Panels are now Callouts
 
@@ -357,7 +358,36 @@ Version 2 (CSS version)
 Version 2 (Inky markup)
 
 ```
-
+Work in progress - issue [188](https://github.com/zurb/foundation-emails/issues/188)
 ```
 
+***
+## NEW
+***
+
+### Menu
+
+Version 2 (CSS version)
+
+```
+<table class="menu">
+  <tr>
+    <td><a href="one.html">Item One</a></td>
+    <td><a href="one.html">Item Two</a></td>
+    <td><a href="one.html">Item Three</a></td>
+  </tr>
+</table>
+```
+
+Version 2 (Inky markup)
+
+```
+<menu>
+  <item href="one.html">Item One</item>
+  <item href="one.html">Item Two</item>
+  <item href="one.html">Item Three</item>
+</menu>
+```
+
+The menu component can be used to create a simple set of links comonly used in headers, for social icons or in footers. Adding the `.vertical` class will change the orientation.
 
