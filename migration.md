@@ -1,9 +1,9 @@
 # Foundation for Emails 2 Migration Guide
 
-- What’s new?
-- Overview
-- Dependencies
-- HTML
+- [What’s new?](https://github.com/zurb/foundation-emails/blob/master/migration.md#whats-new)
+- [Overview](https://github.com/zurb/foundation-emails/blob/master/migration.md#overview)
+- [Dependencies]()
+- [HTML](https://github.com/zurb/foundation-emails/blob/master/migration.md#html)
 - CSS/Sass
 - Components
   - Existing Components
