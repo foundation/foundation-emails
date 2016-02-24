@@ -2,7 +2,6 @@
 
 - [What’s new?](https://github.com/zurb/foundation-emails/blob/master/migration.md#whats-new)
 - [Overview](https://github.com/zurb/foundation-emails/blob/master/migration.md#overview)
-- [Dependencies]()
 - [HTML](https://github.com/zurb/foundation-emails/blob/master/migration.md#html)
 - [CSS/Sass](https://github.com/zurb/foundation-emails/blob/master/migration.md#csssass)
 - [Components](https://github.com/zurb/foundation-emails/blob/master/migration.md#components)
@@ -10,6 +9,7 @@
   - [Buttons](https://github.com/zurb/foundation-emails/blob/master/migration.md#buttons)
   - [Callout](https://github.com/zurb/foundation-emails/blob/master/migration.md#panels-are-now-callouts)
   - [Menu](https://github.com/zurb/foundation-emails/blob/master/migration.md#menu)
+- [Dependencies](https://github.com/zurb/foundation-emails/blob/master/migration.md#dependancies)
 
 #### This guide describes the changes required to migrate a Foundation for Emails template from version 1 (formerly Ink) to 2.
 
@@ -39,15 +39,6 @@ Other areas may require more changes to work correctly including:
 What’s new that you might want to use:
 - Menu - Horizontal
 - Menu - Vertical
-
-Dependencies
-
-CSS: 
--Text Editor
-Sass version:
-- Text Editor
-- Git
-- Node
 
 ## HTML
 
@@ -395,3 +386,13 @@ Version 2 (Inky markup)
 
 The menu component can be used to create a simple set of links comonly used in headers, for social icons or in footers. Adding the `.vertical` class will change the orientation.
 
+## Dependencies
+
+CSS: 
+-Text Editor
+Sass version:
+- Text Editor
+- Git
+- Node
+
+To use the Sass version with the Inky markup language you'll want to insall with the Foundation CLI. You'll find the [installation instructions here](http://foundation.zurb.com/sites/docs/installation.html#command-line-tool).
