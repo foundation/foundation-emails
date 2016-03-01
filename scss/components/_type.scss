@@ -32,7 +32,7 @@ $body-line-height: 19px !default;
 
 /// Font family of headings.
 /// @type List
-$header-font-family: $global-font-family;
+$header-font-family: $global-font-family !default;
 
 /// Font size of `<h1>` elements.
 /// @type Number
