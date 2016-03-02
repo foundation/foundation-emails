@@ -27,4 +27,32 @@ span.center {
 img.center {
   margin: 0 auto;
   float: none;
+  text-align: center;
+}
+
+img.right {
+  float: right;
+  text-align: right;
+}
+
+h1.right,
+h2.right,
+h3.right,
+h4.right,
+h5.right,
+h6.right,
+p.right,
+span.right {
+  text-align: right;
+}
+
+h1.left,
+h2.left,
+h3.left,
+h4.left,
+h5.left,
+h6.left,
+p.left,
+span.left {
+  text-align: left;
 }
