@@ -54,16 +54,16 @@ $block-grid-gutter: $grid-column-gutter;
 // ---------
 
 $button-padding: (
-  default: 12px 10px 12px 10px,
-  tiny: 5px 4px 4px 4px,
-  small: 8px 3px 7px 3px,
-  large: 13px 26px 12px 26px,
+  default: 8px 16px 8px 16px,
+  tiny: 4px 8px 4px 8px,
+  small: 5px 10px 5px 10px,
+  large: 10px 20px 10px 20px,
 );
 $button-font-size: (
-  default: 20px,
-  tiny: 12px,
-  small: 16px,
-  large: 24px,
+  default: 16px,
+  tiny: 10px,
+  small: 12px,
+  large: 20px,
 );
 $button-color: $white;
 $button-color-alt: $medium-gray;
