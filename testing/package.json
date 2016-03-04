@@ -24,7 +24,7 @@
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-webserver": "^0.9.1",
-    "inky": "1.0.0",
+    "inky": "^1.1.0",
     "lazypipe": "^1.0.1",
     "media-query-extractor": "^0.1.1",
     "panini": "^1.1.1",
