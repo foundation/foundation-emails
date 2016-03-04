@@ -1,66 +1,52 @@
 ---
 title: Button
-description: Dynamic and effective calls to actions.
+description: Buttons are convenient tools when you need more traditional actions. To that end, Foundation has many easy to use button styles that you can customize or override to fit your needs.
 sass: scss/components/_button.scss
 ---
 
-To get buttons that look awesome in most clients we make a table with the class <code>.button</code> that wraps your
-<code>&lt;a&gt;</code> tag. Buttons expand to the full width of their container by default. You can contain the buttons in sub-grid or block-grid elements.
+Creating a bullet-proof button that works in all email clients requires a table nested inside of a table. Put the class `.button` on the outer `<table>`. Inside of the inner table, put an `<a>` with an `href` attribute containing your link.
 
-Check out this basic button:
+In Inky HTML, the `<button>` tag creates all of this markup for you.
+
 ```inky
-<center>
-  <row>
-    <columns>
-      <button href="zurb.com">Button</button>
-    </columns>
-  </row>
-</center>
+<button href="zurb.com">Button</button>
 ```
 
-You can quickly modify the size of our buttons by adding these classes:
+---
+
+## Sizing
+
+Buttons can be made larger or smaller by adding the class `.tiny`, `.small`, or `.large` to a button's outer `<table>`.
+
+In Inky HTML, add the same class to the `<button>` tag.
+
 ```inky
-<center>
-  <row>
-    <columns>
-      <button href="zurb.com" class="tiny">Tiny Button</button>
-    </columns>
-  </row>
-  <row>
-    <columns>
-      <button href="zurb.com" class="small">Small Button</button>
-    </columns>
-  </row>
-  <row>
-    <columns>
-      <button href="zurb.com" class="large">Large Button</button>
-    </columns>
-  </row>
-</center>
+<button href="zurb.com" class="tiny">Tiny Button</button>
+<button href="zurb.com" class="small">Small Button</button>
+<button href="zurb.com" class="large">Large Button</button>
 ```
 
-You can also change the color using our color classes here:
+---
+
+## Expanded
+
+To create an expanded button, add the class `.expanded` to the outer `<table>` of the button, and wrap a `<center>` tag around the `<a>`.
+
+In Inky HTML, add the `.expanded` class to the `<button>` tag.
+
 ```inky
-<center>
-  <row>
-    <columns>
-      <button href="zurb.com" class="secondary">Secondary Button</button>
-    </columns>
-  </row>
-  <row>
-    <columns>
-      <button href="zurb.com" class="success">Success Button</button>
-    </columns>
-  </row>
-  <row>
-    <columns>
-      <button href="zurb.com" class="warning">Warning Button</button>
-    </columns>
-  </row>
-  <row>
-    <columns>
-      <button href="zurb.com" class="alert">Alert Button</button>
-    </columns>
-  </row>
-</center>
+<button href="zurb.com" class="expand">Expanded Button</button>
+```
+
+---
+
+## Coloring
+
+Change the background color of a button by adding the class `.secondary`, `.success`, `.warning`, or `.alert` to the outer `<table>` (or the `<button>` tag in Inky HTML).
+
+```inky
+<button href="zurb.com" class="secondary">Secondary Button</button>
+<button href="zurb.com" class="success">Success Button</button>
+<button href="zurb.com" class="warning">Warning Button</button>
+<button href="zurb.com" class="alert">Alert Button</button>
 ```
