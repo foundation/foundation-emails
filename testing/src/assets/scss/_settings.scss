@@ -19,30 +19,32 @@
 // ---------
 
 $primary-color: #2199e8;
-$secondary-color: #777;
+$secondary-color: #777777;
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
-$light-gray: #f3f3f3;
+$light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
 $pre-color: #ff6908;
+$body-background: $white;
 $container-width: 580px;
 $container-background-color: $white;
 $global-radius: 3px;
 $global-rounded: 500px;
-$grid-column-gutter: 16px;
 $paragraph-margin-bottom: 10px;
 
 // 2. Grid
 // -------
 
 $grid-column-count: 12;
+$grid-column-gutter: 16px;
 $wrapper-padding-top: 10px;
 $column-padding-bottom: 10px;
 $sub-column-padding-right: $grid-column-gutter / 2;
+$body-background-color: #eeeeee;
 
 // 3. Block Grid
 // -------------
@@ -66,7 +68,7 @@ $button-font-size: (
   large: 20px,
 );
 $button-color: $white;
-$button-color-alt: $medium-gray;
+$button-color-alt: $black;
 $button-font-weight: bold;
 $button-background: $primary-color;
 $button-border: 2px solid $button-background;
@@ -102,28 +104,27 @@ $hr-height: 1px;
 // 9. Thumbnial
 // ------------
 
-$thumbnail-shadow: 0 0 6px 1px rgba($primary-color, 0.5);
+$thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 
 // 10. Typography
 // --------------
 
 $global-font-color: $black;
-$global-font-family: Helvetica, Arial, sans-serif;
+$body-font-family: Helvetica, Arial, sans-serif;
 $global-font-weight: normal;
 $global-line-height: 1.3;
 $body-font-size: 14px;
 $body-line-height: 19px;
-$header-font-family: $global-font-family;
-$h1-font-size: 38px;
-$h2-font-size: 34px;
-$h3-font-size: 28px;
-$h4-font-size: 24px;
-$h5-font-size: 20px;
-$h6-font-size: 16px;
+$header-font-family: $body-font-family;
+$h1-font-size: 40px;
+$h2-font-size: 36px;
+$h3-font-size: 32px;
+$h4-font-size: 28px;
+$h5-font-size: 24px;
+$h6-font-size: 20px;
 $small-font-size: 10px;
 $lead-font-size: 18px;
 $lead-line-height: 21px;
-$text-padding: 10px;
 $anchor-text-decoration: none;
 $anchor-color: $primary-color;
 $anchor-color-visited: $anchor-color;

@@ -8,7 +8,7 @@
 
 /// Box shadow for thumbnails. **The color must be an RGB or RGBA value.**
 /// @type Shadow
-$thumbnail-shadow: 0 0 6px 1px rgba($primary-color, 0.5) !default;
+$thumbnail-shadow: 0 0 0 1px rgba($black, 0.2) !default;
 
 .thumbnail {
   display: inline-block;

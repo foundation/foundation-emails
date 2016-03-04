@@ -72,7 +72,7 @@ table.button {
       border: 2px solid $button-background;
 
       a {
-        font-family: $global-font-family;
+        font-family: body-font-family;
         font-size: $button-font-size-default;
         font-weight: $button-font-weight;
         color: $button-color;

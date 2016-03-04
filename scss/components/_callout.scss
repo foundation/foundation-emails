@@ -8,7 +8,7 @@
 
 /// Background color of a callout.
 /// @type Color
-$callout-background: $light-gray !default;
+$callout-background: $white !default;
 
 /// Padding inside a callout.
 /// @type Length
@@ -17,6 +17,10 @@ $callout-padding: 10px !default;
 /// Border around a callout.
 /// @type Border
 $callout-border: 1px solid darken($callout-background, 20%) !default;
+
+/// Border around a callout with the `.success` class.
+/// @type Border
+$callout-border-secondary: 1px solid darken($secondary-color, 20%) !default;
 
 /// Border around a callout with the `.success` class.
 /// @type Border
@@ -35,6 +39,12 @@ td.callout {
   border: $callout-border;
   padding: $callout-padding !important;
   background: $callout-background;
+
+  &.secondary {
+    background: $secondary-color !important;
+    border: $callout-border-secondary !important;
+    color: $black !important;
+  }
 
   &.success {
     background: $success-color !important;
