@@ -7,6 +7,14 @@
 //
 // Feel free to submit pull requests to foundation-docs like you would Foundation itself!
 
+// $foundation-palette: (
+//   primary: #cc7691,
+//   secondary: #777,
+//   success: #3adb76,
+//   warning: #ffae00,
+//   alert: #ec5840,
+// );
+
 @import 'node_modules/foundation-sites/scss/foundation';
 @import 'node_modules/motion-ui/src/motion-ui';
 
@@ -14,3 +22,33 @@
 @include motion-ui-transitions;
 
 @import 'node_modules/foundation-docs/scss/foundation-docs';
+
+// .docs-nav.menu {
+//   background-color: #fefaff;
+//
+//   a:hover {
+//     background: rgba($primary-color, 0.1);
+//   }
+// }
+//
+// .docs-nav-title {
+//   color: #9974a1;
+// }
+//
+// .docs-newsletter {
+//   background-color: darken($primary-color, 15%);
+//
+//   .button {
+//     color: $primary-color;
+//     background: white;
+//     font-weight: bold;
+//
+//     &:hover {
+//       background: #f9f9f9;
+//     }
+//   }
+// }
+//
+// .docs-emails .zurb-footer-top {
+//   background-color: darken($primary-color, 25%);
+// }
