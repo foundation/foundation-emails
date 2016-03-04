@@ -30,27 +30,31 @@ $callout-border-warning: 1px solid darken($warning-color, 20%) !default;
 /// @type Border
 $callout-border-alert: 1px solid darken darken($alert-color, 20%) !default;
 
-td.callout {
+table.callout {
+  width: 100%;
+}
+
+.callout td {
   width: 100%;
   border: $callout-border;
   padding: $callout-padding !important;
   background: $callout-background;
+}
 
-  &.success {
-    background: $success-color !important;
-    border: $callout-border-success !important;
-    color: $white !important;
-  }
+.callout.success td {
+  background: $success-color !important;
+  border: $callout-border-success !important;
+  color: $white !important;
+}
 
-  &.warning {
-    background: $warning-color !important;
-    border: $callout-border-warning !important;
-    color: $white !important;
-  }
+.callout.warning td {
+  background: $warning-color !important;
+  border: $callout-border-warning !important;
+  color: $white !important;
+}
 
-  &.alert {
-    background: $alert-color !important;
-    border: $callout-border-alert !important;
-    color: $white !important;
-  }
+.callout.alert td {
+  background: $alert-color !important;
+  border: $callout-border-alert !important;
+  color: $white !important;
 }
