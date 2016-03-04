@@ -6,6 +6,23 @@
 /// @group visibility
 ////
 
-.hide-for-desktop {
+.hide-for-large {
   display: none;
+  width:0;
+  mso-hide:all;
+  overflow:hidden;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
 }
+
+.show-for-large {
+  @media (max-width: 600px) {
+    display: none;
+    width:0;
+    mso-hide:all;
+    overflow:hidden;
+  }
+}
+
