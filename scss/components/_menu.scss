@@ -33,7 +33,7 @@ table.menu.simple {
   }
 }
 
-//Doesn't work on the pesky ESPs like outlook 2000
+// Doesn't work on the pesky ESPs like outlook 2000
 table.menu.vertical {
   td,
   th,
@@ -42,7 +42,7 @@ table.menu.vertical {
     width: 100%;
   }
 
-  //Nested lists need some more padding to the left
+  // Nested lists need some more padding to the left
   td,
   th {
     table.menu.vertical {
@@ -52,4 +52,8 @@ table.menu.vertical {
       }
     }
   }
+}
+
+table.menu.text-center a {
+  text-align: center;
 }

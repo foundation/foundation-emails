@@ -28,7 +28,7 @@ $sub-column-padding-right: $grid-column-gutter / 2 !default;
 
 /// Body background color.
 /// @type Length
-$body-background-color: #eeeeee !default;
+$body-background-color: $light-gray !default;
 
 //For viewing email in browser
 html {

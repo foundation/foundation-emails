@@ -1,2 +1,26 @@
 @import 'settings';
 @import '../../../../scss/foundation';
+
+@media only screen and (max-width: #{$small-range}) {
+  .small-float-center {
+    margin: 0 auto;
+    float: none;
+    text-align: center;
+  }
+
+  .small-text-center {
+    text-align: center;
+  }
+  
+  .up-3 td {
+    width: 45% !important;
+  }
+
+  table.menu.small-vertical {
+    td,
+    th,
+    a {
+      display: block !important;
+    }
+  }
+}
