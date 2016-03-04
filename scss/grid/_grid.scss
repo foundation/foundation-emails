@@ -22,13 +22,26 @@ $column-padding-bottom: 10px !default;
 /// @type Number
 $sub-column-padding-right: $grid-column-gutter / 2 !default;
 
+/// Body background color.
+/// @type Length
+$body-background-color: #eeeeee !default;
+
+//For viewing email in browser
+html {
+  min-height: 100%;
+  background: $body-background-color;
+}
+
 table {
   &.body {
+    background: $body-background-color;
     height: 100%;
     width: 100%;
   }
 
   &.container {
+    background: $container-background-color;
+
     width: $container-width;
     margin: 0 auto;
     text-align: inherit;

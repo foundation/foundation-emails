@@ -6,10 +6,6 @@
 /// @group media-query
 ////
 
-/// Body background color.
-/// @type Length
-$body-background-color: #333 !default;
-
 /// Container width for small screens.
 /// @type Length
 $container-width-small: 95% !default;
@@ -19,11 +15,6 @@ $container-width-small: 95% !default;
 $small-range: $container-width !default;
 
 @media only screen and (max-width: #{$small-range}) {
-
-  table,
-  table.body {
-    background: $body-background-color;
-  }
 
   table.body img {
     width: auto !important;
