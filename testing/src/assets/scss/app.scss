@@ -1,7 +1,7 @@
 @import 'settings';
 @import '../../../../scss/foundation';
 
-@media only screen and (max-width: #{$small-range}) {
+@media only screen and #{$global-breakpoint} {
   .small-float-center {
     margin: 0 auto;
     float: none;
@@ -11,7 +11,7 @@
   .small-text-center {
     text-align: center;
   }
-  
+
   .up-3 td {
     width: 45% !important;
   }

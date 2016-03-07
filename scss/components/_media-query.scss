@@ -10,11 +10,7 @@
 /// @type Length
 $container-width-small: 95% !default;
 
-/// Small breakpoint.
-/// @type Length
-$small-range: $container-width !default;
-
-@media only screen and (max-width: #{$small-range}) {
+@media only screen and #{$global-breakpoint} {
 
   table.body img {
     width: auto !important;

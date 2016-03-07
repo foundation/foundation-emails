@@ -65,3 +65,7 @@ $global-radius: 3px !default;
 /// Global rounded radius of rounded-corners.
 /// @type Number
 $global-rounded: 500px !default;
+
+/// Global media query to switch from desktop to mobile styles.
+/// @type String
+$global-breakpoint: '(max-width: 580px)';
