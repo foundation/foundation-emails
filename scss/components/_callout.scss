@@ -10,6 +10,10 @@
 /// @type Color
 $callout-background: $white !default;
 
+/// Fade value for callout backgrounds.
+/// @type Number
+$callout-background-fade: 85% !default;
+
 /// Padding inside a callout.
 /// @type Length
 $callout-padding: 10px !default;
@@ -32,7 +36,7 @@ $callout-border-warning: 1px solid darken($warning-color, 20%) !default;
 
 /// Border around a callout with the `.alert` class.
 /// @type Border
-$callout-border-alert: 1px solid darken darken($alert-color, 20%) !default;
+$callout-border-alert: 1px solid darken($alert-color, 20%) !default;
 
 td.callout {
   width: 100%;
@@ -40,26 +44,32 @@ td.callout {
   padding: $callout-padding !important;
   background: $callout-background;
 
+  &.primary {
+    background: scale-color($primary-color, $lightness: $callout-background-fade) !important;
+    border: $callout-border-secondary !important;
+    color: $black !important;
+  }
+
   &.secondary {
-    background: $secondary-color !important;
+    background: scale-color($secondary-color, $lightness: $callout-background-fade) !important;
     border: $callout-border-secondary !important;
     color: $black !important;
   }
 
   &.success {
-    background: $success-color !important;
+    background: scale-color($success-color, $lightness: $callout-background-fade) !important;
     border: $callout-border-success !important;
     color: $white !important;
   }
 
   &.warning {
-    background: $warning-color !important;
+    background: scale-color($warning-color, $lightness: $callout-background-fade) !important;
     border: $callout-border-warning !important;
     color: $white !important;
   }
 
   &.alert {
-    background: $alert-color !important;
+    background: scale-color($alert-color, $lightness: $callout-background-fade) !important;
     border: $callout-border-alert !important;
     color: $white !important;
   }

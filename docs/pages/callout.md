@@ -15,7 +15,7 @@ When using [Inky](inky.html) HTML, the `<callout>` tag will create this structur
 
 ```inky
 <callout>
-  <p>Beware of the Kraken!</p>
+  <p>Beware of the Kraken! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
 </callout>
 ```
 
@@ -26,15 +26,19 @@ When using [Inky](inky.html) HTML, the `<callout>` tag will create this structur
 The color of a callout can be changed by adding the class `.success`, `.warning`, or `.alert` to the element.
 
 ```inky
+<callout class="primary">
+  <p>Successfully avoided Kraken. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+</callout>
+
 <callout class="success">
-  <p>Successfully avoided Kraken.</p>
+  <p>Successfully avoided Kraken. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
 </callout>
 
 <callout class="warning">
-  <p>There may be Krakens around.</p>
+  <p>There may be Krakens around. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
 </callout>
 
 <callout class="alert">
-  <p>Incoming Kraken!</p>
+  <p>Incoming Kraken! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
 </callout>
 ```

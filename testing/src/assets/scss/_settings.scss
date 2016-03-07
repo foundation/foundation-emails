@@ -121,12 +121,13 @@ $button-radius: $global-radius;
 // ----------
 
 $callout-background: $white;
+$callout-background-fade: 85%;
 $callout-padding: 10px;
 $callout-border: 1px solid darken($callout-background, 20%);
 $callout-border-secondary: 1px solid darken($secondary-color, 20%);
 $callout-border-success: 1px solid darken($success-color, 20%);
 $callout-border-warning: 1px solid darken($warning-color, 20%);
-$callout-border-alert: 1px solid darken darken($alert-color, 20%);
+$callout-border-alert: 1px solid darken($alert-color, 20%);
 
 // 8. Inline List
 // --------------
