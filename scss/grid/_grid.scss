@@ -18,10 +18,6 @@ $global-gutter: 16px !default;
 /// @type Number
 $column-padding-bottom: $global-padding !default;
 
-/// Default padding for the right of a sub-column.
-/// @type Number
-$sub-column-padding-right: $global-gutter / 2 !default;
-
 //For viewing email in browser
 html {
   min-height: 100%;
