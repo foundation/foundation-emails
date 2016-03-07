@@ -16,7 +16,7 @@ $wrapper-padding-top: 10px !default;
 
 /// Default padding for the bottom of a column.
 /// @type Number
-$column-padding-bottom: 10px !default;
+$column-padding-bottom: 16px !default;
 
 /// Default gutter for the grid system
 /// @type Number
@@ -68,6 +68,7 @@ th.columns,
 th.column {
   margin: 0 auto;
   padding-left: $grid-column-gutter;
+  padding-bottom: $column-padding-bottom;
 }
 
 td.columns.last,
