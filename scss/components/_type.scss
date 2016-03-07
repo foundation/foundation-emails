@@ -32,7 +32,7 @@ $body-line-height: 19px !default;
 
 /// Font family of headings.
 /// @type List
-$header-font-family: $global-font-family !default;
+$header-font-family: $body-font-family !default;
 
 /// Font family of headings.
 /// @type List
@@ -229,4 +229,3 @@ pre {
     }
   }
 }
-
