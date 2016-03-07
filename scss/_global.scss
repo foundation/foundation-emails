@@ -50,9 +50,13 @@ $white: #fefefe !default;
 /// @type Color
 $pre-color: #ff6908 !default;
 
-/// Global width of the container.
+/// Width of the container.
 /// @type Number
-$container-width: 580px !default;
+$global-width: 580px !default;
+
+/// Width of the container on small screens.
+/// @type Length
+$global-width-small: 95% !default;
 
 /// Color for the container background
 /// @type Color
