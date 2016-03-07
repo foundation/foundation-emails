@@ -6,16 +6,6 @@
 /// @group normalize
 ////
 
-/// Color of a divider.
-/// @type Color
-$hr-background: $medium-gray !default;
-
-/// Height of a divider.
-/// @type Length
-$hr-height: 1px !default;
-
-$paragraph-margin-bottom: 10px !default;
-
 #outlook a {
   padding: 0;
 }
@@ -95,9 +85,4 @@ table, tr, td {
   text-align: left;
 }
 
-hr {
-  color: $hr-background;
-  background-color: $hr-background;
-  height: $hr-height;
-  border: none;
-}
+

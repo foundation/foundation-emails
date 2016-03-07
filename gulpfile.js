@@ -77,7 +77,7 @@ gulp.task('settings', function() {
   octophant('scss/**/*.scss', {
     title: 'Foundation for Emails Settings',
     output: 'testing/src/assets/scss/_settings.scss',
-    sort: ['global', 'grid', 'block-grid', 'media-query', 'type']
+    sort: ['global', 'grid', 'block-grid', 'type']
   });
 });
 

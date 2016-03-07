@@ -10,31 +10,27 @@
 /// @type Number
 $grid-column-count: 12 !default;
 
-/// Default padding for the top of the wrapper.
-/// @type Number
-$wrapper-padding-top: 10px !default;
+/// Gutter for grid elements.
+/// @type length
+$global-gutter: 16px !default;
 
 /// Default padding for the bottom of a column.
 /// @type Number
-$column-padding-bottom: 16px !default;
+$column-padding-bottom: $global-padding !default;
 
 /// Default padding for the right of a sub-column.
 /// @type Number
 $sub-column-padding-right: $global-gutter / 2 !default;
 
-/// Body background color.
-/// @type Length
-$body-background-color: $light-gray !default;
-
 //For viewing email in browser
 html {
   min-height: 100%;
-  background: $body-background-color;
+  background: $body-background;
 }
 
 table {
   &.body {
-    background: $body-background-color;
+    background: $body-background;
     height: 100%;
     width: 100%;
   }
@@ -63,7 +59,7 @@ td.column,
 th.columns,
 th.column {
   margin: 0 auto;
-  padding-left: $grid-column-gutter;
+  padding-left: $global-gutter;
   padding-bottom: $column-padding-bottom;
 }
 

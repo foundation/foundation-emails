@@ -36,6 +36,10 @@ $button-color-alt: $medium-gray !default;
 /// @type Weight
 $button-font-weight: bold !default;
 
+/// Margin around buttons.
+/// @type List
+$button-margin: 0 0 $global-margin 0 !default;
+
 /// Background color of buttons.
 /// @type Color
 $button-background: $primary-color !default;
@@ -43,6 +47,14 @@ $button-background: $primary-color !default;
 /// Border around buttons.
 /// @type Border
 $button-border: 2px solid $button-background !default;
+
+/// Border radius of buttons. Not supported by all email clients.
+/// @type Number
+$button-radius: $global-radius !default;
+
+/// Border radius of rounded buttons. Not supported by all email clients.
+/// @type Number
+$button-rounded: $global-rounded !default;
 
 // Internal values for button font size
 // [TODO] Replace references below with map-get() calls
@@ -62,7 +74,7 @@ table.button {
   width: auto !important;
 
   table {
-    margin-bottom: 10px;
+    margin-bottom: $button-margin;
 
     td {
       width: auto !important;
@@ -70,6 +82,14 @@ table.button {
       color: $button-color;
       background: $button-background;
       border: 2px solid $button-background;
+
+      &.radius {
+        border-radius: $button-radius;
+      }
+
+      &.rounded {
+        border-radius: $button-rounded;
+      }
 
       a {
         font-family: $body-font-family;
@@ -80,6 +100,7 @@ table.button {
         display: inline-block;
         padding: $button-padding-default;
         border: 0px solid $button-background;
+        border-radius: $button-radius;
       }
     }
   }
