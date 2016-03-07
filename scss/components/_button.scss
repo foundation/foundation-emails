@@ -72,7 +72,7 @@ table.button {
       border: 2px solid $button-background;
 
       a {
-        font-family: body-font-family;
+        font-family: $body-font-family;
         font-size: $button-font-size-default;
         font-weight: $button-font-weight;
         color: $button-color;
@@ -140,7 +140,7 @@ table.expand {
     width: 100%;
 
     a {
-      //TODO need to make it 100% - padding left - padding right 
+      //TODO need to make it 100% - padding left - padding right
       width: calc(100% - 20px);
       text-align: center;
     }

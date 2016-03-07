@@ -6,13 +6,12 @@
 //   1. Global
 //   2. Grid
 //   3. Block Grid
-//   4. Media Query
+//   4. Thumbnial
 //   5. Typography
 //   6. Button
 //   7. Callout
 //   8. Inline List
 //   9. Normalize
-//  10. Thumbnial
 
 
 // 1. Global
@@ -29,10 +28,12 @@ $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
 $pre-color: #ff6908;
-$container-width: 580px;
+$global-width: 580px;
+$global-width-small: 95%;
 $container-background-color: $white;
 $global-radius: 3px;
 $global-rounded: 500px;
+$global-breakpoint: '(max-width: 580px)';
 
 // 2. Grid
 // -------
@@ -48,13 +49,12 @@ $body-background-color: $light-gray;
 // -------------
 
 $block-grid-max: 8;
-$block-grid-gutter: $grid-column-gutter;
+$block-grid-gutter: $global-gutter;
 
-// 4. Media Query
-// --------------
+// 4. Thumbnial
+// ------------
 
-$container-width-small: 95%;
-$small-range: $container-width;
+$thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 
 // 5. Typography
 // -------------
@@ -127,9 +127,4 @@ $menu-simple-item-spacing: 10px;
 
 $hr-background: $medium-gray;
 $hr-height: 1px;
-
-// 10. Thumbnial
-// -------------
-
-$thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 

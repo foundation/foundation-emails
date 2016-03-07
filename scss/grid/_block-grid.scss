@@ -12,11 +12,11 @@ $block-grid-max: 8 !default;
 
 /// Gutter between elements in a block grid.
 /// @type Number
-$block-grid-gutter: $grid-column-gutter !default;
+$block-grid-gutter: $global-gutter !default;
 
 .block-grid {
   width: 100%;
-  max-width: $container-width;
+  max-width: $global-width;
 
   td {
     display: inline-block;
@@ -27,6 +27,6 @@ $block-grid-gutter: $grid-column-gutter !default;
 // Sizing classes
 @for $i from 2 through $block-grid-max {
   .up-#{$i} td {
-    width: floor(($container-width - $i * $block-grid-gutter) / $i) !important;
+    width: floor(($global-width - $i * $block-grid-gutter) / $i) !important;
   }
 }

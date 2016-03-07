@@ -6,16 +6,7 @@
 /// @group media-query
 ////
 
-/// Container width for small screens.
-/// @type Length
-$container-width-small: 95% !default;
-
-/// Small breakpoint.
-/// @type Length
-$small-range: $container-width !default;
-
-@media only screen and (max-width: #{$small-range}) {
-
+@media only screen and (max-width: #{$global-breakpoint}) {
   table.body img {
     width: auto !important;
     height: auto !important;
@@ -26,7 +17,7 @@ $small-range: $container-width !default;
   }
 
   table.body .container {
-    width: $container-width-small !important;
+    width: $global-width-small !important;
   }
 
   //If it supports border-box, why not? Am I right?
@@ -37,8 +28,8 @@ $small-range: $container-width !default;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding-left: $grid-column-gutter !important;
-    padding-right: $grid-column-gutter !important;
+    padding-left: $global-gutter !important;
+    padding-right: $global-gutter !important;
   }
 
   //If it's collapsed make it so.
