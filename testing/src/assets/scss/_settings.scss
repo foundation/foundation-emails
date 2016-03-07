@@ -44,7 +44,11 @@ $global-breakpoint: $global-width + $global-gutter;
 $grid-column-count: 12;
 $column-padding-bottom: 16px;
 $sub-column-padding-right: $global-gutter / 2;
+<<<<<<< HEAD
 $body-background: $light-gray;
+=======
+$body-background-color: $light-gray;
+>>>>>>> 7a165d7b7ecc2c99b49b0b154c311f520c8a6b74
 
 // 3. Block Grid
 // -------------

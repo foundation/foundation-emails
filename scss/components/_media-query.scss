@@ -21,7 +21,7 @@
   }
 
   //If it supports border-box, why not? Am I right?
-  //Also, by default pad that to the grid-column-gutter variable
+  //Also, by default pad that to the global-gutter variable
   table.body .columns,
   table.body .column {
     height: auto !important;
