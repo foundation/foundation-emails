@@ -1,6 +1,7 @@
 ---
 title: The Grid
 description: If you're familiar with the Foundation for Sites grid, you'll be right at home working with Foundation for Emails.
+sass: scss/grid/_grid.scss
 ---
 
 The grid has two core elements: the *row* and *column*. Rows define horizontal sections of content, and columns carve up the row into side-by-side sections.
