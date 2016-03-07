@@ -30,10 +30,11 @@ $white: #fefefe;
 $pre-color: #ff6908;
 $global-width: 580px;
 $global-width-small: 95%;
+$global-gutter: 16px;
 $container-background-color: $white;
 $global-radius: 3px;
 $global-rounded: 500px;
-$global-breakpoint: '(max-width: 580px)';
+$global-breakpoint: $global-width + $global-gutter;
 
 // 2. Grid
 // -------
@@ -41,8 +42,7 @@ $global-breakpoint: '(max-width: 580px)';
 $grid-column-count: 12;
 $wrapper-padding-top: 10px;
 $column-padding-bottom: 16px;
-$grid-column-gutter: 16px;
-$sub-column-padding-right: $grid-column-gutter / 2;
+$sub-column-padding-right: $global-gutter / 2;
 $body-background-color: $light-gray;
 
 // 3. Block Grid
