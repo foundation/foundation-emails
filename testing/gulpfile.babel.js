@@ -109,7 +109,7 @@ function inliner(options) {
       }
     })
     .pipe($.htmlmin, {
-      collapseWhitespace: false,
+      collapseWhitespace: true,
       minifyCSS: true
     });
 

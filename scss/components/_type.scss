@@ -165,7 +165,7 @@ h3,
 h4,
 h5,
 h6 {
-  header: $header-color;
+  color: $header-color;
   word-break: normal;
   font-family: $header-font-family;
   Margin-bottom: $header-margin-bottom;
@@ -252,7 +252,7 @@ h4 a,
 h4 a:visited,
 h5 a,
 h5 a:visited,
-h6,
+h6 a,
 h6 a:visited {
   color: $anchor-color;
 }
