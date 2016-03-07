@@ -58,6 +58,10 @@ $global-width: 580px !default;
 /// @type Length
 $global-width-small: 95% !default;
 
+/// Gutter for grid elements.
+/// @type length
+$global-gutter: 16px !default;
+
 /// Color for the container background
 /// @type Color
 $container-background-color: $white !default;
@@ -72,4 +76,4 @@ $global-rounded: 500px !default;
 
 /// Global media query to switch from desktop to mobile styles.
 /// @type String
-$global-breakpoint: '(max-width: 580px)';
+$global-breakpoint: $global-width + $global-gutter;

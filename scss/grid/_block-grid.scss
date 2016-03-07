@@ -12,7 +12,7 @@ $block-grid-max: 8 !default;
 
 /// Gutter between elements in a block grid.
 /// @type Number
-$block-grid-gutter: $grid-column-gutter !default;
+$block-grid-gutter: $global-gutter !default;
 
 .block-grid {
   width: 100%;

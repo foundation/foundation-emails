@@ -12,13 +12,13 @@
   mso-hide:all;
   overflow:hidden;
 
-  @media only screen and #{$global-breakpoint} {
+  @media only screen and (max-width: #{$global-breakpoint}) {
     display: block;
   }
 }
 
 .show-for-large {
-  @media only screen and #{$global-breakpoint} {
+  @media only screen and (max-width: #{$global-breakpoint}) {
     display: none;
     width:0;
     mso-hide:all;

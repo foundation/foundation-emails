@@ -41,15 +41,15 @@ $global-breakpoint: '(max-width: 580px)';
 $grid-column-count: 12;
 $wrapper-padding-top: 10px;
 $column-padding-bottom: 10px;
-$grid-column-gutter: 16px;
-$sub-column-padding-right: $grid-column-gutter / 2;
+$global-gutter: 16px;
+$sub-column-padding-right: $global-gutter / 2;
 $body-background-color: $light-gray;
 
 // 3. Block Grid
 // -------------
 
 $block-grid-max: 8;
-$block-grid-gutter: $grid-column-gutter;
+$block-grid-gutter: $global-gutter;
 
 // 4. Thumbnial
 // ------------

@@ -6,7 +6,7 @@
 /// @group media-query
 ////
 
-@media only screen and #{$global-breakpoint} {
+@media only screen and (max-width: #{$global-breakpoint}) {
   table.body img {
     width: auto !important;
     height: auto !important;
@@ -28,8 +28,8 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding-left: $grid-column-gutter !important;
-    padding-right: $grid-column-gutter !important;
+    padding-left: $global-gutter !important;
+    padding-right: $global-gutter !important;
   }
 
   //If it's collapsed make it so.
