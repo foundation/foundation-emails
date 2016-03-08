@@ -24,3 +24,53 @@
     }
   }
 }
+
+.header {
+  background: $light-gray;
+  border-radius: 10px;
+  Margin-bottom: $global-margin * 2;
+
+  .columns {
+    padding-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  img {
+    padding-top: $global-padding;
+    padding-bottom: $global-padding;
+  }
+}
+
+.container {
+  border-radius: 10px;
+}
+
+.feature-block {
+  background: $light-gray;
+  Margin-bottom: $global-padding * 2;
+
+  .columns {
+    padding-top: $global-padding * 2;
+    padding-bottom: $global-padding * 2;
+  }
+}
+
+.gallery {
+  img {
+    Margin-bottom: $global-margin;
+  }
+
+  .gallery-name {
+    text-align: center;
+    font-weight: bold;
+    Margin-bottom: 0;
+  }
+
+  .gallery-age {
+    color: $secondary-color;
+    text-align: center;
+  }
+}
