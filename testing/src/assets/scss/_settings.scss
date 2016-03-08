@@ -29,15 +29,15 @@ $white: #fefefe;
 $pre-color: #ff6908;
 $global-width: 580px;
 $global-width-small: 95%;
+$global-gutter: 16px;
 $body-background: $light-gray;
 $container-background: $white;
 $global-font-color: $black;
 $body-font-family: Helvetica, Arial, sans-serif;
 $global-padding: 16px;
-$global-margin: 16px;
+$global-margin: 32px;
 $global-radius: 3px;
 $global-rounded: 500px;
-$global-gutter: 16px;
 $global-breakpoint: $global-width + $global-gutter;
 
 // 2. Grid
@@ -45,7 +45,6 @@ $global-breakpoint: $global-width + $global-gutter;
 
 $grid-column-count: 12;
 $column-padding-bottom: $global-padding;
-$sub-column-padding-right: $global-gutter / 2;
 
 // 3. Block Grid
 // -------------
@@ -59,7 +58,7 @@ $block-grid-gutter: $global-gutter;
 $global-font-weight: normal;
 $header-color: inherit;
 $global-line-height: 1.3;
-$global-font-size: 16px;
+$global-font-size: 14px;
 $body-line-height: 19px;
 $header-font-family: $body-font-family;
 $header-font-weight: $global-font-weight;

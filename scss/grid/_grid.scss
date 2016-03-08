@@ -10,10 +10,6 @@
 /// @type Number
 $grid-column-count: 12 !default;
 
-/// Gutter for grid elements.
-/// @type length
-$global-gutter: 16px !default;
-
 /// Default padding for the bottom of a column.
 /// @type Number
 $column-padding-bottom: $global-padding !default;
