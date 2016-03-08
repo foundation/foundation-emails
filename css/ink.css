@@ -1,52 +1,56 @@
+
 /**********************************************
 * Ink v1.0.5 - Copyright 2013 ZURB Inc        *
 **********************************************/
 
-/* Client-specific Styles and Reset */
+/*********************************************
+* Converted to arabic by: Araby Alhomsi
+**********************************************/
 
-#outlook a {
-  padding:0;
-}
+/* Client-specific Styles & Reset */
 
-body{
-  width:100% !important;
+#outlook a { 
+  padding:0; 
+} 
+
+body{ 
+  width:100% !important; 
   min-width: 100%;
-  -webkit-text-size-adjust:100%;
-  -ms-text-size-adjust:100%;
-  margin:0;
+  -webkit-text-size-adjust:100%; 
+  -ms-text-size-adjust:100%; 
+  margin:0; 
   padding:0;
+  direction: rtl;
 }
 
-  /* .ExternalClass applies to Outlook.com (the artist formerly known as Hotmail)  */
-
-.ExternalClass {
+.ExternalClass { 
   width:100%;
+} 
+
+.ExternalClass, 
+.ExternalClass p, 
+.ExternalClass span, 
+.ExternalClass font, 
+.ExternalClass td, 
+.ExternalClass div { 
+  line-height: 100%; 
+} 
+
+#backgroundTable { 
+  margin:0; 
+  padding:0; 
+  width:100% !important; 
+  line-height: 100% !important; 
 }
 
-.ExternalClass,
-.ExternalClass p,
-.ExternalClass span,
-.ExternalClass font,
-.ExternalClass td,
-.ExternalClass div {
-  line-height: 100%;
-}
-
-#backgroundTable {
-  margin:0;
-  padding:0;
-  width:100% !important;
-  line-height: 100% !important;
-}
-
-img {
-  outline:none;
-  text-decoration:none;
+img { 
+  outline:none; 
+  text-decoration:none; 
   -ms-interpolation-mode: bicubic;
   width: auto;
-  max-width: 100%;
-  float: left;
-  clear: both;
+  max-width: 100%; 
+  float: right; 
+  clear: both; 
   display: block;
 }
 
@@ -55,7 +59,7 @@ center {
   min-width: 580px;
 }
 
-a img {
+a img { 
   border: none;
 }
 
@@ -68,24 +72,24 @@ table {
   border-collapse: collapse;
 }
 
-td {
+td { 
   word-break: break-word;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  hyphens: none;
-  border-collapse: collapse !important;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  border-collapse: collapse !important; 
 }
 
 table, tr, td {
   padding: 0;
   vertical-align: top;
-  text-align: left;
+  text-align: right;
 }
 
 hr {
-  color: #d9d9d9;
-  background-color: #d9d9d9;
-  height: 1px;
+  color: #d9d9d9; 
+  background-color: #d9d9d9; 
+  height: 1px; 
   border: none;
 }
 
@@ -102,8 +106,8 @@ table.container {
   text-align: inherit;
 }
 
-table.row {
-  padding: 0px;
+table.row { 
+  padding: 0px; 
   width: 100%;
   position: relative;
 }
@@ -113,7 +117,7 @@ table.container table.row {
 }
 
 td.wrapper {
-  padding: 10px 20px 0px 0px;
+  padding: 10px 0px 0px 20px;
   position: relative;
 }
 
@@ -124,14 +128,14 @@ table.column {
 
 table.columns td,
 table.column td {
-  padding: 0px 0px 10px;
+  padding: 0px 0px 10px; 
 }
 
 table.columns td.sub-columns,
 table.column td.sub-columns,
 table.columns td.sub-column,
 table.column td.sub-column {
-  padding-right: 10px;
+  padding-left: 10px;
 }
 
 td.sub-column, td.sub-columns {
@@ -140,7 +144,7 @@ td.sub-column, td.sub-columns {
 
 table.row td.last,
 table.container td.last {
-  padding-right: 0px;
+  padding-left: 0px;
 }
 
 table.one { width: 30px; }
@@ -207,17 +211,17 @@ table.twelve .panel center { min-width: 560px; }
 .body .columns td.twelve,
 .body .column td.twelve { width: 100%; }
 
-td.offset-by-one { padding-left: 50px; }
-td.offset-by-two { padding-left: 100px; }
-td.offset-by-three { padding-left: 150px; }
-td.offset-by-four { padding-left: 200px; }
-td.offset-by-five { padding-left: 250px; }
-td.offset-by-six { padding-left: 300px; }
-td.offset-by-seven { padding-left: 350px; }
-td.offset-by-eight { padding-left: 400px; }
-td.offset-by-nine { padding-left: 450px; }
-td.offset-by-ten { padding-left: 500px; }
-td.offset-by-eleven { padding-left: 550px; }
+td.offset-by-one { padding-right: 50px; }
+td.offset-by-two { padding-right: 100px; }
+td.offset-by-three { padding-right: 150px; }
+td.offset-by-four { padding-right: 200px; }
+td.offset-by-five { padding-right: 250px; }
+td.offset-by-six { padding-right: 300px; }
+td.offset-by-seven { padding-right: 350px; }
+td.offset-by-eight { padding-right: 400px; }
+td.offset-by-nine { padding-right: 450px; }
+td.offset-by-ten { padding-right: 500px; }
+td.offset-by-eleven { padding-right: 550px; }
 
 td.expander {
   visibility: hidden;
@@ -285,7 +289,7 @@ table.column .text-pad-right {
   width:52px;
 }
 
-/* Alignment and Visibility Classes */
+/* Alignment & Visibility Classes */
 
 table.center, td.center {
   text-align: center;
@@ -296,8 +300,7 @@ h2.center,
 h3.center,
 h4.center,
 h5.center,
-h6.center,
-p.center {
+h6.center {
   text-align: center;
 }
 
@@ -315,25 +318,17 @@ img.center {
 .show-for-small,
 .hide-for-desktop {
   display: none;
-  width:0;
-  mso-hide:all;
-  overflow:hidden;
-}
-
-.show-for-small *,
-.hide-for-desktop * {
-	mso-hide:all;
 }
 
 /* Typography */
 
-body, table.body, h1, h2, h3, h4, h5, h6, p, td {
+body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
   color: #222222;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  padding:0;
+  font-family: "Helvetica", "Arial", sans-serif; 
+  font-weight: normal; 
+  padding:0; 
   margin: 0;
-  text-align: left;
+  text-align: right; 
   line-height: 1.3;
 }
 
@@ -354,7 +349,7 @@ p.lead, p.lede, p.leed {
   line-height:21px;
 }
 
-p {
+p { 
   margin-bottom: 10px;
 }
 
@@ -363,48 +358,48 @@ small {
 }
 
 a {
-  color: #2ba6cb;
+  color: #2ba6cb; 
   text-decoration: none;
 }
 
-a:hover {
+a:hover { 
   color: #2795b6 !important;
 }
 
-a:active {
+a:active { 
   color: #2795b6 !important;
 }
 
-a:visited {
+a:visited { 
   color: #2ba6cb !important;
 }
 
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
+h1 a, 
+h2 a, 
+h3 a, 
+h4 a, 
+h5 a, 
 h6 a {
   color: #2ba6cb;
 }
 
-h1 a:active,
-h2 a:active,
-h3 a:active,
-h4 a:active,
-h5 a:active,
-h6 a:active {
-  color: #2ba6cb !important;
-}
+h1 a:active, 
+h2 a:active,  
+h3 a:active, 
+h4 a:active, 
+h5 a:active, 
+h6 a:active { 
+  color: #2ba6cb !important; 
+} 
 
-h1 a:visited,
-h2 a:visited,
-h3 a:visited,
-h4 a:visited,
-h5 a:visited,
-h6 a:visited {
-  color: #2ba6cb !important;
-}
+h1 a:visited, 
+h2 a:visited,  
+h3 a:visited, 
+h4 a:visited, 
+h5 a:visited, 
+h6 a:visited { 
+  color: #2ba6cb !important; 
+} 
 
 /* Panels */
 
@@ -448,23 +443,22 @@ table.large-button td {
   border: 1px solid #2284a1;
   color: #ffffff;
   padding: 8px 0;
-  line-height: initial !important;
 }
 
 table.tiny-button td {
-  padding: 5px 0;
+  padding: 5px 0 4px;
 }
 
 table.small-button td {
-  padding: 8px 0;
+  padding: 8px 0 7px;
 }
 
 table.medium-button td {
-  padding: 12px 0;
+  padding: 12px 0 10px;
 }
 
 table.large-button td {
-  padding: 21px 0;
+  padding: 21px 0 18px;
 }
 
 table.button td a,
@@ -477,9 +471,6 @@ table.large-button td a {
   font-family: Helvetica, Arial, sans-serif;
   color: #ffffff;
   font-size: 16px;
-  display: block;
-  height: 100%;
-  width: 100%;
 }
 
 table.tiny-button td a {
@@ -508,7 +499,7 @@ table.button:active td {
 table.button:hover td a,
 table.button:visited td a,
 table.button:active td a {
-  color: #ffffff !important;
+  color: #fff !important;
 }
 
 table.button:hover td,
@@ -534,28 +525,28 @@ table.medium-button td a:visited,
 table.large-button:hover td a,
 table.large-button:active td a,
 table.large-button td a:visited {
-  color: #ffffff !important;
+  color: #ffffff !important; 
 }
 
 table.secondary td {
   background: #e9e9e9;
   border-color: #d0d0d0;
-  color: #555555;
+  color: #555;
 }
 
 table.secondary td a {
-  color: #555555;
+  color: #555;
 }
 
 table.secondary:hover td {
   background: #d0d0d0 !important;
-  color: #555555;
+  color: #555;
 }
 
 table.secondary:hover td a,
 table.secondary td a:visited,
 table.secondary:active td a {
-  color: #555555 !important;
+  color: #555 !important;
 }
 
 table.success td {
@@ -599,8 +590,8 @@ body.outlook p {
 @media only screen and (max-width: 600px) {
 
   table[class="body"] img {
-    max-width: auto !important;
-    max-height: auto !important;
+    width: auto !important;
+    height: auto !important;
   }
 
   table[class="body"] center {
@@ -618,7 +609,7 @@ body.outlook p {
 
   table[class="body"] .wrapper {
     display: block !important;
-    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
 
   table[class="body"] .columns,
@@ -677,7 +668,7 @@ body.outlook p {
   table[class="body"] td.offset-by-nine,
   table[class="body"] td.offset-by-ten,
   table[class="body"] td.offset-by-eleven {
-    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   table[class="body"] table.columns td.expander {
@@ -686,12 +677,12 @@ body.outlook p {
 
   table[class="body"] .right-text-pad,
   table[class="body"] .text-pad-right {
-    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   table[class="body"] .left-text-pad,
   table[class="body"] .text-pad-left {
-    padding-right: 10px !important;
+    padding-left: 10px !important;
   }
 
   table[class="body"] .hide-for-small,
@@ -701,8 +692,6 @@ body.outlook p {
 
   table[class="body"] .show-for-small,
   table[class="body"] .hide-for-desktop {
-    display : block !important;
-    width : auto !important;
-    overflow : visible !important;
+    display: inherit !important;
   }
 }

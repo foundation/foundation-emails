@@ -10,9 +10,10 @@
     "grunt-cli": "~0.1.9"
   },
   "devDependencies": {
-    "assemble": "~0.4.33",
-    "grunt-shell": "~0.5.0",
-    "grunt-contrib-watch": "~0.5.3"
+    "assemble": "^0.4.42",
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-shell": "~0.5.0"
   },
   "repository": {
     "type": "git",
