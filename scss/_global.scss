@@ -58,6 +58,10 @@ $global-width: 580px !default;
 /// @type Length
 $global-width-small: 95% !default;
 
+/// Gutter for grid elements.
+/// @type length
+$global-gutter: 16px !default;
+
 /// Body background color.
 /// @type Length
 $body-background: $light-gray !default;
