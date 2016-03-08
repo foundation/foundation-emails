@@ -14,12 +14,6 @@ cd project
 npm install
 ```
 
-Foundation for Emails 2.0 is on th v2.0 branch.
-```bash
-git fetch
-git checkout v2.0
-```
-
 Then run `npm start` to run the project. A new browser window will open with a BrowserSync server showing the finished files.
 
 Run `npm run build` to do a full email inlining process.
@@ -32,9 +26,16 @@ The documentation is not yet live online (or finished!), but you can compile wha
 
 Run these commands to set up the documentation:
 
-```
+```bash
 git clone https://github.com/zurb/foundation-emails.git
 cd foundation-emails
+```
+
+Foundation for Emails 2.0 documentation is on the v2.0 branch.
+
+```bash
+git fetch
+git checkout v2.0
 npm install
 ```
 
