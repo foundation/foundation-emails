@@ -74,3 +74,42 @@
     text-align: center;
   }
 }
+
+.block-grid p {
+  background: dodgerblue;
+  text-align: center;
+}
+
+.feature-list {
+  
+  .feature-list-item {
+    border-top: 1px solid $light-gray;
+    td, th {
+      padding: 10px 0 10px 0;
+    } 
+  }
+
+  table.feature-list-image {
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      display: none !important;
+    }
+  }
+
+  .feature-list-item-info {
+    font-size: 14px; 
+    line-height: 21px; 
+    text-transform: uppercase;
+    color: $medium-gray;
+    Margin-bottom: 0;
+  }
+
+  .feature-list-item-header {
+    font-size: 20px; 
+    line-height: 30px;
+    Margin-bottom: 5px;
+
+    a {
+      color: $black;
+    }
+  }
+}
