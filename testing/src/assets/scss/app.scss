@@ -89,12 +89,6 @@
     } 
   }
 
-  table.feature-list-image {
-    @media only screen and (max-width: #{$global-breakpoint}) {
-      display: none !important;
-    }
-  }
-
   .feature-list-item-info {
     font-size: 14px; 
     line-height: 21px; 
