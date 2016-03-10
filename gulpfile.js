@@ -7,6 +7,10 @@ var rimraf = require('rimraf');
 var browser = require('browser-sync');
 var foundationDocs = require('foundation-docs');
 var octophant = require('octophant');
+var inky = require('inky');
+var siphon = require('siphon-media-query');
+var lazypipe = require('lazypipe');
+var fs = require('fs');
 
 // Configuration for the documentation generator
 supercollider
@@ -107,3 +111,34 @@ gulp.task('default', ['server'], function() {
   gulp.watch(['docs/assets/scss/**/*', 'node_modules/foundation-docs/scss/**/*'], ['sass:docs', browser.reload]);
   gulp.watch('scss/**/*.scss', ['sass:foundation', browser.reload]);
 });
+
+gulp.task('test', ['sass', 'test:compile'], function() {
+  browser.init({ server: 'test/visual/_build', directory: true });
+  gulp.watch('scss/**/*.scss', ['sass:foundation', browser.reload]);
+  gulp.watch('test/visual/pages/*.html', ['test:compile', browser.reload]);
+});
+
+gulp.task('test:compile', function() {
+  gulp.src('test/visual/pages/*.html')
+    .pipe($.wrap({ src: 'test/visual/_template.html' }))
+    .pipe(inky())
+    .pipe(inliner('_build/assets/css/foundation.css'))
+    .pipe(gulp.dest('test/visual/_build'));
+});
+
+function inliner(css) {
+  var css = fs.readFileSync(css).toString();
+  var mqCss = siphon(css);
+
+  var pipe = lazypipe()
+    .pipe($.inlineCss, {
+      applyStyleTags: false
+    })
+    .pipe($.injectString.replace, '<!-- <style> -->', `<style>${mqCss}</style>`)
+    .pipe($.htmlmin, {
+      collapseWhitespace: true,
+      minifyCSS: true
+    });
+
+  return pipe();
+}
