@@ -27,7 +27,7 @@
     "gulp-load-plugins": "^1.1.0",
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
-    "inky": "^1.2.0",
+    "inky": "^1.2.2",
     "lazypipe": "^1.0.1",
     "panini": "^1.2.0",
     "rimraf": "^2.3.3",

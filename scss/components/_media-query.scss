@@ -85,8 +85,9 @@
   @for $i from 1 through ($grid-column-count - 1) {
     table.body td.small-offset-#{$i},
     table.body th.small-offset-#{$i} {
-      //1.5 takes in effect a whole empty cell.
+    //1.5 takes in effect a whole empty cell.
       margin-left: -zf-grid-calc-pct($i, $grid-column-count) !important;
+      Margin-left: -zf-grid-calc-pct($i, $grid-column-count) !important;
     }
   }
 

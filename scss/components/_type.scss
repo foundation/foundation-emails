@@ -152,9 +152,10 @@ th,
 a {
   color: $global-font-color;
   font-family: $body-font-family;
-  font-weight: $header-font-weight;
+  font-weight: $global-font-weight;
   padding: 0;
   margin: 0;
+  Margin: 0;
   text-align: left;
   line-height: $global-line-height;
 }
@@ -168,6 +169,8 @@ h6 {
   color: $header-color;
   word-break: normal;
   font-family: $header-font-family;
+  font-weight: $header-font-weight;
+  margin-bottom: $header-margin-bottom;
   Margin-bottom: $header-margin-bottom;
 }
 
@@ -205,6 +208,7 @@ th {
 }
 
 p {
+  margin-bottom: $paragraph-margin-bottom;
   Margin-bottom: $paragraph-margin-bottom;
 
   &.lead {
@@ -213,6 +217,8 @@ p {
   }
 
   &.subheader {
+    margin-top: $subheader-margin-top;
+    margin-bottom: $subheader-margin-bottom;
     Margin-top: $subheader-margin-top;
     Margin-bottom: $subheader-margin-bottom;
     font-weight: $subheader-font-weight;
@@ -260,6 +266,7 @@ h6 a:visited {
 pre {
   background: $light-gray;
   margin: 30px 0;
+  Margin: 30px 0;
 
   code {
     color: $medium-gray;
@@ -285,6 +292,7 @@ hr {
   border-top: 0;
   border-bottom: $hr-border;
   border-left: 0;
+  margin: $hr-margin;
   Margin: $hr-margin;
   clear: both;
 }
@@ -295,6 +303,7 @@ hr {
   line-height: 1;
 
   p + & {
+    margin-top: -16px;
     Margin-top: -16px;
   }
 }

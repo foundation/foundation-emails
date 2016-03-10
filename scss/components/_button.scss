@@ -72,6 +72,7 @@ $button-padding-large: map-get($button-padding, large);
 
 table.button {
   width: auto !important;
+  margin: $button-margin;
   Margin: $button-margin;
 
   table {

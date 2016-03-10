@@ -96,4 +96,4 @@ $global-rounded: 500px !default;
 
 /// Global media query to switch from desktop to mobile styles.
 /// @type String
-$global-breakpoint: $global-width + $global-gutter;
+$global-breakpoint: $global-width + $global-gutter !default;

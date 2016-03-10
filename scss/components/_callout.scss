@@ -43,6 +43,8 @@ td.callout {
   border: $callout-border;
   padding: $callout-padding;
   background: $callout-background;
+  margin-bottom: $global-margin;
+  Margin-bottom: $global-margin;
 
   &.primary {
     background: scale-color($primary-color, $lightness: $callout-background-fade);
