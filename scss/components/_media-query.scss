@@ -105,16 +105,6 @@
     padding-right: $text-padding !important;
   }
 
-  table.body .hide-for-small,
-  table.body .show-for-desktop {
-    display: none !important;
-  }
-
-  table.body .show-for-small,
-  table.body .hide-for-desktop {
-    display: inherit !important;
-  }
-
   //menu
   table.menu {
     td,

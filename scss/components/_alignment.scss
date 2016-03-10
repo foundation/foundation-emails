@@ -44,6 +44,7 @@ span.text-right {
 span.text-center {
   display: block;
   width: 100%;
+  text-align: center;
 }
 
 img.float-left {
@@ -56,13 +57,16 @@ img.float-right {
   text-align: right;
 }
 
-img.float-center, img.text-center {
+img.float-center, 
+img.text-center {
   margin: 0 auto;
   float: none;
   text-align: center;
 }
 
-table.float-center {
+table.float-center,
+td.float-center,
+th.float-center {
   margin: 0 auto;
   float: none;
   text-align: center;

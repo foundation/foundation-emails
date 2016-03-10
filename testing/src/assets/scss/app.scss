@@ -12,10 +12,6 @@
     text-align: center;
   }
 
-  .up-3 td {
-    width: 45% !important;
-  }
-
   table.menu.small-vertical {
     td,
     th,
@@ -77,13 +73,6 @@
   }
 }
 
-// testing styles
-
-.block-grid p {
-  background: dodgerblue;
-  text-align: center;
-}
-
 
 // building block
 
@@ -115,12 +104,4 @@
   }
 }
 
-
-  .columns {
-    border: 1px solid red;
-
-    p {
-      background: green;
-    }
-  }
 

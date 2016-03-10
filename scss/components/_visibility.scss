@@ -6,22 +6,33 @@
 /// @group visibility
 ////
 
-.hide-for-large {
-  display: none;
+table.body .hide-for-large {
+  display: none !important;
   width:0;
   mso-hide:all;
   overflow:hidden;
 
   @media only screen and (max-width: #{$global-breakpoint}) {
-    display: block;
+    display: inherit !important;
   }
 }
 
-.show-for-large {
+table.body .row.hide-for-large,
+table.body .row.hide-for-large {
   @media only screen and (max-width: #{$global-breakpoint}) {
-    display: none;
+    display: table !important;
+    width: 100%;
+  }
+}
+
+table.body .show-for-large {
+  @media only screen and (max-width: #{$global-breakpoint}) {
+    display: none !important;
     width:0;
     mso-hide:all;
     overflow:hidden;
   }
 }
+
+
+
