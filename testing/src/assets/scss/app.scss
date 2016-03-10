@@ -25,6 +25,8 @@
   }
 }
 
+
+
 .header {
   background: $light-gray;
   border-radius: 10px;
@@ -75,10 +77,15 @@
   }
 }
 
+// testing styles
+
 .block-grid p {
   background: dodgerblue;
   text-align: center;
 }
+
+
+// building block
 
 .feature-list {
   
@@ -107,3 +114,13 @@
     }
   }
 }
+
+
+  .columns {
+    border: 1px solid red;
+
+    p {
+      background: green;
+    }
+  }
+
