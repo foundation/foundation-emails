@@ -41,36 +41,36 @@ $callout-border-alert: 1px solid darken($alert-color, 20%) !default;
 td.callout {
   width: 100%;
   border: $callout-border;
-  padding: $callout-padding !important;
+  padding: $callout-padding;
   background: $callout-background;
 
   &.primary {
-    background: scale-color($primary-color, $lightness: $callout-background-fade) !important;
-    border: $callout-border-secondary !important;
-    color: $black !important;
+    background: scale-color($primary-color, $lightness: $callout-background-fade);
+    border: $callout-border-secondary;
+    color: $black;
   }
 
   &.secondary {
-    background: scale-color($secondary-color, $lightness: $callout-background-fade) !important;
-    border: $callout-border-secondary !important;
-    color: $black !important;
+    background: scale-color($secondary-color, $lightness: $callout-background-fade);
+    border: $callout-border-secondary;
+    color: $black;
   }
 
   &.success {
-    background: scale-color($success-color, $lightness: $callout-background-fade) !important;
-    border: $callout-border-success !important;
-    color: $white !important;
+    background: scale-color($success-color, $lightness: $callout-background-fade);
+    border: $callout-border-success;
+    color: $white;
   }
 
   &.warning {
-    background: scale-color($warning-color, $lightness: $callout-background-fade) !important;
-    border: $callout-border-warning !important;
-    color: $white !important;
+    background: scale-color($warning-color, $lightness: $callout-background-fade);
+    border: $callout-border-warning;
+    color: $white;
   }
 
   &.alert {
-    background: scale-color($alert-color, $lightness: $callout-background-fade) !important;
-    border: $callout-border-alert !important;
-    color: $white !important;
+    background: scale-color($alert-color, $lightness: $callout-background-fade);
+    border: $callout-border-alert;
+    color: $white;
   }
 }

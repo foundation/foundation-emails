@@ -12,7 +12,7 @@ $primary-color: #2199e8 !default;
 
 /// Secondary color, used with components that support the `.secondary` class.
 /// @type Color
-$secondary-color: #777 !default;
+$secondary-color: #777777 !default;
 
 /// Color to indicate a positive status or action, used with the `.success` class.
 /// @type Color
@@ -84,7 +84,7 @@ $global-padding: 16px !default;
 
 /// Global margin. Margin requires a capital 'M' to workin Outlook.com
 /// @type Number
-$global-margin: 32px !default;
+$global-margin: 16px !default;
 
 /// Global raidus of radius-corners.
 /// @type Number

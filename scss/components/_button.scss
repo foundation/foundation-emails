@@ -72,9 +72,9 @@ $button-padding-large: map-get($button-padding, large);
 
 table.button {
   width: auto !important;
+  Margin: $button-margin;
 
   table {
-    margin-bottom: $button-margin;
 
     td {
       width: auto !important;
@@ -197,7 +197,7 @@ table.button.secondary {
   table {
     td {
       background: $secondary-color;
-      color: $button-color-alt;
+      color: $button-color;
       border: 2px solid $secondary-color;
     }
 

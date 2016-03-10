@@ -29,7 +29,6 @@ table {
 
   &.container {
     background: $container-background;
-
     width: $global-width;
     margin: 0 auto;
     text-align: inherit;
@@ -110,7 +109,8 @@ th.column {
 }
 
 @for $i from 1 through $grid-column-count {
-  td.large-#{$i} center {
+  td.large-#{$i} center,
+  th.large-#{$i} center {
     min-width: -zf-grid-calc-px($i, $grid-column-count, $global-width);
   }
 }
