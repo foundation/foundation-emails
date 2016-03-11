@@ -56,20 +56,6 @@ $button-radius: $global-radius !default;
 /// @type Number
 $button-rounded: $global-rounded !default;
 
-// Internal values for button font size
-// [TODO] Replace references below with map-get() calls
-$button-font-size-default: map-get($button-font-size, default);
-$button-font-size-tiny: map-get($button-font-size, tiny);
-$button-font-size-small: map-get($button-font-size, small);
-$button-font-size-large: map-get($button-font-size, large);
-
-// Internal values for button padding
-// [TODO] Replace references below with map-get() calls
-$button-padding-default: map-get($button-padding, default);
-$button-padding-tiny: map-get($button-padding, tiny);
-$button-padding-small: map-get($button-padding, small);
-$button-padding-large: map-get($button-padding, large);
-
 table.button {
   width: auto !important;
   margin: $button-margin;
@@ -94,12 +80,12 @@ table.button {
 
       a {
         font-family: $body-font-family;
-        font-size: $button-font-size-default;
+        font-size: map-get($button-font-size, default);
         font-weight: $button-font-weight;
         color: $button-color;
         text-decoration: none;
         display: inline-block;
-        padding: $button-padding-default;
+        padding: map-get($button-padding, default);
         border: 0px solid $button-background;
         border-radius: $button-radius;
       }
@@ -126,11 +112,11 @@ table.button.tiny {
   table {
     td,
     a {
-      padding: $button-padding-tiny;
+      padding: map-get($button-padding, tiny);
     }
 
     a {
-      font-size: $button-font-size-tiny;
+      font-size: map-get($button-font-size, tiny);
       font-weight: normal;
     }
   }
@@ -140,8 +126,8 @@ table.button.small {
   table {
     td,
     a {
-      padding: $button-padding-small;
-      font-size: $button-font-size-small;
+      padding: map-get($button-padding, small);
+      font-size: map-get($button-font-size, small);
     }
   }
 }
@@ -149,8 +135,8 @@ table.button.small {
 table.button.large {
   table {
     a {
-      padding: $button-padding-large;
-      font-size: $button-font-size-large;
+      padding: map-get($button-padding, large);
+      font-size: map-get($button-font-size, large);
     }
   }
 }
