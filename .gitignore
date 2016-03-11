@@ -6,3 +6,4 @@ temp/
 dist/
 _build/
 inky
+*.swp
