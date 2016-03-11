@@ -135,7 +135,7 @@ function inliner(css) {
       applyStyleTags: false,
       removeStyleTags: false
     })
-    .pipe($.injectString.replace, '<!-- <style> -->', `<style>${mqCss}</style>`)
+    .pipe($.injectString.replace, '<!-- <style> -->', '<style>'+mqCss+'</style>')
     .pipe($.htmlmin, {
       collapseWhitespace: true,
       minifyCSS: true
