@@ -5,15 +5,15 @@ description: Use Foundation for Emails to design responsive HTML emails that wor
 
 ## Getting Started
 
-There are two ways to use Foundation: the CSS version and the Sass version.
+There are two ways to get started with Foundation for Emails: the CSS version and the Sass version.
 
 The **CSS version** is a ZIP file download with all the HTML and CSS you need to get started writing an HTML email. You'll need to run your HTML through our web inliner before you can send them off.
 
-<a href="css-workflow.html" class="large button">Get Started with CSS Version</a>
+<a href="css-guide.html" class="large button">Get Started with CSS Version</a>
 
 The **Sass version** gives you more control over the visual styles of the framework, and a full build process, which includes a Sass compiler and image compression. It also includes Inky, our custom HTML language which makes writing code faster, a built-in inliner, and a live reloading server for testing. **The Sass version requires you to have Node.js installed.**
 
-<a href="sass-workflow.html" class="large button">Get Started with Sass Version</a>
+<a href="sass-guide.html" class="large button">Get Started with Sass Version</a>
 
 ---
 
@@ -32,15 +32,15 @@ Get to know the pieces of Foundation.
     <strong>Using Inky</strong>
     <p>Our custom HTML tags for writing email components.</p>
   </a></div>
-  <div class="column"><a href="inky.html">
+  <div class="column"><a href="zurb-stack.html">
     <strong>ZURB Stack</strong>
     <p>An all-in-one solution for email development.</p>
   </a></div>
-  <div class="column"><a href="inky.html">
+  <div class="column"><a href="compatibility.html">
     <strong>Compatibility</strong>
     <p>Foundation works with every key email client&mdash;even Outlook.</p>
   </a></div>
-  <div class="column"><a href="inky.html">
+  <div class="column"><a href="migration.html">
     <strong>Migrate from Ink</strong>
     <p>Upgrade your Ink emails to Foundation for Emails 2.</p>
   </a></div>

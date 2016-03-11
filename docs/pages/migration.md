@@ -1,9 +1,13 @@
 ---
 title: Migration
 description: How to migrate from Ink to Foundation for Emails 2.
+tags:
+  - upgrade
 ---
 
 This guide describes the changes required to migrate a Foundation for Emails template from version 1 (formerly Ink) to 2.
+
+---
 
 ## What’s new?
 
@@ -11,6 +15,8 @@ This guide describes the changes required to migrate a Foundation for Emails tem
 - **Inky templating language:** With Inky you can write less code and get more done. The Inky language gets you out of tables and into a simpler, more web-like, HTML.
 - **Built with Sass:** Now faster than ever, you can easily make sweeping visual changes to your email that reflect your brand styles - all within one settings file.
 - **ZURB Stack:** All kinds of task automation - [Panini](http://foundation.zurb.com/sites/docs/panini.html), our Handlebars templates, compiling Sass, BrowserSync, image compression, and auto inlining are built in to speed up your workflow.
+
+---
 
 ## Overview
 
@@ -32,6 +38,8 @@ What’s new that you might want to use:
 - Menu - Horizontal
 - Menu - Vertical
 
+---
+
 ## HTML
 
 With Foundation for Emails 2, confusing and tedious tables are a thing of the past. The new Inky markup will save you time and energy coding your emails. It looks like:
@@ -47,6 +55,8 @@ With Foundation for Emails 2, confusing and tedious tables are a thing of the pa
 
 You can use it to create the grid structure, buttons, and other components. We’ll go into this in detail in the components section. We'll explain more in the [Grid section](https://github.com/zurb/foundation-emails/blob/master/migration.md#grid).
 
+---
+
 ## CSS/Sass
 
 Foundation for Emails 2 is available in a Sass version which let’s you quickly change common CSS values with some simple variables within the settings.
@@ -58,9 +68,9 @@ These are some CSS classes that are no longer needed for proper spacing:
 - .text-pad-left
 - .text.pad-right
 
-***
+---
+
 ## Components
-***
 
 ### Grid
 
@@ -126,7 +136,10 @@ Version 2 (Inky markup)
 </container>
 ```
 
+---
+
 ### Sub-grid is now a small grid
+
 In an effort to unify the thinking across the Foundation family, we’ve removed the sub-columns and moved towards a fully functional small grid.
 
 Version 1
@@ -193,7 +206,10 @@ Version 2 (Inky markup)
 </container>
 ```
 
+---
+
 ### Block Grid
+
 The block grid has a minor syntax change with identifying the number of elements that are displayed in the row. We’ve moved to the convention of `.up-x`, instead of `.ex-up`.
 
 
@@ -235,7 +251,10 @@ Version 2 (Inky markup)
 </block-grid>
 ```
 
+---
+
 ### Offset Columns
+
 Because we’ve eliminated the wrapper, offsets are now directly applied to the column itself.
 
 Version 1
@@ -280,7 +299,10 @@ Version 2 (Inky markup)
 </row>
 ```
 
+---
+
 ## Buttons
+
 In the previous version of F4E the text inside of the button was the only clickable element. In F4E 2, we’ve taken the hybrid approach of using padding and borders to increase the clickable area
 
 Version 1
@@ -321,7 +343,10 @@ Version 2 (Inky markup)
 
 The button markup has changed to make the touch targets better. Now the whole button is clickable. It requires more table markup but you should use Inky anyways which is much simpler.
 
+---
+
 ## Panels are now Callouts
+
 In an effort to unify the terminology across the Foundation family panels are now called callouts.
 
 Version 1
@@ -356,9 +381,9 @@ Version 2 (Inky markup)
 Work in progress - issue [188](https://github.com/zurb/foundation-emails/issues/188)
 ```
 
-***
-## NEW
-***
+---
+
+## New Components
 
 ### Menu
 
@@ -385,6 +410,8 @@ Version 2 (Inky markup)
 ```
 
 The menu component can be used to create a simple set of links comonly used in headers, for social icons or in footers. Adding the `.vertical` class will change the orientation.
+
+---
 
 ## Dependencies
 
