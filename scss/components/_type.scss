@@ -155,7 +155,6 @@ a {
   font-weight: $global-font-weight;
   padding: 0;
   margin: 0;
-  Margin: 0;
   text-align: left;
   line-height: $global-line-height;
 }
@@ -171,7 +170,6 @@ h6 {
   font-family: $header-font-family;
   font-weight: $header-font-weight;
   margin-bottom: $header-margin-bottom;
-  Margin-bottom: $header-margin-bottom;
 }
 
 h1 {
@@ -209,7 +207,6 @@ th {
 
 p {
   margin-bottom: $paragraph-margin-bottom;
-  Margin-bottom: $paragraph-margin-bottom;
 
   &.lead {
     font-size: $lead-font-size;
@@ -219,8 +216,6 @@ p {
   &.subheader {
     margin-top: $subheader-margin-top;
     margin-bottom: $subheader-margin-bottom;
-    Margin-top: $subheader-margin-top;
-    Margin-bottom: $subheader-margin-bottom;
     font-weight: $subheader-font-weight;
     line-height: $subheader-lineheight;
     color: $subheader-color;
@@ -266,7 +261,6 @@ h6 a:visited {
 pre {
   background: $light-gray;
   margin: 30px 0;
-  Margin: 30px 0;
 
   code {
     color: $medium-gray;
@@ -293,7 +287,6 @@ hr {
   border-bottom: $hr-border;
   border-left: 0;
   margin: $hr-margin;
-  Margin: $hr-margin;
   clear: both;
 }
 
@@ -304,7 +297,6 @@ hr {
 
   p + & {
     margin-top: -16px;
-    Margin-top: -16px;
   }
 }
 
