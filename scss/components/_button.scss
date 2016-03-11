@@ -190,7 +190,7 @@ table.button.secondary {
     }
 
     a {
-      color: $button-color-alt;
+      color: $button-color;
       border: 0px solid $secondary-color;
     }
   }
@@ -200,7 +200,7 @@ table.button.secondary:hover {
   table {
     td {
       background: lighten($secondary-color, 10%);
-      color: $button-color-alt;
+      color: $button-color;
     }
 
     a {
@@ -212,7 +212,7 @@ table.button.secondary:hover {
 table.button.secondary:hover {
   table {
     td a {
-      color: $button-color-alt;
+      color: $button-color;
     }
   }
 }
@@ -220,7 +220,7 @@ table.button.secondary:hover {
 table.button.secondary:active {
   table {
     td a {
-      color: $button-color-alt;
+      color: $button-color;
     }
   }
 }
@@ -228,7 +228,7 @@ table.button.secondary:active {
 table.button.secondary {
   table {
     td a:visited {
-      color: $button-color-alt;
+      color: $button-color;
     }
   }
 }
