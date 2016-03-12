@@ -38,7 +38,7 @@ $callout-border-warning: 1px solid darken($warning-color, 20%) !default;
 /// @type Border
 $callout-border-alert: 1px solid darken($alert-color, 20%) !default;
 
-td.callout {
+th.callout {
   width: 100%;
   border: $callout-border;
   padding: $callout-padding;
