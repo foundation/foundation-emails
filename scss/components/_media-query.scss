@@ -114,7 +114,7 @@
       display: inline-block !important;
     }
 
-    &.vertical {
+    &.vertical, &.small-vertical {
       td,
       th {
         display: block !important;
