@@ -18,9 +18,20 @@ supercollider
     template: foundationDocs.componentTemplate,
     marked: foundationDocs.marked,
     handlebars: foundationDocs.handlebars,
+    keepFm: true,
+    quiet: false,
+    pageRoot: 'docs/pages',
     data: {
       repoName: 'foundation-emails',
       editBranch: 'v2.0'
+    }
+  })
+  .searchConfig({
+    sort: ['page', 'component', 'sass variable', 'sass mixin', 'sass function', 'js class', 'js function', 'js plugin option', 'js event'],
+    pageTypes: {
+      library: function(item) {
+        return !!(item.library);
+      }
     }
   })
   .adapter('sass')
@@ -47,7 +58,10 @@ gulp.task('html', function() {
       layouts: 'docs/layouts/',
       partials: 'docs/partials/'
     }))
-    .pipe(gulp.dest('_build'));
+    .pipe(gulp.dest('_build'))
+    .on('finish', function() {
+      supercollider.buildSearch('_build/data/search.json', function() {});
+    });
 });
 
 gulp.task('sass', ['sass:docs', 'sass:foundation']);
