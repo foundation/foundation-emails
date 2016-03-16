@@ -11,7 +11,7 @@ description: Foundation for Emails is written in Sass, which allows us to make t
 
 <img src="assets/img/logos/sass-logo.svg" alt="Sass logo" class="float-right" style="width: 150px; height: 150px; margin-left: 1rem;">
 
-**Foundation for Sites can be compiled with Ruby Sass and libsass.** We tend to stick to the latest versions of both compilers when possible. Our documentation, as well as the ZURB Email Stack, are compiled with [node-sass](https://github.com/sass/node-sass), a Node port of libsass. We recommend these versions of either compiler:
+**Foundation for Emails can be compiled with Ruby Sass and libsass.** We tend to stick to the latest versions of both compilers when possible. Our documentation, as well as the ZURB Email Stack, are compiled with [node-sass](https://github.com/sass/node-sass), a Node port of libsass. We recommend these versions of either compiler:
 
 - Ruby Sass **3.4+**
 - node-sass **3.4.2+** (libsass **3.3.2**)
@@ -38,7 +38,7 @@ grunt.initConfig({
   sass: {
     dist: {
     options: {
-        loadPath: ['node_modules/foundation-sites/scss']
+        loadPath: ['node_modules/foundation-emails/scss']
       }
     }
   }
@@ -48,7 +48,7 @@ grunt.initConfig({
 If you're using Compass, open your project's `config.rb` and add the import path there:
 
 ```ruby
-add_import_path "node_modules/foundation-sites/scss"
+add_import_path "node_modules/foundation-emails/scss"
 ```
 
 Finally, add an `@import` statement to the top of your main Sass file.
