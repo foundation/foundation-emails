@@ -119,7 +119,7 @@ td.wrapper {
 
 table.columns,
 table.column {
-  margin: 0 auto;
+  margin: 0 auto 0 0;
 }
 
 table.columns td,
