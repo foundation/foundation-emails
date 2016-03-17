@@ -3,15 +3,20 @@ title: Getting Started with Sass
 description: Get started with the Sass-powered ZURB Stack for writing HTML emails.
 ---
 
-The Sass workflow needs a bit of installation to get going and uses some more technically complex tools like Gulp. This approach makes it wicked fast to code and keeps your code amazingly clean with our new custom HTML tags in Inky. The Sass Workflow lets you use handlebars, which uses partials for things like the header and footer. You can also easily make sweeping design changes with Sass’s variables and our Settings.scss file. Here’s everything that’s packaged in this approach:
+Foundation for Emails takes the pain out of developing HTML emails by giving you a set of powerful, tested components out of the box. This includes a fully-responsive grid, buttons, callouts, menus, and more.
 
-- Inky Templating language support
+The Sass workflow for Foundation for Emails is backed by the [ZURB Email Stack](zurb-stack.html), an all-in-one build system for creating HTML emails. This workflow requires a bit more up-front setup, but the tooling makes it wicked fast to code, and keeps your code amazingly clean with our new custom HTML tags in Inky.
+
+The ZURB Stack workflow also includes Handlebars, allowing you to write emails as templates instead of static files. Lastly, you can easily make sweeping design changes with the Sass [settings file](sass.html). Here’s everything that’s packaged in this template:
+
+- Inky HTML
 - Sass
-- Boilerplate
-- Panini
+- Handlebars templates
 - BrowserSync
-- Image Compression
-- Gulp
+- Image compression
+- Inlining
+
+In this Getting Started guide, we'll download Foundation for Emails, construct the basic grid, and then inline our email so it's ready to test.
 
 ---
 
@@ -23,31 +28,25 @@ To use the Sass version of Foundation for Emails, you need Node.js installed on 
 
 ## Installing
 
-There’s a couple of ways to get the Sass Workflow on your machine Either our Command-Line Tool (CLI) or  cloning the repo from Github.
-
-You’ll need to fire up your terminal to install via the CLI. Just run the following command to install the Foundation CLI.
-
-Note: If you already have the Foundation CLI installed from Sites or Apps, you can skip this first command.
+We'll use the Foundation CLI to set up a new project. If you already have the Foundation CLI installed from Foundation for Sites or Apps, you can skip this first command.
 
 ```bash
 npm install --global foundation-cli
 ```
 
-If you have any errors after running this command, try running the command:
+If you run into any errors on OS X or Linux, you can try prefixing the command with `sudo`.
 
 ```bash
 sudo npm install --global foundation-cli
 ```
 
-Some machines require sudo for npm commands.
-
-Once the CLI is installed on your machine, it’s super easy to fire up a Foundation for Emails Project. Move into your sites folder in your terminal (something like `cd yourWorkingDirectory`) and just run the following command:
+Once the CLI is installed on your machine, it’s super easy to fire up a blank Foundation for Emails project. Move into the folder you store your projects in, and then run this command:
 
 ```bash
 foundation new --framework emails
 ```
 
-The CLI will ask you for a project name, which is used as the name of the folder to install in.
+The CLI will ask you for a project name, which is used as the name of the folder to install in. After that, the template will be downloaded, and the various dependencies installed. The entire process takes over a minute.
 
 ---
 
@@ -65,7 +64,7 @@ This will kick off the build process, which includes HTML parsing, Sass, image c
 
 ## File Structure
 
-You'll do all of your work in the `src` folder of your project. The various HTML files, Sass files, and images inside of `src` are compiled to a new folder called `dist` (meaning "distribution"), which contains the final HTML and CSS for your emails. These are the files you'll upload to Litmus, Campaign Monitor, etc. for testing, or load into your email campaign service.
+You'll do all of your work in the `src` folder of your project. The various HTML files, Sass files, and images inside of `src` are compiled to a new folder called `dist/` (as in "distribution"), which contains the final HTML and CSS for your emails. These are the files you'll upload to Litmus, Campaign Monitor, etc. for testing, or load into your email campaign service.
 
 Here's a breakdown of the files in the `src` folder:
 
@@ -78,7 +77,7 @@ Here's a breakdown of the files in the `src` folder:
 
 ## Boilerplate
 
-Inside `src/layouts/default.html`, you can see the boilerplate needed to make an HTML work, with comments explaining what does what.
+Inside `src/layouts/default.html`, you can see the boilerplate needed to make an HTML work. Below we've annotated this boilerplate, explaining what does what.
 
 {{{{raw}}}}
 
