@@ -41,6 +41,10 @@ npm install
 
 Then run `npm start` to compile the documentation. When it finishes, a new browser window will open pointing to a BrowserSync server displaying the documentation.
 
+## Testing
+
+Run `npm run test:visual` to compile the visual regression tests. All of the pages under `test/visual/pages` are compiled and inlined. From there, they can be uploaded to Litmus for testing.
+
 ## Inky
 
 [Inky](https://github.com/zurb/inky) is our new templating language that converts simple HTML into the complex tables required for email layout.
