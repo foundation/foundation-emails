@@ -10,7 +10,7 @@ HTML emails require tables upon tables *upon tables* to work properly. Although 
 
 Inky keeps you out of a sea of tables and focused on your email. Check out this example&mdash;click "Switch to Inky" to see the difference.
 
-```inky
+```inky_example
 <container>
   <row>
     <columns></columns>

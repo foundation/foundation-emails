@@ -8,7 +8,7 @@ Creating a bullet-proof button that works in all email clients requires a table 
 
 In Inky HTML, the `<button>` tag creates all of this markup for you.
 
-```inky
+```inky_example
 <button href="zurb.com">Button</button>
 ```
 
@@ -20,7 +20,7 @@ Buttons can be made larger or smaller by adding the class `.tiny`, `.small`, or 
 
 In Inky HTML, add the same class to the `<button>` tag.
 
-```inky
+```inky_example
 <button href="zurb.com" class="tiny">Tiny Button</button>
 <button href="zurb.com" class="small">Small Button</button>
 <button href="zurb.com" class="large">Large Button</button>
@@ -34,7 +34,7 @@ To create an expanded button, add the class `.expanded` to the outer `<table>` o
 
 In Inky HTML, add the `.expanded` class to the `<button>` tag.
 
-```inky
+```inky_example
 <button href="zurb.com" class="expand">Expanded Button</button>
 ```
 
@@ -44,7 +44,7 @@ In Inky HTML, add the `.expanded` class to the `<button>` tag.
 
 Change the background color of a button by adding the class `.secondary`, `.success`, `.warning`, or `.alert` to the outer `<table>` (or the `<button>` tag in Inky HTML).
 
-```inky
+```inky_example
 <button href="zurb.com" class="secondary">Secondary Button</button>
 <button href="zurb.com" class="success">Success Button</button>
 <button href="zurb.com" class="warning">Warning Button</button>

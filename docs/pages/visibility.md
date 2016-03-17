@@ -9,7 +9,7 @@ You can use a visibility class to selectively show or hide content on mobile vs.
 
 **To show content only on mobile clients,** add the class `.hide-for-large` to the element.
 
-```inky
+```inky_example
 <callout class="hide-for-large">
   <p>This callout will only appear on small screens.</p>
 </callout>
@@ -17,7 +17,7 @@ You can use a visibility class to selectively show or hide content on mobile vs.
 
 **To show content only on desktop clients,** add the class `.show-for-large` to the element.
 
-```inky
+```inky_example
 <callout class="show-for-large">
   <p>This callout will only appear on large screens.</p>
 </callout>

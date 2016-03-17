@@ -12,7 +12,7 @@ The wrapper of a block grid is a `<table>` with the class `.block-grid`, and a `
 
 In Inky HTML, use the `<block-grid>` tag with the attribute `up="n"`, where `n` is the number of items per row.
 
-```inky
+```inky_example
 <block-grid up="3">
   <td>Item 1</td>
   <td>Item 2</td>

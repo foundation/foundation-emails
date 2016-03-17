@@ -10,7 +10,7 @@ A menu is a `<table>` with a class of `.menu` and a `<tr>` inside of it. Each li
 
 In Inky HTML, use the tag `<menu>` to make a menu, and the tag `<item>` to make an item.
 
-```inky
+```inky_example
 <menu>
   <item href="http://zurb.com">Item</item>
   <item href="http://zurb.com">Item</item>
@@ -24,7 +24,7 @@ In Inky HTML, use the tag `<menu>` to make a menu, and the tag `<item>` to make 
 
 Menu items have padding around them, which in some situations will misalign your link text with another element of your design. To strip the padding from menu items, add the class `.simple` to the menu. There will still be some horizontal space between them, to space them out.
 
-```inky
+```inky_example
 <menu class="simple">
   <item href="http://zurb.com">Item</item>
   <item href="http://zurb.com">Item</item>
@@ -38,7 +38,7 @@ Menu items have padding around them, which in some situations will misalign your
 
 Menus align horizontally by default. To switch to a vertical menu, add the class `.vertical` to the menu.
 
-```inky
+```inky_example
 <menu class="vertical">
   <item href="http://zurb.com">Item</item>
   <item href="http://zurb.com">Item</item>

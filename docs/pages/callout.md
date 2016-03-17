@@ -13,7 +13,7 @@ Callouts use a full table structure, with the class `.callout` applied to the in
 
 When using [Inky](inky.html) HTML, the `<callout>` tag will create this structure for you.
 
-```inky
+```inky_example
 <callout>
   <p>Beware of the Kraken! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
 </callout>
@@ -25,7 +25,7 @@ When using [Inky](inky.html) HTML, the `<callout>` tag will create this structur
 
 The color of a callout can be changed by adding the class `.success`, `.warning`, or `.alert` to the element.
 
-```inky
+```inky_example
 <callout class="primary">
   <p>Successfully avoided Kraken. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
 </callout>
