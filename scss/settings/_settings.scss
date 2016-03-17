@@ -128,8 +128,9 @@ $callout-border-alert: 1px solid darken($alert-color, 20%);
 // 7. Menu
 // -------
 
-$menu-item-padding: 20px;
-$menu-simple-item-spacing: 10px;
+$menu-item-padding: 0;
+$menu-item-gutter: 10px;
+$menu-item-color: $primary-color;
 
 // 8. Thumbnial
 // ------------

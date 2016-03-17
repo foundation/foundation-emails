@@ -8,46 +8,46 @@
 
 /// Padding inside a menu item.
 /// @type Length
-$menu-item-padding: 20px !default;
+$menu-item-padding: 0 !default;
 
 /// Right-hand spacing of items in menus with the `.simple` class.
 /// @type Length
-$menu-simple-item-spacing: 10px !default;
+$menu-item-gutter: 10px !default;
+
+/// This is the color of the menu item links.
+/// @type Color
+$menu-item-color: $primary-color !default;
 
 
 table.menu {
-  width: 100%;
+  width: $global-width;
 
-  td,
-  th {
-    display: inline-block;
+  td.menu-item,
+  th.menu-item{
     padding: $menu-item-padding;
-  }
-}
+    padding-right: $menu-item-gutter;
 
-table.menu.simple {
-  td,
-  th {
-    padding: 0;
-    padding-right: $menu-simple-item-spacing;
+    a {
+      color: $menu-item-color; 
+    }
   }
 }
 
 // Doesn't work on the pesky ESPs like outlook 2000
 table.menu.vertical {
-  td,
-  th,
+  td.menu-item,
+  th.menu-item,
   a {
     display: block;
     width: 100%;
   }
 
   // Nested lists need some more padding to the left
-  td,
-  th {
+  td.menu-item,
+  th.menu-item {
     table.menu.vertical {
-      td,
-      th {
+      td.menu-item,
+      th.menu-item {
         padding-left: $menu-item-padding;
       }
     }
