@@ -93,8 +93,8 @@ th.column {
 
   //Collapsed logic
   .collapse {
-    > td.large-#{$i},
-    > th.large-#{$i} {
+    tbody > tr > td.large-#{$i},
+    tbody > tr > th.large-#{$i} {
       padding-right: 0;
       padding-left: 0;
       width: -zf-grid-calc-px($i, $grid-column-count, $global-width) + $global-gutter;
