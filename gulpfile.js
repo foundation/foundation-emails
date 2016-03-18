@@ -114,6 +114,17 @@ gulp.task('server', ['build'], function() {
   });
 });
 
+// Uploads the documentation to the live server
+gulp.task('deploy:docs', ['build'], function() {
+  return gulp.src('./_build/**')
+    .pipe($.prompt.confirm('Make sure everything looks right before you deploy.'))
+    .pipe($.rsync({
+      root: './_build',
+      hostname: 'deployer@72.32.134.77',
+      destination: '/home/deployer/sites/foundation-emails-march16'
+    }));
+});
+
 // Runs the entire build process
 gulp.task('build', function(cb) {
   sequence('clean', ['copy', 'html', 'sass', 'javascript:docs'], cb);
