@@ -30,21 +30,21 @@
     box-sizing: border-box;
     padding-left: $global-gutter !important;
     padding-right: $global-gutter !important;
-    
-    // Nested columns won't double the padding
-    .column,
-    .columns {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
   }
 
   // Collpased columns have no gutter.
   .collapse {
-    table.body & .columns,
-    table.body & .column {
+    > tbody > tr > .columns,
+    > tbody > tr > .column {
+
       padding-left: 0 !important;
       padding-right: 0 !important;
+
+      //I feel it's best to remove the bottom padding on all but the last column.
+      &:nth-last-child(n+2){
+        padding-bottom: 0 !important;
+      }
+
     }
   }
 
@@ -108,8 +108,6 @@
 
   //menu
   table.menu {
-    width: 100% !important;
-    
     td,
     th {
       width: auto !important;
