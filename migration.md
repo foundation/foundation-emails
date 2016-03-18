@@ -390,6 +390,8 @@ Version 2 (Inky markup)
 </callout>
 ```
 
+Callouts used to only be applicable to a `<td>`. In Foundation for Emails 2, you can wrap a callout around a `<row>` or the content inside a `<column>`.
+
 ***
 ## NEW
 ***
