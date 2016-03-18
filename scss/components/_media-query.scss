@@ -40,6 +40,11 @@
       padding-left: 0 !important;
       padding-right: 0 !important;
 
+      //I feel it's best to remove the bottom padding on all but the last column.
+      &:nth-last-child(n+2){
+        padding-bottom: 0 !important;
+      }
+
     }
   }
 
