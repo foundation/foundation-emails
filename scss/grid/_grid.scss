@@ -99,14 +99,6 @@ th.column {
       padding-left: 0;
       width: -zf-grid-calc-px($i, $grid-column-count, $global-width);
     }
-
-    //Gotta give it that extra love for the first and last columns.
-    td.large-#{$i}.first,
-    th.large-#{$i}.first,
-    td.large-#{$i}.last,
-    th.large-#{$i}.last {
-      width: -zf-grid-calc-px($i, $grid-column-count, $global-width);
-    }
   }
 }
 
