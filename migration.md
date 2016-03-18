@@ -361,7 +361,33 @@ Version 2 (CSS version)
 Version 2 (Inky markup)
 
 ```
-Work in progress - issue [188](https://github.com/zurb/foundation-emails/issues/188)
+<row>
+  <columns small="6">
+    <p>One Word</p>
+  </columns>
+  <columns small="6">
+    <callout class="secondary">
+      <p>2sdafkhasdfkjhas dkfjh askdjfh askjdhf aksjdhf aksjdhf kajshdf</p>
+    </callout>
+  </columns>
+</row>
+
+<callout class="primary">
+  <row>
+    <columns small="12">
+
+      <row>
+        <columns small="6">
+          <p>One Word</p>
+        </columns>
+        <columns small="6">
+          <p>2sdafkhasdfkjhas dkfjh askdjfh askjdhf aksjdhf aksjdhf kajshdf</p>
+        </columns>
+      </row>
+
+    </columns>
+  </row>
+</callout>
 ```
 
 ***
@@ -373,11 +399,46 @@ Work in progress - issue [188](https://github.com/zurb/foundation-emails/issues/
 Version 2 (CSS version)
 
 ```
-<table class="menu">
+<table class="container">
   <tr>
-    <td><a href="one.html">Item One</a></td>
-    <td><a href="one.html">Item Two</a></td>
-    <td><a href="one.html">Item Three</a></td>
+    <td>     
+
+      <table class="menu">
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <th class="menu-item">
+                  <a href="http://google.com">Nav 1</a>
+                </th>
+                <th class="menu-item">
+                  <a href="http://google.com">Nav 2</a>
+                </th>
+                <th class="menu-item">
+                  <a href="http://google.com">Nav 3</a>
+                </th>
+                <th class="menu-item">
+                  <a href="http://google.com">Nav 4</a>
+                </th>
+                <th class="menu-item">
+                  <a href="http://google.com">Nav 5</a>
+                </th>
+                <th class="menu-item">
+                  <a href="http://google.com">Nav 6</a>
+                </th>
+                <th class="menu-item">
+                  <a href="http://google.com">Nav 7</a>
+                </th>
+                <th class="menu-item">
+                  <a href="http://google.com">Nav 8</a>
+                </th>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+    </td>
   </tr>
 </table>
 ```
