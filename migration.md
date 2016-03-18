@@ -417,21 +417,6 @@ Version 2 (CSS version)
                 <th class="menu-item">
                   <a href="http://google.com">Nav 3</a>
                 </th>
-                <th class="menu-item">
-                  <a href="http://google.com">Nav 4</a>
-                </th>
-                <th class="menu-item">
-                  <a href="http://google.com">Nav 5</a>
-                </th>
-                <th class="menu-item">
-                  <a href="http://google.com">Nav 6</a>
-                </th>
-                <th class="menu-item">
-                  <a href="http://google.com">Nav 7</a>
-                </th>
-                <th class="menu-item">
-                  <a href="http://google.com">Nav 8</a>
-                </th>
               </tr>
             </table>
           </td>
