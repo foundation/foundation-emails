@@ -29,12 +29,9 @@ $block-grid-gutter: $global-gutter !default;
   .up-#{$i} td {
     width: floor(($global-width - $i * $block-grid-gutter) / $i) !important;
   }
-}
 
-// Allow centering in block grids
-@for $i from 2 through $block-grid-max {
   .block-grid.up-#{$i} center,
   .block-grid.up-#{$i} center {
-    min-width: -zf-grid-calc-px($i, $block-grid-max, $global-width)-($block-grid-gutter*2);
+    min-width: floor(($global-width - $i * $block-grid-gutter) / $i) !important;
   }
 }
