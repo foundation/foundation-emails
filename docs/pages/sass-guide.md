@@ -7,7 +7,7 @@ Foundation for Emails takes the pain out of developing HTML emails by giving you
 
 The Sass workflow for Foundation for Emails is backed by the [ZURB Email Stack](zurb-stack.html), an all-in-one build system for creating HTML emails. This workflow requires a bit more up-front setup, but the tooling makes it wicked fast to code, and keeps your code amazingly clean with our new custom HTML tags in Inky.
 
-The ZURB Stack workflow also includes Handlebars, allowing you to write emails as templates instead of static files. Lastly, you can easily make sweeping design changes with the Sass [settings file](sass.html). Here’s everything that’s packaged in this template:
+The ZURB Stack workflow also includes Handlebars, allowing you to write emails as templates instead of static files. Lastly, you can easily make sweeping design changes with the Sass [settings file](sass.html#the-settings-file). Here’s everything that’s packaged in this template:
 
 - Inky HTML
 - Sass
@@ -34,7 +34,7 @@ We'll use the Foundation CLI to set up a new project. If you already have the Fo
 npm install --global foundation-cli
 ```
 
-If you run into any errors on OS X or Linux, you can try prefixing the command with `sudo`.
+If you run into any pemission errors (EACCESS) on OS X or Linux, you can try prefixing the command with `sudo`.
 
 ```bash
 sudo npm install --global foundation-cli
@@ -46,7 +46,7 @@ Once the CLI is installed on your machine, it’s super easy to fire up a blank 
 foundation new --framework emails
 ```
 
-The CLI will ask you for a project name, which is used as the name of the folder to install in. After that, the template will be downloaded, and the various dependencies installed. The entire process takes over a minute.
+The CLI will ask you for a project name, which is used as the name of the folder to install in. After that, the project template will be downloaded, and the various dependencies installed. The entire process takes over a minute.
 
 ---
 

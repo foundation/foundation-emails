@@ -69,7 +69,9 @@ In Inky HTML, set the attribute `small` or `large` on the `<columns>` tag with t
 
 ### First and Last Classes
 
-The first column in a row must have the class `.first`, and the last column must have the class `.last`.
+The `.first` class adds the appropriate amount of padding-left to space the content away from the container’s edge. The `.last` class is added to your last set of columns in a row to add padding-right to the column. If you have columns in between `.first` and `.last`, these classes are not needed on the middle columns.
+
+The reason these classes exist is that CSS properties like `:last-child` don’t work in most email clients so a class is needed.
 
 In Inky HTML, these classes are added for you.
 
