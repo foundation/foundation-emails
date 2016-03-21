@@ -119,6 +119,22 @@ You can also align images to the left or the right.
 </container>
 ```
 
+## Centering a button
+
+Wrap the button with `<center>` tags to center it.
+
+```inky_example
+<container>
+  <row>
+    <columns>
+      <center>
+        <button href="#">Centered Button</button>
+      </center>
+    </columns>
+  </row>
+</container>
+```
+
 ## Centering columns
 
 Tables by nature take up as much space is available to them. Because of this, centering columns can be done by adding empty columns to left and right of the column to be centered.
