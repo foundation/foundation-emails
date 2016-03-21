@@ -10,10 +10,10 @@ The grid has two core elements: the *row* and *column*. Rows define horizontal s
 
 All emails should have a container element. This gives the email a maximum width for email clients on larger screens. It also orients the email in the center.
 
-A container is a full table, so it needs the tags `<table>` `<tbody>`, `<tr>`, and finally `<td>`. The class `.container` goes on the `<table>`.
+A container is a full table, so it needs the tags `<table>`, `<tr>`, and finally `<td>`. The class `.container` goes on the `<table>`.
 
 ```inky_example
-<container></container>
+<container>All the rows go here</container>
 ```
 
 ---
@@ -25,7 +25,11 @@ A row is a `<table>` with a `<tbody>` and `<tr>`. Inside of this `<tr>`, you'll 
 In Inky HTML, use the `<row>` tag to create a row.
 
 ```inky_example
-<row></row>
+<container>
+  <row>
+    Columns go here
+  </row>
+</container>
 ```
 
 ---
@@ -42,7 +46,7 @@ Here's our full column syntax so far:
 <th class="columns first last">
   <table>
     <tr>
-      <th>This is a column.</th>
+      <th>This is a column. Columns contain your content.</th>
       <th class="expander"></th>
     </tr>
   </table>
@@ -52,7 +56,7 @@ Here's our full column syntax so far:
 In Inky HTML, use the `<columns>` class to create a column.
 
 ```inky_example
-<columns>This is a column.</columns>
+<columns>This is a column. Columns contain your content.</columns>
 ```
 
 ### Sizing
@@ -63,7 +67,7 @@ Set column sizes with the classes `.large-n` and `.small-n`, where `n` is how wi
 
 In Inky HTML, set the attribute `small` or `large` on the `<columns>` tag with the size you want. If you don't fill in `small`, it will use 12 by default. If you fill in `small` but not `large`, `large` will use the same value as `small`.
 
-```inky_example
+```html
 <columns small="12" large="6"></columns>
 ```
 
@@ -89,8 +93,8 @@ Collapsing a row removes the gutters from every column, which is the spacing bet
 
 ```inky_example
 <row class="collapse">
-  <columns large="6">These columns touch.</columns>
-  <columns large="6">These columns touch.</columns>
+  <columns large="6"><img src="http://placehold.it/300x150/777777/&text=These columns touch" alt=""></columns>
+  <columns large="6"><img src="http://placehold.it/300x150/999999/&text=These columns touch" alt=""></columns>
 </row>
 ```
 
@@ -104,7 +108,7 @@ Use the class `.large-offset-n` to create an offset, where `n` is the amount of 
 
 ```inky_example
 <row>
-  <columns large="3" class="large-offset-3">One</columns>
-  <columns large="3">Two</columns>
+  <columns large="3" class="large-offset-3"><img src="http://placehold.it/150x150/999999/&text=offset column" alt=""></columns>
+  <columns large="3"><img src="http://placehold.it/150x150/999999" alt=""></columns>
 </row>
 ```
