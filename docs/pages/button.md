@@ -16,6 +16,8 @@ In Inky HTML, the `<button>` tag creates all of this markup for you.
 
 ## Sizing
 
+By default, buttons are sized by the content and padding within them. You can also size a button according to it's parent container (see Expanded section).
+
 Buttons can be made larger or smaller by adding the class `.tiny`, `.small`, or `.large` to a button's outer `<table>`.
 
 In Inky HTML, add the same class to the `<button>` tag.
