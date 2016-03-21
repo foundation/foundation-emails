@@ -68,8 +68,6 @@ The Sass version of Foundation uses a convenient variable to set the breakpoint 
 }
 ```
 
-
-
 ---
 
 ## Changing the Breakpoint

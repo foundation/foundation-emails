@@ -36,27 +36,27 @@ $header-font-weight: $global-font-weight !default;
 
 /// Font size of `<h1>` elements.
 /// @type Number
-$h1-font-size: 40px !default;
+$h1-font-size: 34px !default;
 
 /// Font size of `<h2>` elements.
 /// @type Number
-$h2-font-size: 36px !default;
+$h2-font-size: 30px !default;
 
 /// Font size of `<h3>` elements.
 /// @type Number
-$h3-font-size: 32px !default;
+$h3-font-size: 28px !default;
 
 /// Font size of `<h4>` elements.
 /// @type Number
-$h4-font-size: 28px !default;
+$h4-font-size: 24px !default;
 
 /// Font size of `<h5>` elements.
 /// @type Number
-$h5-font-size: 24px !default;
+$h5-font-size: 20px !default;
 
 /// Font size of `<h6>` elements.
 /// @type Number
-$h6-font-size: 20px !default;
+$h6-font-size: 18px !default;
 
 /// Margin bottom of `<h1>` through `<h6>` elements.
 /// @type Number
@@ -66,9 +66,13 @@ $header-margin-bottom: 10px !default;
 /// @type Number
 $paragraph-margin-bottom: 10px !default;
 
-/// Defualt font size for `<small>`.
+/// Default font size for `<small>`.
 /// @type Number
-$small-font-size: 10px !default;
+$small-font-size: 80% !default;
+
+/// Color of `<small>` elements when placed inside headers.
+/// @type Color
+$small-font-color: $medium-gray !default;
 
 /// Font size of lead paragraphs.
 /// @type Number
@@ -229,6 +233,7 @@ p {
 
 small {
   font-size: $small-font-size;
+  color: $small-font-color;
 }
 
 a {
