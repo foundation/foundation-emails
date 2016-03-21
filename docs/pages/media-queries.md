@@ -46,6 +46,22 @@ The Sass version of Foundation uses a convenient variable to set the breakpoint 
 @media only screen and (max-width: #{$global-breakpoint}) {}
 ```
 
+### Example usage
+
+```
+.newsletter-title {
+  text-transform: uppercase;
+  font-size: 9px;
+  padding-left: 40px;
+  font-weight: bold;
+
+  @media only screen and (max-width: #{$global-breakpoint}) {
+    padding-left: 0;
+  }
+}
+```
+
+
 ---
 
 ## Changing the Breakpoint
