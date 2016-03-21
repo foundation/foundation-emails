@@ -85,7 +85,7 @@ gulp.task('sass:foundation', function() {
 
 // Compiles documentation JavaScript
 gulp.task('javascript:docs', function() {
-  return gulp.src('docs/assets/js/**/*.js')
+  return gulp.src(['node_modules/foundation-docs/js/*.js', 'docs/assets/js/**/*.js'])
     .pipe($.concat('docs.js'))
     .pipe(gulp.dest('_build/assets/js'));
 });

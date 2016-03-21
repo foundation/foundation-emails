@@ -17,6 +17,7 @@
   "devDependencies": {
     "browser-sync": "^2.9.10",
     "cheerio": "^0.19.0",
+    "clipboard-js": "^0.2.0",
     "foundation-docs": "zurb/foundation-docs",
     "foundation-sites": "^6.2.0",
     "gulp": "^3.8.11",
