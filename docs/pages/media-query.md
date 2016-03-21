@@ -1,5 +1,5 @@
 ---
-title: Foundation for Emails
+title: Media Queries
 description: Use media queries to design responsive HTML emails that work in any email client.
 ---
 
