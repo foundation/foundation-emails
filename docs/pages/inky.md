@@ -17,6 +17,9 @@ Inky keeps you out of a sea of tables and focused on your email. Check out this 
   </row>
 </container>
 ```
+<div class="callout warning">
+The Inky templating language is part of the [ZURB Stack and the Sass version](zurb-stack.html). <br><a href="#how-to-inky">More on how to get Inky into your workflow</a>
+</div>
 
 ---
 
@@ -42,27 +45,28 @@ Here are some frequently asked questions about Inky:
 
 **What’s a templating language?**
 
-Essentially, it is just custom HTML tags. Things like `<row>` and `<columns>` are understood by this language. These tags don’t actually make it into your recipient’s inbox, it’s translated into the table-based HTML needed for our approach to responsive emails.
+Essentially, it is just custom HTML tags. Things like `<row>` and `<columns>` are understood by this language. Since email clients only work with table-based HTML, these tags don’t actually make it into your recipient’s inbox. Instead it’s translated into the table-based HTML needed for our approach to responsive emails.
 
 **How does it work?**
 
-We run a Gulp task that runs through your code, identifies our custom Inky tags, and translates them into valid HTML. For the more tech-savvy, you can check out our task on our Github Repo here.
+We run a Gulp task that runs through your code, identifies our custom Inky tags, and translates them into valid HTML. For the more tech-savvy, you can [check out our task on our Github Repo](https://github.com/zurb/foundation-emails/blob/v2.0/gulpfile.js#L149).
 
+<a id="how-to-inky"></a>
 **How do I start Inky?**
 
 Inky is built into the ZURB Stack, but you can also use Inky standalone, or integrate it into your own build process. [Refer to the Inky readme to learn more.](https://github.com/zurb/inky#usage)
 
 **Do I have to have the Gulp tasks running for Inky to work?**
 
-Yes. In order for Inky to watch your files, you need to be running either `npm start` or `npm run build` to see your changes reflected.
+Yes. In order for Inky to watch your files for changes, you need to be running either `npm start` or `npm run build` to see your changes reflected.
 
-**Do I have to use Inky? What if I just want to code my own email?**
+**Do I have to use Inky? What if I just want to code my own email in tables?**
 
 You aren’t required to use Inky in your emails. You can write only in tables, or mix tables and Inky within the same email.
 
 **What are all of Inky’s tags and components?**
 
-You can check out all of the syntax and examples in the components section of the docs. We recommend you start off with [the grid](grid.html).
+You can check out all of the syntax and examples in the components section of the docs. We recommend you start off with [the grid](grid.html). 
 
 **I found a bug&mdash;what should I do?**
 
