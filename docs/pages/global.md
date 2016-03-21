@@ -105,6 +105,6 @@ Unlike Foundation for Sites and Apps, the Foundation for Emails CSS is written *
 
 **Your email layout shifts from desktop to mobile at 596 pixels.** This is the width of the container, plus the width of the gutters around the container. In the Sass version of Foundation, you can change the breakpoint by modifying these variables:
 
-- `$global-width`: container width.
-- `$global-gutter`: grid gutter.
-- `$global-breakpoint`: the variable that adds those two together.
+- `$global-width`: width of the container. It's 580px by default.
+- `$global-gutter`: width of the grid gutter. It's padding to space columns away from each other or away from the edges of the container.
+- `$global-breakpoint`: The breakpoint at which the layout shifts. It's the variable that adds `$global-width` and `$global-gutter` together.
