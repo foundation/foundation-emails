@@ -85,6 +85,10 @@ In Inky HTML, these classes are added for you.
 <columns large="4">Three</columns>
 ```
 
+### Expander
+
+The `.expander` prevents a rendering bug in Outlook that sometimes keeps the columns from expanding to full width. Instead of ignoring the width attribute and politely taking up only as much space as the content dictates (default `<th>` behavior), the presence of the expander `<th>` causes the content `<th>` to become “greedy” and take up as much space as is given to it, up to the value specified in the width (which is 100%). They’re set to not display, but they kick the total width up over 100%, which forces their sibling `<th>` to expand fully.
+
 ---
 
 ## Collapsing

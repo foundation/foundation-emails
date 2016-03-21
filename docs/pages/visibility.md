@@ -5,7 +5,7 @@ descripiton: Selectively show content for different screen sizes.
 
 Visibility classes allow you to control what content appears on what screen size.
 
-Foundation for Emails has two breakpoints: *small*, which is any email client under 600 pixels wide, and *large*, any client over 600 pixels. This means small generally correlates to mobile clients, and large correlates to desktop clients.
+Foundation for Emails has two breakpoints: *small*, which is any email client under 596 pixels wide, and *large*, any client over 596 pixels. This means small generally correlates to mobile clients, and large correlates to desktop clients.
 
 Due to Outlook's lack of support for certain CSS properties, the Foundation for Emails visibiility classes should be used in conjunction with conditional comments to ensure that the content is properly hidden (or shown) in Outlook 2007/2010/2013.
 

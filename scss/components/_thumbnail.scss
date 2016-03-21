@@ -6,20 +6,44 @@
 /// @group thumbnial
 ////
 
-/// Box shadow for thumbnails. **The color must be an RGB or RGBA value.**
+/// Border around thumbnail images.
+/// @type Border
+$thumbnail-border: solid 4px $white !default;
+
+/// Bottom margin for thumbnail images.
+/// @type Length
+$thumbnail-margin-bottom: $global-margin !default;
+
+/// Box shadow under thumbnail images.
 /// @type Shadow
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2) !default;
 
+/// Box shadow under thumbnail images.
+/// @type Shadow
+$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5) !default;
+
+/// Transition proprties for thumbnail images.
+/// @type Transition
+$thumbnail-transition: box-shadow 200ms ease-out !default;
+
+/// Default radius for thumbnail images.
+/// @type Number
+$thumbnail-radius: $global-radius !default;
+
+/// Adds thumbnail styles to an element.
 .thumbnail {
+  border: $thumbnail-border;
+  box-shadow: $thumbnail-shadow;
   display: inline-block;
-  border-collapse: separate;
+  line-height: 0;
+  max-width: 100%;
+  transition: $thumbnail-transition;
+  border-radius: $thumbnail-radius;
+  margin-bottom: $thumbnail-margin-bottom;
 
-  img {
-    border-collapse: separate;
-  }
-
-  &:hover, &:focus {
-    // Only supported iphone iOS, outlook.com, apple mail 6.5. But hey, progressive enhancements.
-    box-shadow: $thumbnail-shadow;
+  &:hover,
+  &:focus {
+    box-shadow: $thumbnail-shadow-hover;
   }
 }
+
