@@ -47,6 +47,26 @@ span.text-center {
   text-align: center;
 }
 
+@media only screen and (max-width: #{$global-breakpoint}) {
+  .small-float-center {
+    margin: 0 auto !important;
+    float: none !important;
+    text-align: center !important;
+  }
+
+  .small-text-center {
+    text-align: center !important;
+  }
+
+  .small-text-left {
+    text-align: left !important;
+  }
+
+  .small-text-right {
+    text-align: right !important;
+  }
+}
+
 img.float-left {
   float: left;
   text-align: left;
