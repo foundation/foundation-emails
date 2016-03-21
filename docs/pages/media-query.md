@@ -3,11 +3,9 @@ title: Foundation for Emails
 description: Use media queries to design responsive HTML emails that work in any email client.
 ---
 
-CSS media queries allow us to adjust the display and orientation of content at different screen sizes.
-
----
-
 ## Default Media Query
+
+CSS media queries allow us to adjust the display and orientation of content at different screen sizes.
 
 Foundation for Emails has one breakpoint:
 
@@ -34,21 +32,21 @@ In Inky, you can define the width by using the `small="x"` and `large="x"` attri
 
 The media query will wrap the styles you wish to affect. Because there is only one breakpoint to consider and it's a max-width, your mobile styles or overrides will go in a media query. If you're using the CSS version of Foundation, use this media query to imitate the core breakpoint:
 
-```
+```scss
 /* Small only */
 @media screen and (max-width: 596px) {}
 ```
 
 The Sass version of Foundation uses a convenient variable to set the breakpoint width. Use this media query to imitate the core breakpoint:
 
-```
+```scss
 /* Small only */
 @media only screen and (max-width: #{$global-breakpoint}) {}
 ```
 
 ### Example usage
 
-```
+```scss
 .newsletter-title {
   text-transform: uppercase;
   font-size: 9px;
@@ -60,6 +58,16 @@ The Sass version of Foundation uses a convenient variable to set the breakpoint 
   }
 }
 ```
+
+```scss
+@media only screen and (max-width: #{$global-breakpoint}) {
+  p {
+    font-size: 19px;
+    font-weight: 600;
+  }
+}
+```
+
 
 
 ---
