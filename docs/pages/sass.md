@@ -94,3 +94,5 @@ $button-background: $primary-color !default;
 // Border around buttons.
 $button-border: 2px solid $button-background !default;
 ```
+
+We put together some [Best Practices on Sass file structure](http://zurb.com/university/lessons/avoid-a-cluttered-mess-sensible-sass-file-structure) that will help you keep your project clean.
