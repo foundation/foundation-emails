@@ -34,7 +34,7 @@
     "gulp-sass-lint": "^1.1.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-wrap": "^0.11.0",
-    "inky": "^1.2.5",
+    "inky": "^1.2.6",
     "lazypipe": "^1.0.1",
     "motion-ui": "^1.1.1",
     "multiline": "^1.0.2",
