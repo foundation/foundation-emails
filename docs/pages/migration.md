@@ -1,6 +1,6 @@
 ---
 title: Foundation for Emails 2 Migration Guide
-description: This guide describes the changes required to migrate a Foundation for Emails template from version 1 (formerly Ink) to 2.
+description: This guide describes the changes required to migrate a Foundation for Emails template from version 1 (formerly Ink) to Foundation for Emails 2.
 tags:
   - upgrade
 ---
@@ -13,6 +13,9 @@ tags:
 - **ZURB Stack:** All kinds of task automation - [Panini](http://foundation.zurb.com/sites/docs/panini.html), our Handlebars templates, compiling Sass, BrowserSync, image compression, and auto inlining are built in to speed up your workflow. 
 
 ## Overview
+
+First off, you'll want to choose a version to get started with.
+<br>[CSS version](css-guide.html) or the [Sass version with Inky](sass-guide.html)
 
 When migrating, the following items can be translated easily from 1 to 2:
 - Boilerplate
@@ -56,11 +59,24 @@ You can use it to create the grid structure, buttons, and other components. We�
 Foundation for Emails 2 is available in a Sass version which let’s you quickly change common CSS values with some simple variables within the settings. 
 
 These are some CSS classes that are no longer needed for proper spacing:
-- .wrapper
-- .wrapper-last
-- .text-pad
-- .text-pad-left
-- .text-pad-right
+- `.wrapper`
+- `.wrapper-last`
+- `.text-pad`
+- `.text-pad-left`
+- `.text-pad-right`
+
+Some helper classes have changed:
+
+`.center` was used in version 1 to center text. 
+
+Version 2 now has more alignment classes:
+- `.text-center`: centers text
+- `.text-left`: aligns text to the left
+- `.text-right`: aligns text to the right
+- `.small-text-center`: centers text on the small breakpoint
+- `.small-text-left`: left aligns text on the small breakpoint
+- `.small-text-right`: right aligns text on the small breakpoint
+- `float-center`: centers an image (see the [alignment docs](alignment.html) for best practices.)
 
 ***
 ## Components
@@ -199,7 +215,7 @@ Version 2 (Inky markup)
 ```
 
 ### Block Grid
-The block grid is no longer needed in Foundation for Emails 2.0 because the framework is reponsive in Android native (not Gmail app) and the small
+The block grid has a minor syntax change with identifying the number of elements that are displayed in the row. We’ve moved to the convention of `.up-x`, instead of `.x-up`.
 
 
 Version 1 
@@ -225,11 +241,9 @@ Version 2 (CSS version)
   <tr>
     <th class="column first">
       Thing 1
-    </th>
-    <th class="column">
+    </th><th class="column"> <!-- Make sure the tags are directly next to each other -->
       Thing 2
-    </th>
-    <th class="column last">
+    </th><th class="column last"> <!-- Make sure the tags are directly next to each other -->
       Thing 3
     </th>
   </tr>
@@ -373,7 +387,7 @@ Version 2 (Inky markup)
   </columns>
   <columns small="6">
     <callout class="secondary">
-      <p>2sdafkhasdfkjhas dkfjh askdjfh askjdhf aksjdhf aksjdhf kajshdf</p>
+      <p>I'm in a callout!</p>
     </callout>
   </columns>
 </row>
@@ -381,16 +395,14 @@ Version 2 (Inky markup)
 <callout class="primary">
   <row>
     <columns small="12">
-
       <row>
         <columns small="6">
-          <p>One Word</p>
+          <p>This whole row is in a callout!</p>
         </columns>
         <columns small="6">
-          <p>2sdafkhasdfkjhas dkfjh askdjfh askjdhf aksjdhf aksjdhf kajshdf</p>
+          <p>This whole row is in a callout!</p>
         </columns>
       </row>
-
     </columns>
   </row>
 </callout>

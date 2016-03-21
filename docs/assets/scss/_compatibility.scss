@@ -1,0 +1,157 @@
+// Compatability Table
+// -------------------
+// A styled table used on the compatability page to show which browsers the framework works with.
+
+$primary: #002b36;
+$secondary: #efefef;
+$alert: #cf2a0e;
+$warning: #ffae00;
+$success: #43AC6A;
+$gutter: 40px;
+$rad: 5px;
+
+@mixin font-size($sizeValue){
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+
+@mixin -breakpoint($point) {
+  @if $point == smallmobile {
+    @media (max-width: 200px) { @content; }
+  }
+  @if $point == mobile {
+    @media (max-width: 640px) { @content; }
+  }
+  @if $point == tablet {
+    @media (max-width: 1000px) { @content; }
+  }
+  @if $point == smallscreen {
+    @media (max-width: 1120px) { @content; }
+  }
+}
+
+.comparison-table {
+  display: block;
+  width: 100%;
+  border-collapse: separate;
+  thead tr {
+    color: $primary;
+    font-weight: bold;
+    text-transform: uppercase;
+    td { color: #666 !important; }
+    td { padding-bottom: 10px; }
+    td { border: none !important; }
+  }
+  tr {
+    width: 100%;
+    td {
+      border-right: 1px solid #ddd;
+    }
+    &:first-child {
+      td { border-top: 1px solid #ddd; }
+      td:first-child {
+
+      }
+      td:last-child {
+
+      }
+    }
+    &:last-child {
+      td { border-bottom: 1px solid #ddd; }
+      td:first-child {
+
+      }
+      td:last-child {
+
+      }
+    }
+    td:first-child {
+      width: 25%;
+      padding: 10px;
+      color: $primary;
+      font-weight: bold;
+      border-left: 1px solid #ddd;
+    }
+    td.marker.yes {
+      width: 10%;
+      text-align: center;
+      vertical-align: middle;
+      color: $success;
+      font-weight: bold;
+    }
+    td.marker.mostly {
+      width: 10%;
+      text-align: center;
+      vertical-align: middle;
+      color: $warning;
+      font-weight: bold;
+    }
+    td.marker.no {
+      width: 10%;
+      text-align: center;
+      vertical-align: middle;
+      color: $alert-color;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+  }
+  tr:nth-child(even) {
+    background: $secondary;
+  }
+  @include -breakpoint(smallmobile) {
+    td, tr td, tr td.marker, tr td:first-child, tr td:first-child + td {
+      position: relative;
+      display: block;
+      width: 100%;
+      border-top: none;
+      border-bottom: none;
+      border-left: 1px solid #ddd;
+    }
+    tr:first-child td:first-child {
+
+    }
+    tr:first-child td:last-child {
+      border-top-right-radius: 0;
+    }
+    tr:last-child td:first-child {
+      border-bottom-left-radius: 0;
+    }
+    tr:last-child td:last-child {
+      border-bottom: 1px solid #ddd;
+    }
+    tr td:first-child {
+      border-top: 1px solid #ddd;
+      & + td {
+        padding: 0 10px 10px;
+      }
+    }
+    tr td.marker {
+      padding: 10px;
+      font-weight: bold;
+      &:before {
+        content: "Grid: ";
+      }
+      & + td.marker:before {
+        content: "Layout/UI: ";
+      }
+      & + td.marker + td.marker:before {
+        content: "JS: ";
+      }
+    }
+    thead tr td.marker {
+      display: none;
+    }
+  }
+}
+
+td.divider {
+  background: $dark-gray;
+
+  &:first-child {
+    border-right: $dark-gray;
+  }
+
+  &:last-child {
+    border-left: $dark-gray;
+  }
+}

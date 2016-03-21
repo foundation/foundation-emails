@@ -98,9 +98,9 @@ Collapsing a row removes the gutters from every column, which is the spacing bet
 
 ## Offsets
 
-Offsets add spacing to the left of a column. Use this if all the columns in a row don't add up to 12, and you want to mess with the spacing between them.
+Offsets add spacing to the left of a column. Use this if all the columns in a row don't add up to 12, and you want to mess with the spacing between them. Offsets are intended to be used with one set of columns in a row.
 
-Use the class `.large-offset-n` to create an offset, where `n` is the amount of columns to offset by. So, for example, `.large-offset-3` would offset the column by 25% of the width of the row.
+Use the class `.large-offset-n` to create an offset, where `n` is the amount of columns to offset by. So, for example, `.large-offset-3` would offset the column by 25% of the width of the row. Think of it as pushing the columns over from the left.
 
 ```inky_example
 <row>
