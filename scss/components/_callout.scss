@@ -18,6 +18,10 @@ $callout-background-fade: 85% !default;
 /// @type Length
 $callout-padding: 10px !default;
 
+/// Bottom margin of a callout.
+/// @type Length
+$callout-margin-bottom: $global-margin !default;
+
 /// Border around a callout.
 /// @type Border
 $callout-border: 1px solid darken($callout-background, 20%) !default;
@@ -43,8 +47,8 @@ th.callout {
   border: $callout-border;
   padding: $callout-padding;
   background: $callout-background;
-  margin-bottom: $global-margin;
-  Margin-bottom: $global-margin;
+  margin-bottom: $callout-margin-bottom;
+  Margin-bottom: $callout-margin-bottom;
 
   &.primary {
     background: scale-color($primary-color, $lightness: $callout-background-fade);
