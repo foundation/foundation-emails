@@ -5,6 +5,8 @@ description: Centering, images, text and buttons in HTML emails made easy.
 
 Foundation includes a handful of helpful alignment classes to add common positioning behaviors to elements.
 
+---
+
 ## Text alignment
 
 You can align text with the `.text-x` classes. These classes will appy to the large breakpoint as well as the small.
@@ -62,6 +64,8 @@ You can combine these classes to override the behavior on the small breakpoint.
 </container>
 ```
 
+---
+
 ## Centering images
 
 Just wrap the `<center>` around an image you’ll be good to go. Inky will handle the magic behind the scenes! In the CSS version, you’ll add a `.float-center` class, `align="center"` attribute and wrap a <code>&lt;center&gt;</code> tag to make sure things are centered. 
@@ -103,6 +107,8 @@ If you need to center an image only on mobile clients, you can apply the `.small
 </container>
 ```
 
+---
+
 ## Aligning images left and right
 
 You can also align images to the left or the right.
@@ -119,6 +125,8 @@ You can also align images to the left or the right.
 </container>
 ```
 
+---
+
 ## Centering a button
 
 Wrap the button with `<center>` tags to center it.
@@ -134,6 +142,8 @@ Wrap the button with `<center>` tags to center it.
   </row>
 </container>
 ```
+
+---
 
 ## Centering columns
 
