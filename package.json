@@ -1,6 +1,6 @@
 {
   "name": "foundation-emails",
-  "version": "2.0.0-rc.3",
+  "version": "2.0.0-rc.4",
   "description": "A framework for responsive emails made by ZURB",
   "keywords": [
     "responsive",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "browser-sync": "^2.9.10",
     "cheerio": "^0.19.0",
+    "clipboard-js": "^0.2.0",
     "foundation-docs": "zurb/foundation-docs",
     "foundation-sites": "^6.2.0",
     "gulp": "^3.8.11",
@@ -47,5 +48,10 @@
     "typeahead.js": "^0.11.1",
     "zeroclipboard": "^2.2.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "eyeglass": {
+    "name": "foundation-emails",
+    "sassDir": "scss",
+    "needs": "^0.8.0"
+  }
 }
