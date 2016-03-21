@@ -89,7 +89,6 @@ Also, it's not really a float, but the `.float-center` class to an element to en
 
 If you need to center an image only on mobile clients, you can apply the `.small-float-center` class. A good use case would be centering an image smaller than the full column width on devices like an iPhone 5, iPhone 6, and Android 4.4.
 
-
 ```inky_example
 <container>
   <row>
@@ -100,6 +99,22 @@ If you need to center an image only on mobile clients, you can apply the `.small
       <h4 class="small-text-center">What is the deal?</h4>
       <p class="small-text-center">Sweet beast sun bathe or chase mice rub face on everything or leave dead animals as gifts for mark territory play time.</p>
     </columns>  
+  </row>
+</container>
+```
+
+## Aligning images left and right
+
+You can also align images to the left or the right.
+
+```inky_example
+<container>
+  <row>
+    <columns>
+      <img class="float-left" src="http://placehold.it/200?text=left" alt="">
+      <img class="float-center" src="http://placehold.it/200?text=center" alt="">
+      <img class="float-right" src="http://placehold.it/200?text=right" alt="">
+    </columns>
   </row>
 </container>
 ```
