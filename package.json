@@ -48,5 +48,10 @@
     "typeahead.js": "^0.11.1",
     "zeroclipboard": "^2.2.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "eyeglass": {
+    "name": "foundation-emails",
+    "sassDir": "scss",
+    "needs": "^0.8.0"
+  }
 }
