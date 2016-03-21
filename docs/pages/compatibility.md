@@ -3,48 +3,171 @@ title: Compatibility
 description: Foundation for Emails is battle-tested in the trickiest email clients, like Microsoft Outlook.
 ---
 
-Every Foundation for Emails component is tested in these email clients:
+Foundation for Emails is designed for and tested on numerous email clients and devices. Here's the rundown on what type of compatibility to expect in general. Because email clients have varying CSS support and specific quirks, each individual component will have more information on compatibility.
 
-- **Apple Mail:**
-  - Apple Mail 7
-  - Apple Mail 8
-- **Outlook:**
-  - Outlook 2000
-  - Outlook 2002
-  - Outlook 2003
-  - Outlook 2007
-  - Outlook 2010
-  - Outlook 2011
-  - Outlook 2013
-  - Outlook 2016
-- **Mobile:**
-  - Android 4.4
-  - Gmail for Android
-  - iPhone 5
-  - iPhone 6
-  - iPad
-  - iPad Mini
-- **AOL:**
-  - In Internet Explorer
-  - In Firefox
-  - In Chrome
-- **Gmail:**
-  - In Internet Explorer
-  - In Firefox
-  - In Chrome
-- **Google Apps:**
-  - In Internet Explorer
-  - In Firefox
-  - In Chrome
-- **Office 365:**
-  - In Internet Explorer
-  - In Firefox
-  - In Chrome
-- **Outlook.com:**
-  - In Internet Explorer
-  - In Firefox
-  - In Chrome
-- **Yahoo! Mail:**
-  - In Internet Explorer
-  - In Firefox
-  - In Chrome
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <td>Email Client/Device</td>
+      <td class="marker">Compatibility</td>
+    </tr>
+  </thead>
+  <tr>
+    <td class="divider"><strong>Apple Mail:</strong></td>
+    <td class="divider"></td>
+  </tr>
+  <tr>
+    <td>Apple Mail 7</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>Apple Mail 8</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td class="divider"><strong>Outlook:</strong></td>
+    <td class="divider"></td>
+  </tr>
+  <tr>
+    <td>Outlook 2000</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>Outlook 2002</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>Outlook 2003</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>Outlook 2007</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>Outlook 2010</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>Outlook 2011</td>
+    <td class="marker yes">&check;</td>     
+  </tr>
+  <tr>
+    <td>Outlook 2013</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>Outlook 2016</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td class="divider"><strong>Mobile:</strong></td>
+    <td class="divider"></td>
+  </tr>
+  <tr>
+    <td>Android 4.4</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>Gmail app for Android</td>
+    <td class="marker mostly">&check; *</td>
+  </tr>
+  <tr>
+    <td>iPhone 5</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>iPhone 6</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>iPad</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>iPad Mini</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td class="divider"><strong>Gmail:</strong></td>
+    <td class="divider"></td>
+  </tr>
+  <tr>
+    <td>In Internet Explorer</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>In Firefox</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>In Gmail</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+    <tr>
+    <td class="divider"><strong>Google Apps:</strong></td>
+    <td class="divider"></td>
+  </tr>
+  <tr>
+    <td>In Internet Explorer</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>In Firefox</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>In Gmail</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td class="divider"><strong>Office 365:</strong></td>
+    <td class="divider"></td>
+  </tr>
+  <tr>
+    <td>In Internet Explorer</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>In Firefox</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>In Gmail</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td class="divider"><strong>Outlook.com:</strong></td>
+    <td class="divider"></td>
+  </tr>
+  <tr>
+    <td>In Internet Explorer</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>In Firefox</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>In Gmail</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td class="divider"><strong>Yahoo! Mail:</strong></td>
+    <td class="divider"></td>
+  </tr>
+  <tr>
+    <td>In Internet Explorer</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>In Firefox</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+  <tr>
+    <td>In Gmail</td>
+    <td class="marker yes">&check;</td>
+  </tr>
+</table>
+
+ ** *Gmail app for Android:** Works - does not recognize media queries so it will render large breakpoint.
