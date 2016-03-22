@@ -19,7 +19,7 @@ Many components can also be colored with four other colors: secondary, alert, su
 <div class="row small-up-1 medium-up-3 large-up-5">
   <div class="column">
     <div class="docs-color-block">
-      <div class="docs-color-block-primary"></div>
+      <div class="docs-color-block-primary" style="background-color: #2199e8"></div>
       <p>Primary</p>
     </div>
   </div>
