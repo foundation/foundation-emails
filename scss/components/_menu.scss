@@ -39,9 +39,9 @@ table.menu.vertical {
   th.menu-item {
     padding: $menu-item-padding;
     padding-right: 0;
+    display: block;
 
     a {
-      display: block;
       width: 100%;
     }
   }
