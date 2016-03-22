@@ -388,9 +388,9 @@ In an effort to unify the terminology across the Foundation family `panels` are 
 #### Old Markup (Plain HTML)
 
 ```
-<table class="small-12 columns">
+<table class="callout">
   <tr>
-    <td class="callout">
+    <td class="callout-inner">
 
     </td>
     <td class="expander"></td>
@@ -428,7 +428,7 @@ In an effort to unify the terminology across the Foundation family `panels` are 
 </callout>
 ```
 
-Callouts are only applicable to a `<td>` with a CSS version. In Foundation for Emails 2 Inky markup, you can wrap a callout around a `<row>` or the content inside a `<column>`.
+You can wrap a callout around a `<row>` or the content inside a `<column>`.
 
 ---
 
