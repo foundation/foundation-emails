@@ -151,6 +151,16 @@ gulp.task('test:compile', function() {
     .pipe(gulp.dest('test/visual/_build'));
 });
 
+gulp.task('templates', function() {
+  return gulp.src('templates/*.html')
+    .pipe($.wrap({ src: 'test/visual/_template.html' }))
+    .pipe(inky())
+    .pipe($.prettify({ indent_size: 2 }))
+    .pipe(gulp.dest('.templates'))
+    .pipe($.zip('all-templates.zip'))
+    .pipe(gulp.dest('.templates'));
+});
+
 function inliner(css) {
   var css = fs.readFileSync(css).toString();
   var mqCss = siphon(css);
