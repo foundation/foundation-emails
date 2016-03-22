@@ -42,13 +42,16 @@ $callout-border-warning: 1px solid darken($warning-color, 20%) !default;
 /// @type Border
 $callout-border-alert: 1px solid darken($alert-color, 20%) !default;
 
+table.callout {
+  margin-bottom: $callout-margin-bottom;
+  Margin-bottom: $callout-margin-bottom;
+}
+
 th.callout {
   width: 100%;
   border: $callout-border;
   padding: $callout-padding;
   background: $callout-background;
-  margin-bottom: $callout-margin-bottom;
-  Margin-bottom: $callout-margin-bottom;
 
   &.primary {
     background: scale-color($primary-color, $lightness: $callout-background-fade);
