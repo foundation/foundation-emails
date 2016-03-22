@@ -7,7 +7,7 @@ Foundation includes a handful of helpful alignment classes to add common positio
 
 ---
 
-## Text alignment
+## Text Alignment
 
 You can align text with the `.text-x` classes. These classes will appy to the large breakpoint as well as the small.
 
@@ -66,9 +66,9 @@ You can combine these classes to override the behavior on the small breakpoint.
 
 ---
 
-## Centering images
+## Centering Images
 
-Just wrap the `<center>` around an image you’ll be good to go. Inky will handle the magic behind the scenes! In the CSS version, you’ll add a `.float-center` class, `align="center"` attribute and wrap a <code>&lt;center&gt;</code> tag to make sure things are centered. 
+Just wrap the `<center>` around an image you’ll be good to go. Inky will handle the magic behind the scenes! In the CSS version, you’ll add a `.float-center` class, `align="center"` attribute and wrap a <code>&lt;center&gt;</code> tag to make sure things are centered.
 
 ```inky_example
 <container>
@@ -82,12 +82,13 @@ Just wrap the `<center>` around an image you’ll be good to go. Inky will handl
 </container>
 ```
 
-So to be clear:
-With Inky you only need to wrap an image in `<center>` tag to reliably center it. 
+So to be clear: with Inky you only need to wrap an image in `<center>` tag to reliably center it.
+
 In the CSS version, our centering recipe includes three ingredients:
-- `.float-center` class on the img tag
-- `align="center"` attribute on the img tag
-- wrap the img with `<center>` tags (needed for Outlook 2007, 2010, 2011)
+
+- `.float-center` class on the `<img>` element
+- `align="center"` attribute on the `<img>` element
+- Wrap the `<img>` with `<center>` tags (needed for Outlook 2007, 2010, and 2011)
 
 Also, it's not really a float, but the `.float-center` class to an element to engage the automatic margin centering trick. Note that this will only work on elements with an absolute width, which means not a percentage or auto width.
 
@@ -109,7 +110,7 @@ If you need to center an image only on mobile clients, you can apply the `.small
 
 ---
 
-## Aligning images left and right
+## Aligning Images Left and Right
 
 You can also align images to the left or the right.
 
@@ -127,7 +128,7 @@ You can also align images to the left or the right.
 
 ---
 
-## Centering a button
+## Centering a Button
 
 Wrap the button with `<center>` tags to center it.
 
@@ -145,7 +146,7 @@ Wrap the button with `<center>` tags to center it.
 
 ---
 
-## Centering columns
+## Centering Columns
 
 Tables by nature take up as much space is available to them. Because of this, centering columns can be done by adding empty columns to left and right of the column to be centered.
 
