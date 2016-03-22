@@ -9,7 +9,7 @@ tags:
 
 ## Basics
 
-Al Callout adds a border, background, and some padding. Callouts use a full table structure, with the class `.callout` applied to the innermost `<th>`.
+A Callout adds a border, background, and some padding. Callouts use a full table structure, with the class `.callout` on the outer `<table>` (for bottom margin) and the `.callout-inner` applied to the innermost `<th>`.
 
 When using [Inky](inky.html) HTML, the `<callout>` tag will create this structure for you. You can wrap them around a row or inside a column.
 
