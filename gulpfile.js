@@ -161,6 +161,25 @@ gulp.task('templates', function() {
     .pipe(gulp.dest('.templates'));
 });
 
+gulp.task('download:build', ['sass:foundation', 'templates'], function() {
+  gulp.src('test/visual/_template.html', { base: 'test/visual' })
+    .pipe($.injectString.replace('<%= contents %>', ''))
+    .pipe($.rename('index.html'))
+    .pipe(gulp.dest('.download'));
+
+  gulp.src('.templates/*.html')
+    .pipe(gulp.dest('.download/templates'));
+
+  return gulp.src('_build/assets/css/foundation.css')
+    .pipe(gulp.dest('.download/css'));
+});
+
+gulp.task('download', ['download:build'], function(done) {
+  gulp.src('.download/**/*')
+    .pipe($.zip('foundation-emails.zip'))
+    .pipe(gulp.dest('.'));
+});
+
 function inliner(css) {
   var css = fs.readFileSync(css).toString();
   var mqCss = siphon(css);

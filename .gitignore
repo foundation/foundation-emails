@@ -8,3 +8,5 @@ _build/
 inky
 *.swp
 .templates
+.download
+foundation-emails.zip
