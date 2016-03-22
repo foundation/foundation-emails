@@ -180,6 +180,14 @@ gulp.task('download', ['download:build'], function(done) {
     .pipe(gulp.dest('.'));
 });
 
+gulp.task('dist', ['sass:foundation'], function() {
+  return gulp.src('_build/assets/css/foundation.css')
+    .pipe(gulp.dest('dist'))
+    .pipe($.cssnano())
+    .pipe($.rename('foundation.min.css'))
+    .pipe(gulp.dest('dist'));
+});
+
 function inliner(css) {
   var css = fs.readFileSync(css).toString();
   var mqCss = siphon(css);
