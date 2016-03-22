@@ -7,13 +7,13 @@
 //
 // Feel free to submit pull requests to foundation-docs like you would Foundation itself!
 
-// $foundation-palette: (
-//   primary: #cc7691,
-//   secondary: #777,
-//   success: #3adb76,
-//   warning: #ffae00,
-//   alert: #ec5840,
-// );
+$foundation-palette: (
+  primary: #7465be,
+  secondary: #777,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #ec5840,
+);
 
 @import 'node_modules/foundation-sites/scss/foundation';
 @import 'node_modules/motion-ui/src/motion-ui';
@@ -25,3 +25,19 @@
 
 @import 'code';
 @import 'compatibility';
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a {
+  padding-right: 1rem;
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+  display: none;
+}
+
+.docs-newsletter {
+  background: #2a2f58;
+}
+
+.zurb-footer-top {
+  background: #1C1F3A !important;
+}

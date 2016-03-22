@@ -3,7 +3,9 @@ node_modules/
 .sass-cache/
 npm-debug.log
 temp/
-dist/
 _build/
 inky
 *.swp
+.templates
+.download
+foundation-emails.zip

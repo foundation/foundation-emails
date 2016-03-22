@@ -151,6 +151,43 @@ gulp.task('test:compile', function() {
     .pipe(gulp.dest('test/visual/_build'));
 });
 
+gulp.task('templates', function() {
+  return gulp.src('templates/*.html')
+    .pipe($.wrap({ src: 'test/visual/_template.html' }))
+    .pipe(inky())
+    .pipe($.prettify({ indent_size: 2 }))
+    .pipe(gulp.dest('.templates'))
+    .pipe($.zip('all-templates.zip'))
+    .pipe(gulp.dest('.templates'));
+});
+
+gulp.task('download:build', ['sass:foundation', 'templates'], function() {
+  gulp.src('test/visual/_template.html', { base: 'test/visual' })
+    .pipe($.injectString.replace('<%= contents %>', ''))
+    .pipe($.rename('index.html'))
+    .pipe(gulp.dest('.download'));
+
+  gulp.src('.templates/*.html')
+    .pipe(gulp.dest('.download/templates'));
+
+  return gulp.src('_build/assets/css/foundation.css')
+    .pipe(gulp.dest('.download/css'));
+});
+
+gulp.task('download', ['download:build'], function(done) {
+  gulp.src('.download/**/*')
+    .pipe($.zip('foundation-emails.zip'))
+    .pipe(gulp.dest('.'));
+});
+
+gulp.task('dist', ['sass:foundation'], function() {
+  return gulp.src('_build/assets/css/foundation.css')
+    .pipe(gulp.dest('dist'))
+    .pipe($.cssnano())
+    .pipe($.rename('foundation.min.css'))
+    .pipe(gulp.dest('dist'));
+});
+
 function inliner(css) {
   var css = fs.readFileSync(css).toString();
   var mqCss = siphon(css);
