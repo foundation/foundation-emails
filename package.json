@@ -10,6 +10,8 @@
   "scripts": {
     "start": "gulp",
     "test:visual": "gulp test",
+    "deploy:download": "gulp download",
+    "deploy:templates": "gulp templates",
     "deploy:docs": "gulp deploy:docs"
   },
   "repository": "https://github.com/zurb/foundation-emails",
