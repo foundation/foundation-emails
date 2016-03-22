@@ -10,7 +10,9 @@ tags:
 - **Streamlined and updated responsive grid:** We’ve simplified the markup in the new version so it’s faster and easier to code. The new responsive grid in Emails 2 requires fewer tags and classes. It’s also now responsive on Android Native!
 - **Inky templating language:** With Inky you can write less code and get more done. The Inky language gets you out of tables and into a simpler, more web-like, HTML.
 - **Built with Sass:** Now faster than ever, you can easily make sweeping visual changes to your email that reflect your brand styles - all within one settings file.
-- **ZURB Stack:** All kinds of task automation - [Panini](http://foundation.zurb.com/sites/docs/panini.html), our Handlebars templates, compiling Sass, BrowserSync, image compression, and auto inlining are built in to speed up your workflow. 
+- **ZURB Stack:** All kinds of task automation - [Panini](http://foundation.zurb.com/sites/docs/panini.html), our Handlebars templates, compiling Sass, BrowserSync, image compression, and auto inlining are built in to speed up your workflow.
+
+---
 
 ## Overview
 
@@ -35,6 +37,8 @@ What’s new that you might want to use:
 - Menu - Horizontal
 - Menu - Vertical
 
+---
+
 ## HTML
 
 With Foundation for Emails 2, confusing and tedious tables are a thing of the past. The new Inky markup will save you time and energy coding your emails. It looks like:
@@ -54,9 +58,11 @@ With Foundation for Emails 2, confusing and tedious tables are a thing of the pa
 
 You can use it to create the grid structure, buttons, and other components. We’ll go into this in detail in the components section. We'll explain more in the <a href="#grid">Grid section</a>.
 
-## CSS/Sass
+---
 
-Foundation for Emails 2 is available in a Sass version which let’s you quickly change common CSS values with some simple variables within the settings. 
+## CSS & Sass
+
+Foundation for Emails 2 is available in a Sass version which let’s you quickly change common CSS values with some simple variables within the settings.
 
 These are some CSS classes that are no longer needed for proper spacing:
 - `.wrapper`
@@ -67,7 +73,7 @@ These are some CSS classes that are no longer needed for proper spacing:
 
 Some helper classes have changed:
 
-`.center` was used in version 1 to center text. 
+`.center` was used in version 1 to center text.
 
 Version 2 now has more alignment classes:
 - `.text-center`: centers text
@@ -78,15 +84,15 @@ Version 2 now has more alignment classes:
 - `.small-text-right`: right aligns text on the small breakpoint
 - `float-center`: centers an image (see the [alignment docs](alignment.html) for best practices.)
 
-***
-## Components
-***
+---
+
+## Ink 1.0 Components
 
 ### Grid
-<a id="grid" href="grid"></a>
 
-Version 1
-In the previous version, we needed extra tags to support a wrapper element. This used to control the gutter and margins of a column.
+#### Old Markup
+
+In the Ink 1.0, we needed extra tags to support a wrapper element. This used to control the gutter and margins of a column.
 
 ```
 <table class="container">
@@ -100,7 +106,7 @@ In the previous version, we needed extra tags to support a wrapper element. This
             <table class="twelve columns">
               <tr>
                 <td class="text-pad">
-                            
+
                 </td>
                 <td class="expander"></td>
               </tr>
@@ -115,8 +121,9 @@ In the previous version, we needed extra tags to support a wrapper element. This
 </table>
 ```
 
-Version 2 (CSS version)
-In F4E 2, we’ve eliminated another a tag in an effort to simplify your markup. Gutters are now directly applied to the column element itself. We still need to identify the last column with a `.last` class, and now the first column element with the `.first` class. If you have columns in the middle of first and last, they don't need a `.first` or `.last` class.
+#### New Markup
+
+In Foundation for Emails 2, we’ve eliminated another tag in an effort to simplify your markup. Gutters are now directly applied to the column element itself. We still need to identify the last column with a `.last` class, and now the first column element with the `.first` class. If you have columns in the middle of first and last, they don't need a `.first` or `.last` class.
 
 ```
 <table class="container">
@@ -125,7 +132,7 @@ In F4E 2, we’ve eliminated another a tag in an effort to simplify your markup.
       <table class="row">
         <tr>
           <th class="first last small-12 large-12 columns">
-              
+
           </th>
         </tr>
       </table>
@@ -135,22 +142,25 @@ In F4E 2, we’ve eliminated another a tag in an effort to simplify your markup.
 </table>
 ```
 
-Version 2 (Inky markup)
+#### New Markup (Inky HTML)
 
 ```
 <container>
   <row>
     <columns small="12" large="12">
-      
+
     </columns>
   </row>
 </container>
 ```
 
-### Sub-grid is now a small grid
+---
+
+### Sub-grid
+
 In an effort to unify the thinking across the Foundation family, we’ve removed the sub-columns and moved towards a fully functional small grid.
 
-Version 1
+#### Old Markup
 
 ```
 <table class="container">
@@ -160,10 +170,10 @@ Version 1
       <table class="twelve columns">
         <tr>
           <td class="six sub-columns">
-                              
+
           </td>
           <td class="six sub-columns last">
-                              
+
           </td>
           <td class="expander"></td>
         </tr>
@@ -174,51 +184,53 @@ Version 1
 </table>
 ```
 
-Version 2 (CSS version)
+#### New Markup (Plain HTML)
 
 ```
 <table class="container">
   <tr>
     <td>
-         
+
       <table class="row">
         <tr>
           <th class="first large-6 small-6 columns">      
-        
+
           </th>
-         
+
           <th class="last large-6 small-6 columns">
 
           </th>
           <th class="expander"></th>
         </tr>
       </table>
-         
+
     </td>
   </tr>
 </table>
 ```
 
-Version 2 (Inky markup)
+#### New Markup (Inky HTML)
 
 ```
 <container>
   <row>
     <columns small="6">
-        
+
     </columns>
     <columns small="6">
-        
+
     </columns>
   </row>
 </container>
 ```
 
+---
+
 ### Block Grid
+
 The block grid has a minor syntax change with identifying the number of elements that are displayed in the row. We’ve moved to the convention of `.up-x`, instead of `.x-up`.
 
-
-Version 1 
+#### Old Markup
 
 ```
 <table class="block-grid three-up">
@@ -234,7 +246,7 @@ Version 1
 </table>
 ```
 
-Version 2 (CSS version)
+#### New Markup (Plain HTML)
 
 ```
 <table class="row">
@@ -248,10 +260,9 @@ Version 2 (CSS version)
     </th>
   </tr>
 </table>
-
 ```
 
-Version 2 (Inky markup)
+#### New Markup (Inky HTML)
 
 ```
 <row small-up="1" large-up="3">
@@ -261,10 +272,13 @@ Version 2 (Inky markup)
 </row>
 ```
 
+---
+
 ### Offset Columns
+
 Because we’ve eliminated the wrapper, offsets are now directly applied to the column itself.
 
-Version 1 
+#### Old Markup
 
 ```
 <table class="row">
@@ -274,7 +288,7 @@ Version 1
       <table class="eight columns">
         <tr>
           <td class="panel">
-      
+
           </td>
           <td class="expander"></td>
         </tr>
@@ -284,34 +298,37 @@ Version 1
 </table>
 ```
 
-Version 2 (CSS version)
+#### New Markup (Plain HTML)
 
 ```
 <table class="row">
   <tr>
     <th class="small-4 small-offset-8 large-4 large-offset-8 columns">
-  
+
     </th>
    </tr>
 </table>
 ```
 
-Version 2 (Inky markup)
+#### New Markup (Inky HTML)
 
 ```
 <row>
   <columns small="4" large="4" class="small-offset-8 large-offset-8">
-  
+
   </columns>
 </row>
 ```
 
 Offsets now can be used on the small breakpoint or the large, or both. They will shift over a set of columns over from the left.
 
-## Buttons
+---
+
+### Buttons
+
 In the previous version of F4E the text inside of the button was the only clickable element. In F4E 2, we’ve taken a hybrid approach of using padding and borders to increase the clickable area. It requires one more table but the result is a much bigger touch target which is good for usability.
 
-Version 1 
+#### Old Markup
 
 ```
 <table class="button">
@@ -323,7 +340,7 @@ Version 1
 </table>
 ```
 
-Version 2 (CSS version)
+#### Old Markup (Plain HTML)
 
 ```
 <table class="button">
@@ -341,7 +358,7 @@ Version 2 (CSS version)
 </table>
 ```
 
-Version 2 (Inky markup)
+#### New Markup (Inky HTML)
 
 ```
 <button href="http://zurb.com"></button>
@@ -349,10 +366,13 @@ Version 2 (Inky markup)
 
 Centering a button is easier now, just wrap the button with `<center>` tags.
 
-## Panels > Callouts
+---
+
+### Panels
+
 In an effort to unify the terminology across the Foundation family `panels` are now called `callouts`.
 
-Version 1 
+#### Old Markup
 
 ```
 <table class="twelve columns">
@@ -365,20 +385,20 @@ Version 1
 </table>
 ```
 
-Version 2 (CSS version)
+#### Old Markup (Plain HTML)
 
 ```
 <table class="small-12 columns">
   <tr>
     <td class="callout">
-      
+
     </td>
     <td class="expander"></td>
   </tr>
 </table>
 ```
 
-Version 2 (Inky markup)
+#### New Markup (Inky HTML)
 
 ```
 <row>
@@ -410,13 +430,13 @@ Version 2 (Inky markup)
 
 Callouts are only applicable to a `<td>` with a CSS version. In Foundation for Emails 2 Inky markup, you can wrap a callout around a `<row>` or the content inside a `<column>`.
 
-***
-## NEW
-***
+---
+
+## New Components
 
 ### Menu
 
-Version 2 (CSS version)
+#### Old Markup (Plain HTML)
 
 ```
 <table class="container">
@@ -448,7 +468,7 @@ Version 2 (CSS version)
 </table>
 ```
 
-Version 2 (Inky markup)
+#### New Markup (Inky HTML)
 
 ```
 <menu>
@@ -462,14 +482,6 @@ The menu component can be used to create a simple set of links comonly used in h
 
 ## Dependencies
 
-**CSS:**
+The CSS version works exactly like the one we distributed with Ink 1.0. Check out our [getting started guide](css-guide.html) to learn more.
 
-- Text Editor
-
-**Sass version:**
-
-- Text Editor
-- Git
-- Node
-
-To use the Sass version with the Inky markup language you'll want to install the Foundation for Emails project template. You'll find the [installation instructions here](https://github.com/zurb/foundation-emails/tree/v2.0#getting-started).
+To use the Sass version with the Inky markup language you'll want to install the Foundation for Emails project template. We have another [getting started guide](sass-guide.html) just for the Sass version of Foundation.
