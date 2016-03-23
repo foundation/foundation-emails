@@ -164,6 +164,7 @@ gulp.task('templates', function() {
 gulp.task('download:build:index', function() {
   return gulp.src('test/visual/_template.html', { base: 'test/visual' })
     .pipe($.injectString.replace('<%= contents %>', ''))
+    .pipe($.injectString.replace('../assets/', ''))
     .pipe($.rename('index.html'))
     .pipe(gulp.dest('.download'));
 });
