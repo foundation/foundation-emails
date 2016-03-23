@@ -25,6 +25,7 @@ $foundation-palette: (
 
 @import 'code';
 @import 'compatibility';
+@import 'course-callout';
 
 .dropdown.menu > li.is-dropdown-submenu-parent > a {
   padding-right: 1rem;
