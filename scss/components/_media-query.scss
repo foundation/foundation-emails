@@ -124,8 +124,14 @@
     }
   }
 
+  //Centers the menus!
+  table.menu[align="center"] {
+    width: auto !important;
+  }
+
   //Buttons
   table.button.expand {
     width: 100% !important;
   }
 }
+
