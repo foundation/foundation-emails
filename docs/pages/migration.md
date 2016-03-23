@@ -340,7 +340,7 @@ In the previous version of F4E the text inside of the button was the only clicka
 </table>
 ```
 
-#### Old Markup (Plain HTML)
+#### New Markup (Plain HTML)
 
 ```
 <table class="button">
@@ -385,7 +385,7 @@ In an effort to unify the terminology across the Foundation family `panels` are 
 </table>
 ```
 
-#### Old Markup (Plain HTML)
+#### New Markup (Plain HTML)
 
 ```
 <table class="callout">
