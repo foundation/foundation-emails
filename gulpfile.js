@@ -161,23 +161,35 @@ gulp.task('templates', function() {
     .pipe(gulp.dest('.templates'));
 });
 
-gulp.task('download:build', ['sass:foundation', 'templates'], function() {
-  gulp.src('test/visual/_template.html', { base: 'test/visual' })
+gulp.task('download:build:index', function() {
+  return gulp.src('test/visual/_template.html', { base: 'test/visual' })
     .pipe($.injectString.replace('<%= contents %>', ''))
     .pipe($.rename('index.html'))
     .pipe(gulp.dest('.download'));
+});
 
-  gulp.src('.templates/*.html')
+gulp.task('download:build:templates', ['templates'], function() {
+  return gulp.src('.templates/*.html')
     .pipe(gulp.dest('.download/templates'));
+});
 
+gulp.task('download:build:css', ['sass:foundation'], function() {
   return gulp.src('_build/assets/css/foundation.css')
     .pipe(gulp.dest('.download/css'));
+})
+
+gulp.task('download:build', ['download:build:index', 'download:build:templates', 'download:build:css'], function() {
+  return gulp.src('.download/**/*')
+    .pipe($.zip('foundation-emails.zip'))
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('download', ['download:build'], function(done) {
-  gulp.src('.download/**/*')
-    .pipe($.zip('foundation-emails.zip'))
-    .pipe(gulp.dest('.'));
+  return gulp.src('foundation-emails.zip')
+    .pipe($.rsync({
+      hostname: 'deployer@72.32.134.77',
+      destination: '/home/deployer/sites/foundation-sites-6-marketing/downloads/'
+    }));
 });
 
 gulp.task('dist', ['sass:foundation'], function() {
