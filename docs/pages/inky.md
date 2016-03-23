@@ -13,7 +13,7 @@ Inky keeps you out of a sea of tables and focused on your email. Check out this 
 ```inky_example
 <container>
   <row>
-    <columns></columns>
+    <columns>Put content in me!</columns>
   </row>
 </container>
 ```
