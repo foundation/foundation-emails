@@ -238,7 +238,7 @@ small {
 
 a {
   color: $anchor-color;
-  text-decoration: none;
+  text-decoration: $anchor-text-decoration;
 
   &:hover {
     color: $anchor-color-hover;
