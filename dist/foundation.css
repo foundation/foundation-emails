@@ -907,7 +907,6 @@ table.button {
   margin: 0 0 16px 0;
   Margin: 0 0 16px 0; }
   table.button table td {
-    width: auto !important;
     text-align: left;
     color: #fefefe;
     background: #2199e8;
