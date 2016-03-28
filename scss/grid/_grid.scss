@@ -40,6 +40,13 @@ table {
     width: 100%;
     position: relative;
   }
+  
+  &.spacer {
+    width: 100%;
+    td {
+      mso-line-height-rule: exactly;
+    }
+  }
 }
 
 table.container table.row {
