@@ -3,11 +3,11 @@ title: Tips &amp; Tricks
 description: We've put together some Responsive Emails Tips &amp; Tricks that will help you navigate the mine field that is coding HTML emails.
 ---
 
-Coding responsive emails can be a real pain. This guide will help you through some of the the most common issues you'd face.
+Coding responsive emails can be a real pain. This guide will help you through some of the the most common issues you'd face. It's a living document and will be updated periodically.
 
 ## Why Foundation for Emails
 
-
+Foundation for Emails, especially with Inky, help abstract away much of the pain of HTML email development. It's more than responsive templates you can use. 
 
 ## Need to know
 
@@ -41,7 +41,66 @@ If you are using the CSS version, you can use our [web inliner](http://foundatio
 
 ## HTML
 
+When it comes to making emails, `<div>`'s aren’t a thing. Don’t kill the messenger, but it’s true. For structural purposes at least. `<div>`'s can still be used for targeting CSS and for grouping semantically related elements, but shouldn’t be used for spacing or background colors.
 
+Tables are still the standard. 
+
+For those of you who haven’t used tables since Netscape Navigator (or ever) here’s a quick recap.
+
+There are three main tags in a table. The `<table>` tag wraps the entire table. The `<tr>` tag denotes a row. The `<td>` tag is used to wrap a table cell.
+
+```
+
+Some web browsers may be forgiving, but it’s important to include all three tags. Don’t get lazy and skip the `<tr>`. Email clients can be unpredictable, so the first step to good rendering is to have valid markup. 
+
+It makes debugging and sharing code a lot easier when you’re consistent. It lets other developers get oriented within the code and makes it easier to tell what you’re looking at, just like consistent indentation and comments.
+
+While semantic, the “table row” and “table data” elements aren’t that helpful for creating row and column layouts. They’re designed for spreadsheets or other *non-uniform* grids. They can’t be used structurally.
+
+Instead, we use nested tables. Think of a bunch of single-cell spreadsheets being nested.
+
+Where we would have `<div>`'s in website land…
+
+```html
+<div class="row">
+  <div class="small-12 columns">
+    <!-- Content -->
+  </div>
+</div>
+```
+
+…we have tables in email world. 
+
+```html
+<table class="container">
+  <tr>
+    <td>
+      <table class="row">
+        <tr>
+          <th class="first last small-12 large-12 columns">
+
+          </th>
+        </tr>
+      </table>
+    <th class="expander"></th>
+    </td>
+  </tr>
+</table>
+```
+
+A (`<table>`, `<tr>`, `<td>`) triplet is *almost*, but not quite, a one-to-one replacement for a structural `<div>`.
+
+Table elements have their own special “display” values. Sometimes we can override them to display as block elements. The display value (in combination with the HTML schema specified in the DOCTYPE), specifies the rules for rendering each element.
+
+Tables have all sorts of fancy HTML attributes not all of which can be set in CSS.
+
+```html
+<table align="center" valign="top" cellspacing="0">
+  …
+</table>
+```
+
+Some inliners (like Premailer and our inliner) will take care of this for you. This is unfortunate because separation of concerns dictates that we should try and keep our structure in the markup (HTML) and styles in the CSS, but alas HTML email is far from a perfect world.
 
 ## CSS
 
@@ -50,6 +109,10 @@ Support of CSS properties varies greatly between email clients. You're best off 
 
 This guide will really save you some pain when writing CSS:
 [CSS Support Chart](https://www.campaignmonitor.com/css/b/)
+
+You should only set classes and IDs on `<tables>` or `<td>`/`<th>` tags, not `<tr>` tags. 
+
+If you need to apply padding, only do that on a `<td>`/`<th>` as well. Been there, done that — we had a lot of trouble of this while building Foundation for Emails. Your milage may vary, but just trying to help you out by saving you some time.
 
 For some things you can do and work-arounds, see the <a href="#progressive-enhancement">Progressive Enhancement</a> section below.
 
@@ -85,10 +148,8 @@ Use it like this:
 <a id="progressive-enhancement"></a>
 ## Progressive Enhancement
 
+Think of any extra CSS you may use as upward-compatibility. You can always include some header style CSS if you want, but think of it as a bonus for people using email clients that support it. Then turn it off completely and make sure the design still makes sense.
 
-Tables are still the standard.
-
-Take a look at the code of almost any HTML email you've gotten. I'll bet ya it's formatted with a table. Tables are still the best way to achieve consistent results across email clients. The email equivalent of the browser window is the "viewport", or the area in an email client dedicated to showing the actual email. This varies quite a bit. A vary common technique is to set a table with a 100% width with a nested table inside of it that is centered with a static width. This seems to work very well. The outer table is also your big chance to set the background-color for the whole email. Too bad we can't just use a div with auto left and right margins for centering, but it won't work most email clients.
 
 What you CAN'T do:
 

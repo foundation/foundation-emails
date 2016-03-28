@@ -125,6 +125,8 @@ In the Ink 1.0, we needed extra tags to support a wrapper element. This used to 
 
 In Foundation for Emails 2, we’ve eliminated another tag in an effort to simplify your markup. Gutters are now directly applied to the column element itself. We still need to identify the last column with a `.last` class, and now the first column element with the `.first` class. If you have columns in the middle of first and last, they don't need a `.first` or `.last` class.
 
+Also, we stitched `<td>`'s to `<th>`'s because that allows Android 4 native to be responsive - win!
+
 ```
 <table class="container">
   <tr>
