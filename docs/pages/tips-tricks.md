@@ -3,11 +3,16 @@ title: Tips &amp; Tricks
 description: We've put together some Responsive Emails Tips &amp; Tricks that will help you navigate the mine field that is coding HTML emails.
 ---
 
-Coding responsive emails can be a real pain. This guide will help you through some of the the most common issues you'd face. It's a living document and will be updated periodically.
+Coding responsive emails can be a real pain. This guide will help you through some of the the most common issues you'd face. It's a living document and will get updates periodically.
 
 ## Why Foundation for Emails
 
-Foundation for Emails, especially with Inky, help abstract away much of the pain of HTML email development. It's more than responsive templates you can use. 
+Most responsive emails are built on templates. They’re simple, easy to drop content into and are usually well-tested. Templates have a serious cost though. "Oh, so you want to do anything other than change the colors and text?" Sorry … you’re out of luck, Chuck. Templates tend to be hard to customize heavily or to extend. For that you need a framework.
+
+A framework is a collection of reusable code and design patterns which gives users a solid, tested base upon which to build. Not a bunch of visual styles you can just bolt on as an afterthought and call it a day. 
+
+- Frameworks give you the solid base of a template, but the extensibility of custom code. You can make your template fit your content, not the other way around.
+- Additionally, a framework gives you a common codebase to structure your projects around. You can spend less time coding your email. No more re-inventing the wheel.
 
 ## Need to know
 
@@ -15,7 +20,9 @@ The sad truth about creating or coding HTML emails is that tables are the only t
 
 It's not all doom and gloom though, and we're all in this together. Foundation for Emails helps by getting you away from tables (Sass version), helping you with an organized project structure, and a well tested codebase to make this much easier. We've put together a guide and links to resources from our friends to help you along as well as a new [Responsive Emails master class](http://zurb.com/university/responsive-emails-foundation) to become a HTML email pro.
 
-## General
+---
+
+## HTML
 
 **Email Container Width**
 
@@ -24,6 +31,18 @@ The email equivalent of the browser window is the "viewport", or the area in an 
 Foundation for Emails' default container with around 600px wide. That's because the majority of email clients have a preview pane that is around 550-700 pixels. With the Sass version, you can easily customize this width by adjusting the `$global-width` variable.
 
 The height of your email doesn't matter as much because people scroll. It still helps to have your most compelling content towards the top.
+
+---
+
+## CSS
+
+**CSS Support**
+Support of CSS properties varies greatly between email clients. You're best off sticking with the basics and not getting to fancy.
+
+This guide will really save you some pain when writing CSS:
+[CSS Support Chart](https://www.campaignmonitor.com/css/b/)
+
+For some things you can do and work-arounds, see the <a href="#progressive-enhancement">Progressive Enhancement</a> section below.
 
 **Inlining CSS**
 
@@ -35,86 +54,9 @@ Gmail strips the `<head>` (and, consequently, `<style>`) tags from your email. T
 
 Because media queries cannot be inlined, they need to be moved into the `<body>` of the email. Our inliner does that for you.
 
-If you're using Sass with the ZURB stack, you enjoy the luxury of automatic inlining when running `npm run build`. You'll want to do this before you test or send your email.
+If you're using Sass with the ZURB stack, you enjoy the luxury of automatic inlining when running `npm run build`. Your file will be copied into the `dist ` folder where you will find it minified and inlined. You'll want to do this before you test or send your email.
 
 If you are using the CSS version, you can use our [web inliner](http://foundation.zurb.com/emails/inliner.html).
-
-## HTML
-
-When it comes to making emails, `<div>`'s aren’t a thing. Don’t kill the messenger, but it’s true. For structural purposes at least. `<div>`'s can still be used for targeting CSS and for grouping semantically related elements, but shouldn’t be used for spacing or background colors.
-
-Tables are still the standard. 
-
-For those of you who haven’t used tables since Netscape Navigator (or ever) here’s a quick recap.
-
-There are three main tags in a table. The `<table>` tag wraps the entire table. The `<tr>` tag denotes a row. The `<td>` tag is used to wrap a table cell.
-
-```
-
-Some web browsers may be forgiving, but it’s important to include all three tags. Don’t get lazy and skip the `<tr>`. Email clients can be unpredictable, so the first step to good rendering is to have valid markup. 
-
-It makes debugging and sharing code a lot easier when you’re consistent. It lets other developers get oriented within the code and makes it easier to tell what you’re looking at, just like consistent indentation and comments.
-
-While semantic, the “table row” and “table data” elements aren’t that helpful for creating row and column layouts. They’re designed for spreadsheets or other *non-uniform* grids. They can’t be used structurally.
-
-Instead, we use nested tables. Think of a bunch of single-cell spreadsheets being nested.
-
-Where we would have `<div>`'s in website land…
-
-```html
-<div class="row">
-  <div class="small-12 columns">
-    <!-- Content -->
-  </div>
-</div>
-```
-
-…we have tables in email world. 
-
-```html
-<table class="container">
-  <tr>
-    <td>
-      <table class="row">
-        <tr>
-          <th class="first last small-12 large-12 columns">
-
-          </th>
-        </tr>
-      </table>
-    <th class="expander"></th>
-    </td>
-  </tr>
-</table>
-```
-
-A (`<table>`, `<tr>`, `<td>`) triplet is *almost*, but not quite, a one-to-one replacement for a structural `<div>`.
-
-Table elements have their own special “display” values. Sometimes we can override them to display as block elements. The display value (in combination with the HTML schema specified in the DOCTYPE), specifies the rules for rendering each element.
-
-Tables have all sorts of fancy HTML attributes not all of which can be set in CSS.
-
-```html
-<table align="center" valign="top" cellspacing="0">
-  …
-</table>
-```
-
-Some inliners (like Premailer and our inliner) will take care of this for you. This is unfortunate because separation of concerns dictates that we should try and keep our structure in the markup (HTML) and styles in the CSS, but alas HTML email is far from a perfect world.
-
-## CSS
-
-**CSS Support**
-Support of CSS properties varies greatly between email clients. You're best off sticking with the basics and not getting to fancy.
-
-This guide will really save you some pain when writing CSS:
-[CSS Support Chart](https://www.campaignmonitor.com/css/b/)
-
-You should only set classes and IDs on `<tables>` or `<td>`/`<th>` tags, not `<tr>` tags. 
-
-If you need to apply padding, only do that on a `<td>`/`<th>` as well. Been there, done that — we had a lot of trouble of this while building Foundation for Emails. Your milage may vary, but just trying to help you out by saving you some time.
-
-For some things you can do and work-arounds, see the <a href="#progressive-enhancement">Progressive Enhancement</a> section below.
 
 ## JavaScript
 
@@ -144,12 +86,40 @@ Use it like this:
 
 ## Images
 
+Beware of blocked images
+
+
+## Buttons
+
+
+## Email File Size
+
+Sending an emails with a file size between 15KB-100KB is ideal. Some email clients will send the email to spam if the file size is greater.
+
+Emails can get cut off by the ‘This message has only partially downloaded’ in iOS Apple Mail the Gmail app for iOS. The user will be prompted to "Download entire message" or "Download remaining X KB".
+
+Problems
+
+- this could cause the email open to not be registered
+- your email's call to action could be missed
+
+Causes
+
+- Making the HTML file size less than 20kb (20540 characters) - not including images or the plain-text version. This charachter count includes things like inline styles, HTML tags, and spaces, and other HTML entities.
+- Downloading the message over cellular data, not WiFi. Can't do much about this one.
+
+Solution? 
+
+- Create emails that are short and to the point. Too many call-to-actions's, topics, or long emails don't tend to work that well anyways.
+- Minify your HTML. The ZURB Stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the charachter count and file size. Our [web inliner](http://foundation.zurb.com/emails/inliner.html) also has an option to remove whitespace between your charachters.
 
 <a id="progressive-enhancement"></a>
 ## Progressive Enhancement
 
-Think of any extra CSS you may use as upward-compatibility. You can always include some header style CSS if you want, but think of it as a bonus for people using email clients that support it. Then turn it off completely and make sure the design still makes sense.
 
+Tables are still the standard.
+
+Take a look at the code of almost any HTML email you've gotten. I'll bet ya it's formatted with a table. Tables are still the best way to achieve consistent results across email clients. The email equivalent of the browser window is the "viewport", or the area in an email client dedicated to showing the actual email. This varies quite a bit. A vary common technique is to set a table with a 100% width with a nested table inside of it that is centered with a static width. This seems to work very well. The outer table is also your big chance to set the background-color for the whole email. Too bad we can't just use a div with auto left and right margins for centering, but it won't work most email clients.
 
 What you CAN'T do:
 
