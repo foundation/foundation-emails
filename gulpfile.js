@@ -213,8 +213,8 @@ function inliner(css) {
     })
     .pipe($.injectString.replace, '<!-- <style> -->', '<style>'+mqCss+'</style>')
     .pipe($.htmlmin, {
-      collapseWhitespace: true,
-      minifyCSS: true
+      collapseWhitespace: false,
+      minifyCSS: false
     });
 
   return pipe();
