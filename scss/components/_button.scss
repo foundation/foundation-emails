@@ -69,14 +69,6 @@ table.button {
       background: $button-background;
       border: 2px solid $button-background;
 
-      &.radius {
-        border-radius: $button-radius;
-      }
-
-      &.rounded {
-        border-radius: $button-rounded;
-      }
-
       a {
         font-family: $body-font-family;
         font-size: map-get($button-font-size, default);
@@ -89,6 +81,16 @@ table.button {
         border-radius: $button-radius;
       }
     }
+  }
+
+  &.radius table td {
+    border-radius: $button-radius;
+    border: none;
+  }
+
+  &.rounded table td {
+    border-radius: $button-rounded;
+    border: none;
   }
 }
 
