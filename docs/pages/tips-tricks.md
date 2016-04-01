@@ -12,19 +12,19 @@ Most responsive emails are built on templates. They’re simple, easy to drop co
 A framework is a collection of reusable code and design patterns which gives users a solid, tested base upon which to build. Not a bunch of visual styles you can just bolt on as an afterthought and call it a day. 
 
 - Frameworks give you the solid base of a template, but the extensibility of custom code. You can make your template fit your content, not the other way around.
-- Additionally, a framework gives you a common codebase to structure your projects around. You can spend less time coding your email. No more re-inventing the wheel.
+- Additionally, a framework gives you a common codebase to structure your projects around. So if new team members work on the project, they don't have to re-invent the wheel. You can spend less time coding your email and more time optimizing your campaigns.
 
 ## Need to know
 
 The sad truth about creating or coding HTML emails is that tables are the only thing that is universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capitor, and going back to the 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags. 
 
-It's not all doom and gloom though, and we're all in this together. Foundation for Emails helps by getting you away from tables (Sass version), helping you with an organized project structure, and a well tested codebase to make this much easier. We've put together a guide and links to resources from our friends to help you along as well as a new [Responsive Emails master class](http://zurb.com/university/responsive-emails-foundation) to become a HTML email pro.
+It's not all doom and gloom though, and we're all in this together. Foundation for Emails helps by getting you away from tables (Sass version), helping you with an organized project structure, and a well tested codebase to make this much easier. We've put together this guide and [links to resources](http://foundation.zurb.com/emails/resources.html) from our friends to help you along as well as a new [Responsive Emails master class](http://zurb.com/university/responsive-emails-foundation) to become a HTML email pro.
 
 ---
 
 ## HTML
 
-**Email Container Width**
+#### Email Container Width
 
 The email equivalent of the browser window is the "viewport", or the area in an email client dedicated to showing the actual email. This varies quite a bit.
 
@@ -36,15 +36,17 @@ The height of your email doesn't matter as much because people scroll. It still 
 
 ## CSS
 
-**CSS Support**
-Support of CSS properties varies greatly between email clients. You're best off sticking with the basics and not getting to fancy.
+#### CSS Support
+Support of CSS properties varies greatly between email clients. You're best off sticking with the basics and not getting too fancy.
 
-This guide will really save you some pain when writing CSS:
+This CSS compatibily chart will really save you some pain when writing CSS:
 [CSS Support Chart](https://www.campaignmonitor.com/css/b/)
 
 For some things you can do and work-arounds, see the <a href="#progressive-enhancement">Progressive Enhancement</a> section below.
 
-**Inlining CSS**
+---
+
+#### Inlining CSS
 
 Gmail strips the `<head>` (and, consequently, `<style>`) tags from your email. Therefor your email's CSS needs to be inlined. You know, like old school CSS:
 
@@ -56,23 +58,11 @@ Because media queries cannot be inlined, they need to be moved into the `<body>`
 
 If you're using Sass with the ZURB stack, you enjoy the luxury of automatic inlining when running `npm run build`. Your file will be copied into the `dist ` folder where you will find it minified and inlined. You'll want to do this before you test or send your email.
 
-If you are using the CSS version, you can use our [web inliner](http://foundation.zurb.com/emails/inliner.html).
+If you are using the CSS version, you can use our [web inliner](http://foundation.zurb.com/emails/inliner-v2.html).
 
-## JavaScript
+---
 
-Nope. JavaScript is not a reality in emails. 
-
-**Structure and alignment:** 
-
-
-**Colors:** 
-
-- It's better to use full 6 digit hex codes colors in HTML emails (#ffffff vs #fff). Although all the major email clients support short hex colors, Outlook.com (Hotmail), Lotus Notes 6.5, 7 and 8 do not.
-- RGB's are supported all the major email clients but RGBA's are only supported in IOS, Apple Mail, Gmail, and Android 4 (Gmail).
-- Background colors work across all email clients as well as color for fonts.
-
-
-**Margin and Padding:** 
+#### Margin and Padding: 
 
 - Outlook 2007, 2010, and 2013 does not support "padding" in `<p>`, `<div>` or `<a>` tags. Use margin instead.
 - Forget about using CSS positioning like `top`, `bottom`, `relative`, `absolute`. 
@@ -83,13 +73,116 @@ Use it like this:
   margin: 10px; 
   Margin: 10px;  // fallback for Outlook.com
   ```
+- `<br>` tags are ok, but you won't get pixel perfect results and yuo can quickly fill up your code with messyness.
+- **Your best option** for vertical spacing is to use the `<spacer>` component in Foundation for Emails. It works consistintly on all email clients and lets you set the height with the size attribute. So `<spacer size="32"></spacer>` will create 32px of vertical space.
+
+---
+
+#### Colors:
+
+- It's better to use full 6 digit hex codes colors in HTML emails (#ffffff vs #fff). Although all the major email clients support short hex colors, Outlook.com (Hotmail), Lotus Notes 6.5, 7 and 8 do not.
+- RGB's are supported all the major email clients but RGBA's are only supported in IOS, Apple Mail, Gmail, and Android 4 (Gmail).
+- Background colors work across all email clients as well as color for fonts.
+
+---
+
+#### Structure and alignment:
+
+When it comes to making emails, divs aren’t a thing. Don’t kill the messenger, but it’s true. It's not fun finding out we can't just use a `<div>` with auto left and right margins for centering, bacground colors; It won't work most email clients. `<div>`'s can still be used for targeting CSS and for grouping semantically related elements, but shouldn’t be used for for structural purposes or spacing.
+
+Use tables instead. For those of you who haven’t used tables since Netscape Navigator (or ever) here’s a quick recap.
+
+There are three main tags in a table.
+
+```html
+<table>
+  <tr>
+    <td></td>
+  </tr>
+</table>
+```
+
+The `<table>` tag wraps the entire table. The `<tr>` tag denotes a row. The `<td>` tag is used to wrap a table cell.
+
+Some web browsers may be forgiving, but it’s important to include all three tags. Don’t get lazy and skip the `<tr>`. Email clients can be unpredictable, so the first step to good rendering is to have valid markup.
+
+*It makes debugging and sharing code a lot easier when you’re consistent. It lets other developers get oriented within the code and makes it easier to tell what you’re looking at, just like consistent indentation and comments.*
+
+While semantic, the “table row” and “table data” elements aren’t that helpful for creating row and column layouts. They’re designed for spreadsheets or other *non-uniform* grids. They can’t be used structurally.
+
+Instead, we use nested tables. Think a bunch of single-cell spreadsheets being nested.
+
+Where we would have divs in website land…
+
+```html
+<div class="row">
+  <div class="small-12 columns">
+    <!-- Content -->
+  </div>
+</div>
+```
+
+…we have tables in email world.
+
+```html
+<table class="row">
+  <tbody>
+    <tr>
+      <th class="small-12 columns first last">
+        <table>
+          <tr>
+            <th>
+              <!-- Content -->
+            </th>
+            <th class="expander"></th>
+          </tr>
+        </table>
+      </th>
+    </tr>
+  </tbody>
+</table>      
+```
+
+Table elements have their own special “display” values. Sometimes we can override them to display as block elements, but more on that later. The display value (in combination with the HTML schema specified in the DOCTYPE), specifies the rules for rendering each element.
+
+Tables have all sorts of fancy HTML attributes…not all of which can be set in CSS. This is unfortunate because separation of concerns dictates that we should try and keep our structure in the markup (HTML) and styles in the CSS. Some inliners will take care of this for you.
+
+```html
+<table align="center" valign="top" cellspacing="0">
+  …
+</table>
+```
+
+Speaking of CSS, you should only set classes and IDs on tables or `<td>` tags, not `<tr>` tags. If you need to apply padding, only do that on a `<td>` as well. Been there, done that — we had a lot of trouble with this while building the first version of Foundation for Emails. Your milage may vary, but just trying to help you out by saving you some time.
+
+
+
+---
+
+## JavaScript
+
+Nope. JavaScript is not a reality in emails. 
+
+
+
+
+
+
 
 ## Images
 
-Beware of blocked images
+Beware of blocked images. Many email clients block images by default. “Many” being pretty much everybody except Apple Mail/iOS and Gmail.
+
+Q: What’s a designer to do?
+
+A: Always use an ALT tag.
+
+ALT tags are very important for accessibility.
 
 
 ## Buttons
+
+
 
 
 ## Email File Size
@@ -117,9 +210,7 @@ Solution?
 ## Progressive Enhancement
 
 
-Tables are still the standard.
 
-Take a look at the code of almost any HTML email you've gotten. I'll bet ya it's formatted with a table. Tables are still the best way to achieve consistent results across email clients. The email equivalent of the browser window is the "viewport", or the area in an email client dedicated to showing the actual email. This varies quite a bit. A vary common technique is to set a table with a 100% width with a nested table inside of it that is centered with a static width. This seems to work very well. The outer table is also your big chance to set the background-color for the whole email. Too bad we can't just use a div with auto left and right margins for centering, but it won't work most email clients.
 
 What you CAN'T do:
 
@@ -134,8 +225,6 @@ Main things to keep in mind, since they're hard to believe...
 
 2. Just give in and nest tables. It's terrible, but reliable everywhere.
 
-3. Margin and padding is not completely supported (depending on DOM element).
-   Mostly just not Outlook > 2003, which is insane.
    
 4. Apply style to divs and not many other tags.
 
@@ -183,7 +272,9 @@ OBEY THE LAW. The CAN-SPAM act became law on Jan. 1, 2004. It says there many th
 
 ## Testing
 
-Test, test, and test again. After you have an inlined version of your email, you should test it on as many devices and email clients as you can. 
+Testing costs money. Not testing costs you customers.
+
+So test, test, and test again. After you have an inlined version of your email, you should test it on as many devices and email clients as you can. 
 
 The two top testing services out there are:
 [Litmus](https://litmus.com/)
@@ -193,4 +284,4 @@ If you're not sure where to start, you can see the [Email Client Market Share](h
 
 Foundation for Emails is tested on the most popular clients. You can also test on the clients listed in our [compatability guide](compatibility.html)
 
-These services make testing on lots of email clients and devices much faster. Still, nothing beats testing on a real device.
+These services make testing on lots of email clients and devices much faster. Try to hit the main categories: a Windows machine, a Mac, an iPhone, an Android, a tablet. Still, nothing beats testing on a real device. 
