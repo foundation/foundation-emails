@@ -109,7 +109,7 @@ Inside of your row (the innermost `<tr>`), add one column using this code:
 ```html
 <table class="row">
   <tr>
-    <th class="small-12 large-6 first columns ">
+    <th class="small-12 large-6 first columns">
       Column One
     </th>
     <th class="expander"></th>
@@ -124,10 +124,10 @@ Since this first column is half-width, we need a second one to go with it. *Afte
 ```html
 <table class="row">
   <tr>
-    <th class="small-12 large-6 first columns ">
+    <th class="small-12 large-6 first columns">
       Column One
     </th>
-    <th class="small-12 large-6 last columns ">
+    <th class="small-12 large-6 last columns">
       Column Two
     </th>
     <th class="expander"></th>
