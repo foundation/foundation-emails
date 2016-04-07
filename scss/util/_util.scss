@@ -18,5 +18,5 @@
 /// @param {number} $containerWidth - Width of the surrounding container, in pixels.
 /// @returns {number} A pixel width value.
 @function -zf-grid-calc-px($columnNumber, $totalColumns, $containerWidth) {
-  @return ($containerWidth / $totalColumns * $columnNumber - $global-gutter);
+  @return (($containerWidth - $global-gutter) / $totalColumns * $columnNumber - $global-gutter);
 }
