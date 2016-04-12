@@ -67,7 +67,7 @@ table.button {
       text-align: left;
       color: $button-color;
       background: $button-background;
-      border: 2px solid $button-background;
+      border: $button-border;
 
       a {
         font-family: $body-font-family;
