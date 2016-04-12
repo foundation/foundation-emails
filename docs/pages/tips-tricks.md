@@ -18,6 +18,8 @@ A framework is a collection of reusable code and design patterns which gives use
 
 The sad truth about creating or coding HTML emails is that tables are the only thing that is universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capitor, and going back to the 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags. 
 
+<div class="callout secondary tip">General rule of thumb: your email is not going to look identical in every client. And that’s OK.</div>
+
 It's not all doom and gloom though, and we're all in this together. Foundation for Emails helps by getting you away from tables (Sass version), helping you with an organized project structure, and a well tested codebase to make this much easier. We've put together this guide and [links to resources](http://foundation.zurb.com/emails/resources.html) from our friends to help you along as well as a new [Responsive Emails master class](http://zurb.com/university/responsive-emails-foundation) to become a HTML email pro.
 
 ---
@@ -31,60 +33,6 @@ The email equivalent of the browser window is the "viewport", or the area in an 
 Foundation for Emails' default container with around 600px wide. That's because the majority of email clients have a preview pane that is around 550-700 pixels. With the Sass version, you can easily customize this width by adjusting the `$global-width` variable.
 
 The height of your email doesn't matter as much because people scroll. It still helps to have your most compelling content towards the top.
-
----
-
-## CSS
-
-#### CSS Support
-Support of CSS properties varies greatly between email clients. You're best off sticking with the basics and not getting too fancy.
-
-This CSS compatibily chart will really save you some pain when writing CSS:
-[CSS Support Chart](https://www.campaignmonitor.com/css/b/)
-
-For some things you can do and work-arounds, see the <a href="#progressive-enhancement">Progressive Enhancement</a> section below.
-
----
-
-#### Inlining CSS
-
-Gmail strips the `<head>` (and, consequently, `<style>`) tags from your email. Therefor your email's CSS needs to be inlined. You know, like old school CSS:
-
-```html
-<table class="menu" style="padding:0;text-align:center;vertical-align:top;width:auto">
-```
-
-Because media queries cannot be inlined, they need to be moved into the `<body>` of the email. Our inliner does that for you.
-
-If you're using Sass with the ZURB stack, you enjoy the luxury of automatic inlining when running `npm run build`. Your file will be copied into the `dist ` folder where you will find it minified and inlined. You'll want to do this before you test or send your email.
-
-If you are using the CSS version, you can use our [web inliner](http://foundation.zurb.com/emails/inliner-v2.html).
-
----
-
-#### Margin and Padding: 
-
-- Outlook 2007, 2010, and 2013 does not support "padding" in `<p>`, `<div>` or `<a>` tags. Use margin instead.
-- Forget about using CSS positioning like `top`, `bottom`, `relative`, `absolute`. 
-- Margin is universally supported BUT you may see some inconsistencies in Outlook 2007, 2010, and 2013. Padding is safer. Also, it is known that Outlook.com does not support the margin property. The odd thing is Outlook.com does support margin with a capital "M".
-Use it like this: 
-  
-  ```
-  margin: 10px; 
-  Margin: 10px;  // fallback for Outlook.com
-  ```
-- `<br>` tags are ok, but you won't get pixel perfect results and yuo can quickly fill up your code with messyness.
-- **Your best option** for vertical spacing is to use the `<spacer>` component in Foundation for Emails. It works consistintly on all email clients and lets you set the height with the size attribute. So `<spacer size="32"></spacer>` will create 32px of vertical space.
-
----
-
-#### Colors:
-
-- It's better to use full 6 digit hex codes colors in HTML emails (#ffffff vs #fff). Although all the major email clients support short hex colors, Outlook.com (Hotmail), Lotus Notes 6.5, 7 and 8 do not.
-- RGB's are supported all the major email clients but RGBA's are only supported in IOS, Apple Mail, Gmail, and Android 4 (Gmail).
-- Background colors work across all email clients as well as color for fonts.
-
----
 
 #### Structure and alignment:
 
@@ -155,7 +103,57 @@ Tables have all sorts of fancy HTML attributes…not all of which can be set in 
 
 Speaking of CSS, you should only set classes and IDs on tables or `<td>` tags, not `<tr>` tags. If you need to apply padding, only do that on a `<td>` as well. Been there, done that — we had a lot of trouble with this while building the first version of Foundation for Emails. Your milage may vary, but just trying to help you out by saving you some time.
 
+---
 
+## CSS
+
+#### CSS Support
+Support of CSS properties varies greatly between email clients. You're best off sticking with the basics and not getting too fancy.
+
+This CSS compatibily chart will really save you some pain when writing CSS:
+[CSS Support Chart](https://www.campaignmonitor.com/css/b/)
+
+For some things you can do and work-arounds, see the <a href="#progressive-enhancement">Progressive Enhancement</a> section below.
+
+---
+
+#### Inlining CSS
+
+Gmail strips the `<head>` (and, consequently, `<style>`) tags from your email. Therefor your email's CSS needs to be inlined. You know, like old school CSS:
+
+```html
+<table class="menu" style="padding:0;text-align:center;vertical-align:top;width:auto">
+```
+
+Because media queries cannot be inlined, they need to be moved into the `<body>` of the email. Our inliner does that for you.
+
+If you're using Sass with the ZURB stack, you enjoy the luxury of automatic inlining when running `npm run build`. Your file will be copied into the `dist ` folder where you will find it minified and inlined. You'll want to do this before you test or send your email.
+
+If you are using the CSS version, you can use our [web inliner](http://foundation.zurb.com/emails/inliner-v2.html).
+
+---
+
+#### Margin and Padding: 
+
+- Outlook 2007, 2010, and 2013 does not support "padding" in `<p>`, `<div>` or `<a>` tags. Use margin instead.
+- Forget about using CSS positioning like `top`, `bottom`, `relative`, `absolute`. 
+- Margin is universally supported BUT you may see some inconsistencies in Outlook 2007, 2010, and 2013. Padding is safer. Also, it is known that Outlook.com does not support the margin property. The odd thing is Outlook.com does support margin with a capital "M".
+Use it like this: 
+  
+  ```
+  margin: 10px; 
+  Margin: 10px;  // fallback for Outlook.com
+  ```
+- `<br>` tags are ok, but you won't get pixel perfect results and yuo can quickly fill up your code with messyness.
+- **Your best option** for vertical spacing is to use the `<spacer>` component in Foundation for Emails. It works consistintly on all email clients and lets you set the height with the size attribute. So `<spacer size="32"></spacer>` will create 32px of vertical space.
+
+---
+
+#### Colors:
+
+- It's better to use full 6 digit hex codes colors in HTML emails (#ffffff vs #fff). Although all the major email clients support short hex colors, Outlook.com (Hotmail), Lotus Notes 6.5, 7 and 8 do not.
+- RGB's are supported all the major email clients but RGBA's are only supported in IOS, Apple Mail, Gmail, and Android 4 (Gmail).
+- Background colors work across all email clients as well as color for fonts.
 
 ---
 
@@ -171,14 +169,51 @@ Nope. JavaScript is not a reality in emails.
 
 ## Images
 
-Beware of blocked images. Many email clients block images by default. “Many” being pretty much everybody except Apple Mail/iOS and Gmail.
+#### Blocked Images
+
+Beware of blocked images. Many email clients block images by default. “Many” being pretty much everybody except Apple Mail/iOS and Gmail. When this happens, email clients offer an option to display images but you're relying on your customer to know this.
 
 Q: What’s a designer to do?
 
 A: Always use an ALT tag.
 
-ALT tags are very important for accessibility.
+ALT tags are very important for accessibility. They will show when images are blocked so your customers can tell an image is supposed to be there.
 
+```html
+<img height=“390” width=“580” src=“hero.jpg” alt=“ALT tags are important for accessibility *and* overprotective mail clients” />
+```
+
+Some clients even let you style the ALT text.
+
+To style ALT text, place your font styles inline on the image.
+
+```html
+<img height=“390” width=“580” src=“hero.jpg” alt=“Company Name” style=“font-size:45px; font-family: serif; font-weight: bold; color: #b31b1b;” />
+```
+
+#### Retina Images
+
+OK, so I got my readers to allow images…now what about Retina? 
+
+Fun fact: Your email client is better at resizing images than Photoshop is.
+
+The problem is Outlook and Thunderbird like to show images in their *ahem* full glory.
+
+The solution is inline size attributes.
+
+```html
+<img height=“390” width=“580” src=“hero.jpg” alt=“I can be your hero, baby…” />
+```
+
+#### Image File Size
+
+There is no guarantee the recipient of your email will have wifi and waiting for images to load is a guaranteed to annoy some of your recipients.
+
+#### Gif's and Video in Emails
+
+Animated GIFs have *surprisingly* good support. As usual, there are caveats. Outlook only shows the first frame of the animation. Make sure your call to action is visible in the first frame.
+
+Video's in emails are not supported.
 
 ## Buttons
 
@@ -209,47 +244,10 @@ Solution?
 <a id="progressive-enhancement"></a>
 ## Progressive Enhancement
 
+Do progressively enhance. Build Outlook-first. Meaning, design for the most constrained platform you support, then add features.
 
+Lte's imagine the vast majority of your audience uses Apple Mail. You'd be able to get away with using CSS keyframe animation and SVG masks.
 
-
-What you CAN'T do:
-
-Include a <head> section with styles. Apple Mail.app supports it, but Gmail and Hotmail do not, so it's a no-no. Hotmail will support a style section in the body but Gmail still doesn't.
-Link to an external stylesheet. Not many email clients support this, best to just forget it.
-Background-image / Background-position. Gmail is also the culprit on this one.
-Clear your floats. Gmail again.
-
-Main things to keep in mind, since they're hard to believe...
-
-1. Only use inline style.
-
-2. Just give in and nest tables. It's terrible, but reliable everywhere.
-
-   
-4. Apply style to divs and not many other tags.
-
-5. Bullet lists will look different, so use a table.
-
-6. Spacers are your friend. Or more like your stupid roomate,
-   that you can strangely rely on.
-
-7. You must include text formatting in every div layer. Remember Dreamweaver?
-
-8. Vertical spacing can be greater between elements. Combat that...
-
-   8a. Add a css style of "display:block" to all image elements
-      (including spacers).
-
-   8b. Place <div> tags around every table and within every
-       <td> that contains content. Also applies to <img> only cells.
-       Some email clients will register a space after the image
-       if there is not a closing div tag immediately following it.
-   
-   8c. Any div that is shorter than 14 pixels (or the line-height)
-       should have it's height specified with CSS and the line height.
-       
-9. Most CSS is not available, you can't get fancy.
-   Check out this great reference: http://www.campaignmonitor.com/css
 
 
 Reduce Image Size - Refer back to #7 above, there is no guarantee the recipient of your email will have wifi and waiting for images to load is a guaranteed to annoy some of your recipients.
