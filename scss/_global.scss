@@ -97,3 +97,13 @@ $global-rounded: 500px !default;
 /// Global media query to switch from desktop to mobile styles.
 /// @type String
 $global-breakpoint: $global-width + $global-gutter !default;
+
+
+.wrapper {
+  width: 100%;
+}
+
+.wrapper-inner {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}

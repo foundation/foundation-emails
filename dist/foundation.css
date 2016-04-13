@@ -907,7 +907,6 @@ table.button {
   margin: 0 0 16px 0;
   Margin: 0 0 16px 0; }
   table.button table td {
-    width: auto !important;
     text-align: left;
     color: #fefefe;
     background: #2199e8;
@@ -966,7 +965,6 @@ table.expanded {
     width: 100%; }
     table.expand table a,
     table.expanded table a {
-      width: calc(100% - 20px);
       text-align: center; }
   table.expand center,
   table.expanded center {
@@ -1034,30 +1032,32 @@ table.button.alert:hover table td {
 table.button.alert:hover table a {
   border: 0px solid #e23317; }
 
-th.callout {
+table.callout {
+  margin-bottom: 16px;
+  Margin-bottom: 16px; }
+
+th.callout-inner {
   width: 100%;
   border: 1px solid #cbcbcb;
   padding: 10px;
-  background: #fefefe;
-  margin-bottom: 16px;
-  Margin-bottom: 16px; }
-  th.callout.primary {
+  background: #fefefe; }
+  th.callout-inner.primary {
     background: #def0fc;
     border: 1px solid #444444;
     color: #0a0a0a; }
-  th.callout.secondary {
+  th.callout-inner.secondary {
     background: #ebebeb;
     border: 1px solid #444444;
     color: #0a0a0a; }
-  th.callout.success {
+  th.callout-inner.success {
     background: #e1faea;
     border: 1px solid #1b9448;
     color: #fefefe; }
-  th.callout.warning {
+  th.callout-inner.warning {
     background: #fff3d9;
     border: 1px solid #996800;
     color: #fefefe; }
-  th.callout.alert {
+  th.callout-inner.alert {
     background: #fce6e2;
     border: 1px solid #b42912;
     color: #fefefe; }
@@ -1087,10 +1087,10 @@ table.menu {
 table.menu.vertical td.menu-item,
 table.menu.vertical th.menu-item {
   padding: 10px;
-  padding-right: 0; }
+  padding-right: 0;
+  display: block; }
   table.menu.vertical td.menu-item a,
   table.menu.vertical th.menu-item a {
-    display: block;
     width: 100%; }
 
 table.menu.vertical td.menu-item table.menu.vertical td.menu-item,
@@ -1101,6 +1101,9 @@ table.menu.vertical th.menu-item table.menu.vertical th.menu-item {
 
 table.menu.text-center a {
   text-align: center; }
+
+.menu[align="center"] {
+  width: auto !important; }
 
 body.outlook p {
   display: inline !important; }
@@ -1336,5 +1339,44 @@ body.outlook p {
     table.menu.vertical th, table.menu.small-vertical td,
     table.menu.small-vertical th {
       display: block !important; }
+  table.menu[align="center"] {
+    width: auto !important; }
   table.button.expand {
     width: 100% !important; } }
+
+.footer-drip {
+  background: #F3F3F3;
+  border-radius: 0 0 10px 10px; }
+
+.footer-drip .columns {
+  padding-top: 16px; }
+
+.container.header-drip {
+  background: #F3F3F3; }
+
+.container.header-drip .columns {
+  padding-bottom: 16px;
+  padding-top: 16px; }
+
+.container.body-drip {
+  border-radius: 10px;
+  border-top: 10px solid #663399; }
+
+.header {
+  background: #8a8a8a; }
+
+.header p {
+  color: #ffffff;
+  margin: 0; }
+
+.header .columns {
+  padding-bottom: 0; }
+
+.header .container {
+  background: #8a8a8a;
+  padding-top: 16px;
+  padding-bottom: 16px; }
+
+.header .container td {
+  padding-top: 16px;
+  padding-bottom: 16px; }
