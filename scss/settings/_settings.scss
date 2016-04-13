@@ -120,6 +120,7 @@ $button-rounded: $global-rounded;
 $callout-background: $white;
 $callout-background-fade: 85%;
 $callout-padding: 10px;
+$callout-margin-bottom: $global-margin;
 $callout-border: 1px solid darken($callout-background, 20%);
 $callout-border-secondary: 1px solid darken($secondary-color, 20%);
 $callout-border-success: 1px solid darken($success-color, 20%);
@@ -136,5 +137,10 @@ $menu-item-color: $primary-color;
 // 8. Thumbnial
 // ------------
 
+$thumbnail-border: solid 4px $white;
+$thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
+$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
+$thumbnail-transition: box-shadow 200ms ease-out;
+$thumbnail-radius: $global-radius;
 

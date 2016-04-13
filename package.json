@@ -1,6 +1,6 @@
 {
   "name": "foundation-emails",
-  "version": "2.0.0-rc.4",
+  "version": "2.0.1",
   "description": "A framework for responsive emails made by ZURB",
   "keywords": [
     "responsive",
@@ -11,6 +11,7 @@
     "start": "gulp",
     "test:visual": "gulp test",
     "deploy:dist": "gulp dist",
+    "deploy:settings": "gulp settings",
     "deploy:download": "gulp download",
     "deploy:templates": "gulp templates",
     "deploy:docs": "gulp deploy:docs"
@@ -42,7 +43,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-wrap": "^0.11.0",
     "gulp-zip": "^3.2.0",
-    "inky": "^1.3.3",
+    "inky": "zurb/inky",
     "lazypipe": "^1.0.1",
     "motion-ui": "^1.1.1",
     "multiline": "^1.0.2",

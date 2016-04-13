@@ -35,7 +35,7 @@ table {
     text-align: inherit;
   }
 
-  &.row {
+  &.row, &.row2 {
     padding: 0;
     width: 100%;
     position: relative;
@@ -49,14 +49,18 @@ table {
   }
 }
 
-table.container table.row {
+table.container table.row, table.container table.row2 {
   display: table;
 }
 
 td.columns,
 td.column,
 th.columns,
-th.column {
+th.column,
+td.columns2,
+td.column2,
+th.columns2,
+th.column2  {
   margin: 0 auto;
   Margin: 0 auto;
   padding-left: $global-gutter;
@@ -66,7 +70,11 @@ th.column {
 td.columns.last,
 td.column.last,
 th.columns.last,
-th.column.last {
+th.column.last,
+td.columns2.last,
+td.column2.last,
+th.columns2.last,
+th.column2.last {
   padding-right: $global-gutter;
 }
 
@@ -74,7 +82,11 @@ th.column.last {
 td.columns,
 td.column,
 th.columns,
-th.column {
+th.column,
+td.columns2,
+td.column2,
+th.columns2,
+th.column2 {
   table {
     width: 100%;
   }
@@ -128,7 +140,11 @@ th.column {
   .body .columns td.large-#{$i},
   .body .column td.large-#{$i},
   .body .columns th.large-#{$i},
-  .body .column th.large-#{$i} {
+  .body .column th.large-#{$i},
+  .body .columns2 td.large-#{$i},
+  .body .column2 td.large-#{$i},
+  .body .columns2 th.large-#{$i},
+  .body .column2 th.large-#{$i}  {
     width: -zf-grid-calc-pct($i, $grid-column-count);
   }
 }
@@ -151,3 +167,4 @@ th.expander {
   width: 0;
   padding: 0 !important;
 }
+
