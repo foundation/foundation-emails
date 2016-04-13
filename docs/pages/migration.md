@@ -249,13 +249,13 @@ The block grid has a minor syntax change with identifying the number of elements
 #### New Markup (Plain HTML)
 
 ```
-<table class="row">
+<table class="block-grid up-3">
   <tr>
-    <th class="column first">
+    <th>
       Thing 1
-    </th><th class="column"> <!-- Make sure the tags are directly next to each other -->
+    </th><th> <!-- Make sure the tags are directly next to each other -->
       Thing 2
-    </th><th class="column last"> <!-- Make sure the tags are directly next to each other -->
+    </th><th> <!-- Make sure the tags are directly next to each other -->
       Thing 3
     </th>
   </tr>
