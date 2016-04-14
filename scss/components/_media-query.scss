@@ -48,7 +48,7 @@
     }
   }
 
-  //Basic grid rules
+  // Basic grid rules
   @for $i from 1 through $grid-column-count {
     td.small-#{$i},
     th.small-#{$i} {
