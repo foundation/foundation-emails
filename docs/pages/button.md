@@ -35,12 +35,12 @@ Don't forget the `href=""` ;)
 
 ## Expanded
 
-To create an expanded button (full width of it's container), add the class `.expanded` to the outer `<table>` of the button, and wrap a `<center>` tag around the `<a>`.
+To create an expanded button (full width of it's container), add the class `.expand` to the outer `<table>` of the button, and wrap a `<center>` tag around the `<a>`.
 
-In Inky HTML, add the `.expanded` class to the `<button>` tag.
+In Inky HTML, add the `.expand` class to the `<button>` tag.
 
 ```inky_example
-<button href="zurb.com" class="expanded">Expanded Button</button>
+<button href="zurb.com" class="expand">Expanded Button</button>
 ```
 
 ---
