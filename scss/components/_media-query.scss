@@ -114,9 +114,28 @@
     width: auto !important;
   }
 
-  // Buttons
-  table.button.expand {
-    width: 100% !important;
+// Rules for the Center Tag    
+ // @for $i from 1 through ($grid-column-count - 1 ) {   
+ //   .body .columns td.small-#{$i},    
+ //   .body .column td.small-#{$i},   
+ //   td.small-#{$i} center,    
+   
+ //   .body .columns th.small-#{$i},    
+ //   .body .column th.small-#{$i},   
+ //   th.small-#{$i} center {   
+ //     display: inline-block !important;   
+ //     width: -zf-grid-calc-pct($i, $grid-column-count) !important;    
+ //   }   
+ // }
+
+  // expanded buttons anchor width
+  @for $i from 1 through $grid-column-count {
+    td.small-#{$i} table.expand table a,
+    th.small-#{$i} table.expand table a,
+    td.small-#{$i} table.expanded table a,
+    th.small-#{$i} table.expanded table a {
+      width: -zf-grid-calc-pct($i, $grid-column-count) !important;
+    }
   }
 }
 
