@@ -161,14 +161,14 @@ table.expanded {
 
 
 // expanded buttons anchor width
-@for $i from 1 through $grid-column-count {
-  td.large-#{$i} table.expand table a,
-  th.large-#{$i} table.expand table a,
-  td.large-#{$i} table.expanded table a,
-  th.large-#{$i} table.expanded table a {
-    width: -zf-grid-calc-px($i, $grid-column-count, $global-width) !important;
-  }
-}
+// @for $i from 1 through $grid-column-count {
+//   td.large-#{$i} table.expand table a,
+//   th.large-#{$i} table.expand table a,
+//   td.large-#{$i} table.expanded table a,
+//   th.large-#{$i} table.expanded table a {
+//     width: -zf-grid-calc-px($i, $grid-column-count, $global-width) !important;
+//   }
+// }
 
 
 

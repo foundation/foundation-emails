@@ -10,7 +10,7 @@
 //   5. Button
 //   6. Callout
 //   7. Menu
-//   8. Thumbnial
+//   8. Thumbnail
 
 
 // 1. Global
@@ -134,10 +134,10 @@ $menu-item-padding: 10px;
 $menu-item-gutter: 10px;
 $menu-item-color: $primary-color;
 
-// 8. Thumbnial
+// 8. Thumbnail
 // ------------
 
-$thumbnail-border: 4px solid $white;
+$thumbnail-border: solid 4px $white;
 $thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
