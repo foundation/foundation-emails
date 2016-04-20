@@ -15,9 +15,11 @@ $grid-column-count: 12 !default;
 $column-padding-bottom: $global-padding !default;
 
 //For viewing email in browser
-html {
-  min-height: 100%;
-  background: $body-background;
+@media only screen {
+  html {
+    min-height: 100%;
+    background: $body-background;
+  }
 }
 
 table {
@@ -144,4 +146,3 @@ th.expander {
   width: 0;
   padding: 0 !important;
 }
-
