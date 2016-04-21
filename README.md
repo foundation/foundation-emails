@@ -37,11 +37,11 @@ git clone https://github.com/zurb/foundation-emails.git
 cd foundation-emails
 ```
 
-Foundation for Emails 2.0 documentation is on the v2.0 branch.
+Foundation for Emails 2.0 documentation is on the `develop` branch.
 
 ```bash
 git fetch
-git checkout v2.0
+git checkout develop
 npm install
 ```
 
@@ -94,6 +94,6 @@ The parser converts a set of custom HTML tags, expanding them out into full HTML
 
 ## Contributing
 
-As an open source project, we looooove our community support. Please file issues, or better yet pull requests on the [Foundation for Emails Repo](https://github.com/zurb/foundation-emails). We're stoked to hear your feedback, make improvements, and release this to the public soon!
+As an open source project, we looooove our community support. Please file issues, or better yet pull requests on the [Foundation for Emails Repo](https://github.com/zurb/foundation-emails). We're stoked to hear your feedback, make improvements, and keep evolving Foundation for Emails!
 
 Copyright (c) 2016 ZURB, inc.
