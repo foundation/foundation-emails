@@ -480,6 +480,28 @@ You can wrap a callout around a `<row>` or the content inside a `<column>`.
 
 The menu component can be used to create a simple set of links comonly used in headers, for social icons or in footers. Adding the `.vertical` class will change the orientation. You can even make it vertical on the small breakpoint only with `.small-vertical`.
 
+### Spacer
+
+#### New Markup (Inky HTML)
+
+```
+<spacer size="100"></spacer>
+```
+
+The spacer component creates consistant vertical spacing between or inside of elements. The size `size="x"` attribute allows you to set the height in pixels of vertical spacing you need.
+
+### Wrapper
+
+#### New Markup (Inky HTML)
+
+```
+<wrapper>
+  content here
+</wrapper>
+```
+
+The wrapper component allows you to wrap content to target CSS within it. You can add classes to it so you can easily create a full with background.
+
 ## Dependencies
 
 The CSS version works exactly like the one we distributed with Ink 1.0. Check out our [getting started guide](css-guide.html) to learn more.
