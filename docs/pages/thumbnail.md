@@ -1,6 +1,7 @@
 ---
 title: Thumbnail
 description: Spruce up an image tag with our thumbnail style.
+published: false
 ---
 
 The `.thumbnail` class can be applied directly to an `<img>` element, or an `<a>` that wraps it. Make sure the `<img>` has an alt attribute that describes the contents of the image.
