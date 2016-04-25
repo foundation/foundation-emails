@@ -1,0 +1,117 @@
+// Foundation for Emails by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+////
+/// @group media-query
+////
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+  table.body img {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  table.body center {
+    min-width: 0 !important;
+  }
+
+  table.body .container {
+    width: $global-width-small !important;
+  }
+
+  //If it supports border-box, why not? Am I right?
+  //Also, by default pad that to the global-gutter variable
+  table.body .columns,
+  table.body .column {
+    height: auto !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: $global-gutter !important;
+    padding-right: $global-gutter !important;
+    
+    // Nested columns won't double the padding
+    .column,
+    .columns {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  // Collpased columns have no gutter.
+  .collapse {
+    table.body & .columns,
+    table.body & .column {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  // Basic grid rules
+  @for $i from 1 through $grid-column-count {
+    td.small-#{$i},
+    th.small-#{$i} {
+      display: inline-block !important;
+      width: -zf-grid-calc-pct($i, $grid-column-count) !important;
+    }
+  }
+
+  //If it's the last column in column count (12 by default),
+  //give it block and 100% width to knock down the wimpy columns to their own row.
+  .columns td.small-#{$grid-column-count},
+  .column td.small-#{$grid-column-count},
+  .columns th.small-#{$grid-column-count},
+  .column th.small-#{$grid-column-count} {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  @for $i from 1 through ($grid-column-count - 1) {
+    table.body td.small-offset-#{$i},
+    table.body th.small-offset-#{$i} {
+    //1.5 takes in effect a whole empty cell.
+      margin-left: -zf-grid-calc-pct($i, $grid-column-count) !important;
+      Margin-left: -zf-grid-calc-pct($i, $grid-column-count) !important;
+    }
+  }
+
+  table.body table.columns td.expander,
+  table.body table.columns th.expander {
+    display: none !important;
+  }
+
+  table.body .right-text-pad,
+  table.body .text-pad-right {
+    padding-left: $text-padding !important;
+  }
+
+  table.body .left-text-pad,
+  table.body .text-pad-left {
+    padding-right: $text-padding !important;
+  }
+
+  //menu
+  table.menu {
+    width: 100% !important;
+    
+    td,
+    th {
+      width: auto !important;
+      display: inline-block !important;
+    }
+
+    &.vertical, &.small-vertical {
+      td,
+      th {
+        display: block !important;
+      }
+    }
+  }
+
+  // Centers the menus!
+  table.menu[align="center"] {
+    width: auto !important;
+  }
+}
+

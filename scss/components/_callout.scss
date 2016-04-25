@@ -1,0 +1,85 @@
+// Foundation for Emails by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+////
+/// @group callout
+////
+
+/// Background color of a callout.
+/// @type Color
+$callout-background: $white !default;
+
+/// Fade value for callout backgrounds.
+/// @type Number
+$callout-background-fade: 85% !default;
+
+/// Padding inside a callout.
+/// @type Length
+$callout-padding: 10px !default;
+
+/// Bottom margin of a callout.
+/// @type Length
+$callout-margin-bottom: $global-margin !default;
+
+/// Border around a callout.
+/// @type Border
+$callout-border: 1px solid darken($callout-background, 20%) !default;
+
+/// Border around a callout with the `.success` class.
+/// @type Border
+$callout-border-secondary: 1px solid darken($secondary-color, 20%) !default;
+
+/// Border around a callout with the `.success` class.
+/// @type Border
+$callout-border-success: 1px solid darken($success-color, 20%) !default;
+
+/// Border around a callout with the `.warning` class.
+/// @type Border
+$callout-border-warning: 1px solid darken($warning-color, 20%) !default;
+
+/// Border around a callout with the `.alert` class.
+/// @type Border
+$callout-border-alert: 1px solid darken($alert-color, 20%) !default;
+
+table.callout {
+  margin-bottom: $callout-margin-bottom;
+  Margin-bottom: $callout-margin-bottom;
+}
+
+th.callout-inner {
+  width: 100%;
+  border: $callout-border;
+  padding: $callout-padding;
+  background: $callout-background;
+
+  &.primary {
+    background: scale-color($primary-color, $lightness: $callout-background-fade);
+    border: $callout-border-secondary;
+    color: $black;
+  }
+
+  &.secondary {
+    background: scale-color($secondary-color, $lightness: $callout-background-fade);
+    border: $callout-border-secondary;
+    color: $black;
+  }
+
+  &.success {
+    background: scale-color($success-color, $lightness: $callout-background-fade);
+    border: $callout-border-success;
+    color: $white;
+  }
+
+  &.warning {
+    background: scale-color($warning-color, $lightness: $callout-background-fade);
+    border: $callout-border-warning;
+    color: $white;
+  }
+
+  &.alert {
+    background: scale-color($alert-color, $lightness: $callout-background-fade);
+    border: $callout-border-alert;
+    color: $white;
+  }
+}

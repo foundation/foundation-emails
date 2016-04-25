@@ -1,12 +1,17 @@
 {
-  "name": "ink",
-  "version": "1.0.5",
-  "main": ["./css/ink.css"],
+  "name": "foundation-emails",
+  "version": "2.1.0",
+  "homepage": "http://foundation.zurb.com/emails",
+  "authors": [
+    "ZURB <foundation@zurb.com>"
+  ],
+  "description": "A framework for designing responsive emails by ZURB.",
+  "license": "MIT",
   "ignore": [
     "**/.*",
-    "docs",
-    "*.md",
-    "*.js",
-    "*.json"
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
   ]
 }

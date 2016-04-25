@@ -1,0 +1,148 @@
+// Foundation for Emails by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+////
+/// @group grid
+////
+
+/// Default number of columns for an email.
+/// @type Number
+$grid-column-count: 12 !default;
+
+/// Default padding for the bottom of a column.
+/// @type Number
+$column-padding-bottom: $global-padding !default;
+
+//For viewing email in browser
+@media only screen {
+  html {
+    min-height: 100%;
+    background: $body-background;
+  }
+}
+
+table {
+  &.body {
+    background: $body-background;
+    height: 100%;
+    width: 100%;
+  }
+
+  &.container {
+    background: $container-background;
+    width: $global-width;
+    margin: 0 auto;
+    Margin: 0 auto;
+    text-align: inherit;
+  }
+
+  &.row {
+    padding: 0;
+    width: 100%;
+    position: relative;
+  }
+}
+
+table.container table.row {
+  display: table;
+}
+
+td.columns,
+td.column,
+th.columns,
+th.column {
+  margin: 0 auto;
+  Margin: 0 auto;
+  padding-left: $global-gutter;
+  padding-bottom: $column-padding-bottom;
+}
+
+td.columns.last,
+td.column.last,
+th.columns.last,
+th.column.last {
+  padding-right: $global-gutter;
+}
+
+//makes sure nested tables are 100% width
+td.columns,
+td.column,
+th.columns,
+th.column {
+  table {
+    width: 100%;
+  }
+}
+
+@for $i from 1 through $grid-column-count {
+  td.large-#{$i},
+  th.large-#{$i} {
+    width: -zf-grid-calc-px($i, $grid-column-count, $global-width);
+    padding-left: $global-gutter / 2;
+    padding-right: $global-gutter / 2;
+  }
+
+  td.large-#{$i}.first,
+  th.large-#{$i}.first {
+    padding-left: $global-gutter;
+  }
+
+  td.large-#{$i}.last,
+  th.large-#{$i}.last {
+    padding-right: $global-gutter;
+  }
+
+  //Collapsed logic
+  .collapse {
+    > tbody > tr > td.large-#{$i},
+    > tbody > tr > th.large-#{$i} {
+      padding-right: 0;
+      padding-left: 0;
+      width: -zf-grid-calc-px($i, $grid-column-count, $global-width) + $global-gutter;
+    }
+
+    //Gotta give it that extra love for the first and last columns.
+    td.large-#{$i}.first,
+    th.large-#{$i}.first,
+    td.large-#{$i}.last,
+    th.large-#{$i}.last {
+      width: -zf-grid-calc-px($i, $grid-column-count, $global-width) + ($global-gutter * 1.5);
+    }
+  }
+}
+
+@for $i from 1 through $grid-column-count {
+  td.large-#{$i} center,
+  th.large-#{$i} center {
+    min-width: -zf-grid-calc-px($i, $grid-column-count, $global-width) - ($global-gutter * 2);
+  }
+}
+
+@for $i from 1 through $grid-column-count {
+  .body .columns td.large-#{$i},
+  .body .column td.large-#{$i},
+  .body .columns th.large-#{$i},
+  .body .column th.large-#{$i} {
+    width: -zf-grid-calc-pct($i, $grid-column-count);
+  }
+}
+
+@for $i from 1 through ($grid-column-count - 1) {
+  td.large-offset-#{$i},
+  td.large-offset-#{$i}.first,
+  td.large-offset-#{$i}.last,
+  th.large-offset-#{$i},
+  th.large-offset-#{$i}.first,
+  th.large-offset-#{$i}.last {
+    //1.5 takes in effect a whole empty cell.
+    padding-left: -zf-grid-calc-px($i, $grid-column-count, $global-width) + $global-gutter * 2;
+  }
+}
+
+td.expander,
+th.expander {
+  visibility: hidden;
+  width: 0;
+  padding: 0 !important;
+}

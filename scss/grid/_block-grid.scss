@@ -1,0 +1,32 @@
+// Foundation for Emails by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+////
+/// @group block-grid
+////
+
+/// The highest number of `.x-up` classes available when using the block grid CSS.
+/// @type Number
+$block-grid-max: 8 !default;
+
+/// Gutter between elements in a block grid.
+/// @type Number
+$block-grid-gutter: $global-gutter !default;
+
+.block-grid {
+  width: 100%;
+  max-width: $global-width;
+
+  td {
+    display: inline-block;
+    padding: $block-grid-gutter / 2;
+  }
+}
+
+// Sizing classes
+@for $i from 2 through $block-grid-max {
+  .up-#{$i} td {
+    width: floor(($global-width - $i * $block-grid-gutter) / $i) !important;
+  }
+}

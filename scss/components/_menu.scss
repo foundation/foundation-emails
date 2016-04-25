@@ -1,0 +1,68 @@
+// Foundation for Emails by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+////
+/// @group menu
+////
+
+/// Padding inside a menu item.
+/// @type Length
+$menu-item-padding: 10px !default;
+
+/// Right-hand spacing of items in menus with the `.simple` class.
+/// @type Length
+$menu-item-gutter: 10px !default;
+
+/// This is the color of the menu item links.
+/// @type Color
+$menu-item-color: $primary-color !default;
+
+
+table.menu {
+  width: $global-width;
+
+  td.menu-item,
+  th.menu-item{
+    padding: $menu-item-padding;
+    padding-right: $menu-item-gutter;
+
+    a {
+      color: $menu-item-color; 
+    }
+  }
+}
+
+// Doesn't work on the pesky ESPs like outlook 2000
+table.menu.vertical {
+  td.menu-item,
+  th.menu-item {
+    padding: $menu-item-padding;
+    padding-right: 0;
+    display: block;
+
+    a {
+      width: 100%;
+    }
+  }
+
+  // Nested lists need some more padding to the left
+  td.menu-item,
+  th.menu-item {
+    table.menu.vertical {
+      td.menu-item,
+      th.menu-item {
+        padding-left: $menu-item-padding;
+      }
+    }
+  }
+}
+
+table.menu.text-center a {
+  text-align: center;
+}
+
+//Centers the menus!
+.menu[align="center"] {
+  width: auto !important;
+}

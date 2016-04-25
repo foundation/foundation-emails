@@ -1,0 +1,286 @@
+// Foundation for Emails by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+////
+/// @group button
+////
+
+/// Padding inside buttons at various sizes.
+/// @type Map
+$button-padding: (
+  tiny: 4px 8px 4px 8px,
+  small: 5px 10px 5px 10px,
+  default: 8px 16px 8px 16px,
+  large: 10px 20px 10px 20px,
+) !default;
+
+/// Font sizes of buttons at various sizes.
+/// @type Map
+$button-font-size: (
+  tiny: 10px,
+  small: 12px,
+  default: 16px,
+  large: 20px,
+) !default;
+
+/// Text color of buttons.
+/// @type Color
+$button-color: $white !default;
+
+/// Text color of buttons with a light background.
+/// @type Color
+$button-color-alt: $medium-gray !default;
+
+/// Font weight of buttons.
+/// @type Weight
+$button-font-weight: bold !default;
+
+/// Margin around buttons.
+/// @type List
+$button-margin: 0 0 $global-margin 0 !default;
+
+/// Background color of buttons.
+/// @type Color
+$button-background: $primary-color !default;
+
+/// Border around buttons.
+/// @type Border
+$button-border: 2px solid $button-background !default;
+
+/// Border radius of buttons. Not supported by all email clients.
+/// @type Number
+$button-radius: $global-radius !default;
+
+/// Border radius of rounded buttons. Not supported by all email clients.
+/// @type Number
+$button-rounded: $global-rounded !default;
+
+table.button {
+  width: auto !important;
+  margin: $button-margin;
+  Margin: $button-margin;
+
+  table {
+
+    td {
+      text-align: left;
+      color: $button-color;
+      background: $button-background;
+      border: $button-border;
+
+      a {
+        font-family: $body-font-family;
+        font-size: map-get($button-font-size, default);
+        font-weight: $button-font-weight;
+        color: $button-color;
+        text-decoration: none;
+        display: inline-block;
+        padding: map-get($button-padding, default);
+        border: 0px solid $button-background;
+        border-radius: $button-radius;
+      }
+    }
+  }
+
+  &.radius table td {
+    border-radius: $button-radius;
+    border: none;
+  }
+
+  &.rounded table td {
+    border-radius: $button-rounded;
+    border: none;
+  }
+}
+
+table.button:hover table tr td a,
+table.button:active table tr td a,
+table.button table tr td a:visited,
+table.button.tiny:hover table tr td a,
+table.button.tiny:active table tr td a,
+table.button.tiny table tr td a:visited,
+table.button.small:hover table tr td a,
+table.button.small:active table tr td a,
+table.button.small table tr td a:visited,
+table.button.large:hover table tr td a,
+table.button.large:active table tr td a,
+table.button.large table tr td a:visited {
+  color: $button-color;
+}
+
+table.button.tiny {
+  table {
+    td,
+    a {
+      padding: map-get($button-padding, tiny);
+    }
+
+    a {
+      font-size: map-get($button-font-size, tiny);
+      font-weight: normal;
+    }
+  }
+}
+
+table.button.small {
+  table {
+    td,
+    a {
+      padding: map-get($button-padding, small);
+      font-size: map-get($button-font-size, small);
+    }
+  }
+}
+
+table.button.large {
+  table {
+    a {
+      padding: map-get($button-padding, large);
+      font-size: map-get($button-font-size, large);
+    }
+  }
+}
+
+table.button.expand,
+table.button.expanded {
+  width: 100% !important;
+
+  table {
+    width: 100%;
+
+    a {
+      text-align: center;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  center {
+    min-width: 0;
+  }
+}
+
+table.button:hover,
+table.button:visited,
+table.button:active {
+  table {
+    td {
+      background: darken($button-background, 10%);
+      color: $button-color;
+    }
+  }
+}
+
+table.button:hover,
+table.button:visited,
+table.button:active {
+  table {
+    a {
+      border: 0px solid darken($button-background, 10%);
+    }
+  }
+}
+
+table.button.secondary {
+  table {
+    td {
+      background: $secondary-color;
+      color: $button-color;
+      border: 2px solid $secondary-color;
+    }
+
+    a {
+      color: $button-color;
+      border: 0px solid $secondary-color;
+    }
+  }
+}
+
+table.button.secondary:hover {
+  table {
+    td {
+      background: lighten($secondary-color, 10%);
+      color: $button-color;
+    }
+
+    a {
+      border: 0px solid lighten($secondary-color, 10%);
+    }
+  }
+}
+
+table.button.secondary:hover {
+  table {
+    td a {
+      color: $button-color;
+    }
+  }
+}
+
+table.button.secondary:active {
+  table {
+    td a {
+      color: $button-color;
+    }
+  }
+}
+
+table.button.secondary {
+  table {
+    td a:visited {
+      color: $button-color;
+    }
+  }
+}
+
+table.button.success {
+  table {
+    td {
+      background: $success-color;
+      border: 2px solid $success-color;
+    }
+
+    a {
+      border: 0px solid $success-color;
+    }
+  }
+}
+
+table.button.success:hover {
+  table {
+    td {
+      background: darken($success-color, 10%);
+    }
+
+    a {
+      border: 0px solid darken($success-color, 10%);
+    }
+  }
+}
+
+table.button.alert {
+  table {
+    td {
+      background: $alert-color;
+      border: 2px solid $alert-color;
+    }
+
+    a {
+      border: 0px solid $alert-color;
+    }
+  }
+}
+
+table.button.alert:hover {
+  table {
+    td {
+      background: darken($alert-color, 10%);
+    }
+
+    a {
+      border: 0px solid darken($alert-color, 10%);
+    }
+  }
+}

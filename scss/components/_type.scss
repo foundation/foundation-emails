@@ -1,0 +1,316 @@
+// Foundation for Emails by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+////
+/// @group typography
+////
+
+/// Global font weight.
+/// @type Keyword
+$global-font-weight: normal !default;
+
+/// Global font weight.
+/// @type Keyword
+$header-color: inherit !default;
+
+/// Global line height.
+/// @type Number
+$global-line-height: 1.3 !default;
+
+/// Font size of body text.
+/// @type Number
+$global-font-size: 16px !default;
+
+/// Line height of body text.
+/// @type Number
+$body-line-height: 19px !default;
+
+/// Font family of headings.
+/// @type List
+$header-font-family: $body-font-family !default;
+
+/// Font family of headings.
+/// @type List
+$header-font-weight: $global-font-weight !default;
+
+/// Font size of `<h1>` elements.
+/// @type Number
+$h1-font-size: 34px !default;
+
+/// Font size of `<h2>` elements.
+/// @type Number
+$h2-font-size: 30px !default;
+
+/// Font size of `<h3>` elements.
+/// @type Number
+$h3-font-size: 28px !default;
+
+/// Font size of `<h4>` elements.
+/// @type Number
+$h4-font-size: 24px !default;
+
+/// Font size of `<h5>` elements.
+/// @type Number
+$h5-font-size: 20px !default;
+
+/// Font size of `<h6>` elements.
+/// @type Number
+$h6-font-size: 18px !default;
+
+/// Margin bottom of `<h1>` through `<h6>` elements.
+/// @type Number
+$header-margin-bottom: 10px !default;
+
+/// Margin bottom of paragraphs.
+/// @type Number
+$paragraph-margin-bottom: 10px !default;
+
+/// Default font size for `<small>`.
+/// @type Number
+$small-font-size: 80% !default;
+
+/// Color of `<small>` elements when placed inside headers.
+/// @type Color
+$small-font-color: $medium-gray !default;
+
+/// Font size of lead paragraphs.
+/// @type Number
+$lead-font-size: $global-font-size * 1.25 !default;
+
+/// Line height of lead paragraphs.
+/// @type Number
+$lead-line-height: 1.6 !default;
+
+/// Padding inside paragraphs.
+/// @type Number
+$text-padding: 10px !default;
+
+/// Default line height for subheaders.
+/// @type Number
+$subheader-lineheight: 1.4 !default;
+
+/// Default font color for subheaders.
+/// @type Color
+$subheader-color: $dark-gray !default;
+
+/// Default font weight for subheaders.
+/// @type String
+$subheader-font-weight: $global-font-weight !default;
+
+/// Default top margin for subhheaders.
+/// @type Number
+$subheader-margin-top: 4px !default;
+
+/// Default bottom margin for subheaders.
+/// @type Number
+$subheader-margin-bottom: 8px !default;
+
+/// Maximum width of a divider.
+/// @type Number
+$hr-width: $global-width !default;
+
+/// Default border for a divider.
+/// @type List
+$hr-border: 1px solid $medium-gray !default;
+
+/// Default margin for a divider.
+/// @type Number | List
+$hr-margin: 20px auto !default;
+
+/// Text decoration for anchors.
+/// @type Keyword
+$anchor-text-decoration: none !default;
+
+/// Text color of anchors.
+/// @type Color
+$anchor-color: $primary-color !default;
+
+/// Text color of anchors to visited links.
+/// @type Color
+$anchor-color-visited: $anchor-color !default;
+
+/// Text color of anchors on hover.
+/// @type Color
+$anchor-color-hover: darken($primary-color, 10%) !default;
+
+/// Text color of active anchors.
+/// @type Color
+$anchor-color-active: $anchor-color-hover !default;
+
+/// Default font size for statistic numbers.
+/// @type Number
+$stat-font-size: 40px !default;
+
+body,
+table.body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+td,
+th,
+a {
+  color: $global-font-color;
+  font-family: $body-font-family;
+  font-weight: $global-font-weight;
+  padding: 0;
+  margin: 0;
+  Margin: 0;
+  text-align: left;
+  line-height: $global-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $header-color;
+  word-wrap: normal;
+  font-family: $header-font-family;
+  font-weight: $header-font-weight;
+  margin-bottom: $header-margin-bottom;
+  Margin-bottom: $header-margin-bottom;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+body,
+table.body,
+p,
+td,
+th {
+  font-size: $global-font-size;
+  line-height: $body-line-height;
+}
+
+p {
+  margin-bottom: $paragraph-margin-bottom;
+  Margin-bottom: $paragraph-margin-bottom;
+
+  &.lead {
+    font-size: $lead-font-size;
+    line-height: $lead-line-height;
+  }
+
+  &.subheader {
+    margin-top: $subheader-margin-top;
+    margin-bottom: $subheader-margin-bottom;
+    Margin-top: $subheader-margin-top;
+    Margin-bottom: $subheader-margin-bottom;
+    font-weight: $subheader-font-weight;
+    line-height: $subheader-lineheight;
+    color: $subheader-color;
+  }
+}
+
+small {
+  font-size: $small-font-size;
+  color: $small-font-color;
+}
+
+a {
+  color: $anchor-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $anchor-color-hover;
+  }
+
+  &:active {
+    color: $anchor-color-active;
+  }
+
+  &:visited {
+    color: $anchor-color-visited;
+  }
+}
+
+h1 a,
+h1 a:visited,
+h2 a,
+h2 a:visited,
+h3 a,
+h3 a:visited,
+h4 a,
+h4 a:visited,
+h5 a,
+h5 a:visited,
+h6 a,
+h6 a:visited {
+  color: $anchor-color;
+}
+
+pre {
+  background: $light-gray;
+  margin: 30px 0;
+  Margin: 30px 0;
+
+  code {
+    color: $medium-gray;
+
+    span.callout {
+      color: $dark-gray;
+      font-weight: bold;
+    }
+
+    span.callout-strong {
+      color: $pre-color;
+      font-weight: bold;
+    }
+  }
+}
+
+// Horizontal rule
+
+hr {
+  max-width: $hr-width;
+  height: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: $hr-border;
+  border-left: 0;
+  margin: $hr-margin;
+  Margin: $hr-margin;
+  clear: both;
+}
+
+// Use to style a large number to display a statistic
+.stat {
+  font-size: $stat-font-size;
+  line-height: 1;
+
+  p + & {
+    margin-top: -16px;
+    Margin-top: -16px;
+  }
+}
+
+
