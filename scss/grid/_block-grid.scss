@@ -30,8 +30,7 @@ $block-grid-gutter: $global-gutter !default;
     width: floor(($global-width - $i * $block-grid-gutter) / $i) !important;
   }
 
-  .block-grid.up-#{$i} center,
-  .block-grid.up-#{$i} center {
+  .up-#{$i} center {
     min-width: floor(($global-width - $i * $block-grid-gutter) / $i) !important;
   }
 }
