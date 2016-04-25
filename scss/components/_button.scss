@@ -57,7 +57,7 @@ $button-radius: $global-radius !default;
 $button-rounded: $global-rounded !default;
 
 table.button {
-  width: auto !important;
+  width: auto;
   margin: $button-margin;
   Margin: $button-margin;
 

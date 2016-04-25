@@ -70,7 +70,7 @@ td.columns,
 td.column,
 th.columns,
 th.column {
-  table {
+  table:not(.button) {
     width: 100%;
   }
 }
