@@ -11,9 +11,9 @@ table.body table.container .hide-for-large {
   width:0;
   mso-hide:all; // hide selected elements in Outlook 2007-2013
   overflow:hidden;
-  max-height: 0px; 
+  max-height: 0;
   font-size: 0;
-  width: 0px;
+  width: 0;
   line-height: 0; 
 
   @media only screen and (max-width: #{$global-breakpoint}) {

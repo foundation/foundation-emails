@@ -746,9 +746,8 @@ table.body table.container .hide-for-large {
   width: 0;
   mso-hide: all;
   overflow: hidden;
-  max-height: 0px;
+  max-height: 0;
   font-size: 0;
-  width: 0px;
   line-height: 0; }
   @media only screen and (max-width: 596px) {
     table.body table.container .hide-for-large {
@@ -923,7 +922,7 @@ table.button {
       text-decoration: none;
       display: inline-block;
       padding: 8px 16px 8px 16px;
-      border: 0px solid #2199e8;
+      border: 0 solid #2199e8;
       border-radius: 3px; }
   table.button.radius table td {
     border-radius: 3px;
@@ -988,7 +987,7 @@ table.button:active table td {
 table.button:hover table a,
 table.button:visited table a,
 table.button:active table a {
-  border: 0px solid #147dc2; }
+  border: 0 solid #147dc2; }
 
 table.button.secondary table td {
   background: #777777;
@@ -997,14 +996,14 @@ table.button.secondary table td {
 
 table.button.secondary table a {
   color: #fefefe;
-  border: 0px solid #777777; }
+  border: 0 solid #777777; }
 
 table.button.secondary:hover table td {
   background: #919191;
   color: #fefefe; }
 
 table.button.secondary:hover table a {
-  border: 0px solid #919191; }
+  border: 0 solid #919191; }
 
 table.button.secondary:hover table td a {
   color: #fefefe; }
@@ -1020,26 +1019,26 @@ table.button.success table td {
   border: 2px solid #3adb76; }
 
 table.button.success table a {
-  border: 0px solid #3adb76; }
+  border: 0 solid #3adb76; }
 
 table.button.success:hover table td {
   background: #23bf5d; }
 
 table.button.success:hover table a {
-  border: 0px solid #23bf5d; }
+  border: 0 solid #23bf5d; }
 
 table.button.alert table td {
   background: #ec5840;
   border: 2px solid #ec5840; }
 
 table.button.alert table a {
-  border: 0px solid #ec5840; }
+  border: 0 solid #ec5840; }
 
 table.button.alert:hover table td {
   background: #e23317; }
 
 table.button.alert:hover table a {
-  border: 0px solid #e23317; }
+  border: 0 solid #e23317; }
 
 table.callout {
   margin-bottom: 16px;
