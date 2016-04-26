@@ -4,7 +4,7 @@
 
 <p class="lead docs-page-lead">{{ description }}</p>
 
-<hr>
+<hr/>
 
 {{!-- Start container for docs and table of contents --}}
 <div class="row">
@@ -31,7 +31,7 @@
 {{ docs }}
 
 {{#if sass}}
-<hr>
+<hr/>
 
 <section>
   {{#heading 2}}Sass Reference{{/heading}}
@@ -59,7 +59,7 @@
   {{/if}}
 
   {{#if sass.mixin}}
-  {{#if sass.variable}}<hr>{{/if}}
+  {{#if sass.variable}}<hr/>{{/if}}
 
   <section>
     {{#heading 3 'sass-mixins'}}Mixins{{/heading}}
@@ -103,10 +103,10 @@
       {{/if}}
     </section>
 
-    {{#unless @last}}<hr>{{/unless}}
+    {{#unless @last}}<hr/>{{/unless}}
 
     {{#if sass.function}}
-      <hr>
+      <hr/>
     {{/if}}
 
     {{/each}}
@@ -114,7 +114,7 @@
   {{/if}}
 
   {{#if sass.function}}
-  <hr>
+  <hr/>
 
   <section>
     {{#heading 3 'sass-functions'}}Functions{{/heading}}
@@ -156,7 +156,7 @@
       {{/if}}
     </section>
 
-    {{#unless @last}}<hr>{{/unless}}
+    {{#unless @last}}<hr/>{{/unless}}
     {{/each}}
   </section>
   {{/if}}
@@ -165,7 +165,7 @@
 {{/if}}
 
 {{#if js}}
-<hr>
+<hr/>
 
 <section>
   {{#heading 2}}JavaScript Reference{{/heading}}
@@ -203,7 +203,7 @@
   </section>
   {{/each}}
 
-  <hr>
+  <hr/>
 
   {{#if js.member}}
   <section>
@@ -226,7 +226,7 @@
   </section>
   {{/if}}
 
-  <hr>
+  <hr/>
 
   {{#if js.event}}
   <section>
@@ -248,7 +248,7 @@
   </section>
   {{/if}}
 
-  <hr>
+  <hr/>
 
   {{#if js.function}}
   <section>
@@ -283,7 +283,7 @@
       </table>
       {{/if}}
 
-      {{#unless @last}}<hr>{{/unless}}
+      {{#unless @last}}<hr/>{{/unless}}
     </section>
     {{/each}}
   </section>
@@ -292,7 +292,7 @@
 {{/if}}
 
 {{#if sass}}
-<hr>
+<hr/>
 
 <section class="docs-building-blocks">
   {{#heading 2 'building-blocks'}}Building Blocks using {{title}}{{/heading}}
