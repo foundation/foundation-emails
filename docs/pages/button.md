@@ -42,7 +42,7 @@ In Inky HTML, add the `.expanded` class to the `<button>` tag.
 ```inky_example
 <row>
   <column>
-    <button href="zurb.com" class="expand">Expanded Button</button>
+    <button href="zurb.com" class="expanded">Expanded Button</button>
   </column>
 </row>
 ```
