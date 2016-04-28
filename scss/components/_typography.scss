@@ -24,7 +24,7 @@ $global-font-size: 16px !default;
 
 /// Line height of body text.
 /// @type Number
-$body-line-height: 19px !default;
+$body-line-height: $global-line-height !default;
 
 /// Font family of headings.
 /// @type List
