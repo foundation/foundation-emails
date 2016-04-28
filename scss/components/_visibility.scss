@@ -20,6 +20,9 @@ table.body table.container .hide-for-large {
     display: block !important;
     width: auto !important;
     overflow: visible !important;
+    max-height: none !important; 
+    font-size: inherit !important;
+    line-height: inherit !important;
   }
 }
 
