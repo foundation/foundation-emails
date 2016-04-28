@@ -6,6 +6,14 @@
 /// @group typography
 ////
 
+/// Global font color.
+/// @type Color
+$global-font-color: $black !default;
+
+/// Global font family.
+/// @type Font
+$body-font-family: Helvetica, Arial, sans-serif !default;
+
 /// Global font weight.
 /// @type Keyword
 $global-font-weight: normal !default;
