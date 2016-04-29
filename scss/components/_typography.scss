@@ -6,6 +6,14 @@
 /// @group typography
 ////
 
+/// Global font color.
+/// @type Color
+$global-font-color: $black !default;
+
+/// Global font family.
+/// @type Font
+$body-font-family: Helvetica, Arial, sans-serif !default;
+
 /// Global font weight.
 /// @type Keyword
 $global-font-weight: normal !default;
@@ -24,7 +32,7 @@ $global-font-size: 16px !default;
 
 /// Line height of body text.
 /// @type Number
-$body-line-height: 19px !default;
+$body-line-height: $global-line-height !default;
 
 /// Font family of headings.
 /// @type List
@@ -238,7 +246,7 @@ small {
 
 a {
   color: $anchor-color;
-  text-decoration: none;
+  text-decoration: $anchor-text-decoration;
 
   &:hover {
     color: $anchor-color-hover;
