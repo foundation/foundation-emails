@@ -3,7 +3,7 @@ title: ZURB Stack
 descripiton: The ZURB email stack is a boilerplate that gives you everything you need to develop and test HTML emails.
 ---
 
-Email and web development can get complicated fast. We’ve introduced the ZURB Stack which helps you get started faster and let’s you do more - without having to spend time finding the right tool for the job. The ZURB Stack includes:
+Email and web development can get complicated fast. We’ve introduced the ZURB Stack which helps you get started faster and lets you do more - without having to spend time finding the right tool for the job. The ZURB Stack includes:
 
 - **Gulp.** This is our task runner of choice for Foundation. Gulp lets us queue up tasks to execute. This let’s us do cool things like inlining automagically updating your browser. It’s what the Stack is built on. [Find out more about Gulp](http://gulpjs.com/).
 - **Sass.** We use Libsass as our CSS preprocessor of choice. If you’re not familiar with Sass, it lets you use variables, nesting, and mixins (to name a few). [Learn more about Sass](http://sass-lang.com/).
