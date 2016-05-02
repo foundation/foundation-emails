@@ -284,3 +284,28 @@ table.button.alert:hover {
     }
   }
 }
+
+table.button.warning {
+  table {
+    td {
+      background: $warning-color;
+      border: 0px solid $warning-color;
+    }
+
+    a {
+      border: 0px solid $warning-color;
+    }
+  }
+}
+
+table.button.warning:hover {
+  table {
+    td {
+      background: darken($warning-color, 10%);
+    }
+
+    a {
+      border: 0px solid darken($warning-color, 10%);
+    }
+  }
+}
