@@ -154,6 +154,7 @@ Use it like this:
 - It's better to use full 6 digit hex codes colors in HTML emails (#ffffff vs #fff). Although all the major email clients support short hex colors, Outlook.com (Hotmail), Lotus Notes 6.5, 7 and 8 do not.
 - RGB's are supported all the major email clients but RGBA's are only supported in IOS, Apple Mail, Gmail, and Android 4 (Gmail).
 - Background colors work across all email clients as well as color for fonts.
+- iOS devices sometimes render dates/times and phone numbers in blue irrespective of CSS declarations. A good workaround is to include the the CSS snippet from http://removebluelinks.com/ in combination with wrapping the affected content with `<font color="XXXXXX"></font>` to ensure it gets rendered in the color required.
 
 ---
 
