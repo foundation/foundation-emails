@@ -9,22 +9,42 @@
       <hr>
 
 
-      Should not be converted to apostrophe
+      #337 - Should not be converted to ampersand apos;
       <br>
       '
 
       <hr>
 
-      <br>
-
       #384 - Should not be converted to ampersand and nbsp
+      <br>
       &nbsp;
 
-      <br>
+      <hr>
 
-      Should not be converted to ampersand amp;
+      #305 - Should not be converted to ampersand amp;
+      <br>
       &
 
+      <hr>
+
+      #326 - spaces should not be removed inside linear gradient values
+      <br>
+      <style>
+        .test {
+          background: linear-gradient(to bottom, red 0%, green 100%)
+        }
+      </style>
+      <div class="test">Hi</div>
+
+      #284 - @font-face should show up in HTML
+      <br>
+      <style>
+        @font-face {
+          font-family: 'Franklin Gothic';
+          src: url("https://example.com/Franklin-Gothic.woff") format("woff");
+          }
+        }
+      </style>
       
     </columns>
   </row>
