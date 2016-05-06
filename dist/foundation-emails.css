@@ -109,10 +109,10 @@ th.columns.last,
 th.column.last {
   padding-right: 16px; }
 
-td.columns table,
-td.column table,
-th.columns table,
-th.column table {
+td.columns table:not(.button),
+td.column table:not(.button),
+th.columns table:not(.button),
+th.column table:not(.button) {
   width: 100%; }
 
 td.large-1,
@@ -741,27 +741,36 @@ th.float-center {
   float: none;
   text-align: center; }
 
-table.body table.container .hide-for-large {
-  display: none;
+.hide-for-large {
+  display: none !important;
   width: 0;
   mso-hide: all;
   overflow: hidden;
   max-height: 0;
   font-size: 0;
+  width: 0;
   line-height: 0; }
   @media only screen and (max-width: 596px) {
-    table.body table.container .hide-for-large {
+    .hide-for-large {
       display: block !important;
       width: auto !important;
-      overflow: visible !important; } }
+      overflow: visible !important;
+      max-height: none !important;
+      font-size: inherit !important;
+      line-height: inherit !important; } }
 
 table.body table.container .hide-for-large * {
   mso-hide: all; }
 
 @media only screen and (max-width: 596px) {
-  table.body table.container .row.hide-for-large,
+  table.body table.container .hide-for-large,
   table.body table.container .row.hide-for-large {
     display: table !important;
+    width: 100% !important; } }
+
+@media only screen and (max-width: 596px) {
+  table.body table.container .callout-inner.hide-for-large {
+    display: table-cell !important;
     width: 100% !important; } }
 
 @media only screen and (max-width: 596px) {
@@ -829,7 +838,7 @@ p,
 td,
 th {
   font-size: 16px;
-  line-height: 19px; }
+  line-height: 1.3; }
 
 p {
   margin-bottom: 10px;
@@ -906,7 +915,7 @@ hr {
     Margin-top: -16px; }
 
 table.button {
-  width: auto !important;
+  width: auto;
   margin: 0 0 16px 0;
   Margin: 0 0 16px 0; }
   table.button table td {
@@ -992,7 +1001,7 @@ table.button:active table a {
 table.button.secondary table td {
   background: #777777;
   color: #fefefe;
-  border: 2px solid #777777; }
+  border: 0px solid #777777; }
 
 table.button.secondary table a {
   color: #fefefe;
@@ -1016,7 +1025,7 @@ table.button.secondary table td a:visited {
 
 table.button.success table td {
   background: #3adb76;
-  border: 2px solid #3adb76; }
+  border: 0px solid #3adb76; }
 
 table.button.success table a {
   border: 0 solid #3adb76; }
@@ -1029,7 +1038,7 @@ table.button.success:hover table a {
 
 table.button.alert table td {
   background: #ec5840;
-  border: 2px solid #ec5840; }
+  border: 0px solid #ec5840; }
 
 table.button.alert table a {
   border: 0 solid #ec5840; }
@@ -1039,6 +1048,19 @@ table.button.alert:hover table td {
 
 table.button.alert:hover table a {
   border: 0 solid #e23317; }
+
+table.button.warning table td {
+  background: #ffae00;
+  border: 0px solid #ffae00; }
+
+table.button.warning table a {
+  border: 0px solid #ffae00; }
+
+table.button.warning:hover table td {
+  background: #cc8b00; }
+
+table.button.warning:hover table a {
+  border: 0px solid #cc8b00; }
 
 table.callout {
   margin-bottom: 16px;
