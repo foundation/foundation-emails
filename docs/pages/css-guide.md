@@ -33,7 +33,7 @@ We'll be writing a layout from scratch, so open up `index.html`.
 
 ## Boilerplate
 
-Inside `src/layouts/default.html`, you can see the boilerplate needed to make an HTML work, with comments explaining what does what.
+Inside `index.html`, you can see the boilerplate needed to make an HTML work, with comments explaining what does what.
 
 ```html
 <!-- Emails use the XHTML Strict doctype -->
@@ -42,10 +42,12 @@ Inside `src/layouts/default.html`, you can see the boilerplate needed to make an
 <head>
   <!-- The character set should be utf-8 -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <!-- Enables media queries -->
   <meta name="viewport" content="width=device-width"/>
   <!-- Link to the email's CSS, which will be inlined into the email -->
-  <link rel="stylesheet" href="assets/css/foundation.css">
+  <link rel="stylesheet" href="css/foundation.css">
+  <style>
+    <!-- Your CSS to inline should be added here -->
+  </style>
 </head>
 
 <body>
@@ -53,7 +55,7 @@ Inside `src/layouts/default.html`, you can see the boilerplate needed to make an
   <table class="body" data-made-with-foundation>
     <tr>
       <!-- The class, align, and <center> tag center the container -->
-      <td class="center" align="center" valign="top">
+      <td class="float-center" align="center" valign="top">
         <center>
           <!-- The content of your email goes here. -->
         </center>
