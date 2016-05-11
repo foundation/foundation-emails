@@ -79,7 +79,7 @@ gulp.task('sass:docs', function() {
 
 // Compiles Foundation-specific CSS
 gulp.task('sass:foundation', function() {
-  return gulp.src('scss/foundation.scss')
+  return gulp.src('scss/foundation-emails.scss')
     .pipe($.sass().on('error', $.sass.logError))
     .pipe(gulp.dest('_build/assets/css'));
 });
@@ -195,10 +195,10 @@ gulp.task('download', ['download:build'], function(done) {
 });
 
 gulp.task('dist', ['sass:foundation'], function() {
-  return gulp.src('_build/assets/css/foundation.css')
+  return gulp.src('_build/assets/css/foundation-emails.css')
     .pipe(gulp.dest('dist'))
     .pipe($.cssnano())
-    .pipe($.rename('foundation.min.css'))
+    .pipe($.rename('foundation-emails.min.css'))
     .pipe(gulp.dest('dist'));
 });
 
