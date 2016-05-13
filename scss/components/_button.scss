@@ -32,6 +32,10 @@ $button-color: $white !default;
 /// @type Color
 $button-color-alt: $medium-gray !default;
 
+/// Threshhold to dedermine whether a color is light or dark
+/// @type Number
+$color-threshhold: 40 !default;
+
 /// Font weight of buttons.
 /// @type Weight
 $button-font-weight: bold !default;
@@ -65,7 +69,12 @@ table.button {
 
     td {
       text-align: left;
-      color: $button-color;
+      @if (lightness($button-background) > $color-threshhold){
+        color: $button-color-alt;
+      }
+      @else {
+        color: $button-color;
+      }
       background: $button-background;
       border: $button-border;
 
@@ -73,7 +82,12 @@ table.button {
         font-family: $body-font-family;
         font-size: map-get($button-font-size, default);
         font-weight: $button-font-weight;
-        color: $button-color;
+        @if (lightness($button-background) > $color-threshhold){
+          color: $button-color-alt;
+        }
+        @else {
+          color: $button-color;
+        }
         text-decoration: none;
         display: inline-block;
         padding: map-get($button-padding, default);
@@ -106,7 +120,12 @@ table.button.small table tr td a:visited,
 table.button.large:hover table tr td a,
 table.button.large:active table tr td a,
 table.button.large table tr td a:visited {
-  color: $button-color;
+  @if (lightness($button-background) > $color-threshhold){
+    color: $button-color-alt;
+  }
+  @else {
+    color: $button-color;
+  }
 }
 
 table.button.tiny {
@@ -173,64 +192,73 @@ table.button:active {
   }
 }
 
+
 table.button:hover,
 table.button:visited,
 table.button:active {
   table {
-    a {
+    td {
+      @if (lightness($button-background) > 50){
+        background: lighten($button-background, 10%);
+        color: $button-color-alt;
+      }
+      @else {
+        background: darken($button-background, 10%);
+        color: $button-color;
+      }
+    }
+    a{
       border: 0 solid darken($button-background, 10%);
     }
   }
 }
 
+
 table.button.secondary {
-  table {
-    td {
+  &,
+  &.tiny,
+  &.small,
+  &.large{
+    table tr td,
+    &:active table tr td,
+    &:visited table tr td {
       background: $secondary-color;
-      color: $button-color;
-      border: 0px solid $secondary-color;
+      @if (lightness($secondary-color) > $color-threshhold){
+        color: $button-color-alt;
+      }
+      @else {
+        color: $button-color;
+      }
+      border: 2px solid $secondary-color;
+      a {
+        @if (lightness($secondary-color) > $color-threshhold){
+          color: $button-color-alt;
+        }
+        @else {
+          color: $button-color;
+        }
+        border: 0px solid $secondary-color;
+      }
     }
-
-    a {
-      color: $button-color;
-      border: 0 solid $secondary-color;
-    }
-  }
-}
-
-table.button.secondary:hover {
-  table {
-    td {
-      background: lighten($secondary-color, 10%);
-      color: $button-color;
-    }
-
-    a {
-      border: 0 solid lighten($secondary-color, 10%);
-    }
-  }
-}
-
-table.button.secondary:hover {
-  table {
-    td a {
-      color: $button-color;
-    }
-  }
-}
-
-table.button.secondary:active {
-  table {
-    td a {
-      color: $button-color;
-    }
-  }
-}
-
-table.button.secondary {
-  table {
-    td a:visited {
-      color: $button-color;
+    &:hover table tr td {
+      @if (lightness($secondary-color) > $color-threshhold){
+        background: lighten($secondary-color, 10%);
+        color: $button-color-alt;
+      }
+      @else {
+        background: darken($secondary-color, 10%);
+        color: $button-color;
+      }
+      a {
+        @if (lightness($secondary-color) > $color-threshhold){
+          color: $button-color-alt;
+          border: 0px solid lighten($secondary-color, 10%);
+        }
+        @else {
+          color: $button-color;
+          border: 0px solid darken($secondary-color, 10%);
+        }
+      }
     }
   }
 }
