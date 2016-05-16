@@ -23,7 +23,7 @@ supercollider
     pageRoot: 'docs/pages',
     data: {
       repoName: 'foundation-emails',
-      editBranch: 'v2.0'
+      editBranch: 'develop'
     }
   })
   .searchConfig({
