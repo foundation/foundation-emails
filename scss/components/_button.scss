@@ -34,7 +34,7 @@ $button-color-alt: $medium-gray !default;
 
 /// Threshhold to dedermine whether a color is light or dark
 /// @type Number
-$color-threshhold: 40 !default;
+$threshold: 40 !default;
 
 /// Font weight of buttons.
 /// @type Weight
@@ -69,7 +69,7 @@ table.button {
 
     td {
       text-align: left;
-      @if (lightness($button-background) > $color-threshhold){
+      @if (lightness($button-background) > $threshold){
         color: $button-color-alt;
       }
       @else {
@@ -82,7 +82,7 @@ table.button {
         font-family: $body-font-family;
         font-size: map-get($button-font-size, default);
         font-weight: $button-font-weight;
-        @if (lightness($button-background) > $color-threshhold){
+        @if (lightness($button-background) > $threshold){
           color: $button-color-alt;
         }
         @else {
@@ -120,7 +120,7 @@ table.button.small table tr td a:visited,
 table.button.large:hover table tr td a,
 table.button.large:active table tr td a,
 table.button.large table tr td a:visited {
-  @if (lightness($button-background) > $color-threshhold){
+  @if (lightness($button-background) > $threshold){
     color: $button-color-alt;
   }
   @else {
@@ -223,7 +223,7 @@ table.button.secondary {
     &:active table tr td,
     &:visited table tr td {
       background: $secondary-color;
-      @if (lightness($secondary-color) > $color-threshhold){
+      @if (lightness($secondary-color) > $threshold){
         color: $button-color-alt;
       }
       @else {
@@ -231,7 +231,7 @@ table.button.secondary {
       }
       border: 2px solid $secondary-color;
       a {
-        @if (lightness($secondary-color) > $color-threshhold){
+        @if (lightness($secondary-color) > $threshold){
           color: $button-color-alt;
         }
         @else {
@@ -241,7 +241,7 @@ table.button.secondary {
       }
     }
     &:hover table tr td {
-      @if (lightness($secondary-color) > $color-threshhold){
+      @if (lightness($secondary-color) > $threshold){
         background: lighten($secondary-color, 10%);
         color: $button-color-alt;
       }
@@ -250,7 +250,7 @@ table.button.secondary {
         color: $button-color;
       }
       a {
-        @if (lightness($secondary-color) > $color-threshhold){
+        @if (lightness($secondary-color) > $threshold){
           color: $button-color-alt;
           border: 0px solid lighten($secondary-color, 10%);
         }
