@@ -33,7 +33,7 @@ We'll be writing a layout from scratch, so open up `index.html`.
 
 ## Boilerplate
 
-Inside `src/layouts/default.html`, you can see the boilerplate needed to make an HTML work, with comments explaining what does what.
+Inside `index.html`, you can see the boilerplate needed to make an HTML work, with comments explaining what does what.
 
 ```html
 <!-- Emails use the XHTML Strict doctype -->
@@ -42,10 +42,12 @@ Inside `src/layouts/default.html`, you can see the boilerplate needed to make an
 <head>
   <!-- The character set should be utf-8 -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <!-- Enables media queries -->
   <meta name="viewport" content="width=device-width"/>
   <!-- Link to the email's CSS, which will be inlined into the email -->
-  <link rel="stylesheet" href="assets/css/foundation.css">
+  <link rel="stylesheet" href="css/foundation.css">
+  <style>
+    <!-- Your CSS to inline should be added here -->
+  </style>
 </head>
 
 <body>
@@ -53,7 +55,7 @@ Inside `src/layouts/default.html`, you can see the boilerplate needed to make an
   <table class="body" data-made-with-foundation>
     <tr>
       <!-- The class, align, and <center> tag center the container -->
-      <td class="center" align="center" valign="top">
+      <td class="float-center" align="center" valign="top">
         <center>
           <!-- The content of your email goes here. -->
         </center>
@@ -109,7 +111,7 @@ Inside of your row (the innermost `<tr>`), add one column using this code:
 ```html
 <table class="row">
   <tr>
-    <th class="small-12 large-6 first columns ">
+    <th class="small-12 large-6 first columns">
       Column One
     </th>
     <th class="expander"></th>
@@ -124,10 +126,10 @@ Since this first column is half-width, we need a second one to go with it. *Afte
 ```html
 <table class="row">
   <tr>
-    <th class="small-12 large-6 first columns ">
+    <th class="small-12 large-6 first columns">
       Column One
     </th>
-    <th class="small-12 large-6 last columns ">
+    <th class="small-12 large-6 last columns">
       Column Two
     </th>
     <th class="expander"></th>
@@ -168,7 +170,7 @@ Now that you have an inlined email, you'll need to test it in real email clients
 
 The most popular tool for testing emails is [Litmus](https://litmus.com/). All you have to do is paste in the HTML of an email, and you get a live preview in any email client you want.
 
-It's up to you to choose what email clients are important to test in, but you can [see our compatability list](compatibility.html) for recommendations.
+It's up to you to choose what email clients are important to test in, but you can [see our compatibility list](compatibility.html) for recommendations.
 
 ---
 
