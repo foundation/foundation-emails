@@ -2,11 +2,11 @@
 
 [![npm version badge](https://img.shields.io/npm/v/foundation-emails.svg)](https://www.npmjs.org/package/foundation-emails)
 [![downloads badge](http://img.shields.io/npm/dm/foundation-emails.svg)](https://www.npmjs.org/package/foundation-emails)
+[![Gem Version](https://badge.fury.io/rb/foundation_emails.svg)](https://badge.fury.io/rb/foundation_emails)
 [![downloads badge](http://img.shields.io/npm/l/foundation-emails.svg)](https://www.npmjs.org/package/foundation-emails)
 
 
-
-Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client&mdash;even Outlook. Our HTML/CSS components have been tested across every major email client to ensure consistency. And with the [Inky](https://github.com/zurb/inky) templating language, writing HTML emails is now even easier.
+Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client &mdash; even Outlook. Our HTML/CSS components have been tested across every major email client to ensure consistency. And with the [Inky](https://github.com/zurb/inky) templating language, writing HTML emails is now even easier.
 
 ## Getting Started
 
@@ -23,6 +23,29 @@ npm install
 Then run `npm start` to run the project. A new browser window will open with a BrowserSync server showing the finished files.
 
 Run `npm run build` to do a full email inlining process.
+
+
+#### Using the Ruby gem
+
+**foundation_emails** is a gem that enables you to use Foundation for Emails assets within a Rails project. To install in your app:
+
+1. Add the following line to your Gemfile:
+
+  ```ruby
+  gem 'foundation_emails'
+  ```
+
+2. Then execute:
+
+  ```bash
+  bundle install
+  ```
+
+3. Import Foundation for Emails in your `application.scss`:
+
+  ```scss
+  @import "foundation-emails";
+  ```
 
 ## Documentation
 
