@@ -1,5 +1,7 @@
 # Foundation for Emails Gem
 
+[![Gem Version](https://badge.fury.io/rb/foundation_emails.svg)](https://badge.fury.io/rb/foundation_emails)
+
 Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client &mdash; even Outlook. Our HTML/CSS components have been tested across every major email client to ensure consistency.
 
 ## Installation
