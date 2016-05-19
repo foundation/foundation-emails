@@ -1,28 +1,30 @@
-# Foundation for Emails Gem
+# foundation_emails
 
 [![Gem Version](https://badge.fury.io/rb/foundation_emails.svg)](https://badge.fury.io/rb/foundation_emails)
+
+**foundation_emails** is a gem that enables you to use Foundation for Emails assets within a Rails project.
 
 Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client &mdash; even Outlook. Our HTML/CSS components have been tested across every major email client to ensure consistency.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+1. Add the following line to your Gemfile:
 
-```ruby
-gem 'foundation_emails'
-```
+  ```ruby
+  gem 'foundation_emails'
+  ```
 
-Or install it yourself as:
+2. Then execute:
 
-    $ gem install foundation_emails
+  ```bash
+  bundle install
+  ```
 
-## Usage
+3. Import Foundation for Emails in your `application.scss`:
 
-To include in your assets, place the following in your desired stylesheets manifest:
-
-```scss
-    @import "foundation-emails";
-```
+  ```scss
+  @import "foundation-emails";
+  ```
 
 ## License
 
