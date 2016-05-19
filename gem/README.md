@@ -12,7 +12,7 @@ gem 'foundation_emails'
 
 Or install it yourself as:
 
-    $ gem install foundation-emails
+    $ gem install foundation_emails
 
 ## Usage
 
