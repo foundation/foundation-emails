@@ -1,7 +1,7 @@
 require "spec_helper"
 
-describe Foundation::Emails do
+describe FoundationEmails do
   it "has a version number" do
-    expect(Foundation::Emails::VERSION).not_to be nil
+    expect(FoundationEmails::VERSION).not_to be nil
   end
 end
