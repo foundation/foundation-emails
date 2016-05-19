@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "foundation/emails/version"
+require "foundation_emails/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "foundation-emails"
-  spec.version       = Foundation::Emails::VERSION
+  spec.name          = "foundation_emails"
+  spec.version       = FoundationEmails::VERSION
   spec.authors       = ["ZURB"]
   spec.email         = ["foundation@zurb.com"]
 
@@ -14,8 +14,8 @@ Gem::Specification.new do |spec|
   spec.homepage      = "http://foundation.zurb.com/emails"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features|vendor)/}) }
-  # Include symlinked files separately via Dir.glob
+  spec.files         = Dir[ File.join("**", "*") ].reject { |p| File.directory?(p) || p.match(%{^(test|spec|features)/}) }
+  # Include symlinked files separately
   spec.files         += Dir.glob("vendor/assets/stylesheets/foundation-emails/**/*.*")
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }

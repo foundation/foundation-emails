@@ -1,4 +1,4 @@
-# Foundation::Emails
+# Foundation for Emails Gem
 
 Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client &mdash; even Outlook. Our HTML/CSS components have been tested across every major email client to ensure consistency.
 
@@ -7,7 +7,7 @@ Foundation for Emails (previously known as Ink) is a framework for creating resp
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'foundation-emails'
+gem 'foundation_emails'
 ```
 
 Or install it yourself as:
