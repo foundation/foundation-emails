@@ -231,6 +231,20 @@ Panini will load in the contents of this YML file as a variable called `{{ break
 
 This code will print three `<li>`s, one for each item in the file.
 
+### Escape curly braces
+
+Panini parses the double curly braces looking for the variable. `{{ $variable }}`
+
+To escape the double curly braces use a back slash: 
+```
+\{{ $variable }}
+```
+
+Which will output:
+```
+{{ $variable }}
+```
+
 ## Tutorials
 
 [Staying D.R.Y. with Panini](http://zurb.com/university/lessons/staying-d-r-y-with-panini) 
