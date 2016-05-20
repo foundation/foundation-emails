@@ -29,3 +29,5 @@ Due to Outlook's lack of support for certain CSS properties, the Foundation for 
   <p>This callout will only appear on large screens.</p>
 </callout>
 ```
+
+*note - `.hide-for-large` is not supported on Gmail and Yahoo email clients.*

@@ -1,10 +1,16 @@
 # [Foundation for Emails](http://foundation.zurb.com/emails)
 
+[![npm version badge](https://img.shields.io/npm/v/foundation-emails.svg)](https://www.npmjs.org/package/foundation-emails)
+[![downloads badge](http://img.shields.io/npm/dm/foundation-emails.svg)](https://www.npmjs.org/package/foundation-emails)
+[![downloads badge](http://img.shields.io/npm/l/foundation-emails.svg)](https://www.npmjs.org/package/foundation-emails)
+
+
+
 Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client&mdash;even Outlook. Our HTML/CSS components have been tested across every major email client to ensure consistency. And with the [Inky](https://github.com/zurb/inky) templating language, writing HTML emails is now even easier.
 
 ## Getting Started
 
-Foundation for Emails 2 is not yet fully released, so for now, the main way to get started is with our [email template stack](https://github.com/zurb/foundation-emails-template). To use the stack, you'll need [Node.js](https://nodejs.org/en/) installed on your machine.
+The main way to get started is with our [email template stack](https://github.com/zurb/foundation-emails-template). To use the stack, you'll need [Node.js](https://nodejs.org/en/) installed on your machine.
 
 To set up the emails template, run these commands:
 
@@ -22,7 +28,7 @@ Run `npm run build` to do a full email inlining process.
 
 **Check out our [Migration Guide](https://github.com/zurb/foundation-emails/blob/master/migration.md) for upgrading an existing template or for more in-depth code examples.**
 
-The documentation is not yet live online (or finished!), but you can compile what we have on your own machine.
+Foundation for Emails 2.0 documentation and framework are on the `develop` branch and you can compile it on your own machine.
 
 Run these commands to set up the documentation:
 
@@ -31,11 +37,11 @@ git clone https://github.com/zurb/foundation-emails.git
 cd foundation-emails
 ```
 
-Foundation for Emails 2.0 documentation is on the v2.0 branch.
+Foundation for Emails 2.0 documentation is on the `develop` branch.
 
 ```bash
 git fetch
-git checkout v2.0
+git checkout develop
 npm install
 ```
 
@@ -88,6 +94,6 @@ The parser converts a set of custom HTML tags, expanding them out into full HTML
 
 ## Contributing
 
-As an open source project, we looooove our community support. Please file issues, or better yet pull requests on the [Foundation for Emails Repo](https://github.com/zurb/foundation-emails). We're stoked to hear your feedback, make improvements, and release this to the public soon!
+As an open source project, we looooove our community support. Please file issues, or better yet pull requests on the [Foundation for Emails Repo](https://github.com/zurb/foundation-emails). We're stoked to hear your feedback, make improvements, and keep evolving Foundation for Emails!
 
 Copyright (c) 2016 ZURB, inc.

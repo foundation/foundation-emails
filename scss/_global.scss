@@ -70,14 +70,6 @@ $body-background: $light-gray !default;
 /// @type Color
 $container-background: $white !default;
 
-/// Global font color.
-/// @type Color
-$global-font-color: $black !default;
-
-/// Global font family.
-/// @type Font
-$body-font-family: Helvetica, Arial, sans-serif !default;
-
 /// Global padding.
 /// @type Number
 $global-padding: 16px !default;
@@ -97,3 +89,8 @@ $global-rounded: 500px !default;
 /// Global media query to switch from desktop to mobile styles.
 /// @type String
 $global-breakpoint: $global-width + $global-gutter !default;
+
+
+.wrapper {
+  width: 100%;
+}

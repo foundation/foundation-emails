@@ -1,0 +1,40 @@
+.docs-course-callout {
+  display: block;
+  background: #A183D3;
+  color: $white;
+  padding: 1rem;
+  margin-top: 1rem;
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+
+  .button {
+    background: $white;
+    color: #85769e;
+    font-weight: bold;
+    border-radius: 2px;
+    box-shadow: 0 2px 0 #999;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: rem-calc(14);
+    line-height: 21px;
+  }
+}
+
+.docs-course-callout-subtitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: rem-calc(12);
+  display: block;
+}
+
+.docs-course-callout-title {
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  display: block;
+}

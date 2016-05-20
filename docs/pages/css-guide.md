@@ -13,7 +13,7 @@ In this Getting Started guide, we'll download Foundation for Emails, construct t
 
 If you haven't yet, download the starter files for Foundation for Emails. They include the boilerplate HTML needed for an email, and all of the CSS for Foundation.
 
-<a href="#" class="large button">Download Foundation for Emails</a>
+<a href="http://foundation.zurb.com/downloads/foundation-emails.zip" class="large button">Download Foundation for Emails</a>
 
 Unzip the folder and open it in your text editor of choice.
 
@@ -156,9 +156,9 @@ The CSS classes are always on the outermost table element, so that's an easy way
 
 Now that we have a basic email, the last thing we need to do before we can send it is *inline* it. This is the process of injecting all of the CSS for the email into the HTML, so that it works as a self-contained file.
 
-Email clients like Gmail and Outlook strip out `<style>` tag from the `<head>` and Gmails strips it from the `<body>` of the email as well. It's best to have your CSS written inline within your markup. Hand writing all your CSS inline in a style tag would be a real pain and would take a long time. 
+Email clients like Gmail and Outlook strip out `<style>` tag from the `<head>` and Gmails strips it from the `<body>` of the email as well. It's best to have your CSS written inline within your markup. Hand writing all your CSS inline in a style tag would be a real pain and would take a long time.
 
-Our [web inliner](http://foundation.zurb.com/emails/inliner.html) automates this process for you. To use it, paste in the contents of `index.html` into the HTML field, paste in the contents of `css/foundation.css` into the CSS field, and then press "Inline!". Once it's done, you'll see a large soup of HTML that is your inlined email.
+Our [web inliner](http://foundation.zurb.com/emails/inliner-v2.html) automates this process for you. To use it, paste in the contents of `index.html` into the HTML field, paste in the contents of `css/foundation.css` into the CSS field, and then press "Inline!". Once it's done, you'll see a large soup of HTML that is your inlined email.
 
 Your email's CSS will include media queries for responsive styling which the inliner tool will move into the `<body>` so they are preserved.
 

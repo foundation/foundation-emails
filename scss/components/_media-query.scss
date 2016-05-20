@@ -8,8 +8,8 @@
 
 @media only screen and (max-width: #{$global-breakpoint}) {
   table.body img {
-    width: auto !important;
-    height: auto !important;
+    width: auto;
+    height: auto;
   }
 
   table.body center {
@@ -48,7 +48,7 @@
     }
   }
 
-  //Basic grid rules
+  // Basic grid rules
   @for $i from 1 through $grid-column-count {
     td.small-#{$i},
     th.small-#{$i} {
@@ -65,21 +65,6 @@
   .column th.small-#{$grid-column-count} {
     display: block !important;
     width: 100% !important;
-  }
-
-
-  //Rules for the Center Tag
-  @for $i from 1 through ($grid-column-count - 1) {
-    .body .columns td.small-#{$i},
-    .body .column td.small-#{$i},
-    td.small-#{$i} center,
-
-    .body .columns th.small-#{$i},
-    .body .column th.small-#{$i},
-    th.small-#{$i} center {
-      display: inline-block !important;
-      width: -zf-grid-calc-pct($i, $grid-column-count) !important;
-    }
   }
 
   @for $i from 1 through ($grid-column-count - 1) {
@@ -124,14 +109,9 @@
     }
   }
 
-  //Centers the menus!
+  // Centers the menus!
   table.menu[align="center"] {
     width: auto !important;
-  }
-
-  //Buttons
-  table.button.expand {
-    width: 100% !important;
   }
 }
 

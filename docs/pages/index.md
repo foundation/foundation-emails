@@ -69,9 +69,17 @@ Get to know the pieces of Foundation.
     <strong>Callout</strong>
     <p>Colored panels to use for sectioning or calls to action.</p>
   </a></div>
-  <div class="column"><a href="thumbnail.html">
-    <strong>Thumbnail</strong>
-    <p>Simple image styles to add a thumbnail look.</p>
+  <div class="column"><a href="menu.html">
+    <strong>Menu</strong>
+    <p>Horizontal or vertical list of links.</p>
+  </a></div>
+  <div class="column"><a href="spacer.html">
+    <strong>Spacer</strong>
+    <p>Create consistant vertical spacing between elements.</p>
+  </a></div>
+  <div class="column"><a href="wrapper.html">
+    <strong>Wrapper</strong>
+    <p>Helps create full with or fluid backgrounds.</p>
   </a></div>
   <div class="column"><a href="typography.html">
     <strong>Typography</strong>

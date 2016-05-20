@@ -1,6 +1,6 @@
 ---
 title: Alignment
-description: Centering, images, text and buttons in HTML emails made easy.
+description: Centering, images, text, buttons, and menus in HTML emails made easy.
 ---
 
 Foundation includes a handful of helpful alignment classes to add common positioning behaviors to elements.
@@ -172,3 +172,20 @@ Tables by nature take up as much space is available to them. Because of this, ce
 ```
 
 If you don't add a size attribute like `small="x"` then the columns will be equal width.
+
+---
+
+## Centering a Menu
+
+Centering the menu is a common practice. Wrapping the menu in `<center>` tags will achieve this.
+
+```inky_example
+<center>
+  <menu>
+    <item href="http://zurb.com">Item</item>
+    <item href="http://zurb.com">Item</item>
+    <item href="http://zurb.com">Item</item>
+  </menu>
+</center>
+```
+<br>

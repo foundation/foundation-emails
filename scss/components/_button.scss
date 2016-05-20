@@ -57,7 +57,7 @@ $button-radius: $global-radius !default;
 $button-rounded: $global-rounded !default;
 
 table.button {
-  width: auto !important;
+  width: auto;
   margin: $button-margin;
   Margin: $button-margin;
 
@@ -67,15 +67,7 @@ table.button {
       text-align: left;
       color: $button-color;
       background: $button-background;
-      border: 2px solid $button-background;
-
-      &.radius {
-        border-radius: $button-radius;
-      }
-
-      &.rounded {
-        border-radius: $button-rounded;
-      }
+      border: $button-border;
 
       a {
         font-family: $body-font-family;
@@ -85,10 +77,20 @@ table.button {
         text-decoration: none;
         display: inline-block;
         padding: map-get($button-padding, default);
-        border: 0px solid $button-background;
+        border: 0 solid $button-background;
         border-radius: $button-radius;
       }
     }
+  }
+
+  &.radius table td {
+    border-radius: $button-radius;
+    border: none;
+  }
+
+  &.rounded table td {
+    border-radius: $button-rounded;
+    border: none;
   }
 }
 
@@ -140,8 +142,8 @@ table.button.large {
   }
 }
 
-table.expand,
-table.expanded {
+table.button.expand,
+table.button.expanded {
   width: 100% !important;
 
   table {
@@ -149,6 +151,9 @@ table.expanded {
 
     a {
       text-align: center;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
@@ -173,7 +178,7 @@ table.button:visited,
 table.button:active {
   table {
     a {
-      border: 0px solid darken($button-background, 10%);
+      border: 0 solid darken($button-background, 10%);
     }
   }
 }
@@ -183,12 +188,12 @@ table.button.secondary {
     td {
       background: $secondary-color;
       color: $button-color;
-      border: 2px solid $secondary-color;
+      border: 0px solid $secondary-color;
     }
 
     a {
       color: $button-color;
-      border: 0px solid $secondary-color;
+      border: 0 solid $secondary-color;
     }
   }
 }
@@ -201,7 +206,7 @@ table.button.secondary:hover {
     }
 
     a {
-      border: 0px solid lighten($secondary-color, 10%);
+      border: 0 solid lighten($secondary-color, 10%);
     }
   }
 }
@@ -234,11 +239,11 @@ table.button.success {
   table {
     td {
       background: $success-color;
-      border: 2px solid $success-color;
+      border: 0px solid $success-color;
     }
 
     a {
-      border: 0px solid $success-color;
+      border: 0 solid $success-color;
     }
   }
 }
@@ -250,7 +255,7 @@ table.button.success:hover {
     }
 
     a {
-      border: 0px solid darken($success-color, 10%);
+      border: 0 solid darken($success-color, 10%);
     }
   }
 }
@@ -259,11 +264,11 @@ table.button.alert {
   table {
     td {
       background: $alert-color;
-      border: 2px solid $alert-color;
+      border: 0px solid $alert-color;
     }
 
     a {
-      border: 0px solid $alert-color;
+      border: 0 solid $alert-color;
     }
   }
 }
@@ -275,7 +280,32 @@ table.button.alert:hover {
     }
 
     a {
-      border: 0px solid darken($alert-color, 10%);
+      border: 0 solid darken($alert-color, 10%);
+    }
+  }
+}
+
+table.button.warning {
+  table {
+    td {
+      background: $warning-color;
+      border: 0px solid $warning-color;
+    }
+
+    a {
+      border: 0px solid $warning-color;
+    }
+  }
+}
+
+table.button.warning:hover {
+  table {
+    td {
+      background: darken($warning-color, 10%);
+    }
+
+    a {
+      border: 0px solid darken($warning-color, 10%);
     }
   }
 }

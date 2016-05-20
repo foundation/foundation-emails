@@ -40,7 +40,11 @@ To create an expanded button (full width of it's container), add the class `.exp
 In Inky HTML, add the `.expanded` class to the `<button>` tag.
 
 ```inky_example
-<button href="zurb.com" class="expanded">Expanded Button</button>
+<row>
+  <columns>
+    <button href="zurb.com" class="expanded">Expanded Button</button>
+  </columns>
+</row>
 ```
 
 ---
@@ -54,4 +58,20 @@ Change the background color of a button by adding the class `.secondary`, `.succ
 <button href="zurb.com" class="success">Success Button</button>
 <button href="zurb.com" class="warning">Warning Button</button>
 <button href="zurb.com" class="alert">Alert Button</button>
+```
+
+---
+
+## Radius and Round
+
+Creating buttons with a radius or rounded edges (like a pill) can be achieved by adding the `.radius` or `.rounded` class to a button.
+
+*Note - border-radius is not supported on Outlook 2000-2013, Yahoo! Mail, and Android 4+ (Gmail)*
+
+*Note - In order to create `.radius` and `.rounded` buttons, the border needs to be removed.*
+
+```inky_example
+<button href="#" class="radius">Radius</button>
+<button href="#" class="rounded">Round</button>
+
 ```

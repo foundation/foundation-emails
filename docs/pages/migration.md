@@ -125,6 +125,8 @@ In the Ink 1.0, we needed extra tags to support a wrapper element. This used to 
 
 In Foundation for Emails 2, we’ve eliminated another tag in an effort to simplify your markup. Gutters are now directly applied to the column element itself. We still need to identify the last column with a `.last` class, and now the first column element with the `.first` class. If you have columns in the middle of first and last, they don't need a `.first` or `.last` class.
 
+Also, we stitched `<td>`'s to `<th>`'s because that allows Android 4 native to be responsive - win!
+
 ```
 <table class="container">
   <tr>
@@ -479,6 +481,28 @@ You can wrap a callout around a `<row>` or the content inside a `<column>`.
 ```
 
 The menu component can be used to create a simple set of links comonly used in headers, for social icons or in footers. Adding the `.vertical` class will change the orientation. You can even make it vertical on the small breakpoint only with `.small-vertical`.
+
+### Spacer
+
+#### New Markup (Inky HTML)
+
+```
+<spacer size="100"></spacer>
+```
+
+The spacer component creates consistant vertical spacing between or inside of elements. The size `size="x"` attribute allows you to set the height in pixels of vertical spacing you need.
+
+### Wrapper
+
+#### New Markup (Inky HTML)
+
+```
+<wrapper>
+  content here
+</wrapper>
+```
+
+The wrapper component allows you to wrap content to target CSS within it. You can add classes to it so you can easily create a full with background.
 
 ## Dependencies
 

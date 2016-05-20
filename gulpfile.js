@@ -23,7 +23,7 @@ supercollider
     pageRoot: 'docs/pages',
     data: {
       repoName: 'foundation-emails',
-      editBranch: 'v2.0'
+      editBranch: 'develop'
     }
   })
   .searchConfig({
@@ -56,7 +56,8 @@ gulp.task('html', function() {
     .pipe(panini({
       root: 'docs/pages/',
       layouts: 'docs/layouts/',
-      partials: 'docs/partials/'
+      partials: 'docs/partials/',
+      helpers: foundationDocs.handlebarsHelpers
     }))
     .pipe(gulp.dest('_build'))
     .on('finish', function() {
@@ -164,6 +165,7 @@ gulp.task('templates', function() {
 gulp.task('download:build:index', function() {
   return gulp.src('test/visual/_template.html', { base: 'test/visual' })
     .pipe($.injectString.replace('<%= contents %>', ''))
+    .pipe($.injectString.replace('../assets/', ''))
     .pipe($.rename('index.html'))
     .pipe(gulp.dest('.download'));
 });
@@ -207,12 +209,13 @@ function inliner(css) {
   var pipe = lazypipe()
     .pipe($.inlineCss, {
       applyStyleTags: false,
-      removeStyleTags: false
+      removeStyleTags: false,
+      removeLinkTags: false
     })
     .pipe($.injectString.replace, '<!-- <style> -->', '<style>'+mqCss+'</style>')
     .pipe($.htmlmin, {
-      collapseWhitespace: true,
-      minifyCSS: true
+      collapseWhitespace: false,
+      minifyCSS: false
     });
 
   return pipe();

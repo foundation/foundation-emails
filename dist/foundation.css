@@ -1,3 +1,6 @@
+.wrapper {
+  width: 100%; }
+
 #outlook a {
   padding: 0; }
 
@@ -66,9 +69,10 @@ table, tr, td {
   vertical-align: top;
   text-align: left; }
 
-html {
-  min-height: 100%;
-  background: #f3f3f3; }
+@media only screen {
+  html {
+    min-height: 100%;
+    background: #f3f3f3; } }
 
 table.body {
   background: #f3f3f3;
@@ -742,9 +746,8 @@ table.body table.container .hide-for-large {
   width: 0;
   mso-hide: all;
   overflow: hidden;
-  max-height: 0px;
+  max-height: 0;
   font-size: 0;
-  width: 0px;
   line-height: 0; }
   @media only screen and (max-width: 596px) {
     table.body table.container .hide-for-large {
@@ -907,15 +910,10 @@ table.button {
   margin: 0 0 16px 0;
   Margin: 0 0 16px 0; }
   table.button table td {
-    width: auto !important;
     text-align: left;
     color: #fefefe;
     background: #2199e8;
     border: 2px solid #2199e8; }
-    table.button table td.radius {
-      border-radius: 3px; }
-    table.button table td.rounded {
-      border-radius: 500px; }
     table.button table td a {
       font-family: Helvetica, Arial, sans-serif;
       font-size: 16px;
@@ -924,8 +922,14 @@ table.button {
       text-decoration: none;
       display: inline-block;
       padding: 8px 16px 8px 16px;
-      border: 0px solid #2199e8;
+      border: 0 solid #2199e8;
       border-radius: 3px; }
+  table.button.radius table td {
+    border-radius: 3px;
+    border: none; }
+  table.button.rounded table td {
+    border-radius: 500px;
+    border: none; }
 
 table.button:hover table tr td a,
 table.button:active table tr td a,
@@ -958,18 +962,20 @@ table.button.large table a {
   padding: 10px 20px 10px 20px;
   font-size: 20px; }
 
-table.expand,
-table.expanded {
+table.button.expand,
+table.button.expanded {
   width: 100% !important; }
-  table.expand table,
-  table.expanded table {
+  table.button.expand table,
+  table.button.expanded table {
     width: 100%; }
-    table.expand table a,
-    table.expanded table a {
-      width: calc(100% - 20px);
-      text-align: center; }
-  table.expand center,
-  table.expanded center {
+    table.button.expand table a,
+    table.button.expanded table a {
+      text-align: center;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0; }
+  table.button.expand center,
+  table.button.expanded center {
     min-width: 0; }
 
 table.button:hover table td,
@@ -981,7 +987,7 @@ table.button:active table td {
 table.button:hover table a,
 table.button:visited table a,
 table.button:active table a {
-  border: 0px solid #147dc2; }
+  border: 0 solid #147dc2; }
 
 table.button.secondary table td {
   background: #777777;
@@ -990,14 +996,14 @@ table.button.secondary table td {
 
 table.button.secondary table a {
   color: #fefefe;
-  border: 0px solid #777777; }
+  border: 0 solid #777777; }
 
 table.button.secondary:hover table td {
   background: #919191;
   color: #fefefe; }
 
 table.button.secondary:hover table a {
-  border: 0px solid #919191; }
+  border: 0 solid #919191; }
 
 table.button.secondary:hover table td a {
   color: #fefefe; }
@@ -1013,51 +1019,53 @@ table.button.success table td {
   border: 2px solid #3adb76; }
 
 table.button.success table a {
-  border: 0px solid #3adb76; }
+  border: 0 solid #3adb76; }
 
 table.button.success:hover table td {
   background: #23bf5d; }
 
 table.button.success:hover table a {
-  border: 0px solid #23bf5d; }
+  border: 0 solid #23bf5d; }
 
 table.button.alert table td {
   background: #ec5840;
   border: 2px solid #ec5840; }
 
 table.button.alert table a {
-  border: 0px solid #ec5840; }
+  border: 0 solid #ec5840; }
 
 table.button.alert:hover table td {
   background: #e23317; }
 
 table.button.alert:hover table a {
-  border: 0px solid #e23317; }
+  border: 0 solid #e23317; }
 
-th.callout {
+table.callout {
+  margin-bottom: 16px;
+  Margin-bottom: 16px; }
+
+th.callout-inner {
   width: 100%;
   border: 1px solid #cbcbcb;
   padding: 10px;
-  background: #fefefe;
-  margin-bottom: 16px;
-  Margin-bottom: 16px; }
-  th.callout.primary {
+  background: #fefefe; }
+  th.callout-inner.primary {
     background: #def0fc;
     border: 1px solid #444444;
     color: #0a0a0a; }
-  th.callout.secondary {
+  th.callout-inner.secondary {
     background: #ebebeb;
     border: 1px solid #444444;
     color: #0a0a0a; }
-  th.callout.success {
+  th.callout-inner.success {
     background: #e1faea;
     border: 1px solid #1b9448;
     color: #fefefe; }
-  th.callout.warning {
+  th.callout-inner.warning {
     background: #fff3d9;
     border: 1px solid #996800;
     color: #fefefe; }
-  th.callout.alert {
+  th.callout-inner.alert {
     background: #fce6e2;
     border: 1px solid #b42912;
     color: #fefefe; }
@@ -1087,10 +1095,10 @@ table.menu {
 table.menu.vertical td.menu-item,
 table.menu.vertical th.menu-item {
   padding: 10px;
-  padding-right: 0; }
+  padding-right: 0;
+  display: block; }
   table.menu.vertical td.menu-item a,
   table.menu.vertical th.menu-item a {
-    display: block;
     width: 100%; }
 
 table.menu.vertical td.menu-item table.menu.vertical td.menu-item,
@@ -1101,6 +1109,9 @@ table.menu.vertical th.menu-item table.menu.vertical th.menu-item {
 
 table.menu.text-center a {
   text-align: center; }
+
+.menu[align="center"] {
+  width: auto !important; }
 
 body.outlook p {
   display: inline !important; }
@@ -1185,94 +1196,6 @@ body.outlook p {
   .column th.small-12 {
     display: block !important;
     width: 100% !important; }
-  .body .columns td.small-1,
-  .body .column td.small-1,
-  td.small-1 center,
-  .body .columns th.small-1,
-  .body .column th.small-1,
-  th.small-1 center {
-    display: inline-block !important;
-    width: 8.33333% !important; }
-  .body .columns td.small-2,
-  .body .column td.small-2,
-  td.small-2 center,
-  .body .columns th.small-2,
-  .body .column th.small-2,
-  th.small-2 center {
-    display: inline-block !important;
-    width: 16.66667% !important; }
-  .body .columns td.small-3,
-  .body .column td.small-3,
-  td.small-3 center,
-  .body .columns th.small-3,
-  .body .column th.small-3,
-  th.small-3 center {
-    display: inline-block !important;
-    width: 25% !important; }
-  .body .columns td.small-4,
-  .body .column td.small-4,
-  td.small-4 center,
-  .body .columns th.small-4,
-  .body .column th.small-4,
-  th.small-4 center {
-    display: inline-block !important;
-    width: 33.33333% !important; }
-  .body .columns td.small-5,
-  .body .column td.small-5,
-  td.small-5 center,
-  .body .columns th.small-5,
-  .body .column th.small-5,
-  th.small-5 center {
-    display: inline-block !important;
-    width: 41.66667% !important; }
-  .body .columns td.small-6,
-  .body .column td.small-6,
-  td.small-6 center,
-  .body .columns th.small-6,
-  .body .column th.small-6,
-  th.small-6 center {
-    display: inline-block !important;
-    width: 50% !important; }
-  .body .columns td.small-7,
-  .body .column td.small-7,
-  td.small-7 center,
-  .body .columns th.small-7,
-  .body .column th.small-7,
-  th.small-7 center {
-    display: inline-block !important;
-    width: 58.33333% !important; }
-  .body .columns td.small-8,
-  .body .column td.small-8,
-  td.small-8 center,
-  .body .columns th.small-8,
-  .body .column th.small-8,
-  th.small-8 center {
-    display: inline-block !important;
-    width: 66.66667% !important; }
-  .body .columns td.small-9,
-  .body .column td.small-9,
-  td.small-9 center,
-  .body .columns th.small-9,
-  .body .column th.small-9,
-  th.small-9 center {
-    display: inline-block !important;
-    width: 75% !important; }
-  .body .columns td.small-10,
-  .body .column td.small-10,
-  td.small-10 center,
-  .body .columns th.small-10,
-  .body .column th.small-10,
-  th.small-10 center {
-    display: inline-block !important;
-    width: 83.33333% !important; }
-  .body .columns td.small-11,
-  .body .column td.small-11,
-  td.small-11 center,
-  .body .columns th.small-11,
-  .body .column th.small-11,
-  th.small-11 center {
-    display: inline-block !important;
-    width: 91.66667% !important; }
   table.body td.small-offset-1,
   table.body th.small-offset-1 {
     margin-left: 8.33333% !important;
@@ -1336,5 +1259,5 @@ body.outlook p {
     table.menu.vertical th, table.menu.small-vertical td,
     table.menu.small-vertical th {
       display: block !important; }
-  table.button.expand {
-    width: 100% !important; } }
+  table.menu[align="center"] {
+    width: auto !important; } }

@@ -25,6 +25,7 @@ $foundation-palette: (
 
 @import 'code';
 @import 'compatibility';
+@import 'course-callout';
 
 .dropdown.menu > li.is-dropdown-submenu-parent > a {
   padding-right: 1rem;
@@ -40,4 +41,9 @@ $foundation-palette: (
 
 .zurb-footer-top {
   background: #1C1F3A !important;
+}
+
+.callout.secondary.tip {
+  border: none;
+  border-left: 5px solid $primary-color;
 }
