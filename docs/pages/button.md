@@ -41,9 +41,9 @@ In Inky HTML, add the `.expanded` class to the `<button>` tag.
 
 ```inky_example
 <row>
-  <column>
+  <columns>
     <button href="zurb.com" class="expanded">Expanded Button</button>
-  </column>
+  </columns>
 </row>
 ```
 
