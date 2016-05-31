@@ -47,16 +47,18 @@ Creating a fluid header with the `<wrapper>` component is pretty straight forwar
 </style>
 
 <wrapper class="header">
-  <container>
-    <row class="collapse">
-      <columns small="6">
-        <img src="http://placehold.it/200x50/663399">
-      </columns>
-      <columns small="6">
-        <p class="text-right">HEADER</p>
-      </columns>
-    </row>
-  </container>
+  <center>
+    <container>
+      <row class="collapse">
+        <columns small="6">
+          <img src="http://placehold.it/200x50/663399">
+        </columns>
+        <columns small="6">
+          <p class="text-right">HEADER</p>
+        </columns>
+      </row>
+    </container>
+  </center>
 </wrapper>
 ```
 
