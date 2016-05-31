@@ -16,7 +16,7 @@ A framework is a collection of reusable code and design patterns which gives use
 
 ## Need to know
 
-The sad truth about creating or coding HTML emails is that tables are the only thing that is universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capitor, and going back to the 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags. 
+The sad truth about creating or coding HTML emails is that tables are the only things that are universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capitor, and going back to the 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags. 
 
 <div class="callout secondary tip">General rule of thumb: your email is not going to look identical in every client. And that’s OK.</div>
 
@@ -166,6 +166,8 @@ Margin: 10px;  // fallback for Outlook.com
 
 Nope. JavaScript is not a reality in most popular emails. It will be blocked for security reasons.
 
+---
+
 ## Images
 
 #### Blocked Images
@@ -212,7 +214,7 @@ Reduce Image Size. There is no guarantee the recipient of your email will have w
 
 Animated GIFs have *surprisingly* good support. As usual, there are caveats. Outlook only shows the first frame of the animation. Make sure your call to action is visible in the first frame.
 
-Video's in emails are not supported.
+Video's in emails are not supported except in Apple Mail and Outlook 2011. [See how Litmus explores background video in HTML Emails](https://litmus.com/blog/how-to-code-html5-video-background-in-email)
 
 #### Quick Tips on Images
 
@@ -228,6 +230,8 @@ Also, link to images from your own server, not anyone elses. If you don't contro
 
 Images get blocked. So if you have an important CTA image that looks like a button, it will likely get missed. And that defeats the purpose of your email.
 
+---
+
 ## Email File Size
 
 Sending an email with a file size between 15KB-100KB is ideal. Some email clients will send the email to spam if the file size is greater.
@@ -236,8 +240,8 @@ Emails can get cut off by the ‘This message has only partially downloaded’ i
 
 Problems
 
-- this could cause the email open to not be registered
-- your email's call to action could be missed
+- This could cause the email open to not be registered
+- Your email's call to action could be missed
 
 Causes
 
@@ -292,6 +296,8 @@ Nokia’s developer guidelines suggest that the target size should be no smaller
 
 While these guidelines give a general measurement for touch targets, they’re not consistent with each other, nor are they consistent with the actual size of the human finger. In fact, their suggested sizes are much smaller than the average finger, which can lead to touch target problems for users on mobile devices.
 
+---
+
 ## Testing
 
 Testing costs money. Not testing costs you customers.
@@ -308,6 +314,8 @@ Foundation for Emails is tested on the most popular clients. You can also test o
 
 These services make testing on lots of email clients and devices much faster. Try to hit the main categories: a Windows machine, a Mac, an iPhone, an Android, a tablet. Still, nothing beats testing on a real device. 
 
+---
+
 ## Sending you Emails
 
 ESP's are made for sending thousands and thousands of emails, they can help you get emails out without being deemed a spammer.
@@ -317,6 +325,8 @@ ESP's like Campain Monitor and Mailchimp cost money, but they can save you huge 
 Try not to look like SPAM. Pretty obvious, but just writing good code and honest copy should keep you out of the can here. Your HTML email is definitely NOT the place for a Viagra joke.
 
 OBEY THE LAW. The CAN-SPAM act became law on Jan. 1, 2004. It says there many things you must do as a commercial email-er. Highlights are basically don't be deceptive, and that you MUST include a physical mailing address as well as a working unsubscribe link.
+
+---
 
 ## Design Tips
 
