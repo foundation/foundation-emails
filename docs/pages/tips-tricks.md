@@ -112,7 +112,7 @@ Speaking of CSS, you should only set classes and IDs on tables or `<td>` tags, n
 #### CSS Support
 Support of CSS properties varies greatly between email clients. You're best off sticking with the basics and not getting too fancy.
 
-This CSS compatibily chart will really save you some pain when writing CSS:
+This CSS compatibility chart will really save you some pain when writing CSS:
 [CSS Support Chart](https://www.campaignmonitor.com/css/b/)
 
 <img src="assets/img/campaign-monitor-css-guide.jpg" alt="">
@@ -150,7 +150,7 @@ Margin: 10px;  // fallback for Outlook.com
 ```
 
 - `<br>` tags are ok, but you won't get pixel perfect results and you can quickly fill up your code with messyness.
-- **Your best option** for vertical spacing is to use the `<spacer>` component in Foundation for Emails. It works consistintly on all email clients and lets you set the height with the size attribute. So `<spacer size="32"></spacer>` will create 32px of vertical space.
+- **Your best option** for vertical spacing is to use the `<spacer>` component in Foundation for Emails. It works consistently on all email clients and lets you set the height with the size attribute. So `<spacer size="32"></spacer>` will create 32px of vertical space.
 
 ---
 
