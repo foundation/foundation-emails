@@ -75,3 +75,8 @@ Creating buttons with a radius or rounded edges (like a pill) can be achieved by
 <button href="#" class="rounded">Round</button>
 
 ```
+
+<div class="callout primary">
+- It's important to add an `href` attribute to your `<button>`'s to ensure that Outlook.com will not display `[undefined]` in your rendered email.<br> 
+- Office 365 and Outlook.com require a valid url in the href attribute or you can use the # placeholder.
+</div>
