@@ -63,6 +63,17 @@ th.column {
   Margin: 0 auto;
   padding-left: $global-gutter;
   padding-bottom: $column-padding-bottom;
+
+  // Prevents Nested columns from double the padding
+  .column,
+  .columns {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    center {
+      min-width: none !important;
+    }
+  }
 }
 
 td.columns.last,
