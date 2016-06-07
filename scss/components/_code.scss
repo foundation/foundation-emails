@@ -1,0 +1,43 @@
+/// Text color of code samples.
+/// @type Color
+$code-color: $black !default;
+
+/// Font family of code samples.
+/// @type String | List
+$code-font-family: $font-family-monospace !default;
+
+/// Font weight of text in code samples.
+/// @type String
+$code-font-weight: $global-weight-normal !default;
+
+/// Background color of code samples.
+/// @type Color
+$code-background: $light-gray !default;
+
+/// Border around code samples.
+/// @type List
+$code-border: 1px solid $medium-gray !default;
+
+/// Padding around text of code samples.
+/// @type Number | List
+$code-padding: rem-calc(2 5 1) !default;
+
+pre {
+  background: $light-gray;
+  margin: 30px 0;
+  Margin: 30px 0;
+
+  code {
+    color: $medium-gray;
+
+    span.callout {
+      color: $dark-gray;
+      font-weight: bold;
+    }
+
+    span.callout-strong {
+      color: $pre-color;
+      font-weight: bold;
+    }
+  }
+}

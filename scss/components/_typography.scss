@@ -74,6 +74,14 @@ $header-margin-bottom: 10px !default;
 /// @type Number
 $paragraph-margin-bottom: 10px !default;
 
+/// Line height of text inside `<p>` elements.
+/// @type Number
+$paragraph-lineheight: 25px !default;
+
+/// Global font weight used for bold type.
+/// @type Keyword | Number
+$global-weight-bold: bold !default;
+
 /// Default font size for `<small>`.
 /// @type Number
 $small-font-size: 80% !default;
@@ -219,9 +227,11 @@ th {
   line-height: $body-line-height;
 }
 
+// Paragraphs
 p {
   margin-bottom: $paragraph-margin-bottom;
   Margin-bottom: $paragraph-margin-bottom;
+  line-height: $paragraph-lineheight;
 
   &.lead {
     font-size: $lead-font-size;
@@ -237,6 +247,20 @@ p {
     line-height: $subheader-lineheight;
     color: $subheader-color;
   }
+}
+
+// Emphasized text
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+// Strong text
+strong,
+b {
+  font-weight: $global-weight-bold;
+  line-height: inherit;
 }
 
 small {
@@ -276,26 +300,6 @@ h6 a:visited {
   color: $anchor-color;
 }
 
-pre {
-  background: $light-gray;
-  margin: 30px 0;
-  Margin: 30px 0;
-
-  code {
-    color: $medium-gray;
-
-    span.callout {
-      color: $dark-gray;
-      font-weight: bold;
-    }
-
-    span.callout-strong {
-      color: $pre-color;
-      font-weight: bold;
-    }
-  }
-}
-
 // Horizontal rule
 
 hr {
@@ -320,5 +324,10 @@ hr {
     Margin-top: -16px;
   }
 }
+
+// unordered list styles
+
+
+
 
 
