@@ -101,7 +101,8 @@
       display: inline-block !important;
     }
 
-    &.vertical, &.small-vertical {
+    &.vertical, 
+    &.small-vertical {
       td,
       th {
         display: block !important;
@@ -112,6 +113,28 @@
   // Centers the menus!
   table.menu[align="center"] {
     width: auto !important;
+  }
+
+
+  // expands buttons for small only
+  table.button.small-expand,
+  table.button.small-expanded {
+    width: 100% !important;
+
+    table {
+      width: 100%;
+
+      a {
+        text-align: center !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+
+    center {
+      min-width: 0;
+    }
   }
 }
 
