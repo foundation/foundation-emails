@@ -1,0 +1,52 @@
+<style>
+  table.hr {
+    width: 100%;
+  }
+
+  table.hr {
+    border:solid 1px black; 
+    border-width:1px 0 0 0; 
+    height:1px; 
+    background:none; 
+    margin: 0; 
+    width:100%; 
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+
+  table.hr.red th {
+    border:solid 4px red; 
+    border-width:4px 0 0 0; 
+    height:4px; 
+  }
+  table.hr.blue th {
+    border:solid 10px blue; 
+    border-width:10px 0 0 0; 
+    height:10px; 
+  }
+  table.hr.green th {
+    border:solid 25px green; 
+    border-width:25px 0 0 0; 
+    height:25px; 
+  }
+</style>
+
+
+<container>
+
+  <spacer size="35"></spacer>
+
+  <hr class="red">
+
+  <row>
+    <columns no-expander small="12" large="12">
+      <hr class="blue">
+    </columns>
+  </row>
+
+  <hr class="green">
+
+  <hr>
+
+  <spacer size="35"></spacer>
+</container>
