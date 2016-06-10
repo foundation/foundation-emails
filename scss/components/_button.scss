@@ -38,7 +38,7 @@ $button-font-weight: bold !default;
 
 /// Margin around buttons.
 /// @type List
-$button-margin: 0 0 $global-margin 0 !default;
+$button-margin-bottom: $global-margin !default;
 
 /// Background color of buttons.
 /// @type Color
@@ -58,8 +58,6 @@ $button-rounded: $global-rounded !default;
 
 table.button {
   width: auto;
-  margin: $button-margin;
-  Margin: $button-margin;
 
   table {
 
@@ -92,6 +90,13 @@ table.button {
     border-radius: $button-rounded;
     border: none;
   }
+}
+
+// creates spacing below buttons
+td.button-spacer {
+  height: $button-margin-bottom; 
+  font-size: $button-margin-bottom;
+  line-height: $button-margin-bottom;
 }
 
 table.button:hover table tr td a,
