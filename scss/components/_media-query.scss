@@ -30,7 +30,7 @@
     box-sizing: border-box;
     padding-left: $global-gutter !important;
     padding-right: $global-gutter !important;
-    
+
     // Nested columns won't double the padding
     .column,
     .columns {
@@ -70,7 +70,7 @@
   @for $i from 1 through ($grid-column-count - 1) {
     table.body td.small-offset-#{$i},
     table.body th.small-offset-#{$i} {
-    //1.5 takes in effect a whole empty cell.
+      //1.5 takes in effect a whole empty cell.
       margin-left: -zf-grid-calc-pct($i, $grid-column-count) !important;
       Margin-left: -zf-grid-calc-pct($i, $grid-column-count) !important;
     }
@@ -94,14 +94,14 @@
   //menu
   table.menu {
     width: 100% !important;
-    
+
     td,
     th {
       width: auto !important;
       display: inline-block !important;
     }
 
-    &.vertical, 
+    &.vertical,
     &.small-vertical {
       td,
       th {
@@ -114,7 +114,6 @@
   table.menu[align="center"] {
     width: auto !important;
   }
-
 
   // expands buttons for small only
   table.button.small-expand,
