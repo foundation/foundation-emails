@@ -49,10 +49,14 @@
   }
 
   //Basic grid rules
-  @for $i from 1 through $grid-column-count {
+  @for $i from 0 through $grid-column-count {
     td.small-#{$i},
     th.small-#{$i} {
-      display: inline-block !important;
+      @if $i == 0 {
+        display: none !important;
+      } @else {
+        display: inline-block !important;
+      }
       width: -zf-grid-calc-pct($i, $grid-column-count) !important;
     }
   }
