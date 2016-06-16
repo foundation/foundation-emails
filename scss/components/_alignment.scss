@@ -6,39 +6,28 @@
 /// @group alignment
 ////
 
-table.text-center,
-td.text-center,
-h1.text-center,
-h2.text-center,
-h3.text-center,
-h4.text-center,
-h5.text-center,
-h6.text-center,
-p.text-center,
-span.text-center {
-  text-align: center;
-}
+table,
+th,
+td,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  &.text-center {
+    text-align: center;
+  }
 
-h1.text-left,
-h2.text-left,
-h3.text-left,
-h4.text-left,
-h5.text-left,
-h6.text-left,
-p.text-left,
-span.text-left {
-  text-align: left;
-}
+  &.text-left {
+    text-align: left;
+  }
 
-h1.text-right,
-h2.text-right,
-h3.text-right,
-h4.text-right,
-h5.text-right,
-h6.text-right,
-p.text-right,
-span.text-right {
-  text-align: right;
+  &.text-right {
+    text-align: right;
+  }
 }
 
 span.text-center {
@@ -77,7 +66,7 @@ img.float-right {
   text-align: right;
 }
 
-img.float-center, 
+img.float-center,
 img.text-center {
   margin: 0 auto;
   Margin: 0 auto;
@@ -85,13 +74,15 @@ img.text-center {
   text-align: center;
 }
 
-table.float-center,
-td.float-center,
-th.float-center {
-  margin: 0 auto;
-  Margin: 0 auto;
-  float: none;
-  text-align: center;
+table,
+td,
+th {
+  &.float-center {
+    margin: 0 auto;
+    Margin: 0 auto;
+    float: none;
+    text-align: center;
+  }
 }
 
 
