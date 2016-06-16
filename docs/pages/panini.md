@@ -64,7 +64,7 @@ Here's an example of a layout file that divides its key sections into partials:
     <title>Definitely STILL an Email!</title>
   </head>
   <body>
-    {{> header}
+    {{> header}}
     {{> body}}
     {{> footer}}
   </body>
