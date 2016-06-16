@@ -9,19 +9,19 @@
 /// Padding inside buttons at various sizes.
 /// @type Map
 $button-padding: (
-        tiny: 4px 8px 4px 8px,
-        small: 5px 10px 5px 10px,
-        default: 8px 16px 8px 16px,
-        large: 10px 20px 10px 20px,
+  tiny: 4px 8px 4px 8px,
+  small: 5px 10px 5px 10px,
+  default: 8px 16px 8px 16px,
+  large: 10px 20px 10px 20px,
 ) !default;
 
 /// Font sizes of buttons at various sizes.
 /// @type Map
 $button-font-size: (
-        tiny: 10px,
-        small: 12px,
-        default: 16px,
-        large: 20px,
+  tiny: 10px,
+  small: 12px,
+  default: 16px,
+  large: 20px,
 ) !default;
 
 /// Text color of buttons.
