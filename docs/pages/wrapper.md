@@ -10,7 +10,7 @@ tags:
 
 ## Basics
 
-When using [Inky](inky.html) HTML, the `<wrapper>` tag will create a `<table>`, `<tr>`, `<th>` structure needed to create consistant full width backgrounds. You can add classes to the wrapper to targed CSS properties on it or target elements within it. The `.wrapper-inner` class is available to add padding to the wrapper.
+When using [Inky](inky.html) HTML, the `<wrapper>` tag will create a `<table>`, `<tr>`, `<th>` structure needed to create consistant full width backgrounds. You can add classes to the wrapper to target CSS properties on it or target elements within it. The `.wrapper-inner` class is available to add padding to the wrapper.
 
 ```inky_example
 <wrapper>
