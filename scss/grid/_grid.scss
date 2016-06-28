@@ -14,6 +14,10 @@ $grid-column-count: 12 !default;
 /// @type Number
 $column-padding-bottom: $global-padding !default;
 
+/// Default border radius for the container.
+/// @type Number
+$container-radius: 50px !default;
+
 //For viewing email in browser
 @media only screen {
   html {
@@ -159,4 +163,10 @@ th.expander {
   visibility: hidden;
   width: 0;
   padding: 0 !important;
+}
+
+// adds radius to container
+table.container.radius {
+  border-radius: $container-radius;
+  border-collapse: separate;
 }
