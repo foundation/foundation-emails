@@ -24,41 +24,40 @@ Creating a fluid header with the `<wrapper>` component is pretty straight forwar
 
 ```inky_example
 <style type="text/css">
-  .header {
-    background: #8a8a8a;
+  .wrapper.header {
+    background: #8a8a8a !important;
   }
 
-  .header .columns {
-    padding-bottom: 0;
+  .wrapper.header .columns {
+    padding-bottom: 0 !important;
   }
 
   .header p {
-    color: #fff;
-    padding-top: 15px;
+    color: #fff !important;
+    font-weight: bold;
+    margin-bottom: 0 !important;
   }
 
-  .header .wrapper-inner {
-    padding: 20px;
-  }
-
-  .header .container {
-    background: transparent;
+  .wrapper.header .header-container {
+    background: #8a8a8a !important;
   }
 </style>
 
 <wrapper class="header">
+  <spacer size="16"></spacer>
   <center>
-    <container>
+    <container class="header-container">
       <row class="collapse">
-        <columns small="6">
+        <columns small="6" valign="middle">
           <img src="http://placehold.it/200x50/663399">
         </columns>
-        <columns small="6">
-          <p class="text-right">HEADER</p>
+        <columns small="6" valign="middle">
+          <p class="text-right">BASIC</p>
         </columns>
       </row>
     </container>
   </center>
+  <spacer size="16"></spacer>
 </wrapper>
 ```
 

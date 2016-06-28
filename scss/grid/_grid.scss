@@ -14,9 +14,9 @@ $grid-column-count: 12 !default;
 /// @type Number
 $column-padding-bottom: $global-padding !default;
 
-/// Default border radius for the container.
+/// Default border radius for the container. Use a px value
 /// @type Number
-$container-radius: 50px !default;
+$container-radius: 0 !default;
 
 //For viewing email in browser
 @media only screen {
