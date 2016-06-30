@@ -778,11 +778,11 @@ th.float-center {
 
 .hide-for-large {
   display: none !important;
-  width: 0;
   mso-hide: all;
   overflow: hidden;
   max-height: 0;
   font-size: 0;
+  width: 0;
   line-height: 0; }
   @media only screen and (max-width: 596px) {
     .hide-for-large {
