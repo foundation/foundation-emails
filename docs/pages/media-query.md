@@ -14,15 +14,19 @@ Foundation for Emails has one breakpoint:
 Many components can be modified at different screen sizes using special breakpoint classes. The grid is the most obvious example. 
 
 **CSS Version**
-In the code below, the left-hand column is six columns wide on small screens, hence `.small-6`. On medium-sized screens, the class `.medium-4` overrides the small style, changing the column to be four wide.
+You can define the width of your columns on each breakpoint by using the grid with classes. `.small-6` creates a six column wide container (50%) width on the small breakpont. You can override this behavior on the large breakpoint by definining another size like `.large-4`.
 
 **Inky Version**
 In Inky, you can define the width by using the `small="x"` and `large="x"` attributes.
 
-```
+```inky_example
+<style>
+  .columns {border: 1px solid #333;}
+</style>
+
 <row>
-  <columns small="6" large="4"></columns>
-  <columns small="6" large="8"></columns>
+  <columns small="6" large="4">4 columns, 6 columns on small</columns>
+  <columns small="6" large="8">8 columns, 6 columns on small</columns>
 </row>
 ```
 

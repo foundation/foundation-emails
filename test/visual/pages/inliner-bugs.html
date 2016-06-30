@@ -1,0 +1,99 @@
+<container>
+  <row>
+    <columns>
+      
+      #417 - 2 sets of angle backets: outer set should not get converted to charachter codes. you should not see 2 angle brackets here:
+      <br>
+      <raw><<LCG Program\TG LCG Coupon Code Default='246996'>></raw>
+      confirmed on inliner (both) need to 
+
+      <hr>
+
+
+      #337 - Should not be converted to ampersand apos;
+      <br>
+      '
+      <br>
+      Inky issue
+
+      <hr>
+      mdash; should not be converted to #x2014; 
+      <br>
+      &mdash;
+      <br>
+      Inky issue
+      <hr>
+
+
+      quotes should not be converted to quot;
+      <br>
+      " 
+      <br>
+      Inky issue
+      <hr>
+
+      ellipsis should not be converted to #x2019;
+      <br>
+      …
+      <br>
+      Inky issue
+      <hr>
+
+      #384 - Should not be converted to ampersand and nbsp
+      <br>
+      &nbsp;
+      <br>
+      Inky issue
+
+      <hr>
+
+      #305 - Should not be converted to ampersand amp;
+      <br>
+      &
+      <br>
+      Confirmed Inliner issue
+
+      <hr>
+
+      #326 - spaces should not be removed inside linear gradient values
+      <br>
+      <style>
+        .test {
+          background: linear-gradient(to bottom, red 0%, green 100%)
+        }
+      </style>
+      <div class="test">Hi</div>
+      <br>
+      confirmed on web inliner only (inliner-v2)
+
+      <hr>
+      
+      #450 - & #xA0; should not be converted to & nbsp;
+      
+      <table class="spacer">
+        <tbody>
+          <tr>
+            <td height="16px" style="font-size:16px;line-height:16px;">&#xA0;</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      Confirmed inliner-v2 issue issue.
+      
+      <hr>
+
+      #284 - @font-face should show up in HTML
+      <br>
+      <style>
+        @font-face {
+          font-family: 'Franklin Gothic';
+          src: url("https://example.com/Franklin-Gothic.woff") format("woff");
+          }
+        }
+      </style>
+      <br>
+      confirmed inliner issue
+      
+    </columns>
+  </row>
+</container>

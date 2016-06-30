@@ -101,7 +101,7 @@ Foundation for Emails is designed for and tested on numerous email clients and d
     <td class="marker yes">&check;</td>
   </tr>
   <tr>
-    <td>In Gmail</td>
+    <td>In Chrome</td>
     <td class="marker yes">&check;</td>
   </tr>
     <tr>
@@ -117,7 +117,7 @@ Foundation for Emails is designed for and tested on numerous email clients and d
     <td class="marker yes">&check;</td>
   </tr>
   <tr>
-    <td>In Gmail</td>
+    <td>In Chrome</td>
     <td class="marker yes">&check;</td>
   </tr>
   <tr>
@@ -133,7 +133,7 @@ Foundation for Emails is designed for and tested on numerous email clients and d
     <td class="marker yes">&check;</td>
   </tr>
   <tr>
-    <td>In Gmail</td>
+    <td>In Chrome</td>
     <td class="marker yes">&check;</td>
   </tr>
   <tr>
@@ -149,7 +149,7 @@ Foundation for Emails is designed for and tested on numerous email clients and d
     <td class="marker yes">&check;</td>
   </tr>
   <tr>
-    <td>In Gmail</td>
+    <td>In Chrome</td>
     <td class="marker yes">&check;</td>
   </tr>
   <tr>
@@ -165,7 +165,7 @@ Foundation for Emails is designed for and tested on numerous email clients and d
     <td class="marker yes">&check;</td>
   </tr>
   <tr>
-    <td>In Gmail</td>
+    <td>In Chrome</td>
     <td class="marker yes">&check;</td>
   </tr>
 </table>

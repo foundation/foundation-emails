@@ -251,7 +251,7 @@ The block grid has a minor syntax change with identifying the number of elements
 #### New Markup (Plain HTML)
 
 ```
-<table class="row">
+<table class="block-grid up-3">
   <tr>
     <th class="column first">
       Thing 1
@@ -267,11 +267,11 @@ The block grid has a minor syntax change with identifying the number of elements
 #### New Markup (Inky HTML)
 
 ```
-<row small-up="1" large-up="3">
+<block-grid up="3">
   <column>Thing 1</column>
   <column>Thing 2</column>
   <column>Thing 3</column>
-</row>
+</block-grid>
 ```
 
 ---

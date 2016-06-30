@@ -16,7 +16,7 @@ A framework is a collection of reusable code and design patterns which gives use
 
 ## Need to know
 
-The sad truth about creating or coding HTML emails is that tables are the only thing that is universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capitor, and going back to the 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags. 
+The sad truth about creating or coding HTML emails is that tables are the only things that are universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capitor, and going back to the 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags. 
 
 <div class="callout secondary tip">General rule of thumb: your email is not going to look identical in every client. And that’s OK.</div>
 
@@ -36,7 +36,9 @@ The height of your email doesn't matter as much because people scroll. It still 
 
 #### Structure and alignment:
 
-When it comes to making emails, divs aren’t a thing. Don’t kill the messenger, but it’s true. It's not fun finding out we can't just use a `<div>` with auto left and right margins for centering, bacground colors; It won't work most email clients. `<div>`'s can still be used for targeting CSS and for grouping semantically related elements, but shouldn’t be used for for structural purposes or spacing.
+When it comes to making emails, divs aren’t a thing. Don’t kill the messenger, but it’s true. It's not fun finding out we can't just use a `<div>` with auto left and right margins for centering, or background colors; It won't work most email clients. `<div>`'s can still be used for targeting CSS and for grouping semantically related elements, but shouldn’t be used for for structural purposes or spacing.
+
+Instead, you can use the `<wrapper>` Inky tag to create background colors and target elements inside. [More on Wrapper &#8594;](wrapper.html)
 
 Use tables instead. For those of you who haven’t used tables since Netscape Navigator (or ever) here’s a quick recap.
 
@@ -110,8 +112,10 @@ Speaking of CSS, you should only set classes and IDs on tables or `<td>` tags, n
 #### CSS Support
 Support of CSS properties varies greatly between email clients. You're best off sticking with the basics and not getting too fancy.
 
-This CSS compatibily chart will really save you some pain when writing CSS:
+This CSS compatibility chart will really save you some pain when writing CSS:
 [CSS Support Chart](https://www.campaignmonitor.com/css/b/)
+
+<img src="assets/img/campaign-monitor-css-guide.jpg" alt="">
 
 For some things you can do and work-arounds, see the <a href="#progressive-enhancement">Progressive Enhancement</a> section below.
 
@@ -140,12 +144,13 @@ If you are using the CSS version, you can use our [web inliner](http://foundatio
 - Margin is universally supported BUT you may see some inconsistencies in Outlook 2007, 2010, and 2013. Padding is safer. Also, it is known that Outlook.com does not support the margin property. The odd thing is Outlook.com does support margin with a capital "M".
 Use it like this: 
   
-  ```
-  margin: 10px; 
-  Margin: 10px;  // fallback for Outlook.com
-  ```
-- `<br>` tags are ok, but you won't get pixel perfect results and yuo can quickly fill up your code with messyness.
-- **Your best option** for vertical spacing is to use the `<spacer>` component in Foundation for Emails. It works consistintly on all email clients and lets you set the height with the size attribute. So `<spacer size="32"></spacer>` will create 32px of vertical space.
+```scss
+margin: 10px; 
+Margin: 10px;  // fallback for Outlook.com
+```
+
+- `<br>` tags are ok, but you won't get pixel perfect results and you can quickly fill up your code with messyness.
+- **Your best option** for vertical spacing is to use the `<spacer>` component in Foundation for Emails. It works consistently on all email clients and lets you set the height with the size attribute. So `<spacer size="32"></spacer>` will create 32px of vertical space.
 
 ---
 
@@ -160,13 +165,9 @@ Use it like this:
 
 ## JavaScript
 
-Nope. JavaScript is not a reality in emails. 
+Nope. JavaScript is not a reality in most popular emails. It will be blocked for security reasons.
 
-
-
-
-
-
+---
 
 ## Images
 
@@ -208,29 +209,40 @@ The solution is inline size attributes.
 
 #### Image File Size
 
-There is no guarantee the recipient of your email will have wifi and waiting for images to load is a guaranteed to annoy some of your recipients.
+Reduce Image Size. There is no guarantee the recipient of your email will have wifi and waiting for images to load is guaranteed to annoy some of your recipients.
 
 #### Gif's and Video in Emails
 
 Animated GIFs have *surprisingly* good support. As usual, there are caveats. Outlook only shows the first frame of the animation. Make sure your call to action is visible in the first frame.
 
-Video's in emails are not supported.
+Video's in emails are not supported except in Apple Mail and Outlook 2011. [See how Litmus explores background video in HTML Emails](https://litmus.com/blog/how-to-code-html5-video-background-in-email)
+
+#### Quick Tips on Images
+
+Remember to use full paths to images, not relative paths. (e.g. http://www.yourserver.com/email/images/logo.gif). 
+
+Also, link to images from your own server, not anyone elses. If you don't control it you never know when that url will change.
+
+---
 
 ## Buttons
 
+#### Images for Buttons
 
+Images get blocked. So if you have an important CTA image that looks like a button, it will likely get missed. And that defeats the purpose of your email.
 
+---
 
 ## Email File Size
 
-Sending an emails with a file size between 15KB-100KB is ideal. Some email clients will send the email to spam if the file size is greater.
+Sending an email with a file size between 15KB-100KB is ideal. Some email clients will send the email to spam if the file size is greater.
 
 Emails can get cut off by the ‘This message has only partially downloaded’ in iOS Apple Mail the Gmail app for iOS. The user will be prompted to "Download entire message" or "Download remaining X KB".
 
 Problems
 
-- this could cause the email open to not be registered
-- your email's call to action could be missed
+- This could cause the email open to not be registered
+- Your email's call to action could be missed
 
 Causes
 
@@ -240,34 +252,52 @@ Causes
 Solution? 
 
 - Create emails that are short and to the point. Too many call-to-actions's, topics, or long emails don't tend to work that well anyways.
-- Minify your HTML. The ZURB Stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the charachter count and file size. Our [web inliner](http://foundation.zurb.com/emails/inliner.html) also has an option to remove whitespace between your charachters.
+- Minify your HTML. The ZURB Stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the charachter count and file size. Our [web inliner](http://foundation.zurb.com/emails/inliner.html) also has an option to remove (compress) whitespace between your charachters.
+
+---
+
+## Responsive Best Practices
+
+#### Font Size
+
+Increase Text Size. Don’t make users squint to read what you sent them.  Shorten the message a bit and increase the size (including links and CTAs) to make sure they are able to see and understand everything clearly.
+
+Text should never be smaller than 11 pixels. For comparison, the body style in Foundation uses a font size of 16 pixels at the large size, which is the default text-size setting.
+
+Apple suggests 17px for mobile devices and Google recommends up to 21px for body copy.
+
+#### Typography
+
+<img src="http://group-mail.com/wp-content/uploads/Screen-shot-2011-08-12-at-2.58.47-PM.png" alt="">
+
+Use fonts that are recognizeable to most users.
+
+In general, use a single font throughout your email. Mixing several different fonts can make your email seem fragmented and sloppy. Instead, use one font and just a few styles and sizes.
+
+<img src="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Art/mail_message_axlarge_2x.png" alt="">
 
 <a id="progressive-enhancement"></a>
 ## Progressive Enhancement
 
-Do progressively enhance. Build Outlook-first. Meaning, design for the most constrained platform you support, then add features.
+Do progressively enhance. ZURB and Foundation for Emails builds Outlook-first. Meaning, design for the most constrained platform you support, then add features. It's a great idea to know what devices your emails are being opened on and at what rate. Email Service Providers like Campaign Monitor and Mailchimp track this for you.
 
-Lte's imagine the vast majority of your audience uses Apple Mail. You'd be able to get away with using CSS keyframe animation and SVG masks.
+<img src="assets/img/cm-email-client-stats.png" alt="image of graph">
 
+Let's imagine the vast majority of your audience uses Apple Mail. You'd be able to get away with using CSS keyframe animation and SVG masks.
 
-
-Reduce Image Size - Refer back to #7 above, there is no guarantee the recipient of your email will have wifi and waiting for images to load is a guaranteed to annoy some of your recipients.
+If you're not sure where to start, you can see the [Email Client Market Share](http://emailclientmarketshare.com/) by Litmus
  
+#### Button Size and Touch Targets
 
-Increase Text Size - Don’t make users squint to read what you sent them, shorten the message a bit and increase the size (including links and CTAs) to make sure they are able to see and understand everything clearly.
+Apple’s iPhone Human Interface Guidelines recommends a minimum target size of 44 pixels wide 44 pixels tall. 
 
+Microsoft’s Windows Phone UI Design and Interaction Guide suggests a touch target size of 34px with a minimum touch target size of 26px. 
 
-Quick tips!
+Nokia’s developer guidelines suggest that the target size should be no smaller than 1cm x 1cm square or 28 x 28 pixels.
 
-Remember to use full paths to images, not relative paths. (e.g. http://www.yourserver.com/email/images/logo.gif). Also, link to images from your own server, not anyone elses.
-Check with your ISP before you go out sending thousands and thousands of emails, they might think you are a spammer.
-Test, test, and test again with as many different email clients as you can possibly get access to. You will definetly want to test the major online clients like Gmail, Yahoo, and Hotmail, but also definitely check Outlook, Mail.app, and as many other desktop clients as possible.
-Don't go over 600px in width. Even that is pushing it. If your design can handle it, 440px is closer to ideal.
-Think of any extra CSS you may use as upward-compatibility. You can always include some header style CSS if you want, but think of it as a bonus for people using email clients that support it. Then turn it off completely and make sure the design still makes sense.
-Try not to look like SPAM. Pretty obvious, but just writing good code and honest copy should keep you out of the can here. Your HTML email is definitely NOT the place for a Viagra joke.
-Just like in web design, it doesn't hurt to think above the fold. Meaning what users will see before they have to scroll.
-Use your footer like a footer. This is a great place for lots of things including phone numbers and addresses, about information, unsubscribe options, and perhaps a little reminder of what this email is and why the reader is on the list.
-OBEY THE LAW. The CAN-SPAM act became law on Jan. 1, 2004. It says there many things you must do as a commercial email-er. Highlights are basically don't be deceptive, and that you MUST include a physical mailing address as well as a working unsubscribe link.
+While these guidelines give a general measurement for touch targets, they’re not consistent with each other, nor are they consistent with the actual size of the human finger. In fact, their suggested sizes are much smaller than the average finger, which can lead to touch target problems for users on mobile devices.
+
+---
 
 ## Testing
 
@@ -284,3 +314,24 @@ If you're not sure where to start, you can see the [Email Client Market Share](h
 Foundation for Emails is tested on the most popular clients. You can also test on the clients listed in our [compatability guide](compatibility.html)
 
 These services make testing on lots of email clients and devices much faster. Try to hit the main categories: a Windows machine, a Mac, an iPhone, an Android, a tablet. Still, nothing beats testing on a real device. 
+
+---
+
+## Sending you Emails
+
+ESP's are made for sending thousands and thousands of emails, they can help you get emails out without being deemed a spammer.
+
+ESP's like Campain Monitor and Mailchimp cost money, but they can save you huge headaches and costs down the road.
+
+Try not to look like SPAM. Pretty obvious, but just writing good code and honest copy should keep you out of the can here. Your HTML email is definitely NOT the place for a Viagra joke.
+
+OBEY THE LAW. The CAN-SPAM act became law on Jan. 1, 2004. It says there many things you must do as a commercial email-er. Highlights are basically don't be deceptive, and that you MUST include a physical mailing address as well as a working unsubscribe link.
+
+---
+
+## Design Tips
+
+Just like in web design, it doesn't hurt to think above the fold. Meaning what users will see before they have to scroll.
+
+Use your footer like a footer. This is a great place for lots of things including phone numbers and addresses, about information, unsubscribe options, and perhaps a little reminder of what this email is and why the reader is on the list.
+

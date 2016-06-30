@@ -10,7 +10,7 @@ tags:
 
 ## Basics
 
-When using [Inky](inky.html) HTML, the `<wrapper>` tag will create a `<table>`, `<tr>`, `<th>` structure needed to create consistant full width backgrounds. You can add classes to the wrapper to targed CSS properties on it or target elements within it. The `.wrapper-inner` class is available to add padding to the wrapper.
+When using [Inky](inky.html) HTML, the `<wrapper>` tag will create a `<table>`, `<tr>`, `<th>` structure needed to create consistant full width backgrounds. You can add classes to the wrapper to target CSS properties on it or target elements within it. The `.wrapper-inner` class is available to add padding to the wrapper.
 
 ```inky_example
 <wrapper>
@@ -24,39 +24,40 @@ Creating a fluid header with the `<wrapper>` component is pretty straight forwar
 
 ```inky_example
 <style type="text/css">
-  .header {
-    background: #8a8a8a;
+  .wrapper.header {
+    background: #8a8a8a !important;
   }
 
-  .header .columns {
-    padding-bottom: 0;
+  .wrapper.header .columns {
+    padding-bottom: 0 !important;
   }
 
   .header p {
-    color: #fff;
-    padding-top: 15px;
+    color: #fff !important;
+    font-weight: bold;
+    margin-bottom: 0 !important;
   }
 
-  .header .wrapper-inner {
-    padding: 20px;
-  }
-
-  .header .container {
-    background: transparent;
+  .wrapper.header .header-container {
+    background: #8a8a8a !important;
   }
 </style>
 
 <wrapper class="header">
-  <container>
-    <row class="collapse">
-      <columns small="6">
-        <img src="http://placehold.it/200x50/663399">
-      </columns>
-      <columns small="6">
-        <p class="text-right">HEADER</p>
-      </columns>
-    </row>
-  </container>
+  <spacer size="16"></spacer>
+  <center>
+    <container class="header-container">
+      <row class="collapse">
+        <columns small="6" valign="middle">
+          <img src="http://placehold.it/200x50/663399">
+        </columns>
+        <columns small="6" valign="middle">
+          <p class="text-right">BASIC</p>
+        </columns>
+      </row>
+    </container>
+  </center>
+  <spacer size="16"></spacer>
 </wrapper>
 ```
 

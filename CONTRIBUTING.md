@@ -34,8 +34,9 @@ To hack on this repo locally, clone the foundation-docs repo into a folder adjac
 If you think you can solve a problem yourself, or want to implement a new feature, go for it! Follow these guidelines to make the most killer PR ever.
 
 - **Target the right branch.** So we can properly follow [semantic versioning](http://semver.org/), be sure to develop your pull request in the right branch:
-  - Ink 1.0 changes: `master`
-  - Foundation for Emails 2.0+ changes: `develop`
+  - Ink 1.0 changes: `v1.0`
+  - Foundation for Emails 2.0+ bug fixes: `develop`
+  - New features should be pointed to: `v2.2`
 - **Test, test, and test.** The Foundation frameworks are used by thousands and thousands of designers and developers, so making sure your changes work in every email client is important! Please test bug fixes or new features in Litmus, or another email testing service.
 
 ## Help Wanted

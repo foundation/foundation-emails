@@ -18,17 +18,16 @@ $menu-item-gutter: 10px !default;
 /// @type Color
 $menu-item-color: $primary-color !default;
 
-
 table.menu {
   width: $global-width;
 
   td.menu-item,
-  th.menu-item{
+  th.menu-item {
     padding: $menu-item-padding;
     padding-right: $menu-item-gutter;
 
     a {
-      color: $menu-item-color; 
+      color: $menu-item-color;
     }
   }
 }

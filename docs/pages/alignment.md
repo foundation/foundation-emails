@@ -188,4 +188,28 @@ Centering the menu is a common practice. Wrapping the menu in `<center>` tags wi
   </menu>
 </center>
 ```
+
+---
+
+## Vertical Alignment
+
+You can vertically align your content within columns by using `valign` attribute. The available values are `top`, `middle`, and `bottom`.
+
+```inky_example
+<row>
+  <columns large="3" valign="top">
+    <img class="float-right" src="http://placehold.it/50" alt="">
+  </columns>
+  <columns large="3" valign="bottom">
+    <h4>Bottom</h4>
+  </columns>
+  <columns large="3" valign="middle">
+    <h4 style="margin-bottom: 0;" class="text-right">HEADLINE</h4>
+    <p style="margin-bottom: 0;" class="text-right subheader">SUBHEADLINE</p>
+  </columns>
+  <columns large="3" valign="middle">
+    <img class="small-float-center" src="http://placehold.it/250" alt="">
+  </columns> 
+</row> 
+```
 <br>

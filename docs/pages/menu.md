@@ -18,6 +18,11 @@ In Inky HTML, use the tag `<menu>` to make a menu, and the tag `<item>` to make 
 </menu>
 ```
 
+<div class="callout primary">
+- It's important to add an `href` attribute to your `<item>`'s to ensure that Outlook.com will not display `[undefined]` in your rendered email.<br> 
+- Office 365 and Outlook.com require a valid url in the href attribute or you can use the # placeholder.
+</div>
+
 ---
 
 ## Vertical Menu

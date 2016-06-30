@@ -65,7 +65,7 @@ Get to know the pieces of Foundation.
     <strong>Buttons</strong>
     <p>Buttons with support for multiple sizes and colors.</p>
   </a></div>
-  <div class="column"><a href="button.html">
+  <div class="column"><a href="callout.html">
     <strong>Callout</strong>
     <p>Colored panels to use for sectioning or calls to action.</p>
   </a></div>
