@@ -148,7 +148,7 @@ gulp.task('test:compile', function() {
   gulp.src('test/visual/pages/*.html')
     .pipe($.wrap({ src: 'test/visual/_template.html' }))
     .pipe(inky())
-    .pipe(inliner('_build/assets/css/foundation.css'))
+    .pipe(inliner('_build/assets/css/foundation-emails.css'))
     .pipe(gulp.dest('test/visual/_build'));
 });
 
@@ -176,7 +176,7 @@ gulp.task('download:build:templates', ['templates'], function() {
 });
 
 gulp.task('download:build:css', ['sass:foundation'], function() {
-  return gulp.src('_build/assets/css/foundation.css')
+  return gulp.src('_build/assets/css/foundation-emails.css')
     .pipe(gulp.dest('.download/css'));
 })
 

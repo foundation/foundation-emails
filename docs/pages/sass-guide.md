@@ -91,7 +91,7 @@ Inside `src/layouts/default.html`, you can see the boilerplate needed to make an
   <!-- Enables media queries -->
   <meta name="viewport" content="width=device-width"/>
   <!-- Link to the email's CSS, which will be inlined into the email -->
-  <link rel="stylesheet" href="assets/css/foundation.css">
+  <link rel="stylesheet" href="assets/css/foundation-emails.css">
 </head>
 
 <body>

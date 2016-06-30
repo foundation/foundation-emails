@@ -23,7 +23,7 @@ Unzip the folder and open it in your text editor of choice.
 
 Here's a breakdown of the files in the folder you got:
 
-- `css/foundation.css`: the Foundation for Emails CSS.
+- `css/foundation-emails.css`: the Foundation for Emails CSS.
 - `index.html`: a blank boilerplate to get started.
 - `templates/`: a set of pre-made templates following common email layouts.
 
@@ -45,7 +45,7 @@ Inside `src/layouts/default.html`, you can see the boilerplate needed to make an
   <!-- Enables media queries -->
   <meta name="viewport" content="width=device-width"/>
   <!-- Link to the email's CSS, which will be inlined into the email -->
-  <link rel="stylesheet" href="assets/css/foundation.css">
+  <link rel="stylesheet" href="assets/css/foundation-emails.css">
 </head>
 
 <body>
@@ -156,7 +156,7 @@ Now that we have a basic email, the last thing we need to do before we can send 
 
 Email clients like Gmail and Outlook strip out `<style>` tag from the `<head>` and Gmails strips it from the `<body>` of the email as well. It's best to have your CSS written inline within your markup. Hand writing all your CSS inline in a style tag would be a real pain and would take a long time.
 
-Our [web inliner](http://foundation.zurb.com/emails/inliner-v2.html) automates this process for you. To use it, paste in the contents of `index.html` into the HTML field, paste in the contents of `css/foundation.css` into the CSS field, and then press "Inline!". Once it's done, you'll see a large soup of HTML that is your inlined email.
+Our [web inliner](http://foundation.zurb.com/emails/inliner-v2.html) automates this process for you. To use it, paste in the contents of `index.html` into the HTML field, paste in the contents of `css/foundation-emails.css` into the CSS field, and then press "Inline!". Once it's done, you'll see a large soup of HTML that is your inlined email.
 
 Your email's CSS will include media queries for responsive styling which the inliner tool will move into the `<body>` so they are preserved.
 
