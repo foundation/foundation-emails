@@ -47,6 +47,8 @@ Run `npm run build` to do a full email inlining process.
   @import "foundation-emails";
   ```
 
+Adding Inky's templating capabilities to Rails is easy thanks to the [**inky-rb**](https://github.com/zurb/inky-rb) gem, which bundles `foundation_emails` by default.
+
 ## Documentation
 
 **Check out our [Migration Guide](https://github.com/zurb/foundation-emails/blob/master/migration.md) for upgrading an existing template or for more in-depth code examples.**
