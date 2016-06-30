@@ -12,6 +12,7 @@
 //   7. Menu
 //   8. Thumbnail
 
+
 // 1. Global
 // ---------
 
@@ -29,7 +30,7 @@ $pre-color: #ff6908;
 $global-width: 580px;
 $global-width-small: 95%;
 $global-gutter: 16px;
-$body-background: $white;
+$body-background: $light-gray;
 $container-background: $white;
 $global-padding: 16px;
 $global-margin: 16px;
@@ -42,6 +43,7 @@ $global-breakpoint: $global-width + $global-gutter;
 
 $grid-column-count: 12;
 $column-padding-bottom: $global-padding;
+$container-radius: 0;
 
 // 3. Block Grid
 // -------------
@@ -80,7 +82,7 @@ $subheader-font-weight: $global-font-weight;
 $subheader-margin-top: 4px;
 $subheader-margin-bottom: 8px;
 $hr-width: $global-width;
-$hr-border: 1px solid $medium-gray;
+$hr-border: 1px solid $black;
 $hr-margin: 20px auto;
 $anchor-text-decoration: none;
 $anchor-color: $primary-color;
