@@ -71,4 +71,8 @@ Finally, your mailer layout should have the following structure:
 </html>
 ```
 
-Done! You're now all set to start writing responsive emails with Inky.
+Done! You're now all set to start writing responsive emails in your Rails app.
+
+## Standalone Assets
+
+To include only the Foundation for Emails styles in your Asset Pipeline, without the Inky templating language, use the [**foundation_emails**](https://github.com/zurb/foundation-emails/#using-the-ruby-gem) gem.
