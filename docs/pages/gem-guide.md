@@ -1,13 +1,13 @@
 ---
 title: Getting Started with the Ruby Gem
-description: **inky-rb** is a gem that allows you to bring the power of Foundation for Emails into your Rails apps. It can be embedded into the Asset Pipeline, combining with a CSS inliner to let you generate awesomely responsive HTML emails that work across various clients.
+description: inky-rb is a gem that allows you to bring the power of Foundation for Emails into your Rails apps. It can be embedded into the Asset Pipeline, combining with a CSS inliner to let you generate awesomely responsive HTML emails that work across various clients.
 ---
 
 ## How It Works
 
 ![inky_gem_diagram.png](../assets/img/inky_gem_diagram.png)
 
-inky-rb is a pure Ruby implementation of the Inky templating language that converts simple custom HTML tags like `<row>` and `<column>` into the complex table-based HTML required for emails.
+**inky-rb** is a pure Ruby implementation of the Inky templating language that converts simple custom HTML tags like `<row>` and `<column>` into the complex table-based HTML required for emails.
 
 Using a CSS inliner like `premailer-rails` or `roadie`, you're able to keep your email templates lean by avoiding the need to manually embed styles in the markup. By parsing your email template, the inliner is able to locate your referenced stylesheet and go through all of the selectors specified within it, assigning the styles to matching elements within the document.
 
@@ -72,6 +72,8 @@ Finally, your mailer layout should have the following structure:
 ```
 
 Done! You're now all set to start writing responsive emails in your Rails app.
+
+---
 
 ## Standalone Assets
 
