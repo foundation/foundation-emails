@@ -5,7 +5,7 @@ description: inky-rb is a gem that allows you to bring the power of Foundation f
 
 ## How It Works
 
-![inky_gem_diagram.png](../assets/img/inky_gem_diagram.png)
+![inky_gem_diagram.png](assets/img/inky_gem_diagram.png)
 
 **inky-rb** is a pure Ruby implementation of the Inky templating language that converts simple custom HTML tags like `<row>` and `<column>` into the complex table-based HTML required for emails.
 
