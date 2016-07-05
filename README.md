@@ -8,6 +8,16 @@
 
 Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client &mdash; even Outlook. Our HTML/CSS components have been tested across every major email client to ensure consistency. And with the [Inky](https://github.com/zurb/inky) templating language, writing HTML emails is now even easier.
 
+## Updating Versions 
+
+Updating Foundation for Emails is quite easy. Navigate to your package.json file in the root of your project folder. You'll want to change the dependency from your current version (around line 16) to the [newest version](https://github.com/zurb/foundation-emails/releases/).
+
+After that you will need to update to the latest version of inky. In the same package.json file, find the section devDependcies. (around line 41). Change your current version of inky to the [newest version of inky](https://github.com/zurb/inky).  
+
+Once that is completed, you will need to update the `app.scss` file.  In order to be able to use Foundation for Sites and Emails together without conflicts, the Foundation for Emails CSS file’s name has changed from `foundation` to `foundation-emails`. If you are using the CSS version you can change the name from `foundation.min.css` to `foundation-emails.min.css`. 
+
+Next, open up command line and navigate to the root of your project folder. Run `npm install`. Once completed, run `foundation build`.
+
 ## Getting Started
 
 The main way to get started is with our [email template stack](https://github.com/zurb/foundation-emails-template). To use the stack, you'll need [Node.js](https://nodejs.org/en/) installed on your machine.
