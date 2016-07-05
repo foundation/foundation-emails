@@ -5,6 +5,15 @@ descripiton: The ZURB email stack is a boilerplate that gives you everything you
 
 Email and web development can get complicated fast. We’ve introduced the ZURB Stack which helps you get started faster and lets you do more - without having to spend time finding the right tool for the job. The ZURB Stack includes:
 
+**Migrating a Project to 2.2.1** 
+Updating Foundation for Emails is quite easy. Navigate to your package.json file in the root of your project folder. You'll want to change the dependency from your current version (around line 16) to version `2.2.1`.
+
+After that you will need to update to the latest version of inky. In the same package.json file, find the section devDependcies. (around line 41). Change your current version of inky to `^1.3.6`. 
+
+Once that is completed, you will need to update the app.scss file.  In order to be able to use Foundation for Sites and Emails together without conflicts, the Foundation for Emails CSS file’s name has changed from `foundation` to `foundation-emails`. If you are using the CSS version you can change the name from `foundation.min.css` to `foundation-emails.min.css`. 
+
+Next, open up command line and navigate to the root of your project folder. Run `npm install`. Once completed, run `foundation build`.
+
 - **Gulp.** This is our task runner of choice for Foundation. Gulp lets us queue up tasks to execute. This lets us do cool things like inlining automagically updating your browser. It’s what the Stack is built on. [Find out more about Gulp](http://gulpjs.com/).
 - **Sass.** We use Libsass as our CSS preprocessor of choice. If you’re not familiar with Sass, it lets you use variables, nesting, and mixins (to name a few). [Learn more about Sass](http://sass-lang.com/).
 - **Inlining.** One of the biggest headaches and time-sucks used to be inlining your HTML email. Well, no more! We’re using gulp-inline to to scan your CSS file and and automatically inject your CSS when you’re ready. Just run `npm run build` in your project when you’re ready to inline.
