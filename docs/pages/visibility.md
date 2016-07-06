@@ -16,18 +16,18 @@ Due to Outlook's lack of support for certain CSS properties, the Foundation for 
   <p>If you're using a visibility class on an image, be sure to apply it to the parent element, not to the image itself.</p>
 </div>
 
-**To show content only on mobile clients,** add the class `.hide-for-large` to the element.
+**To show content only on mobile clients,** add the class `.hide-for-large` to a div wrapping the element that needs to be hidden.
 
 **To show content only on desktop clients,** add the class `.show-for-large` to the element.
 
 ```inky_example
-<callout class="hide-for-large primary">
-  <p>This callout will only appear on small screens.</p>
-</callout>
+<div class="hide-for-large">
+  <callout class="primary">
+    <p>This callout will only appear on small screens.</p>
+  </callout>
+</div>
 
 <callout class="show-for-large alert">
   <p>This callout will only appear on large screens.</p>
 </callout>
 ```
-
-*note - `.hide-for-large` is not supported on Gmail and Yahoo email clients.*
