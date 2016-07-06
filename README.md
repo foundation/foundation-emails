@@ -41,9 +41,11 @@ Run `npm run build` to do a full email inlining process.
   bundle install
   ```
 
-3. Import Foundation for Emails in your `application.scss`:
+3. Import Foundation for Emails in your emails' stylesheet(s):
 
   ```scss
+  // app/assets/stylesheets/your_emails_stylesheet.scss
+
   @import "foundation-emails";
   ```
 

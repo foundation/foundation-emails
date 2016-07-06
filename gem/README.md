@@ -20,11 +20,13 @@ Foundation for Emails (previously known as Ink) is a framework for creating resp
   bundle install
   ```
 
-3. Import Foundation for Emails in your `application.scss`:
+3. Import Foundation for Emails in your emails' stylesheet(s):
 
-  ```scss
-  @import "foundation-emails";
-  ```
+```scss
+// app/assets/stylesheets/your_emails_stylesheet.scss
+
+@import "foundation-emails";
+```
 
 ## License
 
