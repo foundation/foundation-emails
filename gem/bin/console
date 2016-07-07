@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "foundation_emails"
+
+require "irb"
+IRB.start

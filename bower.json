@@ -1,6 +1,6 @@
 {
   "name": "foundation-emails",
-  "version": "2.1.0",
+  "version": "2.2.1",
   "homepage": "http://foundation.zurb.com/emails",
   "authors": [
     "ZURB <foundation@zurb.com>"
@@ -11,6 +11,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "gem",
     "test",
     "tests"
   ]
