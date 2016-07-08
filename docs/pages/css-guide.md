@@ -55,7 +55,7 @@ Inside `index.html`, you can see the boilerplate needed to make an HTML work, wi
   <table class="body" data-made-with-foundation>
     <tr>
       <!-- The class, align, and <center> tag center the container -->
-      <td class="float-center" align="center" valign="top">
+      <td align="center" valign="top">
         <center>
           <!-- The content of your email goes here. -->
         </center>
