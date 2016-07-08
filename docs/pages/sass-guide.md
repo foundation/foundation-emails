@@ -101,7 +101,7 @@ Inside `src/layouts/default.html`, you can see the boilerplate needed to make an
   <table class="body" data-made-with-foundation>
     <tr>
       <!-- The class, align, and <center> tag center the container -->
-      <td class="center" align="center" valign="top">
+      <td align="center" valign="top">
         <center>
           <!-- The body of each email you write is injected here -->
           {{> body}}
