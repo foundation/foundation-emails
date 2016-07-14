@@ -54,14 +54,14 @@ add_import_path "node_modules/foundation-emails/scss"
 Finally, add an `@import` statement to the top of your main Sass file.
 
 ```scss
-@import 'foundation';
+@import 'foundation-emails';
 ```
 
 You're also going to want a settings file for your project, which will allow you to modify the default styles of Foundation for Emails. **[Download the latest settings file here](https://raw.githubusercontent.com/zurb/foundation-emails/master/scss/settings/_settings.scss)**, add it to your project as `_settings.scss`, then import it *before* Foundation itself.
 
 ```scss
 @import 'settings';
-@import 'foundation';
+@import 'foundation-emails';
 ```
 
 ---
