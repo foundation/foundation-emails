@@ -12,7 +12,7 @@ If you've ever created a static site, maybe you had five pages that all shared t
 
 Panini is a flat file compiler that uses the concepts of templates, pages, and partials&mdash;powered by the [Handlebars](http://handlebarsjs.com/) templating language&mdash;to streamline the process of creating static prototypes.
 
-Our [prototyping template](https://github.com/zurb/foundation-emails-template) uses Panini, along with a host of other tools for processing Sass and images, to make creating optimized templates easy. It's already been configured to utilize most of the features below, but if you want to learn the specifics of how to configure the library, head over to the [Panini GitHub page](https://github.com/zurb/panini).
+Our [prototyping template](https://github.com/zurb/foundation-emails-template) uses Panini, along with a host of other tools for processing Sass and images, to make creating optimized templates easy. It's already been configured to utilize all of the features below, but if you want to learn the specifics of how to configure the library, head over to the [Panini GitHub page](https://github.com/zurb/panini).
 
 ---
 
@@ -195,8 +195,6 @@ Then in your projects call your custom `{{#bold}}` helper
 Custom data can be added to your pages. This data can then be inserted into your HTML through Handlebars. There are two ways to add data to a project.
 
 To add variables to a specific page only, add it at the top of the page's HTML as a [Front Matter](http://jekyllrb.com/docs/frontmatter/) block. Let's say the below content is inside `src/pages/index.html`.
-
-**Before you can use custom data, be sure your Panini configuration has the `data: 'src/data'` path configured.**
 
 ```html
 ---
