@@ -64,6 +64,6 @@ Creating a fluid header with the `<wrapper>` component is pretty straight forwar
 </wrapper>
 ```
 
-Using this structure outside of the container will yeild a fluid width background that expands to the width of the email client's viewport.
+Using this structure outside of the container will yield a fluid width background that expands to the width of the email client's viewport.
 
 
