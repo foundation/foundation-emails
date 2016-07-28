@@ -1,4 +1,5 @@
-// The CSS for the Foundation docs is stored in an external codebase:
+$topbar-background: #2c3840;
+$topbar-hover-color: lighten($topbar-background, 10%);// The CSS for the Foundation docs is stored in an external codebase:
 // https://github.com/zurb/foundation-docs
 //
 // You can test Sass changes locally by running these commands:
@@ -27,6 +28,9 @@ $foundation-palette: (
 @import 'compatibility';
 @import 'course-callout';
 
+$topbar-background: #2c3840;
+$topbar-hover-color: lighten($topbar-background, 10%);
+
 .dropdown.menu > li.is-dropdown-submenu-parent > a {
   padding-right: 1rem;
 }
@@ -50,5 +54,43 @@ $foundation-palette: (
 
 .marketing-topbar,
 .title-bar {
-  background: #2c3840;
+  background: $topbar-background;
+
+  .dropdown.menu a {
+    background: $topbar-background;
+  }
+
+  .title {
+    background: $topbar-background;
+  }
+}
+
+.dropdown.menu a.button {
+  background: $primary-color;
+
+  &:hover {
+    background: darken($primary-color, 10%);
+  }
+}
+
+.is-dropdown-submenu-item a {
+  &:hover {
+    background: $topbar-hover-color;
+  }
+}
+
+.marketing-topbar .menu a:hover:not(.button), 
+.marketing-topbar .menu a:focus {
+  background: $topbar-hover-color;
+}
+
+.marketing-topbar .menu .topbar-title a {
+  &:hover, 
+  &:focus {
+    background: $topbar-background;
+  }
+}
+
+.zurb-footer-bottom {
+  background: $topbar-background;
 }
