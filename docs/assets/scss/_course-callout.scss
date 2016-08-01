@@ -38,3 +38,21 @@
   margin-bottom: 0.75rem;
   display: block;
 }
+
+.footer-course-upsell {
+  border-top: 1px solid #cacaca;
+  padding-top: 10px;
+  .emails-course-title {
+    font-size: 36px;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    span {
+      text-transform: uppercase;
+      font-size: rem-calc(17px);
+      font-weight: bold;
+      display: block;
+      margin-bottom: -5px;
+      letter-spacing: 3px;
+    }
+  }
+}
