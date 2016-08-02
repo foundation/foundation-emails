@@ -1,7 +1,7 @@
 $(function() {
   // TODO: Add alternate between advanced and intro
   var topic = $('h1.docs-page-title').text();
-  var header = 'Struggling with ' + topic + '?';
+  var header = 'Master ' + topic;
   var body = 'Get up to speed FAST, learn straight from the experts who built Foundation for Emails.';
   var link = 'http://zurb.com/university/responsive-emails-foundation?utm_source=Foundation%20Docs&utm_medium=Docs&utm_content=Struggling&utm_campaign=Docs%20To%20Emails';
   var cta = 'Learn More';
