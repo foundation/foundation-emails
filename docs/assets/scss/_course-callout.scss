@@ -40,19 +40,30 @@
 }
 
 .footer-course-upsell {
+  img {
+    margin-top: 35px;
+  }
   border-top: 1px solid #cacaca;
+  background: #F5F5F5;
   padding-top: 10px;
+  margin-top: 25px;
   .emails-course-title {
-    font-size: 36px;
-    margin-bottom: 1.5rem;
-    margin-top: 2rem;
+    font-size: 30px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     span {
       text-transform: uppercase;
-      font-size: rem-calc(17px);
+      font-size: rem-calc(11px);
       font-weight: bold;
       display: block;
-      margin-bottom: -5px;
+      margin-bottom: -6px;
       letter-spacing: 3px;
+      color: rgb(175, 175, 175);
     }
+  }
+
+  p {
+    color: rgb(125, 125, 125);
+    font-size: 14px;
   }
 }
