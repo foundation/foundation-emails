@@ -217,7 +217,7 @@ function inliner(css) {
     .pipe($.htmlmin, {
       collapseWhitespace: false,
       minifyCSS: false,
-      maxLineLength: 78
+      maxLineLength: 800
     });
 
   return pipe();
