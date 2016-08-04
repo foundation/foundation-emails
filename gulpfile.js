@@ -215,7 +215,8 @@ function inliner(css) {
     .pipe($.injectString.replace, '<!-- <style> -->', '<style>'+mqCss+'</style>')
     .pipe($.htmlmin, {
       collapseWhitespace: false,
-      minifyCSS: false
+      minifyCSS: false,
+      maxLineLength: 800
     });
 
   return pipe();
