@@ -56,6 +56,7 @@ gulp.task('html', function() {
     .pipe(panini({
       root: 'docs/pages/',
       layouts: 'docs/layouts/',
+      data: 'docs/data/',
       partials: ['node_modules/foundation-docs/templates/partials/', 'docs/partials/'],
       helpers: foundationDocs.handlebarsHelpers
     }))

@@ -1,0 +1,4 @@
+framework:
+  name: Foundation for Emails
+  version: 2.2.1
+  type: emails
