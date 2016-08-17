@@ -3,6 +3,12 @@ title: Foundation for Emails
 description: Use Foundation for Emails to design responsive HTML emails that work in any email client.
 ---
 
+<p class="docs-nav-version">
+  <span data-docs-version>v2.2.0</span>
+  <a href="https://github.com/zurb/foundation-emails/releases/" target="_blank">(Changelog)</a>
+</p>
+
+
 ## Getting Started
 
 There are two ways to get started with Foundation for Emails: the CSS version and the Sass version.
