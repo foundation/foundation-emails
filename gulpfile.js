@@ -44,7 +44,8 @@ gulp.task('clean', function(cb) {
 
 // Copies static documentation assets
 gulp.task('copy', function() {
-  return gulp.src(['docs/assets/**/*', '!docs/assets/scss/**/*', '!docs/assets/js/**/*'])
+  return gulp.src(['docs/assets/**/*', '!docs/assets/scss/**/*', '!docs/assets/js/**/*',
+                   'node_modules/foundation-docs/assets/**/*'])
     .pipe(gulp.dest('_build/assets'));
 });
 
