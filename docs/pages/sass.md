@@ -80,19 +80,19 @@ Here's an example set of settings variables. These change the default styling of
 
 ```scss
 // Text color of buttons.
-$button-color: $white !default;
+$button-color: $white;
 
 // Text color of buttons with a light background.
-$button-color-alt: $medium-gray !default;
+$button-color-alt: $medium-gray;
 
 // Font weight of buttons.
-$button-font-weight: bold !default;
+$button-font-weight: bold;
 
 // Background color of buttons.
-$button-background: $primary-color !default;
+$button-background: $primary-color;
 
 // Border around buttons.
-$button-border: 2px solid $button-background !default;
+$button-border: 2px solid $button-background;
 ```
 
 We put together some [Best Practices on Sass file structure](http://zurb.com/university/lessons/avoid-a-cluttered-mess-sensible-sass-file-structure) that will help you keep your project clean.
