@@ -52,7 +52,7 @@
     "rimraf": "^2.4.2",
     "run-sequence": "^1.1.2",
     "siphon-media-query": "^1.0.0",
-    "supercollider": "^1.4.0",
+    "supercollider": "^1.4.2",
     "typeahead.js": "^0.11.1",
     "zeroclipboard": "^2.2.0"
   },
