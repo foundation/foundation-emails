@@ -8,12 +8,12 @@ $toggleButtons.click(function(e) {
   $('body').toggleClass('is-inky-enabled');
 
   if ($('body').hasClass('is-inky-enabled')) {
-    $currentText.text('Inky');
-    $toggleButtons.text('Switch to HTML');
-  }
-  else {
     $currentText.text('HTML');
     $toggleButtons.text('Switch to Inky');
+  }
+  else {
+    $currentText.text('Inky');
+    $toggleButtons.text('Switch to HTML');
   }
 });
 
