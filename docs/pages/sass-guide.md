@@ -55,7 +55,7 @@ The CLI will ask you for a project name, which is used as the name of the folder
 After your project has been installed, run `cd project`, where `project` is the name of the project just created. Then run:
 
 ```bash
-npm start
+foundation watch
 ```
 
 This will kick off the build process, which includes HTML parsing, Sass, image compression, and a server. When the initial build finishes, your browser will pop open a new tab pointing to your project. You'll be seeing a blank `index.html` file.
