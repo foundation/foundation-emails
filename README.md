@@ -4,6 +4,7 @@
 [![downloads badge](http://img.shields.io/npm/dm/foundation-emails.svg)](https://www.npmjs.org/package/foundation-emails)
 [![Gem Version](https://badge.fury.io/rb/foundation_emails.svg)](https://badge.fury.io/rb/foundation_emails)
 [![downloads badge](http://img.shields.io/npm/l/foundation-emails.svg)](https://www.npmjs.org/package/foundation-emails)
+[![CDNJS](https://img.shields.io/cdnjs/v/foundation-emails.svg)](https://cdnjs.com/libraries/foundation-emails)
 
 
 Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client &mdash; even Outlook. Our HTML/CSS components have been tested across every major email client to ensure consistency. And with the [Inky](https://github.com/zurb/inky) templating language, writing HTML emails is now even easier.
