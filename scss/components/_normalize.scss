@@ -77,7 +77,10 @@ td {
 }
 
 table, tr, td {
-  padding: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
   vertical-align: top;
   text-align: left;
 }
