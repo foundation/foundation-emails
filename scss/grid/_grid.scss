@@ -141,11 +141,6 @@ th.column {
     }
   }
 
-  td.large-#{$i} center,
-  th.large-#{$i} center {
-    min-width: -zf-grid-calc-px($i, $grid-column-count, $global-width) - ($global-gutter * 2);
-  }
-
   .body .columns td.large-#{$i},
   .body .column td.large-#{$i},
   .body .columns th.large-#{$i},
