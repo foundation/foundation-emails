@@ -160,8 +160,7 @@ h5,
 h6,
 p,
 td,
-th,
-a {
+th {
   color: $global-font-color;
   font-family: $body-font-family;
   font-weight: $global-font-weight;
@@ -247,6 +246,11 @@ small {
 a {
   color: $anchor-color;
   text-decoration: $anchor-text-decoration;
+  font-family: $body-font-family;
+  font-weight: $global-font-weight;
+  padding: 0;
+  text-align: left;
+  line-height: $global-line-height;
 
   &:hover {
     color: $anchor-color-hover;
