@@ -74,8 +74,8 @@ table.button {
         font-size: map-get($button-font-size, default);
         font-weight: $button-font-weight;
         color: $button-color;
+        background: $button-background;
         text-decoration: none;
-        text-align: left;
         display: inline-block;
         padding: map-get($button-padding, default);
         border: 0 solid $button-background;
@@ -97,16 +97,7 @@ table.button {
 
 table.button:hover table tr td a,
 table.button:active table tr td a,
-table.button table tr td a:visited,
-table.button.tiny:hover table tr td a,
-table.button.tiny:active table tr td a,
-table.button.tiny table tr td a:visited,
-table.button.small:hover table tr td a,
-table.button.small:active table tr td a,
-table.button.small table tr td a:visited,
-table.button.large:hover table tr td a,
-table.button.large:active table tr td a,
-table.button.large table tr td a:visited {
+table.button table tr td a:visited {
   color: $button-color;
 }
 
@@ -163,21 +154,13 @@ table.button.expanded {
   }
 }
 
-table.button:hover,
-table.button:visited,
-table.button:active {
+table.button:hover {
   table {
-    td {
+    td,
+    a {
       background: darken($button-background, 10%);
-      color: $button-color;
     }
-  }
-}
 
-table.button:hover,
-table.button:visited,
-table.button:active {
-  table {
     a {
       border: 0 solid darken($button-background, 10%);
     }
@@ -186,14 +169,9 @@ table.button:active {
 
 table.button.secondary {
   table {
-    td {
-      background: $secondary-color;
-      color: $button-color;
-      border: 0px solid $secondary-color;
-    }
-
+    td,
     a {
-      color: $button-color;
+      background: $secondary-color;
       border: 0 solid $secondary-color;
     }
   }
@@ -201,49 +179,19 @@ table.button.secondary {
 
 table.button.secondary:hover {
   table {
-    td {
-      background: lighten($secondary-color, 10%);
-      color: $button-color;
-    }
-
+    td,
     a {
+      background: lighten($secondary-color, 10%);
       border: 0 solid lighten($secondary-color, 10%);
-    }
-  }
-}
-
-table.button.secondary:hover {
-  table {
-    td a {
-      color: $button-color;
-    }
-  }
-}
-
-table.button.secondary:active {
-  table {
-    td a {
-      color: $button-color;
-    }
-  }
-}
-
-table.button.secondary {
-  table {
-    td a:visited {
-      color: $button-color;
     }
   }
 }
 
 table.button.success {
   table {
-    td {
-      background: $success-color;
-      border: 0px solid $success-color;
-    }
-
+    td,
     a {
+      background: $success-color;
       border: 0 solid $success-color;
     }
   }
@@ -251,11 +199,9 @@ table.button.success {
 
 table.button.success:hover {
   table {
-    td {
-      background: darken($success-color, 10%);
-    }
-
+    td,
     a {
+      background: darken($success-color, 10%);
       border: 0 solid darken($success-color, 10%);
     }
   }
@@ -263,12 +209,9 @@ table.button.success:hover {
 
 table.button.alert {
   table {
-    td {
-      background: $alert-color;
-      border: 0px solid $alert-color;
-    }
-
+    td,
     a {
+      background: $alert-color;
       border: 0 solid $alert-color;
     }
   }
@@ -276,11 +219,9 @@ table.button.alert {
 
 table.button.alert:hover {
   table {
-    td {
-      background: darken($alert-color, 10%);
-    }
-
+    td,
     a {
+      background: darken($alert-color, 10%);
       border: 0 solid darken($alert-color, 10%);
     }
   }
@@ -288,25 +229,20 @@ table.button.alert:hover {
 
 table.button.warning {
   table {
-    td {
-      background: $warning-color;
-      border: 0px solid $warning-color;
-    }
-
+    td,
     a {
-      border: 0px solid $warning-color;
+      background: $warning-color;
+      border: 0 solid $warning-color;
     }
   }
 }
 
 table.button.warning:hover {
   table {
-    td {
-      background: darken($warning-color, 10%);
-    }
-
+    td,
     a {
-      border: 0px solid darken($warning-color, 10%);
+      background: darken($warning-color, 10%);
+      border: 0 solid darken($warning-color, 10%);
     }
   }
 }
