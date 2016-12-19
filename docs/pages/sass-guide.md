@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Sass
+开始使用SASS
 description: Get started with the Sass-powered ZURB Stack for writing HTML emails.
 ---
 
