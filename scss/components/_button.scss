@@ -79,7 +79,6 @@ table.button {
         display: inline-block;
         padding: map-get($button-padding, default);
         border: 0 solid $button-background;
-        border-radius: $button-radius;
       }
     }
   }
