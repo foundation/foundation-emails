@@ -58,8 +58,10 @@ $button-rounded: $global-rounded !default;
 
 table.button {
   width: auto;
-  margin: $button-margin;
-  Margin: $button-margin;
+  
+  td {
+     padding: $button-margin;
+  }
 
   table {
 
@@ -68,6 +70,7 @@ table.button {
       color: $button-color;
       background: $button-background;
       border: $button-border;
+      padding: 0;
 
       a {
         font-family: $body-font-family;
