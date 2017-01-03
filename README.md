@@ -124,4 +124,4 @@ The parser converts a set of custom HTML tags, expanding them out into full HTML
 
 As an open source project, we looooove our community support. Please file issues, or better yet pull requests on the [Foundation for Emails Repo](https://github.com/zurb/foundation-emails). We're stoked to hear your feedback, make improvements, and keep evolving Foundation for Emails!
 
-Copyright (c) 2016 ZURB, inc.
+Copyright (c) 2017 ZURB, inc.
