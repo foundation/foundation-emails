@@ -124,7 +124,7 @@ $hr-border: 1px solid $black !default;
 
 /// Default margin for a divider.
 /// @type Number | List
-$hr-margin: 20px auto !default;
+$hr-margin: 20px !default;
 
 /// Text decoration for anchors.
 /// @type Keyword
@@ -308,20 +308,33 @@ pre {
 }
 
 // Horizontal rule
-table.hr {
+table.hr,
+table.h-line {
   width: 100%;
 
   th {
-    height: 0;
-    max-width: $hr-width;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: $hr-border;
-    border-left: 0;
-    margin: $hr-margin;
-    Margin: $hr-margin;
-    clear: both;
+    padding-bottom: $hr-margin;
+    text-align: center;
   }
+
+    table {
+      width: 100%;
+      max-width: $hr-width;
+      margin: 0 auto;
+    }
+
+    td {
+      height: 0;
+      width: $hr-width;
+      padding-top: $hr-margin;
+      font-size: 0;
+      line-height: 0;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: $hr-border;
+      border-left: 0;
+      clear: both;
+    }
 }
 
 // Use to style a large number to display a statistic
