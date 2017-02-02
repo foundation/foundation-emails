@@ -29,7 +29,7 @@ $container-radius: 0 !default;
 table {
   &.body {
     background: $body-background;
-    height: 100%;
+    height: auto;
     width: 100%;
   }
 
