@@ -1,7 +1,7 @@
 ---
 title: Typography
 description: Typography in Foundation for Emails is meant to make your life easier by providing clean, attractive, simple default styles for all of the most basic typographical elements.
-sass: scss/components/_type.scss
+sass: scss/components/_typography.scss
 ---
 
 ## Paragraphs
