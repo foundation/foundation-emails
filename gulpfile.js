@@ -111,7 +111,8 @@ gulp.task('lint', function() {
 // Creates a BrowserSync server
 gulp.task('server', ['build'], function() {
   browser.init({
-    server: './_build'
+    server: './_build',
+    port: yargs.argv.port || 3001
   });
 });
 
