@@ -10,7 +10,7 @@ tags:
 
 ## Basics
 
-When using [Inky](inky.html) HTML, the `<wrapper>` tag will create a `<table>`, `<tr>`, `<th>` structure needed to create consistant full width backgrounds. You can add classes to the wrapper to target CSS properties on it or target elements within it. The `.wrapper-inner` class is available to add padding to the wrapper.
+When using [Inky](inky.html) HTML, the `<wrapper>` tag will create a `<table>`, `<tr>`, `<th>` structure needed to create consistent full width backgrounds. You can add classes to the wrapper to target CSS properties on it or target elements within it. The `.wrapper-inner` class is available to add padding to the wrapper.
 
 ```inky_example
 <wrapper>
@@ -24,43 +24,46 @@ Creating a fluid header with the `<wrapper>` component is pretty straight forwar
 
 ```inky_example
 <style type="text/css">
-  .wrapper.header {
-    background: #8a8a8a !important;
-  }
+.header {
+  background: #8a8a8a;
+}
 
-  .wrapper.header .columns {
-    padding-bottom: 0 !important;
-  }
+.header .columns {
+  padding-bottom: 0;
+}
 
-  .header p {
-    color: #fff !important;
-    font-weight: bold;
-    margin-bottom: 0 !important;
-  }
+.header p {
+  color: #fff;
+  margin-bottom: 0;
+}
 
-  .wrapper.header .header-container {
-    background: #8a8a8a !important;
-  }
+.header .wrapper-inner {
+  padding: 20px; /*controls the height of the header*/
+}
+
+.header .container {
+  background: #8a8a8a;
+}
+
+.wrapper.secondary {
+  background: #f3f3f3;
+}
 </style>
 
-<wrapper class="header">
-  <spacer size="16"></spacer>
-  <center>
-    <container class="header-container">
-      <row class="collapse">
-        <columns small="6" valign="middle">
-          <img src="http://placehold.it/200x50/663399">
-        </columns>
-        <columns small="6" valign="middle">
-          <p class="text-right">BASIC</p>
-        </columns>
-      </row>
-    </container>
-  </center>
-  <spacer size="16"></spacer>
+<wrapper class="header" bgcolor="#8a8a8a">
+  <container>
+    <row class="collapse">
+      <columns small="6" valign="middle">
+        <img src="http://placehold.it/200x50/663399">
+      </columns>
+      <columns small="6" valign="middle">
+        <p class="text-right">BASIC</p>
+      </columns>
+    </row>
+  </container>
 </wrapper>
 ```
 
-Using this structure outside of the container will yeild a fluid width background that expands to the width of the email client's viewport.
+Using this structure outside of the container will yield a fluid width background that expands to the width of the email client's viewport.
 
 

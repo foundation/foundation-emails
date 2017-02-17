@@ -75,6 +75,7 @@ table.button {
         font-weight: $button-font-weight;
         color: $button-color;
         text-decoration: none;
+        text-align: left;
         display: inline-block;
         padding: map-get($button-padding, default);
         border: 0 solid $button-background;
@@ -144,7 +145,7 @@ table.button.large {
 
 table.button.expand,
 table.button.expanded {
-  width: 100% !important;
+  width: 100%;
 
   table {
     width: 100%;

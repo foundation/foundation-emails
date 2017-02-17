@@ -101,7 +101,7 @@ Inside `src/layouts/default.html`, you can see the boilerplate needed to make an
   <table class="body" data-made-with-foundation>
     <tr>
       <!-- The class, align, and <center> tag center the container -->
-      <td class="center" align="center" valign="top">
+      <td class="float-center" align="center" valign="top">
         <center>
           <!-- The body of each email you write is injected here -->
           {{> body}}
@@ -168,7 +168,7 @@ Now that you have an inlined email, you'll need to test it in real email clients
 
 The most popular tool for testing emails is [Litmus](https://litmus.com/). All you have to do is paste in the HTML of an email, and you get a live preview in any email client you want.
 
-It's up to you to choose what email clients are important to test in, but you can [see our compatability list](compatibility.html) for recommendations.
+It's up to you to choose what email clients are important to test in, but you can [see our compatibility list](compatibility.html) for recommendations.
 
 ---
 

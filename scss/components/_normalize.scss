@@ -6,8 +6,6 @@
 /// @group normalize
 ////
 
-$paragraph-margin-bottom: 10px !default;
-
 #outlook a {
   padding: 0;
 }
@@ -63,11 +61,6 @@ center {
 
 a img {
   border: none;
-}
-
-p {
-  margin: 0 0 0 $paragraph-margin-bottom;
-  Margin: 0 0 0 $paragraph-margin-bottom;
 }
 
 table {

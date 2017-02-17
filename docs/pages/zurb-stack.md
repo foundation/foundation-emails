@@ -12,7 +12,7 @@ This is our task runner of choice for Foundation. Gulp lets us queue up tasks to
 We use Libsass as our CSS preprocessor of choice. If you’re not familiar with Sass, it lets you use variables, nesting, and mixins (to name a few). [Learn more about Sass](http://sass-lang.com/).
 
 ## Inlining
-One of the biggest headaches and time-sucks used to be inlining your HTML email. Well, no more! We’re using gulp-inline to to scan your CSS file and and automatically inject your CSS when you’re ready. Just run `npm run build` in your project when you’re ready to inline.
+One of the biggest headaches and time-sucks used to be inlining your HTML email. Well, no more! We’re using gulp-inline to to scan your CSS file and automatically inject your CSS when you’re ready. Just run `npm run build` in your project when you’re ready to inline.
 
 ## Build Options
 By default the inliner works without removing whitespaces and inlining for you, you have to change your settings in the inliner function (`function inliner(css)`) on your gulpfile.babel.js which is the root of your project. To change these settings go and update this part of the function as you wish: ``` .pipe($.htmlmin, { collapseWhitespace: true, minifyCSS: true }); ```.

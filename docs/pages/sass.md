@@ -54,14 +54,14 @@ add_import_path "node_modules/foundation-emails/scss"
 Finally, add an `@import` statement to the top of your main Sass file.
 
 ```scss
-@import 'foundation';
+@import 'foundation-emails';
 ```
 
 You're also going to want a settings file for your project, which will allow you to modify the default styles of Foundation for Emails. **[Download the latest settings file here](https://raw.githubusercontent.com/zurb/foundation-emails/master/scss/settings/_settings.scss)**, add it to your project as `_settings.scss`, then import it *before* Foundation itself.
 
 ```scss
 @import 'settings';
-@import 'foundation';
+@import 'foundation-emails';
 ```
 
 ---
@@ -80,19 +80,19 @@ Here's an example set of settings variables. These change the default styling of
 
 ```scss
 // Text color of buttons.
-$button-color: $white !default;
+$button-color: $white;
 
 // Text color of buttons with a light background.
-$button-color-alt: $medium-gray !default;
+$button-color-alt: $medium-gray;
 
 // Font weight of buttons.
-$button-font-weight: bold !default;
+$button-font-weight: bold;
 
 // Background color of buttons.
-$button-background: $primary-color !default;
+$button-background: $primary-color;
 
 // Border around buttons.
-$button-border: 2px solid $button-background !default;
+$button-border: 2px solid $button-background;
 ```
 
 We put together some [Best Practices on Sass file structure](http://zurb.com/university/lessons/avoid-a-cluttered-mess-sensible-sass-file-structure) that will help you keep your project clean.
