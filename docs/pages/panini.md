@@ -177,7 +177,7 @@ If you don't see the right helper, you can write your own. Add a javascript file
 ```
 // Example file src/helpers/bold.js
 module.exports = function(options) {
-  // options.fn(this) = Handelbars content between {{#bold}} HERE {{/bold}}
+  // options.fn(this) = Handlebars content between {{#bold}} HERE {{/bold}}
   var bolder = '<strong>' + options.fn(this) + '</strong>';
   return bolder;
 }
