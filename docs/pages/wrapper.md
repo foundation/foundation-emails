@@ -1,6 +1,6 @@
 ---
 title: Wrapper
-description: Wrapper creates the necessary structure to wrap elements so that full width backgrounds can applied.
+description: Wrapper creates the necessary structure to wrap elements so that full width backgrounds can be applied.
 tags:
   - full width
   - fliud
