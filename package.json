@@ -54,6 +54,7 @@
     "siphon-media-query": "^1.0.0",
     "supercollider": "^1.4.0",
     "typeahead.js": "^0.11.1",
+    "yargs": "^7.0.2",
     "zeroclipboard": "^2.2.0"
   },
   "license": "MIT",
@@ -63,5 +64,3 @@
     "needs": "^0.8.0"
   }
 }
-
-
