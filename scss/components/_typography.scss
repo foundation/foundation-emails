@@ -82,6 +82,10 @@ $small-font-size: 80% !default;
 /// @type Color
 $small-font-color: $medium-gray !default;
 
+/// Default scaling coefficient for text sizes.
+/// @type Number
+$font-scale: 1.2 !default;
+
 /// Font size of lead paragraphs.
 /// @type Number
 $lead-font-size: $global-font-size * 1.25 !default;
@@ -243,6 +247,26 @@ p {
     line-height: $subheader-lineheight;
     color: $subheader-color;
   }
+}
+
+.text-xs {
+  font-size: $global-font-size / ($font-scale * $font-scale);
+}
+
+.text-sm {
+  font-size: $global-font-size / $font-scale;
+}
+
+.text-lg {
+  font-size: $global-font-size * $font-scale;
+}
+
+.text-xl {
+  font-size: $global-font-size * ($font-scale * $font-scale);
+}
+
+.text-xxl {
+  font-size: $global-font-size * ($font-scale * $font-scale * $font-scale);
 }
 
 small {

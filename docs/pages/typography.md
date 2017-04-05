@@ -54,6 +54,26 @@ By inserting a `<small>` element into a header Foundation will scale the header 
 
 ---
 
+## Text Sizes
+
+You can change the size of text in paragraphs with `.text-` classes. These classes will apply to the large breakpoint as well as the small.
+
+```inky_example
+<container>
+  <row>
+    <columns>
+      <p class="text-xs">Extra small</p>
+      <p class="text-sm">Small</p>
+      <p class="text-lg">Large</p>
+      <p class="text-xl">Extra large</p>
+      <p class="text-xxl">Extra extra large</p>
+    </columns>
+  </row>
+</container>
+```
+
+---
+
 ## Links
 
 Links are very standard, and the color is preset to the Foundation primary color. [Learn more about Foundation's global colors](global.html).
