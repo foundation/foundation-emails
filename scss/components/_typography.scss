@@ -86,6 +86,10 @@ $small-font-color: $medium-gray !default;
 /// @type Number
 $font-scale: 1.2 !default;
 
+/// Whether to shrink text on small displays.
+/// @type Bool
+$shrink-text-for-small: false !default;
+
 /// Font size of lead paragraphs.
 /// @type Number
 $lead-font-size: $global-font-size * 1.25 !default;
@@ -227,6 +231,12 @@ td,
 th {
   font-size: $global-font-size;
   line-height: $body-line-height;
+
+  @if $shrink-text-for-small {
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      font-size: $global-font-size * ($small-font-size / 100%) !important;
+    }
+  }
 }
 
 p {
