@@ -162,6 +162,21 @@ $stat-font-size: 40px !default;
 /// @type Boolean
 $remove-ios-blue: true !default;
 
+/// Set font size with optional shrink on mobile
+/// @param {String} $font-size - Font size to set, in px
+/// @param {Bool}   $shrink [$shrink-text-for-small] - Whether to shrink the font for small
+/// @require {variable} font-scale        - Scaling coefficient for text sizes
+/// @require {variable} global-breakpoint - Breakpoint for small
+@mixin font-size-with-shrink($font-size: $global-font-size, $shrink: $shrink-text-for-small) {
+  font-size: $font-size;
+
+  @if $shrink {
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      font-size: $font-size / $font-scale !important;
+    }
+  }
+}
+
 body,
 table.body,
 h1,
@@ -229,14 +244,8 @@ table.body,
 p,
 td,
 th {
-  font-size: $global-font-size;
+  @include font-size-with-shrink($global-font-size);
   line-height: $body-line-height;
-
-  @if $shrink-text-for-small {
-    @media only screen and (max-width: #{$global-breakpoint}) {
-      font-size: $global-font-size * ($small-font-size / 100%) !important;
-    }
-  }
 }
 
 p {
@@ -260,23 +269,23 @@ p {
 }
 
 .text-xs {
-  font-size: $global-font-size / ($font-scale * $font-scale);
+  @include font-size-with-shrink( $global-font-size / ($font-scale * $font-scale) );
 }
 
 .text-sm {
-  font-size: $global-font-size / $font-scale;
+  @include font-size-with-shrink( $global-font-size / $font-scale );
 }
 
 .text-lg {
-  font-size: $global-font-size * $font-scale;
+  @include font-size-with-shrink( $global-font-size * $font-scale );
 }
 
 .text-xl {
-  font-size: $global-font-size * ($font-scale * $font-scale);
+  @include font-size-with-shrink( $global-font-size * ($font-scale * $font-scale) );
 }
 
 .text-xxl {
-  font-size: $global-font-size * ($font-scale * $font-scale * $font-scale);
+  @include font-size-with-shrink( $global-font-size * ($font-scale * $font-scale * $font-scale) );
 }
 
 small {
