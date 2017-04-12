@@ -311,6 +311,12 @@ table.hr {
     border-left: 0;
     clear: both;
   }
+  &.dashed th {
+    border-style: dashed;
+  }
+  &.dotted th {
+    border-style: dotted;
+  }
 }
 
 // Use to style a large number to display a statistic
