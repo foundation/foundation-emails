@@ -29,6 +29,7 @@ $global-line-height: 1.3 !default;
 /// Font size of body text.
 /// @type Number
 $global-font-size: 16px !default;
+$large-font-size: 16px !default;
 
 /// Line height of body text.
 /// @type Number
@@ -45,26 +46,32 @@ $header-font-weight: $global-font-weight !default;
 /// Font size of `<h1>` elements.
 /// @type Number
 $h1-font-size: 34px !default;
+$large-h1-font-size: 34px !default;
 
 /// Font size of `<h2>` elements.
 /// @type Number
 $h2-font-size: 30px !default;
+$large-h2-font-size: 30px !default;
 
 /// Font size of `<h3>` elements.
 /// @type Number
 $h3-font-size: 28px !default;
+$large-h3-font-size: 28px !default;
 
 /// Font size of `<h4>` elements.
 /// @type Number
 $h4-font-size: 24px !default;
+$large-h4-font-size: 24px !default;
 
 /// Font size of `<h5>` elements.
 /// @type Number
 $h5-font-size: 20px !default;
+$large-h5-font-size: 20px !default;
 
 /// Font size of `<h6>` elements.
 /// @type Number
 $h6-font-size: 18px !default;
+$large-h6-font-size: 18px !default;
 
 /// Margin bottom of `<h1>` through `<h6>` elements.
 /// @type Number
@@ -77,6 +84,7 @@ $paragraph-margin-bottom: 10px !default;
 /// Default font size for `<small>`.
 /// @type Number
 $small-font-size: 80% !default;
+$large-small-font-size: 80% !default;
 
 /// Color of `<small>` elements when placed inside headers.
 /// @type Color
@@ -336,4 +344,16 @@ span.preheader {
   max-width: 0px;
   opacity: 0;
   overflow: hidden;
+}
+
+// Large Font Sizes
+@media only screen and (min-width: #{$global-breakpoint}) {
+  h1 { font-size:$large-h1-font-size !important; }
+  h2 { font-size:$large-h2-font-size !important; }
+  h3 { font-size:$large-h3-font-size !important; }
+  h4 { font-size:$large-h4-font-size !important; }
+  h5 { font-size:$large-h5-font-size !important; }
+  h6 { font-size:$large-h6-font-size !important; }
+  h1,h2,h3,h4,h5,h6{small{font-size:$large-small-font-size !important;}}
+  table,th,td,p,ul li,ol li { font-size:$large-font-size !important; }
 }
