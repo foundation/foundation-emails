@@ -317,6 +317,9 @@ table.hr {
   &.dotted th {
     border-style: dotted;
   }
+  &.success th {border-color:$success-color;}
+  &.warning th {border-color:$warning-color;}
+  &.alert th {border-color:$alert-color;}
 }
 
 // Use to style a large number to display a statistic
