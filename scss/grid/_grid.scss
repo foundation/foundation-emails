@@ -170,3 +170,24 @@ table.container.radius {
   border-radius: $container-radius;
   border-collapse: separate;
 }
+
+// Collapse Classes : collapse-gutter, collapse-bottom, collapse-top, collapse-border
+.collapse-gutter, .collapse-gutter>tbody>tr>.columns {
+    padding-left:0!important;
+    padding-right:0!important;
+}
+.collapse-bottom,
+.collapse-bottom>tbody>tr>.columns,
+.text.collapse-bottom th {
+    padding-bottom:0!important;
+    margin-bottom:0!important;
+    Margin-bottom:0!important;
+}
+.collapse-top {
+    padding-top:0!important;
+    margin-top:0!important;
+    Margin-top:0!important;
+}
+.collapse-border th {
+  border:none!important;
+}
