@@ -299,7 +299,9 @@ pre {
 // Horizontal rule
 table.hr {
   width: 100%;
-  
+  margin: $hr-margin;
+  Margin: $hr-margin;
+
   th {
     height: 0;
     max-width: $hr-width;
@@ -307,8 +309,6 @@ table.hr {
     border-right: 0;
     border-bottom: $hr-border;
     border-left: 0;
-    margin: $hr-margin;
-    Margin: $hr-margin;
     clear: both;
   }
 }
