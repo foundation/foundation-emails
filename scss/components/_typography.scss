@@ -337,3 +337,53 @@ span.preheader {
   opacity: 0;
   overflow: hidden;
 }
+
+// Alternate Color Scheme
+table.alt {
+  p, td, th {color: $alt-font-color; }
+
+  h1, h2, h3, h4, h5, h6 {color: $alt-header-color; }
+
+  p {
+    &.subheader {
+      color: $alt-subheader-color;
+    }
+  }
+
+  small {
+    color: $alt-small-font-color;
+  }
+
+  a, th.menu-item a {
+    color: $alt-anchor-color;
+    text-decoration: $alt-anchor-text-decoration;
+
+    &:hover { color: $alt-anchor-color-hover; }
+    &:active { color: $alt-anchor-color-active; }
+    &:visited { color: $alt-anchor-color-visited; }
+  }
+
+  table.hr {
+    th {
+      border-bottom: $alt-hr-border;
+    }
+  }
+}
+
+p.alt {
+  color: $alt-font-color;
+
+  &.subheader {
+    color: $alt-subheader-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &.alt {
+    color: $alt-header-color;
+
+    small {
+      color: $alt-small-font-color;
+    }
+  }
+}

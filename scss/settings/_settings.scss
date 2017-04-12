@@ -11,6 +11,7 @@
 //   6. Callout
 //   7. Menu
 //   8. Thumbnail
+//   9. Alternate Colors
 
 
 // 1. Global
@@ -145,3 +146,15 @@ $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
 
+// 8. Alternate Colors
+// ------------
+$alt-font-color             : $white;
+$alt-header-color           : $white;
+$alt-small-font-color       : $light-gray;
+$alt-subheader-color        : $global-font-color;
+$alt-hr-border              : 1px solid $white;
+$alt-anchor-text-decoration : $anchor-text-decoration;
+$alt-anchor-color           : $light-gray;
+$alt-anchor-color-visited   : $alt-anchor-color;
+$alt-anchor-color-hover     : darken($alt-anchor-color, 10%);
+$alt-anchor-color-active    : $alt-anchor-color-hover;
