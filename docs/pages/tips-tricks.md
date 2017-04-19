@@ -36,7 +36,7 @@ The height of your email doesn't matter as much because people scroll. It still 
 
 #### Structure and alignment:
 
-When it comes to making emails, divs aren’t a thing. Don’t kill the messenger, but it’s true. It's not fun finding out we can't just use a `<div>` with auto left and right margins for centering, or background colors; It won't work most email clients. `<div>`'s can still be used for targeting CSS and for grouping semantically related elements, but shouldn’t be used for for structural purposes or spacing.
+When it comes to making emails, divs aren’t a thing. Don’t kill the messenger, but it’s true. It's not fun finding out we can't just use a `<div>` with auto left and right margins for centering, or background colors; It won't work most email clients. `<div>`'s can still be used for targeting CSS and for grouping semantically related elements, but shouldn’t be used for structural purposes or spacing.
 
 Instead, you can use the `<wrapper>` Inky tag to create background colors and target elements inside. [More on Wrapper &#8594;](wrapper.html)
 
@@ -113,7 +113,7 @@ Speaking of CSS, you should only set classes and IDs on tables or `<td>` tags, n
 Support of CSS properties varies greatly between email clients. You're best off sticking with the basics and not getting too fancy.
 
 This CSS compatibility chart will really save you some pain when writing CSS:
-[CSS Support Chart](https://www.campaignmonitor.com/css/b/)
+[CSS Support Chart](https://www.campaignmonitor.com/css/)
 
 <img src="assets/img/campaign-monitor-css-guide.jpg" alt="">
 
