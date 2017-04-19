@@ -11,6 +11,7 @@ var inky = require('inky');
 var siphon = require('siphon-media-query');
 var lazypipe = require('lazypipe');
 var fs = require('fs');
+var yargs = require('yargs');
 
 // Configuration for the documentation generator
 supercollider
