@@ -1,16 +1,17 @@
 var $ = require('gulp-load-plugins')();
-var gulp = require('gulp');
-var sequence = require('run-sequence');
-var panini = require('panini');
-var supercollider = require('supercollider');
-var rimraf = require('rimraf');
 var browser = require('browser-sync');
 var foundationDocs = require('foundation-docs');
-var octophant = require('octophant');
-var inky = require('inky');
-var siphon = require('siphon-media-query');
-var lazypipe = require('lazypipe');
 var fs = require('fs');
+var gulp = require('gulp');
+var inky = require('inky');
+var lazypipe = require('lazypipe');
+var octophant = require('octophant');
+var panini = require('panini');
+var rimraf = require('rimraf');
+var sequence = require('run-sequence');
+var siphon = require('siphon-media-query');
+var supercollider = require('supercollider');
+var yargs = require('yargs');
 
 // Configuration for the documentation generator
 supercollider
