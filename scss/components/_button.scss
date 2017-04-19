@@ -317,7 +317,7 @@ table.button.warning:hover {
     // Then the mixin calls itself with just the color to obtain the color styles
     @if $class {
         &.#{$class} {
-            @include ghostButton($color);
+            @include hollowButton($color);
         }
     }
     @else {
