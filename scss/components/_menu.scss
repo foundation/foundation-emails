@@ -65,3 +65,19 @@ table.menu.text-center a {
 .menu[align="center"] {
   width: auto !important;
 }
+
+// Remove outside padding so that the menu aligns with other elements on the page
+.menu:not(.float-center) {
+    .menu-item:first-child{padding-left:0!important;}
+    .menu-item:last-child{padding-right:0!important;}
+}
+.menu.vertical .menu-item {
+    padding-left:0!important;
+    padding-right:0!important;
+}
+@media only screen and (max-width: #{$global-breakpoint}) {
+    .menu.small-vertical .menu-item {
+        padding-left:0!important;
+        padding-right:0!important;
+    }
+}
