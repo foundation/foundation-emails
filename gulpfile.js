@@ -11,6 +11,7 @@ var inky = require('inky');
 var siphon = require('siphon-media-query');
 var lazypipe = require('lazypipe');
 var fs = require('fs');
+var yargs = require('yargs');
 
 // Configuration for the documentation generator
 supercollider
@@ -46,6 +47,12 @@ gulp.task('clean', function(cb) {
 gulp.task('copy', function() {
   return gulp.src(['docs/assets/**/*', '!docs/assets/scss/**/*', '!docs/assets/js/**/*'])
     .pipe(gulp.dest('_build/assets'));
+  });
+
+// Copies inky-browser
+gulp.task('copy-inky', function() {
+  return gulp.src(['node_modules/inky/dist/inky-browser.js'])
+    .pipe(gulp.dest('_build/assets/js'));
 });
 
 // Builds documentation pages
@@ -111,7 +118,8 @@ gulp.task('lint', function() {
 // Creates a BrowserSync server
 gulp.task('server', ['build'], function() {
   browser.init({
-    server: './_build'
+    server: './_build',
+    port: yargs.argv.port || 3001
   });
 });
 
@@ -128,7 +136,7 @@ gulp.task('deploy:docs', ['build'], function() {
 
 // Runs the entire build process
 gulp.task('build', function(cb) {
-  sequence('clean', ['copy', 'html', 'sass', 'javascript:docs'], cb);
+  sequence('clean', ['copy', 'copy-inky', 'html', 'sass', 'javascript:docs'], cb);
 });
 
 // Runs the build process, spins up a server, and watches for file changes
@@ -215,7 +223,8 @@ function inliner(css) {
     .pipe($.injectString.replace, '<!-- <style> -->', '<style>'+mqCss+'</style>')
     .pipe($.htmlmin, {
       collapseWhitespace: false,
-      minifyCSS: false
+      minifyCSS: false,
+      maxLineLength: 800
     });
 
   return pipe();

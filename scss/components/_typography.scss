@@ -150,6 +150,10 @@ $anchor-color-active: $anchor-color-hover !default;
 /// @type Number
 $stat-font-size: 40px !default;
 
+/// Removing the iOS telephone and address styling
+/// @type Boolean
+$remove-ios-blue: true !default;
+
 body,
 table.body,
 h1,
@@ -160,12 +164,14 @@ h5,
 h6,
 p,
 td,
-th,
-a {
+th {
   color: $global-font-color;
   font-family: $body-font-family;
   font-weight: $global-font-weight;
-  padding: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
   margin: 0;
   Margin: 0;
   text-align: left;
@@ -247,6 +253,11 @@ small {
 a {
   color: $anchor-color;
   text-decoration: $anchor-text-decoration;
+  font-family: $body-font-family;
+  font-weight: $global-font-weight;
+  padding: 0;
+  text-align: left;
+  line-height: $global-line-height;
 
   &:hover {
     color: $anchor-color-hover;
@@ -336,4 +347,19 @@ span.preheader {
   max-width: 0px;
   opacity: 0;
   overflow: hidden;
+}
+
+// Removing the iOS colors put in for telephone and addresses
+@if $remove-ios-blue {
+  // Wrapping in a media only screen to have inline-css respect the styling
+  @media only screen {
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+  }
 }
