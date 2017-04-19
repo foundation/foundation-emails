@@ -1,59 +1,43 @@
 <style type="text/css">
-  .header {
-    background: #8a8a8a;
-  }
 
-  .header .columns {
-    padding-bottom: 0;
-  }
+.header {
+  background: #8a8a8a;
+}
 
-  .header p {
-    color: #fff;
-    padding-top: 15px;
-  }
+.header .columns {
+  padding-bottom: 0;
+}
 
-  .header .wrapper-inner {
-    padding: 20px;
-  }
+.header p {
+  color: #fff;
+  margin-bottom: 0;
+}
 
-  .header .container {
-    background: transparent;
-  }
+.header .wrapper-inner {
+  padding: 20px; /*controls the height of the header*/
+}
 
-  table.button.facebook table td {
-    background: #3B5998 !important;
-    border-color: #3B5998;
-  }
+.header .container {
+  background: #8a8a8a;
+}
 
-  table.button.twitter table td {
-    background: #1daced !important;
-    border-color: #1daced;
-  }
+.wrapper.secondary {
+  background: #f3f3f3;
+}
 
-  table.button.google table td {
-    background: #DB4A39 !important;
-    border-color: #DB4A39;
-  }
-
-  .wrapper.secondary {
-    background: #f3f3f3;
-  }
-
-  .sidebar .menu .menu-item {
-    border-top: 1px solid #777777;
-  }
 </style>
+<!-- move the above styles into your custom stylesheet -->
 
+<spacer size="16"></spacer>
 
-
-<wrapper class="header">
+<wrapper class="header" bgcolor="#8a8a8a">
   <container>
     <row class="collapse">
-      <columns small="6">
+      <columns small="6" valign="middle">
         <img src="http://placehold.it/200x50/663399">
       </columns>
-      <columns small="6">
-        <p class="text-right">SIDEBAR HERO</p>
+      <columns small="6" valign="middle">
+        <p class="text-right">Sidebar Hero</p>
       </columns>
     </row>
   </container>
@@ -91,15 +75,11 @@
       <callout class="secondary">
         <h5>Header</h5>
         <p class="lead">Sub-header</p>
-        <menu class="vertical">
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-          <item href="#">Just a Plain Link &raquo;</item>
-        </menu>
+        <p><a href="#">Just a Plain Link &raquo;</a></p>
+        <p><a href="#">Just a Plain Link &raquo;</a></p>
+        <p><a href="#">Just a Plain Link &raquo;</a></p>
+        <p><a href="#">Just a Plain Link &raquo;</a></p>
+        <p><a href="#">Just a Plain Link &raquo;</a></p>
       </callout>
       <callout class="secondary">
         <h6>CONNECT WITH US:</h6>

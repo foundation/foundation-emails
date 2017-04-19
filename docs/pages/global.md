@@ -101,7 +101,7 @@ Some components, such as [buttons](button.html) and [callouts](callout.html), ha
 
 ## Responsive Breakpoint
 
-Unlike Foundation for Sites and Apps, the Foundation for Emails CSS is written *desktop-first*. This is because many older desktop email clients don't support media queries, or `<style>` tags.
+Unlike Foundation for Sites, the Foundation for Emails CSS is written *desktop-first*. This is because many older desktop email clients don't support media queries, or `<style>` tags.
 
 **Your email layout shifts from desktop to mobile at 596 pixels.** This is the width of the container, plus the width of the gutters around the container. In the Sass version of Foundation, you can change the breakpoint by modifying these variables:
 

@@ -28,7 +28,7 @@ To use the Sass version of Foundation for Emails, you need Node.js installed on 
 
 ## Installing
 
-We'll use the Foundation CLI to set up a new project. If you already have the Foundation CLI installed from Foundation for Sites or Apps, you can skip this first command.
+We'll use the Foundation CLI to set up a new project. If you already have the Foundation CLI installed from Foundation for Sites, you can skip this first command.
 
 ```bash
 npm install --global foundation-cli

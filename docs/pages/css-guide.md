@@ -13,7 +13,7 @@ In this Getting Started guide, we'll download Foundation for Emails, construct t
 
 If you haven't yet, download the starter files for Foundation for Emails. They include the boilerplate HTML needed for an email, and all of the CSS for Foundation.
 
-<a href="http://foundation.zurb.com/downloads/foundation-emails.zip" class="large button">Download Foundation for Emails</a>
+<a href="https://s3.amazonaws.com/zurb-foundation/foundation-emails.zip" class="large button">Download Foundation for Emails</a>
 
 Unzip the folder and open it in your text editor of choice.
 

@@ -46,6 +46,12 @@ gulp.task('clean', function(cb) {
 gulp.task('copy', function() {
   return gulp.src(['docs/assets/**/*', '!docs/assets/scss/**/*', '!docs/assets/js/**/*'])
     .pipe(gulp.dest('_build/assets'));
+  });
+
+// Copies inky-browser
+gulp.task('copy-inky', function() {
+  return gulp.src(['node_modules/inky/dist/inky-browser.js'])
+    .pipe(gulp.dest('_build/assets/js'));
 });
 
 // Builds documentation pages
@@ -128,7 +134,7 @@ gulp.task('deploy:docs', ['build'], function() {
 
 // Runs the entire build process
 gulp.task('build', function(cb) {
-  sequence('clean', ['copy', 'html', 'sass', 'javascript:docs'], cb);
+  sequence('clean', ['copy', 'copy-inky', 'html', 'sass', 'javascript:docs'], cb);
 });
 
 // Runs the build process, spins up a server, and watches for file changes
