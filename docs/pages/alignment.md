@@ -9,7 +9,7 @@ Foundation includes a handful of helpful alignment classes to add common positio
 
 ## Text Alignment
 
-You can align text with the `.text-x` classes. These classes will appy to the large breakpoint as well as the small.
+You can align text with the `.text-x` classes. These classes will apply to the large breakpoint as well as the small.
 
 ```inky_example
 <style>.columns {border: 1px solid #333;}</style>
