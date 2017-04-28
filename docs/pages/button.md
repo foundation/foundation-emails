@@ -13,7 +13,7 @@ In Inky HTML, the `<button>` tag creates all of this markup for you.
 ```
 
 <div class="callout primary">
-- It's important to add an `href` attribute to your `<button>`'s to ensure that Outlook.com will not display `[undefined]` in your rendered email.<br> 
+- It's important to add an `href` attribute to your `<button>`'s to ensure that Outlook.com will not display `[undefined]` in your rendered email.<br>
 - Office 365 and Outlook.com require a valid url in the href attribute or you can use the # placeholder.
 </div>
 
@@ -68,11 +68,25 @@ Change the background color of a button by adding the class `.secondary`, `.succ
 
 ---
 
+## Hollow
+
+Make any button a hollow button by adding the `.hollow` class to the `<button>` tag in Inky HTML).
+
+```inky_example
+<button href="#" class="hollow">Default Hollow</button>
+<button href="#" class="hollow secondary">Secondary Hollow</button>
+<button href="#" class="hollow success">Success Hollow</button>
+<button href="#" class="hollow warning">Warning Hollow</button>
+<button href="#" class="hollow alert">Alert Hollow</button>
+```
+
+---
+
 ## Radius and Round
 
 Creating buttons with a radius or rounded edges (like a pill) can be achieved by adding the `.radius` or `.rounded` class to a button.
 
-*Note - border-radius is not supported on Outlook 2000-2013, Yahoo! Mail, and Android 4+ (Gmail)*
+*Note - border-radius is not supported on Outlook 2000-2013, Yahoo! Mail, and Android 4 (Gmail)*
 
 *Note - In order to create `.radius` and `.rounded` buttons, the border needs to be removed.*
 

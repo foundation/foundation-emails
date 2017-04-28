@@ -313,44 +313,54 @@ table.button.warning:hover {
 
 // Hollow Buttons
 @mixin hollowButton($color,$class:false) {
-    // If this mixin is called with a class, then a class will be added
-    // Then the mixin calls itself with just the color to obtain the color styles
-    @if $class {
-        &.#{$class} {
-            @include hollowButton($color);
-        }
+// If this mixin is called with a class, then a class will be added
+// Then the mixin calls itself with just the color to obtain the color styles
+  @if $class {
+    &.#{$class} {
+      @include hollowButton($color);
     }
-    @else {
-        table a {
-            border:1px solid $color;
-            color: $color;
-        }
-        &:hover {
-            table a {
-              border-color:1px solid darken($color, 10%);
-              color: darken($color, 10%);
-            }
-        }
+  }
+  @else {
+    table a {
+      border:1px solid $color;
+      color: $color;
     }
+    &:hover {
+      table a {
+        border-color:1px solid darken($color, 10%);
+        color: darken($color, 10%);
+      }
+    }
+  }
 }
-table.button.hollow {
-    table td,
-    &:hover table td {
-        border:none!important;
-        border-radius:0px;
-        background: transparent!important;
-    }
-    table a {border-radius:0px;}
-    &.radius {
-      table a {border-radius:$global-radius;}
-    }
-    &.rounded {
-      table a {border-radius:$global-rounded;}
-    }
 
-    @include hollowButton($primary-color);
-    @include hollowButton($secondary-color,'secondary');
-    @include hollowButton($alert-color,'alert');
-    @include hollowButton($warning-color,'warning');
-    @include hollowButton($success-color,'success');
+table.button.hollow {
+  table td,
+  &:hover table td {
+    border:none!important;
+    border-radius:0px;
+    background: transparent!important;
+  }
+
+  table a {
+    border-radius:0px;
+  }
+
+  &.radius {
+    table a {
+      border-radius:$global-radius;
+    }
+  }
+
+  &.rounded {
+    table a {
+      border-radius:$global-rounded;
+    }
+  }
+
+  @include hollowButton($primary-color);
+  @include hollowButton($secondary-color,'secondary');
+  @include hollowButton($alert-color,'alert');
+  @include hollowButton($warning-color,'warning');
+  @include hollowButton($success-color,'success');
 }
