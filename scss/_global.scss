@@ -50,6 +50,10 @@ $white: #fefefe !default;
 /// @type Color
 $pre-color: #ff6908 !default;
 
+/// Threshhold where colors are considered dark
+/// @type Number
+$color-threshhold: 40 !default;
+
 /// Width of the container.
 /// @type Number
 $global-width: 580px !default;
@@ -69,6 +73,14 @@ $body-background: $light-gray !default;
 /// Color for the container background
 /// @type Color
 $container-background: $white !default;
+
+/// Global font color.
+/// @type Color
+$global-font-color: $black !default;
+
+/// Global font family.
+/// @type Font
+$body-font-family: Helvetica, Arial, sans-serif !default;
 
 /// Global padding.
 /// @type Number
