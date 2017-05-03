@@ -9,8 +9,8 @@
 /// Padding inside buttons at various sizes.
 /// @type Map
 $button-padding: (
-  tiny: 4px 8px 4px 8px,
-  small: 5px 10px 5px 10px,
+  tiny: 8px 16px 8px 16px,
+  small: 10px 20px 10px 20px,
   default: 8px 16px 8px 16px,
   large: 10px 20px 10px 20px,
 ) !default;
@@ -112,12 +112,8 @@ table.button.large table tr td a:visited {
 
 table.button.tiny {
   table {
-    td,
     a {
       padding: map-get($button-padding, tiny);
-    }
-
-    a {
       font-size: map-get($button-font-size, tiny);
       font-weight: normal;
     }
@@ -126,7 +122,6 @@ table.button.tiny {
 
 table.button.small {
   table {
-    td,
     a {
       padding: map-get($button-padding, small);
       font-size: map-get($button-font-size, small);
