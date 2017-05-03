@@ -164,6 +164,7 @@ table.button:active {
   table {
     td {
       background: darken($button-background, 10%);
+      border-color: darken($button-background, 10%);
       color: $button-color;
     }
   }
@@ -198,6 +199,7 @@ table.button.secondary:hover {
   table {
     td {
       background: lighten($secondary-color, 10%);
+      border-color: lighten($secondary-color, 10%);
       color: $button-color;
     }
 
@@ -248,6 +250,7 @@ table.button.success:hover {
   table {
     td {
       background: darken($success-color, 10%);
+      border-color: darken($success-color, 10%);
     }
 
     a {
@@ -273,6 +276,7 @@ table.button.alert:hover {
   table {
     td {
       background: darken($alert-color, 10%);
+      border-color: darken($alert-color, 10%);
     }
 
     a {
@@ -298,6 +302,7 @@ table.button.warning:hover {
   table {
     td {
       background: darken($warning-color, 10%);
+      border-color: darken($warning-color, 10%);
     }
 
     a {
