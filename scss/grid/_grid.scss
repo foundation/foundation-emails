@@ -184,10 +184,23 @@ table.container.radius {
     Margin-bottom:0!important;
 }
 .collapse-top {
+.collapse-top>tbody>tr>.columns,
+.text.collapse-top th {
     padding-top:0!important;
     margin-top:0!important;
     Margin-top:0!important;
 }
+.collapse-left {
+    padding-left:0!important;
+    margin-left:0!important;
+    Margin-left:0!important;
+}
+.collapse-right {
+    padding-right:0!important;
+    margin-right:0!important;
+    Margin-right:0!important;
+}
+.collapse-border,
 .collapse-border th {
   border:none!important;
 }
