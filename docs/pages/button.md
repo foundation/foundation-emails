@@ -81,3 +81,18 @@ Creating buttons with a radius or rounded edges (like a pill) can be achieved by
 <button href="#" class="rounded">Round</button>
 
 ```
+
+---
+
+## Hollow Buttons
+
+Creating hollow buttons is as simple as adding the `.hollow` class to a button. You can combine this class with all of the other button classes in order to mix and match styles.
+
+
+```inky_example
+<button href="#" class="hollow">Hollow Button</button>
+<button href="#" class="hollow secondary radius">Secondary Button</button>
+<button href="#" class="hollow success round">Success Button</button>
+<button href="#" class="hollow warning tiny">Warning Button</button>
+<button href="#" class="hollow alert expanded">Alert Button</button>
+```
