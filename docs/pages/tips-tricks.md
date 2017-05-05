@@ -36,7 +36,7 @@ The height of your email doesn't matter as much because people scroll. It still 
 
 #### Structure and alignment:
 
-When it comes to making emails, divs aren’t a thing. Don’t kill the messenger, but it’s true. It's not fun finding out we can't just use a `<div>` with auto left and right margins for centering, or background colors; It won't work most email clients. `<div>`'s can still be used for targeting CSS and for grouping semantically related elements, but shouldn’t be used for for structural purposes or spacing.
+When it comes to making emails, divs aren’t a thing. Don’t kill the messenger, but it’s true. It's not fun finding out we can't just use a `<div>` with auto left and right margins for centering, or background colors; It won't work most email clients. `<div>`'s can still be used for targeting CSS and for grouping semantically related elements, but shouldn’t be used for structural purposes or spacing.
 
 Instead, you can use the `<wrapper>` Inky tag to create background colors and target elements inside. [More on Wrapper &#8594;](wrapper.html)
 
@@ -274,7 +274,7 @@ Use fonts that are recognizeable to most users.
 
 In general, use a single font throughout your email. Mixing several different fonts can make your email seem fragmented and sloppy. Instead, use one font and just a few styles and sizes.
 
-<img src="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Art/mail_message_axlarge_2x.png" alt="">
+<img src="https://developer.apple.com/ios/human-interface-guidelines/images/TypographyGraphic_2x.png" alt="">
 
 <a id="progressive-enhancement"></a>
 ## Progressive Enhancement

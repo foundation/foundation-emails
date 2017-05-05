@@ -43,7 +43,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-wrap": "^0.11.0",
     "gulp-zip": "^3.2.0",
-    "inky": "^1.3.6",
+    "inky": "zurb/inky#browser-build",
     "lazypipe": "^1.0.1",
     "motion-ui": "^1.1.1",
     "multiline": "^1.0.2",
@@ -54,6 +54,7 @@
     "siphon-media-query": "^1.0.0",
     "supercollider": "^1.4.0",
     "typeahead.js": "^0.11.1",
+    "yargs": "^7.1.0",
     "zeroclipboard": "^2.2.0"
   },
   "license": "MIT",
@@ -63,5 +64,3 @@
     "needs": "^0.8.0"
   }
 }
-
-
