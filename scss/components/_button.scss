@@ -319,8 +319,7 @@ table.button.warning:hover {
     &.#{$class} {
         @include hollowButton($color);
     }
-  }
-  @else {
+  } @else {
     table tr td a {
       border:1px solid $color;
       color: $color;
@@ -328,6 +327,7 @@ table.button.warning:hover {
       &:visited{
         color: $color;
       }
+
       &:hover {
         border-color: darken($color, 10%);
         color: darken($color, 10%);
@@ -335,6 +335,7 @@ table.button.warning:hover {
     }
   }
 }
+
 table.button.hollow {
   table td,
   &:hover table td {
@@ -342,10 +343,15 @@ table.button.hollow {
     border-radius:0px;
     background: transparent!important;
   }
-  table a {border-radius:0px;}
+  
+  table a {
+    border-radius:0px;
+  }
+
   &.radius {
     table a {border-radius:$global-radius;}
   }
+
   &.rounded {
     table a {border-radius:$global-rounded;}
   }
