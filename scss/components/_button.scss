@@ -312,12 +312,12 @@ table.button.warning:hover {
 }
 
 // Hollow Buttons
-@mixin hollowButton($color,$class:false) {
+@mixin hollow-button($color,$class:false) {
   // If this mixin is called with a class, then a class will be added
   // Then the mixin calls itself with just the color to obtain the color styles
   @if $class {
     &.#{$class} {
-        @include hollowButton($color);
+        @include hollow-button($color);
     }
   }
   @else {
@@ -350,9 +350,9 @@ table.button.hollow {
     table a {border-radius:$global-rounded;}
   }
 
-  @include hollowButton($primary-color);
-  @include hollowButton($secondary-color,'secondary');
-  @include hollowButton($alert-color,'alert');
-  @include hollowButton($warning-color,'warning');
-  @include hollowButton($success-color,'success');
+  @include hollow-button($primary-color);
+  @include hollow-button($secondary-color,'secondary');
+  @include hollow-button($alert-color,'alert');
+  @include hollow-button($warning-color,'warning');
+  @include hollow-button($success-color,'success');
 }
