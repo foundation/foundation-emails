@@ -95,6 +95,8 @@ The `.expander` prevents a rendering bug in Outlook that sometimes keeps the col
 
 Collapsing a row removes the gutters from every column, which is the spacing between them. Add the class `.collapse` to a row to enable this.
 
+There are more utility classes that you can use to isolate and collapse portions of your layouts: `.collapse-top` `.collapse-bottom` `.collapse-left` `.collapse-right` `.collapse-border` `.collapse-gutter`
+
 ```inky_example
 <row class="collapse">
   <columns large="6"><img src="http://placehold.it/300x150/777777/&text=These columns touch" alt=""></columns>
