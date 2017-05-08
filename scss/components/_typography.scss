@@ -314,6 +314,8 @@ table.hr {
   th {
     height: 0;
     max-width: $hr-width;
+    font-size: 0;
+    line-height: 0;
     border-top: 0;
     border-right: 0;
     border-bottom: $hr-border;
