@@ -211,7 +211,9 @@ Now, you can insert the values of these variables into the `index.html` page, *o
 <h1>{{ title }}</h1>
 ```
 
-Variables can also be added globally by creating an external JSON or YML file, and adding it to the `src/data` folder in your project. Let's create a file called `breakfast.yml`:
+Variables can also be added globally by creating an external JSON or YML file, and adding it to the `src/data` folder in your project. Note that this folder isn't in your project by default. If you create it, you'll also have to include it in your `gulpfile.babel.js`. [See more info on this step.](http://foundation.zurb.com/forum/posts/43584-handlebars-img-src-depending-on-test-or-production)
+
+Let's create a file called `breakfast.yml`:
 
 ```
 - eggs
