@@ -69,13 +69,15 @@ th.column {
   padding-bottom: $column-padding-bottom;
 
   // Prevents Nested columns from double the padding
-  .column,
-  .columns {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  @for $i from 1 through ($grid-column-count - 1) {
+    .column:not(.large-offset-#{$i}),
+    .columns:not(.large-offset-#{$i}) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
 
-    center {
-      min-width: none !important;
+      center {
+        min-width: none !important;
+      }
     }
   }
 }
