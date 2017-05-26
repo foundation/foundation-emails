@@ -147,14 +147,20 @@ th.column {
 }
 
 @for $i from 1 through ($grid-column-count - 1) {
-  td.large-offset-#{$i},
-  td.large-offset-#{$i}.first,
-  td.large-offset-#{$i}.last,
-  th.large-offset-#{$i},
-  th.large-offset-#{$i}.first,
-  th.large-offset-#{$i}.last {
-    //1.5 takes in effect a whole empty cell.
-    padding-left: -zf-grid-calc-px($i, $grid-column-count, $global-width) + $global-gutter * 2;
+  td,
+  th {
+    &,
+    &.first,
+    &.last {
+      &.large-offset-#{$i} {
+        //1.5 takes in effect a whole empty cell.
+        padding-left: -zf-grid-calc-px($i, $grid-column-count, $global-width) + $global-gutter * 2;
+      }
+      &.large-backset-#{$i} {
+        //1.5 takes in effect a whole empty cell.
+        padding-right: -zf-grid-calc-px($i, $grid-column-count, $global-width) + $global-gutter * 2;
+      }
+    }
   }
 }
 
