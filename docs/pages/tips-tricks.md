@@ -103,7 +103,7 @@ Tables have all sorts of fancy HTML attributes…not all of which can be set in 
 </table>
 ```
 
-Speaking of CSS, you should only set classes and IDs on tables or `<td>` tags, not `<tr>` tags. If you need to apply padding, only do that on a `<td>` as well. Been there, done that — we had a lot of trouble with this while building the first version of Foundation for Emails. Your milage may vary, but just trying to help you out by saving you some time.
+Speaking of CSS, you should only set classes and IDs on tables or `<td>` tags, not `<tr>` tags. If you need to apply padding, only do that on a `<td>` as well. Been there, done that — we had a lot of trouble with this while building the first version of Foundation for Emails. Your mileage may vary, but just trying to help you out by saving you some time.
 
 ---
 
