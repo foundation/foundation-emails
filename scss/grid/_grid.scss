@@ -97,6 +97,10 @@ th.column {
 
     &.button {
       width:auto;
+
+      &.expanded{
+        width: 100%;
+      }
     }
   }
 }
