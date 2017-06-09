@@ -92,8 +92,12 @@ td.columns,
 td.column,
 th.columns,
 th.column {
-  table:not(.button) {
+  table {
     width: 100%;
+
+    &.button {
+      width:auto;
+    }
   }
 }
 
