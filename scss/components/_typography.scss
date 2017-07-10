@@ -228,6 +228,11 @@ th {
 p {
   margin-bottom: $paragraph-margin-bottom;
   Margin-bottom: $paragraph-margin-bottom;
+  
+  a {
+	  Margin: inherit; 
+	  margin: inherit;
+  }
 
   &.lead {
     font-size: $lead-font-size;
