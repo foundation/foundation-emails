@@ -75,7 +75,7 @@ Just wrap the `<center>` around an image you’ll be good to go. Inky will handl
   <row>
     <columns>
       <center>
-        <img src="http://placehold.it/200?text=center" alt="image of clever meme that made me chuckle">
+        <img src="https://placehold.it/200?text=center" alt="image of clever meme that made me chuckle">
       </center>
     </columns>
   </row>
@@ -98,12 +98,12 @@ If you need to center an image only on mobile clients, you can apply the `.small
 <container>
   <row>
     <columns small="12" large="3" class="large-offset-1">
-      <img class="small-float-center" src="http://placehold.it/200?text=small-center" alt="please don't forget me">
+      <img class="small-float-center" src="https://placehold.it/200?text=small-center" alt="please don't forget me">
     </columns>
     <columns small="12" large="8">
       <h4 class="small-text-center">What is the deal?</h4>
       <p class="small-text-center">Sweet beast sun bathe or chase mice rub face on everything or leave dead animals as gifts for mark territory play time.</p>
-    </columns>  
+    </columns>
   </row>
 </container>
 ```
@@ -118,9 +118,9 @@ You can also align images to the left or the right.
 <container>
   <row>
     <columns>
-      <img class="float-left" src="http://placehold.it/200?text=left" alt="">
-      <img class="float-center" src="http://placehold.it/200?text=center" alt="">
-      <img class="float-right" src="http://placehold.it/200?text=right" alt="">
+      <img class="float-left" src="https://placehold.it/200?text=left" alt="">
+      <img class="float-center" src="https://placehold.it/200?text=center" alt="">
+      <img class="float-right" src="https://placehold.it/200?text=right" alt="">
     </columns>
   </row>
 </container>
@@ -198,7 +198,7 @@ You can vertically align your content within columns by using `valign` attribute
 ```inky_example
 <row>
   <columns large="3" valign="top">
-    <img class="float-right" src="http://placehold.it/50" alt="">
+    <img class="float-right" src="https://placehold.it/50" alt="">
   </columns>
   <columns large="3" valign="bottom">
     <h4>Bottom</h4>
@@ -208,8 +208,8 @@ You can vertically align your content within columns by using `valign` attribute
     <p style="margin-bottom: 0;" class="text-right subheader">SUBHEADLINE</p>
   </columns>
   <columns large="3" valign="middle">
-    <img class="small-float-center" src="http://placehold.it/250" alt="">
-  </columns> 
-</row> 
+    <img class="small-float-center" src="https://placehold.it/250" alt="">
+  </columns>
+</row>
 ```
 <br>

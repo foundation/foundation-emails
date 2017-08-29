@@ -9,14 +9,14 @@ Coding responsive emails can be a real pain. This guide will help you through so
 
 Most responsive emails are built on templates. They’re simple, easy to drop content into and are usually well-tested. Templates have a serious cost though. "Oh, so you want to do anything other than change the colors and text?" Sorry … you’re out of luck, Chuck. Templates tend to be hard to customize heavily or to extend. For that you need a framework.
 
-A framework is a collection of reusable code and design patterns which gives users a solid, tested base upon which to build. Not a bunch of visual styles you can just bolt on as an afterthought and call it a day. 
+A framework is a collection of reusable code and design patterns which gives users a solid, tested base upon which to build. Not a bunch of visual styles you can just bolt on as an afterthought and call it a day.
 
 - Frameworks give you the solid base of a template, but the extensibility of custom code. You can make your template fit your content, not the other way around.
 - Additionally, a framework gives you a common codebase to structure your projects around. So if new team members work on the project, they don't have to re-invent the wheel. You can spend less time coding your email and more time optimizing your campaigns.
 
 ## Need to know
 
-The sad truth about creating or coding HTML emails is that tables are the only things that are universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capitor, and going back to the 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags. 
+The sad truth about creating or coding HTML emails is that tables are the only things that are universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capitor, and going back to the 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags.
 
 <div class="callout secondary tip">General rule of thumb: your email is not going to look identical in every client. And that’s OK.</div>
 
@@ -90,7 +90,7 @@ Where we would have divs in website land…
       </th>
     </tr>
   </tbody>
-</table>      
+</table>
 ```
 
 Table elements have their own special “display” values. Sometimes we can override them to display as block elements, but more on that later. The display value (in combination with the HTML schema specified in the DOCTYPE), specifies the rules for rendering each element.
@@ -137,15 +137,15 @@ If you are using the CSS version, you can use our [web inliner](http://foundatio
 
 ---
 
-#### Margin and Padding: 
+#### Margin and Padding:
 
 - Outlook 2007, 2010, and 2013 does not support "padding" in `<p>`, `<div>` or `<a>` tags. Use margin instead.
-- Forget about using CSS positioning like `top`, `bottom`, `relative`, `absolute`. 
+- Forget about using CSS positioning like `top`, `bottom`, `relative`, `absolute`.
 - Margin is universally supported BUT you may see some inconsistencies in Outlook 2007, 2010, and 2013. Padding is safer. Also, it is known that Outlook.com does not support the margin property. The odd thing is Outlook.com does support margin with a capital "M".
-Use it like this: 
-  
+Use it like this:
+
 ```scss
-margin: 10px; 
+margin: 10px;
 Margin: 10px;  // fallback for Outlook.com
 ```
 
@@ -195,7 +195,7 @@ To style ALT text, place your font styles inline on the image.
 
 #### Retina Images
 
-OK, so I got my readers to allow images…now what about Retina? 
+OK, so I got my readers to allow images…now what about Retina?
 
 Fun fact: Your email client is better at resizing images than Photoshop is.
 
@@ -219,7 +219,7 @@ Video's in emails are not supported except in Apple Mail and Outlook 2011. [See 
 
 #### Quick Tips on Images
 
-Remember to use full paths to images, not relative paths. (e.g. http://www.yourserver.com/email/images/logo.gif). 
+Remember to use full paths to images, not relative paths. (e.g. http://www.yourserver.com/email/images/logo.gif).
 
 Also, link to images from your own server, not anyone elses. If you don't control it you never know when that url will change.
 
@@ -249,7 +249,7 @@ Causes
 - Making the HTML file size less than 20kb (20540 characters) - not including images or the plain-text version. This charachter count includes things like inline styles, HTML tags, and spaces, and other HTML entities.
 - Downloading the message over cellular data, not WiFi. Can't do much about this one.
 
-Solution? 
+Solution?
 
 - Create emails that are short and to the point. Too many call-to-actions's, topics, or long emails don't tend to work that well anyways.
 - Minify your HTML. The ZURB Stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the charachter count and file size. Our [web inliner](http://foundation.zurb.com/emails/inliner.html) also has an option to remove (compress) whitespace between your charachters.
@@ -268,7 +268,7 @@ Apple suggests 17px for mobile devices and Google recommends up to 21px for body
 
 #### Typography
 
-<img src="http://group-mail.com/wp-content/uploads/Screen-shot-2011-08-12-at-2.58.47-PM.png" alt="">
+<img src="https://group-mail.com/wp-content/uploads/Screen-shot-2011-08-12-at-2.58.47-PM.png" alt="">
 
 Use fonts that are recognizeable to most users.
 
@@ -286,12 +286,12 @@ Do progressively enhance. ZURB and Foundation for Emails builds Outlook-first. M
 Let's imagine the vast majority of your audience uses Apple Mail. You'd be able to get away with using CSS keyframe animation and SVG masks.
 
 If you're not sure where to start, you can see the [Email Client Market Share](http://emailclientmarketshare.com/) by Litmus
- 
+
 #### Button Size and Touch Targets
 
-Apple’s iPhone Human Interface Guidelines recommends a minimum target size of 44 pixels wide 44 pixels tall. 
+Apple’s iPhone Human Interface Guidelines recommends a minimum target size of 44 pixels wide 44 pixels tall.
 
-Microsoft’s Windows Phone UI Design and Interaction Guide suggests a touch target size of 34px with a minimum touch target size of 26px. 
+Microsoft’s Windows Phone UI Design and Interaction Guide suggests a touch target size of 34px with a minimum touch target size of 26px.
 
 Nokia’s developer guidelines suggest that the target size should be no smaller than 1cm x 1cm square or 28 x 28 pixels.
 
@@ -303,7 +303,7 @@ While these guidelines give a general measurement for touch targets, they’re n
 
 Testing costs money. Not testing costs you customers.
 
-So test, test, and test again. After you have an inlined version of your email, you should test it on as many devices and email clients as you can. 
+So test, test, and test again. After you have an inlined version of your email, you should test it on as many devices and email clients as you can.
 
 The two top testing services out there are:
 [Litmus](https://litmus.com/)
@@ -313,7 +313,7 @@ If you're not sure where to start, you can see the [Email Client Market Share](h
 
 Foundation for Emails is tested on the most popular clients. You can also test on the clients listed in our [compatability guide](compatibility.html)
 
-These services make testing on lots of email clients and devices much faster. Try to hit the main categories: a Windows machine, a Mac, an iPhone, an Android, a tablet. Still, nothing beats testing on a real device. 
+These services make testing on lots of email clients and devices much faster. Try to hit the main categories: a Windows machine, a Mac, an iPhone, an Android, a tablet. Still, nothing beats testing on a real device.
 
 ---
 
