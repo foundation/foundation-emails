@@ -54,7 +54,7 @@ Creating a fluid header with the `<wrapper>` component is pretty straight forwar
   <container>
     <row class="collapse">
       <columns small="6" valign="middle">
-        <img src="http://placehold.it/200x50/663399">
+        <img src="https://placehold.it/200x50/663399">
       </columns>
       <columns small="6" valign="middle">
         <p class="text-right">BASIC</p>
