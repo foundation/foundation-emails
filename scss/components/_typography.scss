@@ -165,9 +165,6 @@ h6,
 p,
 td,
 th {
-  color: $global-font-color;
-  font-family: $body-font-family;
-  font-weight: $global-font-weight;
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -176,6 +173,20 @@ th {
   Margin: 0;
   text-align: left;
   line-height: $global-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+  color: $global-font-color;
+  font-family: $body-font-family;
+  font-weight: $global-font-weight;
 }
 
 h1,
