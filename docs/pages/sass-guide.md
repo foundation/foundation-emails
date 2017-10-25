@@ -52,7 +52,13 @@ The CLI will ask you for a project name, which is used as the name of the folder
 
 ## Running the Server
 
-After your project has been installed, run `cd project`, where `project` is the name of the project just created. Then run:
+After your project has been installed, run `cd project`, where `project` is the name of the project just created. Install the dependancies:
+
+```bash
+npm install
+```
+
+Then run:
 
 ```bash
 npm start
