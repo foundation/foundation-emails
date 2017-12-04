@@ -246,13 +246,13 @@ Problems
 
 Causes
 
-- Making the HTML file size less than 20kb (20540 characters) - not including images or the plain-text version. This charachter count includes things like inline styles, HTML tags, and spaces, and other HTML entities.
+- Making the HTML file size less than 20kb (20540 characters) - not including images or the plain-text version. This character count includes things like inline styles, HTML tags, and spaces, and other HTML entities.
 - Downloading the message over cellular data, not WiFi. Can't do much about this one.
 
 Solution?
 
 - Create emails that are short and to the point. Too many call-to-actions's, topics, or long emails don't tend to work that well anyways.
-- Minify your HTML. The ZURB Stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the charachter count and file size. Our [web inliner](http://foundation.zurb.com/emails/inliner.html) also has an option to remove (compress) whitespace between your charachters.
+- Minify your HTML. The ZURB Stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the character count and file size. Our [web inliner](http://foundation.zurb.com/emails/inliner.html) also has an option to remove (compress) whitespace between your characters.
 
 ---
 
