@@ -22,7 +22,7 @@
     "browser-sync": "^2.9.10",
     "cheerio": "^0.19.0",
     "clipboard-js": "^0.2.0",
-    "foundation-docs": "zurb/foundation-docs",
+    "foundation-docs": "git+https://github.com/zurb/foundation-docs.git#c755ceb863cd41928fe59e2a1f14a82643e16355",
     "foundation-sites": "^6.2.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.3.1",
@@ -63,5 +63,3 @@
     "needs": "^0.8.0"
   }
 }
-
-
