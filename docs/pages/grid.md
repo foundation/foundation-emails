@@ -97,8 +97,8 @@ Collapsing a row removes the gutters from every column, which is the spacing bet
 
 ```inky_example
 <row class="collapse">
-  <columns large="6"><img src="https://placehold.it/300x150/777777/&text=These columns touch" alt=""></columns>
-  <columns large="6"><img src="https://placehold.it/300x150/999999/&text=These columns touch" alt=""></columns>
+  <columns large="6"><img src="https://via.placeholder.com/300x150/777777/&text=These columns touch" alt=""></columns>
+  <columns large="6"><img src="https://via.placeholder.com/300x150/999999/&text=These columns touch" alt=""></columns>
 </row>
 ```
 
@@ -112,7 +112,7 @@ Use the class `.large-offset-n` to create an offset, where `n` is the amount of 
 
 ```inky_example
 <row>
-  <columns large="3" class="large-offset-3"><img src="https://placehold.it/150x150/999999/&text=offset column" alt=""></columns>
-  <columns large="3"><img src="https://placehold.it/150x150/999999" alt=""></columns>
+  <columns large="3" class="large-offset-3"><img src="https://via.placeholder.com/150x150/999999/&text=offset column" alt=""></columns>
+  <columns large="3"><img src="https://via.placeholder.com/150x150/999999" alt=""></columns>
 </row>
 ```

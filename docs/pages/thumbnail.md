@@ -9,11 +9,11 @@ The `.thumbnail` class can be applied directly to an `<img>` element, or an `<a>
 The thumbnail style adds padding and a box shadow to an image. To use it, just add the class `.thumbnail` to an image element.
 
 ```inky_example
-<img src="https://placehold.it/200x200" class="thumbnail">
+<img src="https://via.placeholder.com/200x200" class="thumbnail">
 ```
 
 <!-- <table class="thumbnail">
   <tr>
-    <td><img src="//placehold.it/300x300" class="thumbnail" /></td>
+    <td><img src="//via.placeholder.com/300x300" class="thumbnail" /></td>
   </tr>
 </table> -->
