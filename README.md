@@ -16,7 +16,7 @@ The main way to get started is with our [email template stack](https://github.co
 To set up the emails template, run these commands:
 
 ```bash
-git clone https://github.com/zurb/foundation-emails-template project
+git clone https://github.com/zurb/foundation-emails project
 cd project
 npm install
 ```
