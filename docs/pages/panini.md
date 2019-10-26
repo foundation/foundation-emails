@@ -10,7 +10,7 @@ library:
 
 If you've ever created a static site, maybe you had five pages that all shared the same header and footer. You create your first page, and then copy and paste the common elements to the next page. But now if you need to make a change to the header, the change has to be made across multiple files. You can do this with Emails in your campaigns too!
 
-Panini is a flat file compiler that uses the concepts of templates, pages, and partials&mdash;powered by the [Handlebars](http://handlebarsjs.com/) templating language&mdash;to streamline the process of creating static prototypes.
+Panini is a flat file compiler that uses the concepts of templates, pages, and partials&mdash;powered by the [Handlebars](https://handlebarsjs.com/) templating language&mdash;to streamline the process of creating static prototypes.
 
 Our [prototyping template](starter-projects.html) uses Panini, along with a host of other tools for processing Sass and images, to make creating optimized templates easy. It's already been configured to utilize all of the features below, but if you want to learn the specifics of how to configure the library, head over to the [Panini GitHub page](https://github.com/zurb/panini).
 
@@ -117,7 +117,7 @@ The `../` is added only on pages in a sub-folder, so the CSS can still be proper
 
 ## Helpers
 
-Helpers are special functions that manipulate content on the page. In addition to [Handlebars's built-in helpers](http://handlebarsjs.com/builtin_helpers.html), Panini includes a few custom helpers and you can add your own.
+Helpers are special functions that manipulate content on the page. In addition to [Handlebars's built-in helpers](https://handlebarsjs.com/builtin_helpers.html), Panini includes a few custom helpers and you can add your own.
 
 ### ifpage
 
@@ -166,7 +166,7 @@ Converts Markdown into HTML.
 ```handlebars
 {{#markdown}}
 # Heading 1
-Lorem ipsum [dolor sit amet](http://html5zombo.com), consectetur adipisicing elit. Nam dolor, perferendis. Mollitia aut dolorum, est amet libero eos ad facere pariatur, ullam dolorem similique fugit, debitis impedit, eligendi officiis dolores.
+Lorem ipsum [dolor sit amet](https://html5zombo.com), consectetur adipisicing elit. Nam dolor, perferendis. Mollitia aut dolorum, est amet libero eos ad facere pariatur, ullam dolorem similique fugit, debitis impedit, eligendi officiis dolores.
 {{/markdown}}
 ```
 
@@ -194,7 +194,7 @@ Then in your projects call your custom `{{#bold}}` helper
 
 Custom data can be added to your pages. This data can then be inserted into your HTML through Handlebars. There are two ways to add data to a project.
 
-To add variables to a specific page only, add it at the top of the page's HTML as a [Front Matter](http://jekyllrb.com/docs/frontmatter/) block. Let's say the below content is inside `src/pages/index.html`.
+To add variables to a specific page only, add it at the top of the page's HTML as a [Front Matter](https://jekyllrb.com/docs/frontmatter/) block. Let's say the below content is inside `src/pages/index.html`.
 
 ```html
 ---
@@ -233,7 +233,7 @@ This code will print three `<li>`s, one for each item in the file.
 
 ## Tutorials
 
-[Staying D.R.Y. with Panini](http://zurb.com/university/lessons/staying-d-r-y-with-panini) 
+[Staying D.R.Y. with Panini](https://zurb.com/university/lessons/staying-d-r-y-with-panini) 
 Panini comes with tons of Handlebars helpers built in, like a repeat helper or markdown parser, but in this lesson we’ll take a look at creating a custom month/year helper for an HTML email.
 
 

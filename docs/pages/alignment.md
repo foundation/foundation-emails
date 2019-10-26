@@ -182,9 +182,9 @@ Centering the menu is a common practice. Wrapping the menu in `<center>` tags wi
 ```inky_example
 <center>
   <menu>
-    <item href="http://zurb.com">Item</item>
-    <item href="http://zurb.com">Item</item>
-    <item href="http://zurb.com">Item</item>
+    <item href="https://zurb.com">Item</item>
+    <item href="https://zurb.com">Item</item>
+    <item href="https://zurb.com">Item</item>
   </menu>
 </center>
 ```

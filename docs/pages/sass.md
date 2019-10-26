@@ -4,7 +4,7 @@ description: Foundation for Emails is written in Sass, which allows us to make t
 ---
 
 <div class="primary callout">
-  <p>Not familiar with Sass? The [official tutorial](http://sass-lang.com/guide) on sass-lang.com is a great place to start.</p>
+  <p>Not familiar with Sass? The [official tutorial](https://sass-lang.com/guide) on sass-lang.com is a great place to start.</p>
 </div>
 
 ## Compatibility
@@ -95,4 +95,4 @@ $button-background: $primary-color !default;
 $button-border: 2px solid $button-background !default;
 ```
 
-We put together some [Best Practices on Sass file structure](http://zurb.com/university/lessons/avoid-a-cluttered-mess-sensible-sass-file-structure) that will help you keep your project clean.
+We put together some [Best Practices on Sass file structure](https://zurb.com/university/lessons/avoid-a-cluttered-mess-sensible-sass-file-structure) that will help you keep your project clean.

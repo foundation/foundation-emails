@@ -37,8 +37,8 @@ Inside `index.html`, you can see the boilerplate needed to make an HTML work, wi
 
 ```html
 <!-- Emails use the XHTML Strict doctype -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
   <!-- The character set should be utf-8 -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -158,7 +158,7 @@ Now that we have a basic email, the last thing we need to do before we can send 
 
 Email clients like Gmail and Outlook strip out `<style>` tag from the `<head>` and Gmails strips it from the `<body>` of the email as well. It's best to have your CSS written inline within your markup. Hand writing all your CSS inline in a style tag would be a real pain and would take a long time.
 
-Our [web inliner](http://foundation.zurb.com/emails/inliner-v2.html) automates this process for you. To use it, paste in the contents of `index.html` into the HTML field, paste in the contents of `css/foundation-emails.css` into the CSS field, and then press "Inline!". Once it's done, you'll see a large soup of HTML that is your inlined email.
+Our [web inliner](https://get.foundation/emails/inliner-v2.html) automates this process for you. To use it, paste in the contents of `index.html` into the HTML field, paste in the contents of `css/foundation-emails.css` into the CSS field, and then press "Inline!". Once it's done, you'll see a large soup of HTML that is your inlined email.
 
 Your email's CSS will include media queries for responsive styling which the inliner tool will move into the `<body>` so they are preserved.
 
@@ -178,4 +178,4 @@ It's up to you to choose what email clients are important to test in, but you ca
 
 You've successfully installed Foundation for Emails, and written, inlined, and tested your first email! To keep going with the framework, you can check out the documentation for the other framework components, including [buttons](button.html), [callouts](callout.html), [menus](menu.html).
 
-If you're interested in going in-depth on the framework with the Foundation team, [check out our master class on Foundation for Emails](http://zurb.com/university/responsive-emails-foundation), an on-demand video series that explores every aspect of email design workflow.
+If you're interested in going in-depth on the framework with the Foundation team, [check out our master class on Foundation for Emails](https://zurb.com/university/responsive-emails-foundation), an on-demand video series that explores every aspect of email design workflow.
