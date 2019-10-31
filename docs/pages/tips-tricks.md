@@ -123,7 +123,7 @@ For some things you can do and work-arounds, see the <a href="#progressive-enhan
 
 #### Inlining CSS
 
-Gmail strips the `<head>` (and, consequently, `<style>`) tags from your email. Therefor your email's CSS needs to be inlined. You know, like old school CSS:
+Gmail strips the `<head>` (and, consequently, `<style>`) tags from your email. Therefore your email's CSS needs to be inlined. You know, like old school CSS:
 
 ```html
 <table class="menu" style="padding:0;text-align:center;vertical-align:top;width:auto">
