@@ -28,19 +28,9 @@ To use the Sass version of Foundation for Emails, you need Node.js installed on 
 
 ## Installing
 
-We'll use [npx](https://www.npmjs.com/package/npx) to run the Foundation CLI to set up a new project. If you have npm version [https://github.com/npm/npm/releases/tag/v5.2.0](https://github.com/npm/npm/releases/tag/v5.2.0) or later, you already have npx, you can skip this first command.
+We'll use [npx](https://www.npmjs.com/package/npx) to run the Foundation CLI to set up a new project. 
 
-```bash
-npm install --global npx
-```
-
-If you run into any permission errors (EACCESS) on OS X or Linux, you can try prefixing the command with `sudo`.
-
-```bash
-sudo npm install --global npx
-```
-
-Once you have npx installed, use it to run the Foundation CLI as a one-off command, it’s super easy to fire up a blank Foundation for Emails project. Move into the folder you store your projects in, and then run this command:
+Run the Foundation CLI as a one-off command, it’s super easy to fire up a blank Foundation for Emails project. Move into the folder you store your projects in, and then run this command:
 
 ```bash
 npx foundation-cli new --framework emails
