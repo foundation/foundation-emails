@@ -211,7 +211,7 @@ gulp.task('dist', ['sass:foundation'], function() {
 });
 
 function inliner(css) {
-  var css = fs.readFileSync(css).toString();
+  css = fs.readFileSync(css).toString();
   var mqCss = siphon(css);
 
   var pipe = lazypipe()
