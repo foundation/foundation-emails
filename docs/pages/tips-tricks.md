@@ -317,7 +317,7 @@ These services make testing on lots of email clients and devices much faster. Tr
 
 ---
 
-## Sending you Emails
+## Sending your Emails
 
 ESP's are made for sending thousands and thousands of emails, they can help you get emails out without being deemed a spammer.
 
