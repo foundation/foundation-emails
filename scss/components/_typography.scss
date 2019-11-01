@@ -124,7 +124,11 @@ $hr-border: 1px solid $black !default;
 
 /// Default margin for a divider.
 /// @type Number | List
-$hr-margin: 20px auto !default;
+$hr-margin: 20px !default;
+
+/// Default alignment for a divider.
+/// @type String
+$hr-align: center !default;
 
 /// Text decoration for anchors.
 /// @type Keyword
@@ -153,6 +157,52 @@ $stat-font-size: 40px !default;
 /// Removing the iOS telephone and address styling
 /// @type Boolean
 $remove-ios-blue: true !default;
+
+/// Create a divider/horizontal rule.
+/// @param {String} $align  - Left, center, or right
+/// @param {String} $width  - Width of divider
+/// @param {String} $border - Shorthand border style for divider
+/// @param {String} $margin - Margin above and below divider
+@mixin h-line($align: $hr-align, $width: $hr-width, $border: $hr-border, $margin: nth($hr-margin, 1)) {
+  @at-root {
+    td.columns & table,
+    td.column  & table,
+    th.columns & table,
+    th.column  & table {
+      width: auto;
+    }
+  }
+
+  th {
+    padding-bottom: $margin;
+    @if $align == 'left' {
+      text-align: left;
+    } @elseif $align == 'right' {
+      text-align: right;
+    } @else {
+      text-align: center;
+    }
+  }
+
+    table {
+      display: inline-block;
+      margin: 0;
+      Margin: 0;
+    }
+
+      td {
+        width: $width;
+        height: 0;
+        padding-top: $margin;
+        clear: both;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: $border;
+        border-left: 0;
+        font-size: 0;
+        line-height: 0;
+      }
+}
 
 body,
 table.body,
@@ -308,20 +358,9 @@ pre {
 }
 
 // Horizontal rule
-table.hr {
-  width: 100%;
-
-  th {
-    height: 0;
-    max-width: $hr-width;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: $hr-border;
-    border-left: 0;
-    margin: $hr-margin;
-    Margin: $hr-margin;
-    clear: both;
-  }
+table.hr,
+table.h-line {
+  @include h-line($hr-align, $hr-width, $hr-border, $hr-margin);
 }
 
 // Use to style a large number to display a statistic

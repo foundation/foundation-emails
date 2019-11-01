@@ -16,7 +16,7 @@ A framework is a collection of reusable code and design patterns which gives use
 
 ## Need to know
 
-The sad truth about creating or coding HTML emails is that tables are the only things that are universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capitor, and going back to 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags.
+The sad truth about creating or coding HTML emails is that tables are the only things that are universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capacitor, and going back to the year 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags.
 
 <div class="callout secondary tip">General rule of thumb: your email is not going to look identical in every client. And that’s OK.</div>
 
@@ -123,7 +123,7 @@ For some things you can do and work-arounds, see the <a href="#progressive-enhan
 
 #### Inlining CSS
 
-Gmail strips the `<head>` (and, consequently, `<style>`) tags from your email. Therefor your email's CSS needs to be inlined. You know, like old school CSS:
+Gmail strips the `<head>` (and, consequently, `<style>`) tags from your email. Therefore your email's CSS needs to be inlined. You know, like old school CSS:
 
 ```html
 <table class="menu" style="padding:0;text-align:center;vertical-align:top;width:auto">
@@ -246,13 +246,13 @@ Problems
 
 Causes
 
-- Making the HTML file size less than 20kb (20540 characters) - not including images or the plain-text version. This charachter count includes things like inline styles, HTML tags, and spaces, and other HTML entities.
+- Making the HTML file size less than 20kb (20540 characters) - not including images or the plain-text version. This character count includes things like inline styles, HTML tags, and spaces, and other HTML entities.
 - Downloading the message over cellular data, not WiFi. Can't do much about this one.
 
 Solution?
 
 - Create emails that are short and to the point. Too many call-to-actions's, topics, or long emails don't tend to work that well anyways.
-- Minify your HTML. The ZURB Stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the charachter count and file size. Our [web inliner](http://foundation.zurb.com/emails/inliner.html) also has an option to remove (compress) whitespace between your charachters.
+- Minify your HTML. The ZURB Stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the character count and file size. Our [web inliner](http://foundation.zurb.com/emails/inliner.html) also has an option to remove (compress) whitespace between your characters.
 
 ---
 
@@ -317,7 +317,7 @@ These services make testing on lots of email clients and devices much faster. Tr
 
 ---
 
-## Sending you Emails
+## Sending your Emails
 
 ESP's are made for sending thousands and thousands of emails, they can help you get emails out without being deemed a spammer.
 
