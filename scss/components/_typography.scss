@@ -295,7 +295,8 @@ p {
   }
 }
 
-small {
+small
+.small {
   font-size: $small-font-size;
   color: $small-font-color;
 }
