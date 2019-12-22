@@ -55,7 +55,7 @@ th.callout-inner {
 
   &.primary {
     background: scale-color($primary-color, $lightness: $callout-background-fade);
-    border: $callout-border-secondary;
+    border: $callout-border-primary;
     color: $black;
   }
 
