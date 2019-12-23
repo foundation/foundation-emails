@@ -68,18 +68,18 @@ th.callout-inner {
   &.success {
     background: scale-color($success-color, $lightness: $callout-background-fade);
     border: $callout-border-success;
-    color: $white;
+    color: $black;
   }
 
   &.warning {
     background: scale-color($warning-color, $lightness: $callout-background-fade);
     border: $callout-border-warning;
-    color: $white;
+    color: $black;
   }
 
   &.alert {
     background: scale-color($alert-color, $lightness: $callout-background-fade);
     border: $callout-border-alert;
-    color: $white;
+    color: $black;
   }
 }
