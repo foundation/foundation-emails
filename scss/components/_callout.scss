@@ -26,7 +26,11 @@ $callout-margin-bottom: $global-margin !default;
 /// @type Border
 $callout-border: 1px solid darken($callout-background, 20%) !default;
 
-/// Border around a callout with the `.success` class.
+/// Border around a callout with the `.primary` class.
+/// @type Border
+$callout-border-primary: 1px solid darken($primary-color, 20%) !default;
+
+/// Border around a callout with the `.secondary` class.
 /// @type Border
 $callout-border-secondary: 1px solid darken($secondary-color, 20%) !default;
 
