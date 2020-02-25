@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A framework for responsive emails made by ZURB.}
   spec.description   = %q{Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client.}
-  spec.homepage      = "http://get.foundation/emails"
+  spec.homepage      = "https://get.foundation/emails"
   spec.license       = "MIT"
 
   spec.files         = Dir[ File.join("**", "*") ].reject { |p| File.directory?(p) || p.match(%{^(test|spec|features)/}) }
