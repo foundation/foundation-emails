@@ -1,4 +1,4 @@
-# [Foundation for Emails](http://foundation.zurb.com/emails)
+# [Foundation for Emails](http://get.foundation/emails)
 
 [![npm version badge](https://img.shields.io/npm/v/foundation-emails.svg)](https://www.npmjs.org/package/foundation-emails)
 [![downloads badge](http://img.shields.io/npm/dm/foundation-emails.svg)](https://www.npmjs.org/package/foundation-emails)

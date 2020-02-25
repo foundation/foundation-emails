@@ -20,7 +20,7 @@ The sad truth about creating or coding HTML emails is that tables are the only t
 
 <div class="callout secondary tip">General rule of thumb: your email is not going to look identical in every client. And that’s OK.</div>
 
-It's not all doom and gloom though, and we're all in this together. Foundation for Emails helps by getting you away from tables (Sass version), helping you with an organized project structure, and a well tested codebase to make this much easier. We've put together this guide and [links to resources](http://foundation.zurb.com/emails/resources.html) from our friends to help you along as well as a new [Responsive Emails master class](http://zurb.com/university/responsive-emails-foundation) to become a HTML email pro.
+It's not all doom and gloom though, and we're all in this together. Foundation for Emails helps by getting you away from tables (Sass version), helping you with an organized project structure, and a well tested codebase to make this much easier. We've put together this guide and [links to resources](http://get.foundation/emails/resources.html) from our friends to help you along as well as a new [Responsive Emails master class](http://zurb.com/university/responsive-emails-foundation) to become a HTML email pro.
 
 ---
 
@@ -133,7 +133,7 @@ Because media queries cannot be inlined, they need to be moved into the `<body>`
 
 If you're using Sass with the ZURB stack, you enjoy the luxury of automatic inlining when running `npm run build`. Your file will be copied into the `dist ` folder where you will find it minified and inlined. You'll want to do this before you test or send your email.
 
-If you are using the CSS version, you can use our [web inliner](http://foundation.zurb.com/emails/inliner-v2.html).
+If you are using the CSS version, you can use our [web inliner](http://get.foundation/emails/inliner-v2.html).
 
 ---
 
@@ -252,7 +252,7 @@ Causes
 Solution?
 
 - Create emails that are short and to the point. Too many call-to-actions's, topics, or long emails don't tend to work that well anyways.
-- Minify your HTML. The ZURB Stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the character count and file size. Our [web inliner](http://foundation.zurb.com/emails/inliner.html) also has an option to remove (compress) whitespace between your characters.
+- Minify your HTML. The ZURB Stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the character count and file size. Our [web inliner](http://get.foundation/emails/inliner.html) also has an option to remove (compress) whitespace between your characters.
 
 ---
 
