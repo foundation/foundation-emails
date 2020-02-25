@@ -26,7 +26,6 @@ To get started, first install the framework files using Bower or npm.
 
 ```bash
 npm install foundation-emails --save
-bower install foundation-emails --save
 ```
 
 Next, add the framework files as an import path in Sass. How you do this depends on your build process, but the path is the same regardless: `[packages_folder]/foundation-emails/scss`
