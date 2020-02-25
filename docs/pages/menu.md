@@ -12,9 +12,9 @@ In Inky HTML, use the tag `<menu>` to make a menu, and the tag `<item>` to make 
 
 ```inky_example
 <menu>
-  <item href="http://zurb.com">Item</item>
-  <item href="http://zurb.com">Item</item>
-  <item href="http://zurb.com">Item</item>
+  <item href="https://zurb.com">Item</item>
+  <item href="https://zurb.com">Item</item>
+  <item href="https://zurb.com">Item</item>
 </menu>
 ```
 
@@ -31,9 +31,9 @@ Menus align horizontally by default. To switch to a vertical menu, add the class
 
 ```inky_example
 <menu class="vertical">
-  <item href="http://zurb.com">Item</item>
-  <item href="http://zurb.com">Item</item>
-  <item href="http://zurb.com">Item</item>
+  <item href="https://zurb.com">Item</item>
+  <item href="https://zurb.com">Item</item>
+  <item href="https://zurb.com">Item</item>
 </menu>
 ```
 
@@ -45,8 +45,8 @@ Menus align horizontally by default. To switch to a vertical menu on the small b
 
 ```inky_example
 <menu class="small-vertical">
-  <item href="http://zurb.com">Item</item>
-  <item href="http://zurb.com">Item</item>
-  <item href="http://zurb.com">Item</item>
+  <item href="https://zurb.com">Item</item>
+  <item href="https://zurb.com">Item</item>
+  <item href="https://zurb.com">Item</item>
 </menu>
 ```
