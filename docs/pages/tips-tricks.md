@@ -16,7 +16,7 @@ A framework is a collection of reusable code and design patterns which gives use
 
 ## Need to know
 
-The sad truth about creating or coding HTML emails is that tables are the only things that are universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capitor, and going back to the 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags.
+The sad truth about creating or coding HTML emails is that tables are the only things that are universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capacitor, and going back to the year 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags.
 
 <div class="callout secondary tip">General rule of thumb: your email is not going to look identical in every client. And that’s OK.</div>
 
@@ -36,7 +36,7 @@ The height of your email doesn't matter as much because people scroll. It still 
 
 #### Structure and alignment:
 
-When it comes to making emails, divs aren’t a thing. Don’t kill the messenger, but it’s true. It's not fun finding out we can't just use a `<div>` with auto left and right margins for centering, or background colors; It won't work most email clients. `<div>`'s can still be used for targeting CSS and for grouping semantically related elements, but shouldn’t be used for for structural purposes or spacing.
+When it comes to making emails, divs aren’t a thing. Don’t kill the messenger, but it’s true. It's not fun finding out we can't just use a `<div>` with auto left and right margins for centering, or background colors; it won't work with most email clients. `<div>`'s can still be used for targeting CSS and for grouping semantically related elements, but shouldn’t be used for structural purposes or spacing.
 
 Instead, you can use the `<wrapper>` Inky tag to create background colors and target elements inside. [More on Wrapper &#8594;](wrapper.html)
 
@@ -113,7 +113,7 @@ Speaking of CSS, you should only set classes and IDs on tables or `<td>` tags, n
 Support of CSS properties varies greatly between email clients. You're best off sticking with the basics and not getting too fancy.
 
 This CSS compatibility chart will really save you some pain when writing CSS:
-[CSS Support Chart](https://www.campaignmonitor.com/css/b/)
+[CSS Support Chart](https://www.campaignmonitor.com/css/)
 
 <img src="assets/img/campaign-monitor-css-guide.jpg" alt="">
 
@@ -123,7 +123,7 @@ For some things you can do and work-arounds, see the <a href="#progressive-enhan
 
 #### Inlining CSS
 
-Gmail strips the `<head>` (and, consequently, `<style>`) tags from your email. Therefor your email's CSS needs to be inlined. You know, like old school CSS:
+Gmail strips the `<head>` (and, consequently, `<style>`) tags from your email. Therefore your email's CSS needs to be inlined. You know, like old school CSS:
 
 ```html
 <table class="menu" style="padding:0;text-align:center;vertical-align:top;width:auto">
@@ -246,7 +246,7 @@ Problems
 
 Causes
 
-- Making the HTML file size less than 20kb (20540 characters) - not including images or the plain-text version. This charachter count includes things like inline styles, HTML tags, and spaces, and other HTML entities.
+- Making the HTML file size less than 20kb (20540 characters) - not including images or the plain-text version. This character count includes things like inline styles, HTML tags, and spaces, and other HTML entities.
 - Downloading the message over cellular data, not WiFi. Can't do much about this one.
 
 Solution?
@@ -274,7 +274,7 @@ Use fonts that are recognizeable to most users.
 
 In general, use a single font throughout your email. Mixing several different fonts can make your email seem fragmented and sloppy. Instead, use one font and just a few styles and sizes.
 
-<img src="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Art/mail_message_axlarge_2x.png" alt="">
+<img src="https://developer.apple.com/ios/human-interface-guidelines/images/TypographyGraphic_2x.png" alt="">
 
 <a id="progressive-enhancement"></a>
 ## Progressive Enhancement
@@ -317,7 +317,7 @@ These services make testing on lots of email clients and devices much faster. Tr
 
 ---
 
-## Sending you Emails
+## Sending your Emails
 
 ESP's are made for sending thousands and thousands of emails, they can help you get emails out without being deemed a spammer.
 

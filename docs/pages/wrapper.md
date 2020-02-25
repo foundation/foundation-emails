@@ -1,6 +1,6 @@
 ---
 title: Wrapper
-description: Wrapper creates the necessary structure to wrap elements so that full width backgrounds can applied.
+description: Wrapper creates the necessary structure to wrap elements so that full width backgrounds can be applied.
 tags:
   - full width
   - fliud
@@ -10,7 +10,7 @@ tags:
 
 ## Basics
 
-When using [Inky](inky.html) HTML, the `<wrapper>` tag will create a `<table>`, `<tr>`, `<th>` structure needed to create consistant full width backgrounds. You can add classes to the wrapper to target CSS properties on it or target elements within it. The `.wrapper-inner` class is available to add padding to the wrapper.
+When using [Inky](inky.html) HTML, the `<wrapper>` tag will create a `<table>`, `<tr>`, `<th>` structure needed to create consistent full width backgrounds. You can add classes to the wrapper to target CSS properties on it or target elements within it. The `.wrapper-inner` class is available to add padding to the wrapper.
 
 ```inky_example
 <wrapper>
@@ -64,6 +64,6 @@ Creating a fluid header with the `<wrapper>` component is pretty straight forwar
 </wrapper>
 ```
 
-Using this structure outside of the container will yeild a fluid width background that expands to the width of the email client's viewport.
+Using this structure outside of the container will yield a fluid width background that expands to the width of the email client's viewport.
 
 

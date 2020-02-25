@@ -62,6 +62,10 @@ $global-width-small: 95% !default;
 /// @type length
 $global-gutter: 16px !default;
 
+/// Gutter for grid elements on small screens.
+/// @type length
+$global-gutter-small: $global-gutter !default;
+
 /// Body background color.
 /// @type Length
 $body-background: $light-gray !default;
@@ -78,7 +82,7 @@ $global-padding: 16px !default;
 /// @type Number
 $global-margin: 16px !default;
 
-/// Global raidus of radius-corners.
+/// Global radius of radius-corners.
 /// @type Number
 $global-radius: 3px !default;
 

@@ -28,8 +28,8 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding-left: $global-gutter !important;
-    padding-right: $global-gutter !important;
+    padding-left: $global-gutter-small !important;
+    padding-right: $global-gutter-small !important;
 
     // Nested columns won't double the padding
     .column,

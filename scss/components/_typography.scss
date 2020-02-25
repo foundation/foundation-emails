@@ -18,13 +18,13 @@ $body-font-family: Helvetica, Arial, sans-serif !default;
 /// @type Keyword
 $global-font-weight: normal !default;
 
-/// Global font weight.
-/// @type Keyword
+/// Header color
+/// @type Color
 $header-color: inherit !default;
 
 /// Global line height.
 /// @type Number
-$global-line-height: 1.3 !default;
+$global-line-height: 130% !default;
 
 /// Font size of body text.
 /// @type Number
@@ -44,27 +44,27 @@ $header-font-weight: $global-font-weight !default;
 
 /// Font size of `<h1>` elements.
 /// @type Number
-$h1-font-size: 34px !default;
+$h1-font-size: floor($global-font-size * 2.125) !default;
 
 /// Font size of `<h2>` elements.
 /// @type Number
-$h2-font-size: 30px !default;
+$h2-font-size: floor($global-font-size * 1.875) !default;
 
 /// Font size of `<h3>` elements.
 /// @type Number
-$h3-font-size: 28px !default;
+$h3-font-size: floor($global-font-size * 1.75) !default;
 
 /// Font size of `<h4>` elements.
 /// @type Number
-$h4-font-size: 24px !default;
+$h4-font-size: floor($global-font-size * 1.5) !default;
 
 /// Font size of `<h5>` elements.
 /// @type Number
-$h5-font-size: 20px !default;
+$h5-font-size: floor($global-font-size * 1.2) !default;
 
 /// Font size of `<h6>` elements.
 /// @type Number
-$h6-font-size: 18px !default;
+$h6-font-size: floor($global-font-size * 1.125) !default;
 
 /// Margin bottom of `<h1>` through `<h6>` elements.
 /// @type Number
@@ -88,7 +88,7 @@ $lead-font-size: $global-font-size * 1.25 !default;
 
 /// Line height of lead paragraphs.
 /// @type Number
-$lead-line-height: 1.6 !default;
+$lead-line-height: 160% !default;
 
 /// Padding inside paragraphs.
 /// @type Number
@@ -124,7 +124,11 @@ $hr-border: 1px solid $black !default;
 
 /// Default margin for a divider.
 /// @type Number | List
-$hr-margin: 20px auto !default;
+$hr-margin: 20px !default;
+
+/// Default alignment for a divider.
+/// @type String
+$hr-align: center !default;
 
 /// Text decoration for anchors.
 /// @type Keyword
@@ -150,6 +154,56 @@ $anchor-color-active: $anchor-color-hover !default;
 /// @type Number
 $stat-font-size: 40px !default;
 
+/// Removing the iOS telephone and address styling
+/// @type Boolean
+$remove-ios-blue: true !default;
+
+/// Create a divider/horizontal rule.
+/// @param {String} $align  - Left, center, or right
+/// @param {String} $width  - Width of divider
+/// @param {String} $border - Shorthand border style for divider
+/// @param {String} $margin - Margin above and below divider
+@mixin h-line($align: $hr-align, $width: $hr-width, $border: $hr-border, $margin: nth($hr-margin, 1)) {
+  @at-root {
+    td.columns & table,
+    td.column  & table,
+    th.columns & table,
+    th.column  & table {
+      width: auto;
+    }
+  }
+
+  th {
+    padding-bottom: $margin;
+    @if $align == 'left' {
+      text-align: left;
+    } @elseif $align == 'right' {
+      text-align: right;
+    } @else {
+      text-align: center;
+    }
+  }
+
+    table {
+      display: inline-block;
+      margin: 0;
+      Margin: 0;
+    }
+
+      td {
+        width: $width;
+        height: 0;
+        padding-top: $margin;
+        clear: both;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: $border;
+        border-left: 0;
+        font-size: 0;
+        line-height: 0;
+      }
+}
+
 body,
 table.body,
 h1,
@@ -160,12 +214,14 @@ h5,
 h6,
 p,
 td,
-th,
-a {
+th {
   color: $global-font-color;
   font-family: $body-font-family;
   font-weight: $global-font-weight;
-  padding: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
   margin: 0;
   Margin: 0;
   text-align: left;
@@ -239,7 +295,8 @@ p {
   }
 }
 
-small {
+small
+.small {
   font-size: $small-font-size;
   color: $small-font-color;
 }
@@ -247,6 +304,11 @@ small {
 a {
   color: $anchor-color;
   text-decoration: $anchor-text-decoration;
+  font-family: $body-font-family;
+  font-weight: $global-font-weight;
+  padding: 0;
+  text-align: left;
+  line-height: $global-line-height;
 
   &:hover {
     color: $anchor-color-hover;
@@ -297,20 +359,9 @@ pre {
 }
 
 // Horizontal rule
-table.hr {
-  width: 100%;
-  
-  th {
-    height: 0;
-    max-width: $hr-width;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: $hr-border;
-    border-left: 0;
-    margin: $hr-margin;
-    Margin: $hr-margin;
-    clear: both;
-  }
+table.hr,
+table.h-line {
+  @include h-line($hr-align, $hr-width, $hr-border, $hr-margin);
 }
 
 // Use to style a large number to display a statistic
@@ -336,4 +387,19 @@ span.preheader {
   max-width: 0px;
   opacity: 0;
   overflow: hidden;
+}
+
+// Removing the iOS colors put in for telephone and addresses
+@if $remove-ios-blue {
+  // Wrapping in a media only screen to have inline-css respect the styling
+  @media only screen {
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+  }
 }

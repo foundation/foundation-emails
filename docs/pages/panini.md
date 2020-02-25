@@ -12,7 +12,7 @@ If you've ever created a static site, maybe you had five pages that all shared t
 
 Panini is a flat file compiler that uses the concepts of templates, pages, and partials&mdash;powered by the [Handlebars](https://handlebarsjs.com/) templating language&mdash;to streamline the process of creating static prototypes.
 
-Our [prototyping template](starter-projects.html) uses Panini, along with a host of other tools for processing Sass and images, to make creating optimized templates easy. It's already been configured to utilize all of the features below, but if you want to learn the specifics of how to configure the library, head over to the [Panini GitHub page](https://github.com/zurb/panini).
+Our [prototyping template](https://github.com/zurb/foundation-emails-template) uses Panini, along with a host of other tools for processing Sass and images, to make creating optimized templates easy. It's already been configured to utilize all of the features below, but if you want to learn the specifics of how to configure the library, head over to the [Panini GitHub page](https://github.com/zurb/panini).
 
 ---
 
@@ -177,7 +177,7 @@ If you don't see the right helper, you can write your own. Add a javascript file
 ```
 // Example file src/helpers/bold.js
 module.exports = function(options) {
-  // options.fn(this) = Handelbars content between {{#bold}} HERE {{/bold}}
+  // options.fn(this) = Handlebars content between {{#bold}} HERE {{/bold}}
   var bolder = '<strong>' + options.fn(this) + '</strong>';
   return bolder;
 }

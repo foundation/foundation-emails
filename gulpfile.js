@@ -11,6 +11,7 @@ var inky = require('inky');
 var siphon = require('siphon-media-query');
 var lazypipe = require('lazypipe');
 var fs = require('fs');
+var yargs = require('yargs');
 
 // Configuration for the documentation generator
 supercollider
@@ -117,7 +118,8 @@ gulp.task('lint', function() {
 // Creates a BrowserSync server
 gulp.task('server', ['build'], function() {
   browser.init({
-    server: './_build'
+    server: './_build',
+    port: yargs.argv.port || 3001
   });
 });
 
@@ -209,7 +211,7 @@ gulp.task('dist', ['sass:foundation'], function() {
 });
 
 function inliner(css) {
-  var css = fs.readFileSync(css).toString();
+  css = fs.readFileSync(css).toString();
   var mqCss = siphon(css);
 
   var pipe = lazypipe()
@@ -221,7 +223,8 @@ function inliner(css) {
     .pipe($.injectString.replace, '<!-- <style> -->', '<style>'+mqCss+'</style>')
     .pipe($.htmlmin, {
       collapseWhitespace: false,
-      minifyCSS: false
+      minifyCSS: false,
+      maxLineLength: 800
     });
 
   return pipe();

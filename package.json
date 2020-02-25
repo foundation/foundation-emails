@@ -6,6 +6,8 @@
     "responsive",
     "emails"
   ],
+  "style": "dist/foundation-emails.min.css",
+  "main": "dist/foundation-emails.css",
   "author": "ZURB <foundation@zurb.com> (http://foundation.zurb.com)",
   "scripts": {
     "start": "gulp",
@@ -54,6 +56,7 @@
     "siphon-media-query": "^1.0.0",
     "supercollider": "^1.4.0",
     "typeahead.js": "^0.11.1",
+    "yargs": "^7.1.0",
     "zeroclipboard": "^2.2.0"
   },
   "license": "MIT",
