@@ -7,7 +7,7 @@
 ////
 
 @media only screen and (max-width: #{$global-breakpoint}) {
-  table.body img {
+  table.body img :not(.footer img) {
     width: auto;
     height: auto;
   }
