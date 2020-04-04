@@ -68,6 +68,16 @@ th.column {
   padding-left: $global-gutter;
   padding-bottom: $column-padding-bottom;
 
+  .column.first,
+  .columns.first {
+    padding-left: 0 !important;
+  }
+
+  .column.last,
+  .columns.last {
+    padding-right: 0 !important;
+  }
+
   // Prevents Nested columns from double the padding
   .column,
   .columns {
@@ -94,8 +104,17 @@ td.columns,
 td.column,
 th.columns,
 th.column {
-  table:not(.button) {
+  table {
     width: 100%;
+
+    &.button {
+      width:auto;
+
+      &.expand,
+      &.expanded {
+        width: 100%;
+      }
+    }
   }
 }
 

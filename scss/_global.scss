@@ -62,6 +62,10 @@ $global-width-small: 95% !default;
 /// @type length
 $global-gutter: 16px !default;
 
+/// Gutter for grid elements on small screens.
+/// @type length
+$global-gutter-small: $global-gutter !default;
+
 /// Body background color.
 /// @type Length
 $body-background: $light-gray !default;
