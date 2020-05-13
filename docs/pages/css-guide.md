@@ -33,7 +33,7 @@ We'll be writing a layout from scratch, so open up `index.html`.
 
 ## Boilerplate
 
-Inside `index.html`, you can see the boilerplate needed to make an HTML work, with comments explaining what does what.
+Inside `index.html`, you can see the boilerplate needed to make an HTML email work, with comments explaining what does what.
 
 ```html
 <!-- Emails use the XHTML Strict doctype -->
