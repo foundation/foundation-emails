@@ -49,7 +49,7 @@ Essentially, it is just custom HTML tags. Things like `<row>` and `<columns>` ar
 
 **How does it work?**
 
-We run a Gulp task that runs through your code, identifies our custom Inky tags, and translates them into valid HTML. For the more tech-savvy, you can [check out our task on our Github Repo](https://github.com/zurb/foundation-emails/blob/master/gulpfile.js#L149).
+We run a Gulp task that runs through your code, identifies our custom Inky tags, and translates them into valid HTML. For the more tech-savvy, you can [check out our task on our Github Repo](https://github.com/foundation/foundation-emails/blob/v2.0.0/gulpfile.js#L149).
 
 <a id="how-to-inky"></a>
 **How do I start Inky?**
