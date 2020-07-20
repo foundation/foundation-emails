@@ -6,10 +6,10 @@ require "foundation_emails/version"
 Gem::Specification.new do |spec|
   spec.name          = "foundation_emails"
   spec.version       = FoundationEmails::VERSION
-  spec.authors       = ["ZURB"]
+  spec.authors       = ["Foundation"]
   spec.email         = ["contact@get.foundation"]
 
-  spec.summary       = %q{A framework for responsive emails made by ZURB.}
+  spec.summary       = %q{A framework for responsive emails.}
   spec.description   = %q{Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client.}
   spec.homepage      = "https://get.foundation/emails"
   spec.license       = "MIT"

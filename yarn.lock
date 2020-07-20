@@ -2763,8 +2763,8 @@ foundation-docs@zurb/foundation-docs:
   resolved "https://codeload.github.com/zurb/foundation-docs/tar.gz/b951a97bb0e5ee94d74050590aa179bf15181a4b"
   dependencies:
     cheerio "^1.0.0-rc.2"
-    handlebars "^4.5.3"
-    highlight.js "^9.16.2"
+    handlebars "^4.1.2"
+    highlight.js "^9.0.0"
     inky "^1.2.6"
     js-beautify "^1.6.2"
     kebab-case "^1.0.0"
@@ -3772,9 +3772,9 @@ inky@^1.2.6:
     through2 "^2.0.0"
     vinyl-fs "^2.3.0"
 
-inky@zurb/inky#browser-build:
+inky@foundation/inky#browser-build:
   version "1.3.6"
-  resolved "https://codeload.github.com/zurb/inky/tar.gz/f085b50b52f7b27b8bf70afec06eb615d3f2c18c"
+  resolved "https://codeload.github.com/foundation/inky/tar.gz/f085b50b52f7b27b8bf70afec06eb615d3f2c18c"
   dependencies:
     cheerio "^0.20.0"
     foundation-emails "^2.2.0"
