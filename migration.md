@@ -1,15 +1,19 @@
 # Foundation for Emails 2 Migration Guide
 
-- [What’s new?](https://github.com/zurb/foundation-emails/blob/master/migration.md#whats-new)
-- [Overview](https://github.com/zurb/foundation-emails/blob/master/migration.md#overview)
-- [HTML](https://github.com/zurb/foundation-emails/blob/master/migration.md#html)
-- [CSS/Sass](https://github.com/zurb/foundation-emails/blob/master/migration.md#csssass)
-- [Components](https://github.com/zurb/foundation-emails/blob/master/migration.md#components)
-  - [Grid](https://github.com/zurb/foundation-emails/blob/master/migration.md#grid)
-  - [Buttons](https://github.com/zurb/foundation-emails/blob/master/migration.md#buttons)
-  - [Callout](https://github.com/zurb/foundation-emails/blob/master/migration.md#panels-are-now-callouts)
-  - [Menu](https://github.com/zurb/foundation-emails/blob/master/migration.md#menu)
-- [Dependencies](https://github.com/zurb/foundation-emails/blob/master/migration.md#dependencies)
+- [What’s new?](#whats-new)
+- [Overview](#overview)
+- [HTML](#html)
+- [CSS/Sass](#csssass)
+- [Components](#components)
+  - [Grid](#grid)
+  - [Sub-grid is now a small grid](#sub-grid-is-now-a-small-grid)
+  - [Block Grid](#block-grid)
+  - [Offset Columns](#offset-columns)
+- [Buttons](#buttons)
+- [Panels are now Callouts](#panels-are-now-callouts)
+- [NEW](#new)
+  - [Menu](#menu)
+- [Dependencies](#dependencies)
 
 #### This guide describes the changes required to migrate a Foundation for Emails template from version 1 (formerly Ink) to 2.
 
@@ -18,7 +22,7 @@
 - **Streamlined and updated responsive grid:** We’ve simplified the markup in the new version so it’s faster and easier to code. The new responsive grid in Emails 2 requires fewer tags and classes. It’s also now responsive on Android Native!
 - **Inky templating language:** With Inky you can write less code and get more done. The Inky language gets you out of tables and into a simpler, more web-like, HTML.
 - **Built with Sass:** Now faster than ever, you can easily make sweeping visual changes to your email that reflect your brand styles - all within one settings file.
-- **ZURB Stack:** All kinds of task automation - [Panini](http://foundation.zurb.com/sites/docs/panini.html), our Handlebars templates, compiling Sass, BrowserSync, image compression, and auto inlining are built in to speed up your workflow. 
+- **ZURB Stack:** All kinds of task automation - [Panini](https://get.foundation/sites/docs/panini.html), our Handlebars templates, compiling Sass, BrowserSync, image compression, and auto inlining are built in to speed up your workflow.
 
 ## Overview
 
@@ -53,11 +57,11 @@ With Foundation for Emails 2, confusing and tedious tables are a thing of the pa
 </container>
 ```
 
-You can use it to create the grid structure, buttons, and other components. We’ll go into this in detail in the components section. We'll explain more in the [Grid section](https://github.com/zurb/foundation-emails/blob/master/migration.md#grid).
+You can use it to create the grid structure, buttons, and other components. We’ll go into this in detail in the components section. We'll explain more in the [Grid section](#grid).
 
 ## CSS/Sass
 
-Foundation for Emails 2 is available in a Sass version which let’s you quickly change common CSS values with some simple variables within the settings. 
+Foundation for Emails 2 is available in a Sass version which let’s you quickly change common CSS values with some simple variables within the settings.
 
 These are some CSS classes that are no longer needed for proper spacing:
 - .wrapper
@@ -87,7 +91,7 @@ In the previous version, we needed extra tags to support a wrapper element. This
             <table class="twelve columns">
               <tr>
                 <td class="text-pad">
-                            
+
                 </td>
                 <td class="expander"></td>
               </tr>
@@ -112,7 +116,7 @@ In F4E 2, we’ve eliminated another a tag in an effort to simplify your markup.
       <table class="row">
         <tr>
           <th class="first last small-12 large-12 columns">
-              
+
           </th>
         </tr>
       </table>
@@ -128,7 +132,7 @@ Version 2 (Inky markup)
 <container>
   <row>
     <columns small="12" large="12">
-      
+
     </columns>
   </row>
 </container>
@@ -147,10 +151,10 @@ Version 1
       <table class="twelve columns">
         <tr>
           <td class="six sub-columns">
-                              
+
           </td>
           <td class="six sub-columns last">
-                              
+
           </td>
           <td class="expander"></td>
         </tr>
@@ -167,20 +171,20 @@ Version 2 (CSS version)
 <table class="container">
   <tr>
     <td>
-         
+
       <table class="row">
         <tr>
-          <th class="first large-6 small-6 columns">      
-        
+          <th class="first large-6 small-6 columns">
+
           </th>
-         
+
           <th class="last large-6 small-6 columns">
 
           </th>
           <th class="expander"></th>
         </tr>
       </table>
-         
+
     </td>
   </tr>
 </table>
@@ -192,10 +196,10 @@ Version 2 (Inky markup)
 <container>
   <row>
     <columns small="6">
-        
+
     </columns>
     <columns small="6">
-        
+
     </columns>
   </row>
 </container>
@@ -205,7 +209,7 @@ Version 2 (Inky markup)
 The block grid has a minor syntax change with identifying the number of elements that are displayed in the row. We’ve moved to the convention of `.up-x`, instead of `.ex-up`.
 
 
-Version 1 
+Version 1
 
 ```
 <table class="block-grid three-up">
@@ -246,7 +250,7 @@ Version 2 (Inky markup)
 ### Offset Columns
 Because we’ve eliminated the wrapper, offsets are now directly applied to the column itself.
 
-Version 1 
+Version 1
 
 ```
 <table class="row">
@@ -256,7 +260,7 @@ Version 1
       <table class="eight columns">
         <tr>
           <td class="panel">
-      
+
           </td>
           <td class="expander"></td>
         </tr>
@@ -272,7 +276,7 @@ Version 2 (CSS version)
 <table class="row">
   <tr>
     <th class="small-4 small-offset-8 large-4 large-offset-8 columns">
-  
+
     </th>
    </tr>
 </table>
@@ -283,7 +287,7 @@ Version 2 (Inky markup)
 ```
 <row>
   <columns small="4" large="4" class="small-offset-8 large-offset-8">
-  
+
   </columns>
 </row>
 ```
@@ -291,7 +295,7 @@ Version 2 (Inky markup)
 ## Buttons
 In the previous version of F4E the text inside of the button was the only clickable element. In F4E 2, we’ve taken the hybrid approach of using padding and borders to increase the clickable area
 
-Version 1 
+Version 1
 
 ```
 <table class="button">
@@ -332,7 +336,7 @@ The button markup has changed to make the touch targets better. Now the whole bu
 ## Panels are now Callouts
 In an effort to unify the terminology across the Foundation family panels are now called callouts.
 
-Version 1 
+Version 1
 
 ```
 <table class="twelve columns">
@@ -351,7 +355,7 @@ Version 2 (CSS version)
 <table class="small-12 columns">
   <tr>
     <td class="callout">
-      
+
     </td>
     <td class="expander"></td>
   </tr>
@@ -403,7 +407,7 @@ Version 2 (CSS version)
 ```
 <table class="container">
   <tr>
-    <td>     
+    <td>
 
       <table class="menu">
         <tr>
@@ -454,4 +458,4 @@ The menu component can be used to create a simple set of links comonly used in h
 - Git
 - Node
 
-To use the Sass version with the Inky markup language you'll want to insall the Foundation for Emails project template. You'll find the [installation instructions here](https://github.com/zurb/foundation-emails/tree/v2.0#getting-started).
+To use the Sass version with the Inky markup language you'll want to insall the Foundation for Emails project template. You'll find the [installation instructions here](https://github.com/foundation/foundation-emails#getting-started).
