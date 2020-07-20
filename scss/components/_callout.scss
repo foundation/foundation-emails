@@ -26,7 +26,11 @@ $callout-margin-bottom: $global-margin !default;
 /// @type Border
 $callout-border: 1px solid darken($callout-background, 20%) !default;
 
-/// Border around a callout with the `.success` class.
+/// Border around a callout with the `.primary` class.
+/// @type Border
+$callout-border-primary: 1px solid darken($primary-color, 20%) !default;
+
+/// Border around a callout with the `.secondary` class.
 /// @type Border
 $callout-border-secondary: 1px solid darken($secondary-color, 20%) !default;
 
@@ -55,7 +59,7 @@ th.callout-inner {
 
   &.primary {
     background: scale-color($primary-color, $lightness: $callout-background-fade);
-    border: $callout-border-secondary;
+    border: $callout-border-primary;
     color: $black;
   }
 
@@ -68,18 +72,18 @@ th.callout-inner {
   &.success {
     background: scale-color($success-color, $lightness: $callout-background-fade);
     border: $callout-border-success;
-    color: $white;
+    color: $black;
   }
 
   &.warning {
     background: scale-color($warning-color, $lightness: $callout-background-fade);
     border: $callout-border-warning;
-    color: $white;
+    color: $black;
   }
 
   &.alert {
     background: scale-color($alert-color, $lightness: $callout-background-fade);
     border: $callout-border-alert;
-    color: $white;
+    color: $black;
   }
 }

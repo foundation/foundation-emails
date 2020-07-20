@@ -99,8 +99,8 @@ There are more utility classes that you can use to isolate and collapse portions
 
 ```inky_example
 <row class="collapse">
-  <columns large="6"><img src="http://placehold.it/300x150/777777/&text=These columns touch" alt=""></columns>
-  <columns large="6"><img src="http://placehold.it/300x150/999999/&text=These columns touch" alt=""></columns>
+  <columns large="6"><img src="https://placehold.it/300x150/777777/&text=These columns touch" alt=""></columns>
+  <columns large="6"><img src="https://placehold.it/300x150/999999/&text=These columns touch" alt=""></columns>
 </row>
 ```
 
@@ -114,7 +114,7 @@ Use the class `.large-offset-n` to create an offset, where `n` is the amount of 
 
 ```inky_example
 <row>
-  <columns large="3" class="large-offset-3"><img src="http://placehold.it/150x150/999999/&text=offset column" alt=""></columns>
-  <columns large="3"><img src="http://placehold.it/150x150/999999" alt=""></columns>
+  <columns large="3" class="large-offset-3"><img src="https://placehold.it/150x150/999999/&text=offset column" alt=""></columns>
+  <columns large="3"><img src="https://placehold.it/150x150/999999" alt=""></columns>
 </row>
 ```

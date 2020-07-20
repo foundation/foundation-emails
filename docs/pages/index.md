@@ -79,7 +79,7 @@ Get to know the pieces of Foundation.
   </a></div>
   <div class="column"><a href="wrapper.html">
     <strong>Wrapper</strong>
-    <p>Helps create full with or fluid backgrounds.</p>
+    <p>Helps create full width or fluid backgrounds.</p>
   </a></div>
   <div class="column"><a href="typography.html">
     <strong>Typography</strong>
