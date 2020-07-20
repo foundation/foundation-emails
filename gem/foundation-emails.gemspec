@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "foundation_emails"
   spec.version       = FoundationEmails::VERSION
   spec.authors       = ["ZURB"]
-  spec.email         = ["foundation@zurb.com"]
+  spec.email         = ["contact@get.foundation"]
 
   spec.summary       = %q{A framework for responsive emails made by ZURB.}
   spec.description   = %q{Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client.}
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.12"
+  spec.add_development_dependency "bundler", "~> 2"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
 end
