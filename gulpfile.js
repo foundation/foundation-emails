@@ -12,6 +12,9 @@ var siphon = require('siphon-media-query');
 var lazypipe = require('lazypipe');
 var fs = require('fs');
 var yargs = require('yargs');
+var sass = require('gulp-sass');
+
+sass.compiler = require('node-sass');
 
 // Configuration for the documentation generator
 supercollider
@@ -72,24 +75,23 @@ gulp.task('html', function() {
     });
 });
 
-gulp.task('sass', ['sass:docs', 'sass:foundation']);
 
 // Compiles documentation-specific CSS
 gulp.task('sass:docs', function() {
   return gulp.src('docs/assets/scss/docs.scss')
-    .pipe($.sass({ includePaths: [process.cwd()] }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-      browsers: ['last 2 versions', 'ie >= 9']
-    }))
+    .pipe(sass.sync({ includePaths: [process.cwd()] }).on('error', sass.logError))
+    .pipe($.autoprefixer())
     .pipe(gulp.dest('_build/assets/css'));
 });
 
 // Compiles Foundation-specific CSS
 gulp.task('sass:foundation', function() {
   return gulp.src('scss/foundation-emails.scss')
-    .pipe($.sass().on('error', $.sass.logError))
+    .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest('_build/assets/css'));
 });
+
+gulp.task('sass', gulp.series('sass:docs', 'sass:foundation'));
 
 // Compiles documentation JavaScript
 gulp.task('javascript:docs', function() {
@@ -115,16 +117,18 @@ gulp.task('lint', function() {
     .pipe($.sassLint.failOnError());
 });
 
+// Runs the entire build process
+gulp.task('build', gulp.series('clean', 'copy', 'copy-inky', 'html', 'sass', 'javascript:docs', function(cb){
+  cb();
+}));
+
 // Creates a BrowserSync server
-gulp.task('server', ['build'], function() {
-  browser.init({
-    server: './_build',
-    port: yargs.argv.port || 3001
-  });
-});
+gulp.task('server', gulp.series('build', function(){
+  browser.init({server: './_build', port: yargs.argv.port||3001});
+}));
 
 // Uploads the documentation to the live server
-gulp.task('deploy:docs', ['build'], function() {
+gulp.task('deploy:docs', gulp.series('build'), function() {
   return gulp.src('./_build/**')
     .pipe($.prompt.confirm('Make sure everything looks right before you deploy.'))
     .pipe($.rsync({
@@ -134,23 +138,13 @@ gulp.task('deploy:docs', ['build'], function() {
     }));
 });
 
-// Runs the entire build process
-gulp.task('build', function(cb) {
-  sequence('clean', ['copy', 'copy-inky', 'html', 'sass', 'javascript:docs'], cb);
-});
 
 // Runs the build process, spins up a server, and watches for file changes
-gulp.task('default', ['server'], function() {
+gulp.task('default', gulp.series('server', function() {
   gulp.watch('docs/**/*', ['html', browser.reload]);
   gulp.watch(['docs/assets/scss/**/*', 'node_modules/foundation-docs/scss/**/*'], ['sass:docs', browser.reload]);
   gulp.watch('scss/**/*.scss', ['sass:foundation', browser.reload]);
-});
-
-gulp.task('test', ['sass', 'test:compile'], function() {
-  browser.init({ server: 'test/visual/_build', directory: true });
-  gulp.watch('scss/**/*.scss', ['sass:foundation', browser.reload]);
-  gulp.watch('test/visual/pages/*.html', ['test:compile', browser.reload]);
-});
+}));
 
 gulp.task('test:compile', function() {
   gulp.src('test/visual/pages/*.html')
@@ -159,6 +153,12 @@ gulp.task('test:compile', function() {
     .pipe(inliner('_build/assets/css/foundation-emails.css'))
     .pipe(gulp.dest('test/visual/_build'));
 });
+
+gulp.task('test', gulp.series('sass', 'test:compile', function() {
+  browser.init({ server: 'test/visual/_build', directory: true });
+  gulp.watch('scss/**/*.scss', ['sass:foundation', browser.reload]);
+  gulp.watch('test/visual/pages/*.html', ['test:compile', browser.reload]);
+}));
 
 gulp.task('templates', function() {
   return gulp.src('templates/*.html')
@@ -178,37 +178,37 @@ gulp.task('download:build:index', function() {
     .pipe(gulp.dest('.download'));
 });
 
-gulp.task('download:build:templates', ['templates'], function() {
+gulp.task('download:build:templates', gulp.series('templates', function() {
   return gulp.src('.templates/*.html')
     .pipe(gulp.dest('.download/templates'));
-});
+}));
 
-gulp.task('download:build:css', ['sass:foundation'], function() {
+gulp.task('download:build:css', gulp.series('sass:foundation', function() {
   return gulp.src('_build/assets/css/foundation-emails.css')
     .pipe(gulp.dest('.download/css'));
-})
+}));
 
-gulp.task('download:build', ['download:build:index', 'download:build:templates', 'download:build:css'], function() {
+gulp.task('download:build', gulp.series('download:build:index', 'download:build:templates', 'download:build:css', function() {
   return gulp.src('.download/**/*')
     .pipe($.zip('foundation-emails.zip'))
     .pipe(gulp.dest('.'));
-});
+}));
 
-gulp.task('download', ['download:build'], function(done) {
+gulp.task('download', gulp.series('download:build', function(done) {
   return gulp.src('foundation-emails.zip')
     .pipe($.rsync({
       hostname: 'deployer@72.32.134.77',
       destination: '/home/deployer/sites/foundation-sites-6-marketing/downloads/'
     }));
-});
+}));
 
-gulp.task('dist', ['sass:foundation'], function() {
+gulp.task('dist', gulp.series('sass:foundation', function() {
   return gulp.src('_build/assets/css/foundation-emails.css')
     .pipe(gulp.dest('dist'))
     .pipe($.cssnano())
     .pipe($.rename('foundation-emails.min.css'))
     .pipe(gulp.dest('dist'));
-});
+}));
 
 function inliner(css) {
   css = fs.readFileSync(css).toString();
