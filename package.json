@@ -1,14 +1,14 @@
 {
   "name": "foundation-emails",
   "version": "2.2.1",
-  "description": "A framework for responsive emails made by ZURB",
+  "description": "A framework for responsive emails",
   "keywords": [
     "responsive",
     "emails"
   ],
   "style": "dist/foundation-emails.min.css",
   "main": "dist/foundation-emails.css",
-  "author": "ZURB <foundation@zurb.com> (http://foundation.zurb.com)",
+  "author": "Foundation <contact@get.foundation> (https://get.foundation)",
   "scripts": {
     "start": "gulp",
     "test:visual": "gulp test",
@@ -18,13 +18,13 @@
     "deploy:templates": "gulp templates",
     "deploy:docs": "gulp deploy:docs"
   },
-  "repository": "https://github.com/zurb/foundation-emails",
-  "bugs": "https://github.com/zurb/foundation-emails/issues",
+  "repository": "https://github.com/foundation/foundation-emails",
+  "bugs": "https://github.com/foundation/foundation-emails/issues",
   "devDependencies": {
     "browser-sync": "^2.9.10",
     "cheerio": "^0.19.0",
     "clipboard-js": "^0.2.0",
-    "foundation-docs": "git+https://github.com/zurb/foundation-docs.git#856ca900f5fae6557a74530d1eeaf7b244736d28",
+    "foundation-docs": "foundation/foundation-docs",
     "foundation-sites": "^6.2.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.3.1",
@@ -45,7 +45,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-wrap": "^0.11.0",
     "gulp-zip": "^3.2.0",
-    "inky": "zurb/inky#browser-build",
+    "inky": "foundation/inky#browser-build",
     "lazypipe": "^1.0.1",
     "motion-ui": "^1.1.1",
     "multiline": "^1.0.2",
