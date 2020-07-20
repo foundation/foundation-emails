@@ -13,6 +13,9 @@ var lazypipe = require('lazypipe');
 var fs = require('fs');
 var yargs = require('yargs');
 var sass = require('gulp-sass');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var cssnano = require('cssnano');
 
 sass.compiler = require('node-sass');
 
@@ -80,7 +83,7 @@ gulp.task('html', function() {
 gulp.task('sass:docs', function() {
   return gulp.src('docs/assets/scss/docs.scss')
     .pipe(sass.sync({ includePaths: [process.cwd()] }).on('error', sass.logError))
-    .pipe($.autoprefixer())
+    .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest('_build/assets/css'));
 });
 
@@ -205,7 +208,7 @@ gulp.task('download', gulp.series('download:build', function(done) {
 gulp.task('dist', gulp.series('sass:foundation', function() {
   return gulp.src('_build/assets/css/foundation-emails.css')
     .pipe(gulp.dest('dist'))
-    .pipe($.cssnano())
+    .pipe(postcss([cssnano()]))
     .pipe($.rename('foundation-emails.min.css'))
     .pipe(gulp.dest('dist'));
 }));
