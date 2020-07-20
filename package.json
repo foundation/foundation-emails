@@ -1,14 +1,14 @@
 {
   "name": "foundation-emails",
   "version": "2.2.1",
-  "description": "A framework for responsive emails made by ZURB",
+  "description": "A framework for responsive emails",
   "keywords": [
     "responsive",
     "emails"
   ],
   "style": "dist/foundation-emails.min.css",
   "main": "dist/foundation-emails.css",
-  "author": "ZURB <foundation@zurb.com> (http://foundation.zurb.com)",
+  "author": "Foundation <contact@get.foundation> (https://get.foundation)",
   "scripts": {
     "start": "gulp",
     "test:visual": "gulp test",
