@@ -1,4 +1,4 @@
-<!-- Please only file bugs with Foundation on GitHub. If you've got a more general question about how to use Foundation, we can help you on the Foundation Forum: http://foundation.zurb.com/forum -->
+<!-- Please only file bugs with Foundation on GitHub. If you've got a more general question about how to use Foundation, we can help you on the Foundation Forum: https://get.foundation/forum -->
 
 **How can we reproduce this bug?**
 

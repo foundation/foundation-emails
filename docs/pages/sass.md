@@ -4,7 +4,7 @@ description: Foundation for Emails is written in Sass, which allows us to make t
 ---
 
 <div class="primary callout">
-  <p>Not familiar with Sass? The [official tutorial](http://sass-lang.com/guide) on sass-lang.com is a great place to start.</p>
+  <p>Not familiar with Sass? The [official tutorial](https://sass-lang.com/guide) on sass-lang.com is a great place to start.</p>
 </div>
 
 ## Compatibility
@@ -26,7 +26,6 @@ To get started, first install the framework files using Bower or npm.
 
 ```bash
 npm install foundation-emails --save
-bower install foundation-emails --save
 ```
 
 Next, add the framework files as an import path in Sass. How you do this depends on your build process, but the path is the same regardless: `[packages_folder]/foundation-emails/scss`
@@ -95,4 +94,4 @@ $button-background: $primary-color;
 $button-border: 2px solid $button-background;
 ```
 
-We put together some [Best Practices on Sass file structure](http://zurb.com/university/lessons/avoid-a-cluttered-mess-sensible-sass-file-structure) that will help you keep your project clean.
+We put together some [Best Practices on Sass file structure](https://zurb.com/university/lessons/avoid-a-cluttered-mess-sensible-sass-file-structure) that will help you keep your project clean.

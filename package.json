@@ -6,6 +6,8 @@
     "responsive",
     "emails"
   ],
+  "style": "dist/foundation-emails.min.css",
+  "main": "dist/foundation-emails.css",
   "author": "ZURB <foundation@zurb.com> (http://foundation.zurb.com)",
   "scripts": {
     "start": "gulp",
