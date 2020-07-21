@@ -8,7 +8,7 @@ sass: scss/components/_typography.scss
 
 This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm. To show what a paragraph looks like this needs a little more content—so, did you know that female Giant Squids on average are around twice the size of (and around 10 feet longer than) their potential mates? Pretty cool. Use the `<strong>` and `<em>` tags to denote text that should be displayed or read with emphasis. Browsers will <strong>bold</strong> and <em>italicize</em> them, while screen readers will read the words with <em>emphasis</em>.
 
-```
+```html
 <p>This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm. To show what a paragraph looks like this needs a little more content—so, did you know that female Giant Squids on average are around twice the size of (and around 10 feet longer than) their potential mates? Pretty cool. Use the `<strong>` and `<em>` tags to denote text that should be displayed or read with emphasis. Browsers will <strong>bold</strong> and <em>italicize</em> them, while screen readers will read the words with <em>emphasis</em>.</p>
 ```
 
@@ -58,7 +58,7 @@ By inserting a `<small>` element into a header Foundation will scale the header 
 
 Links are very standard, and the color is preset to the Foundation primary color. [Learn more about Foundation's global colors](global.html).
 
-```
+```html
 <p>Links are very standard, and the color is preset to the Foundation primary color. <a href="global.html">Learn more about Foundation's global colors.</a></p>
 ```
 
@@ -68,6 +68,6 @@ Links are very standard, and the color is preset to the Foundation primary color
 
 Use dividers to define thematic breaks between paragraphs or sections of your email.
 
-```
+```html
 <hr/>
 ```

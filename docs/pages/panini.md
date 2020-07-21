@@ -174,7 +174,7 @@ Lorem ipsum [dolor sit amet](https://html5zombo.com), consectetur adipisicing el
 
 If you don't see the right helper, you can write your own. Add a javascript file to 'src/helpers', restart npm, then call it in your templates.
 
-```
+```javascript
 // Example file src/helpers/bold.js
 module.exports = function(options) {
   // options.fn(this) = Handlebars content between {{#bold}} HERE {{/bold}}
@@ -184,7 +184,7 @@ module.exports = function(options) {
 ```
 Then in your projects call your custom `{{#bold}}` helper
 
-```
+```handlebars
 {{#bold}}ideas{{/bold}}
 ```
 
@@ -213,7 +213,7 @@ Now, you can insert the values of these variables into the `index.html` page, *o
 
 Variables can also be added globally by creating an external JSON or YML file, and adding it to the `src/data` folder in your project. Let's create a file called `breakfast.yml`:
 
-```
+```yaml
 - eggs
 - bacon
 - toast
@@ -233,7 +233,7 @@ This code will print three `<li>`s, one for each item in the file.
 
 ## Tutorials
 
-[Staying D.R.Y. with Panini](https://zurb.com/university/lessons/staying-d-r-y-with-panini) 
+[Staying D.R.Y. with Panini](https://zurb.com/university/lessons/staying-d-r-y-with-panini)
 Panini comes with tons of Handlebars helpers built in, like a repeat helper or markdown parser, but in this lesson we’ll take a look at creating a custom month/year helper for an HTML email.
 
 

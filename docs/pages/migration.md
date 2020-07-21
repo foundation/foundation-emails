@@ -43,7 +43,7 @@ What’s new that you might want to use:
 
 With Foundation for Emails 2, confusing and tedious tables are a thing of the past. The new Inky markup will save you time and energy coding your emails. It looks like:
 
-```
+```html
 <container>
   <row>
     <column small="12" large="4">
@@ -94,7 +94,7 @@ Version 2 now has more alignment classes:
 
 In the Ink 1.0, we needed extra tags to support a wrapper element. This used to control the gutter and margins of a column.
 
-```
+```html
 <table class="container">
   <tr>
     <td>
@@ -127,7 +127,7 @@ In Foundation for Emails 2, we’ve eliminated another tag in an effort to simpl
 
 Also, we stitched `<td>`'s to `<th>`'s because that allows Android 4 native to be responsive - win!
 
-```
+```html
 <table class="container">
   <tr>
     <td>
@@ -146,7 +146,7 @@ Also, we stitched `<td>`'s to `<th>`'s because that allows Android 4 native to b
 
 #### New Markup (Inky HTML)
 
-```
+```html
 <container>
   <row>
     <columns small="12" large="12">
@@ -164,7 +164,7 @@ In an effort to unify the thinking across the Foundation family, we’ve removed
 
 #### Old Markup
 
-```
+```html
 <table class="container">
   <tr>
     <td class="wrapper last">
@@ -188,14 +188,14 @@ In an effort to unify the thinking across the Foundation family, we’ve removed
 
 #### New Markup (Plain HTML)
 
-```
+```html
 <table class="container">
   <tr>
     <td>
 
       <table class="row">
         <tr>
-          <th class="first large-6 small-6 columns">      
+          <th class="first large-6 small-6 columns">
 
           </th>
 
@@ -213,7 +213,7 @@ In an effort to unify the thinking across the Foundation family, we’ve removed
 
 #### New Markup (Inky HTML)
 
-```
+```html
 <container>
   <row>
     <columns small="6">
@@ -234,7 +234,7 @@ The block grid has a minor syntax change with identifying the number of elements
 
 #### Old Markup
 
-```
+```html
 <table class="block-grid three-up">
   <tr>
     <td>
@@ -250,7 +250,7 @@ The block grid has a minor syntax change with identifying the number of elements
 
 #### New Markup (Plain HTML)
 
-```
+```html
 <table class="block-grid up-3">
   <tr>
     <th class="column first">
@@ -266,7 +266,7 @@ The block grid has a minor syntax change with identifying the number of elements
 
 #### New Markup (Inky HTML)
 
-```
+```html
 <block-grid up="3">
   <column>Thing 1</column>
   <column>Thing 2</column>
@@ -282,7 +282,7 @@ Because we’ve eliminated the wrapper, offsets are now directly applied to the 
 
 #### Old Markup
 
-```
+```html
 <table class="row">
   <tr>
     <td class="wrapper offset-by-four">
@@ -302,7 +302,7 @@ Because we’ve eliminated the wrapper, offsets are now directly applied to the 
 
 #### New Markup (Plain HTML)
 
-```
+```html
 <table class="row">
   <tr>
     <th class="small-4 small-offset-8 large-4 large-offset-8 columns">
@@ -314,7 +314,7 @@ Because we’ve eliminated the wrapper, offsets are now directly applied to the 
 
 #### New Markup (Inky HTML)
 
-```
+```html
 <row>
   <columns small="4" large="4" class="small-offset-8 large-offset-8">
 
@@ -332,7 +332,7 @@ In the previous version of F4E the text inside of the button was the only clicka
 
 #### Old Markup
 
-```
+```html
 <table class="button">
   <tr>
     <td>
@@ -344,7 +344,7 @@ In the previous version of F4E the text inside of the button was the only clicka
 
 #### New Markup (Plain HTML)
 
-```
+```html
 <table class="button">
   <tr>
     <td>
@@ -362,7 +362,7 @@ In the previous version of F4E the text inside of the button was the only clicka
 
 #### New Markup (Inky HTML)
 
-```
+```html
 <button href="https://zurb.com"></button>
 ```
 
@@ -376,7 +376,7 @@ In an effort to unify the terminology across the Foundation family `panels` are 
 
 #### Old Markup
 
-```
+```html
 <table class="twelve columns">
   <tr>
     <td class="panel">
@@ -389,7 +389,7 @@ In an effort to unify the terminology across the Foundation family `panels` are 
 
 #### New Markup (Plain HTML)
 
-```
+```html
 <table class="callout">
   <tr>
     <td class="callout-inner">
@@ -402,7 +402,7 @@ In an effort to unify the terminology across the Foundation family `panels` are 
 
 #### New Markup (Inky HTML)
 
-```
+```html
 <row>
   <columns small="6">
     <p>One Word</p>
@@ -440,10 +440,10 @@ You can wrap a callout around a `<row>` or the content inside a `<column>`.
 
 #### Old Markup (Plain HTML)
 
-```
+```html
 <table class="container">
   <tr>
-    <td>     
+    <td>
 
       <table class="menu">
         <tr>
@@ -472,7 +472,7 @@ You can wrap a callout around a `<row>` or the content inside a `<column>`.
 
 #### New Markup (Inky HTML)
 
-```
+```html
 <menu>
   <item href="one.html">Item One</item>
   <item href="one.html">Item Two</item>
@@ -486,7 +486,7 @@ The menu component can be used to create a simple set of links comonly used in h
 
 #### New Markup (Inky HTML)
 
-```
+```html
 <spacer size="100"></spacer>
 ```
 
@@ -496,7 +496,7 @@ The spacer component creates consistant vertical spacing between or inside of el
 
 #### New Markup (Inky HTML)
 
-```
+```html
 <wrapper>
   content here
 </wrapper>
