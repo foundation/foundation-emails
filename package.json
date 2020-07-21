@@ -62,13 +62,13 @@
     "typeahead.js": "^0.11.1",
     "yargs": "^14.2.0",
     "zeroclipboard": "^2.2.0",
-    "lodash.template": "^4.5.0"
+    "lodash.template": ">=4.5.0"
   },
   "resolutions": {
     "marked"          : "^1.1.1",
     "minimist"        : "^1.2.5",
     "braces"          : "^2.3.2",
-    "lodash.template" : "^4.5.0"
+    "lodash.template" : ">=4.5.0"
   },
   "license": "MIT",
   "eyeglass": {
