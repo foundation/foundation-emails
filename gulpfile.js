@@ -150,7 +150,7 @@ gulp.task('default', gulp.series('server', function() {
 }));
 
 gulp.task('test:compile', function() {
-  gulp.src('test/visual/pages/*.html')
+  return gulp.src('test/visual/pages/*.html')
     .pipe($.wrap({ src: 'test/visual/_template.html' }))
     .pipe(inky())
     .pipe(inliner('_build/assets/css/foundation-emails.css'))
@@ -159,8 +159,8 @@ gulp.task('test:compile', function() {
 
 gulp.task('test', gulp.series('sass', 'test:compile', function() {
   browser.init({ server: 'test/visual/_build', directory: true });
-  gulp.watch('scss/**/*.scss', ['sass:foundation', browser.reload]);
-  gulp.watch('test/visual/pages/*.html', ['test:compile', browser.reload]);
+  gulp.watch('scss/**/*.scss', gulp.series('sass:foundation', browser.reload));
+  gulp.watch('test/visual/pages/*.html', gulp.series('test:compile', browser.reload));
 }));
 
 gulp.task('templates', function() {
