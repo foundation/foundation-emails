@@ -69,5 +69,5 @@ Links are very standard, and the color is preset to the Foundation primary color
 Use dividers to define thematic breaks between paragraphs or sections of your email.
 
 ```html
-<hr/>
+<h-line></h-line>
 ```
