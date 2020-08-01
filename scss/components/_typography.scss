@@ -177,7 +177,7 @@ $remove-ios-blue: true !default;
     padding-bottom: $margin;
     @if $align == 'left' {
       text-align: left;
-    } @elseif $align == 'right' {
+    } @else if $align == 'right' {
       text-align: right;
     } @else {
       text-align: center;
