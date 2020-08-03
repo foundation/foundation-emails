@@ -85,4 +85,20 @@ th {
   }
 }
 
+td.columns,
+td.column,
+th.columns,
+th.column {
+  &[valign="bottom"] {
+    vertical-align: bottom;
+  }
+}
 
+td.columns,
+td.column,
+th.columns,
+th.column {
+  &[valign="middle"] {
+    vertical-align: middle;
+  }
+}
