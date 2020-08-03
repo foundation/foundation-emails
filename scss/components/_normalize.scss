@@ -83,8 +83,5 @@ table, tr, td, th {
   padding-bottom: 0;
   padding-left: 0;
   text-align: left;
-}
-
-table, tr, td:not([valign]), th:not([valign]) {
   vertical-align: top;
 }
