@@ -70,6 +70,10 @@ table.menu.text-center a {
   width: auto;
 }
 
+.menu[align="center"] tr {
+  text-align: center;
+}
+
 // Remove outside padding so that the menu aligns with other elements on the page
 .menu:not(.float-center) {
     .menu-item:first-child{padding-left:0!important;}
