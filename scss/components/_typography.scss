@@ -163,7 +163,7 @@ $remove-ios-blue: true !default;
 /// @param {String} $width  - Width of divider
 /// @param {String} $border - Shorthand border style for divider
 /// @param {String} $margin - Margin above and below divider
-@mixin h-line($align: $hr-align, $width: $hr-width, $border: $hr-border, $margin: nth($hr-margin, 1)) {
+@mixin h-line($align: $hr-align, $width: $hr-width, $border: $hr-border, $margin: $hr-margin) {
   @at-root {
     td.columns & table,
     td.column  & table,
@@ -177,7 +177,7 @@ $remove-ios-blue: true !default;
     padding-bottom: $margin;
     @if $align == 'left' {
       text-align: left;
-    } @elseif $align == 'right' {
+    } @else if $align == 'right' {
       text-align: right;
     } @else {
       text-align: center;
@@ -190,7 +190,7 @@ $remove-ios-blue: true !default;
       Margin: 0;
     }
 
-      td {
+      th {
         width: $width;
         height: 0;
         padding-top: $margin;
@@ -295,7 +295,7 @@ p {
   }
 }
 
-small
+small,
 .small {
   font-size: $small-font-size;
   color: $small-font-color;
