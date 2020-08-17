@@ -2751,13 +2751,13 @@ formidable@^1.2.2:
   integrity sha512-V8gLm+41I/8kguQ4/o1D3RIHRmhYFG4pnNyonvua+40rqcEmT4+V71yaZ3B457xbbgCsCfjSPi65u/W6vK1U5Q==
 
 foundation-docs@foundation/foundation-docs#master:
-  version "0.3.1"
-  resolved "https://codeload.github.com/foundation/foundation-docs/tar.gz/79a108836da65afb2de4588f099d929be44b487d"
+  version "0.3.2"
+  resolved "https://codeload.github.com/foundation/foundation-docs/tar.gz/29f5b5a66694d27cbb8a70cf45806001e304dd10"
   dependencies:
     cheerio "^1.0.0-rc.2"
     handlebars "^4.5.3"
     highlight.js "^9.16.2"
-    inky foundation/inky#master
+    inky "^1.4.1"
     js-beautify "^1.11.0"
     kebab-case "^1.0.0"
     lodash "^4.17.15"
@@ -3509,9 +3509,9 @@ highlight.js@^8.9.1:
   integrity sha1-uKnFSTISqTkvAiK2SclhFJfr+4g=
 
 highlight.js@^9.16.2:
-  version "9.18.1"
-  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.1.tgz#ed21aa001fe6252bb10a3d76d47573c6539fe13c"
-  integrity sha512-OrVKYz70LHsnCgmbXctv/bfuvntIKDz177h0Co37DQ5jamGZLVmoCVMtjMtNZY3X9DrCcKfklHPNeA0uPZhSJg==
+  version "9.18.3"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.3.tgz#a1a0a2028d5e3149e2380f8a865ee8516703d634"
+  integrity sha512-zBZAmhSupHIl5sITeMqIJnYCDfAEc3Gdkqj65wC1lpI468MMQeeQkhcIAvk+RylAkxrCcI9xy9piHiXeQ1BdzQ==
 
 homedir-polyfill@^1.0.1:
   version "1.0.3"
@@ -3732,7 +3732,7 @@ ini@^1.3.4, ini@~1.3.0:
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
   integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
 
-inky@^1.4.1, inky@foundation/inky#master:
+inky@^1.4.1:
   version "1.4.1"
   resolved "https://codeload.github.com/foundation/inky/tar.gz/25342d6a221195f0ee69acfd232fa7fd15747280"
   dependencies:
@@ -4209,7 +4209,18 @@ js-base64@^2.1.8:
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.6.3.tgz#7afdb9b57aa7717e15d370b66e8f36a9cb835dc3"
   integrity sha512-fiUvdfCaAXoQTHdKMgTvg6IkecXDcVz6V5rlftUTclF9IKBjMizvSdQaCl/z/6TApDeby5NL+axYou3i0mu1Pg==
 
-js-beautify@^1.11.0, js-beautify@^1.6.3:
+js-beautify@^1.11.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/js-beautify/-/js-beautify-1.12.0.tgz#6c7e6a47a6075a7c8e60c861e850440a5479d36e"
+  integrity sha512-hZCm93+sWHqrsB2ac38cPX4A9t6mfReq13ZUr/0dk6rCXNLIq0R4lu0EiuJc0Ip6RiWNtE0vECjXOhcy/jMt9Q==
+  dependencies:
+    config-chain "^1.1.12"
+    editorconfig "^0.15.3"
+    glob "^7.1.3"
+    mkdirp "^1.0.4"
+    nopt "^4.0.3"
+
+js-beautify@^1.6.3:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/js-beautify/-/js-beautify-1.11.0.tgz#afb873dc47d58986360093dcb69951e8bcd5ded2"
   integrity sha512-a26B+Cx7USQGSWnz9YxgJNMmML/QG2nqIaL7VVYPCXbqiKz8PN0waSNvroMtvAK6tY7g/wPdNWGEP+JTNIBr6A==
