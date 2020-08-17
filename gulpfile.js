@@ -23,7 +23,7 @@ sass.compiler = require('node-sass');
 supercollider
   .config({
     template: foundationDocs.componentTemplate,
-    marked: foundationDocs.marked.mdRenderer,
+    marked: foundationDocs.marked,
     handlebars: foundationDocs.handlebars,
     keepFm: true,
     quiet: false,
