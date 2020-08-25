@@ -23,6 +23,8 @@ In this Getting Started guide, we'll download Foundation for Emails, construct t
 ## Requirements
 
 To use the Sass version of Foundation for Emails, you need Node.js installed on your computer. Node is compatible with Windows, OS X, and Linux&mdash;the [Node.js website](https://nodejs.org/) has installers for every operating system.
+**Current Node.js that is supported is 10 or less.**
+
 
 ---
 
