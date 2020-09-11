@@ -75,6 +75,9 @@ td, th {
   -moz-hyphens: auto;
   hyphens: auto;
   border-collapse: collapse !important;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 table, tr, td, th {
