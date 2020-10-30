@@ -41,8 +41,8 @@
 
   // Collpased columns have no gutter.
   .collapse {
-    table.body & .columns,
-    table.body & .column {
+    table.body & > tbody > tr > .columns,
+    table.body & > tbody > tr > .column {
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
