@@ -49,7 +49,7 @@
     "js-yaml": "^3.14.0",
     "lazypipe": "^1.0.1",
     "lodash.template": ">=4.5.0",
-    "marked": "^1.1.1",
+    "marked": "^2.0.0",
     "motion-ui": "^2.0.3",
     "multiline": "^2.0.0",
     "node-sass": "^4.14.1",
