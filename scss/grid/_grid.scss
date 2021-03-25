@@ -69,11 +69,18 @@ th.column {
   padding-bottom: $column-padding-bottom;
 
   // Prevents Nested columns from double the padding
+  .column.first,
+  .columns.first {
+    padding-left: 0 !important;
+  }
+
+  .column.last,
+  .columns.last {
+    padding-right: 0 !important;
+  }
+
   .column,
   .columns {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-
     center {
       min-width: none !important;
     }
@@ -98,7 +105,8 @@ th.column {
     &.button {
       width:auto;
 
-      &.expanded{
+      &.expand,
+      &.expanded {
         width: 100%;
       }
     }

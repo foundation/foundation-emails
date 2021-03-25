@@ -28,14 +28,14 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding-left: $global-gutter !important;
-    padding-right: $global-gutter !important;
+    padding-left: $global-gutter-small !important;
+    padding-right: $global-gutter-small !important;
   }
 
   // Collpased columns have no gutter.
   .collapse {
-    table.body & .columns,
-    table.body & .column {
+    table.body & > tbody > tr > .columns,
+    table.body & > tbody > tr > .column {
       padding-left: 0 !important;
       padding-right: 0 !important;
     }

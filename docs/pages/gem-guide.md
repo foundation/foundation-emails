@@ -41,7 +41,7 @@ rails g inky:install
 
 Rename your email templates to use the `.inky` file extension. Note that you'll still be able to use ERB within the `.inky` templates:
 
-```
+```ruby
 welcome.html      => welcome.html.inky
 pw_reset.html.erb => pw_reset.html.inky
 ```

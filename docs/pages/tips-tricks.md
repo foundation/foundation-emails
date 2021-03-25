@@ -16,11 +16,11 @@ A framework is a collection of reusable code and design patterns which gives use
 
 ## Need to know
 
-The sad truth about creating or coding HTML emails is that tables are the only things that are universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capitor, and going back to the 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags.
+The sad truth about creating or coding HTML emails is that tables are the only things that are universally supported when it comes to email design. If you came from the world of building websites, this may seem like a stepping into Doc Brown's Delorean, charging up the Flux-capacitor, and going back to the year 1996. Suddenly your CSS is written with inline style tags, useful CSS properties don't work and you're burried in a sea of table tags.
 
 <div class="callout secondary tip">General rule of thumb: your email is not going to look identical in every client. And that’s OK.</div>
 
-It's not all doom and gloom though, and we're all in this together. Foundation for Emails helps by getting you away from tables (Sass version), helping you with an organized project structure, and a well tested codebase to make this much easier. We've put together this guide and [links to resources](http://foundation.zurb.com/emails/resources.html) from our friends to help you along as well as a new [Responsive Emails master class](http://zurb.com/university/responsive-emails-foundation) to become a HTML email pro.
+It's not all doom and gloom though, and we're all in this together. Foundation for Emails helps by getting you away from tables (Sass version), helping you with an organized project structure, and a well tested codebase to make this much easier. We've put together this guide and [links to resources](https://get.foundation/emails/resources.html) from our friends to help you along as well as a new [Responsive Emails master class](https://zurb.com/university/responsive-emails-foundation) to become a HTML email pro.
 
 ---
 
@@ -36,7 +36,7 @@ The height of your email doesn't matter as much because people scroll. It still 
 
 #### Structure and alignment:
 
-When it comes to making emails, divs aren’t a thing. Don’t kill the messenger, but it’s true. It's not fun finding out we can't just use a `<div>` with auto left and right margins for centering, or background colors; It won't work most email clients. `<div>`'s can still be used for targeting CSS and for grouping semantically related elements, but shouldn’t be used for structural purposes or spacing.
+When it comes to making emails, divs aren’t a thing. Don’t kill the messenger, but it’s true. It's not fun finding out we can't just use a `<div>` with auto left and right margins for centering, or background colors; it won't work with most email clients. `<div>`'s can still be used for targeting CSS and for grouping semantically related elements, but shouldn’t be used for structural purposes or spacing.
 
 Instead, you can use the `<wrapper>` Inky tag to create background colors and target elements inside. [More on Wrapper &#8594;](wrapper.html)
 
@@ -123,7 +123,7 @@ For some things you can do and work-arounds, see the <a href="#progressive-enhan
 
 #### Inlining CSS
 
-Gmail strips the `<head>` (and, consequently, `<style>`) tags from your email. Therefor your email's CSS needs to be inlined. You know, like old school CSS:
+Gmail strips the `<head>` (and, consequently, `<style>`) tags from your email. Therefore your email's CSS needs to be inlined. You know, like old school CSS:
 
 ```html
 <table class="menu" style="padding:0;text-align:center;vertical-align:top;width:auto">
@@ -133,7 +133,7 @@ Because media queries cannot be inlined, they need to be moved into the `<body>`
 
 If you're using Sass with the ZURB stack, you enjoy the luxury of automatic inlining when running `npm run build`. Your file will be copied into the `dist ` folder where you will find it minified and inlined. You'll want to do this before you test or send your email.
 
-If you are using the CSS version, you can use our [web inliner](http://foundation.zurb.com/emails/inliner-v2.html).
+If you are using the CSS version, you can use our [web inliner](https://get.foundation/emails/inliner-v2.html).
 
 ---
 
@@ -159,7 +159,7 @@ Margin: 10px;  // fallback for Outlook.com
 - It's better to use full 6 digit hex codes colors in HTML emails (#ffffff vs #fff). Although all the major email clients support short hex colors, Outlook.com (Hotmail), Lotus Notes 6.5, 7 and 8 do not.
 - RGB's are supported all the major email clients but RGBA's are only supported in IOS, Apple Mail, Gmail, and Android 4 (Gmail).
 - Background colors work across all email clients as well as color for fonts.
-- iOS devices sometimes render dates/times and phone numbers in blue irrespective of CSS declarations. A good workaround is to include the the CSS snippet from http://removebluelinks.com/ in combination with wrapping the affected content with `<font color="XXXXXX"></font>` to ensure it gets rendered in the color required.
+- iOS devices sometimes render dates/times and phone numbers in blue irrespective of CSS declarations. A good workaround is to include the the CSS snippet from https://removebluelinks.com/ in combination with wrapping the affected content with `<font color="XXXXXX"></font>` to ensure it gets rendered in the color required.
 
 ---
 
@@ -219,7 +219,7 @@ Video's in emails are not supported except in Apple Mail and Outlook 2011. [See 
 
 #### Quick Tips on Images
 
-Remember to use full paths to images, not relative paths. (e.g. http://www.yourserver.com/email/images/logo.gif).
+Remember to use full paths to images, not relative paths. (e.g. https://www.yourserver.com/email/images/logo.gif).
 
 Also, link to images from your own server, not anyone elses. If you don't control it you never know when that url will change.
 
@@ -246,13 +246,13 @@ Problems
 
 Causes
 
-- Making the HTML file size less than 20kb (20540 characters) - not including images or the plain-text version. This charachter count includes things like inline styles, HTML tags, and spaces, and other HTML entities.
+- Making the HTML file size less than 20kb (20540 characters) - not including images or the plain-text version. This character count includes things like inline styles, HTML tags, and spaces, and other HTML entities.
 - Downloading the message over cellular data, not WiFi. Can't do much about this one.
 
 Solution?
 
 - Create emails that are short and to the point. Too many call-to-actions's, topics, or long emails don't tend to work that well anyways.
-- Minify your HTML. The ZURB Stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the charachter count and file size. Our [web inliner](http://foundation.zurb.com/emails/inliner.html) also has an option to remove (compress) whitespace between your charachters.
+- Minify your HTML. The ZURB Stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the charachter count and file size. Our [web inliner](https://get.foundation/emails/inliner.html) also has an option to remove (compress) whitespace between your charachters.
 
 ---
 
@@ -285,7 +285,7 @@ Do progressively enhance. ZURB and Foundation for Emails builds Outlook-first. M
 
 Let's imagine the vast majority of your audience uses Apple Mail. You'd be able to get away with using CSS keyframe animation and SVG masks.
 
-If you're not sure where to start, you can see the [Email Client Market Share](http://emailclientmarketshare.com/) by Litmus
+If you're not sure where to start, you can see the [Email Client Market Share](https://emailclientmarketshare.com/) by Litmus
 
 #### Button Size and Touch Targets
 
@@ -309,7 +309,7 @@ The two top testing services out there are:
 [Litmus](https://litmus.com/)
 [Email on Acid](https://www.emailonacid.com/)
 
-If you're not sure where to start, you can see the [Email Client Market Share](http://emailclientmarketshare.com/) by Litmus
+If you're not sure where to start, you can see the [Email Client Market Share](https://emailclientmarketshare.com/) by Litmus
 
 Foundation for Emails is tested on the most popular clients. You can also test on the clients listed in our [compatability guide](compatibility.html)
 
@@ -317,7 +317,7 @@ These services make testing on lots of email clients and devices much faster. Tr
 
 ---
 
-## Sending you Emails
+## Sending your Emails
 
 ESP's are made for sending thousands and thousands of emails, they can help you get emails out without being deemed a spammer.
 

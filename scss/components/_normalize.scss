@@ -31,6 +31,7 @@ body {
   span,
   font,
   td,
+  th,
   div {
     line-height: 100%;
   }
@@ -68,7 +69,7 @@ table {
   border-collapse: collapse;
 }
 
-td {
+td, th {
   word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -76,11 +77,8 @@ td {
   border-collapse: collapse !important;
 }
 
-table, tr, td {
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
+table, tr, td, th {
+  padding: 0;
   vertical-align: top;
   text-align: left;
 }

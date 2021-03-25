@@ -83,8 +83,8 @@ Inside `src/layouts/default.html`, you can see the boilerplate needed to make an
 
 ```html
 <!-- Emails use the XHTML Strict doctype -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
   <!-- The character set should be utf-8 -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -157,7 +157,7 @@ Your email's CSS will include media queries for responsive styling which the inl
 When the email opens up in the browser, it will look the same. But try viewing the source code of the page, and you'll see a mess of code like this:
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" style="background:#cacaca;min-height:100%"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">...
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="https://www.w3.org/1999/xhtml" lang="en" xml:lang="en" style="background:#cacaca;min-height:100%"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">...
 ```
 
 ---
@@ -176,4 +176,4 @@ It's up to you to choose what email clients are important to test in, but you ca
 
 You've successfully installed Foundation for Emails, and written, inlined, and tested your first email! To keep going with the framework, you can check out the documentation for the other framework components, including [buttons](button.html), [callouts](callout.html), [menus](menu.html).
 
-If you're interested in going in-depth on the framework with the Foundation team, [check out our master class on Foundation for Emails](http://zurb.com/university/responsive-emails-foundation), an on-demand video series that explores every aspect of email design workflow.
+If you're interested in going in-depth on the framework with the Foundation team, [check out our master class on Foundation for Emails](https://zurb.com/university/responsive-emails-foundation), an on-demand video series that explores every aspect of email design workflow.

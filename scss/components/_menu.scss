@@ -23,8 +23,10 @@ table.menu {
 
   td.menu-item,
   th.menu-item {
-    padding: $menu-item-padding;
+    padding-top: $menu-item-padding;
     padding-right: $menu-item-gutter;
+    padding-bottom: $menu-item-padding;
+    padding-left: $menu-item-padding;
 
     a {
       color: $menu-item-color;
@@ -36,8 +38,10 @@ table.menu {
 table.menu.vertical {
   td.menu-item,
   th.menu-item {
-    padding: $menu-item-padding;
+    padding-top: $menu-item-padding;
     padding-right: 0;
+    padding-bottom: $menu-item-padding;
+    padding-left: $menu-item-padding;
     display: block;
 
     a {
@@ -63,7 +67,7 @@ table.menu.text-center a {
 
 //Centers the menus!
 .menu[align="center"] {
-  width: auto !important;
+  width: auto;
 }
 
 // Remove outside padding so that the menu aligns with other elements on the page
