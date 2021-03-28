@@ -30,13 +30,6 @@
     box-sizing: border-box;
     padding-left: $global-gutter-small !important;
     padding-right: $global-gutter-small !important;
-
-    // Nested columns won't double the padding
-    .column,
-    .columns {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
   }
 
   // Collpased columns have no gutter.
