@@ -1,6 +1,7 @@
 // Foundation for Emails by ZURB
 // zurb.com/ink/
 // Licensed under MIT Open Source
+@use "sass:math";
 
 ////
 /// @group grid
@@ -117,8 +118,8 @@ th.column {
   td.large-#{$i},
   th.large-#{$i} {
     width: -zf-grid-calc-px($i, $grid-column-count, $global-width);
-    padding-left: $global-gutter / 2;
-    padding-right: $global-gutter / 2;
+    padding-left: math.div($global-gutter, 2);
+    padding-right: math.div($global-gutter, 2);
   }
 
   td.large-#{$i}.first,
