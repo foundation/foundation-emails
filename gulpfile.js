@@ -1,6 +1,5 @@
 var $ = require('gulp-load-plugins')();
 var gulp = require('gulp');
-var sequence = require('run-sequence');
 var panini = require('panini');
 var supercollider = require('supercollider');
 var rimraf = require('rimraf');
@@ -12,12 +11,10 @@ var siphon = require('siphon-media-query');
 var lazypipe = require('lazypipe');
 var fs = require('fs');
 var yargs = require('yargs');
-var sass = require('gulp-sass');
+var sass = require('gulp-dart-sass');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
-
-sass.compiler = require('node-sass');
 
 // Configuration for the documentation generator
 supercollider
