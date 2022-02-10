@@ -52,7 +52,7 @@
     "marked": "^2.0.0",
     "motion-ui": "^2.0.3",
     "multiline": "^2.0.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "octophant": "^1.0.0",
     "panini": "^1.7.1",
     "rimraf": "^3.0.0",
