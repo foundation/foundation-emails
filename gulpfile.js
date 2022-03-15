@@ -17,7 +17,7 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 
-sass.compiler = require('node-sass');
+sass.compiler = require('sass');
 
 // Configuration for the documentation generator
 supercollider

@@ -1,6 +1,7 @@
 // Foundation for Emails by ZURB
 // zurb.com/ink/
 // Licensed under MIT Open Source
+@use "sass:math";
 
 ////
 /// @group block-grid
@@ -20,13 +21,13 @@ $block-grid-gutter: $global-gutter !default;
 
   td {
     display: inline-block;
-    padding: $block-grid-gutter / 2;
+    padding: math.div($block-grid-gutter, 2);
   }
 }
 
 // Sizing classes
 @for $i from 2 through $block-grid-max {
   .up-#{$i} td {
-    width: floor(($global-width - $i * $block-grid-gutter) / $i) !important;
+    width: floor(math.div($global-width - $i * $block-grid-gutter, $i)) !important;
   }
 }
