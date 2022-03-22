@@ -2774,9 +2774,9 @@ formidable@^1.2.2:
   resolved "https://registry.npmjs.org/formidable/-/formidable-1.2.2.tgz"
   integrity sha512-V8gLm+41I/8kguQ4/o1D3RIHRmhYFG4pnNyonvua+40rqcEmT4+V71yaZ3B457xbbgCsCfjSPi65u/W6vK1U5Q==
 
-foundation-docs@foundation/foundation-docs#master:
-  version "0.3.2"
-  resolved "git+ssh://git@github.com/foundation/foundation-docs.git#29f5b5a66694d27cbb8a70cf45806001e304dd10"
+foundation-docs@foundation/foundation-docs:
+  version "0.3.3"
+  resolved "https://codeload.github.com/foundation/foundation-docs/tar.gz/231b5c562c66b317c8a17a8a22a1f32e126135a4"
   dependencies:
     cheerio "^1.0.0-rc.2"
     handlebars "^4.5.3"
@@ -2786,7 +2786,7 @@ foundation-docs@foundation/foundation-docs#master:
     kebab-case "^1.0.0"
     lodash "^4.17.15"
     lodash.template "^4.5.0"
-    marked "^1.1.1"
+    marked "^2"
     mkdirp "^0.5.1"
     multiline "^1.0.2"
     querystring "^0.2.0"
@@ -2799,9 +2799,9 @@ foundation-emails@^2.2.0:
   resolved "https://registry.npmjs.org/foundation-emails/-/foundation-emails-2.2.1.tgz"
   integrity sha1-HzRCdiOV0GPVpi15B0CyQzqrF0c=
 
-foundation-sites@foundation/foundation-sites#master:
-  version "6.6.3"
-  resolved "git+ssh://git@github.com/foundation/foundation-sites.git#ce28d43c7cae21a66f5b9dfa2105d5adbb79842a"
+foundation-sites@foundation/foundation-sites:
+  version "6.7.4"
+  resolved "https://codeload.github.com/foundation/foundation-sites/tar.gz/8846fdad0289d1a0a80929c92a4245fcb781c662"
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -5026,7 +5026,7 @@ markdown-it@^10.0.0:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
-marked@^0.6.2, marked@^0.8.2, marked@^1.1.1:
+marked@^0.6.2, marked@^0.8.2, marked@^1.1.1, marked@^2:
   version "1.1.1"
   resolved "https://registry.npmjs.org/marked/-/marked-1.1.1.tgz"
   integrity sha512-mJzT8D2yPxoPh7h0UXkB+dBj4FykPJ2OIfxAWeIHrvoHDkFxukV/29QxoFQoPM6RLEwhIFdJpmKBlqVM3s2ZIw==
