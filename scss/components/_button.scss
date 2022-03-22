@@ -95,6 +95,10 @@ table.button {
   }
 }
 
+table.button:not(.expand):not(.expanded) table {
+  width: auto;
+}
+
 table.button:hover table tr td a,
 table.button:active table tr td a,
 table.button table tr td a:visited,
