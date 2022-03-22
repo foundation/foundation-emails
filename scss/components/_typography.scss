@@ -1,6 +1,7 @@
 // Foundation for Emails by ZURB
 // zurb.com/ink/
 // Licensed under MIT Open Source
+@use "sass:math";
 
 ////
 /// @group typography
@@ -302,11 +303,11 @@ p {
 }
 
 .text-xs {
-  font-size: $global-font-size / ($font-scale * $font-scale);
+  font-size: math.div($global-font-size, $font-scale * $font-scale);
 }
 
 .text-sm {
-  font-size: $global-font-size / $font-scale;
+  font-size: math.div($global-font-size, $font-scale);
 }
 
 .text-lg {
