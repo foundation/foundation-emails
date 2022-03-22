@@ -128,5 +128,10 @@
       min-width: 0;
     }
   }
+
+  // Small padding inside callouts
+  th.callout-inner {
+    padding: $callout-padding-small !important;
+  }
 }
 
