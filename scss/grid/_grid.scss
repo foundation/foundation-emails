@@ -79,6 +79,14 @@ th.column {
   .columns.last {
     padding-right: 0 !important;
   }
+
+  .column,
+  .columns {
+    &:not([class*=large-offset]) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
 }
 
 td.columns.last,
