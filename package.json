@@ -49,7 +49,7 @@
     "js-yaml": "^3.14.0",
     "lazypipe": "^1.0.1",
     "lodash.template": ">=4.5.0",
-    "marked": "^2.0.0",
+    "marked": "^4.0.10",
     "motion-ui": "^2.0.3",
     "multiline": "^2.0.0",
     "octophant": "^1.0.0",
@@ -63,7 +63,6 @@
     "yargs": "^14.2.0"
   },
   "resolutions": {
-    "marked": "^1.1.1",
     "minimist": "^1.2.5",
     "braces": "^2.3.2",
     "lodash.template": ">=4.5.0"
