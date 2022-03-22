@@ -117,7 +117,7 @@ The `../` is added only on pages in a sub-folder, so the CSS can still be proper
 
 ## Helpers
 
-Helpers are special functions that manipulate content on the page. In addition to [Handlebars's built-in helpers](https://handlebarsjs.com/builtin_helpers.html), Panini includes a few custom helpers and you can add your own.
+Helpers are special functions that manipulate content on the page. In addition to [Handlebars's built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html), Panini includes a few custom helpers and you can add your own.
 
 ### ifpage
 

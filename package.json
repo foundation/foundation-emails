@@ -1,6 +1,6 @@
 {
   "name": "foundation-emails",
-  "version": "2.3.1",
+  "version": "2.4.0",
   "description": "A framework for responsive emails",
   "keywords": [
     "responsive",
@@ -11,12 +11,8 @@
   "author": "Foundation <contact@get.foundation> (https://get.foundation)",
   "scripts": {
     "start": "gulp",
-    "test:visual": "gulp test",
-    "deploy:dist": "gulp dist",
-    "deploy:settings": "gulp settings",
-    "deploy:download": "gulp download:build",
-    "deploy:templates": "gulp templates",
-    "deploy:docs": "gulp deploy:docs"
+    "test": "gulp test",
+    "dist": "gulp dist"
   },
   "repository": "https://github.com/foundation/foundation-emails",
   "bugs": "https://github.com/foundation/foundation-emails/issues",
@@ -24,8 +20,8 @@
     "browser-sync": "^2.9.10",
     "cheerio": "^1.0.0-rc.3",
     "cssnano": "^4.1.10",
-    "foundation-docs": "foundation/foundation-docs#master",
-    "foundation-sites": "foundation/foundation-sites#master",
+    "foundation-docs": "foundation/foundation-docs",
+    "foundation-sites": "foundation/foundation-sites",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-cached": "^1.1.0",
@@ -49,21 +45,20 @@
     "js-yaml": "^3.14.0",
     "lazypipe": "^1.0.1",
     "lodash.template": ">=4.5.0",
-    "marked": "^1.1.1",
+    "marked": "^4.0.10",
     "motion-ui": "^2.0.3",
     "multiline": "^2.0.0",
-    "node-sass": "^4.14.1",
     "octophant": "^1.0.0",
     "panini": "^1.7.1",
     "rimraf": "^3.0.0",
     "run-sequence": "^2.2.1",
+    "sass": "^1.35.2",
     "siphon-media-query": "^1.0.0",
     "supercollider": "^1.5.2",
     "typeahead.js": "^0.11.1",
     "yargs": "^14.2.0"
   },
   "resolutions": {
-    "marked": "^1.1.1",
     "minimist": "^1.2.5",
     "braces": "^2.3.2",
     "lodash.template": ">=4.5.0"

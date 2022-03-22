@@ -30,19 +30,12 @@
     box-sizing: border-box;
     padding-left: $global-gutter-small !important;
     padding-right: $global-gutter-small !important;
-
-    // Nested columns won't double the padding
-    .column,
-    .columns {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
   }
 
   // Collpased columns have no gutter.
   .collapse {
-    table.body & .columns,
-    table.body & .column {
+    table.body & > tbody > tr > .columns,
+    table.body & > tbody > tr > .column {
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
@@ -134,6 +127,11 @@
     center {
       min-width: 0;
     }
+  }
+
+  // Small padding inside callouts
+  th.callout-inner {
+    padding: $callout-padding-small !important;
   }
 }
 

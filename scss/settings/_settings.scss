@@ -124,6 +124,7 @@ $button-rounded: $global-rounded;
 $callout-background: $white;
 $callout-background-fade: 85%;
 $callout-padding: 10px;
+$callout-padding-small: $callout-padding;
 $callout-margin-bottom: $global-margin;
 $callout-border: 1px solid darken($callout-background, 20%);
 $callout-border-primary: 1px solid darken($primary-color, 20%);

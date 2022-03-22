@@ -57,7 +57,6 @@ img {
 
 center {
   width: 100%;
-  min-width: $global-width;
 }
 
 a img {
@@ -75,13 +74,13 @@ td, th {
   -moz-hyphens: auto;
   hyphens: auto;
   border-collapse: collapse !important;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 table, tr, td, th {
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
+  padding: 0;
   vertical-align: top;
   text-align: left;
 }

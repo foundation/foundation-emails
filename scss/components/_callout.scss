@@ -18,6 +18,10 @@ $callout-background-fade: 85% !default;
 /// @type Length
 $callout-padding: 10px !default;
 
+/// Padding inside a callout on small screens.
+/// @type Length
+$callout-padding-small: $callout-padding !default;
+
 /// Bottom margin of a callout.
 /// @type Length
 $callout-margin-bottom: $global-margin !default;
