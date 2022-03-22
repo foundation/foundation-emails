@@ -11,13 +11,17 @@ Foundation for Emails (previously known as Ink) is a framework for creating resp
 
 ## Getting Started
 
-The main way to get started is with our [email template stack](https://github.com/zurb/foundation-emails-template). To use the stack, you'll need [Node.js](https://nodejs.org/en/) installed on your machine.
+The main way to get started is with our [email template stack](https://github.com/zurb/foundation-emails-template). To use the stack, you'll need [Node.js](https://nodejs.org/en/) no greater than version 10 installed on your machine.
+
+`nvm` installation instructions can be found [here](https://github.com/nvm-sh/nvm#install--update-script)
 
 To set up the emails template, run these commands:
 
 ```bash
 git clone https://github.com/zurb/foundation-emails-template project
 cd project
+nvm install 10
+nvm use 10
 npm install
 ```
 
