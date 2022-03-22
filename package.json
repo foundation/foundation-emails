@@ -1,6 +1,6 @@
 {
   "name": "foundation-emails",
-  "version": "2.3.1",
+  "version": "2.4.0",
   "description": "A framework for responsive emails",
   "keywords": [
     "responsive",
@@ -11,12 +11,8 @@
   "author": "Foundation <contact@get.foundation> (https://get.foundation)",
   "scripts": {
     "start": "gulp",
-    "test:visual": "gulp test",
-    "deploy:dist": "gulp dist",
-    "deploy:settings": "gulp settings",
-    "deploy:download": "gulp download:build",
-    "deploy:templates": "gulp templates",
-    "deploy:docs": "gulp deploy:docs"
+    "test": "gulp test",
+    "dist": "gulp dist"
   },
   "repository": "https://github.com/foundation/foundation-emails",
   "bugs": "https://github.com/foundation/foundation-emails/issues",
