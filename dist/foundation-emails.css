@@ -52,7 +52,6 @@ img {
 
 center {
   width: 100%;
-  min-width: 580px;
 }
 
 a img {
@@ -70,6 +69,9 @@ td, th {
   -moz-hyphens: auto;
   hyphens: auto;
   border-collapse: collapse !important;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 table, tr, td, th {
@@ -141,15 +143,16 @@ th.column .column.last,
 th.column .columns.last {
   padding-right: 0 !important;
 }
-td.columns .column center,
-td.columns .columns center,
-td.column .column center,
-td.column .columns center,
-th.columns .column center,
-th.columns .columns center,
-th.column .column center,
-th.column .columns center {
-  min-width: none !important;
+td.columns .column:not([class*=large-offset]),
+td.columns .columns:not([class*=large-offset]),
+td.column .column:not([class*=large-offset]),
+td.column .columns:not([class*=large-offset]),
+th.columns .column:not([class*=large-offset]),
+th.columns .columns:not([class*=large-offset]),
+th.column .column:not([class*=large-offset]),
+th.column .columns:not([class*=large-offset]) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 td.columns.last,
@@ -198,22 +201,17 @@ th.large-1.last {
   padding-right: 16px;
 }
 
-.collapse > tbody > tr > td.large-1,
-.collapse > tbody > tr > th.large-1 {
+.collapse > tbody > tr > td.large-1:not([class*=large-offset]),
+.collapse > tbody > tr > th.large-1:not([class*=large-offset]) {
   padding-right: 0;
   padding-left: 0;
   width: 48.3333333333px;
 }
-.collapse td.large-1.first,
-.collapse th.large-1.first,
-.collapse td.large-1.last,
-.collapse th.large-1.last {
+.collapse > tbody > tr td.large-1.first,
+.collapse > tbody > tr th.large-1.first,
+.collapse > tbody > tr td.large-1.last,
+.collapse > tbody > tr th.large-1.last {
   width: 56.3333333333px;
-}
-
-td.large-1 center,
-th.large-1 center {
-  min-width: 0.3333333333px;
 }
 
 .body .columns td.large-1,
@@ -240,22 +238,17 @@ th.large-2.last {
   padding-right: 16px;
 }
 
-.collapse > tbody > tr > td.large-2,
-.collapse > tbody > tr > th.large-2 {
+.collapse > tbody > tr > td.large-2:not([class*=large-offset]),
+.collapse > tbody > tr > th.large-2:not([class*=large-offset]) {
   padding-right: 0;
   padding-left: 0;
   width: 96.6666666667px;
 }
-.collapse td.large-2.first,
-.collapse th.large-2.first,
-.collapse td.large-2.last,
-.collapse th.large-2.last {
+.collapse > tbody > tr td.large-2.first,
+.collapse > tbody > tr th.large-2.first,
+.collapse > tbody > tr td.large-2.last,
+.collapse > tbody > tr th.large-2.last {
   width: 104.6666666667px;
-}
-
-td.large-2 center,
-th.large-2 center {
-  min-width: 48.6666666667px;
 }
 
 .body .columns td.large-2,
@@ -282,22 +275,17 @@ th.large-3.last {
   padding-right: 16px;
 }
 
-.collapse > tbody > tr > td.large-3,
-.collapse > tbody > tr > th.large-3 {
+.collapse > tbody > tr > td.large-3:not([class*=large-offset]),
+.collapse > tbody > tr > th.large-3:not([class*=large-offset]) {
   padding-right: 0;
   padding-left: 0;
   width: 145px;
 }
-.collapse td.large-3.first,
-.collapse th.large-3.first,
-.collapse td.large-3.last,
-.collapse th.large-3.last {
+.collapse > tbody > tr td.large-3.first,
+.collapse > tbody > tr th.large-3.first,
+.collapse > tbody > tr td.large-3.last,
+.collapse > tbody > tr th.large-3.last {
   width: 153px;
-}
-
-td.large-3 center,
-th.large-3 center {
-  min-width: 97px;
 }
 
 .body .columns td.large-3,
@@ -324,22 +312,17 @@ th.large-4.last {
   padding-right: 16px;
 }
 
-.collapse > tbody > tr > td.large-4,
-.collapse > tbody > tr > th.large-4 {
+.collapse > tbody > tr > td.large-4:not([class*=large-offset]),
+.collapse > tbody > tr > th.large-4:not([class*=large-offset]) {
   padding-right: 0;
   padding-left: 0;
   width: 193.3333333333px;
 }
-.collapse td.large-4.first,
-.collapse th.large-4.first,
-.collapse td.large-4.last,
-.collapse th.large-4.last {
+.collapse > tbody > tr td.large-4.first,
+.collapse > tbody > tr th.large-4.first,
+.collapse > tbody > tr td.large-4.last,
+.collapse > tbody > tr th.large-4.last {
   width: 201.3333333333px;
-}
-
-td.large-4 center,
-th.large-4 center {
-  min-width: 145.3333333333px;
 }
 
 .body .columns td.large-4,
@@ -366,22 +349,17 @@ th.large-5.last {
   padding-right: 16px;
 }
 
-.collapse > tbody > tr > td.large-5,
-.collapse > tbody > tr > th.large-5 {
+.collapse > tbody > tr > td.large-5:not([class*=large-offset]),
+.collapse > tbody > tr > th.large-5:not([class*=large-offset]) {
   padding-right: 0;
   padding-left: 0;
   width: 241.6666666667px;
 }
-.collapse td.large-5.first,
-.collapse th.large-5.first,
-.collapse td.large-5.last,
-.collapse th.large-5.last {
+.collapse > tbody > tr td.large-5.first,
+.collapse > tbody > tr th.large-5.first,
+.collapse > tbody > tr td.large-5.last,
+.collapse > tbody > tr th.large-5.last {
   width: 249.6666666667px;
-}
-
-td.large-5 center,
-th.large-5 center {
-  min-width: 193.6666666667px;
 }
 
 .body .columns td.large-5,
@@ -408,22 +386,17 @@ th.large-6.last {
   padding-right: 16px;
 }
 
-.collapse > tbody > tr > td.large-6,
-.collapse > tbody > tr > th.large-6 {
+.collapse > tbody > tr > td.large-6:not([class*=large-offset]),
+.collapse > tbody > tr > th.large-6:not([class*=large-offset]) {
   padding-right: 0;
   padding-left: 0;
   width: 290px;
 }
-.collapse td.large-6.first,
-.collapse th.large-6.first,
-.collapse td.large-6.last,
-.collapse th.large-6.last {
+.collapse > tbody > tr td.large-6.first,
+.collapse > tbody > tr th.large-6.first,
+.collapse > tbody > tr td.large-6.last,
+.collapse > tbody > tr th.large-6.last {
   width: 298px;
-}
-
-td.large-6 center,
-th.large-6 center {
-  min-width: 242px;
 }
 
 .body .columns td.large-6,
@@ -450,22 +423,17 @@ th.large-7.last {
   padding-right: 16px;
 }
 
-.collapse > tbody > tr > td.large-7,
-.collapse > tbody > tr > th.large-7 {
+.collapse > tbody > tr > td.large-7:not([class*=large-offset]),
+.collapse > tbody > tr > th.large-7:not([class*=large-offset]) {
   padding-right: 0;
   padding-left: 0;
   width: 338.3333333333px;
 }
-.collapse td.large-7.first,
-.collapse th.large-7.first,
-.collapse td.large-7.last,
-.collapse th.large-7.last {
+.collapse > tbody > tr td.large-7.first,
+.collapse > tbody > tr th.large-7.first,
+.collapse > tbody > tr td.large-7.last,
+.collapse > tbody > tr th.large-7.last {
   width: 346.3333333333px;
-}
-
-td.large-7 center,
-th.large-7 center {
-  min-width: 290.3333333333px;
 }
 
 .body .columns td.large-7,
@@ -492,22 +460,17 @@ th.large-8.last {
   padding-right: 16px;
 }
 
-.collapse > tbody > tr > td.large-8,
-.collapse > tbody > tr > th.large-8 {
+.collapse > tbody > tr > td.large-8:not([class*=large-offset]),
+.collapse > tbody > tr > th.large-8:not([class*=large-offset]) {
   padding-right: 0;
   padding-left: 0;
   width: 386.6666666667px;
 }
-.collapse td.large-8.first,
-.collapse th.large-8.first,
-.collapse td.large-8.last,
-.collapse th.large-8.last {
+.collapse > tbody > tr td.large-8.first,
+.collapse > tbody > tr th.large-8.first,
+.collapse > tbody > tr td.large-8.last,
+.collapse > tbody > tr th.large-8.last {
   width: 394.6666666667px;
-}
-
-td.large-8 center,
-th.large-8 center {
-  min-width: 338.6666666667px;
 }
 
 .body .columns td.large-8,
@@ -534,22 +497,17 @@ th.large-9.last {
   padding-right: 16px;
 }
 
-.collapse > tbody > tr > td.large-9,
-.collapse > tbody > tr > th.large-9 {
+.collapse > tbody > tr > td.large-9:not([class*=large-offset]),
+.collapse > tbody > tr > th.large-9:not([class*=large-offset]) {
   padding-right: 0;
   padding-left: 0;
   width: 435px;
 }
-.collapse td.large-9.first,
-.collapse th.large-9.first,
-.collapse td.large-9.last,
-.collapse th.large-9.last {
+.collapse > tbody > tr td.large-9.first,
+.collapse > tbody > tr th.large-9.first,
+.collapse > tbody > tr td.large-9.last,
+.collapse > tbody > tr th.large-9.last {
   width: 443px;
-}
-
-td.large-9 center,
-th.large-9 center {
-  min-width: 387px;
 }
 
 .body .columns td.large-9,
@@ -576,22 +534,17 @@ th.large-10.last {
   padding-right: 16px;
 }
 
-.collapse > tbody > tr > td.large-10,
-.collapse > tbody > tr > th.large-10 {
+.collapse > tbody > tr > td.large-10:not([class*=large-offset]),
+.collapse > tbody > tr > th.large-10:not([class*=large-offset]) {
   padding-right: 0;
   padding-left: 0;
   width: 483.3333333333px;
 }
-.collapse td.large-10.first,
-.collapse th.large-10.first,
-.collapse td.large-10.last,
-.collapse th.large-10.last {
+.collapse > tbody > tr td.large-10.first,
+.collapse > tbody > tr th.large-10.first,
+.collapse > tbody > tr td.large-10.last,
+.collapse > tbody > tr th.large-10.last {
   width: 491.3333333333px;
-}
-
-td.large-10 center,
-th.large-10 center {
-  min-width: 435.3333333333px;
 }
 
 .body .columns td.large-10,
@@ -618,22 +571,17 @@ th.large-11.last {
   padding-right: 16px;
 }
 
-.collapse > tbody > tr > td.large-11,
-.collapse > tbody > tr > th.large-11 {
+.collapse > tbody > tr > td.large-11:not([class*=large-offset]),
+.collapse > tbody > tr > th.large-11:not([class*=large-offset]) {
   padding-right: 0;
   padding-left: 0;
   width: 531.6666666667px;
 }
-.collapse td.large-11.first,
-.collapse th.large-11.first,
-.collapse td.large-11.last,
-.collapse th.large-11.last {
+.collapse > tbody > tr td.large-11.first,
+.collapse > tbody > tr th.large-11.first,
+.collapse > tbody > tr td.large-11.last,
+.collapse > tbody > tr th.large-11.last {
   width: 539.6666666667px;
-}
-
-td.large-11 center,
-th.large-11 center {
-  min-width: 483.6666666667px;
 }
 
 .body .columns td.large-11,
@@ -660,22 +608,17 @@ th.large-12.last {
   padding-right: 16px;
 }
 
-.collapse > tbody > tr > td.large-12,
-.collapse > tbody > tr > th.large-12 {
+.collapse > tbody > tr > td.large-12:not([class*=large-offset]),
+.collapse > tbody > tr > th.large-12:not([class*=large-offset]) {
   padding-right: 0;
   padding-left: 0;
   width: 580px;
 }
-.collapse td.large-12.first,
-.collapse th.large-12.first,
-.collapse td.large-12.last,
-.collapse th.large-12.last {
+.collapse > tbody > tr td.large-12.first,
+.collapse > tbody > tr th.large-12.first,
+.collapse > tbody > tr td.large-12.last,
+.collapse > tbody > tr th.large-12.last {
   width: 588px;
-}
-
-td.large-12 center,
-th.large-12 center {
-  min-width: 532px;
 }
 
 .body .columns td.large-12,
@@ -925,6 +868,20 @@ th.float-center {
   text-align: center;
 }
 
+td.columns[valign=bottom],
+td.column[valign=bottom],
+th.columns[valign=bottom],
+th.column[valign=bottom] {
+  vertical-align: bottom;
+}
+
+td.columns[valign=middle],
+td.column[valign=middle],
+th.columns[valign=middle],
+th.column[valign=middle] {
+  vertical-align: middle;
+}
+
 .hide-for-large {
   display: none;
   mso-hide: all;
@@ -1057,6 +1014,30 @@ p.subheader {
   font-weight: normal;
   line-height: 1.4;
   color: #8a8a8a;
+}
+p a {
+  margin: default;
+  Margin: default;
+}
+
+.text-xs {
+  font-size: 11.1111111111px;
+}
+
+.text-sm {
+  font-size: 13.3333333333px;
+}
+
+.text-lg {
+  font-size: 19.2px;
+}
+
+.text-xl {
+  font-size: 23.04px;
+}
+
+.text-xxl {
+  font-size: 27.648px;
 }
 
 small,
@@ -1211,6 +1192,10 @@ table.button.radius table td {
 table.button.rounded table td {
   border-radius: 500px;
   border: none;
+}
+
+table.button:not(.expand):not(.expanded) table {
+  width: auto;
 }
 
 table.button:hover table tr td a,
@@ -1447,6 +1432,10 @@ table.menu.text-center a {
 
 .menu[align=center] {
   width: auto;
+}
+
+.menu[align=center] tr {
+  text-align: center;
 }
 
 .menu:not(.float-center) .menu-item:first-child {
@@ -1697,5 +1686,9 @@ table.button.small-expanded table a {
   table.button.small-expand center,
 table.button.small-expanded center {
     min-width: 0;
+  }
+
+  th.callout-inner {
+    padding: 10px !important;
   }
 }
