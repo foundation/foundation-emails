@@ -79,13 +79,6 @@ th.column {
   .columns.last {
     padding-right: 0 !important;
   }
-
-  .column,
-  .columns {
-    center {
-      min-width: auto !important;
-    }
-  }
 }
 
 td.columns.last,
@@ -148,11 +141,6 @@ th.column {
     th.large-#{$i}.last {
       width: -zf-grid-calc-px($i, $grid-column-count, $global-width) + ($global-gutter * 1.5);
     }
-  }
-
-  td.large-#{$i} center,
-  th.large-#{$i} center {
-    min-width: -zf-grid-calc-px($i, $grid-column-count, $global-width) - ($global-gutter * 2);
   }
 
   .body .columns td.large-#{$i},
