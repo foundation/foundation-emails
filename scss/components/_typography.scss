@@ -294,6 +294,11 @@ p {
     line-height: $subheader-lineheight;
     color: $subheader-color;
   }
+
+  a { // To fix Outlook margin issue #421
+    margin: default;
+    Margin: default;
+  }
 }
 
 .text-xs {
