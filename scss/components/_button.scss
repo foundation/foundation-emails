@@ -68,6 +68,7 @@ table.button {
       color: $button-color;
       background: $button-background;
       border: $button-border;
+      border-radius: $button-radius;
 
       a {
         font-family: $body-font-family;
