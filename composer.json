@@ -1,0 +1,23 @@
+{
+    "name": "foundation/foundation-emails",
+    "description": "A framework for responsive emails",
+    "keywords": [
+      "responsive",
+      "emails"
+    ],
+    "homepage": "https://get.foundation",
+    "authors": [
+      {
+        "name": "Foundation",
+        "homepage": "https://get.foundation",
+        "email": "contact@get.foundation"
+      }
+    ],
+    "support": {
+      "email": "contact@get.foundation",
+      "issues": "https://github.com/foundation/foundation-emails/issues",
+      "forum": "https://github.com/foundation/foundation-emails/discussions"
+    },
+    "license": "MIT"
+  }
+  
