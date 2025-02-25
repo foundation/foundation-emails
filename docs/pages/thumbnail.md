@@ -14,6 +14,6 @@ The thumbnail style adds padding and a box shadow to an image. To use it, just a
 
 <!-- <table class="thumbnail">
   <tr>
-    <td><img src="//placehold.co/300x300" class="thumbnail" /></td>
+    <td><img src="https://placehold.co/300x300" class="thumbnail" /></td>
   </tr>
 </table> -->
