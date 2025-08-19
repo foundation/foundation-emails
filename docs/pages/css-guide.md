@@ -92,7 +92,7 @@ The **container** will wrap the body of your entire email. It applies a maximum 
 
 ### Row
 
-Next, let's build the grid itself, starting with the row. **Rows** group columns together into a unit. Inside of your container, add this table:
+Next, let's build the grid itself, starting with the row. **Rows** group columns together into a unit. Inside the td tags within your new container, add this table:
 
 ```html
 <table class="row">
