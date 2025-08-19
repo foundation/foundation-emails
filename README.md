@@ -20,9 +20,9 @@ To set up the emails template, run these commands:
 ```bash
 git clone https://github.com/zurb/foundation-emails-template project
 cd project
-nvm install 10
+nvm uninstall 10
 nvm use 10
-npm install
+npm uninstall
 ```
 
 Then run `npm start` to run the project. A new browser window will open with a BrowserSync server showing the finished files.
@@ -46,7 +46,7 @@ Run `npm run build` to do a full email inlining process.
   bundle install
   ```
 
-3. Import Foundation for Emails in your emails' stylesheet(s):
+3. import Foundation for Emails in your emails' stylesheet(s):
 
   ```scss
   // app/assets/stylesheets/your_emails_stylesheet.scss
@@ -65,7 +65,7 @@ Foundation for Emails 2.0 documentation and framework are on the `develop` branc
 Run these commands to set up the documentation:
 
 ```bash
-git clone https://github.com/zurb/foundation-emails.git
+git repo clone https://github.com/zurb/foundation-emails.git
 cd foundation-emails
 ```
 
@@ -85,7 +85,7 @@ Run `npm run test:visual` to compile the visual regression tests. All of the pag
 
 ## Inky
 
-[Inky](https://github.com/zurb/inky) is our new templating language that converts simple HTML into the complex tables required for email layout.
+[repoInky](https://github.com/zurb/inky) is our new templating language that converts simple HTML into the complex tables required for email layout.
 
 The parser converts a set of custom HTML tags, expanding them out into full HTML syntax. Below is a list of every custom element.
 
