@@ -45,6 +45,11 @@ $button-margin: 0 0 $global-margin 0 !default;
 /// Background color of buttons.
 /// @type Color
 $button-background: $primary-color !default;
+$button-background-hover: color.adjust($button-background, $lightness: -10%, $space: hsl) !default;
+$button-secondary-background-hover: color.adjust($secondary-color, $lightness: +10%, $space: hsl) !default;
+$button-success-background-hover: color.adjust($success-color, $lightness: -10%, $space: hsl) !default;
+$button-alert-background-hover: color.adjust($alert-color, $lightness: -10%, $space: hsl) !default;
+$button-warning-background-hover: color.adjust($warning-color, $lightness: -10%, $space: hsl) !default;
 
 /// Border around buttons.
 /// @type Border
@@ -174,7 +179,7 @@ table.button:visited,
 table.button:active {
   table {
     td {
-      background: color.adjust($button-background, $lightness: -10%, $space: hsl);
+      background: $button-background-hover;
       color: $button-color;
     }
   }
@@ -185,7 +190,7 @@ table.button:visited,
 table.button:active {
   table {
     a {
-      border: 0 solid color.adjust($button-background, $lightness: -10%, $space: hsl);
+      border: 0 solid $button-background-hover;
     }
   }
 }
@@ -208,12 +213,12 @@ table.button.secondary {
 table.button.secondary:hover {
   table {
     td {
-      background: color.adjust($secondary-color, $lightness: +10%, $space: hsl);
+      background: $button-secondary-background-hover;
       color: $button-color;
     }
 
     a {
-      border: 0 solid color.adjust($secondary-color, $lightness: +10%, $space: hsl);
+      border: 0 solid $button-secondary-background-hover;
     }
   }
 }
@@ -258,11 +263,11 @@ table.button.success {
 table.button.success:hover {
   table {
     td {
-      background: color.adjust($success-color, $lightness: -10%, $space: hsl);
+      background: $button-success-background-hover;
     }
 
     a {
-      border: 0 solid color.adjust($success-color, $lightness: -10%, $space: hsl);
+      border: 0 solid $button-success-background-hover;
     }
   }
 }
@@ -283,11 +288,11 @@ table.button.alert {
 table.button.alert:hover {
   table {
     td {
-      background: color.adjust($alert-color, $lightness: -10%, $space: hsl);
+      background: $button-alert-background-hover;
     }
 
     a {
-      border: 0 solid color.adjust($alert-color, $lightness: -10%, $space: hsl);
+      border: 0 solid $button-alert-background-hover;
     }
   }
 }
@@ -308,11 +313,11 @@ table.button.warning {
 table.button.warning:hover {
   table {
     td {
-      background: color.adjust($warning-color, $lightness: -10%, $space: hsl);
+      background: $button-warning-background-hover;
     }
 
     a {
-      border: 0 solid color.adjust($warning-color, $lightness: -10%, $space: hsl);
+      border: 0 solid $button-warning-background-hover;
     }
   }
 }

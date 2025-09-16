@@ -34,22 +34,27 @@ $callout-border: 1px solid color.adjust($callout-background, $lightness: -20%, $
 /// Border around a callout with the `.primary` class.
 /// @type Border
 $callout-border-primary: 1px solid color.adjust($primary-color, $lightness: -20%, $space: hsl) !default;
+$callout-background-primary: color.scale($primary-color, $lightness: $callout-background-fade) !default;
 
 /// Border around a callout with the `.secondary` class.
 /// @type Border
 $callout-border-secondary: 1px solid color.adjust($secondary-color, $lightness: -20%, $space: hsl) !default;
+$callout-background-secondary: color.scale($secondary-color, $lightness: $callout-background-fade) !default;
 
 /// Border around a callout with the `.success` class.
 /// @type Border
 $callout-border-success: 1px solid color.adjust($success-color, $lightness: -20%, $space: hsl) !default;
+$callout-background-success: color.scale($success-color, $lightness: $callout-background-fade) !default;
 
 /// Border around a callout with the `.warning` class.
 /// @type Border
 $callout-border-warning: 1px solid color.adjust($warning-color, $lightness: -20%, $space: hsl) !default;
+$callout-background-warning: color.scale($warning-color, $lightness: $callout-background-fade) !default;
 
 /// Border around a callout with the `.alert` class.
 /// @type Border
 $callout-border-alert: 1px solid color.adjust($alert-color, $lightness: -20%, $space: hsl) !default;
+$callout-background-alert: color.scale($alert-color, $lightness: $callout-background-fade) !default;
 
 table.callout {
   margin-bottom: $callout-margin-bottom;
@@ -63,31 +68,31 @@ th.callout-inner {
   background: $callout-background;
 
   &.primary {
-    background: color.scale($primary-color, $lightness: $callout-background-fade);
+    background: $callout-background-primary;
     border: $callout-border-primary;
     color: $black;
   }
 
   &.secondary {
-    background: color.scale($secondary-color, $lightness: $callout-background-fade);
+    background: $callout-background-secondary;
     border: $callout-border-secondary;
     color: $black;
   }
 
   &.success {
-    background: color.scale($success-color, $lightness: $callout-background-fade);
+    background: $callout-background-success;
     border: $callout-border-success;
     color: $black;
   }
 
   &.warning {
-    background: color.scale($warning-color, $lightness: $callout-background-fade);
+    background: $callout-background-warning;
     border: $callout-border-warning;
     color: $black;
   }
 
   &.alert {
-    background: color.scale($alert-color, $lightness: $callout-background-fade);
+    background: $callout-background-alert;
     border: $callout-border-alert;
     color: $black;
   }
