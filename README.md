@@ -124,8 +124,19 @@ The parser converts a set of custom HTML tags, expanding them out into full HTML
 </menu>
 ```
 
+## Future Plans
+
+Foundation for Emails will be merging into the [Inky](https://github.com/foundation/inky) project starting with Inky v2.0. Inky will become a complete email framework — combining the templating engine and the styling framework (currently Foundation for Emails) into a single project.
+
+**What this means:**
+- The styling portion of Foundation for Emails will live on as **Inky Styles** within the Inky repo
+- The Inky templating engine is being rewritten in Rust, with bindings for JavaScript (via WASM), PHP, Python, Ruby, and Go
+- This repo will continue to receive maintenance updates but new feature development will happen in Inky v2
+
+Follow progress on the [Inky repo](https://github.com/foundation/inky).
+
 ## Contributing
 
-As an open source project, we looooove our community support. Please file issues, or better yet pull requests on the [Foundation for Emails Repo](https://github.com/foundation/foundation-emails). We're stoked to hear your feedback, make improvements, and keep evolving Foundation for Emails!
+As an open source project, we love our community support. Please file issues, or better yet pull requests on the [Foundation for Emails Repo](https://github.com/foundation/foundation-emails). We're stoked to hear your feedback, make improvements, and keep evolving Foundation for Emails!
 
-Copyright (c) 2018 Foundation, inc.
+Copyright (c) 2026 Foundation, inc.
