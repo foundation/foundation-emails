@@ -64,7 +64,10 @@ table.callout {
 th.callout-inner {
   width: 100%;
   border: $callout-border;
-  padding: $callout-padding;
+  padding-top: $callout-padding;
+  padding-right: $callout-padding;
+  padding-bottom: $callout-padding;
+  padding-left: $callout-padding;
   background: $callout-background;
 
   &.primary {
