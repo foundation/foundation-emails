@@ -828,15 +828,12 @@ span.text-center {
     float: none !important;
     text-align: center !important;
   }
-
   .small-text-center {
     text-align: center !important;
   }
-
   .small-text-left {
     text-align: left !important;
   }
-
   .small-text-right {
     text-align: right !important;
   }
@@ -908,7 +905,7 @@ table.body table.container .hide-for-large * {
 
 @media only screen and (max-width: 596px) {
   table.body table.container .hide-for-large,
-table.body table.container .row.hide-for-large {
+  table.body table.container .row.hide-for-large {
     display: table !important;
     width: 100% !important;
   }
@@ -1056,10 +1053,10 @@ a {
   line-height: 130%;
 }
 a:hover {
-  color: #147dc2;
+  color: rgb(20.0897959184, 124.906122449, 193.9102040816);
 }
 a:active {
-  color: #147dc2;
+  color: rgb(20.0897959184, 124.906122449, 193.9102040816);
 }
 a:visited {
   color: #2199e8;
@@ -1213,18 +1210,14 @@ table.button.large table tr td a:visited {
   color: #fefefe;
 }
 
-table.button.tiny table td,
 table.button.tiny table a {
-  padding: 4px 8px 4px 8px;
-}
-table.button.tiny table a {
+  padding: 8px 16px 8px 16px;
   font-size: 10px;
   font-weight: normal;
 }
 
-table.button.small table td,
 table.button.small table a {
-  padding: 5px 10px 5px 10px;
+  padding: 10px 20px 10px 20px;
   font-size: 12px;
 }
 
@@ -1256,14 +1249,15 @@ table.button.expanded center {
 table.button:hover table td,
 table.button:visited table td,
 table.button:active table td {
-  background: #147dc2;
+  background: rgb(20.0897959184, 124.906122449, 193.9102040816);
+  border-color: rgb(20.0897959184, 124.906122449, 193.9102040816);
   color: #fefefe;
 }
 
 table.button:hover table a,
 table.button:visited table a,
 table.button:active table a {
-  border: 0 solid #147dc2;
+  border: 0 solid rgb(20.0897959184, 124.906122449, 193.9102040816);
 }
 
 table.button.secondary table td {
@@ -1277,11 +1271,12 @@ table.button.secondary table a {
 }
 
 table.button.secondary:hover table td {
-  background: #919191;
+  background: rgb(144.5, 144.5, 144.5);
+  border-color: rgb(144.5, 144.5, 144.5);
   color: #fefefe;
 }
 table.button.secondary:hover table a {
-  border: 0 solid #919191;
+  border: 0 solid rgb(144.5, 144.5, 144.5);
 }
 
 table.button.secondary:hover table td a {
@@ -1305,10 +1300,11 @@ table.button.success table a {
 }
 
 table.button.success:hover table td {
-  background: #23bf5d;
+  background: rgb(34.9184549356, 191.0815450644, 93.1158798283);
+  border-color: rgb(34.9184549356, 191.0815450644, 93.1158798283);
 }
 table.button.success:hover table a {
-  border: 0 solid #23bf5d;
+  border: 0 solid rgb(34.9184549356, 191.0815450644, 93.1158798283);
 }
 
 table.button.alert table td {
@@ -1320,10 +1316,11 @@ table.button.alert table a {
 }
 
 table.button.alert:hover table td {
-  background: #e23317;
+  background: rgb(226.4714285714, 50.9857142857, 22.5285714286);
+  border-color: rgb(226.4714285714, 50.9857142857, 22.5285714286);
 }
 table.button.alert:hover table a {
-  border: 0 solid #e23317;
+  border: 0 solid rgb(226.4714285714, 50.9857142857, 22.5285714286);
 }
 
 table.button.warning table td {
@@ -1335,10 +1332,81 @@ table.button.warning table a {
 }
 
 table.button.warning:hover table td {
-  background: #cc8b00;
+  background: rgb(204, 139.2, 0);
+  border-color: rgb(204, 139.2, 0);
 }
 table.button.warning:hover table a {
-  border: 0px solid #cc8b00;
+  border: 0 solid rgb(204, 139.2, 0);
+}
+
+table.button.hollow table td, table.button.hollow:hover table td {
+  border: none !important;
+  border-radius: 0;
+  background: transparent !important;
+}
+table.button.hollow table a {
+  border-radius: 0;
+}
+table.button.hollow.radius table a {
+  border-radius: 3px;
+}
+table.button.hollow.rounded table a {
+  border-radius: 500px;
+}
+table.button.hollow table tr td a {
+  border: 1px solid #2199e8;
+  color: #2199e8;
+}
+table.button.hollow table tr td a:visited {
+  color: #2199e8;
+}
+table.button.hollow table tr td a:hover {
+  border-color: rgb(20.0897959184, 124.906122449, 193.9102040816);
+  color: rgb(20.0897959184, 124.906122449, 193.9102040816);
+}
+table.button.hollow.secondary table tr td a {
+  border: 1px solid #777777;
+  color: #777777;
+}
+table.button.hollow.secondary table tr td a:visited {
+  color: #777777;
+}
+table.button.hollow.secondary table tr td a:hover {
+  border-color: rgb(93.5, 93.5, 93.5);
+  color: rgb(93.5, 93.5, 93.5);
+}
+table.button.hollow.alert table tr td a {
+  border: 1px solid #ec5840;
+  color: #ec5840;
+}
+table.button.hollow.alert table tr td a:visited {
+  color: #ec5840;
+}
+table.button.hollow.alert table tr td a:hover {
+  border-color: rgb(226.4714285714, 50.9857142857, 22.5285714286);
+  color: rgb(226.4714285714, 50.9857142857, 22.5285714286);
+}
+table.button.hollow.warning table tr td a {
+  border: 1px solid #ffae00;
+  color: #ffae00;
+}
+table.button.hollow.warning table tr td a:visited {
+  color: #ffae00;
+}
+table.button.hollow.warning table tr td a:hover {
+  border-color: rgb(204, 139.2, 0);
+  color: rgb(204, 139.2, 0);
+}
+table.button.hollow.success table tr td a {
+  border: 1px solid #3adb76;
+  color: #3adb76;
+}
+table.button.hollow.success table tr td a:visited {
+  color: #3adb76;
+}
+table.button.hollow.success table tr td a:hover {
+  border-color: rgb(34.9184549356, 191.0815450644, 93.1158798283);
+  color: rgb(34.9184549356, 191.0815450644, 93.1158798283);
 }
 
 table.callout {
@@ -1349,32 +1417,35 @@ table.callout {
 th.callout-inner {
   width: 100%;
   border: 1px solid #cbcbcb;
-  padding: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
   background: #fefefe;
 }
 th.callout-inner.primary {
-  background: #def0fc;
-  border: 1px solid #0f5f94;
+  background: rgb(221.7, 239.7, 251.55);
+  border: 1px solid rgb(15.3020408163, 95.1387755102, 147.6979591837);
   color: #0a0a0a;
 }
 th.callout-inner.secondary {
-  background: #ebebeb;
+  background: rgb(234.6, 234.6, 234.6);
   border: 1px solid #444444;
   color: #0a0a0a;
 }
 th.callout-inner.success {
-  background: #e1faea;
-  border: 1px solid #1b9448;
+  background: rgb(225.45, 249.6, 234.45);
+  border: 1px solid rgb(27.0386266094, 147.9613733906, 72.1030042918);
   color: #0a0a0a;
 }
 th.callout-inner.warning {
-  background: #fff3d9;
-  border: 1px solid #996800;
+  background: rgb(255, 242.85, 216.75);
+  border: 1px solid rgb(153, 104.4, 0);
   color: #0a0a0a;
 }
 th.callout-inner.alert {
-  background: #fce6e2;
-  border: 1px solid #b42912;
+  background: rgb(252.15, 229.95, 226.35);
+  border: 1px solid rgb(180.0857142857, 40.5428571429, 17.9142857143);
   color: #0a0a0a;
 }
 
@@ -1465,17 +1536,14 @@ body.outlook p {
     width: auto;
     height: auto;
   }
-
   table.body center {
     min-width: 0 !important;
   }
-
   table.body .container {
     width: 95% !important;
   }
-
   table.body .columns,
-table.body .column {
+  table.body .column {
     height: auto !important;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1483,211 +1551,179 @@ table.body .column {
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
-
   table.body .collapse > tbody > tr > .columns, table.body .collapse > tbody > tr > .column {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-
   td.small-1,
-th.small-1 {
+  th.small-1 {
     display: inline-block !important;
     width: 8.333333% !important;
   }
-
   td.small-2,
-th.small-2 {
+  th.small-2 {
     display: inline-block !important;
     width: 16.666666% !important;
   }
-
   td.small-3,
-th.small-3 {
+  th.small-3 {
     display: inline-block !important;
     width: 25% !important;
   }
-
   td.small-4,
-th.small-4 {
+  th.small-4 {
     display: inline-block !important;
     width: 33.333333% !important;
   }
-
   td.small-5,
-th.small-5 {
+  th.small-5 {
     display: inline-block !important;
     width: 41.666666% !important;
   }
-
   td.small-6,
-th.small-6 {
+  th.small-6 {
     display: inline-block !important;
     width: 50% !important;
   }
-
   td.small-7,
-th.small-7 {
+  th.small-7 {
     display: inline-block !important;
     width: 58.333333% !important;
   }
-
   td.small-8,
-th.small-8 {
+  th.small-8 {
     display: inline-block !important;
     width: 66.666666% !important;
   }
-
   td.small-9,
-th.small-9 {
+  th.small-9 {
     display: inline-block !important;
     width: 75% !important;
   }
-
   td.small-10,
-th.small-10 {
+  th.small-10 {
     display: inline-block !important;
     width: 83.333333% !important;
   }
-
   td.small-11,
-th.small-11 {
+  th.small-11 {
     display: inline-block !important;
     width: 91.666666% !important;
   }
-
   td.small-12,
-th.small-12 {
+  th.small-12 {
     display: inline-block !important;
     width: 100% !important;
   }
-
   .columns td.small-12,
-.column td.small-12,
-.columns th.small-12,
-.column th.small-12 {
+  .column td.small-12,
+  .columns th.small-12,
+  .column th.small-12 {
     display: block !important;
     width: 100% !important;
   }
-
   table.body td.small-offset-1,
-table.body th.small-offset-1 {
+  table.body th.small-offset-1 {
     margin-left: 8.333333% !important;
     Margin-left: 8.333333% !important;
   }
-
   table.body td.small-offset-2,
-table.body th.small-offset-2 {
+  table.body th.small-offset-2 {
     margin-left: 16.666666% !important;
     Margin-left: 16.666666% !important;
   }
-
   table.body td.small-offset-3,
-table.body th.small-offset-3 {
+  table.body th.small-offset-3 {
     margin-left: 25% !important;
     Margin-left: 25% !important;
   }
-
   table.body td.small-offset-4,
-table.body th.small-offset-4 {
+  table.body th.small-offset-4 {
     margin-left: 33.333333% !important;
     Margin-left: 33.333333% !important;
   }
-
   table.body td.small-offset-5,
-table.body th.small-offset-5 {
+  table.body th.small-offset-5 {
     margin-left: 41.666666% !important;
     Margin-left: 41.666666% !important;
   }
-
   table.body td.small-offset-6,
-table.body th.small-offset-6 {
+  table.body th.small-offset-6 {
     margin-left: 50% !important;
     Margin-left: 50% !important;
   }
-
   table.body td.small-offset-7,
-table.body th.small-offset-7 {
+  table.body th.small-offset-7 {
     margin-left: 58.333333% !important;
     Margin-left: 58.333333% !important;
   }
-
   table.body td.small-offset-8,
-table.body th.small-offset-8 {
+  table.body th.small-offset-8 {
     margin-left: 66.666666% !important;
     Margin-left: 66.666666% !important;
   }
-
   table.body td.small-offset-9,
-table.body th.small-offset-9 {
+  table.body th.small-offset-9 {
     margin-left: 75% !important;
     Margin-left: 75% !important;
   }
-
   table.body td.small-offset-10,
-table.body th.small-offset-10 {
+  table.body th.small-offset-10 {
     margin-left: 83.333333% !important;
     Margin-left: 83.333333% !important;
   }
-
   table.body td.small-offset-11,
-table.body th.small-offset-11 {
+  table.body th.small-offset-11 {
     margin-left: 91.666666% !important;
     Margin-left: 91.666666% !important;
   }
-
   table.body table.columns td.expander,
-table.body table.columns th.expander {
+  table.body table.columns th.expander {
     display: none !important;
   }
-
   table.body .right-text-pad,
-table.body .text-pad-right {
+  table.body .text-pad-right {
     padding-left: 10px !important;
   }
-
   table.body .left-text-pad,
-table.body .text-pad-left {
+  table.body .text-pad-left {
     padding-right: 10px !important;
   }
-
   table.menu {
     width: 100% !important;
   }
   table.menu td,
-table.menu th {
+  table.menu th {
     width: auto !important;
     display: inline-block !important;
   }
   table.menu.vertical td,
-table.menu.vertical th, table.menu.small-vertical td,
-table.menu.small-vertical th {
+  table.menu.vertical th, table.menu.small-vertical td,
+  table.menu.small-vertical th {
     display: block !important;
   }
-
   table.menu[align=center] {
     width: auto !important;
   }
-
   table.button.small-expand,
-table.button.small-expanded {
+  table.button.small-expanded {
     width: 100% !important;
   }
   table.button.small-expand table,
-table.button.small-expanded table {
+  table.button.small-expanded table {
     width: 100%;
   }
   table.button.small-expand table a,
-table.button.small-expanded table a {
+  table.button.small-expanded table a {
     text-align: center !important;
     width: 100% !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
   table.button.small-expand center,
-table.button.small-expanded center {
+  table.button.small-expanded center {
     min-width: 0;
   }
-
   th.callout-inner {
     padding: 10px !important;
   }

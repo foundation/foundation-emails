@@ -351,12 +351,12 @@ table.button.hollow {
   table td,
   &:hover table td {
     border: none !important;
-    border-radius: 0px;
+    border-radius: 0;
     background: transparent !important;
   }
 
   table a {
-    border-radius: 0px;
+    border-radius: 0;
   }
 
   &.radius {
