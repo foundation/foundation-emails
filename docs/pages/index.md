@@ -33,7 +33,7 @@ Get to know the pieces of Foundation.
     <p>Our custom HTML tags for writing email components.</p>
   </a></div>
   <div class="column"><a href="zurb-stack.html">
-    <strong>ZURB Stack</strong>
+    <strong>Foundation stack</strong>
     <p>An all-in-one solution for email development.</p>
   </a></div>
   <div class="column"><a href="compatibility.html">

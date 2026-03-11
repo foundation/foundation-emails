@@ -10,7 +10,7 @@ tags:
 - **Streamlined and updated responsive grid:** We’ve simplified the markup in the new version so it’s faster and easier to code. The new responsive grid in Emails 2 requires fewer tags and classes. It’s also now responsive on Android Native!
 - **Inky templating language:** With Inky you can write less code and get more done. The Inky language gets you out of tables and into a simpler, more web-like, HTML.
 - **Built with Sass:** Now faster than ever, you can easily make sweeping visual changes to your email that reflect your brand styles - all within one settings file.
-- **ZURB Stack:** All kinds of task automation - [Panini](https://get.foundation/sites/docs/panini.html), our Handlebars templates, compiling Sass, BrowserSync, image compression, and auto inlining are built in to speed up your workflow.
+- **Foundation stack:** All kinds of task automation - [Panini](https://get.foundation/sites/docs/panini.html), our Handlebars templates, compiling Sass, BrowserSync, image compression, and auto inlining are built in to speed up your workflow.
 
 ---
 
@@ -351,7 +351,7 @@ In the previous version of F4E the text inside of the button was the only clicka
       <table>
         <tr>
           <td>
-            <a href="https://zurb.com">I am successful</a>
+            <a href="https://get.foundation">I am successful</a>
           </td>
         </tr>
       </table>
@@ -363,7 +363,7 @@ In the previous version of F4E the text inside of the button was the only clicka
 #### New Markup (Inky HTML)
 
 ```html
-<button href="https://zurb.com"></button>
+<button href="https://get.foundation"></button>
 ```
 
 Centering a button is easier now, just wrap the button with `<center>` tags.

@@ -1,13 +1,13 @@
 ---
 title: Getting Started with Sass
-description: Get started with the Sass-powered ZURB Stack for writing HTML emails.
+description: Get started with the Sass-powered Foundation stack for writing HTML emails.
 ---
 
 Foundation for Emails takes the pain out of developing HTML emails by giving you a set of powerful, tested components out of the box. This includes a fully-responsive grid, buttons, callouts, menus, and more.
 
-The Sass workflow for Foundation for Emails is backed by the [ZURB Email Stack](zurb-stack.html), an all-in-one build system for creating HTML emails. This workflow requires a bit more up-front setup, but the tooling makes it wicked fast to code, and keeps your code amazingly clean with our new custom HTML tags in Inky.
+The Sass workflow for Foundation for Emails is backed by the [Foundation Email Stack](zurb-stack.html), an all-in-one build system for creating HTML emails. This workflow requires a bit more up-front setup, but the tooling makes it wicked fast to code, and keeps your code amazingly clean with our new custom HTML tags in Inky.
 
-The ZURB Stack workflow also includes Handlebars, allowing you to write emails as templates instead of static files. Lastly, you can easily make sweeping design changes with the Sass [settings file](sass.html#the-settings-file). Here’s everything that’s packaged in this template:
+The Foundation stack workflow also includes Handlebars, allowing you to write emails as templates instead of static files. Lastly, you can easily make sweeping design changes with the Sass [settings file](sass.html#the-settings-file). Here’s everything that’s packaged in this template:
 
 - Inky HTML
 - Sass
@@ -121,7 +121,7 @@ Inside `src/layouts/default.html`, you can see the boilerplate needed to make an
 
 Foundation for Emails includes many common elements needed to make HTML emails: a grid, typography styles, buttons, callouts, and more.
 
-The markup required to create HTML emails that work in all email clients is *complicated*, and involves writing many tables. However, the ZURB Stack includes Inky, a templating language that converts simple HTML tags to the complex HTML required for the components.
+The markup required to create HTML emails that work in all email clients is *complicated*, and involves writing many tables. However, the Foundation stack includes Inky, a templating language that converts simple HTML tags to the complex HTML required for the components.
 
 Let's build a basic grid.
 
@@ -176,4 +176,4 @@ It's up to you to choose what email clients are important to test in, but you ca
 
 You've successfully installed Foundation for Emails, and written, inlined, and tested your first email! To keep going with the framework, you can check out the documentation for the other framework components, including [buttons](button.html), [callouts](callout.html), [menus](menu.html).
 
-If you're interested in going in-depth on the framework with the Foundation team, [check out our master class on Foundation for Emails](https://zurb.com/university/responsive-emails-foundation), an on-demand video series that explores every aspect of email design workflow.
+If you're interested in going in-depth on the framework with the Foundation team, [check out our master class on Foundation for Emails](https://get.foundation/university/responsive-emails-foundation), an on-demand video series that explores every aspect of email design workflow.

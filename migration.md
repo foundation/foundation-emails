@@ -22,7 +22,7 @@
 - **Streamlined and updated responsive grid:** We’ve simplified the markup in the new version so it’s faster and easier to code. The new responsive grid in Emails 2 requires fewer tags and classes. It’s also now responsive on Android Native!
 - **Inky templating language:** With Inky you can write less code and get more done. The Inky language gets you out of tables and into a simpler, more web-like, HTML.
 - **Built with Sass:** Now faster than ever, you can easily make sweeping visual changes to your email that reflect your brand styles - all within one settings file.
-- **ZURB Stack:** All kinds of task automation - [Panini](https://get.foundation/sites/docs/panini.html), our Handlebars templates, compiling Sass, BrowserSync, image compression, and auto inlining are built in to speed up your workflow.
+- **Foundation stack:** All kinds of task automation - [Panini](https://get.foundation/sites/docs/panini.html), our Handlebars templates, compiling Sass, BrowserSync, image compression, and auto inlining are built in to speed up your workflow.
 
 ## Overview
 
@@ -316,7 +316,7 @@ Version 2 (CSS version)
       <table>
         <tr>
           <td>
-            <a href="https://zurb.com">I am successful</a>
+            <a href="https://get.foundation">I am successful</a>
           </td>
         </tr>
       </table>
@@ -328,7 +328,7 @@ Version 2 (CSS version)
 Version 2 (Inky markup)
 
 ```
-<button href="http://zurb.com"></button>
+<button href="http://get.foundation"></button>
 ```
 
 The button markup has changed to make the touch targets better. Now the whole button is clickable. It requires more table markup but you should use Inky anyways which is much simpler.

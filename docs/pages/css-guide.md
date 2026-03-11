@@ -178,4 +178,4 @@ It's up to you to choose what email clients are important to test in, but you ca
 
 You've successfully installed Foundation for Emails, and written, inlined, and tested your first email! To keep going with the framework, you can check out the documentation for the other framework components, including [buttons](button.html), [callouts](callout.html), [menus](menu.html).
 
-If you're interested in going in-depth on the framework with the Foundation team, [check out our master class on Foundation for Emails](https://zurb.com/university/responsive-emails-foundation), an on-demand video series that explores every aspect of email design workflow.
+If you're interested in going in-depth on the framework with the Foundation team, [check out our master class on Foundation for Emails](https://get.foundation/university/responsive-emails-foundation), an on-demand video series that explores every aspect of email design workflow.
