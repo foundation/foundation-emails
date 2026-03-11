@@ -1,5 +1,7 @@
+@use "sass:color";
+
 $topbar-background: #2c3840;
-$topbar-hover-color: lighten($topbar-background, 10%);// The CSS for the Foundation docs is stored in an external codebase:
+$topbar-hover-color: color.adjust($topbar-background, $lightness: +10%, $space: hsl);// The CSS for the Foundation docs is stored in an external codebase:
 // https://github.com/zurb/foundation-docs
 //
 // You can test Sass changes locally by running these commands:
@@ -29,7 +31,7 @@ $foundation-palette: (
 @import 'course-callout';
 
 $topbar-background: #2c3840;
-$topbar-hover-color: lighten($topbar-background, 10%);
+$topbar-hover-color: color.adjust($topbar-background, $lightness: +10%, $space: hsl);
 
 .dropdown.menu > li.is-dropdown-submenu-parent > a {
   padding-right: 1rem;
@@ -69,7 +71,7 @@ $topbar-hover-color: lighten($topbar-background, 10%);
   background: $primary-color;
 
   &:hover {
-    background: darken($primary-color, 10%);
+    background: color.adjust($primary-color, $lightness: -10%, $space: hsl);
   }
 }
 

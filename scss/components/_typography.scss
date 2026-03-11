@@ -2,6 +2,7 @@
 // zurb.com/ink/
 // Licensed under MIT Open Source
 @use "sass:math";
+@use "sass:color";
 
 ////
 /// @group typography
@@ -45,27 +46,27 @@ $header-font-weight: $global-font-weight !default;
 
 /// Font size of `<h1>` elements.
 /// @type Number
-$h1-font-size: floor($global-font-size * 2.125) !default;
+$h1-font-size: math.floor($global-font-size * 2.125) !default;
 
 /// Font size of `<h2>` elements.
 /// @type Number
-$h2-font-size: floor($global-font-size * 1.875) !default;
+$h2-font-size: math.floor($global-font-size * 1.875) !default;
 
 /// Font size of `<h3>` elements.
 /// @type Number
-$h3-font-size: floor($global-font-size * 1.75) !default;
+$h3-font-size: math.floor($global-font-size * 1.75) !default;
 
 /// Font size of `<h4>` elements.
 /// @type Number
-$h4-font-size: floor($global-font-size * 1.5) !default;
+$h4-font-size: math.floor($global-font-size * 1.5) !default;
 
 /// Font size of `<h5>` elements.
 /// @type Number
-$h5-font-size: floor($global-font-size * 1.2) !default;
+$h5-font-size: math.floor($global-font-size * 1.2) !default;
 
 /// Font size of `<h6>` elements.
 /// @type Number
-$h6-font-size: floor($global-font-size * 1.125) !default;
+$h6-font-size: math.floor($global-font-size * 1.125) !default;
 
 /// Margin bottom of `<h1>` through `<h6>` elements.
 /// @type Number
@@ -149,7 +150,7 @@ $anchor-color-visited: $anchor-color !default;
 
 /// Text color of anchors on hover.
 /// @type Color
-$anchor-color-hover: darken($primary-color, 10%) !default;
+$anchor-color-hover: color.adjust($primary-color, $lightness: -10%, $space: hsl) !default;
 
 /// Text color of active anchors.
 /// @type Color

@@ -9,7 +9,7 @@
 /// @param {number} $totalColumns - Column count of the entire row.
 /// @returns {number} A percentage width value.
 @function -zf-grid-calc-pct($colNumber, $totalColumns) {
-  @return math.div(floor(percentage(math.div($colNumber, $totalColumns)) * 1000000), 1000000);
+  @return math.div(math.floor(math.percentage(math.div($colNumber, $totalColumns)) * 1000000), 1000000);
 }
 
 /// Calculates a pixel value for a grid column width.

@@ -1,3 +1,6 @@
+@use 'sass:math';
+@use 'sass:color';
+
 //  Foundation for Emails Settings
 //  ------------------------------
 //
@@ -64,12 +67,12 @@ $global-font-size: 16px;
 $body-line-height: $global-line-height;
 $header-font-family: $body-font-family;
 $header-font-weight: $global-font-weight;
-$h1-font-size: floor($global-font-size * 2.125);
-$h2-font-size: floor($global-font-size * 1.875);
-$h3-font-size: floor($global-font-size * 1.75);
-$h4-font-size: floor($global-font-size * 1.5);
-$h5-font-size: floor($global-font-size * 1.2);
-$h6-font-size: floor($global-font-size * 1.125);
+$h1-font-size: math.floor($global-font-size * 2.125);
+$h2-font-size: math.floor($global-font-size * 1.875);
+$h3-font-size: math.floor($global-font-size * 1.75);
+$h4-font-size: math.floor($global-font-size * 1.5);
+$h5-font-size: math.floor($global-font-size * 1.2);
+$h6-font-size: math.floor($global-font-size * 1.125);
 $header-margin-bottom: 10px;
 $paragraph-margin-bottom: 10px;
 $small-font-size: 80%;
@@ -89,7 +92,7 @@ $hr-align: center;
 $anchor-text-decoration: none;
 $anchor-color: $primary-color;
 $anchor-color-visited: $anchor-color;
-$anchor-color-hover: darken($primary-color, 10%);
+$anchor-color-hover: color.adjust($primary-color, $lightness: -10%, $space: hsl);
 $anchor-color-active: $anchor-color-hover;
 $stat-font-size: 40px;
 $remove-ios-blue: true;
@@ -126,12 +129,12 @@ $callout-background-fade: 85%;
 $callout-padding: 10px;
 $callout-padding-small: $callout-padding;
 $callout-margin-bottom: $global-margin;
-$callout-border: 1px solid darken($callout-background, 20%);
-$callout-border-primary: 1px solid darken($primary-color, 20%);
-$callout-border-secondary: 1px solid darken($secondary-color, 20%);
-$callout-border-success: 1px solid darken($success-color, 20%);
-$callout-border-warning: 1px solid darken($warning-color, 20%);
-$callout-border-alert: 1px solid darken($alert-color, 20%);
+$callout-border: 1px solid color.adjust($callout-background, $lightness: -20%, $space: hsl);
+$callout-border-primary: 1px solid color.adjust($primary-color, $lightness: -20%, $space: hsl);
+$callout-border-secondary: 1px solid color.adjust($secondary-color, $lightness: -20%, $space: hsl);
+$callout-border-success: 1px solid color.adjust($success-color, $lightness: -20%, $space: hsl);
+$callout-border-warning: 1px solid color.adjust($warning-color, $lightness: -20%, $space: hsl);
+$callout-border-alert: 1px solid color.adjust($alert-color, $lightness: -20%, $space: hsl);
 
 // 7. Menu
 // -------
