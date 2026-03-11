@@ -11,8 +11,8 @@
 /// Padding inside buttons at various sizes.
 /// @type Map
 $button-padding: (
-  tiny: 4px 8px 4px 8px,
-  small: 5px 10px 5px 10px,
+  tiny: 8px 16px 8px 16px,
+  small: 10px 20px 10px 20px,
   default: 8px 16px 8px 16px,
   large: 10px 20px 10px 20px,
 ) !default;
@@ -123,12 +123,8 @@ table.button.large table tr td a:visited {
 
 table.button.tiny {
   table {
-    td,
     a {
       padding: map.get($button-padding, tiny);
-    }
-
-    a {
       font-size: map.get($button-font-size, tiny);
       font-weight: normal;
     }
@@ -137,7 +133,6 @@ table.button.tiny {
 
 table.button.small {
   table {
-    td,
     a {
       padding: map.get($button-padding, small);
       font-size: map.get($button-font-size, small);
@@ -180,6 +175,7 @@ table.button:active {
   table {
     td {
       background: $button-background-hover;
+      border-color: $button-background-hover;
       color: $button-color;
     }
   }
@@ -214,6 +210,7 @@ table.button.secondary:hover {
   table {
     td {
       background: $button-secondary-background-hover;
+      border-color: $button-secondary-background-hover;
       color: $button-color;
     }
 
@@ -264,6 +261,7 @@ table.button.success:hover {
   table {
     td {
       background: $button-success-background-hover;
+      border-color: $button-success-background-hover;
     }
 
     a {
@@ -289,6 +287,7 @@ table.button.alert:hover {
   table {
     td {
       background: $button-alert-background-hover;
+      border-color: $button-alert-background-hover;
     }
 
     a {
@@ -314,10 +313,63 @@ table.button.warning:hover {
   table {
     td {
       background: $button-warning-background-hover;
+      border-color: $button-warning-background-hover;
     }
 
     a {
       border: 0 solid $button-warning-background-hover;
     }
   }
+}
+
+// Hollow Buttons
+@mixin hollow-button($color, $class: false) {
+  // If this mixin is called with a class, then a class will be added
+  // Then the mixin calls itself with just the color to obtain the color styles
+  @if $class {
+    &.#{$class} {
+        @include hollow-button($color);
+    }
+  } @else {
+    table tr td a {
+      border: 1px solid $color;
+      color: $color;
+
+      &:visited {
+        color: $color;
+      }
+
+      &:hover {
+        border-color: color.adjust($color, $lightness: -10%, $space: hsl);
+        color: color.adjust($color, $lightness: -10%, $space: hsl);
+      }
+    }
+  }
+}
+
+table.button.hollow {
+  table td,
+  &:hover table td {
+    border: none !important;
+    border-radius: 0px;
+    background: transparent !important;
+  }
+
+  table a {
+    border-radius: 0px;
+  }
+
+  &.radius {
+    table a { border-radius: $global-radius; }
+  }
+
+  &.rounded {
+    table a { border-radius: $global-rounded; }
+  }
+
+  @include hollow-button($primary-color);
+  @include hollow-button($secondary-color, 'secondary');
+  @include hollow-button($alert-color, 'alert');
+  @include hollow-button($warning-color, 'warning');
+  @include hollow-button($success-color, 'success');
 }
