@@ -7,18 +7,18 @@
 [![CDNJS](https://img.shields.io/cdnjs/v/foundation-emails.svg)](https://cdnjs.com/libraries/foundation-emails)
 
 
-Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client &mdash; even Outlook. Our HTML/CSS components have been tested across every major email client to ensure consistency. And with the [Inky](https://github.com/zurb/inky) templating language, writing HTML emails is now even easier.
+Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client &mdash; even Outlook. Our HTML/CSS components have been tested across every major email client to ensure consistency. And with the [Inky](https://github.com/foundation/inky) templating language, writing HTML emails is now even easier.
 
 ## Getting Started
 
-The main way to get started is with our [email template stack](https://github.com/zurb/foundation-emails-template). To use the stack, you'll need [Node.js](https://nodejs.org/en/) no greater than version 10 installed on your machine.
+The main way to get started is with our [email template stack](https://github.com/foundation/foundation-emails-template). To use the stack, you'll need [Node.js](https://nodejs.org/en/) no greater than version 10 installed on your machine.
 
 `nvm` installation instructions can be found [here](https://github.com/nvm-sh/nvm#install--update-script)
 
 To set up the emails template, run these commands:
 
 ```bash
-git clone https://github.com/zurb/foundation-emails-template project
+git clone https://github.com/foundation/foundation-emails-template project
 cd project
 nvm install 10
 nvm use 10
@@ -54,18 +54,18 @@ Run `npm run build` to do a full email inlining process.
   @import "foundation-emails";
   ```
 
-Adding Inky's templating capabilities to Rails is easy thanks to the [**inky-rb**](https://github.com/zurb/inky-rb) gem, which bundles `foundation_emails` by default.
+Adding Inky's templating capabilities to Rails is easy thanks to the [**inky-rb**](https://github.com/foundation/inky-rb) gem, which bundles `foundation_emails` by default.
 
 ## Documentation
 
-**Check out our [Migration Guide](https://github.com/zurb/foundation-emails/blob/master/migration.md) for upgrading an existing template or for more in-depth code examples.**
+**Check out our [Migration Guide](https://github.com/foundation/foundation-emails/blob/master/migration.md) for upgrading an existing template or for more in-depth code examples.**
 
 Foundation for Emails 2.0 documentation and framework are on the `develop` branch and you can compile it on your own machine.
 
 Run these commands to set up the documentation:
 
 ```bash
-git clone https://github.com/zurb/foundation-emails.git
+git clone https://github.com/foundation/foundation-emails.git
 cd foundation-emails
 ```
 
@@ -85,7 +85,7 @@ Run `npm run test:visual` to compile the visual regression tests. All of the pag
 
 ## Inky
 
-[Inky](https://github.com/zurb/inky) is our new templating language that converts simple HTML into the complex tables required for email layout.
+[Inky](https://github.com/foundation/inky) is our new templating language that converts simple HTML into the complex tables required for email layout.
 
 The parser converts a set of custom HTML tags, expanding them out into full HTML syntax. Below is a list of every custom element.
 
@@ -113,7 +113,7 @@ The parser converts a set of custom HTML tags, expanding them out into full HTML
 ### Components
 
 ```html
-<button href="http://zurb.com"></button>
+<button href="http://get.foundation"></button>
 ```
 
 ```html
@@ -126,6 +126,6 @@ The parser converts a set of custom HTML tags, expanding them out into full HTML
 
 ## Contributing
 
-As an open source project, we looooove our community support. Please file issues, or better yet pull requests on the [Foundation for Emails Repo](https://github.com/zurb/foundation-emails). We're stoked to hear your feedback, make improvements, and keep evolving Foundation for Emails!
+As an open source project, we looooove our community support. Please file issues, or better yet pull requests on the [Foundation for Emails Repo](https://github.com/foundation/foundation-emails). We're stoked to hear your feedback, make improvements, and keep evolving Foundation for Emails!
 
-Copyright (c) 2018 ZURB, inc.
+Copyright (c) 2018 Foundation, inc.

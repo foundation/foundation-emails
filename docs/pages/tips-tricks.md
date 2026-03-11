@@ -20,7 +20,7 @@ The sad truth about creating or coding HTML emails is that tables are the only t
 
 <div class="callout secondary tip">General rule of thumb: your email is not going to look identical in every client. And that’s OK.</div>
 
-It's not all doom and gloom though, and we're all in this together. Foundation for Emails helps by getting you away from tables (Sass version), helping you with an organized project structure, and a well tested codebase to make this much easier. We've put together this guide and [links to resources](https://get.foundation/emails/resources.html) from our friends to help you along as well as a new [Responsive Emails master class](https://zurb.com/university/responsive-emails-foundation) to become a HTML email pro.
+It's not all doom and gloom though, and we're all in this together. Foundation for Emails helps by getting you away from tables (Sass version), helping you with an organized project structure, and a well tested codebase to make this much easier. We've put together this guide and [links to resources](https://get.foundation/emails/resources.html) from our friends to help you along as well as a new [Responsive Emails master class](https://get.foundation/university/responsive-emails-foundation) to become a HTML email pro.
 
 ---
 
@@ -131,7 +131,7 @@ Gmail strips the `<head>` (and, consequently, `<style>`) tags from your email. T
 
 Because media queries cannot be inlined, they need to be moved into the `<body>` of the email. Our inliner does that for you.
 
-If you're using Sass with the ZURB stack, you enjoy the luxury of automatic inlining when running `npm run build`. Your file will be copied into the `dist ` folder where you will find it minified and inlined. You'll want to do this before you test or send your email.
+If you're using Sass with the Foundation stack, you enjoy the luxury of automatic inlining when running `npm run build`. Your file will be copied into the `dist ` folder where you will find it minified and inlined. You'll want to do this before you test or send your email.
 
 If you are using the CSS version, you can use our [web inliner](https://get.foundation/emails/inliner-v2.html).
 
@@ -252,7 +252,7 @@ Causes
 Solution?
 
 - Create emails that are short and to the point. Too many call-to-actions's, topics, or long emails don't tend to work that well anyways.
-- Minify your HTML. The ZURB Stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the charachter count and file size. Our [web inliner](https://get.foundation/emails/inliner.html) also has an option to remove (compress) whitespace between your charachters.
+- Minify your HTML. The Foundation stack comes with a setting to minify the HTML if you run `npm run build`. This will remove white-space which adds to the charachter count and file size. Our [web inliner](https://get.foundation/emails/inliner.html) also has an option to remove (compress) whitespace between your charachters.
 
 ---
 
@@ -279,7 +279,7 @@ In general, use a single font throughout your email. Mixing several different fo
 <a id="progressive-enhancement"></a>
 ## Progressive Enhancement
 
-Do progressively enhance. ZURB and Foundation for Emails builds Outlook-first. Meaning, design for the most constrained platform you support, then add features. It's a great idea to know what devices your emails are being opened on and at what rate. Email Service Providers like Campaign Monitor and Mailchimp track this for you.
+Do progressively enhance. Foundation and Foundation for Emails builds Outlook-first. Meaning, design for the most constrained platform you support, then add features. It's a great idea to know what devices your emails are being opened on and at what rate. Email Service Providers like Campaign Monitor and Mailchimp track this for you.
 
 <img src="assets/img/cm-email-client-stats.png" alt="image of graph">
 

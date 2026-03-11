@@ -2,8 +2,8 @@
 title: Panini
 description: A flat file compiler that powers our prototyping template. Create pages with consistent layouts and reusable partials with ease.
 library:
-  github: https://github.com/zurb/panini
-  docs: https://github.com/zurb/panini
+  github: https://github.com/foundation/panini
+  docs: https://github.com/foundation/panini
 ---
 
 {{{{raw}}}}
@@ -12,7 +12,7 @@ If you've ever created a static site, maybe you had five pages that all shared t
 
 Panini is a flat file compiler that uses the concepts of templates, pages, and partials&mdash;powered by the [Handlebars](https://handlebarsjs.com/) templating language&mdash;to streamline the process of creating static prototypes.
 
-Our [prototyping template](https://github.com/zurb/foundation-emails-template) uses Panini, along with a host of other tools for processing Sass and images, to make creating optimized templates easy. It's already been configured to utilize all of the features below, but if you want to learn the specifics of how to configure the library, head over to the [Panini GitHub page](https://github.com/zurb/panini).
+Our [prototyping template](https://github.com/foundation/foundation-emails-template) uses Panini, along with a host of other tools for processing Sass and images, to make creating optimized templates easy. It's already been configured to utilize all of the features below, but if you want to learn the specifics of how to configure the library, head over to the [Panini GitHub page](https://github.com/foundation/panini).
 
 ---
 
@@ -233,7 +233,7 @@ This code will print three `<li>`s, one for each item in the file.
 
 ## Tutorials
 
-[Staying D.R.Y. with Panini](https://zurb.com/university/lessons/staying-d-r-y-with-panini)
+[Staying D.R.Y. with Panini](https://get.foundation/university/lessons/staying-d-r-y-with-panini)
 Panini comes with tons of Handlebars helpers built in, like a repeat helper or markdown parser, but in this lesson we’ll take a look at creating a custom month/year helper for an HTML email.
 
 

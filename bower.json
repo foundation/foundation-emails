@@ -3,9 +3,9 @@
   "version": "2.2.1",
   "homepage": "https://get.foundation/emails",
   "authors": [
-    "ZURB <foundation@zurb.com>"
+    "Foundation <foundation@get.foundation>"
   ],
-  "description": "A framework for designing responsive emails by ZURB.",
+  "description": "A framework for designing responsive emails by Foundation.",
   "license": "MIT",
   "ignore": [
     "**/.*",

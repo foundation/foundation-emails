@@ -18,7 +18,7 @@ Inky keeps you out of a sea of tables and focused on your email. Check out this 
 </container>
 ```
 <div class="callout warning">
-The Inky templating language is part of the [ZURB Stack and the Sass version](zurb-stack.html). <br><a href="#how-to-inky">More on how to get Inky into your workflow</a>
+The Inky templating language is part of the [Foundation stack and the Sass version](zurb-stack.html). <br><a href="#how-to-inky">More on how to get Inky into your workflow</a>
 </div>
 
 ---
@@ -54,7 +54,7 @@ We run a Gulp task that runs through your code, identifies our custom Inky tags,
 <a id="how-to-inky"></a>
 **How do I start Inky?**
 
-Inky is built into the ZURB Stack, but you can also use Inky standalone, or integrate it into your own build process. [Refer to the Inky readme to learn more.](https://github.com/zurb/inky#usage)
+Inky is built into the Foundation stack, but you can also use Inky standalone, or integrate it into your own build process. [Refer to the Inky readme to learn more.](https://github.com/foundation/inky#usage)
 
 **Do I have to have the Gulp tasks running for Inky to work?**
 
@@ -70,4 +70,4 @@ You can check out all of the syntax and examples in the components section of th
 
 **I found a bug&mdash;what should I do?**
 
-Foundation for Emails is completely open sourced and we love engaging with the community. Feel free to file a bug, or even crush the bug, through our [GitHub repo](https://github.com/zurb/inky/issues).
+Foundation for Emails is completely open sourced and we love engaging with the community. Feel free to file a bug, or even crush the bug, through our [GitHub repo](https://github.com/foundation/inky/issues).

@@ -1,10 +1,10 @@
 # Contributing to Foundation
 
-ZURB loves its community! We always want to hear from our users, whether they're reporting bugs, suggesting new features, or even adding them themselves.
+Foundation loves its community! We always want to hear from our users, whether they're reporting bugs, suggesting new features, or even adding them themselves.
 
 ## Reporting Bugs
 
-[Open a new issue](https://github.com/zurb/foundation-emails/issues/new) to report a problem you're having with Foundation for Apps. When writing your issue, keep these things in mind:
+[Open a new issue](https://github.com/foundation/foundation-emails/issues/new) to report a problem you're having with Foundation for Apps. When writing your issue, keep these things in mind:
 
 - **Be descriptive.** If you can, upload a screenshot of problem you're having, or copy and paste any JavaScript or command line errors you encounter. Being detailed will help us hone in on the problem faster.
 - **Post your code.** It's very helpful to see any HTML, Sass, or JavaScript you've written that you think may be causing the problem. In some cases, we might be able to fix your problem just by fixing your code.
@@ -17,9 +17,9 @@ The documentation is compiled by a tool called [Supercollider](https://github.co
 - A Markdown file under `docs/pages/`.
 - If it's a Sass component, the relevant Sass file inside `scss/` is scanned for special [SassDoc](http://sassdoc.com/) comments.
 
-Each page is rendered in one big [Handlebars template](https://github.com/zurb/foundation-docs/blob/master/templates/component.html) that takes in all of the above data.
+Each page is rendered in one big [Handlebars template](https://github.com/foundation/foundation-docs/blob/master/templates/component.html) that takes in all of the above data.
 
-Much of the guts of the documentation are stored in an external codebase called [foundation-docs](https://github.com/zurb/foundation-docs). This is code that's shared between the documentation for all three Foundation frameworks, including:
+Much of the guts of the documentation are stored in an external codebase called [foundation-docs](https://github.com/foundation/foundation-docs). This is code that's shared between the documentation for all three Foundation frameworks, including:
 
 - CSS specific to the documentation
 - The Handlebars template used to build pages
@@ -43,4 +43,4 @@ If you think you can solve a problem yourself, or want to implement a new featur
 
 Want something to work on? Let us guide you in the right direction.
 
-- Browse the [Help Wanted](https://github.com/zurb/foundation-emails/labels/help%20wanted) issue to see bugs or features we've asked for the community's help on. Feel free to implement them yourself as a pull request!
+- Browse the [Help Wanted](https://github.com/foundation/foundation-emails/labels/help%20wanted) issue to see bugs or features we've asked for the community's help on. Feel free to implement them yourself as a pull request!

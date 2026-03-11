@@ -11,7 +11,7 @@ description: Foundation for Emails is written in Sass, which allows us to make t
 
 <img src="assets/img/logos/sass-logo.svg" alt="Sass logo" class="float-right" style="width: 150px; height: 150px; margin-left: 1rem;">
 
-**Foundation for Emails can be compiled with Ruby Sass and dart-sass.** We tend to stick to the latest versions of both compilers when possible. Our documentation, as well as the ZURB Email Stack, are compiled with [sass](https://github.com/sass/dart-sass). We recommend these versions of either compiler:
+**Foundation for Emails can be compiled with Ruby Sass and dart-sass.** We tend to stick to the latest versions of both compilers when possible. Our documentation, as well as the Foundation Email Stack, are compiled with [sass](https://github.com/sass/dart-sass). We recommend these versions of either compiler:
 
 - Ruby Sass **3.4+**
 - dart-sass **1.35.2+**
@@ -20,7 +20,7 @@ description: Foundation for Emails is written in Sass, which allows us to make t
 
 ## Loading the Framework
 
-If you're using the [ZURB Email Stack](zurb-stack.html) to create emails, Sass has already been set up for you. However, it's also easy to incorporate the Foundation for Emails Sass into your own email workflow.
+If you're using the [Foundation Email Stack](zurb-stack.html) to create emails, Sass has already been set up for you. However, it's also easy to incorporate the Foundation for Emails Sass into your own email workflow.
 
 To get started, first install the framework files using Bower or npm.
 
@@ -67,12 +67,12 @@ You're also going to want a settings file for your project, which will allow you
 
 ## The Settings File
 
-All Foundation projects include a **settings file**, named `_settings.scss`. If you're using the ZURB Stack, you can find the settings file under `src/assets/scss/`. If you're installing the framework standalone using Bower or npm, there's a settings file included in those packages, which you can copy into your own Sass folder to work with.
+All Foundation projects include a **settings file**, named `_settings.scss`. If you're using the Foundation stack, you can find the settings file under `src/assets/scss/`. If you're installing the framework standalone using Bower or npm, there's a settings file included in those packages, which you can copy into your own Sass folder to work with.
 
 Every component includes a set of variables that modify core structural or visual styles. If there's something you can't customize with a variable, you can just write your own CSS to add it.
 
 <div class="callout warning">
-  <p>Once you've set up a new project, your settings file can't be automatically updated when new versions change, add, or remove variables. Keep tabs on new <a href="https://github.com/zurb/foundation-emails/releases">Foundation releases</a> so you know when things change.</p>
+  <p>Once you've set up a new project, your settings file can't be automatically updated when new versions change, add, or remove variables. Keep tabs on new <a href="https://github.com/foundation/foundation-emails/releases">Foundation releases</a> so you know when things change.</p>
 </div>
 
 Here's an example set of settings variables. These change the default styling of [buttons](button.html):
@@ -94,4 +94,4 @@ $button-background: $primary-color;
 $button-border: 2px solid $button-background;
 ```
 
-We put together some [Best Practices on Sass file structure](https://zurb.com/university/lessons/avoid-a-cluttered-mess-sensible-sass-file-structure) that will help you keep your project clean.
+We put together some [Best Practices on Sass file structure](https://get.foundation/university/lessons/avoid-a-cluttered-mess-sensible-sass-file-structure) that will help you keep your project clean.

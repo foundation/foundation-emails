@@ -12,12 +12,10 @@ var siphon = require('siphon-media-query');
 var lazypipe = require('lazypipe');
 var fs = require('fs');
 var yargs = require('yargs');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
-
-sass.compiler = require('sass');
 
 // Configuration for the documentation generator
 supercollider

@@ -1,4 +1,4 @@
-Copyright (c) 2016 ZURB, inc.
+Copyright (c) 2016 Foundation, inc.
 
 The MIT License
 
